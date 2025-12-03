@@ -1,0 +1,48 @@
+# Production Dockerfile
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+COPY *.config.* ./
+COPY next-env.d.ts ./
+COPY next.config.ts ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy source code
+COPY src ./src
+COPY public ./public
+
+# Build the application
+RUN npm run build
+
+# Production stage
+FROM node:18-alpine AS runner
+
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+# Copy necessary files from builder
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
+COPY --from=builder --chown=nextjs:nodejs /app/next.config.ts ./
+COPY --from=builder --chown=nextjs:nodejs /app/next-env.d.ts ./
+COPY --from=builder --chown=nextjs:nodejs /app/tsconfig.json ./
+
+USER nextjs
+
+EXPOSE 3000
+
+# Next.js collects anonymous telemetry data - opt out
+ENV NEXT_TELEMETRY_DISABLED=1
+
+CMD ["npm", "start"]

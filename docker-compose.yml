@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: erp_frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/home/node/app/src
+      - ./public:/home/node/app/public
+      - ./package.json:/home/node/app/package.json
+      - ./package-lock.json:/home/node/app/package-lock.json
+      - ./tsconfig.json:/home/node/app/tsconfig.json
+      - ./tailwind.config.js:/home/node/app/tailwind.config.js
+      - ./postcss.config.js:/home/node/app/postcss.config.js
+      - ./next.config.ts:/home/node/app/next.config.ts
+      - ./eslint.config.mjs:/home/node/app/eslint.config.mjs
+      - ./next-env.d.ts:/home/node/app/next-env.d.ts
+      - ./.env:/home/node/app/.env
+      - ./.env.local:/home/node/app/.env.local
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    command: sh -c "npm install && npm run dev"
+    ports:
+      - "3000:3000"
+      - "5555:5555" # for debugging if needed
+    stdin_open: true
+    tty: true
