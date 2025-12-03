@@ -657,7 +657,9 @@ const Header: React.FC = () => {
               <div className="flex-shrink-0">
                 <Link href={createHref("/")} className="shrink-0">
                   <img
-                    src="/images/business/books/logo.svg"
+                    src={typeof AssetPath.header.logo === 'string'
+                      ? AssetPath.header.logo
+                      : AssetPath.header.logo.src}
                     alt="Accqrate Logo"
                     className="h-[1.620rem] w-auto cursor-pointer max-w-[115px] sm:max-w-[100px] md:max-w-[140px]"
                   />

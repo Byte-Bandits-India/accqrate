@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 import FadeUp from "@/Components/ui/FadeUp";
 
 export default function HeroResourceSection() {
@@ -24,7 +23,7 @@ export default function HeroResourceSection() {
         </FadeUp>
 
         {/* Featured Image Section */}
-        <div className="relative rounded-2xl overflow-hidden ">
+        <div className="relative rounded-2xl overflow-hidden hidden">
           {/* Desktop / Tablet Image */}
           <Image
             src="/images/young-delivery.png"
