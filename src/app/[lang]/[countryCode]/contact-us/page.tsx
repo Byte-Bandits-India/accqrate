@@ -1,6 +1,6 @@
 "use client"; // required if using hooks like useFormik
 
-import ContactForm from "@/components/ContactForm"; // adjust path
+import ContactForm from "@/Components/ContactForm"; // adjust path
 
 const ContactFormPage = () => {
   return (

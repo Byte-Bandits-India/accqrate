@@ -1,16 +1,50 @@
-.git
-.gitignore
-.DS_Store
-.next
+# Dependencies
 node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Next.js
+.next
+out
+serving
+
+# Production
+build
+dist
+
+# Testing
+coverage
+.nyc_output
+
+# Environment
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.dockerignore
-README.md
-docker-compose*.yml
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Docker
 Dockerfile*
+docker-compose*
+.dockerignore
+
+# Misc
+*.log
+.cache
+README.md
+DOCKER_USAGE.md

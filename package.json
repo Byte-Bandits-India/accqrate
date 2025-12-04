@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:prod": "npm run clean && npm install && NEXT_PUBLIC_DOCKER_MODE=production NODE_ENV=production next build && npm run copy:build",
+    "clean": "rm -rf .next node_modules serving/out",
+    "copy:build": "mkdir -p serving && cp -r .next serving/ && cp -r public serving/ && cp package.json serving/ && echo 'Production build copied to serving/ directory'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
