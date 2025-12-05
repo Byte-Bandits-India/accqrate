@@ -2,11 +2,13 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { setLanguage, currentLang } from "@/lib/translations";
+import AssetPath from "@/AssetPath/AssetPath";
+import { StaticImageData } from "next/image";
 
 interface Country {
     name: string;
     code: string;
-    flag: string;
+    flag: string | StaticImageData;
     language: string;
     currency: string;
 }
@@ -34,63 +36,63 @@ export const countries: Country[] = [
     {
         name: "Saudi Arabia",
         code: "SA",
-        flag: "/images/header/language/flag-saudi-arabia.svg",
+        flag: AssetPath.header.language.saudiArabia,
         language: "Arabic",
         currency: "SAR",
     },
     {
         name: "UAE",
         code: "AE",
-        flag: "/images/header/language/flag-uae.svg",
+        flag: AssetPath.header.language.uae,
         language: "Arabic",
         currency: "AED",
     },
     {
         name: "Oman",
         code: "OM",
-        flag: "/images/header/language/flag-oman.svg",
+        flag: AssetPath.header.language.oman,
         language: "Arabic",
         currency: "OMR",
     },
     {
         name: "Bahrain",
         code: "BH",
-        flag: "/images/header/language/flag-bahrain.svg",
+        flag: AssetPath.header.language.bahrain,
         language: "Arabic",
         currency: "BHD",
     },
     {
         name: "Malaysia",
         code: "MA",
-        flag: "/images/header/language/flag-malaysia.svg",
+        flag: AssetPath.header.language.malaysia,
         language: "Malay",
         currency: "MYR",
     },
     {
         name: "Mauritius",
         code: "MU",
-        flag: "/images/header/language/flag-Mauritius.svg",
+        flag: AssetPath.header.language.mauritius,
         language: "English",
         currency: "MUR",
     },
     {
         name: "Belgium",
         code: "BE",
-        flag: "/images/header/language/Belgium.webp",
+        flag: AssetPath.header.language.belgium,
         language: "English",
         currency: "MUR",
     },
     {
         name: "Poland",
         code: "PL",
-        flag: "/images/header/language/poland.svg",
+        flag: AssetPath.header.language.poland,
         language: "English",
         currency: "MUR",
     },
     {
         name: "Jordan",
         code: "JD",
-        flag: "/images/header/language/flag-jordan.svg",
+        flag: AssetPath.header.language.jordan,
         language: "Arabic",
         currency: "JOD",
     },
