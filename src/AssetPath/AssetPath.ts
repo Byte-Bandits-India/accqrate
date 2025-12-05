@@ -1,39 +1,3 @@
-/**
- * ASSET PATH - Centralized Image Asset Management
- * ================================================
- * 
- * This file provides a centralized way to import and manage all image assets in the application.
- * All images from src/Assets/images/ are imported here and exported as a structured object.
- * 
- * USAGE EXAMPLES:
- * ---------------
- * import AssetPath from "@/AssetPath/AssetPath";
- * 
- * // For Next.js Image component (StaticImageData):
- * <Image src={AssetPath.header.logo} alt="Logo" width={100} height={50} />
- * 
- * // For regular img tag (convert to string):
- * <img src={typeof AssetPath.header.logo === 'string' ? AssetPath.header.logo : AssetPath.header.logo.src} alt="Logo" />
- * 
- * // Or use a helper (recommended for img tags):
- * const getImageSrc = (img: string | StaticImageData) => typeof img === 'string' ? img : img.src;
- * <img src={getImageSrc(AssetPath.header.logo)} alt="Logo" />
- * 
- * STRUCTURE:
- * ----------
- * - header: All header-related images (logo, navigation, language flags, etc.)
- * - cards: Industry/module cards
- * - resources: Blog, resources, and support images
- * - industries: Industry-specific images
- * - integration: Integration-related images
- * - invoicing: E-invoicing and invoice-related images
- * - microsoft: Microsoft-related images
- * - webinars: Webinar thumbnails
- * - common: Commonly used images (logos, icons, etc.)
- * 
- * NOTE: Public folder images (like /images/home/saudi.webp) should continue 
- * to use the public path string directly as they're served from the public folder.
- */
 
 // ==================== HEADER IMPORTS ====================
 // Header Fill
@@ -344,6 +308,9 @@ import integrationCloud from "@/Assets/images/invoicing/integration/cloud.png";
 import integrationGreenstar from "@/Assets/images/invoicing/integration/greenstar.png";
 import integrationRing from "@/Assets/images/invoicing/integration/ring.png";
 import integrationSet from "@/Assets/images/invoicing/integration/set.png";
+import integrationThumbnail from "@/Assets/images/invoicing/integration/thumbnail.jpg";
+import integrationThumbnail1 from "@/Assets/images/invoicing/integration/thumbnail-1.jpg";
+import integrationThumbnail2 from "@/Assets/images/invoicing/integration/thumbnail-2.jpg";
 
 // Invoicing Integrators
 import anyErp from "@/Assets/images/invoicing/integrators/any-erp.png";
