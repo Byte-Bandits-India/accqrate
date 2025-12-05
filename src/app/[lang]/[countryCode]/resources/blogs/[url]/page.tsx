@@ -26,16 +26,16 @@ import ZatcaComprehensive from "../blogpages/ZatcaComprehensive";
 import ZatcaFatooraDeviceRequirments from "../blogpages/ZatcaFatooraDeviceRequirments";
 import ZatcaInvoice from "../blogpages/ZatcaInvoice";
 import ZatcaInvoicing from "../blogpages/ZatcaInvoicing";
-import BelgiumCreditNotes from "../blogpages/BelgiumCreditNotes";
-import BelgiumEInvoicingFAQs from "../blogpages/BelgiumEInvoicingFAQs";
-import BelgiumEInvoicingMandate from "../blogpages/BelgiumEInvoicingMandate";
-import BelgiumCorporateTax from "../blogpages/BelgiumCorporateTax";
-import BelgiumTechnicalRules from "../blogpages/BelgiumTechnicalRules";
-import BelgiumTaxSystem2025 from "../blogpages/BelgiumTaxSystem2025";
-import BelgiumIncomeTax from "../blogpages/BelgiumIncomeTax";
-import BelgiumVAT from "../blogpages/BelgiumVAT";
-import BelgiumVATNumber from "../blogpages/BelgiumVATNumber";
-import PeppolMercuriusBelgium from "../blogpages/PeppolMercuriusBelgium";
+import BelgiumCreditNotes from "../blogpages/belgium/BelgiumCreditNotes";
+import BelgiumEInvoicingFAQs from "../blogpages/belgium/BelgiumEInvoicingFAQs";
+import BelgiumEInvoicingMandate from "../blogpages/belgium/BelgiumEInvoicingMandate";
+import BelgiumCorporateTax from "../blogpages/belgium/BelgiumCorporateTax";
+import BelgiumTechnicalRules from "../blogpages/belgium/BelgiumTechnicalRules";
+import BelgiumTaxSystem2025 from "../blogpages/belgium/BelgiumTaxSystem2025";
+import BelgiumIncomeTax from "../blogpages/belgium/BelgiumIncomeTax";
+import BelgiumVAT from "../blogpages/belgium/BelgiumVAT";
+import BelgiumVATNumber from "../blogpages/belgium/BelgiumVATNumber";
+import PeppolMercuriusBelgium from "../blogpages/belgium/PeppolMercuriusBelgium";
 import ErpAdoption2025 from "../blogpages/ErpAdoption2025";
 
 export default async function BlogPage({
