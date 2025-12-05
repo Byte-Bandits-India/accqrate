@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { StaticImageData } from "next/image";
 
@@ -280,10 +281,12 @@ const LangCountryDropdown: React.FC<
         >
           {isInitialized ? (
             <>
-              <img
+              <Image
                 src={selectedCountry.flag}
                 alt={selectedCountry.name}
                 className="w-[26px] h-[26px] rounded"
+                width={26}
+                height={26}
               />
               <span className="text-black truncate text-[12px] xl:text-[14px] flex-1 text-left">
                 {selectedLanguage.display} / {selectedCountry.code}
@@ -340,10 +343,12 @@ const LangCountryDropdown: React.FC<
                     }`}
                   onClick={() => handleCountryChange(country)}
                 >
-                  <img
+                  <Image
                     src={country.flag}
                     alt={country.name}
                     className="w-5 h-5 mr-2 rounded"
+                    width={20}
+                    height={20}
                   />
                   <span className="text-black">{country.name}</span>
                 </div>
@@ -414,23 +419,23 @@ const MegaMenu: React.FC<{
                   <div className="flex items-center gap-2">
                     {/* Mobile/Tablet image */}
                     {section.images && (
-                      <img
-                        src={getImageSrc(section.images)}
+                      <Image
+                        src={section.images}
                         alt={section.heading}
                         className="w-4 h-4 xl:hidden"
+                        width={16}
+                        height={16}
                       />
                     )}
 
                     {/* XL image - only show if it exists */}
                     {section.xl && (
-                      <img
-                        src={getImageSrc(section.xl)}
+                      <Image
+                        src={section.xl}
                         alt={`${section.heading} large`}
                         className="hidden xl:block w-[264px] h-[342px] object-contain"
-                        onError={(e) => {
-                          // Fallback if image fails to load
-                          e.currentTarget.style.display = 'none';
-                        }}
+                        width={264}
+                        height={342}
                       />
                     )}
                     <span className="xl:hidden">
@@ -457,10 +462,12 @@ const MegaMenu: React.FC<{
                       className="flex items-start gap-3 p-2 rounded-md hover:bg-[#f0f3ff] transition-colors cursor-pointer"
                     >
                       {item.img && (
-                        <img
-                          src={getImageSrc(item.img)}
+                        <Image
+                          src={item.img}
                           alt={item.title}
                           className="w-[50px] h-[50px] object-contain mt-1"
+                          width={50}
+                          height={50}
                         />
                       )}
 
@@ -621,12 +628,12 @@ const Header: React.FC = () => {
               {/* Logo */}
               <div className="flex-shrink-0">
                 <Link href={createHref("/")} className="shrink-0">
-                  <img
-                    src={typeof AssetPath.header.logo === 'string'
-                      ? AssetPath.header.logo
-                      : AssetPath.header.logo.src}
+                  <Image
+                    src={AssetPath.header.logo}
                     alt="Accqrate Logo"
                     className="h-[1.620rem] w-auto cursor-pointer max-w-[115px] sm:max-w-[100px] md:max-w-[140px]"
+                    width={140}
+                    height={26}
                   />
                 </Link>
               </div>
@@ -854,10 +861,10 @@ const Header: React.FC = () => {
                               className="flex items-center gap-4 text-[#717171] text-[15px] py-3 px-2 cursor-pointer border-b border-gray-200 hover:text-[#534ED3] hover:bg-gray-50 transition-colors"
                             >
                               {item.img && (
-                                <img src={getImageSrc(item.img)} alt={item.title} className="w-5 h-5" />
+                                <Image src={item.img} alt={item.title} className="w-5 h-5" width={20} height={20} />
                               )}
                               {item.icon && !item.img && (
-                                <img src={getImageSrc(item.icon)} alt={item.title} className="w-5 h-5" />
+                                <Image src={item.icon} alt={item.title} className="w-5 h-5" width={20} height={20} />
                               )}
                               <Link
                                 href={createHref(item.href)}
@@ -941,7 +948,7 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
           {...props}
         >
           {img && (
-            <img src={getImageSrc(img)} alt={title} className="w-[45px] h-[45px] mr-3" />
+            <Image src={img} alt={title} className="w-[45px] h-[45px] mr-3" width={45} height={45} />
           )}
           <div>
             <div className="text-sm font-semibold leading-none">{title}</div>
@@ -992,10 +999,12 @@ const ResourcesListItem = React.forwardRef<HTMLAnchorElement, ResourcesListItemP
               if (isImagePath) {
                 const normalized = imageSrc.replace(/^\.\//, "/");
                 return (
-                  <img
-                    src={normalized}
+                  <Image
+                    src={source as StaticImageData}
                     alt={title}
                     className="w-[20px] h-[20px] object-contain"
+                    width={20}
+                    height={20}
                   />
                 );
               }
