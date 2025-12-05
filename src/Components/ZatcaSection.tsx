@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import AssetPath from "@/AssetPath/AssetPath";
 
 // ✅ Dynamically import ContactModal — prevents RSC static flag errors
-const ContactModal = dynamic(() => import("@/components/ContactModal").then(mod => mod.ContactModal), {
+const ContactModal = dynamic(() => import("@/Components/ContactModal").then(mod => mod.ContactModal), {
   ssr: false, // Ensures it renders only on the client
 });
 export default function ZatcaSection() {
@@ -127,3 +127,4 @@ export default function ZatcaSection() {
     </section>
   );
 }
+
