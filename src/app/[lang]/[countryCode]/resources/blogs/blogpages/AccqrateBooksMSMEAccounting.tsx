@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-import T from "@/components/T";
+import T from "@/Components/T";
 import BlogLayout from "../layout/BlogLayout";
 import AssetPath from "@/AssetPath/AssetPath";
 
@@ -214,3 +214,4 @@ const AccqrateBooksMSMEAccounting: React.FC = () => {
 };
 
 export default AccqrateBooksMSMEAccounting;
+
