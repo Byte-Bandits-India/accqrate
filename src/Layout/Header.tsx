@@ -287,6 +287,7 @@ const LangCountryDropdown: React.FC<
                 className="w-[26px] h-[26px] rounded"
                 width={26}
                 height={26}
+                unoptimized
               />
               <span className="text-black truncate text-[12px] xl:text-[14px] flex-1 text-left">
                 {selectedLanguage.display} / {selectedCountry.code}
@@ -349,6 +350,7 @@ const LangCountryDropdown: React.FC<
                     className="w-5 h-5 mr-2 rounded"
                     width={20}
                     height={20}
+                    unoptimized
                   />
                   <span className="text-black">{country.name}</span>
                 </div>
