@@ -101,42 +101,7 @@ const menus: Menu[] = [
             img: AssetPath.header.navbar.fill.einvoiceIntegration,
             href: "/e-invocing/integration",
           },
-          {
-            title: "E-invoicing with SAP Suite",
-            description: "Connect your SAP suite with ZATCA, Ready Packages.",
-            img: AssetPath.header.navbar.fill.sap,
-            href: "/e-invoicing/sap",
-          },
-          {
-            title: "E-invoicing with Oracle Suite",
-            description: "Enterprise-grade ZATCA compliance for Oracle ecosystems.",
-            img: AssetPath.header.navbar.fill.oracle,
-            href: "/e-invoicing/oracle",
-          },
-          {
-            title: "E-invoicing with Microsoft Suite",
-            description: "ZATCA integration built for Microsoft Dynamics, Business Central, Navision and More",
-            img: AssetPath.header.navbar.fill.microsoft,
-            href: "/e-invoicing/microsoft",
-          },
-          {
-            title: "E-invoicing with Legacy System",
-            description: "Modern compliance without replacing your legacy infrastructure.",
-            img: AssetPath.header.navbar.fill.legacy,
-            href: "/e-invoicing/legacy",
-          },
-          {
-            title: "E-invoicing with Custom & Homegrown Systems",
-            description: "Future-proof ZATCA integration for bespoke, popular and in-house applications.",
-            img: AssetPath.header.navbar.fill.homegrown,
-            href: "/e-invoicing/custom",
-          },
-          {
-            title: "Multi-Country Integration with One Single Framework",
-            description: "One global framework. Multiple countries. Unified e-invoicing compliance.",
-            img: AssetPath.header.navbar.fill.framework,
-            href: "/e-invoicing/multi-country",
-          },
+         
         ],
       },
     ],
@@ -734,30 +699,25 @@ const Header: React.FC = () => {
                             >
                               <div className="w-[900px] xl:w-[1100px] mx-auto px-8 py-10 bg-white rounded-b-xl flex flex-col">
                                 <div className="w-full max-w-7xl mx-auto mb-2">
-                                  <div className="grid grid-cols-3 gap-8">
-                                    {menu.sections.map((section, index) => (
-                                      <div
-                                        key={index}
-                                        className="border-r last:border-r-0 pr-6 last:pr-0"
-                                      >
-                                        <h3 className="font-medium text-[#333333] text-lg mb-6">
-                                          <T>{section.heading}</T>
-                                        </h3>
-                                        <ul className="space-y-2 text-[#717171]">
-                                          {section.subItems.map((item, i) => (
-                                            <ResourcesListItem
-                                              key={i}
-                                              title={isInitialized ? t(item.title) : item.title}
-                                              href={item.href}
-                                              img={item.img}
-                                              icon={item.icon}
-                                              onClick={handleMenuItemClick}
-                                            />
-                                          ))}
-                                        </ul>
-                                      </div>
-                                    ))}
-                                  </div>
+                                  {menu.sections.map((section, index) => (
+                                    <div key={index} className="mb-6">
+                                      <h3 className="font-medium text-[#333333] text-lg mb-4">
+                                        <T>{section.heading}</T>
+                                      </h3>
+                                      <ul className="flex flex-wrap gap-4 text-[#717171]">
+                                        {section.subItems.map((item, i) => (
+                                          <ResourcesListItem
+                                            key={i}
+                                            title={isInitialized ? t(item.title) : item.title}
+                                            href={item.href}
+                                            img={item.img}
+                                            icon={item.icon}
+                                            onClick={handleMenuItemClick}
+                                          />
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ))}
                                 </div>
 
                                 {/* CTA Footer */}
