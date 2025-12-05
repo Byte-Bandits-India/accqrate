@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import FadeUp from "@/components/ui/FadeUp";
+import FadeUp from "@/Components/ui/FadeUp";
 import AssetPath from "@/AssetPath/AssetPath";
 
 interface Testimonial {
@@ -224,3 +224,4 @@ export default function EndorsedTestimonials() {
     </section>
   );
 }
+
