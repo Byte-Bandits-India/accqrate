@@ -5,7 +5,7 @@ import { Row, Col, Affix, Breadcrumb, Divider } from "antd";
 import { useRouter, useParams } from "next/navigation";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import SocialShare from "@/components/SocialShare";
-import T from "@/components/T";
+import T from "@/Components/T";
 import CTASection from "@/components/CTASection";
 import blogPosts from "../data/blogspost";
 import "@/components/Blogs.scss";
@@ -199,3 +199,4 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
 };
 
 export default BlogLayout;
+
