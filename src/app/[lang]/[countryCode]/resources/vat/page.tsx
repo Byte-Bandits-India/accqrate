@@ -10,17 +10,9 @@ import { Input } from "@/Components/ui/input";
 import { Slider } from "@/Components/ui/slider";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ZatcaSection from "../../../../../Components/ZatcaSection";
-import {
-  Field,
-} from "@/Components/ui/field"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/Components/ui/select"
+import ZatcaSection from "@/Components/ZatcaSection";
+import {Field} from "@/Components/ui/field"
+import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from "@/Components/ui/select"
 
 export default function VATCalculator() {
   const [hydrated, setHydrated] = useState(false);
