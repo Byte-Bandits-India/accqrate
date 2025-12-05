@@ -1,7 +1,7 @@
 'use client'
 
-import T from "@/components/T"
-import CounterFacts from '@/components/CounterFacts'
+import T from "@/Components/T"
+import CounterFacts from '@/Components/CounterFacts'
 import AssetPath from "@/AssetPath/AssetPath";
 
 interface IntegrationItem {
