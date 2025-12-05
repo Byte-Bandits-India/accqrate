@@ -4,9 +4,9 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import IndustriesData from "./IndustriesData";
 import { ArrowRight } from "lucide-react";
-import FadeUp from "@/components/ui/FadeUp";
+import FadeUp from "@/Components/ui/FadeUp";
 import React, { useState } from "react";
-import { ContactModal } from "@/components/ContactModal";
+import { ContactModal } from "@/Components/ContactModal";
 
 export default function IndustriesSection() {
   const half = Math.ceil(IndustriesData.length / 2);
@@ -103,4 +103,5 @@ export default function IndustriesSection() {
   );
 
 }
+
 
