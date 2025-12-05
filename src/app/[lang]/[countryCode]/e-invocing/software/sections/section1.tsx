@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import FadeUp from '@/components/ui/FadeUp'
+import FadeUp from '@/Components/ui/FadeUp'
 import T from '@/Components/T'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from "lucide-react";
