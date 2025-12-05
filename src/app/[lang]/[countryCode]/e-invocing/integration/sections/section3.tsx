@@ -1,7 +1,7 @@
 'use client'
 
 import { Col, Row } from 'antd'
-import T from '@/components/T'
+import T from '@/Components/T'
 
 interface IntegrationFlowProps { }
 
