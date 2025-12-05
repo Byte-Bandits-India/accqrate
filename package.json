@@ -53,6 +53,8 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
+    "@types/history": "^5.0.0",
+    "@types/jsbarcode": "^3.11.4",
     "@types/loadable__component": "^5.13.10",
     "@types/lodash": "^4.17.21",
     "@types/node": "^20",
