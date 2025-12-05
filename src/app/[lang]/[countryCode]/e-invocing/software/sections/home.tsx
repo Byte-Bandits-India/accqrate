@@ -27,7 +27,7 @@ const countryConfig = {
     "AE": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software in UAE",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -45,7 +45,7 @@ const countryConfig = {
     "OM": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software in Oman",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -63,7 +63,7 @@ const countryConfig = {
     "BH": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software in Bahrain",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -79,8 +79,8 @@ const countryConfig = {
     },
     "MA": {
         name: "Saudi Arabia",
-        authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        authority: "ZATCA", 
+        badgeText: "ZATCA Approved E-invoicing Software in Malaysia",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -98,7 +98,7 @@ const countryConfig = {
     "MU": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software in Mauritius",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -116,7 +116,7 @@ const countryConfig = {
     "JD": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software in Jordan",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -134,7 +134,7 @@ const countryConfig = {
     "PL": {
         name: "Poland",
         authority: "KSeF",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software in Poland",
         title: "Integrate With PEPPOL Network In Less Than 1 Hour.",
         description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
         description2: "",
@@ -152,9 +152,9 @@ const countryConfig = {
     },
     // BELGIUM - Unique content
     "BE": {
-        name: "Poland",
+        name: "Belgium",
         authority: "KSeF",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software in Belgium",
         title: "Integrate With PEPPOL Network In Less Than 1 Hour.",
         description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
         description2: "",
