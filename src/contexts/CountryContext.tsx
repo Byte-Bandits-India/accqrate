@@ -102,6 +102,8 @@ export const languages: Language[] = [
     { code: "ar", name: "Arabic", display: "العربية" },
     { code: "ml", name: "Malay", display: "Malay" },
     { code: "en", name: "English", display: "Eng" },
+    { code: "fr", name: "French", display: "Français" },
+    { code: "nl", name: "Dutch", display: "Dutch" },
 ];
 
 // ===================== Context Type =====================
