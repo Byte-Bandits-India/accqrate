@@ -8,7 +8,9 @@ services:
       dockerfile: ./dockerfile
     volumes:
       - ./:/home/node/app
-    command: npm run dev
+      - /home/node/app/node_modules
+      - /home/node/app/.next
+    command: sh -c "chown -R node:node /home/node/app && su node -c 'npm install && npm run dev'"
 
   router:
     container_name: erp_router
@@ -18,9 +20,19 @@ services:
     ports:
       - 80:80
       - 443:443
+    command:
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --providers.file.directory=/rules
+      - --providers.file.watch=true
+      - --entrypoints.http.address=:80
+      - --entrypoints.https.address=:443
+      - --log.level=INFO
     volumes:
       - ./traefik/rules:/rules
       - ./traefik/accesslog.txt:/accesslog.txt
       - ./traefik/acme.json:/acme.json
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     env_file:
       - .env
