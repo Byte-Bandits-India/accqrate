@@ -1,5 +1,5 @@
 "use client";
-import T from "@/components/T"
+import T from "@/Components/T"
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import AssetPath from "@/AssetPath/AssetPath";
