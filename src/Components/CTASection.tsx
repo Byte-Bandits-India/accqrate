@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Sparkles, Clock, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { ContactModal } from "./ContactModal"; 
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
+import BelgiumT from "@/Components/BelgiumT";
 
 const CTASection = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -13,23 +15,25 @@ const CTASection = () => {
   const lang = params?.lang as string;
   const countryCode = params?.countryCode as string;
 
+  // Determine if we should use ZATCA or Peppol based on country
+  const useZatca = countryCode?.toUpperCase() === 'SA' || countryCode?.toUpperCase() === 'AE';
+  const complianceName = useZatca ? 'ZATCA' : 'Peppol';
+
   return (
     <div className="w-full bg-gradient-to-l from-[#242087] to-[#1A0C48]  relative shadow-xl">
       <div className="md:flex gap-8 xl:max-h-[336px] relative z-10 max-w-[1440px] p-6 md:p-10 lg:pb-0 mx-auto">
         {/* LEFT CONTENT */}
         <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
           <h2 className="text-fluid-h2 lg:text-[38px] font-medium mb-6">
-            Save time, save money
+            <BelgiumT>Save time, save money</BelgiumT>
           </h2>
 
           <p className="text-fluid-body lg:text-[24px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
-            Want the latest on ZATCA updates, fresh product insights,
-            and exclusive Company editorials?
+            <BelgiumT>Want the latest on</BelgiumT> {complianceName} <BelgiumT>updates, fresh product insights, and exclusive Company editorials?</BelgiumT>
           </p>
 
           <p className="text-sm text-white/80 leading-tight xl:max-w-[773px] ">
-            Get fresh product insights and exclusive company editorials delivered straight to
-            your <br className="hidden xl:block" /> inbox. Subscribe now to never miss a beat!
+            <BelgiumT>Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!</BelgiumT>
           </p>
 
           <div className="hidden">
@@ -47,12 +51,12 @@ const CTASection = () => {
               <div className="flex items-center gap-2 text-white/90 text-sm">
 
                 <span>Free Proof of Concept</span>
-                <img src={typeof AssetPath.resources.starYellow === 'string' ? AssetPath.resources.starYellow : AssetPath.resources.starYellow.src} alt="star" className="h-4 w-4" />
+                <Image src={AssetPath.resources.starYellow} alt="star" width={16} height={16} className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
 
                 <span>30 Days Free Trial</span>
-                <img src={typeof AssetPath.resources.starYellow === 'string' ? AssetPath.resources.starYellow : AssetPath.resources.starYellow.src} alt="star" className="h-4 w-4" />
+                <Image src={AssetPath.resources.starYellow} alt="star" width={16} height={16} className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
 
@@ -65,9 +69,11 @@ const CTASection = () => {
 
         {/* RIGHT IMAGE */}
         <div className="hidden md:flex justify-end relative -top-[150px] ">
-          <img
-            src={typeof AssetPath.common.chartView === 'string' ? AssetPath.common.chartView : AssetPath.common.chartView.src}
+          <Image
+            src={AssetPath.common.chartView}
             alt="Dashboard Preview"
+            width={499}
+            height={350}
             className="xl:max-w-[499px] w-full md:h-[300px] lg:h-[350px] transform hover:scale-105 transition-transform duration-300"
           />
         </div>
