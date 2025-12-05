@@ -376,11 +376,19 @@ const translations = {
   },
   // footer
   'Save time, save money': {
-    fr: 'Gagnez du temps, économisez de l’argent',
+    fr: 'Gagnez du temps, économisez de l\'argent',
     nl: 'Bespaar tijd, bespaar geld'
   },
+  'Want the latest on': {
+    fr: 'Vous souhaitez les dernières mises à jour',
+    nl: 'Wilt u het laatste nieuws over'
+  },
+  'updates, fresh product insights, and exclusive Company editorials?': {
+    fr: 'des informations produit inédites et des éditoriaux exclusifs de l\'entreprise ?',
+    nl: 'nieuwe productinzichten en exclusieve bedrijfsartikelen?'
+  },
   'Want the latest on Peppol updates, fresh product insights, and exclusive Company editorials?': {
-    fr: 'Vous souhaitez les dernières mises à jour Peppol, des informations produit inédites et des éditoriaux exclusifs de l’entreprise ?',
+    fr: 'Vous souhaitez les dernières mises à jour Peppol, des informations produit inédites et des éditoriaux exclusifs de l\'entreprise ?',
     nl: 'Wilt u het laatste nieuws over Peppol-updates, nieuwe productinzichten en exclusieve bedrijfsartikelen?'
   },
   'Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!': {
