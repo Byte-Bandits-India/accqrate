@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Affix, Breadcrumb, Divider } from "antd";
 import { useRouter, useParams } from "next/navigation";
+import Image from "next/image";
 import useMediaQuery from "@/Hooks/useMediaQuery";
 import SocialShare from "@/Components/SocialShare";
 import T from "@/Components/T";
@@ -62,9 +63,11 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
         <div className="container mx-auto px-4 max-w-[1400px]">
           <Row justify="center">
             <Col xs={24} md={18}>
-              <img
+              <Image
                 src={AssetPath.blogs.accqrateAd}
                 alt="Accqrate - ZATCA-compliant e-invoicing software"
+                width={1200}
+                height={400}
                 className="w-full cursor-pointer"
                 onClick={() => router.push(`/${lang}/${countryCode}/contact-us`)}
               />
@@ -135,9 +138,11 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
                       onClick={() => router.push(data.url)}
                       className="cursor-pointer mb-5 group"
                     >
-                      <img
+                      <Image
                         src={data.image}
                         alt={data.heading}
+                        width={300}
+                        height={200}
                         className="w-full mb-2 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <h3 className="text-sm font-semibold text-[#1c2041] line-clamp-2 group-hover:text-blue-600">
@@ -174,9 +179,11 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
             className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full"
             onClick={() => router.push(data.url)}
           >
-            <img
+            <Image
               src={data.image}
               alt={data.heading}
+              width={400}
+              height={180}
               className="rounded-lg mb-3 w-full h-[180px] object-cover"
             />
             <div className="flex flex-col flex-grow px-4 pb-4">
@@ -199,4 +206,3 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
 };
 
 export default BlogLayout;
-
