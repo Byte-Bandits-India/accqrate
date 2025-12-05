@@ -5,14 +5,7 @@ import dynamic from "next/dynamic"
 import { Pie, PieChart, Sector, Cell } from "recharts"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
 import { ResponsiveContainer } from "recharts"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from "@/components/ui/card"
 import { LucideIcon } from "lucide-react"
 import {
   ChartConfig,
