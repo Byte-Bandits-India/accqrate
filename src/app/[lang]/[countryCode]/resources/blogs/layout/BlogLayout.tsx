@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Affix, Breadcrumb, Divider } from "antd";
 import { useRouter, useParams } from "next/navigation";
-import useMediaQuery from "@/hooks/useMediaQuery";
+import useMediaQuery from "@/Hooks/useMediaQuery";
 import SocialShare from "@/Components/SocialShare";
 import T from "@/Components/T";
 import CTASection from "@/Components/CTASection";
@@ -199,3 +199,4 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
 };
 
 export default BlogLayout;
+
