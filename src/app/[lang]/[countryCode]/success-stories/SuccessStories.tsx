@@ -1,7 +1,7 @@
 "use client";
 
 import SuccessStoryCard from "./SuccessStoryCard";
-import FadeUp from "@Components/ui/FadeUp";
+import FadeUp from "@/Components/ui/FadeUp";
 
 const stories = [
   {
@@ -77,4 +77,5 @@ export default function SuccessStories() {
     </section>
   );
 }
+
 
