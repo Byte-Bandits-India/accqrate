@@ -11,6 +11,7 @@ import CTASection from "@/Components/CTASection";
 import blogPosts from "../data/blogspost";
 import "@/Components/Blogs.scss";
 import AssetPath from "@/AssetPath/AssetPath";
+import BelgiumT from "@/Components/BelgiumT";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -164,7 +165,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
      <section className="bg-[#eff3ff] py-10">
   <div className="container mx-auto px-4 max-w-[1250px]">
     <h3 className="text-xl md:text-[28px] text-[#1c2041] font-semibold mb-6 md:mb-10">
-      <T>Recent Blog Posts from Accqrate</T>
+      <BelgiumT>Recent Blog Posts from Accqrate</BelgiumT>
     </h3>
     <Row
       justify="center"
