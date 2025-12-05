@@ -2,7 +2,7 @@
 
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import FadeUp from "@/components/ui/FadeUp";
+import FadeUp from "@/Components/ui/FadeUp";
 
 export interface SuccessStoryCardProps {
   sourceSystem: string;
@@ -43,3 +43,4 @@ export default function SuccessStoryCard({
     </div>
   );
 }
+
