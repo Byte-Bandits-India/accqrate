@@ -7,12 +7,7 @@ import { PieSectorDataItem } from "recharts/types/polar/Pie"
 import { ResponsiveContainer } from "recharts"
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from "@/Components/ui/card"
 import { LucideIcon } from "lucide-react"
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart"
+import {ChartConfig,ChartContainer,ChartTooltip,ChartTooltipContent} from "@/Components/ui/chart"
 
 export interface DonutChartData {
   label: string
