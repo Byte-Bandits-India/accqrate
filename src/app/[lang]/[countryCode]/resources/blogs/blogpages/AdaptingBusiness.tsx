@@ -2,7 +2,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import T from "@/components/T";
+import T from "@/Components/T";
 import BlogLayout from "../layout/BlogLayout";
 import AssetPath from "@/AssetPath/AssetPath";
 
@@ -221,3 +221,4 @@ function AdaptingBusiness() {
 }
 
 export default AdaptingBusiness;
+
