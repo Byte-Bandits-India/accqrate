@@ -4,7 +4,7 @@
 "use client";
 
 import React from "react";
-import T from "@/components/T"
+import T from "@/Components/T"
 import BlogLayout from "../layout/BlogLayout";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -181,3 +181,4 @@ export default function CreditNote() {
     </BlogLayout>
   );
 }
+
