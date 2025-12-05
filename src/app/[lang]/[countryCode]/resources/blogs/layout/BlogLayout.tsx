@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Affix, Breadcrumb, Divider } from "antd";
 import { useRouter, useParams } from "next/navigation";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import SocialShare from "@/components/SocialShare";
+import SocialShare from "@/Components/SocialShare";
 import T from "@/Components/T";
-import CTASection from "@/components/CTASection";
+import CTASection from "@/Components/CTASection";
 import blogPosts from "../data/blogspost";
-import "@/components/Blogs.scss";
+import "@/Components/Blogs.scss";
 import AssetPath from "@/AssetPath/AssetPath";
 
 interface BlogLayoutProps {
@@ -199,4 +199,5 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
 };
 
 export default BlogLayout;
+
 
