@@ -204,19 +204,22 @@ const LangCountryDropdown: React.FC<
     const handleCountryChange = (country: any) => {
       setSelectedCountry(country);
 
-      const pathSegments = pathname.split("/");
-      if (pathSegments.length >= 3) {
-        pathSegments[2] = country.code.toLowerCase();
-      } else {
-        pathSegments.push(country.code.toLowerCase());
+      // Always reset to English when changing countries
+      const englishLang = languages.find(l => l.code === 'en');
+      if (englishLang) {
+        setSelectedLanguage(englishLang);
+        setLanguage('en');
       }
+      
+      // Navigate to home page with English and new country
+      const newPath = `/en/${country.code.toLowerCase()}`;
 
       // ✅ Close dropdown first
       setShow(false);
 
       // ✅ Delay navigation slightly to prevent flicker
       setTimeout(() => {
-        router.push(pathSegments.join("/"));
+        router.push(newPath);
       }, 150);
     };
 
