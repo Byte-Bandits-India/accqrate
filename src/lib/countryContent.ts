@@ -1,7 +1,9 @@
 // utils/countryContent.ts
+import AssetPath from "@/AssetPath/AssetPath";
+import { StaticImageData } from "next/image";
 
 export interface Card {
-    icon: string;
+    icon: string | StaticImageData;
     title: string;
     description: string;
     color: string;
@@ -9,7 +11,7 @@ export interface Card {
 }
 
 export interface CountryContent {
-  backgroundImage: string;
+  backgroundImage: string | StaticImageData;
   heroTitle: string;
   heroSubtitle: string;
   heroDescription: string;
@@ -23,7 +25,7 @@ export interface CountryContent {
 
 export const countryContentMap: Record<string, CountryContent> = {
   SA: {
-    backgroundImage: "/images/home/saudi.webp",
+    backgroundImage: AssetPath.homeBackgrounds.saudi,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -31,42 +33,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+966 123 456 789", salesText: "Contact Sales KSA" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -75,7 +77,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   AE: {
-    backgroundImage: "/images/home/uae.webp",
+    backgroundImage: AssetPath.homeBackgrounds.uae,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -83,42 +85,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+971 123 456 789", salesText: "Contact Sales UAE" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -127,7 +129,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   OM: {
-    backgroundImage: "/images/home/oman.webp",
+    backgroundImage: AssetPath.homeBackgrounds.oman,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -135,42 +137,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+968 123 456 789", salesText: "Contact Sales Oman" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -179,7 +181,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   BH: {
-    backgroundImage: "/images/home/baharaim.webp",
+    backgroundImage: AssetPath.homeBackgrounds.bahrain,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -187,42 +189,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+973 123 456 789", salesText: "Contact Sales Bahrain" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -231,7 +233,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   MA: {
-    backgroundImage: "/images/home/malaysia.webp",
+    backgroundImage: AssetPath.homeBackgrounds.malaysia,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -239,42 +241,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+60 123 456 789", salesText: "Contact Sales Malaysia" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -283,7 +285,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   MU: {
-    backgroundImage: "/images/home/mautitius.webp",
+    backgroundImage: AssetPath.homeBackgrounds.mauritius,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -291,42 +293,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+230 123 456 789", salesText: "Contact Sales Mauritius" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -335,7 +337,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   JD: {
-    backgroundImage: "/images/home/jordan.webp",
+    backgroundImage: AssetPath.homeBackgrounds.jordan,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -343,42 +345,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+962 123 456 789", salesText: "Contact Sales Jordan" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -387,7 +389,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   BE: {
-    backgroundImage: "/images/home/jordan.webp",
+    backgroundImage: AssetPath.homeBackgrounds.jordan,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -395,42 +397,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+962 123 456 789", salesText: "Contact Sales Jordan" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
@@ -439,7 +441,7 @@ export const countryContentMap: Record<string, CountryContent> = {
     ]
   },
   PL: {
-    backgroundImage: "/images/home/jordan.webp",
+    backgroundImage: AssetPath.homeBackgrounds.jordan,
     heroTitle: "Accqrate: The AI-Powered Modern ERP, E-invoicing, & Business Suite Built for Scale",
     heroSubtitle: "One Unified Platform. Infinite Possibilities.",
     heroDescription: "Experience the future of  ERP & E-Invoicing integrated, intelligent, and incredibly scalable. From Sales to Accounting, Payroll to Procurement, manage your entire business seamlessly on one secure, cloud-based or on-premise platform.",
@@ -447,42 +449,42 @@ export const countryContentMap: Record<string, CountryContent> = {
     contactInfo: { phone: "+962 123 456 789", salesText: "Contact Sales Jordan" },
     cards: [
       {
-        icon: "/images/cards/crm.png",
+        icon: AssetPath.cards.crm,
         title: "CRM",
         description: "Automate leads. Boost conversions.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/crm",
       },
       {
-        icon: "/images/cards/books.png",
+        icon: AssetPath.cards.books,
         title: "Books",
         description: "Smart accounting made simple.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/books",
       },
       {
-        icon: "/images/cards/people.png",
+        icon: AssetPath.cards.people,
         title: "People",
         description: "Complete HR & payroll solution",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
         link: "SA/business/people",
       },
       {
-        icon: "/images/cards/retail.png",
+        icon: AssetPath.cards.retail,
         title: "Retail",
         description: "All-in-one smart retail POS.",
         color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
         link: "SA/business/retail",
       },
       {
-        icon: "/images/cards/factory.png",
+        icon: AssetPath.cards.factory,
         title: "Factory",
         description: "Optimize full manufacturing process.",
         color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
         link: "SA/business/factory",
       },
       {
-        icon: "/images/cards/E‑Invoicing.png",
+        icon: AssetPath.cards.einvoicing,
         title: "E‑Invoicing",
         description: "Seamless, compliant tax integration.",
         color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
