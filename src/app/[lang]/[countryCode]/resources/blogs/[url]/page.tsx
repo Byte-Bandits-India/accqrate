@@ -37,6 +37,28 @@ import BelgiumVAT from "../blogpages/belgium/BelgiumVAT";
 import BelgiumVATNumber from "../blogpages/belgium/BelgiumVATNumber";
 import PeppolMercuriusBelgium from "../blogpages/belgium/PeppolMercuriusBelgium";
 import ErpAdoption2025 from "../blogpages/ErpAdoption2025";
+import PolandKSeF from "../blogpages/poland/PolandKSeF";
+import PolandKSeFMandatory from "../blogpages/poland/PolandKSeFMandatory";
+import PolandKSeF2 from "../blogpages/poland/PolandKSeF2";
+import PolandKSeFImplementation from "../blogpages/poland/PolandKSeFImplementation";
+import UAEeInvoicing from "../blogpages/uae/UAEeInvoicing";
+import UAEvat2025 from "../blogpages/uae/UAEvat2025";
+import UAECorporateTax from "../blogpages/uae/UAECorporateTax";
+import UAEVATReturnFiling from "../blogpages/uae/UAEVATReturnFiling";
+import UAEVATCalculation from "../blogpages/uae/UAEVATCalculation";
+import UAECorporateTaxFAQ from "../blogpages/uae/UAECorporateTaxFAQ";
+import UAEVATInvoice from "../blogpages/uae/UAEVATInvoice";
+import UAEVATRateStructure from "../blogpages/uae/UAEVATRateStructure";
+import UAEVATRefund from "../blogpages/uae/UAEVATRefund";
+import UAEVATPenalties from "../blogpages/uae/UAEVATPenalties";
+import UAEVATComplete2025 from "../blogpages/uae/UAEVATComplete2025";
+import UAEExciseTax from "../blogpages/uae/UAEExciseTax";
+import UAEMoFAAttestation from "../blogpages/uae/UAEMoFAAttestation";
+import PeppolCTCUAE from "../blogpages/uae/PeppolCTCUAE";
+import UAETaxCreditNotes from "../blogpages/uae/UAETaxCreditNotes";
+import UAEDigitalSignatureCertificate from "../blogpages/uae/UAEDigitalSignatureCertificate";
+import UAE_TRN_Verification from "../blogpages/uae/UAE_TRN_Verification";
+import UAE_Excise_Registration from "../blogpages/uae/UAE_Excise_Registration";
 
 export default async function BlogPage({
   params,
@@ -81,7 +103,30 @@ export default async function BlogPage({
     "belgium-vat": <BelgiumVAT />,
     "belgium-vat-number": <BelgiumVATNumber />,
     "peppol-mercurius-belgium": <PeppolMercuriusBelgium />,
-    "erp-adoption-2025": <ErpAdoption2025 />
+    "erp-adoption-2025": <ErpAdoption2025 />,
+    //Poland
+    "PolandKSeF": <PolandKSeF />,
+    "PolandKSeFMandatory": <PolandKSeFMandatory />,
+    "PolandKSeF2": <PolandKSeF2 />,
+    "PolandKSeFImplementation": <PolandKSeFImplementation />,
+    "UAEeInvoicing": <UAEeInvoicing />,
+    "UAEvat2025": <UAEvat2025 />,
+    "UAECorporateTax": <UAECorporateTax />,
+    "UAEVATReturnFiling": <UAEVATReturnFiling />,
+    "UAEVATCalculation": <UAEVATCalculation />,
+    "UAECorporateTaxFAQ": <UAECorporateTaxFAQ />,
+    "UAEVATInvoice": <UAEVATInvoice />,
+    "UAEVATRateStructure": <UAEVATRateStructure />,
+    "UAEVATRefund": <UAEVATRefund />,
+    "UAEVATPenalties": <UAEVATPenalties />,
+    "UAEVATComplete2025": <UAEVATComplete2025 />,
+    "UAEExciseTax": <UAEExciseTax />,
+    "UAEMoFAAttestation": <UAEMoFAAttestation />,
+    "PeppolCTCUAE": <PeppolCTCUAE />,
+    "UAETaxCreditNotes": <UAETaxCreditNotes />,
+    "UAEDigitalSignatureCertificate": <UAEDigitalSignatureCertificate />,
+    "UAE_TRN_Verification": <UAE_TRN_Verification />,
+    "UAE_Excise_Registration": <UAE_Excise_Registration />
   };
 
   const Component = blogComponents[url];

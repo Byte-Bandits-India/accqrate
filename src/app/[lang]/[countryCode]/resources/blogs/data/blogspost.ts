@@ -82,14 +82,6 @@ const blogPosts: BlogPost[] = [
     country: "OM"
   },
   {
-    id: 10,
-    url: "streamline",
-    title: "Streamlining Business Transactions: e-Invoicing in the United Arab Emirates",
-    image: "/images/blogs/streamlining-business-transactions.webp",
-    desc: "The adoption of the e-invoicing system is accelerating in the Gulf nations, signaling a remarkable shift towards digital invoicing...",
-    country: "AE"
-  },
-  {
     id: 11,
     url: "good-receipts",
     title: "Goods Receipts Accounting",
@@ -280,7 +272,194 @@ const blogPosts: BlogPost[] = [
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "ERP solutions continue evolving with cloud tech and AI-powered tools driving smarter automation...",
     country: "OM"
-  }
+  },
+//Poland
+  {
+    id: 35,
+    url: "PolandKSeF",
+    title: "KSeF in Poland: How Mandatory E-Invoicing Creates a Strategic Opportunity for Financial Transformation",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Poland’s transition toward mandatory e-invoicing marks one of the most significant tax digitalization efforts in Europe....",
+    country: "PL"
+  },
+{
+    id: 36,
+    url: "PolandKSeFMandatory",
+    title: "Poland’s Mandatory B2B Electronic Invoicing from February 2026",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Poland is entering a decisive stage in its tax digitalisation journey. The Ministry of Finance has confirmed that mandatory business to business electronic invoicing will begin in February 2026...",
+    country: "PL"
+  },
+  {
+    id: 37,
+    url: "PolandKSeF2",
+    title: "Poland’s KSeF 2.0: Understanding the Official E-Invoicing Mandate",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Poland’s transition toward mandatory electronic invoicing has entered a decisive phase, driven by confirmed legislation...",
+    country: "PL"
+  },
+  {
+    id: 38,
+    url: "PolandKSeFImplementation",
+    title: "KSeF and the E Invoicing Mandate From 2026",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Poland is entering the final stage of its national transition to structured electronic invoicing through the Krajowy System e Faktur, known widely as KSeF...",
+    country: "PL"
+  },
+
+  //UAE
+  {
+    id: 39,
+    url: "UAEeInvoicing",
+    title: "E-Invoicing in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Key Requirements, Implementation Timeline and the Latest Regulatory Updates...",
+    country: "AE"
+  },
+  {
+    id: 40,
+    url: "UAEvat2025",
+    title: "VAT in the UAE: Rates, Thresholds, Exemptions and Compliance Rules for 2025",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Value Added Tax has been a core element of the UAE’s tax framework since its introduction on 1 January 2018...",
+    country: "AE"
+  },
+  {
+    id: 41,
+    url: "UAECorporateTax",
+    title: "Corporate Tax in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "A Complete Guide to Rates, Scope, Compliance and the Domestic Minimum Top up Tax...",
+    country: "AE"
+  },
+  {
+    id: 42,
+    url: "UAEVATReturnFiling",
+    title: "How to File a VAT Return in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Businesses that are registered for Value Added Tax in the UAE are required to submit VAT returns for every tax period assigned to them by the Federal Tax Authority...",
+    country: "AE"
+  },
+  {
+    id: 43,
+    url: "UAEVATCalculation",
+    title: "How to Calculate VAT in the UAE in 2025",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Calculating VAT in the United Arab Emirates is straightforward once you understand how the five percent rate applies to different types of transactions...",
+    country: "AE"
+  },
+  {
+    id: 44,
+    url: "UAECorporateTaxFAQ",
+    title: "UAE Corporate Tax 2025",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "This guide answers common questions about the UAE corporate tax regime, explains who is covered...",
+    country: "AE"
+  },
+  {
+    id: 45,
+    url: "UAEVATInvoice",
+    title: "VAT Invoice in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Value Added Tax has become an integral part of commercial operations in the United Arab Emirates...",
+    country: "AE"
+  },
+  {
+    id: 46,
+    url: "UAEVATRateStructure",
+    title: "VAT Rate Structure in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "The Value Added Tax framework in the United Arab Emirates began on the first of January 2018 through Federal Decree Law No. 8 of 2017...",
+    country: "AE"
+  },
+  {
+    id: 47,
+    url: "UAEVATRefund",
+    title: "How to Claim a VAT Refund in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Since the introduction of Value Added Tax in the United Arab Emirates in January 2018, several refund mechanisms...",
+    country: "AE"
+  },
+  {
+    id: 48,
+    url: "UAEVATPenalties",
+    title: "Penalties for Non Compliance Under UAE VAT",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "The introduction of Value Added Tax in the United Arab Emirates marked a major shift in how businesses record...",
+    country: "AE"
+  },
+  {
+    id: 49,
+    url: "UAEVATComplete2025",
+    title: "VAT in the UAE: Complete 2025 Guide to Rates, Registration, Exemptions and Compliance",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Value Added Tax has become a central part of the UAE’s fiscal system since its introduction in 2018...",
+    country: "AE"
+  },
+  {
+    id: 50,
+    url: "UAEExciseTax",
+    title: "Excise Tax in the UAE: Rates, Exemptions, Compliance Rules, and How the Tax Is Calculated",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Excise tax has become an important element of the UAE’s modern tax system. Introduced to discourage the consumption of products that negatively affect public health or the environment...",
+    country: "AE"
+  },
+  {
+    id: 51,
+    url: "UAEVATZeroRatedVsExempt",
+    title: "Zero Rated versus Exempt Supplies in the UAE VAT System",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Understanding whether a supply is zero rated or exempt is one of the most important VAT decisions a business has to make...",
+    country: "AE"
+  },
+  {
+    id: 52,
+    url: "UAEMoFAAttestation",
+    title: "MoFA Attestation in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Document attestation by the Ministry of Foreign Affairs is a mandatory requirement across many legal, immigration and commercial processes in the United Arab Emirates...",
+    country: "AE"
+  },
+  {
+    id: 53,
+    url: "PeppolCTCUAE",
+    title: "The Peppol CTC Model in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "The UAE’s transition toward mandatory e-invoicing marks one of its most significant digital taxation reforms to date. By selecting the Peppol Continuous Transaction Controls model as its national framework...",
+    country: "AE"
+  },
+  {
+    id: 54,
+    url: "UAETaxCreditNotes",
+    title: "UAE Tax Credit Notes",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Tax credit notes play a central role in the UAE VAT ecosystem. They ensure that errors, returns and adjustments are documented correctly without compromising compliance, revenue reporting...",
+    country: "AE"
+  },
+  {
+    id: 55,
+    url: "UAEDigitalSignatureCertificate",
+    title: "Digital Signature Certificate in the UAE",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Digital transformation in the UAE has accelerated rapidly, and the shift toward mandatory e-invoicing by 2026 makes Digital Signature Certificates one of the core identity...",
+    country: "AE"
+  },
+  {
+    id: 56,
+    url: "UAE_TRN_Verification",
+    title: "TRN Verification in UAE: A Complete and Practical Guide",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "A Tax Registration Number, commonly known as a TRN, is one of the most essential identifiers for any VAT-registered business in the United Arab Emirates...",
+    country: "AE"
+  },
+  {
+    id: 57,
+    url: "UAE_Excise_Registration",
+    title: "Excise Registration in the UAE: Complete, Updated Guide for Businesses",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Excise tax in the United Arab Emirates is a regulatory tool designed to curb the consumption of goods that have negative health or environmental impacts...",
+    country: "AE"
+  },
 ];
 
 export default blogPosts;
