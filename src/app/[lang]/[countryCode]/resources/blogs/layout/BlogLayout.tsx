@@ -35,15 +35,58 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
   const isMobile = useMediaQuery("(max-width: 900px)");
   const hideRecentBlogs = useMediaQuery("(max-width: 767px)");
 
+  // Map image paths to AssetPath
+  const getImageFromAssetPath = (img: string) => {
+    if (!img || typeof img !== "string") return AssetPath.blogs.accqrateAd;
+
+    const filename = img.split('/').pop()?.replace(/\.(png|jpg|jpeg|webp|svg)$/i, '') || '';
+    
+    const imageMap: Record<string, any> = {
+      'credit-notes': AssetPath.blogs.creditNotes,
+      'debit-notes': AssetPath.blogs.debitNotes,
+      'zatca-einvocing-phase2': AssetPath.blogs.zatcaEinvoicingPhase2,
+      'zatcaintegration-with-oracle': AssetPath.blogs.streamliningBusiness,
+      'zatcaintegration-with-microsoft365': AssetPath.blogs.zatcaIntegrationMicrosoft,
+      'sap-e-invocing-integration-with-zatca': AssetPath.blogs.sapIntegration,
+      'riyadh-world-expo-2030-the-future-of-business-innovation': AssetPath.blogs.riyadhExpo,
+      'goods-receipts': AssetPath.blogs.goodsReceipts,
+      'zatca-fatoora-device-onboarding-requirements': AssetPath.blogs.zatcaFatooraDevice,
+      'pos-integration': AssetPath.blogs.posIntegration,
+      'fines-and-financial-penalties-exemption-for-its-taxpayers': AssetPath.blogs.financialPenalties,
+      'credit-note-1': AssetPath.blogs.creditnote1,
+      'credit-note-2': AssetPath.blogs.creditnote2,
+      'attaining-compliance': AssetPath.blogs.attaininZATCA,
+      'compliant-invoicing-software': AssetPath.blogs.compliantInvoicingSoftware,
+      'adapting-business-zatca': AssetPath.blogs.adaptingBusinessZATCA,
+      'automotive-industry': AssetPath.blogs.automotiveIndustry,
+      'credit-notes-png': AssetPath.blogs.creditNotesPng,
+      'vat': AssetPath.blogs.vat,
+      'vat-registration': AssetPath.blogs.vatRegistration,
+      'einvoicing-oman': AssetPath.blogs.einvoicingOman,
+      'einvoicing-oman-png': AssetPath.blogs.einvoicingOmanPng,
+      'bahrain-e-invoicing': AssetPath.blogs.bahrainEInvoicing,
+      'income-tax': AssetPath.blogs.incomeTax,
+      'mandate': AssetPath.blogs.mandate,
+      'mercurius': AssetPath.blogs.mercurius,
+      'msme': AssetPath.blogs.msme,
+      'tax-systems': AssetPath.blogs.taxSystems,
+      'technical-rules': AssetPath.blogs.technicalRules,
+      'corporate-tax': AssetPath.blogs.corporateTax,
+      'e-invoicing-process-overview': AssetPath.blogs.eInvoicingProcess,
+    };
+
+    return imageMap[filename] || AssetPath.blogs.accqrateAd;
+  };
+
   // Random blog posts
   const [randomBlogs, setRandomBlogs] = useState<
-    { url: string; image: string; heading: string; value: string }[]
+    { url: string; image: any; heading: string; value: string }[]
   >([]);
 
   useEffect(() => {
     const mappedBlogs = blogPosts.map((post) => ({
       url: post.url,
-      image: post.image,
+      image: getImageFromAssetPath(post.image),
       heading: post.title,
       value: post.desc,
     }));
