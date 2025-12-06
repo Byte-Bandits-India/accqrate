@@ -4,11 +4,11 @@ import React, { useState, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import { useParams } from "next/navigation";
-
+import Image ,{StaticImageData} from 'next/image'
 
 interface VideoItem {
     title: string
-    thumbnail: string
+    thumbnail: string | StaticImageData
     videoUrl: string
     desc: string
 }
@@ -105,7 +105,7 @@ const DemoVideoSection: React.FC = () => {
                             >
                                 <div className="flex flex-col h-full">
                                     <div className="thumbnail overflow-hidden">
-                                        <img
+                                        <Image
                                             src={video.thumbnail}
                                             alt={video.title}
                                             className="w-full h-auto max-h-[260px] object-cover transition-transform duration-300 hover:scale-105"
@@ -144,9 +144,11 @@ const DemoVideoSection: React.FC = () => {
                                     <p className="text-fluid-small text-white font-light">
                                         No credit card needed
                                     </p>
-                                    <img
-                                        src="/images/home/Star-or.svg"
+                                    <Image
+                                        src={AssetPath.home.starOr}
                                         alt="orange_star"
+                                        width={20}
+                                        height={20}
                                         className="w-5 h-5 md:w-auto md:h-auto"
                                     />
                                     <p className="text-fluid-small text-white font-light">
@@ -183,9 +185,11 @@ const DemoVideoSection: React.FC = () => {
 
                         {/* RIGHT IMAGE SECTION */}
                         <div className="relative flex justify-center items-center w-full top-8 md:top-0 md:w-1/2 z-10 order-1 md:order-2 bg-[#F3F3FF] md:bg-transparent py-10 md:py-0 overflow-hidden">
-                            <img
-                                src="/images/invoicing/manage-team.webp"
+                            <Image
+                                src={AssetPath.invoicing.manageTeam}
                                 alt="Accqrate software illustration"
+                                width={591}
+                                height={400}
                                 className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[520px] lg:max-w-[560px] xl:max-w-[591px] rounded-2xl object-contain"
                             />
                         </div>
