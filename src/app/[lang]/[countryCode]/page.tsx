@@ -1,6 +1,6 @@
 // app/[lang]/[countryCode]/page.tsx
 import { notFound } from "next/navigation";
-import ComingSoon from "@/Components/CommingSoon";
+import CountryPage from "@/Components/CountryPage";
 import AssetPath from "@/AssetPath/AssetPath";
 
 const countries = [
@@ -113,9 +113,7 @@ export default async function CountryHomePage({ params }: CountryPageProps) {
     }
 
     // Only pass countryCode to CountryPage since that's what it expects
-    return <>
-        <ComingSoon />
-    </>;
+    return <CountryPage countryCode={countryCode.toUpperCase()} />;
 }
 
 export async function generateMetadata({ params }: CountryPageProps) {
