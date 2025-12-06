@@ -1,5 +1,8 @@
+import Image from "next/image";
+import { StaticImageData } from "next/image";
+
 interface UpdateCardProps {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   description: string;
 }
@@ -8,9 +11,11 @@ const UpdateCard = ({ image, title, description }: UpdateCardProps) => {
   return (
     <div className="overflow-hidden   ">
       <div className="relative">
-        <img
+        <Image
           src={image}
           alt={title}
+          width={500}
+          height={276}
           className="w-auto lg:w-[500px] lg:h-[276px] object-cover"
         />
 
