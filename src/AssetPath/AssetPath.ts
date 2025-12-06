@@ -251,6 +251,10 @@ import accqrateFeature4 from "@/Assets/images/invoicing/Accqrate_e-invoicing/4.p
 
 // ==================== INTEGRATION IMPORTS ====================
 import b2bIntegration from "@/Assets/images/integration/b2b.png";
+import b2bpoland from "@/Assets/images/integration/b2b-poland.png";
+import intdash from "@/Assets/images/integration/int-dash.png";
+import inttax from "@/Assets/images/integration/int-tax.png";
+import tick from "@/Assets/images/integration/tick.png";
 import integrationInvoice from "@/Assets/images/integration/integration-invoice.png";
 import integration1 from "@/Assets/images/integration/integration1.webp";
 import integration2 from "@/Assets/images/integration/integration2.webp";
@@ -670,6 +674,10 @@ const AssetPath = {
   // INTEGRATION SECTION
   integration: {
     b2b: b2bIntegration,
+     b2bpoland,
+    intdash,
+    inttax,
+    tick,
     invoice: integrationInvoice,
     integration1,
     integration2,
