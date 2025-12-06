@@ -10,7 +10,7 @@ services:
       - ./:/home/node/app
       - /home/node/app/node_modules
       - /home/node/app/.next
-    command: sh -c "chown -R node:node /home/node/app && su node -c 'npm install && npm run dev'"
+    command: sh -c "chown -R node:node /home/node/app 2>/dev/null || true && su node -c 'npm install && npm run dev'"
 
   router:
     container_name: erp_router

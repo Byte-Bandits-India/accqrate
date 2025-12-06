@@ -1,11 +1,79 @@
+'use client'
+
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
+import { useParams } from 'next/navigation'
 import AssetPath from "@/AssetPath/AssetPath";
+import Solutions from './Solutions';
+import CompleteSoftware from './CompleteSoftware';
 
 const Section2 = () => {
+    const params = useParams()
+    const countryCode = params?.countryCode as string
+
     return (
         <>
             <section>
+
+                {!['BE', 'PL'].includes(countryCode?.toUpperCase() || '') && (
+                    <Solutions countryCode={countryCode} />
+                )}
+
+                <CompleteSoftware />
+
+
+
+                {!['BE', 'PL'].includes(countryCode?.toUpperCase() || '') && (
+                    <div className="bg-[#29266E] text-white text-center py-8 md:py-10 lg:py-[80px] px-6 md:px-8 xl:px-0">
+                        <h3 className="text-fluid-h2 lg:text-[38px] font-normal leading-tight">
+                            Easy Onboarding Process
+                        </h3>
+                        <p className="text-fluid-body mt-4 md:mt-6">
+                            Get Digital In Just 30 Minutes With Our Quick On Boarding Process
+                        </p>
+
+                        <div className="mt-8 flex justify-center">
+                            <img
+                                src={AssetPath.invoicing.onboard.src}
+                                alt="onboard"
+                                className="h-full w-full max-w-[1260px] max-h-[491px]"
+                            />
+                        </div>
+
+                        <p className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-8 text-[14px] md:text-fluid-body text-white md:text-center">
+                            <span>No credit card needed</span>
+                            <img
+                                src={AssetPath.invoicing.starGold.src}
+                                alt="separator"
+                                className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
+                            />
+                            <span>Unlimited time on Free plan</span>
+                            <img
+                                src={AssetPath.invoicing.starGold.src}
+                                alt="separator"
+                                className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
+                            />
+                            <span>100% Money-Back Guarantee</span>
+                            <img
+                                src={AssetPath.invoicing.starGold.src}
+                                alt="separator"
+                                className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
+                            />
+                            <span>Unsubscribe Anytime</span>
+                        </p>
+
+                        <button
+                            className="inline-flex text-[14px] md:text-[18px] items-center justify-center gap-2 bg-[#F05A28] mt-6 md:mt-8 lg:mt-10 text-[#FFFFFF] font-medium px-6 py-4 rounded-full"
+                        >
+                            Book a Demo <ArrowRight className="w-4 h-4 -rotate-45" />
+                        </button>
+
+
+                    </div>
+                )}
+
+
+                {/* Accqrate Offerings */}
                 <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-12'>
                     <div className='px-6 md:px-8 xl:px-0'>
                         <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
@@ -80,55 +148,7 @@ const Section2 = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Easy Onboarding Process */}
-                <div className="bg-[#29266E] text-white text-center py-8 md:py-10 lg:py-[80px] px-6 md:px-8 xl:px-0">
-                    <h3 className="text-fluid-h2 lg:text-[38px] font-normal leading-tight">
-                        Easy Onboarding Process
-                    </h3>
-                    <p className="text-fluid-body mt-4 md:mt-6">
-                        Get Digital In Just 30 Minutes With Our Quick On Boarding Process
-                    </p>
-
-                    <div className="mt-8 flex justify-center">
-                        <img
-                            src={AssetPath.invoicing.onboard.src}
-                            alt="onboard"
-                            className="h-full w-full max-w-[1260px] max-h-[491px]"
-                        />
-                    </div>
-
-                    <p className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-8 text-[14px] md:text-fluid-body text-white md:text-center">
-                        <span>No credit card needed</span>
-                        <img
-                            src={AssetPath.invoicing.starGold.src}
-                            alt="separator"
-                            className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
-                        />
-                        <span>Unlimited time on Free plan</span>
-                        <img
-                            src={AssetPath.invoicing.starGold.src}
-                            alt="separator"
-                            className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
-                        />
-                        <span>100% Money-Back Guarantee</span>
-                        <img
-                            src={AssetPath.invoicing.starGold.src}
-                            alt="separator"
-                            className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
-                        />
-                        <span>Unsubscribe Anytime</span>
-                    </p>
-
-                    <button
-                        className="inline-flex text-[14px] md:text-[18px] items-center justify-center gap-2 bg-[#F05A28] mt-6 md:mt-8 lg:mt-10 text-[#FFFFFF] font-medium px-6 py-4 rounded-full"
-                    >
-                        Book a Demo <ArrowRight className="w-4 h-4 -rotate-45" />
-                    </button>
-
-
-                </div>
-            </section>
+            </section >
         </>
     )
 }

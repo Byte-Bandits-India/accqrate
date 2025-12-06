@@ -414,6 +414,7 @@ import adaptingBusiness from "@/Assets/images/adapting-business-processes-for-ZA
 import compliantInvoicing from "@/Assets/images/a-compliant-e-invoicing-fatoorah-software.webp";
 import jonexImg from "@/Assets/images/jonex.png";
 import ssImg from "@/Assets/images/ss.png";
+import Zact from "@/Assets/images/integration/ZATCA-solution.png"
 
 // Home images
 import starOr from "@/Assets/images/home/Star-or.svg";
@@ -593,6 +594,7 @@ const AssetPath = {
     zatcaBox,
     zatcaProd,
     zatcaUp,
+    Zact
   },
 
   // BLOGS SECTION

@@ -9,32 +9,32 @@ interface Section {
 
 const sections: Section[] = [
     {
-        img: "/images/invoicing/bag-check-svgrepo-com 1.png",
+        img: AssetPath.invoicing.bagCheck.src,
         title: "Purchases & Claims",
         desc: "Manage bills, purchase orders and expenses from one place",
     },
     {
-        img: "/images/invoicing/money-stack-svgrepo-com 1.png",
+        img: AssetPath.invoicing.moneyStack.src,
         title: "Payroll & Employees",
         desc: "Run payroll and invite employees to submit their expense claims.",
     },
     {
-        img: "/images/invoicing/tax-receipt.png",
+        img: AssetPath.invoicing.taxReceipt.src,
         title: "VAT Return",
         desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
     },
     {
-        img: "/images/invoicing/box_svgrepo.com.png",
+        img: AssetPath.invoicing.box.src,
         title: "Inventory tracking",
         desc: "Easily keep track of stock levels and let Accqrate automatically book your Cost of Goods",
     },
     {
-        img: "/images/invoicing/profile-2user_svgrepo.com.png",
+        img: AssetPath.invoicing.profile2user.src,
         title: "Customers & Suppliers",
         desc: "Always know who you owe money to and who owes you money",
     },
     {
-        img: "/images/invoicing/chart-2_svgrepo.com.png",
+        img: AssetPath.invoicing.chart2.src,
         title: "Reports & Insights",
         desc: "Generate single or consolidated reports for a holistic view of your finances.",
     },

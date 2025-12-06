@@ -87,6 +87,21 @@ const Section1 = () => {
     const lang = params?.lang as string || "en";
     const countryCode = (params?.countryCode as string || "sa").toLowerCase();
 
+    // Country to flag, code, and logo mapping
+    const countryMap: { [key: string]: { flag: any; code: string; name: string; logo: any } } = {
+        sa: { flag: AssetPath.header.language.saudiArabia, code: "KSA", name: "Saudi Arabia", logo: AssetPath.resources.Zact },
+        ae: { flag: AssetPath.header.language.uae, code: "UAE", name: "United Arab Emirates", logo: AssetPath.resources.Zact },
+        om: { flag: AssetPath.header.language.oman, code: "OMN", name: "Oman", logo: AssetPath.resources.Zact },
+        bh: { flag: AssetPath.header.language.bahrain, code: "BHR", name: "Bahrain", logo: AssetPath.resources.Zact },
+        ma: { flag: AssetPath.header.language.malaysia, code: "MYS", name: "Malaysia", logo: AssetPath.resources.Zact },
+        mu: { flag: AssetPath.header.language.mauritius, code: "MUS", name: "Mauritius", logo: AssetPath.resources.Zact },
+        jd: { flag: AssetPath.header.language.jordan, code: "JOR", name: "Jordan", logo: AssetPath.resources.Zact },
+        be: { flag: AssetPath.header.language.belgium, code: "BEL", name: "Belgium", logo: AssetPath.integration.peppol },
+        pl: { flag: AssetPath.header.language.poland, code: "POL", name: "Poland", logo: AssetPath.integration.peppol },
+    };
+
+    const currentCountry = countryMap[countryCode] || countryMap.sa;
+
 
     const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -102,181 +117,251 @@ const Section1 = () => {
     };
 
     return (
-        <section className='bg-gradient-to-t from-[#EFF3FF] to-transparent'>
-            <FadeUp className="mb-8 md:mb-[40px] pt-12 md:pt-[80px] lg:pt-[100px]">
-                <h3 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto">
-                    <T>Trusted by  </T><br className="md:hidden" /><span className="text-[#194BED]"><T>5,000+ Global companies</T></span>
-                </h3>
-            </FadeUp>
+        <section className=''>
+            <div className='bg-gradient-to-t from-[#EFF3FF] to-transparent'>
+                <FadeUp className="mb-8 md:mb-[40px] pt-12 md:pt-[80px] lg:pt-[100px]">
+                    <h3 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto">
+                        <T>Trusted by  </T><br className="md:hidden" /><span className="text-[#194BED]"><T>5,000+ Global companies</T></span>
+                    </h3>
+                </FadeUp>
 
-            {/* Logo Marquee */}
-            <div className="relative">
-                <div className="max-w-5xl overflow-hidden py-6 mx-auto">
-                    <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
-                    <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
+                {/* Logo Marquee */}
+                <div className="relative">
+                    <div className="max-w-5xl overflow-hidden py-6 mx-auto">
+                        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
+                        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
 
-                    <div className="flex flex-col gap-6">
-                        <div className="flex animate-scrollLeft w-max flex-shrink-0">
-                            {[...topRow, ...topRow].map((logo, i) => (
-                                <div key={`top-${i}`} className="flex flex-col items-center mx-4">
-                                    <Image
-                                        src={logo.src}
-                                        alt={logo.name}
-                                        width={135}
-                                        height={48}
-                                        className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
-                                    />
-                                    <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
-                                </div>
-                            ))}
-                        </div>
+                        <div className="flex flex-col gap-6">
+                            <div className="flex animate-scrollLeft w-max flex-shrink-0">
+                                {[...topRow, ...topRow].map((logo, i) => (
+                                    <div key={`top-${i}`} className="flex flex-col items-center mx-4">
+                                        <Image
+                                            src={logo.src}
+                                            alt={logo.name}
+                                            width={135}
+                                            height={48}
+                                            className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                        />
+                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
+                                    </div>
+                                ))}
+                            </div>
 
-                        <div className="flex animate-scrollRight w-max flex-shrink-0">
-                            {[...bottomRow, ...bottomRow].map((logo, i) => (
-                                <div key={`bottom-${i}`} className="flex flex-col items-center mx-4">
-                                    <img
-                                        src={logo.src.src}
-                                        alt={logo.name}
-                                        width={135}
-                                        height={48}
-                                        className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
-                                    />
-                                    <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="px-6 md:px-8 xl:px-0 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
-                {/* Left Text */}
-                <div className="flex-1">
-                    <h1 className="text-fluid-h2 lg:text-[38px] font-medium pt-[30px] md:pt-[37px] tracking-heading leading-tight">
-                        Customize and send invoices easily
-                    </h1>
-                    <div className='space-y-3 md:space-y-4 mt-4'>
-                        <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
-                            Sending an invoice should be easy - and we`ve made it so
-                        </p>
-                        <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
-                            Perfectly aligned with your needs and brand
-                        </p>
-                        <p className="text-fluid-body lg:text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
-                            Invoices Custom-Made for Your Business
-                        </p>
-                        <button
-                            className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px]"
-                            style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
-                        >
-                            See It in Action
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="relative mt-6 md:mt-8">
-                <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
-
-                        {/* LEFT COLUMN */}
-                        <div className="lg:col-span-2">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                                {features.map((feature, index) => (
-                                    <div
-                                        key={index}
-                                        className="relative bg-white rounded-[16px] shadow-[0_8px_30px_rgba(0,0,0,0.12)]
-                w-full max-h-[372px] h-full
-                p-6 md:p-8 
-                flex flex-col gap-2
-                transition-all hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:scale-[1.02] duration-300"
-                                    >
-                                        {/* Image Left + Number Right */}
-                                        <div className="flex justify-between items-center mb-4">
-                                            <div className="w-[70%]">
-                                                <img
-                                                    src={feature.img}
-                                                    alt={feature.title}
-                                                    className="w-full max-h-[120px] h-auto object-contain"
-                                                />
-                                            </div>
-
-                                            <span className="font-anonymous text-[38px] font-bold text-[#E6E6E6] leading-none select-none">
-                                                {String(index + 1).padStart(2, "0")}
-                                            </span>
-                                        </div>
-
-                                        {/* Title + Description */}
-                                        <div className="mb-3 space-y-4 flex-grow">
-                                            <div>
-                                                <h2 className="text-fluid-body font-medium text-black leading-tight mb-1">
-                                                    <T>{feature.title}</T>
-                                                </h2>
-                                                {feature.sub && (
-                                                    <h2 className="text-fluid-body font-medium text-black leading-tight">
-                                                        <T>{feature.sub}</T>
-                                                    </h2>
-                                                )}
-                                            </div>
-
-                                            <div>
-                                                <p className="text-black text-fluid-small leading-relaxed">
-                                                    <T>{feature.description}</T>
-                                                </p>
-                                            </div>
-                                        </div>
+                            <div className="flex animate-scrollRight w-max flex-shrink-0">
+                                {[...bottomRow, ...bottomRow].map((logo, i) => (
+                                    <div key={`bottom-${i}`} className="flex flex-col items-center mx-4">
+                                        <img
+                                            src={logo.src.src}
+                                            alt={logo.name}
+                                            width={135}
+                                            height={48}
+                                            className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                        />
+                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        {/* RIGHT COLUMN - IMAGE */}
-                        <div className="lg:col-span-2 flex justify-center">
-                            <div className="sticky top-6 w-full flex justify-center">
-                                <img
-                                    src={AssetPath.invoicing.taxInvoiceMultiple.src}
-                                    alt="Feature Demo"
-                                    className="w-full h-auto object-contain mx-auto rounded-[12px]"
-                                />
+                <div className="px-6 md:px-8 xl:px-0 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
+                    {/* Left Text */}
+                    <div className="flex-1">
+                        <h1 className="text-fluid-h2 lg:text-[38px] font-medium pt-[30px] md:pt-[37px] tracking-heading leading-tight">
+                            Customize and send invoices easily
+                        </h1>
+                        <div className='space-y-3 md:space-y-4 mt-4'>
+                            <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
+                                Sending an invoice should be easy - and we`ve made it so
+                            </p>
+                            <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
+                                Perfectly aligned with your needs and brand
+                            </p>
+                            <p className="text-fluid-body lg:text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
+                                Invoices Custom-Made for Your Business
+                            </p>
+                            <button
+                                className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px]"
+                                style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                            >
+                                See It in Action
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="relative mt-6 md:mt-8">
+                    <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
+                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+
+                            {/* LEFT COLUMN */}
+                            <div className="lg:col-span-2">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                                    {features.map((feature, index) => (
+                                        <div
+                                            key={index}
+                                            className="relative bg-white rounded-[16px] shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+                w-full max-h-[372px] h-full
+                p-6 md:p-8 
+                flex flex-col gap-2
+                transition-all hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:scale-[1.02] duration-300"
+                                        >
+                                            {/* Image Left + Number Right */}
+                                            <div className="flex justify-between items-center mb-4">
+                                                <div className="w-[70%]">
+                                                    <img
+                                                        src={feature.img}
+                                                        alt={feature.title}
+                                                        className="w-full max-h-[120px] h-auto object-contain"
+                                                    />
+                                                </div>
+
+                                                <span className="font-anonymous text-[38px] font-bold text-[#E6E6E6] leading-none select-none">
+                                                    {String(index + 1).padStart(2, "0")}
+                                                </span>
+                                            </div>
+
+                                            {/* Title + Description */}
+                                            <div className="mb-3 space-y-4 flex-grow">
+                                                <div>
+                                                    <h2 className="text-fluid-body font-medium text-black leading-tight mb-1">
+                                                        <T>{feature.title}</T>
+                                                    </h2>
+                                                    {feature.sub && (
+                                                        <h2 className="text-fluid-body font-medium text-black leading-tight">
+                                                            <T>{feature.sub}</T>
+                                                        </h2>
+                                                    )}
+                                                </div>
+
+                                                <div>
+                                                    <p className="text-black text-fluid-small leading-relaxed">
+                                                        <T>{feature.description}</T>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* RIGHT COLUMN - IMAGE */}
+                            <div className="lg:col-span-2 flex justify-center">
+                                <div className="sticky top-6 w-full flex justify-center">
+                                    <img
+                                        src={AssetPath.invoicing.taxInvoiceMultiple.src}
+                                        alt="Feature Demo"
+                                        className="w-full h-auto object-contain mx-auto rounded-[12px]"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div className="relative mt-6 md:mt-8 lg:mt-[100px]">
-                <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+                <div className="relative mt-6 md:mt-8 lg:mt-[100px] pb-10 md:pb-12">
+                    <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
+                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
-                        {/*LEFT COLUMN - IMAGE */}
-                        <div className="lg:col-span-2 flex justify-center">
-                            <div className="sticky top-6 w-full flex justify-center">
-                                <img
-                                    src={AssetPath.invoicing.taxIncoiceSingle.src}
-                                    alt="Feature Demo"
-                                    className="w-full h-auto object-contain mx-auto rounded-[12px]"
-                                />
+                            {/*LEFT COLUMN - IMAGE */}
+                            <div className="lg:col-span-2 flex justify-center">
+                                <div className="sticky top-6 w-full flex justify-center">
+                                    <img
+                                        src={AssetPath.invoicing.taxIncoiceSingle.src}
+                                        alt="Feature Demo"
+                                        className="w-full h-auto object-contain mx-auto rounded-[12px]"
+                                    />
+                                </div>
                             </div>
-                        </div>
 
-                        {/*  RIGHT COLUMN */}
-                        <div className="lg:col-span-2">
-                            <div className="">
-                                <div>
-                                    <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with ZATCA, Tax and Customs Authority</h3>
-                                    <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with ZATCA</h3>
-                                    <h3 className='text-fluid-body font-medium text-[#000000] text-left leading-relaxed'>Phase 2 requirements</h3>
-                                    <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate seamlessly generates ZATCA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ZATCA Phase 2 for every invoice sent to your customers.</p>
-
+                            {/*  RIGHT COLUMN */}
+                            <div className="lg:col-span-2">
+                                <div className="">
                                     <div>
-                                        <img src={AssetPath.invoicing.zatcaLogo.src} alt="zatcalogo" />
+                                        {/* Dynamic compliance content based on country */}
+                                        {countryCode === 'be' || countryCode === 'pl' ? (
+                                            <>
+                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with ZATCA, Tax and Customs Authority</h3>
+                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with Belgium's FPS Finance 2026 mandate</h3>
+                                                <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network, ensuring full readiness for Belgium's mandatory B2B e-invoicing starting 1 January 2026. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.</p>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with ZATCA, Tax and Customs Authority</h3>
+                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with ZATCA</h3>
+                                                <h3 className='text-fluid-body font-medium text-[#000000] text-left leading-relaxed'>Phase 2 requirements</h3>
+                                                <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate seamlessly generates ZATCA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ZATCA Phase 2 for every invoice sent to your customers.</p>
+                                            </>
+                                        )}
 
-                                        <div>
-                                            <p>Accurate is 100% ZATCA Approved E-invoicing solution in</p>
-                                            <div>
+                                        {/* Conditional compliance card: Peppol for BE/PL, ZATCA for others */}
+                                        {countryCode === 'be' || countryCode === 'pl' ? (
+                                            <div className="bg-white max-h-[194px] w-[410px] rounded-2xl shadow p-4 flex flex-col gap-3 mt-6 md:mt-8">
+                                                {/* Peppol Logo */}
+                                                <Image
+                                                    src={AssetPath.integration.peppol}
+                                                    alt="peppol-logo"
+                                                    width={100}
+                                                    height={80}
+                                                    className="max-w-[191px] h-auto rounded-md"
+                                                    unoptimized
+                                                />
+
+                                                <div className="w-full h-px bg-gray-300"></div>
+
+                                                <div className="flex items-center justify-between gap-4">
+                                                    <p className="text-sm leading-tight">
+                                                        Accqrate supports <br /> Peppol e‑Invoicing standards
+                                                    </p>
+
+                                                    <div className="flex items-center justify-center gap-2">
+                                                        <Image
+                                                            src={currentCountry.flag}
+                                                            alt={`${currentCountry.name}-flag`}
+                                                            width={40}
+                                                            height={30}
+                                                            className="max-w-[30px] h-auto rounded"
+                                                            unoptimized
+                                                        />
+                                                        <p>{currentCountry.code}</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                        ) : (
+                                            <div className="bg-white max-h-[194px] w-[410px] rounded-2xl shadow p-4 flex flex-col gap-3 mt-6 md:mt-8">
+                                                {/* ZATCA / Default Logo */}
+                                                <Image
+                                                    src={AssetPath.resources.Zact}
+                                                    alt="zatcalogo"
+                                                    width={310}
+                                                    height={73}
+                                                    className="max-w-[310px] h-auto rounded-md"
+                                                    unoptimized
+                                                />
+
+                                                <div className="w-full h-px bg-gray-300"></div>
+
+                                                <div className="flex items-center justify-between gap-4">
+                                                    <p className="text-sm leading-tight">
+                                                        Accurate is 100% ZATCA <br /> Approved E-invoicing solution in
+                                                    </p>
+
+                                                    <div className="flex items-center justify-center gap-2">
+                                                        <Image
+                                                            src={currentCountry.flag}
+                                                            alt={`${currentCountry.name}-flag`}
+                                                            width={40}
+                                                            height={30}
+                                                            className="max-w-[30px] h-auto rounded"
+                                                            unoptimized
+                                                        />
+                                                        <p>{currentCountry.code}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +369,6 @@ const Section1 = () => {
                     </div>
                 </div>
             </div>
-
 
             <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-[80px]'>
                 <div className='px-6 md:px-8 xl:px-0 text-center'>
@@ -304,7 +388,7 @@ const Section1 = () => {
                                 Generation Phase
                             </h3>
 
-                            <ul className="text-[#333333] text-fluid-small tracking-para leading-[30px] space-y-3 md:space-y-[16px] pl-5 mt-4 md:mt-6 lg:mt-8 list-disc">
+                            <ul className="text-[#333333] text-fluid-small tracking-para leading-[30px] space-y-3 md:space-y-[16px] pl-5 mt-4 md:mt-6 lg:mt-8 list-none">
                                 <li>Generation of Tax Invoices and Simplified e-invoices</li>
                                 <li>Storage of e-invoices</li>
                                 <li>Approved invoice templates</li>
@@ -334,7 +418,7 @@ const Section1 = () => {
                                 Integration Phase
                             </h3>
 
-                            <ul className="text-[#333333] text-fluid-small tracking-para leading-[30px] space-y-3 md:space-y-[16px] pl-5 mt-4 md:mt-6 lg:mt-8 list-disc">
+                            <ul className="text-[#333333] text-fluid-small tracking-para leading-[30px] space-y-3 md:space-y-[16px] pl-5 mt-4 md:mt-6 lg:mt-8 list-none">
                                 <li>Integration with Fatoora portal</li>
                                 <li>Onboard devices & generate OTP</li>
                                 <li>E-invoice generation and hashing XML - Tax & Simplified invoices</li>
@@ -360,6 +444,8 @@ const Section1 = () => {
                 </div>
             </div>
         </section>
+
+
     );
 }
 

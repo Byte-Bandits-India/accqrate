@@ -79,7 +79,7 @@ const countryConfig = {
     },
     "MA": {
         name: "Saudi Arabia",
-        authority: "ZATCA", 
+        authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Malaysia",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
@@ -248,7 +248,7 @@ const Software = () => {
                             </Link>
                         </div>
 
-                        <div className="flex flex-col items-start justify-center gap-2 text-center md:flex-row md:gap-8">
+                        <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8">
                             <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
                                 No credit card needed
                             </p>

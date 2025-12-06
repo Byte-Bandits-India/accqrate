@@ -1,157 +1,23 @@
 'use client'
 
-import { useState, useRef, useCallback, useMemo, useEffect } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import { ChevronRight, ChevronUp, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
+import { getSolutionsContent, ContentItem } from './data/solutions-content'
 
 interface SolutionsProps {
-    malaysia?: boolean
-    mra?: boolean
-    istd?: boolean
+    countryCode?: string // Add countryCode prop
 }
 
-interface ContentItem {
-    content: string
-    desc: string
-    image: string
-    sno: string
-    index: number
-    tab: number
-}
-
-export default function Solutions({ malaysia, mra, istd }: SolutionsProps) {
+export default function Solutions({ countryCode }: SolutionsProps) {
     const containerRef = useRef<HTMLDivElement>(null)
     const [selectedIndex, setSelectedIndex] = useState(0)
 
-    // Memoized content list
-    const contents = useMemo((): ContentItem[] => [
-        {
-            content: 'Flexibility Meets Efficiency',
-            desc: "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.",
-            image: '/images/invoicing/manage-team.webp',
-            sno: '01',
-            index: 0,
-            tab: 0
-        },
-        {
-            content: 'Transparent and Competitive Pricing',
-            desc: 'Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '02',
-            index: 1,
-            tab: 1
-        },
-        {
-            content: malaysia ? 'Swift Onboarding to IRBM\'s system' : 'Swift Fatoora Onboarding',
-            desc: malaysia
-                ? 'Head Start your journey with quick onboarding to IRBM\'s System. Simply have your company data at hand, and let Accqrate onboard you swiftly and efficiently.'
-                : 'Jumpstart your journey with Fatoora in less than 5 minutes. Simply have your company data at hand, and let Accqrate onboard you swiftly and efficiently.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '03',
-            index: 2,
-            tab: 2
-        },
-        {
-            content: malaysia ? 'Automatic Malay Translations' : 'Automatic Arabic Translations',
-            desc: malaysia
-                ? 'Eliminate the language barrier with our automatic translation of all mandatory fields for LHDN compliance, ensuring accuracy without the need for dedicated translation personnel.'
-                : mra
-                    ? 'Eliminate the language barrier with our automatic translation of all mandatory fields for MRA compliance, ensuring accuracy without the need for dedicated translation personnel.'
-                    : istd
-                        ? 'Eliminate the language barrier with our automatic translation of all mandatory fields for ISTD compliance, ensuring accuracy without the need for dedicated translation personnel.'
-                        : 'Eliminate the language barrier with our automatic translation of all mandatory fields for ZATCA compliance, ensuring accuracy without the need for dedicated translation personnel.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '04',
-            index: 3,
-            tab: 3
-        },
-        {
-            content: 'Custom PDF Template Replication',
-            desc: 'Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '05',
-            index: 4,
-            tab: 4
-        },
-        {
-            content: 'Long-Term Invoice Archiving',
-            desc: 'Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '06',
-            index: 5,
-            tab: 5
-        },
-        {
-            content: 'Automated Email Notifications',
-            desc: 'Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '07',
-            index: 6,
-            tab: 6
-        },
-        {
-            content: 'Comprehensive Reconciliation Dashboard',
-            desc: malaysia
-                ? 'Effortlessly reconcile invoices across your applications and IRBM\'s System with our comprehensive dashboards, detailed reports, and exportable excel documents.'
-                : mra
-                    ? 'Effortlessly reconcile invoices across your applications and MRA with our comprehensive dashboards, detailed reports, and exportable excel documents.'
-                    : istd
-                        ? 'Effortlessly reconcile invoices across your applications and ISTD with our comprehensive dashboards, detailed reports, and exportable excel documents.'
-                        : 'Effortlessly reconcile invoices across your applications and ZATCA with our comprehensive dashboards, detailed reports, and exportable excel documents.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '08',
-            index: 7,
-            tab: 7
-        },
-        {
-            content: 'AI-Driven Error Analytics',
-            desc: 'Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '09',
-            index: 8,
-            tab: 8
-        },
-        {
-            content: 'Future-Proof with ERP Scalability',
-            desc: 'When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '10',
-            index: 9,
-            tab: 9
-        },
-        {
-            content: malaysia
-                ? 'Full Support for LHDN Audits'
-                : mra
-                    ? 'Full Support for MRA Audits'
-                    : istd
-                        ? 'Full Support for ISTD Audits'
-                        : 'Full Support for ZATCA Audits',
-            desc: malaysia
-                ? 'We go beyond implementation. Our commitment to compliance includes full support during LHDN audits, ensuring your business meets all regulatory requirements.'
-                : mra
-                    ? 'We go beyond implementation. Our commitment to compliance includes full support during MRA audits, ensuring your business meets all regulatory requirements.'
-                    : istd
-                        ? 'We go beyond implementation. Our commitment to compliance includes full support during ISTD audits, ensuring your business meets all regulatory requirements.'
-                        : 'We go beyond implementation. Our commitment to compliance includes full support during ZATCA audits, ensuring your business meets all regulatory requirements.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '11',
-            index: 10,
-            tab: 10
-        },
-        {
-            content: 'High-Performance Application',
-            desc: 'Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.',
-            image: '/images/invoicing/manage-team.webp',
-            sno: '12',
-            index: 11,
-            tab: 11
-        }
-    ], [malaysia, mra, istd])
-
+    // Get content based on country code
+    const contents = getSolutionsContent(countryCode)
     const selectedContent = contents[selectedIndex] || contents[0]
 
-    // ✅ Fixed scroll behavior for selected item
+    // Fixed scroll behavior for selected item
     const scrollToSelected = useCallback((index: number) => {
         const container = containerRef.current
         if (!container) return
@@ -195,6 +61,52 @@ export default function Solutions({ malaysia, mra, istd }: SolutionsProps) {
         scrollToSelected(selectedIndex)
     }, [selectedIndex, scrollToSelected])
 
+    // Function to get country-specific title
+    const getCountryTitle = () => {
+        switch (countryCode?.toUpperCase()) {
+            case 'AE':
+                return 'UAE E-Invoicing Solutions'
+            case 'SA':
+                return 'Saudi Arabia (ZATCA) E-Invoicing Solutions'
+            case 'MY':
+                return 'Malaysia (LHDN) E-Invoicing Solutions'
+            case 'MU':
+                return 'Mauritius (MRA) E-Invoicing Solutions'
+            case 'JO':
+                return 'Jordan (ISTD) E-Invoicing Solutions'
+            case 'OM':
+                return 'Oman E-Invoicing Solutions'
+            case 'BH':
+                return 'Bahrain E-Invoicing Solutions'
+            case 'QA':
+                return 'Qatar E-Invoicing Solutions'
+            case 'KW':
+                return 'Kuwait E-Invoicing Solutions'
+            case 'EG':
+                return 'Egypt E-Invoicing Solutions'
+            default:
+                return 'Accqrate E-Invoicing Solutions'
+        }
+    }
+
+    // Function to get country-specific subtitle
+    const getCountrySubtitle = () => {
+        switch (countryCode?.toUpperCase()) {
+            case 'AE':
+                return 'FTA-Compliant Solutions for UAE Businesses'
+            case 'SA':
+                return 'ZATCA Phase 2 Compliant Solutions for Saudi Businesses'
+            case 'MY':
+                return 'LHDN-Compliant Solutions for Malaysian Businesses'
+            case 'MU':
+                return 'MRA-Compliant Solutions for Mauritian Businesses'
+            case 'JO':
+                return 'ISTD-Compliant Solutions for Jordanian Businesses'
+            default:
+                return 'Streamline Operations and Accelerate Business Growth'
+        }
+    }
+
     return (
         <section className="bg-[#F8F7FF] py-20">
             <div className="max-w-[1280px] mx-auto px-6 lg:px-0">
@@ -212,7 +124,7 @@ export default function Solutions({ malaysia, mra, istd }: SolutionsProps) {
                     {/* Left Stepper */}
                     <div className="w-full lg:w-[45%] relative">
                         <div className="relative">
-                            {/* Previous Button - Positioned absolutely on top */}
+                            {/* Previous Button */}
                             <button
                                 className="absolute left-1/2 -translate-x-1/2 -top-10 flex items-center gap-1 text-[#FF8D67] text-sm font-medium bg-[#F8F7FF] px-4 py-2 rounded-lg z-10 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
                                 onClick={handlePrevious}
@@ -234,7 +146,7 @@ export default function Solutions({ malaysia, mra, istd }: SolutionsProps) {
                                                 key={item.index}
                                                 onClick={() => handleItemClick(item.index)}
                                                 className={`flex items-center justify-between rounded-xl px-4 py-3 cursor-pointer transition-all duration-300
-                                                    ${isActive
+                          ${isActive
                                                         ? 'bg-white border border-[#FFE1D8] shadow-sm'
                                                         : 'hover:bg-white/40'
                                                     }`}
@@ -242,7 +154,7 @@ export default function Solutions({ malaysia, mra, istd }: SolutionsProps) {
                                                 <div className="flex items-center gap-4">
                                                     <div
                                                         className={`w-10 h-10 rounded-full flex items-center justify-center border text-sm font-medium
-                                                            ${isActive
+                              ${isActive
                                                                 ? 'bg-[#ffffff] text-[#FF8A65] border-[#FFD2C2]'
                                                                 : 'border-[#91ABFF] text-[#91ABFF]'
                                                             }`}
@@ -266,7 +178,7 @@ export default function Solutions({ malaysia, mra, istd }: SolutionsProps) {
                                 </div>
                             </div>
 
-                            {/* Next Button - Positioned absolutely at bottom */}
+                            {/* Next Button */}
                             <button
                                 className="absolute left-1/2 -translate-x-1/2 -bottom-6 flex items-center gap-1 text-[#FF8D67] text-sm font-medium bg-[#F8F7FF] px-4 py-2 rounded-lg z-10 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
                                 onClick={handleNext}
@@ -291,7 +203,7 @@ export default function Solutions({ malaysia, mra, istd }: SolutionsProps) {
                             <div className="relative">
                                 <Image
                                     src={selectedContent.image}
-                                    alt="accounting software in saudi arabia, zatca approved software, Accqrate Accounting software"
+                                    alt={`${getCountryTitle()} - Accqrate Accounting software`}
                                     width={600}
                                     height={400}
                                     className="md:w-full md:h-auto rounded-lg object-cover"
