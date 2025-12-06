@@ -136,6 +136,7 @@ import faqsBlog from "@/Assets/images/blogs/FAQs.png";
 import financialPenalties from "@/Assets/images/blogs/fines-and-financial-penalties-exemption-for-its-taxpayers.webp";
 import goodsReceipts from "@/Assets/images/blogs/goods-receipts-accounting.webp";
 import incomeTax from "@/Assets/images/blogs/IncomeTax.png";
+import keyStepsInvoicing from "@/Assets/images/blogs/key-steps-to-choose-right-zatca-approved-e-invoicing-software.webp";
 import mandate from "@/Assets/images/blogs/Mandate.png";
 import mercurius from "@/Assets/images/blogs/Mercurius.png";
 import msme from "@/Assets/images/blogs/msme.png";
@@ -154,6 +155,7 @@ import zatcaEinvoicingPhase2 from "@/Assets/images/blogs/zatca-einvocing-phase2.
 import zatcaFatooraDevice from "@/Assets/images/blogs/zatca-fatoora-device-onboarding-requirements.webp";
 import zatcaPrepayment from "@/Assets/images/blogs/zatca-prepayment.webp";
 import zatcaIntegrationMicrosoft from "@/Assets/images/blogs/zatcaintegration-with-microsoft365.webp";
+import zatcaIntegrationOracle from "@/Assets/images/blogs/zatcaintegration-with-oracle.webp";
 
 // ==================== INDUSTRIES IMPORTS ====================
 import aerospaceDefense from "@/Assets/images/industries/aerospace-defense.webp";
@@ -542,6 +544,7 @@ const AssetPath = {
     financialPenalties,
     goodsReceipts,
     incomeTax,
+    keyStepsInvoicing,
     mandate,
     mercurius,
     msme,
@@ -560,6 +563,7 @@ const AssetPath = {
     zatcaFatooraDevice,
     zatcaPrepayment,
     zatcaIntegrationMicrosoft,
+    zatcaIntegrationOracle,
   },
 
   // INDUSTRIES SECTION
