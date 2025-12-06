@@ -98,6 +98,38 @@ import factoryCard from "@/Assets/images/cards/factory.png";
 import peopleCard from "@/Assets/images/cards/people.png";
 import retailCard from "@/Assets/images/cards/retail.png";
 
+// ==================== HOME BACKGROUNDS IMPORTS ====================
+import saudiHome from "@/Assets/images/home/saudi.webp";
+import uaeHome from "@/Assets/images/home/uae.webp";
+import omanHome from "@/Assets/images/home/oman.webp";
+import bahrainHome from "@/Assets/images/home/baharaim.webp";
+import malaysiaHome from "@/Assets/images/home/malaysia.webp";
+import mauritiusHome from "@/Assets/images/home/mautitius.webp";
+import jordanHome from "@/Assets/images/home/jordan.webp";
+
+// ==================== HOME FEATURE IMAGES ====================
+import home1 from "@/Assets/images/home/1.png";
+import home2 from "@/Assets/images/home/2.png";
+import home3 from "@/Assets/images/home/3.png";
+import home4 from "@/Assets/images/home/4.png";
+import home5 from "@/Assets/images/home/5.png";
+import home6 from "@/Assets/images/home/6.png";
+import blueStar from "@/Assets/images/home/blue_star.png";
+import orangeStar from "@/Assets/images/home/orange_star.png";
+import waveVector from "@/Assets/images/home/wave_vector.png";
+import clip from "@/Assets/images/home/clip.png";
+import starWhite from "@/Assets/images/home/Star.png";
+
+// ==================== LANDINGPAGE IMAGES ====================
+import landingIcon1 from "@/Assets/images/landingpage/1.png";
+import landingIcon2 from "@/Assets/images/landingpage/2.png";
+import landingIcon3 from "@/Assets/images/landingpage/3.png";
+import oneErp from "@/Assets/images/landingpage/one-erp.png";
+import landingBlue from "@/Assets/images/landingpage/blue.png";
+import landingAli from "@/Assets/images/landingpage/Ali.png";
+import landingUAE from "@/Assets/images/landingpage/UAE.png";
+import landingWail from "@/Assets/images/landingpage/Wail.png";
+
 // ==================== RESOURCES IMPORTS ====================
 import blog1 from "@/Assets/images/resources/blog-1.png";
 import blog2 from "@/Assets/images/resources/blog-2.png";
@@ -503,7 +535,46 @@ const AssetPath = {
     retail: retailCard,
   },
 
-  // RESOURCES SECTION
+  // HOME BACKGROUNDS
+  homeBackgrounds: {
+    saudi: saudiHome,
+    uae: uaeHome,
+    oman: omanHome,
+    bahrain: bahrainHome,
+    malaysia: malaysiaHome,
+    mauritius: mauritiusHome,
+    jordan: jordanHome,
+  },
+
+  // HOME FEATURES
+  home: {
+    feature1: home1,
+    feature2: home2,
+    feature3: home3,
+    feature4: home4,
+    feature5: home5,
+    feature6: home6,
+    blueStar: blueStar,
+    orangeStar: orangeStar,
+    waveVector: waveVector,
+    clip: clip,
+    starOr: starOr,
+    starWhite: starWhite,
+  },
+
+  // LANDINGPAGE
+  landingpage: {
+    icon1: landingIcon1,
+    icon2: landingIcon2,
+    icon3: landingIcon3,
+    oneErp: oneErp,
+    blue: landingBlue,
+    ali: landingAli,
+    uae: landingUAE,
+    wail: landingWail,
+  },
+
+  // HEADER SECTION
   resources: {
     blog1,
     blog2,
@@ -774,12 +845,7 @@ const AssetPath = {
     jonex: jonexImg,
     ss: ssImg,
   },
-
-  // HOME
-  home: {
-    starOr,
-  },
-
+  // PATTERN
   // PATTERN
   pattern: {
     logoPattern,
