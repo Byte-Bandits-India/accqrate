@@ -2,7 +2,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 
 export const Choose = {
   sa: {
-    title: "Why Choose Accqrate?",
+    title: "Why Choose ",
     subtitle:
       "Seamlessly integrate your existing ERP/POS with ZATCA and become 100% ZATCA Phase 2 Compliant.",
 
@@ -56,7 +56,7 @@ export const Choose = {
   },
 
 be: {
-  title: "Why Choose Accqrate?",
+  title: "Why Choose",
   subtitle:
     "Seamlessly integrate your existing ERP/POS with Peppol and achieve full EN 16931 compliance for Belgium’s 2026 e-invoicing mandate.",
 
@@ -114,7 +114,7 @@ be: {
 },
 
 pl: {
-  title: "Why Choose Accqrate?",
+  title: "Why Choose",
   subtitle:
     "Integrate your ERP/POS with KSeF and achieve end-to-end FA(3) XML compliance for Poland's mandatory e-invoicing framework.",
 
