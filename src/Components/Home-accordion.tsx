@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
-import FadeUp from "@/components/ui/FadeUp";
+import Image from "next/image";
+import FadeUp from "@/Components/ui/FadeUp";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { Plus, Minus } from "lucide-react"; // ✅ use lucide-react icons
+
 import { cn } from "@/lib/utils";
 
 const Accordion = AccordionPrimitive.Root;
@@ -56,7 +57,7 @@ const AccordionTrigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
-
+AccordionTrigger.displayName = "AccordionTrigger";
 
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
@@ -90,9 +91,11 @@ function AccordionCard({ value, icon, title, content }: AccordionCardProps) {
       >
         <AccordionTrigger className="flex justify-between items-start w-full hover:no-underline">
           <div className="flex flex-col items-start gap-[20px] px-4 sm:px-2">
-            <img
+            <Image
               src={icon}
               alt={`${title} Icon`}
+              width={40}
+              height={40}
               className="w-[40px] h-[40px]"
             />
             <span className="tracking-heading text-[#333333] text-left font-medium text-[18px]">
