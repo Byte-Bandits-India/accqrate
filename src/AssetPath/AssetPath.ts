@@ -689,6 +689,9 @@ const AssetPath = {
       greenstar: integrationGreenstar,
       ring: integrationRing,
       set: integrationSet,
+      thumbnail: integrationThumbnail,
+      thumbnail1: integrationThumbnail1,
+      thumbnail2: integrationThumbnail2,
     },
 
     integrators: {
