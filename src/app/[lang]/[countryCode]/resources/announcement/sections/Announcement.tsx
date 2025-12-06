@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import UpdateCard from "./UpdateCard";
 import CTASection from "./CTASection";
 import { useParams } from "next/navigation";
+import AssetPath from "@/AssetPath/AssetPath";
 
 const Index = () => {
   // ✅ Get dynamic route params like "en" and "ksa"
@@ -42,7 +43,6 @@ const Index = () => {
         </div>
 
         {/* Update Cards Section */}
-        {/* Update Cards Section */}
         <section className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0 mb-16">
           {/* Wrapper that controls spacing */}
           <div className="flex flex-col md:flex-row md:gap-[34px] max-w-[1034px] gap-8">
@@ -52,7 +52,7 @@ const Index = () => {
               className="block w-full md:w-1/2"
             >
               <UpdateCard
-                image="/images/resources/zatcaup.png"
+                image={AssetPath.resources.zatcaUp}
                 title="ZATCA Updates"
                 description="Stay informed with the latest news, announcements, and software rollouts from ZATCA."
               />
@@ -64,7 +64,7 @@ const Index = () => {
               className="block w-full md:w-1/2"
             >
               <UpdateCard
-                image="/images/resources/zatcaprod.png"
+                image={AssetPath.resources.zatcaProd}
                 title="Accqrate Product Evolutions"
                 description="Discover the latest upgrades, feature enhancements, and bug resolutions for Accqrate E-Invoicing platform."
               />
