@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Collapse, Col, Row } from 'antd'
 import { ChevronDown, ChevronUp, Calendar } from 'feather-icons-react'
+import Image from 'next/image'
 import Button from '@/Components/Button'
 import ProductUpdatesData from './ProductUpdatesData'
 import T from '@/Components/T'
@@ -43,6 +44,10 @@ export default function ProductUpdates() {
                 return 'Stay updated with all the latest announcements from FTA'
             case 'JD':
                 return 'Stay updated with all the latest announcements from ISTD'
+            case 'BE': 
+                return 'Stay updated with all the latest announcements from PEPPOL'
+                case 'PL':  
+                return 'Stay updated with all the latest announcements from PEPPOL'
             default:
                 return 'Stay updated with all the latest announcements from ZATCA'
         }
@@ -141,9 +146,11 @@ export default function ProductUpdates() {
                 </div>
 
                 {/* Decorative image */}
-                <img
+                <Image
                     src={AssetPath.pattern.logoPattern}
                     alt="Get in touch with us for more information"
+                    width={56}
+                    height={56}
                     className="hidden md:block w-10 lg:w-14 absolute left-2 lg:left-4"
                     style={{ top: '30%' }}
                     loading="lazy"
