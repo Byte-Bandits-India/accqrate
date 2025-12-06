@@ -42,7 +42,7 @@ export default function HeroResourceSection() {
             alt="Goods Receipts Accounting"
             width={800}
             height={500}
-            className="block sm:hidden w-full h-[380px] object-cover"
+            className="block sm:hidden w-full h-[380px] object-cover "
             priority
           />
 
@@ -65,9 +65,11 @@ export default function HeroResourceSection() {
 
                   {/* Date Section */}
                   <div className="flex items-center gap-2 text-gray-300 text-fluid-small shrink-0">
-                    <img
+                    <Image
                       src={AssetPath.common.cal}
                       alt="Calendar Icon"
+                      width={20}
+                      height={20}
                       className="w-5 h-5 object-contain"
                     />
                     <p className="text-[12px] md:text-[14px]">Feb 08th, 2024 | 23 min read</p>
