@@ -1,19 +1,19 @@
 "use client"
-import React from "react"
-import Link from "next/link"
-import T from "@/Components/T"
 
+
+import T from "@/Components/T"
+import Image, { StaticImageData } from "next/image"
 interface InfoCardProps {
-  icon: string
-  title: string
-  description: string
-  color: string
-  link: string
+  icon: string | StaticImageData;
+  title: string;
+  description: string;
+  color: string;
+  link: string;
 }
 
-export default function InfoCard({ icon, title, description, color, link }: InfoCardProps) {
+export default function InfoCard({ icon, title, description, color }: InfoCardProps) {
   return (
-    <Link href={link} className="w-full">
+  
       <div
         className="cursor-pointer flex items-center justify-between w-full h-auto lg:h-[4.875rem] mx-auto overflow-hidden rounded-2xl shadow-[0_0_2px_rgba(0,0,0,0.25)] transition-all hover:shadow-md p-4 sm:p-4"
         style={{ background: color }}
@@ -26,7 +26,7 @@ export default function InfoCard({ icon, title, description, color, link }: Info
             {/* Icon + Title in one line */}
             <div className="flex items-center gap-2 sm:gap-3">
               <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-white/40 rounded-lg flex items-center justify-center">
-                <img
+                <Image
                   src={icon}
                   alt={title}
                   className="w-[32px] h-[32px] object-contain"
@@ -46,7 +46,7 @@ export default function InfoCard({ icon, title, description, color, link }: Info
           {/* Desktop layout (your original) */}
           <div className="hidden lg:flex items-center gap-3 w-full">
             <div className="flex-shrink-0 w-10 h-10 bg-white/40 rounded-lg flex items-center justify-center">
-              <img
+              <Image
                 src={icon}
                 alt={title}
                 className="w-[24px] h-[24px] object-contain"
@@ -83,6 +83,6 @@ export default function InfoCard({ icon, title, description, color, link }: Info
           </svg>
         </div>
       </div>
-    </Link>
+   
   )
 }
