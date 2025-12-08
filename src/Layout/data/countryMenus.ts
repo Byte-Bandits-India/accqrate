@@ -381,13 +381,13 @@ export const defaultMenus: Menu[] = [
         subItems: [
           {
             title: "Accqrate E-Invoicing",
-            description: "Simplify transactions, manage invoices effortlessly with our PEPPOL Certified and FPS Finance Complaint e-invoicing software.",
+            description: "Simplify transactions, manage invoices effortlessly with our ZATCA approved e-invoicing software.",
             img: AssetPath.header.navbar.fill.einvoicing,
             href: "/e-invoicing/",
           },
           {
             title: "E-Invoicing Integration",
-            description: "Integrate your ERP and POS with PEPPOL Network with our seamless, adaptable e-invoicing API or Offline integrators",
+            description: "Integrate your ERP and POS with ZATCA with our seamless, adaptable e-invoicing API or Offline integrators",
             img: AssetPath.header.navbar.fill.einvoiceIntegration,
             href: "/e-invoicing/integration",
           },
