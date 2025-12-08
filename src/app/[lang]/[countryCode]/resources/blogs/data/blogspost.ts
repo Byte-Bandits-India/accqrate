@@ -498,15 +498,15 @@ const blogPosts: BlogPost[] = [
   },
 
 
-  // Common Blogs
-  {
-    id: 62,
-    url: "MauritiusEInvocingOverview",
-    title: "Common Blog",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
-    desc: "Mauritius is entering a new stage of digital tax modernization through the national e invoicing framework introduced by the Mauritius Revenue Authority...",
-    country: "SA,JD,BH,OM,AE"
-  },
+  // // Common Blogs
+  // {
+  //   id: 62,
+  //   url: "MauritiusEInvocingOverview",
+  //   title: "Common Blog",
+  //   image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+  //   desc: "Mauritius is entering a new stage of digital tax modernization through the national e invoicing framework introduced by the Mauritius Revenue Authority...",
+  //   country: "SA,JD,BH,OM,AE"
+  // },
 ];
 
 export default blogPosts;
