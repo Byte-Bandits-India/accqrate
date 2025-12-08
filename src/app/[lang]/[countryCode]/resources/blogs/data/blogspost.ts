@@ -460,6 +460,53 @@ const blogPosts: BlogPost[] = [
     desc: "Excise tax in the United Arab Emirates is a regulatory tool designed to curb the consumption of goods that have negative health or environmental impacts...",
     country: "AE"
   },
+
+  //Jordan
+  {
+    id: 58,
+    url: "JordanEInvoicingGuide",
+    title: "e-Invoicing in Jordan: A Complete Guide to the Timeline, Framework, Processes, and Compliance Requirements",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "ordan’s move toward electronic invoicing has become one of the most important milestones in its digital tax reform journey...",
+    country: "JD"
+  },
+  {
+    id: 59,
+    url: "JordanPhaseTwoEInvoicing",
+    title: "Jordan’s Second Phase of E-Invoicing: What JoFotara Means for Businesses in 2025",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Jordan has entered an accelerated phase of tax digitalisation, placing electronic invoicing at the centre of its national compliance framework...",
+    country: "JD"
+  },
+
+  //Mauritius
+  {
+    id: 60,
+    url: "MauritiusEInvoicing",
+    title: "Mauritius Moves Toward Nationwide Electronic Invoicing",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Mauritius is entering a new phase of its digital tax modernisation journey as the Mauritius Revenue Authority begins expanding the scope of mandatory electronic invoicing...",
+    country: "MU"
+  },
+  {
+    id: 61,
+    url: "MauritiusEInvocingOverview",
+    title: "E- Invoicing in Mauritius",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Mauritius is entering a new stage of digital tax modernization through the national e invoicing framework introduced by the Mauritius Revenue Authority...",
+    country: "MU"
+  },
+
+
+  // Common Blogs
+  {
+    id: 62,
+    url: "MauritiusEInvocingOverview",
+    title: "Common Blog",
+    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    desc: "Mauritius is entering a new stage of digital tax modernization through the national e invoicing framework introduced by the Mauritius Revenue Authority...",
+    country: "SA,JD,BH,OM,AE"
+  },
 ];
 
 export default blogPosts;

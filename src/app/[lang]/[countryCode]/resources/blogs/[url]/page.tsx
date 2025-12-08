@@ -59,6 +59,10 @@ import UAETaxCreditNotes from "../blogpages/uae/UAETaxCreditNotes";
 import UAEDigitalSignatureCertificate from "../blogpages/uae/UAEDigitalSignatureCertificate";
 import UAE_TRN_Verification from "../blogpages/uae/UAE_TRN_Verification";
 import UAE_Excise_Registration from "../blogpages/uae/UAE_Excise_Registration";
+import JordanEInvoicingGuide from "../blogpages/jordan/JordanEInvoicingGuide";
+import JordanPhaseTwoEInvoicing from "../blogpages/jordan/JordanPhaseTwoEInvoicing";
+import MauritiusEInvoicing from "../blogpages/mauritius/MauritiusEInvoicing";
+import MauritiusEInvocingOverview from "../blogpages/mauritius/MauritiusEInvoicingOverview";
 
 export default async function BlogPage({
   params,
@@ -126,7 +130,11 @@ export default async function BlogPage({
     "UAETaxCreditNotes": <UAETaxCreditNotes />,
     "UAEDigitalSignatureCertificate": <UAEDigitalSignatureCertificate />,
     "UAE_TRN_Verification": <UAE_TRN_Verification />,
-    "UAE_Excise_Registration": <UAE_Excise_Registration />
+    "UAE_Excise_Registration": <UAE_Excise_Registration />,
+    "JordanEInvoicingGuide": <JordanEInvoicingGuide />,
+    "JordanPhaseTwoEInvoicing": <JordanPhaseTwoEInvoicing />,
+    "MauritiusEInvoicing": <MauritiusEInvoicing />,
+    "MauritiusEInvocingOverview": <MauritiusEInvocingOverview />
   };
 
   const Component = blogComponents[url];
