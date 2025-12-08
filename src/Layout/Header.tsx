@@ -18,6 +18,7 @@ import { useCountry } from "@/contexts/CountryContext";
 import { setLanguage, t } from "@/lib/translations";
 import AssetPath from "@/AssetPath/AssetPath";
 import T from "@/Components/T";
+import { getMenusByCountryCode } from "./data/countryMenus";
 
 // ===================== Type Definitions =====================
 interface SubItem {
@@ -66,6 +67,7 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
 interface ResourcesListItemProps extends React.ComponentPropsWithoutRef<"a"> {
   className?: string;
   title: string;
+  description?: string;
   icon?: string | StaticImageData;
   img?: string | StaticImageData;
   href: string;
@@ -77,80 +79,6 @@ interface SuccessStoriesListItemProps extends React.ComponentPropsWithoutRef<"a"
   stats?: string;
   href: string;
 }
-
-// ===================== Data =====================
-const menus: Menu[] = [
-  {
-    id: "e-invoicing",
-    title: "E-invoicing",
-    type: "mega",
-    sections: [
-      {
-        heading: "E-invoicing",
-        images: AssetPath.header.line.pro2,
-        xl: AssetPath.header.navbar.image.einvoicing,
-        subItems: [
-          {
-            title: "Accqrate E-Invoicing",
-            description: "Effortless invoicing and compliance, ZATCA Phase 2 approved and enterprise-ready.",
-            img: AssetPath.header.navbar.fill.einvoicing,
-            href: "/e-invocing/",
-          },
-          {
-            title: "E-Invoicing Integration",
-            description: "Seamless ZATCA integration for any ERP, POS, or custom application.",
-            img: AssetPath.header.navbar.fill.einvoiceIntegration,
-            href: "/e-invocing/integration",
-          },
-         
-        ],
-      },
-    ],
-  },
-  {
-    id: "resources",
-    title: "Resources",
-    type: "simple",
-    sections: [
-      {
-        heading: "Support",
-        description: "Get help when you need it",
-        subItems: [
-          {
-            title: "Blogs",
-            description: "Insights, tips and industry news",
-            href: "/resources/blogs",
-            icon: AssetPath.header.navbar.outline.blog,
-          },
-          {
-            title: "Announcements",
-            description: "Find answers to common questions",
-            href: "/resources/announcement",
-            icon: AssetPath.header.navbar.outline.announce,
-          },
-          {
-            title: "FAQs",
-            description: "Connect with other users",
-            href: "/resources/faq",
-            icon: AssetPath.header.navbar.outline.faq,
-          },
-          {
-            title: "Tax Calculator",
-            description: "Calculate your tax obligations",
-            href: "/resources/vat",
-            icon: AssetPath.header.navbar.outline.tax,
-          },
-          {
-            title: "Events",
-            description: "Upcoming events and webinars",
-            href: "/resources/webinars",
-            icon: AssetPath.header.navbar.outline.event,
-          },
-        ],
-      },
-    ],
-  },
-];
 
 // ===================== Custom Hook for Dynamic Routing =====================
 const useDynamicRouting = () => {
@@ -210,7 +138,7 @@ const LangCountryDropdown: React.FC<
         setSelectedLanguage(englishLang);
         setLanguage('en');
       }
-      
+
       // Navigate to home page with English and new country
       const newPath = `/en/${country.code.toLowerCase()}`;
 
@@ -395,7 +323,6 @@ const MegaMenu: React.FC<{
   headerHeight: number;
 }> = ({ menu, activeSection, onSectionChange, onItemClick, headerHeight }) => {
   const { createHref } = useDynamicRouting();
-  const { isInitialized } = useCountry();
   const menuRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -444,7 +371,7 @@ const MegaMenu: React.FC<{
                       />
                     )}
                     <span className="xl:hidden">
-                      <T>{section.heading}</T>
+                      {section.heading}
                     </span>
                   </div>
                 </li>
@@ -478,10 +405,10 @@ const MegaMenu: React.FC<{
 
                       <div>
                         <h4 className="text-[16px] font-medium text-[#333333] leading-tight hover:text-[#534ED3]">
-                          {isInitialized ? t(item.title) : item.title}
+                          {item.title}
                         </h4>
                         <p className="text-[12px] text-gray-500 leading-snug mt-[6px]">
-                          <T>{item.description}</T>
+                          {item.description}
                         </p>
                       </div>
                     </Link>
@@ -498,7 +425,7 @@ const MegaMenu: React.FC<{
             className="group inline-flex items-center justify-center gap-2 py-2 px-6 rounded-[80px] text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
             onClick={onItemClick}
           >
-            <T>Book a Demo</T>
+            Book a Demo
             <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
               →
             </span>
@@ -515,7 +442,7 @@ const MegaMenu: React.FC<{
             className="group inline-flex items-center gap-2 py-2 px-6 rounded-[80px] text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
             onClick={onItemClick}
           >
-            <T>Contact Sales</T>
+            Contact Sales
             <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
               →
             </span>
@@ -536,18 +463,23 @@ const MegaMenu: React.FC<{
 const Header: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
-  const { selectedCountry } = useCountry();
+  const { selectedCountry, isInitialized } = useCountry();
   const [activeMenu, setActiveMenu] = useState<string>("");
-  const [activeSection, setActiveSection] = useState<string>("Business Solution");
+  const [activeSection, setActiveSection] = useState<string>("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [showLangCountryDropdown, setShowLangCountryDropdown] = useState<boolean>(false);
   const [headerHeight, setHeaderHeight] = useState<number>(0);
-  const { isInitialized } = useCountry();
 
   const navRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLElement>(null);
 
   const { createHref } = useDynamicRouting();
+
+  // Get country-specific menus
+  const menus = useMemo(() => {
+    if (!selectedCountry.code || !isInitialized) return [];
+    return getMenusByCountryCode(selectedCountry.code);
+  }, [selectedCountry.code, isInitialized]);
 
   const contactInfo = useMemo(() => {
     switch (selectedCountry.code) {
@@ -557,6 +489,8 @@ const Header: React.FC = () => {
         return { phone: "+971 123 456 789", salesText: "Contact Sales" };
       case "OM":
         return { phone: "+968 123 456 789", salesText: "Contact Sales" };
+      case "EG":
+        return { phone: "+20 123 456 789", salesText: "اتصل بالمبيعات" };
       default:
         return { phone: "+966 123 456 789", salesText: "Contact Sales" };
     }
@@ -608,10 +542,10 @@ const Header: React.FC = () => {
   const handleMenuClick = (menuId: string) => {
     setActiveMenu((prev) => (prev === menuId ? "" : menuId));
     // Set default section based on menu
-    if (menuId === "products") setActiveSection("Business Solution");
-    if (menuId === "e-invoicing") setActiveSection("E-invoicing");
-    if (menuId === "enterprise") setActiveSection("Enterprise Solution");
-    if (menuId === "community") setActiveSection("Community");
+    const menu = menus.find(m => m.id === menuId);
+    if (menu && menu.sections.length > 0) {
+      setActiveSection(menu.sections[0].heading);
+    }
   };
 
   const handleMenuItemClick = () => setActiveMenu("");
@@ -650,128 +584,105 @@ const Header: React.FC = () => {
                   className="hidden xl:flex items-start justify-center gap-5 text-[14px] text-gray-600"
                 >
                   <ul className="flex items-center py-4">
-                    {/* E-INVOICING */}
-                    {menus
-                      .filter((menu) => menu.id === "e-invoicing")
-                      .map((menu) => (
-                        <li key={menu.id} className="relative">
-                          <button
-                            className={`flex items-center gap-1 px-2 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] ${activeMenu === menu.id
-                              ? "text-[#534ED3]"
-                              : "text-gray-700 hover:text-[#534ED3]"
+                    {/* Dynamic menus based on country */}
+                    {menus.map((menu) => (
+                      <li key={menu.id} className="relative">
+                        <button
+                          className={`flex items-center gap-1 px-2 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] ${activeMenu === menu.id
+                            ? "text-[#534ED3]"
+                            : "text-gray-700 hover:text-[#534ED3]"
+                            }`}
+                          onClick={() => handleMenuClick(menu.id)}
+                        >
+                          <span className="whitespace-nowrap text-[14px] text-[#333333]">
+                            {menu.title}
+                          </span>
+                          <IoChevronDown
+                            className={`transition-transform duration-200 ${activeMenu === menu.id ? "rotate-180" : "rotate-0"
                               }`}
-                            onClick={() => handleMenuClick(menu.id)}
+                          />
+                        </button>
+
+                        {activeMenu === menu.id && menu.type === "mega" && (
+                          <MegaMenu
+                            menu={menu}
+                            activeSection={activeSection}
+                            onSectionChange={handleSectionChange}
+                            onItemClick={handleMenuItemClick}
+                            headerHeight={headerHeight}
+                          />
+                        )}
+
+                        {activeMenu === menu.id && menu.type === "simple" && (
+                          <div
+                            className="fixed left-0 right-0 top-0 w-[1044px] mx-auto border-t border-gray-200 bg-white rounded-b-xl z-50"
+                            style={{ top: headerHeight }}
                           >
-                            <span className="whitespace-nowrap text-[14px] text-[#333333]">
-                              <T>{menu.title}</T>
-                            </span>
-                            <IoChevronDown
-                              className={`transition-transform duration-200 ${activeMenu === menu.id ? "rotate-180" : "rotate-0"
-                                }`}
-                            />
-                          </button>
+                            <div className="w-[900px] xl:w-[1100px] mx-auto px-8 py-10 bg-white rounded-b-xl flex flex-col">
+                              <div className="w-full max-w-7xl mx-auto mb-2">
+                                {menu.sections.map((section, index) => (
+                                  <div key={index} className="mb-6">
+                                    <h3 className="font-medium text-[#333333] text-lg mb-4">
+                                      {section.heading}
+                                    </h3>
+                                    <p className="text-gray-500 mb-4">{section.description}</p>
+                                    <ul className="flex flex-wrap gap-4 text-[#717171]">
+                                      {section.subItems.map((item, i) => (
+                                        <ResourcesListItem
+                                          key={i}
+                                          title={item.title}
+                                          description={item.description}
+                                          href={item.href}
+                                          img={item.img}
+                                          icon={item.icon}
+                                          onClick={handleMenuItemClick}
+                                        />
+                                      ))}
+                                    </ul>
+                                  </div>
+                                ))}
+                              </div>
 
-                          {activeMenu === menu.id && (
-                            <MegaMenu
-                              menu={menu}
-                              activeSection={activeSection}
-                              onSectionChange={handleSectionChange}
-                              onItemClick={handleMenuItemClick}
-                              headerHeight={headerHeight}
-                            />
-                          )}
-                        </li>
-                      ))}
+                              {/* CTA Footer */}
+                              <div className="mt-auto -mx-8 -mb-10 bg-[#F7F8FF] flex justify-end py-4 gap-4 rounded-b-xl">
+                                <Link
+                                  href={createHref("/book-demo")}
+                                  className="group inline-flex items-center justify-center gap-2 py-2 px-6 rounded-[80px] lg:text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
+                                  onClick={handleMenuItemClick}
+                                >
+                                  Book a Demo
+                                  <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
+                                    →
+                                  </span>
+                                </Link>
 
-                    {/* RESOURCES */}
-                    {menus
-                      .filter((menu) => menu.id === "resources")
-                      .map((menu) => (
-                        <li key={menu.id} className="relative">
-                          <button
-                            className={`flex items-center gap-1 px-2 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] ${activeMenu === menu.id
-                              ? "text-[#534ED3]"
-                              : "text-gray-700 hover:text-[#534ED3]"
-                              }`}
-                            onClick={() => handleMenuClick(menu.id)}
-                          >
-                            <span className="whitespace-nowrap text-[14px] text-[#333333]">
-                              <T>{menu.title}</T>
-                            </span>
-                            <IoChevronDown
-                              className={`transition-transform duration-200 ${activeMenu === menu.id ? "rotate-180" : "rotate-0"
-                                }`}
-                            />
-                          </button>
+                                <span
+                                  role="separator"
+                                  aria-orientation="vertical"
+                                  className="self-center h-8 w-px bg-gray-300"
+                                ></span>
 
-                          {activeMenu === menu.id && (
-                            <div
-                              className="fixed left-0 right-0 top-0 w-[1044px] mx-auto border-t border-gray-200 bg-white rounded-b-xl z-50"
-                              style={{ top: headerHeight }}
-                            >
-                              <div className="w-[900px] xl:w-[1100px] mx-auto px-8 py-10 bg-white rounded-b-xl flex flex-col">
-                                <div className="w-full max-w-7xl mx-auto mb-2">
-                                  {menu.sections.map((section, index) => (
-                                    <div key={index} className="mb-6">
-                                      <h3 className="font-medium text-[#333333] text-lg mb-4">
-                                        <T>{section.heading}</T>
-                                      </h3>
-                                      <ul className="flex flex-wrap gap-4 text-[#717171]">
-                                        {section.subItems.map((item, i) => (
-                                          <ResourcesListItem
-                                            key={i}
-                                            title={isInitialized ? t(item.title) : item.title}
-                                            href={item.href}
-                                            img={item.img}
-                                            icon={item.icon}
-                                            onClick={handleMenuItemClick}
-                                          />
-                                        ))}
-                                      </ul>
-                                    </div>
-                                  ))}
-                                </div>
-
-                                {/* CTA Footer */}
-                                <div className="mt-auto -mx-8 -mb-10 bg-[#F7F8FF] flex justify-end py-4 gap-4 rounded-b-xl">
-                                  <Link
-                                    href={createHref("/book-demo")}
-                                    className="group inline-flex items-center justify-center gap-2 py-2 px-6 rounded-[80px] lg:text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
-                                    onClick={handleMenuItemClick}
-                                  >
-                                    <T>Book a Demo</T>
-                                    <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
-                                      →
-                                    </span>
-                                  </Link>
-
-                                  <span
-                                    role="separator"
-                                    aria-orientation="vertical"
-                                    className="self-center h-8 w-px bg-gray-300"
-                                  ></span>
-
-                                  <Link
-                                    href={createHref("/contact-sales")}
-                                    className="group inline-flex items-center gap-2 py-2 px-6 rounded-[80px] text-[14px] hover:text-[#534ED3] transition-colors"
-                                    onClick={handleMenuItemClick}
-                                  >
-                                    <T>{contactInfo.salesText}</T>
-                                    <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
-                                      →
-                                    </span>
-                                  </Link>
-                                  <span
-                                    role="separator"
-                                    aria-orientation="vertical"
-                                    className="self-center h-8 w-px bg-gray-300"
-                                  ></span>
-                                </div>
+                                <Link
+                                  href={createHref("/contact-sales")}
+                                  className="group inline-flex items-center gap-2 py-2 px-6 rounded-[80px] text-[14px] hover:text-[#534ED3] transition-colors"
+                                  onClick={handleMenuItemClick}
+                                >
+                                  {contactInfo.salesText}
+                                  <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
+                                    →
+                                  </span>
+                                </Link>
+                                <span
+                                  role="separator"
+                                  aria-orientation="vertical"
+                                  className="self-center h-8 w-px bg-gray-300"
+                                ></span>
                               </div>
                             </div>
-                          )}
-                        </li>
-                      ))}
+                          </div>
+                        )}
+                      </li>
+                    ))}
 
                     {/* Contact Us */}
                     <li className="relative">
@@ -781,7 +692,7 @@ const Header: React.FC = () => {
                         onClick={handleMenuItemClick}
                       >
                         <span className="whitespace-nowrap text-[14px] text-[#333333]">
-                          <T>Contact Us</T>
+                          Contact Us
                         </span>
                       </Link>
                     </li>
@@ -800,13 +711,13 @@ const Header: React.FC = () => {
                   href={createHref("/contact-sales")}
                   className="hidden xl:inline-flex items-center justify-center gap-2 text-[#F05A28] h-[34px] w-[119px] font-medium rounded-[80px] text-[12px] xl:text-[14px] border border-[#29266E] bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
                 >
-                  <T>{contactInfo.salesText}</T>
+                  {contactInfo.salesText}
                 </Link>
                 <Link
                   href={createHref("/book-demo")}
                   className="hidden xl:inline-flex items-center justify-center gap-2 text-white h-[34px] font-medium w-[121px] rounded-[80px] text-[12px] xl:text-[14px] bg-gradient-to-r from-[#194BED] to-[#29266E]"
                 >
-                  <T>Book a Demo</T>
+                  Book a Demo
                 </Link>
               </div>
 
@@ -840,25 +751,31 @@ const Header: React.FC = () => {
         <div className="xl:hidden fixed top-[60px] md:top-[80px] left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto">
           <div className="p-6 md:px-[32px] pb-32">
             <Accordion type="single" collapsible className="w-full">
-              {/* Contact Sales link */}
+              {/* Home link */}
               <Link
                 href={createHref("/")}
                 className="block w-full text-[17px] font-normal py-[16px] text-[#333333]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <T>Home</T>
+                Home
               </Link>
               <hr />
               {menus.map(({ id, title, sections }) => (
                 <AccordionItem key={id} value={id}>
                   <AccordionTrigger className="text-[#333333] font-normal py-4 text-[17px] hover:text-[#534ED3]">
-                    <T>{title}</T>
+                    {title}
                   </AccordionTrigger>
 
                   {/* Directly show section items (no nested accordion) */}
                   <AccordionContent className="pb-2">
                     {sections.map((section, sectionIndex) => (
                       <div key={sectionIndex} className="mb-4 last:mb-0">
+                        <div className="px-2 mb-2">
+                          <h4 className="font-medium text-[#333333]">{section.heading}</h4>
+                          {section.description && (
+                            <p className="text-gray-500 text-sm">{section.description}</p>
+                          )}
+                        </div>
                         <ul className="space-y-2">
                           {section.subItems.map((item, i) => (
                             <li
@@ -876,7 +793,8 @@ const Header: React.FC = () => {
                                 className="flex-1"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
-                                <T>{item.title}</T>
+                                <div className="font-medium">{item.title}</div>
+                                <div className="text-sm text-gray-500">{item.description}</div>
                               </Link>
                               <Arrow45 />
                             </li>
@@ -894,7 +812,7 @@ const Header: React.FC = () => {
                 className="block w-full text-[17px] font-normal mt-4 bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <T>{contactInfo.salesText}</T>
+                {contactInfo.salesText}
               </Link>
             </Accordion>
           </div>
@@ -905,7 +823,7 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div
           className="xl:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-[9999]"
-          onClick={(e) => e.stopPropagation()} // Add this
+          onClick={(e) => e.stopPropagation()}
         >
           <div className="flex gap-4 items-center">
             {/* LangCountryDropdown */}
@@ -928,7 +846,7 @@ const Header: React.FC = () => {
                 setIsMobileMenuOpen(false);
               }}
             >
-              <T>Book a Demo</T>
+              Book a Demo
             </Link>
           </div>
         </div>
@@ -970,7 +888,7 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
 ListItem.displayName = "ListItem";
 
 const ResourcesListItem = React.forwardRef<HTMLAnchorElement, ResourcesListItemProps>(
-  ({ className, title, children, icon, img, href, onClick, ...props }, ref) => {
+  ({ className, title, description, icon, img, href, onClick, ...props }, ref) => {
     const { createHref } = useDynamicRouting();
     const dynamicHref = createHref(href);
 
@@ -1028,9 +946,9 @@ const ResourcesListItem = React.forwardRef<HTMLAnchorElement, ResourcesListItemP
             <div className="text-[15px] font-medium leading-snug text-gray-800">
               {title}
             </div>
-            {children && (
+            {description && (
               <div className="text-sm text-gray-500 leading-snug">
-                {children}
+                {description}
               </div>
             )}
           </div>

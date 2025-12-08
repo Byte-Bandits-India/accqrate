@@ -40,7 +40,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
     if (!img || typeof img !== "string") return AssetPath.blogs.accqrateAd;
 
     const filename = img.split('/').pop()?.replace(/\.(png|jpg|jpeg|webp|svg)$/i, '') || '';
-    
+
     const imageMap: Record<string, any> = {
       'credit-notes': AssetPath.blogs.creditNotes,
       'debit-notes': AssetPath.blogs.debitNotes,
@@ -75,7 +75,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
       'Mandate': AssetPath.blogs.mandate,
     };
 
-    return imageMap[filename] ;
+    return imageMap[filename];
   };
 
   // Random blog posts
@@ -83,16 +83,40 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
     { url: string; image: any; heading: string; value: string }[]
   >([]);
 
+  // Map of country codes to blogCode used in `post.country`
+  const countryConfig = [
+    { code: "sa", blogCode: "KSA" },
+    { code: "ae", blogCode: "AE" },
+    { code: "bh", blogCode: "BH" },
+    { code: "om", blogCode: "OM" },
+    { code: "be", blogCode: "BE" },
+    { code: "pl", blogCode: "PL" },
+    { code: "mu", blogCode: "MU" },
+    { code: "ma", blogCode: "MA" },
+    { code: "jd", blogCode: "JD" },
+  ];
+
+  // Populate random blog posts from the same country only
   useEffect(() => {
-    const mappedBlogs = blogPosts.map((post) => ({
-      url: post.url,
-      image: getImageFromAssetPath(post.image),
-      heading: post.title,
-      value: post.desc,
-    }));
+    const cc = (countryCode || "sa").toLowerCase();
+    const current = countryConfig.find((c) => c.code === cc);
+    const blogCode = current?.blogCode || "KSA";
+
+    const mappedBlogs = blogPosts
+      .filter((post) => {
+        const countries = (post.country || "").split(",").map((c) => c.trim());
+        return countries.includes(blogCode);
+      })
+      .map((post) => ({
+        url: `/${lang}/${countryCode}/resources/blogs/${post.url}`,
+        image: getImageFromAssetPath(post.image),
+        heading: post.title,
+        value: post.desc,
+      }));
+
     const shuffled = [...mappedBlogs].sort(() => 0.5 - Math.random());
     setRandomBlogs(shuffled.slice(0, 4));
-  }, []);
+  }, [countryCode, lang]);
 
   const breadcrumbItems = [
     { title: "Home", href: "/" },
@@ -205,45 +229,45 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
       <CTASection />
 
       {/* Footer Recent Blogs */}
-     <section className="bg-[#eff3ff] py-10">
-  <div className="container mx-auto px-4 max-w-[1250px]">
-    <h3 className="text-xl md:text-[28px] text-[#1c2041] font-semibold mb-6 md:mb-10">
-      <BelgiumT>Recent Blog Posts from Accqrate</BelgiumT>
-    </h3>
-    <Row
-      justify="center"
-      gutter={[
-        { xs: 0, sm: 15, md: 20, lg: 20 },
-        { xs: 10, sm: 15, md: 20, lg: 20 },
-      ]}
-    >
-      {randomBlogs.map((data, i) => (
-        <Col xs={24} sm={12} md={6} lg={6} key={i}>
-          <div
-            className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full"
-            onClick={() => router.push(data.url)}
+      <section className="bg-[#eff3ff] py-10">
+        <div className="container mx-auto px-4 max-w-[1250px]">
+          <h3 className="text-xl md:text-[28px] text-[#1c2041] font-semibold mb-6 md:mb-10">
+            <BelgiumT>Recent Blog Posts from Accqrate</BelgiumT>
+          </h3>
+          <Row
+            justify="center"
+            gutter={[
+              { xs: 0, sm: 15, md: 20, lg: 20 },
+              { xs: 10, sm: 15, md: 20, lg: 20 },
+            ]}
           >
-            <Image
-              src={data.image}
-              alt={data.heading}
-              width={400}
-              height={180}
-              className="rounded-lg mb-3 w-full h-[180px] object-cover"
-            />
-            <div className="flex flex-col flex-grow px-4 pb-4">
-              <h3 className="text-base leading-snug font-semibold text-gray-900 line-clamp-2 mb-2">
-                <T>{data.heading}</T>
-              </h3>
-              <p className="text-gray-500 text-sm line-clamp-2 leading-tight">
-                <T>{data.value}</T>
-              </p>
-            </div>
-          </div>
-        </Col>
-      ))}
-    </Row>
-  </div>
-</section>
+            {randomBlogs.map((data, i) => (
+              <Col xs={24} sm={12} md={6} lg={6} key={i}>
+                <div
+                  className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full"
+                  onClick={() => router.push(data.url)}
+                >
+                  <Image
+                    src={data.image}
+                    alt={data.heading}
+                    width={400}
+                    height={180}
+                    className="rounded-lg mb-3 w-full h-[180px] object-cover"
+                  />
+                  <div className="flex flex-col flex-grow px-4 pb-4">
+                    <h3 className="text-base leading-snug font-semibold text-gray-900 line-clamp-2 mb-2">
+                      <T>{data.heading}</T>
+                    </h3>
+                    <p className="text-gray-500 text-sm line-clamp-2 leading-tight">
+                      <T>{data.value}</T>
+                    </p>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </div>
+      </section>
 
     </>
   );

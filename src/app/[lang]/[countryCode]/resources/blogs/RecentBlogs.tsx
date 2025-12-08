@@ -27,7 +27,7 @@ const getImageFromAssetPath = (img: string) => {
 
   // Extract filename from path
   const filename = img.split('/').pop()?.replace(/\.(png|jpg|jpeg|webp|svg)$/i, '') || '';
-  
+
   // Map common blog image names to AssetPath properties
   const imageMap: Record<string, any> = {
     'credit-notes': AssetPath.blogs.creditNotes,
@@ -84,7 +84,11 @@ export default function RecentBlogPosts() {
   // Filter blog posts
   const filteredBlogPosts = useMemo(() => {
     if (!currentCountry) return [];
-    return blogPosts.filter((post) => post.country === currentCountry.blogCode);
+    return blogPosts.filter((post) => {
+      // Handle both single country and comma-separated countries
+      const countries = post.country.split(',').map(c => c.trim());
+      return countries.includes(currentCountry.blogCode);
+    });
   }, [currentCountry]);
 
   // Recently added countries
@@ -92,7 +96,11 @@ export default function RecentBlogPosts() {
     const countryBlogMap = new Map();
 
     blogPosts.forEach((post) => {
-      countryBlogMap.set(post.country, (countryBlogMap.get(post.country) || 0) + 1);
+      // Handle both single country and comma-separated countries
+      const countries = post.country.split(',').map(c => c.trim());
+      countries.forEach((country) => {
+        countryBlogMap.set(country, (countryBlogMap.get(country) || 0) + 1);
+      });
     });
 
     return countryConfig

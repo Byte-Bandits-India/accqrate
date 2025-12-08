@@ -63,6 +63,15 @@ import JordanEInvoicingGuide from "../blogpages/jordan/JordanEInvoicingGuide";
 import JordanPhaseTwoEInvoicing from "../blogpages/jordan/JordanPhaseTwoEInvoicing";
 import MauritiusEInvoicing from "../blogpages/mauritius/MauritiusEInvoicing";
 import MauritiusEInvocingOverview from "../blogpages/mauritius/MauritiusEInvoicingOverview";
+import MiddleEastEInvoicing from "../blogpages/comman/MiddleEastEInvoicing";
+import BahrainEInvoicing from "../blogpages/comman/BahrainEInvoicing";
+import EgyptEInvoicing from "../blogpages/comman/EgyptEInvoicing";
+import JordanJoFotaraPhaseTwo from "../blogpages/comman/JordanJoFotaraPhaseTwo";
+import OmanEInvoicing from "../blogpages/comman/OmanEInvoicing";
+import SaudiArabiaEInvoicing from "../blogpages/comman/SaudiArabiaEInvoicing";
+import UAEInvoicing from "../blogpages/comman/UAEInvoicing";
+import TurkeyEInvoicing from "../blogpages/comman/TurkeyEInvoicing";
+import MiddleEastBusinessNewEra from "../blogpages/comman/MiddleEastBusinessNewEra";
 
 export default async function BlogPage({
   params,
@@ -134,7 +143,17 @@ export default async function BlogPage({
     "JordanEInvoicingGuide": <JordanEInvoicingGuide />,
     "JordanPhaseTwoEInvoicing": <JordanPhaseTwoEInvoicing />,
     "MauritiusEInvoicing": <MauritiusEInvoicing />,
-    "MauritiusEInvocingOverview": <MauritiusEInvocingOverview />
+    "MauritiusEInvocingOverview": <MauritiusEInvocingOverview />,
+    //Common
+    "MiddleEastEInvoicing": <MiddleEastEInvoicing />,
+    "BahrainEInvoicing": <BahrainEInvoicing />,
+    "EgyptEInvoicing": <EgyptEInvoicing />,
+    "JordanJoFotaraPhaseTwo": <JordanJoFotaraPhaseTwo />,
+    "OmanEInvoicing": <OmanEInvoicing />,
+    "SaudiArabiaEInvoicing": <SaudiArabiaEInvoicing />,
+    "UAEInvoicing": <UAEInvoicing />,
+    "TurkeyEInvoicing": <TurkeyEInvoicing />,
+    "MiddleEastBusinessNewEra": <MiddleEastBusinessNewEra />
   };
 
   const Component = blogComponents[url];
