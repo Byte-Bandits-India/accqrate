@@ -108,7 +108,9 @@ const DemoVideoSection: React.FC = () => {
                                         <Image
                                             src={video.thumbnail}
                                             alt={video.title}
-                                            className="w-full h-auto max-h-[260px] object-cover transition-transform duration-300 hover:scale-105"
+                                            width={380}
+                                            height={215}
+                                            className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
                                         />
                                     </div>
                                 </div>
