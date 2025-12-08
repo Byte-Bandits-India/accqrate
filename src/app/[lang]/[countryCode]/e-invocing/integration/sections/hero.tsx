@@ -15,7 +15,7 @@ const Software = () => {
 
   return (
     <section>
-      <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 xl:px-0 pb-12">
+      <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 xl:px-0 pb-12 overflow-x-hidden">
         <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
 
           {/* LEFT CONTENT */}
@@ -39,7 +39,7 @@ const Software = () => {
 
             {/* White Box */}
             <div className="flex items-center md:w-[600px] gap-6 p-6 border rounded-2xl bg-white">
-              <Image src={content.boxImage} alt="" width={70} height={80} className="h-[90px] w-auto" />
+              <Image src={content.boxImage} alt="" width={70} height={80} className="md:h-[90px] w-auto" />
               <div>
                 <h3 className="text-[#1C2041] text-fluid-body lg:text-[20px] font-semibold">
                   {content.boxTitle}
@@ -54,7 +54,7 @@ const Software = () => {
             <div className="py-10">
               <Link
                 href={`/${lang}/${countryCode}/contact-us`}
-                className="relative flex items-center justify-center w-[240px] h-[52px] bg-[#F05A28] rounded-full text-white"
+                className="relative flex items-center mx-auto md:mx-0 justify-center w-[240px] h-[52px] bg-[#F05A28] rounded-full text-white"
               >
                 Start Now for free
                 <svg width="14" height="14" className="absolute right-6 mt-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@ const Software = () => {
               alt="software ui"
               width={591}
               height={400}
-              className="max-w-[591px] rounded-2xl"
+              className=" md:max-w-[591px] md:rounded-2xl"
             />
 
             <div className="flex gap-4 mt-8 text-center md:text-[20px]">
