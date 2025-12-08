@@ -56,9 +56,9 @@ export default function Section4() {
               <Image
                 src={data.topRightImage}
                 width={800}
-                height={400}
+                height={100}
                 alt="Dashboard"
-                className="  rounded-xl "
+                className="md:max-h-[500px] rounded-xl "
               />
             )}
           </div>
@@ -76,7 +76,7 @@ export default function Section4() {
                 width={520}
                 height={420}
                 alt="Invoice Example"
-                className="rounded-xl shadow-md"
+                className="rounded-xl "
               />
             )}
           </div>
