@@ -281,11 +281,17 @@ const Section1 = () => {
                                 <div className="">
                                     <div>
                                         {/* Dynamic compliance content based on country */}
-                                        {countryCode === 'be' || countryCode === 'pl' ? (
+                                        {countryCode === 'be' ? (
                                             <>
-                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with ZATCA, Tax and Customs Authority</h3>
-                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with Belgium's FPS Finance 2026 mandate</h3>
+                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with Belgium's Mandatory B2B E-Invoicing Regulation</h3>
+                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with Belgium's</h3>
                                                 <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network, ensuring full readiness for Belgium's mandatory B2B e-invoicing starting 1 January 2026. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.</p>
+                                            </>
+                                        ) : countryCode === 'pl' ? (
+                                            <>
+                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with Poland's Mandatory B2B E-Invoicing Regulation</h3>
+                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with Poland's</h3>
+                                                <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.</p>
                                             </>
                                         ) : (
                                             <>
@@ -372,10 +378,28 @@ const Section1 = () => {
 
             <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-[80px]'>
                 <div className='px-6 md:px-8 xl:px-0 text-center'>
-                    <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] text-center leading-tight">
-                        Requirements for ZATCA-Compliant <span className='text-[#194BED]'>E-Invoicing</span> in Phase 1 & 2
-                    </h1>
-                    <p className='text-fluid-body text-[#5A6183] mt-4 md:mt-6'>Effortless ZATCA Compliance: Your Guide to Phase 1 & 2 with Accqrate</p>
+                    {countryCode === 'be' ? (
+                        <>
+                            <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] text-center leading-tight">
+                                Requirements for Peppol‑Compliant <span className='text-[#194BED]'>E‑Invoicing</span> in Belgium
+                            </h1>
+                            <p className='text-fluid-body text-[#5A6183] mt-4 md:mt-6'>Accqrate ensures EN 16931 structured invoices and Peppol exchange readiness for Belgium's mandatory B2B e‑invoicing.</p>
+                        </>
+                    ) : countryCode === 'pl' ? (
+                        <>
+                            <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] text-center leading-tight">
+                                Requirements for KSeF & Peppol‑Compatible <span className='text-[#194BED]'>E‑Invoicing</span> in Poland
+                            </h1>
+                            <p className='text-fluid-body text-[#5A6183] mt-4 md:mt-6'>Accqrate supports Poland's KSeF FA(3) requirements and Peppol compatibility, enabling compliant submission and exchange.</p>
+                        </>
+                    ) : (
+                        <>
+                            <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] text-center leading-tight">
+                                Requirements for ZATCA-Compliant <span className='text-[#194BED]'>E-Invoicing</span> in Phase 1 & 2
+                            </h1>
+                            <p className='text-fluid-body text-[#5A6183] mt-4 md:mt-6'>Effortless ZATCA Compliance: Your Guide to Phase 1 & 2 with Accqrate</p>
+                        </>
+                    )}
                 </div>
 
                 <div className="mt-10 md:mt-12 lg:mt-[80px] px-6 md:px-8 xl:px-0">
@@ -393,7 +417,13 @@ const Section1 = () => {
                                 <li>Storage of e-invoices</li>
                                 <li>Approved invoice templates</li>
                                 <li>QR Code Integration</li>
-                                <li>Confirmation of the QR code with the ZATCA mobile app</li>
+                                {countryCode === 'be' ? (
+                                    <li>Peppol structured invoice (UBL) — QR code not applicable</li>
+                                ) : countryCode === 'pl' ? (
+                                    <li>Confirm submission and receipt via KSeF platform</li>
+                                ) : (
+                                    <li>Verify invoice QR code using the ZATCA mobile app</li>
+                                )}
                                 <li>Send mail to buyer automatically from the application</li>
                                 <li>Control your invoice payments and outstanding summary</li>
                             </ul>
