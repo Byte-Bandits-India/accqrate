@@ -11,20 +11,147 @@ import { Slider } from "@/Components/ui/slider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ZatcaSection from "@/Components/ZatcaSection";
-import {Field} from "@/Components/ui/field"
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from "@/Components/ui/select"
+import { Field } from "@/Components/ui/field"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/Components/ui/select"
+import { useParams } from "next/navigation";
 
 export default function VATCalculator() {
   const [hydrated, setHydrated] = useState(false);
   const [saleValue, setSaleValue] = useState("816618");
-  const [vatRate, setVatRate] = useState("24.4");
+  const [vatRate, setVatRate] = useState("15"); // Default to Saudi rate
   const [isVATInclusive, setIsVATInclusive] = useState<"yes" | "no">("no");
   const [currency, setCurrency] = useState("SAR");
 
+  const params = useParams();
+  const countryCode = (params?.countryCode as string || "SA").toUpperCase();
+
   useEffect(() => {
-    setHydrated(true); // Ensure client-side rendering for dynamic values
+    setHydrated(true);
     AOS.init({ once: true, duration: 800 });
-  }, []);
+
+    // Set country-specific defaults when component mounts or country changes
+    const countryDefaults = getCountryDefaults(countryCode);
+    setVatRate(countryDefaults.vatRate.toString());
+    setCurrency(countryDefaults.currency);
+  }, [countryCode]);
+
+  // Country-specific configuration
+  const getCountryDefaults = (code: string) => {
+    const countryConfig: Record<string, { vatRate: number; currency: string; vatName: string }> = {
+      // Saudi Arabia
+      SA: { vatRate: 15, currency: "SAR", vatName: "KSA VAT" },
+      // United Arab Emirates
+      AE: { vatRate: 5, currency: "AED", vatName: "UAE VAT" },
+      // Oman
+      OM: { vatRate: 5, currency: "OMR", vatName: "Oman VAT" },
+      // Bahrain
+      BH: { vatRate: 10, currency: "BHD", vatName: "Bahrain VAT" },
+      // Malaysia
+      MY: { vatRate: 6, currency: "MYR", vatName: "Malaysian SST" },
+      MA: { vatRate: 6, currency: "MYR", vatName: "Malaysian SST" },
+      // Mauritius
+      MU: { vatRate: 15, currency: "MUR", vatName: "Mauritius VAT" },
+      // Jordan
+      JO: { vatRate: 16, currency: "JOD", vatName: "Jordan VAT" },
+      JD: { vatRate: 16, currency: "JOD", vatName: "Jordan VAT" },
+      // Poland
+      PL: { vatRate: 23, currency: "PLN", vatName: "Polish VAT" },
+      // Belgium
+      BE: { vatRate: 21, currency: "EUR", vatName: "Belgian VAT" },
+      // Kuwait (no VAT, but keeping for consistency)
+      KW: { vatRate: 0, currency: "KWD", vatName: "Kuwait Tax" },
+      // Qatar
+      QA: { vatRate: 0, currency: "QAR", vatName: "Qatar Tax" },
+      // Egypt
+      EG: { vatRate: 14, currency: "EGP", vatName: "Egypt VAT" },
+    };
+
+    return countryConfig[code] || { vatRate: 15, currency: "SAR", vatName: "VAT" };
+  };
+
+  // Get country-specific VAT calculator title
+  const getVatCalculatorTitle = () => {
+    const countryName = getCountryName(countryCode);
+    return `${countryName} VAT Calculator`;
+  };
+
+  // Get country name
+  const getCountryName = (code: string) => {
+    const countryNames: Record<string, string> = {
+      SA: "Saudi Arabia",
+      AE: "UAE",
+      OM: "Oman",
+      BH: "Bahrain",
+      MY: "Malaysia",
+      MA: "Malaysia",
+      MU: "Mauritius",
+      JO: "Jordan",
+      JD: "Jordan",
+      PL: "Poland",
+      BE: "Belgium",
+      KW: "Kuwait",
+      QA: "Qatar",
+      EG: "Egypt",
+    };
+    return countryNames[code] || "KSA";
+  };
+
+  // Get country-specific currency options based on your requirements
+  const getCurrencyOptions = (countryCode: string) => {
+    // Base currencies for all countries
+    const baseCurrencies = [
+      { value: "USD", label: "USD - US Dollar" },
+      { value: "GBP", label: "GBP - British Pound" },
+    ];
+
+    // Country-specific currency mappings as per your requirements
+    const countryCurrencyMap: Record<string, { value: string; label: string }> = {
+      // KSA - Saudi Arabia
+      SA: { value: "SAR", label: "SAR" },
+      // JD - Jordan
+      JO: { value: "JOD", label: "JOD" },
+      JD: { value: "JOD", label: "JOD" },
+      // UAE - United Arab Emirates
+      AE: { value: "AED", label: "AED" },
+      // MA - Malaysia
+      MY: { value: "MYR", label: "MYR" },
+      MA: { value: "MYR", label: "MYR" },
+      // MU - Mauritius
+      MU: { value: "MUR", label: "MUR" },
+      // PL - Poland
+      PL: { value: "PLN", label: "PLN" },
+      // BE - Belgium (ONLY shows EUR)
+      BE: { value: "EUR", label: "EUR" },
+      // BH - Bahrain
+      BH: { value: "BHD", label: "BHD" },
+    };
+
+    const countryCurrency = countryCurrencyMap[countryCode];
+
+    // For Belgium: ONLY show EUR, no other currencies
+    if (countryCode === 'BE') {
+      return [
+        { value: "EUR", label: "EUR - Euro" }
+      ];
+    }
+
+    // For all other countries: show country currency + USD + GBP
+    if (countryCurrency) {
+      return [
+        countryCurrency,
+        ...baseCurrencies
+      ];
+    }
+
+    // Fallback for unknown countries
+    return [
+      { value: "SAR", label: "SAR - Saudi Riyal" },
+      ...baseCurrencies
+    ];
+  };
+
+  const countryDefaults = getCountryDefaults(countryCode);
+  const currencyOptions = getCurrencyOptions(countryCode);
 
   // Parsed numeric values
   const saleValueNum = parseFloat(saleValue) || 0;
@@ -59,7 +186,7 @@ export default function VATCalculator() {
             className="text-[26px] md:text-[32px] lg:text-[38px] font-medium pb-[30px] md:pb-[37px] text-[#000000] tracking-heading leading-tight"
             data-aos="fade-up"
           >
-            VAT Calculator
+            {getVatCalculatorTitle()}
           </h1>
 
           <div className="lg:flex items-stretch justify-evenly font-inter space-y-6 lg:space-y-0 lg:gap-[35px]">
@@ -132,7 +259,7 @@ export default function VATCalculator() {
                     />
                   </div>
 
-                  {/* VAT Inclusive Question - Fixed responsive layout */}
+                  {/* VAT Inclusive Question */}
                   <div className="lg:col-span-2">
                     <div className="flex flex-row lg:items-center lg:justify-between gap-4 mt-6">
                       <div className="flex-1">
@@ -159,20 +286,17 @@ export default function VATCalculator() {
 
                       {/* Currency Selector */}
                       <div className="lg:w-auto">
-                        <Field className="w-[120px]">
+                        <Field className="w-[180px]">
                           <Select value={currency} onValueChange={setCurrency}>
                             <SelectTrigger className="h-12 bg-[#F5F5FF] border-[#29266E]">
-                              <SelectValue className="text-fluid-body" placeholder="SAR" />
+                              <SelectValue className="text-fluid-body" placeholder={currency} />
                             </SelectTrigger>
                             <SelectContent className="text-fluid-body bg-[#F5F5FF]">
-                              <SelectItem value="SAR">SAR</SelectItem>
-                              <SelectItem value="USD">USD</SelectItem>
-                              <SelectItem value="EUR">EUR</SelectItem>
-                              <SelectItem value="GBP">GBP</SelectItem>
-                              <SelectItem value="AED">AED</SelectItem>
-                              <SelectItem value="KWD">KWD</SelectItem>
-                              <SelectItem value="BHD">BHD</SelectItem>
-                              <SelectItem value="QAR">QAR</SelectItem>
+                              {currencyOptions.map((option) => (
+                                <SelectItem key={option.value} value={option.value}>
+                                  {option.label}
+                                </SelectItem>
+                              ))}
                             </SelectContent>
                           </Select>
                         </Field>

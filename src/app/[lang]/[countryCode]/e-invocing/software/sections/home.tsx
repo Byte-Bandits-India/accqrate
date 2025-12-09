@@ -155,6 +155,7 @@ const countryConfig = {
         name: "Belgium",
         authority: "KSeF",
         badgeText: "PEPPOL Certified  E-invoicing Software for Belgium",
+        topTitle: "Enable Your Business With E-invoicing.",
         title: "Integrate With PEPPOL Network European Based E-invoicing Solution For European Companies.",
         description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
         description2: "",
@@ -181,8 +182,11 @@ const Software = () => {
                 <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
                     {/* LEFT CONTENT */}
                     <div className="flex flex-col justify-center max-w-[560px] w-full">
-                        <p className="text-[#F05A28] text-fluid-small max-w-[560px] leading-[30px] mb-6 md:mb-8 lg:mb-10">
+                        <p className="text-[#F05A28] text-fluid-small max-w-[560px] leading-[30px] mb-6 md:mb-8 lg:mb-6">
                             {content.badgeText}
+                        </p>
+                        <p className="text-fluid-h3 lg:text-[18px] font-medium text-[#000000] leading-tight mb-4">
+                            Enable Your Business With E-invoicing.
                         </p>
                         <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] leading-tight">
                             {content.title}
@@ -192,7 +196,7 @@ const Software = () => {
 
                         {/* Description 1 with green E-invoicing */}
                         <p
-                            className="text-[#000000] text-fluid-body max-w-[560px] leading-[30px]"
+                            className="text-[#000000] text-fluid-body lg:text-[16px] max-w-[560px] leading-[30px]"
                             dangerouslySetInnerHTML={{ __html: content.description1 }}
                         />
 
@@ -215,7 +219,7 @@ const Software = () => {
                   rounded-[50px]
                   px-2
                   text-white
-                  text-fluid-small md:text-[14px] lg:text-[16px]
+                  text-fluid-small md:text-[12px] lg:text-[16px]
                   whitespace-nowrap
                   transition-all duration-300 hover:bg-[#d94f22]
                 "
@@ -289,7 +293,7 @@ const Software = () => {
                                 img: AssetPath.invoicing.peppol.src,
                                 alt: 'Peppol Certified',
                                 text: 'Peppol Certified',
-                                className: 'w-24 h-18',
+                                className: 'w-16 h-16',
                             },
                             {
                                 img: AssetPath.invoicing.gdpr.src,

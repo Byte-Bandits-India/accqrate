@@ -27,7 +27,7 @@ const CTASection = () => {
     },
     // Belgium content
     be: {
-      title: "Compliant Peppol E‑Invoicing for Belgium",
+      title: "Save time, save money",
       description1: "Want the latest on Belgium’s e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
       description2: "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.",
       button1: "Get Peppol Compliance Demo",
