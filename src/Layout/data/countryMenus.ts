@@ -235,7 +235,7 @@ export const countryMenus: CountryMenus = {
           subItems: [
             {
               title: "Accqrate E-Invoicing",
-              description: "Simplify transactions, manage invoices effortlessly with our PEPPOL Certified and FPS Finance Complaint e-invoicing software.",
+              description: "PEPPOL Certified and FPS FInance Complaint e-invoicing software",
               img: AssetPath.header.navbar.fill.einvoicing,
               href: "/e-invocing/",
             },

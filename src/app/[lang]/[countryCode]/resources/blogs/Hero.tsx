@@ -16,15 +16,10 @@ export default function HeroResourceSection() {
 
           {/* Blue underline */}
           <div className="w-[126px] h-[2px] bg-[#194BED] mt-3 lg:mt-[24px] mb-4 rounded-full" />
-
-          {/* Subtitle */}
-          <p className="text-[18px] md:text-[22px] font-medium mt-[35px] ">
-            We Provide Tips And Resources From Industry Leaders. For Real
-          </p>
         </FadeUp>
 
         {/* Featured Image Section */}
-      <div className="relative rounded-2xl overflow-hidden hidden">
+        <div className="relative rounded-2xl overflow-hidden hidden">
           {/* Desktop / Tablet Image */}
           <Image
             src={AssetPath.common.youngDelivery}
@@ -79,7 +74,7 @@ export default function HeroResourceSection() {
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
   );
