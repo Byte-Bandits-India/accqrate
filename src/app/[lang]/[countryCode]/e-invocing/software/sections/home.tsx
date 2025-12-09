@@ -134,7 +134,7 @@ const countryConfig = {
     "PL": {
         name: "Poland",
         authority: "KSeF",
-        badgeText: "ZATCA Approved E-invoicing Software in Poland",
+        badgeText: "PEPPOL Approved E-invoicing Software in Poland",
         title: "Integrate With PEPPOL Network In Less Than 1 Hour.",
         description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
         description2: "",
@@ -154,20 +154,12 @@ const countryConfig = {
     "BE": {
         name: "Belgium",
         authority: "KSeF",
-        badgeText: "ZATCA Approved E-invoicing Software in Belgium",
-        title: "Integrate With PEPPOL Network In Less Than 1 Hour.",
+        badgeText: "PEPPOL Certified  E-invoicing Software for Belgium",
+        title: "Integrate With PEPPOL Network European Based E-invoicing Solution For European Companies.",
         description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
         description2: "",
-        ctaText: "Get 30 days free trial",
+        ctaText: "Connect with our Consultant",
         countryName: "Belgian",
-        marqueeItems: [
-            "Peppol Certified",
-            "GDPR Complaint",
-            "PDF/A3 with XML invoices",
-            "Data Hosted in Europe",
-            "ISO 27001 Certified",
-            "ISO 22301 Certified",
-        ],
         imageAlt: "Accqrate newsletter illustration"
     }
 };
@@ -284,71 +276,56 @@ const Software = () => {
                 </div>
             </div>
 
-            {/* MARQUEE SECTION */}
-            <div className="marquee-wrapper relative overflow-hidden h-[74px]">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1C2041] to-[#194BED] shadow-[0_8px_30px_rgba(0,0,0,0.18)]" />
+            {/* IMAGE + TEXT SECTION */}
+            <div className="relative overflow-hidden py-6">
+                {/* Background */}
+                <div className="absolute inset-0" />
 
-                <div className="relative z-10 flex items-center h-full">
-                    <div className="w-full max-w-[1280px] mx-auto relative overflow-hidden">
-                        <div
-                            className="marquee-track flex items-center"
-                            style={{ ['--marquee-duration' as any]: '22s' }}
-                            aria-hidden="false"
-                        >
-                            {/* First copy */}
-                            <div className="marquee-copy flex-none">
-                                <ul className="inline-flex items-center whitespace-nowrap gap-12 min-w-max px-6 text-fluid-small font-medium text-white pointer-events-none">
-                                    {content.marqueeItems.map((item, index) => (
-                                        <li key={`first-${index}`}>{item}</li>
-                                    ))}
-                                </ul>
-                            </div>
+                <div className="relative z-10 max-w-[1280px] mx-auto px-6">
+                    <div className="flex flex-wrap items-center justify-center gap-10">
 
-                            {/* Second copy for seamless animation */}
-                            <div className="marquee-copy flex-none" aria-hidden="true">
-                                <ul className="inline-flex items-center whitespace-nowrap gap-12 min-w-max px-6 text-fluid-small font-medium text-white pointer-events-none">
-                                    {content.marqueeItems.map((item, index) => (
-                                        <li key={`second-${index}`}>{item}</li>
-                                    ))}
-                                </ul>
+                        {[
+                            {
+                                img: AssetPath.invoicing.peppol.src,
+                                alt: 'Peppol Certified',
+                                text: 'Peppol Certified',
+                                className: 'w-24 h-18',
+                            },
+                            {
+                                img: AssetPath.invoicing.gdpr.src,
+                                alt: 'GDPR Compliant',
+                                text: 'GDPR Compliant',
+                                className: 'w-16 h-16',
+                            },
+                            {
+                                img: AssetPath.invoicing.datahosted.src,
+                                alt: 'Data Hosted in Europe',
+                                text: 'Data Hosted in Europe',
+                                className: 'w-16 h-16',
+                            },
+                            {
+                                img: AssetPath.invoicing.iso.src,
+                                alt: 'ISO 27001 Certified',
+                                text: 'ISO 27001 Certified',
+                                className: 'w-16 h-16',
+                            },
+                        ].map((item, index) => (
+                            <div key={index} className="flex items-center gap-3">
+                                <img
+                                    src={item.img}
+                                    alt={item.alt}
+                                    className={`${item.className} object-contain`}
+                                />
+                                <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
+                                    {item.text}
+                                </p>
                             </div>
-                        </div>
+                        ))}
+
                     </div>
                 </div>
-
-                <style jsx>{`
-          .marquee-track {
-            animation: marquee var(--marquee-duration) linear infinite;
-            will-change: transform;
-            user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-          }
-
-          @keyframes marquee {
-            from { transform: translateX(0); }
-            to   { transform: translateX(-50%); }
-          }
-
-          .marquee-wrapper:hover .marquee-track,
-          .marquee-wrapper:active .marquee-track {
-            animation-play-state: paused;
-          }
-
-          @media (prefers-reduced-motion: reduce) {
-            .marquee-track { 
-              animation: none !important; 
-              transform: none !important; 
-            }
-          }
-
-          .marquee-copy { 
-            flex: 0 0 auto; 
-            display: flex; 
-            align-items: center; 
-          }
-        `}</style>
             </div>
+
         </section>
     );
 };

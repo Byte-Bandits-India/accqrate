@@ -314,8 +314,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     const { createHref } = useDynamicRouting();
     const [enabled, setEnabled] = React.useState(false);
     const carouselRef = useRef<HTMLDivElement>(null);
-    const bgImage = typeof countryContent.backgroundImage === 'string' 
-        ? countryContent.backgroundImage 
+    const bgImage = typeof countryContent.backgroundImage === 'string'
+        ? countryContent.backgroundImage
         : countryContent.backgroundImage.src;
     const scrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -546,6 +546,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     style={{
                         backgroundImage: `url('${bgImage}')`,
                     }}
+                //hero section
                 >
                     <div className="max-w-[1177px] lg:h-[100dvh] mx-auto px-6 overflow-hidden">
                         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_520px] gap-6 lg:gap-8 pt-[3rem] lg:pt-[3rem] 2xl:pt-[4rem] h-full overflow-y-auto">
@@ -630,11 +631,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 {/* /Why Accqrate? */}
                 <div>
                     <div className=" px-6 md:px-8 xl:px-8 mt-[48px]">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 lg:px-6 max-w-[1177px] mx-auto w-full">
+                        <div className="lg:px-6 max-w-[1177px] mx-auto w-full">
                             {/* Left Column */}
                             <div>
                                 <h2 className="font-medium text-fluid-small tracking-heading uppercase">
-                                    <T>Why Accqrate?</T>
+                                    <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
                                 <Image
                                     src={AssetPath.home.blueStar}
@@ -644,29 +645,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     className="w-auto h-[28px] md:h-[28px] lg:hidden"
                                 />
 
-                                <h3 className="text-[24px] md:text-[28px] lg:text-[36px] max-w-[555px] font-medium mt-6 md:mt-8 lg:mt-[40px] leading-tight">
-                                    <T>We <span className="text-[#194BED]">specialize</span> in providing <span className="text-[#194BED]">reliable</span> and efficient Solutions</T>
+                                <h3 className="text-[24px] md:text-[28px] lg:text-[36px] max-w-[1000px] font-medium mt-6 md:mt-8 lg:mt-[40px] leading-tight">
+                                    <T>{countryContent.whyAccqrateSubtitle || "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."}</T>
                                 </h3>
                                 <div className="hidden lg:flex justify-center max-w-[555px] mt-6 md:mt-8 lg:mt-[43px]">
                                     <Image src={AssetPath.home.blueStar} className="h-[64px]" width={64} height={64} alt="groupstar" />
                                 </div>
                             </div>
-
-                            {/* Right Column */}
-                            <div className="flex flex-col justify-start lg:justify-center">
-                                <p className="text-fluid-small font-normal mt-[20px] md:mt-[38px] leading-[24px] lg:mt-0">
-                                    <T>Unlock a world of efficiency with our extensive suite of business modules. Simplify and enhance any task with seamless, one-click installations. Experience unparalleled speed, integration, and smart AI technology, enabling operations faster than a blink. Empower your team with the right tools for every job, all within a lightning-fast UI</T>
-                                </p>
-                                <button
-                                    className="h-[40px] w-[144px] md:w-[199px] text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-[20px] md:mt-[30px]"
-                                    style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
-                                >
-                                    <T>See It in Action</T>
-                                </button>
-                            </div>
                         </div>
 
-                        <div className="relative mt-[32px] md:mt-[60px] lg:mt-[80px]">
+                        <div className="relative">
                             {/* 🔹 Top Section (Buttons) */}
                             <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0 flex justify-end mb-6 gap-3">
                                 <button
@@ -690,7 +678,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         className="flex gap-4 sm:gap-6 md:gap-8 pr-[calc(50vw-640px)]"
                                         style={{ scrollSnapType: "x mandatory" }}
                                     >
-                                        {features.map((feature, index) => (
+                                        {(countryContent.whyAccqrateFeatures || features).map((feature, index) => (
                                             <div
                                                 key={index}
                                                 className="relative flex-shrink-0 bg-white rounded-[16px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] scroll-snap-align-start 
@@ -736,6 +724,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </div>
                                 </div>
                             </div>
+
+                        </div>
+
+                        <div className="lg:px-6 max-w-[1177px] mx-auto w-full">
+                            <button
+                                className="h-[40px] w-[144px] md:w-[199px] text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-[20px] md:mt-[30px]"
+                                style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                            >
+                                <T>See It in Action</T>
+                            </button>
                         </div>
 
                     </div>
@@ -1030,7 +1028,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 key={index}
                                 className="flex flex-col items-center text-center max-w-[174px] mx-auto md:max-w-[207px]"
                             >
-                                <Image className="mb-4" src={icon.img} alt={icon.title}  />
+                                <Image className="mb-4" src={icon.img} alt={icon.title} />
                                 <h2 className="text-fluid-h2 xl:text-[23px] text-[#194BED] font-medium mb-2 tracking-heading leading-tight">{icon.title}</h2>
                                 <p className="text-fluid-body tracking-para leading-tight">{icon.description}</p>
                             </div>
@@ -1171,7 +1169,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </FadeUp>
                             </div>
 
-                            {/* ✅ Image fixed at the bottom inside the white card */}
+                            {/* Image fixed at the bottom inside the white card */}
                             <div className="absolute bottom-0 hidden lg:-left-[200px] xl:-left-[400px] w-full lg:flex justify-center">
                                 <Image
                                     src={AssetPath.home.clip}
@@ -1242,7 +1240,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </button>
                         ))}
                     </div>
-
                 </div>
             </div >
         </main >

@@ -14,26 +14,75 @@ const CTASection = () => {
   const lang = params?.lang as string;
   const countryCode = params?.countryCode as string;
 
+  // Country-specific content configuration
+  const countryContent = {
+    // Default content for ZATCA-based countries
+    default: {
+      title: "Save time, save money",
+      description1: "Want the latest on ZATCA updates, fresh product insights, and exclusive Company editorials?",
+      description2: "Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!",
+      button1: "Get a Free Proof of Concept",
+      button2: "Start 30-Day Free Trial",
+      button3: "Talk to Sales"
+    },
+    // Belgium content
+    be: {
+      title: "Compliant Peppol E‑Invoicing for Belgium",
+      description1: "Want the latest on Belgium’s e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
+      description2: "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.",
+      button1: "Get Peppol Compliance Demo",
+      button2: "Start 30-Day Free Trial",
+      button3: "Talk to Sales"
+    },
+    // Poland content
+    pl: {
+      title: "Compliant KSeF E‑Invoicing for Poland",
+      description1: "Want the latest on PEPPOL updates, fresh product insights, and exclusive Company editorials?",
+      description2: "Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!",
+      button1: "Get KSeF Compliance Demo",
+      button2: "Start 30-Day Free Trial",
+      button3: "Talk to Sales"
+    }
+  };
+
+  // Get content based on country code
+  const getCountryContent = () => {
+    const code = countryCode?.toLowerCase();
+
+    switch (code) {
+      case 'be':
+        return countryContent.be;
+      case 'pl':
+        return countryContent.pl;
+      default:
+        return countryContent.default;
+    }
+  };
+
+  const content = getCountryContent();
+
+  // Button texts array
+  const buttonTexts = [
+    content.button1,
+    content.button2,
+    content.button3
+  ];
+
   return (
-    <div className="w-full bg-gradient-to-l from-[#242087] to-[#1A0C48]  relative shadow-xl">
+    <div className="w-full bg-gradient-to-l from-[#242087] overflow-y-hidden to-[#1A0C48] relative shadow-xl">
       <div className="md:flex gap-8 xl:max-h-[336px] relative z-10 max-w-[1440px] p-6 md:p-10 lg:pb-0 mx-auto">
         {/* LEFT CONTENT */}
         <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
           <h2 className="text-fluid-h2 lg:text-[38px] font-medium mb-6">
-            Save time, save money
+            {content.title}
           </h2>
 
           <p className="text-fluid-body lg:text-[24px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
-            {countryCode?.toLowerCase() === 'be' || countryCode?.toLowerCase() === 'pl' ? (
-              'Want the latest on PEPPOL updates, fresh product insights, and exclusive Company editorials?'
-            ) : (
-              'Want the latest on ZATCA updates, fresh product insights, and exclusive Company editorials?'
-            )}
+            {content.description1}
           </p>
 
           <p className="text-sm text-white/80 leading-tight xl:max-w-[773px] ">
-            Get fresh product insights and exclusive company editorials delivered straight to
-            your <br className="hidden xl:block" /> inbox. Subscribe now to never miss a beat!
+            {content.description2}
           </p>
 
           <div className="hidden">
@@ -49,19 +98,15 @@ const CTASection = () => {
             {/* Extra Info Tags */}
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="flex items-center gap-2 text-white/90 text-sm">
-
                 <span>Free Proof of Concept</span>
                 <img src={AssetPath.resources.starYellow.src} alt="star" className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
-
                 <span>30 Days Free Trial</span>
                 <img src={AssetPath.resources.starYellow.src} alt="star" className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
-
                 <span>No complexity, Subscribe and use</span>
-
               </div>
             </div>
           </div>
@@ -79,18 +124,12 @@ const CTASection = () => {
         </div>
       </div>
 
-
       {/* Bottom Buttons */}
       <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 pb-6 md:pb-8 lg:pb-10">
-        {[
-          "Get a Free Proof of Concept",
-          "Start 30-Day Free Trial",
-          "Talk to Sales",
-        ].map((text, i) => (
+        {buttonTexts.map((text, i) => (
           <Link
             href={`/${lang}/${countryCode}/contact-us`}
             key={i}
-
             className="
         relative
         lg:w-[300px] w-[270px] md:w-[240px]
@@ -124,12 +163,8 @@ const CTASection = () => {
               />
             </svg>
           </Link>
-
         ))}
       </div>
-
-
-
 
       {/* Decorative Circles */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48" />

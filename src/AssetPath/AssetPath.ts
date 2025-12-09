@@ -332,6 +332,10 @@ import tickMark from "@/Assets/images/invoicing/tick-mark.png";
 import zatcaDashboard from "@/Assets/images/invoicing/zatca-dashboard.webp";
 import zatcaIntegratedDashboard from "@/Assets/images/invoicing/zatca-integrated-dashboard.webp";
 import zatca2 from "@/Assets/images/invoicing/zatca2.png";
+import iso from "@/Assets/images/invoicing/iso.png";
+import peppol from "@/Assets/images/invoicing/peppol.png";
+import datahosted from "@/Assets/images/invoicing/data-hosted.png"
+import gdpr from "@/Assets/images/invoicing/gdpr.png"
 
 // Invoicing Integration
 import integrationDarkBlue from "@/Assets/images/invoicing/integration/darkblue.png";
@@ -729,6 +733,10 @@ const AssetPath = {
     moneyStack,
     multipleTabsInvoices,
     onboard: onboardSvg,
+    iso,
+      peppol,
+      datahosted,
+      gdpr,
     oracle: {
       oracle1,
       oracle2,

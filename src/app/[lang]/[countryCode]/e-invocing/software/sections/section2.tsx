@@ -15,9 +15,8 @@ const Section2 = () => {
         <>
             <section>
 
-                {!['BE', 'PL'].includes(countryCode?.toUpperCase() || '') && (
-                    <Solutions countryCode={countryCode} />
-                )}
+                <Solutions countryCode={countryCode} />
+
 
                 <CompleteSoftware />
 

@@ -77,6 +77,34 @@ const bottomRow = [
     { src: AssetPath.business.books.book26, name: "Fashion" },
 ];
 
+const cards = [
+    {
+        title: "Full Compliance with Belgium’s E-Invoicing Mandate",
+        description:
+            "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium’s evolving regulatory framework.",
+    },
+    {
+        title: "Future-Ready for ViDA (VAT in the Digital Age)",
+        description:
+            "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+    },
+    {
+        title: "Effortless E-Invoicing Automation",
+        description:
+            "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
+    },
+    {
+        title: "Specialized Support and Implementation Expertise",
+        description:
+            "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.",
+    },
+    {
+        title: "Unified Global E-Invoicing Platform",
+        description:
+            "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.",
+    },
+];
+
 
 const Section1 = () => {
     const params = useParams();
@@ -87,23 +115,65 @@ const Section1 = () => {
     const lang = params?.lang as string || "en";
     const countryCode = (params?.countryCode as string || "sa").toLowerCase();
 
-    // Country to flag, code, and logo mapping
-    const countryMap: { [key: string]: { flag: any; code: string; name: string; logo: any } } = {
-        sa: { flag: AssetPath.header.language.saudiArabia, code: "KSA", name: "Saudi Arabia", logo: AssetPath.resources.Zact },
-        ae: { flag: AssetPath.header.language.uae, code: "UAE", name: "United Arab Emirates", logo: AssetPath.resources.Zact },
-        om: { flag: AssetPath.header.language.oman, code: "OMN", name: "Oman", logo: AssetPath.resources.Zact },
-        bh: { flag: AssetPath.header.language.bahrain, code: "BHR", name: "Bahrain", logo: AssetPath.resources.Zact },
-        ma: { flag: AssetPath.header.language.malaysia, code: "MYS", name: "Malaysia", logo: AssetPath.resources.Zact },
-        mu: { flag: AssetPath.header.language.mauritius, code: "MUS", name: "Mauritius", logo: AssetPath.resources.Zact },
-        jd: { flag: AssetPath.header.language.jordan, code: "JOR", name: "Jordan", logo: AssetPath.resources.Zact },
-        be: { flag: AssetPath.header.language.belgium, code: "BEL", name: "Belgium", logo: AssetPath.integration.peppol },
-        pl: { flag: AssetPath.header.language.poland, code: "POL", name: "Poland", logo: AssetPath.integration.peppol },
+    // Get centralized country content (provides default, BE and PL overrides)
+    const { countryContent } = useCountryContent({ countryCode: countryCode.toUpperCase() });
+
+    // Country to flag, code, logo mapping and per-country trusted-by subtitle
+    const countryMap: { [key: string]: { flag: any; code: string; name: string; logo: any; trustedBySubtitle?: string } } = {
+        sa: { flag: AssetPath.header.language.saudiArabia, code: "KSA", name: "Saudi Arabia", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        ae: { flag: AssetPath.header.language.uae, code: "UAE", name: "United Arab Emirates", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        om: { flag: AssetPath.header.language.oman, code: "OMN", name: "Oman", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        bh: { flag: AssetPath.header.language.bahrain, code: "BHR", name: "Bahrain", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        ma: { flag: AssetPath.header.language.malaysia, code: "MYS", name: "Malaysia", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        mu: { flag: AssetPath.header.language.mauritius, code: "MUS", name: "Mauritius", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        jd: { flag: AssetPath.header.language.jordan, code: "JOR", name: "Jordan", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        be: { flag: AssetPath.header.language.belgium, code: "BEL", name: "Belgium", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by leading Belgian organisations' },
+        pl: { flag: AssetPath.header.language.poland, code: "POL", name: "Poland", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by Poland’s businesses' },
     };
 
     const currentCountry = countryMap[countryCode] || countryMap.sa;
 
 
     const scrollRef = useRef<HTMLDivElement | null>(null);
+
+    // Per-page overrides: BE and PL should have custom copy, others use default countryContent
+    const pageOverrides: Record<string, Partial<{
+        whyAccqrateTitle: string;
+        whyAccqrateSubtitle: string;
+        headingDescription: string;
+        heroDescription: string;
+        heroTitle: string;
+        peppolCardText: string;
+        zatcaCardText: string;
+    }>> = {
+        be: {
+            whyAccqrateTitle: "Compliant with Belgium’s Mandatory B2B E-Invoicing Regulation",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with Belgium’s FPS Finance 2026 mandate",
+            headingDescription: "EN 16931 and Peppol Requirements",
+            heroDescription: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network, ensuring full readiness for Belgium’s mandatory B2B e-invoicing starting 1 January 2026. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance..",
+            heroTitle: "5,000+ Global companies across all industries",
+            peppolCardText: "Accqrate is Peppol Certified Solution Provider"
+        },
+        pl: {
+            whyAccqrateTitle: "Compliant with Poland’s Mandatory B2B E-Invoicing Regulation",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with Poland’s KSeF system",
+            headingDescription: "Phase 1 & 2 Requirements",
+            heroDescription: "Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.",
+            heroTitle: "E‑Invoicing for Poland",
+            peppolCardText: "Accqrate is Peppol Certified Solution Provider"
+        }
+    };
+
+    const defaultPageContent = {
+        whyAccqrateTitle: countryContent?.whyAccqrateTitle || 'Compliant e‑Invoicing',
+        whyAccqrateSubtitle: countryContent?.whyAccqrateSubtitle || 'Compliance and automation tailored to your market.',
+        headingDescription: countryContent?.heroDescription || 'Accqrate delivers compliant e‑invoicing, automated mapping and secure transmission to authority networks.',
+        heroDescription: countryContent?.heroDescription || 'Compliant e‑invoicing for your market.',
+        peppolCardText: 'Accqrate supports Peppol e‑Invoicing standards',
+        heroTitle: countryContent?.heroTitle || 'E‑Invoicing Requirements'
+    };
+
+    const pageContent = (countryCode === 'be' || countryCode === 'pl') ? { ...defaultPageContent, ...pageOverrides[countryCode] } : defaultPageContent;
 
     const scroll = (direction: "left" | "right") => {
         const container = scrollRef.current;
@@ -117,12 +187,19 @@ const Section1 = () => {
     };
 
     return (
-        <section className=''>
+        <section className='overflow-x-hidden'>
             <div className='bg-gradient-to-t from-[#EFF3FF] to-transparent'>
                 <FadeUp className="mb-8 md:mb-[40px] pt-12 md:pt-[80px] lg:pt-[100px]">
-                    <h3 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto">
-                        <T>Trusted by  </T><br className="md:hidden" /><span className="text-[#194BED]"><T>5,000+ Global companies</T></span>
-                    </h3>
+                    <h1 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto mt-6">
+                        <T>Trusted by</T>
+                        <br className="md:hidden" />
+                        <span className="text-[#194BED]"></span>
+                        <br className="md:hidden" />
+                        <span className="text-[#194BED]">
+                            <T> {pageContent.heroTitle}</T>
+                        </span>
+                    </h1>
+
                 </FadeUp>
 
                 {/* Logo Marquee */}
@@ -280,27 +357,24 @@ const Section1 = () => {
                             <div className="lg:col-span-2">
                                 <div className="">
                                     <div>
-                                        {/* Dynamic compliance content based on country */}
-                                        {countryCode === 'be' ? (
-                                            <>
-                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with Belgium's Mandatory B2B E-Invoicing Regulation</h3>
-                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with Belgium's</h3>
-                                                <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network, ensuring full readiness for Belgium's mandatory B2B e-invoicing starting 1 January 2026. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.</p>
-                                            </>
-                                        ) : countryCode === 'pl' ? (
-                                            <>
-                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with Poland's Mandatory B2B E-Invoicing Regulation</h3>
-                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with Poland's</h3>
-                                                <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.</p>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>Compliant with ZATCA, Tax and Customs Authority</h3>
-                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>Generate invoices fully compliant with ZATCA</h3>
-                                                <h3 className='text-fluid-body font-medium text-[#000000] text-left leading-relaxed'>Phase 2 requirements</h3>
-                                                <p className='text-fluid-small font-normal mt-6 text-[#000000] text-left leading-tight'>Accqrate seamlessly generates ZATCA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ZATCA Phase 2 for every invoice sent to your customers.</p>
-                                            </>
-                                        )}
+                                        {/* Dynamic compliance content from centralized countryContent */}
+                                        <>
+                                            <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>
+                                                <T>{pageContent.whyAccqrateTitle}</T>
+                                            </h3>
+
+                                            <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>
+                                                <T>{pageContent.whyAccqrateSubtitle}</T>
+                                            </h3>
+
+
+                                            <p className='text-[16px] font-medium mt-6 text-[#000000] text-left leading-tight'>
+                                                <T>{pageContent.headingDescription}</T>
+                                            </p>
+                                            <p className='text-fluid-small font-normal mt-2 text-[#000000] text-left leading-tight'>
+                                                <T>{pageContent.heroDescription}</T>
+                                            </p>
+                                        </>
 
                                         {/* Conditional compliance card: Peppol for BE/PL, ZATCA for others */}
                                         {countryCode === 'be' || countryCode === 'pl' ? (
@@ -319,7 +393,7 @@ const Section1 = () => {
 
                                                 <div className="flex items-center justify-between gap-4">
                                                     <p className="text-sm leading-tight">
-                                                        Accqrate supports <br /> Peppol e‑Invoicing standards
+                                                        <T>{pageContent.peppolCardText}</T>
                                                     </p>
 
                                                     <div className="flex items-center justify-center gap-2">
@@ -350,9 +424,6 @@ const Section1 = () => {
                                                 <div className="w-full h-px bg-gray-300"></div>
 
                                                 <div className="flex items-center justify-between gap-4">
-                                                    <p className="text-sm leading-tight">
-                                                        Accurate is 100% ZATCA <br /> Approved E-invoicing solution in
-                                                    </p>
 
                                                     <div className="flex items-center justify-center gap-2">
                                                         <Image
@@ -377,101 +448,31 @@ const Section1 = () => {
             </div>
 
             <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-[80px]'>
-                <div className='px-6 md:px-8 xl:px-0 text-center'>
-                    {countryCode === 'be' ? (
-                        <>
-                            <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] text-center leading-tight">
-                                Requirements for Peppol‑Compliant <span className='text-[#194BED]'>E‑Invoicing</span> in Belgium
-                            </h1>
-                            <p className='text-fluid-body text-[#5A6183] mt-4 md:mt-6'>Accqrate ensures EN 16931 structured invoices and Peppol exchange readiness for Belgium's mandatory B2B e‑invoicing.</p>
-                        </>
-                    ) : countryCode === 'pl' ? (
-                        <>
-                            <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] text-center leading-tight">
-                                Requirements for KSeF & Peppol‑Compatible <span className='text-[#194BED]'>E‑Invoicing</span> in Poland
-                            </h1>
-                            <p className='text-fluid-body text-[#5A6183] mt-4 md:mt-6'>Accqrate supports Poland's KSeF FA(3) requirements and Peppol compatibility, enabling compliant submission and exchange.</p>
-                        </>
-                    ) : (
-                        <>
-                            <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] text-center leading-tight">
-                                Requirements for ZATCA-Compliant <span className='text-[#194BED]'>E-Invoicing</span> in Phase 1 & 2
-                            </h1>
-                            <p className='text-fluid-body text-[#5A6183] mt-4 md:mt-6'>Effortless ZATCA Compliance: Your Guide to Phase 1 & 2 with Accqrate</p>
-                        </>
-                    )}
-                </div>
+                <div className="max-w-[1280px] mx-auto px-6 py-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+                        {cards.map((card, index) => (
+                            <div
+                                key={index}
+                                className="
+          w-full max-w-[392px]
+          border border-[#508847] bg-[#F4FFF2]
+          p-6 rounded-xl
+          flex flex-col
+          lg:h-[310px]
+        "
+                            >
+                                <h3 className="text-[#303030] font-semibold text-lg mb-3">
+                                    {card.title}
+                                </h3>
 
-                <div className="mt-10 md:mt-12 lg:mt-[80px] px-6 md:px-8 xl:px-0">
-                    {/* Generation Phase */}
-                    <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
-
-                        {/* Left Content */}
-                        <div className="lg:w-1/2">
-                            <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
-                                Generation Phase
-                            </h3>
-
-                            <ul className="text-[#333333] text-fluid-small tracking-para leading-[30px] space-y-3 md:space-y-[16px] pl-5 mt-4 md:mt-6 lg:mt-8 list-none">
-                                <li>Generation of Tax Invoices and Simplified e-invoices</li>
-                                <li>Storage of e-invoices</li>
-                                <li>Approved invoice templates</li>
-                                <li>QR Code Integration</li>
-                                {countryCode === 'be' ? (
-                                    <li>Peppol structured invoice (UBL) — QR code not applicable</li>
-                                ) : countryCode === 'pl' ? (
-                                    <li>Confirm submission and receipt via KSeF platform</li>
-                                ) : (
-                                    <li>Verify invoice QR code using the ZATCA mobile app</li>
-                                )}
-                                <li>Send mail to buyer automatically from the application</li>
-                                <li>Control your invoice payments and outstanding summary</li>
-                            </ul>
-                        </div>
-
-                        {/* Right Image */}
-                        <div className="lg:w-1/2 flex justify-center">
-                            <img
-                                src={AssetPath.invoicing.generation.src}
-                                alt="Generation Phase illustration"
-                                className="max-w-full h-auto"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Integration Phase */}
-                    <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mt-10 md:mt-12 lg:mt-[80px]">
-
-                        {/* Left Content */}
-                        <div className="lg:w-1/2 lg:order-2">
-                            <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
-                                Integration Phase
-                            </h3>
-
-                            <ul className="text-[#333333] text-fluid-small tracking-para leading-[30px] space-y-3 md:space-y-[16px] pl-5 mt-4 md:mt-6 lg:mt-8 list-none">
-                                <li>Integration with Fatoora portal</li>
-                                <li>Onboard devices & generate OTP</li>
-                                <li>E-invoice generation and hashing XML - Tax & Simplified invoices</li>
-                                <li>Generate Digital signature</li>
-                                <li>Integrate the Zatca QR code</li>
-                                <li>Generate PDF/A3 with integrated XML</li>
-                                <li>Dashboards in the application</li>
-                                <li>Track acceptance/rejections</li>
-                                <li>Take corrective actions with simple clicks</li>
-                                <li>Send Mail to Buyer automatically the approved e-invoices</li>
-                            </ul>
-                        </div>
-
-                        {/* Right Image */}
-                        <div className="lg:w-1/2 flex justify-center lg:order-1">
-                            <img
-                                src={AssetPath.invoicing.integration.src}
-                                alt="Generation Phase illustration"
-                                className="max-w-full h-auto"
-                            />
-                        </div>
+                                <p className="text-[#5A6183] text-sm leading-[30px] flex-grow">
+                                    {card.description}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
+
             </div>
         </section>
 
