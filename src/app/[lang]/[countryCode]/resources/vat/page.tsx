@@ -14,6 +14,7 @@ import ZatcaSection from "@/Components/ZatcaSection";
 import { Field } from "@/Components/ui/field"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/Components/ui/select"
 import { useParams } from "next/navigation";
+import { getVATCalculatorContent, getCountrySpecificVATDetails } from "./data/vat-calculator-content";
 
 export default function VATCalculator() {
   const [hydrated, setHydrated] = useState(false);
@@ -24,6 +25,10 @@ export default function VATCalculator() {
 
   const params = useParams();
   const countryCode = (params?.countryCode as string || "SA").toUpperCase();
+
+  // Get country-specific content
+  const content = getVATCalculatorContent(countryCode);
+  const countrySpecificDetails = getCountrySpecificVATDetails(countryCode);
 
   useEffect(() => {
     setHydrated(true);
@@ -42,28 +47,18 @@ export default function VATCalculator() {
       SA: { vatRate: 15, currency: "SAR", vatName: "KSA VAT" },
       // United Arab Emirates
       AE: { vatRate: 5, currency: "AED", vatName: "UAE VAT" },
-      // Oman
-      OM: { vatRate: 5, currency: "OMR", vatName: "Oman VAT" },
       // Bahrain
       BH: { vatRate: 10, currency: "BHD", vatName: "Bahrain VAT" },
       // Malaysia
-      MY: { vatRate: 6, currency: "MYR", vatName: "Malaysian SST" },
       MA: { vatRate: 6, currency: "MYR", vatName: "Malaysian SST" },
       // Mauritius
       MU: { vatRate: 15, currency: "MUR", vatName: "Mauritius VAT" },
       // Jordan
-      JO: { vatRate: 16, currency: "JOD", vatName: "Jordan VAT" },
       JD: { vatRate: 16, currency: "JOD", vatName: "Jordan VAT" },
       // Poland
       PL: { vatRate: 23, currency: "PLN", vatName: "Polish VAT" },
       // Belgium
       BE: { vatRate: 21, currency: "EUR", vatName: "Belgian VAT" },
-      // Kuwait (no VAT, but keeping for consistency)
-      KW: { vatRate: 0, currency: "KWD", vatName: "Kuwait Tax" },
-      // Qatar
-      QA: { vatRate: 0, currency: "QAR", vatName: "Qatar Tax" },
-      // Egypt
-      EG: { vatRate: 14, currency: "EGP", vatName: "Egypt VAT" },
     };
 
     return countryConfig[code] || { vatRate: 15, currency: "SAR", vatName: "VAT" };
@@ -80,74 +75,41 @@ export default function VATCalculator() {
     const countryNames: Record<string, string> = {
       SA: "Saudi Arabia",
       AE: "UAE",
-      OM: "Oman",
       BH: "Bahrain",
-      MY: "Malaysia",
       MA: "Malaysia",
       MU: "Mauritius",
-      JO: "Jordan",
       JD: "Jordan",
       PL: "Poland",
       BE: "Belgium",
-      KW: "Kuwait",
-      QA: "Qatar",
-      EG: "Egypt",
     };
     return countryNames[code] || "KSA";
   };
 
-  // Get country-specific currency options based on your requirements
+  // Get only the specific currencies from your list
   const getCurrencyOptions = (countryCode: string) => {
-    // Base currencies for all countries
-    const baseCurrencies = [
-      { value: "USD", label: "USD - US Dollar" },
-      { value: "GBP", label: "GBP - British Pound" },
+    // Only these specific currencies as per your list
+    const allCurrencies = [
+      { value: "SAR", label: "SAR", country: "SA" },
+      { value: "JOD", label: "JOD", country: "JD" },
+      { value: "AED", label: "AED", country: "AE" },
+      { value: "MYR", label: "MYR", country: "MA" },
+      { value: "MUR", label: "MUR", country: "MU" },
+      { value: "PLN", label: "PLN", country: "PL" },
+      { value: "EUR", label: "EUR", country: "BE" },
+      { value: "BHD", label: "BHD", country: "BH" },
     ];
 
-    // Country-specific currency mappings as per your requirements
-    const countryCurrencyMap: Record<string, { value: string; label: string }> = {
-      // KSA - Saudi Arabia
-      SA: { value: "SAR", label: "SAR" },
-      // JD - Jordan
-      JO: { value: "JOD", label: "JOD" },
-      JD: { value: "JOD", label: "JOD" },
-      // UAE - United Arab Emirates
-      AE: { value: "AED", label: "AED" },
-      // MA - Malaysia
-      MY: { value: "MYR", label: "MYR" },
-      MA: { value: "MYR", label: "MYR" },
-      // MU - Mauritius
-      MU: { value: "MUR", label: "MUR" },
-      // PL - Poland
-      PL: { value: "PLN", label: "PLN" },
-      // BE - Belgium (ONLY shows EUR)
-      BE: { value: "EUR", label: "EUR" },
-      // BH - Bahrain
-      BH: { value: "BHD", label: "BHD" },
-    };
+    // Get current country's currency code
+    const currentCountryCurrency = getCountryDefaults(countryCode).currency;
 
-    const countryCurrency = countryCurrencyMap[countryCode];
+    // Separate current country's currency and others
+    const currentCountryCurrencyItem = allCurrencies.find(c => c.value === currentCountryCurrency);
+    const otherCurrencies = allCurrencies.filter(c => c.value !== currentCountryCurrency);
 
-    // For Belgium: ONLY show EUR, no other currencies
-    if (countryCode === 'BE') {
-      return [
-        { value: "EUR", label: "EUR - Euro" }
-      ];
-    }
-
-    // For all other countries: show country currency + USD + GBP
-    if (countryCurrency) {
-      return [
-        countryCurrency,
-        ...baseCurrencies
-      ];
-    }
-
-    // Fallback for unknown countries
-    return [
-      { value: "SAR", label: "SAR - Saudi Riyal" },
-      ...baseCurrencies
-    ];
+    // Return with current country's currency at the top
+    return currentCountryCurrencyItem
+      ? [currentCountryCurrencyItem, ...otherCurrencies]
+      : allCurrencies;
   };
 
   const countryDefaults = getCountryDefaults(countryCode);
@@ -178,8 +140,6 @@ export default function VATCalculator() {
 
   return (
     <div>
-
-
       <div className="bg-[#F8F6FF]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0 pt-[80px] pb-[40px]">
           <h1
@@ -286,7 +246,7 @@ export default function VATCalculator() {
 
                       {/* Currency Selector */}
                       <div className="lg:w-auto">
-                        <Field className="w-[180px]">
+                        <Field className="w-[120px]">
                           <Select value={currency} onValueChange={setCurrency}>
                             <SelectTrigger className="h-12 bg-[#F5F5FF] border-[#29266E]">
                               <SelectValue className="text-fluid-body" placeholder={currency} />
@@ -354,27 +314,27 @@ export default function VATCalculator() {
         </div>
       </div>
 
-      {/* Additional Text Sections with AOS */}
+      {/* Additional Text Sections with AOS - Now using centralized content */}
       <div>
         <div className="max-w-[1280px] mx-auto mt-[40px] px-6 md:px-8 xl:px-0 pb-8 md:pb-10 lg:pb-12" data-aos="fade-up">
           <div>
-            <h2 className="text-fluid-body font-semibold">Simplify VAT Calculations with Our KSA VAT Calculator</h2>
+            <h2 className="text-fluid-body font-semibold">{content.title}</h2>
             <p className="text-fluid-small leading-[26px] lg:leading-[40px] mt-[25px]">
-              Navigating VAT calculations has never been easier. Our KSA VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.
+              {content.subtitle}
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
             <h2 className="text-fluid-body font-semibold">What Is VAT?</h2>
             <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">
-              Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in KSA in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.
+              {content.whatIsVAT} {countrySpecificDetails}
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold">How to Calculate VAT in KSA</h2>
+            <h2 className="text-fluid-body font-semibold">{content.howToCalculateTitle}</h2>
             <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">
-              Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:
+              {content.howToCalculateDesc}
             </p>
             <ul className="list-disc pl-6 space-y-1 text-fluid-small text-[#555555] leading-[26px] lg:leading-[40px] mt-2">
               <li>Adding VAT: Perfect for when sales are exclusive of VAT.</li>
@@ -383,16 +343,15 @@ export default function VATCalculator() {
           </div>
 
           <div className="mt-[30px] lg:mb-[60px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold">VAT Calculation Made Simple</h2>
-            <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">With our KSA VAT Calculator, enjoy:</p>
+            <h2 className="text-fluid-body font-semibold">{content.calculationBenefitsTitle}</h2>
+            <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">With our {getCountryName(countryCode)} VAT Calculator, enjoy:</p>
             <ul className="list-disc pl-6 space-y-1 text-fluid-small leading-[26px] lg:leading-[40px] text-[#555555] mt-2">
-              <li>Instant Calculations: Quick and straightforward VAT computations.</li>
-              <li>Accuracy: Precise invoicing every time.</li>
-              <li>Error Reduction: Minimize manual calculation mistakes.</li>
-              <li>Time Savings: Spend less time on math and more on your business.</li>
+              {content.benefits.map((benefit, index) => (
+                <li key={index}>{benefit}</li>
+              ))}
             </ul>
             <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">
-              Leverage our VAT calculator for hassle-free tax calculations, ensuring your business stays compliant and efficient.
+              {content.calculationBenefitsDesc}
             </p>
           </div>
         </div>
