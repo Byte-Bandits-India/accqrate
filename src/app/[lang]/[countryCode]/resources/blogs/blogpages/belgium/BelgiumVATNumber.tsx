@@ -33,7 +33,7 @@ export default function BelgiumVATNumber() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <BelgiumT>1. Understanding Belgium&apos;s VAT Registration Number</BelgiumT>
+                1.<BelgiumT>Understanding Belgium&apos;s VAT Registration Number</BelgiumT>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <BelgiumT>
@@ -94,7 +94,7 @@ export default function BelgiumVATNumber() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <BelgiumT>2. Why a VAT Number Is Required</BelgiumT>
+                2. <BelgiumT>Why a VAT Number Is Required</BelgiumT>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <BelgiumT>
@@ -161,7 +161,7 @@ export default function BelgiumVATNumber() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <BelgiumT>3. When VAT Registration Becomes Mandatory</BelgiumT>
+                3. <BelgiumT>When VAT Registration Becomes Mandatory</BelgiumT>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <BelgiumT>
@@ -250,7 +250,7 @@ export default function BelgiumVATNumber() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <BelgiumT>4. How to Obtain a VAT Registration Number in Belgium</BelgiumT>
+                4. <BelgiumT>How to Obtain a VAT Registration Number in Belgium</BelgiumT>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <BelgiumT>
@@ -313,7 +313,7 @@ export default function BelgiumVATNumber() {
             </ul>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <BelgiumT>5. How to Verify a Belgian VAT Number</BelgiumT>
+                5. <BelgiumT>How to Verify a Belgian VAT Number</BelgiumT>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <BelgiumT>
@@ -354,7 +354,7 @@ export default function BelgiumVATNumber() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <BelgiumT>6. Responsibilities After VAT Registration</BelgiumT>
+                6. <BelgiumT>Responsibilities After VAT Registration</BelgiumT>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <BelgiumT>

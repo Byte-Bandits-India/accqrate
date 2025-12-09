@@ -6,6 +6,7 @@ import { ContactModal } from "@/Components/ContactModal";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import AssetPath from "@/AssetPath/AssetPath";
+import Image from "next/image";
 
 const CTASection = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -23,8 +24,11 @@ const CTASection = () => {
           </h2>
 
           <p className="text-fluid-body lg:text-[24px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
-            Want the latest on ZATCA updates, fresh product insights,
-            and exclusive Company editorials?
+            {countryCode?.toLowerCase() === 'be' || countryCode?.toLowerCase() === 'pl' ? (
+              'Want the latest on PEPPOL updates, fresh product insights, and exclusive Company editorials?'
+            ) : (
+              'Want the latest on ZATCA updates, fresh product insights, and exclusive Company editorials?'
+            )}
           </p>
 
           <p className="text-sm text-white/80 leading-tight xl:max-w-[773px] ">
@@ -65,9 +69,11 @@ const CTASection = () => {
 
         {/* RIGHT IMAGE */}
         <div className="hidden md:flex justify-end relative -top-[150px] ">
-          <img
-            src={AssetPath.common.chartView}
+          <Image
+            src={AssetPath.common.chartView?.src || AssetPath.common.chartView}
             alt="Dashboard Preview"
+            width={499}
+            height={350}
             className="xl:max-w-[499px] w-full md:h-[300px] lg:h-[350px] transform hover:scale-105 transition-transform duration-300"
           />
         </div>

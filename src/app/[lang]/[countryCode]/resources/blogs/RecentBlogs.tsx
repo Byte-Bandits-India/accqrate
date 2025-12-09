@@ -5,6 +5,7 @@ import Link from "next/link";
 import FadeUp from "@/Components/ui/FadeUp";
 import blogPosts from "./data/blogspost";
 import AssetPath from "@/AssetPath/AssetPath";
+import BelgiumT from "@/Components/BelgiumT";
 import { useParams } from "next/navigation";
 import { useState, useEffect, useMemo } from "react";
 
@@ -110,26 +111,26 @@ export default function RecentBlogPosts() {
 
   // Blog Card Component
   const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
-    <div className="block">
-      <div className="rounded-xl overflow-hidden duration-300 mb-[50px] md:mb-0">
-        <FadeUp className="relative w-full shadow-[0_4px_10px_rgba(0,0,0,0.25)] rounded-xl h-[188px] xl:h-[250px]">
+    <div className="block h-full">
+      <div className="rounded-2xl border border-gray-200 shadow-sm overflow-hidden duration-300 bg-white hover:shadow-md transition-shadow h-full flex flex-col">
+        <FadeUp className="relative w-full h-[188px] xl:h-[250px] bg-gray-50 flex-shrink-0">
           <Image
             src={getImageFromAssetPath(post.image)}
             alt={post.title}
             fill
-            className="object-cover w-full rounded-xl sm:rounded-2xl h-full"
+            className="object-cover w-full h-full p-2 rounded-2xl"
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={false}
           />
         </FadeUp>
 
-        <div className="p-4">
-          <FadeUp className="font-semibold text-[18px] lg:h-[45px] mt-[20px] text-gray-900 line-clamp-2 leading-tight mb-[10px]">
-            {post.title}
+        <div className="p-5 border-t border-gray-100 flex-1 flex flex-col">
+          <FadeUp className="font-semibold text-[16px] sm:text-[18px] text-gray-900 line-clamp-2 leading-snug mb-3">
+            {currentCountry?.blogCode === "BE" ? <BelgiumT>{post.title}</BelgiumT> : post.title}
           </FadeUp>
 
-          <FadeUp className="text-gray-600 text-[16px] line-clamp-3 leading-tight">
-            {post.desc}
+          <FadeUp className="text-gray-600 text-[14px] sm:text-[15px] line-clamp-3 leading-relaxed flex-1">
+            {currentCountry?.blogCode === "BE" ? <BelgiumT>{post.desc}</BelgiumT> : post.desc}
           </FadeUp>
         </div>
       </div>
@@ -150,7 +151,7 @@ export default function RecentBlogPosts() {
   // Country not supported
   if (!currentCountry) {
     return (
-      <section className="py-10 md:py-12 lg:py-[90px] text-center">
+      <section className="py-10 md:py-12  text-center">
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0">
           <FadeUp className="text-fluid-h3 font-semibold mb-8 text-gray-900">
             Country Not Found
@@ -181,9 +182,9 @@ export default function RecentBlogPosts() {
 
   // Final return UI
   return (
-    <section className="py-10 md:py-12 lg:py-[90px]">
+    <section className="mb-10 ">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0">
-        <FadeUp className="text-fluid-h3 font-semibold mb-10 text-gray-900">
+        <FadeUp className="text-[16px] md:text-[20px] font-semibold mb-10 text-gray-900">
           Blog Posts from Accqrate
         </FadeUp>
 

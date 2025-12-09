@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -43,7 +44,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>1. What VAT Means in Belgium</T>
+                1.<T>What VAT Means in Belgium</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -69,7 +70,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>2. How VAT Operates in Belgium</T>
+                2.<T>How VAT Operates in Belgium</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -105,7 +106,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>3. VAT Liability: When a Business Must Register</T>
+                3. <T>VAT Liability: When a Business Must Register</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -139,7 +140,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>4. VAT Exemptions in Belgium</T>
+                4. <T>VAT Exemptions in Belgium</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -191,7 +192,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>5. VAT Rates in Belgium</T>
+                5. <T>VAT Rates in Belgium</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Belgium applies several VAT rates depending on the nature of goods or services.</T>
@@ -260,7 +261,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>6. VAT Registration in Belgium</T>
+                6. <T>VAT Registration in Belgium</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>To operate legally, businesses must follow Belgium&apos;s VAT registration process.</T>
@@ -304,7 +305,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>7. VAT Returns and Payment Obligations</T>
+                7. <T>VAT Returns and Payment Obligations</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -360,7 +361,7 @@ export default function BelgiumVAT() {
             </ul>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>8. VAT and Online Sales</T>
+                8. <T>VAT and Online Sales</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Belgium&apos;s VAT rules apply specific obligations for digital and cross border sales.</T>
@@ -390,7 +391,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>9. E Invoicing and Its Impact on VAT</T>
+                9. <T>E Invoicing and Its Impact on VAT</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -420,7 +421,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>10. Common VAT Challenges for Businesses in Belgium</T>
+                10. <T>Common VAT Challenges for Businesses in Belgium</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Businesses often face several difficulties when managing VAT obligations, including:</T>
@@ -450,7 +451,7 @@ export default function BelgiumVAT() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>11. Conclusion</T>
+                11. <T>Conclusion</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>

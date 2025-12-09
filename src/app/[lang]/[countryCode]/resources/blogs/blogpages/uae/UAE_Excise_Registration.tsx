@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import T from "@/Components/T";
+import T from "@/Components/UaeT";
 import BlogLayout from "../../layout/BlogLayout";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";

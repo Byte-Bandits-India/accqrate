@@ -1,7 +1,8 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -9,7 +10,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 function BelgiumEInvoicingMandate() {
     return (
         <BlogLayout
-            pageTitle="Belgium's e Invoicing Mandate: Complete Guide to Requirements, Timelines, Scope and Readiness"
+            pageTitle={<T>Belgium&apos;s e Invoicing Mandate: Complete Guide to Requirements, Timelines, Scope and Readiness</T>}
             updatedOn="Nov 25th, 2024"
             minRead="25"
         >
@@ -44,7 +45,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>1. Understanding e Invoicing in Belgium</T>
+                1.<T>Understanding e Invoicing in Belgium</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -87,7 +88,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>2. Belgium&apos;s E Invoicing Timeline</T>
+                2.<T> Belgium's E Invoicing Timeline</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -133,7 +134,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>3. The E Invoicing Process in Belgium</T>
+                3.<T>The E Invoicing Process in Belgium</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -188,7 +189,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>4. Regulatory Scope and Transaction Coverage</T>
+                4.<T>Regulatory Scope and Transaction Coverage</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -196,7 +197,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>4.1 B2G Transactions (Business to Government)</T>
+                4.1<T> B2G Transactions (Business to Government)</T>
             </h4>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
@@ -212,7 +213,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>4.2 B2B Transactions (Business to Business)</T>
+                4.2 <T> B2B Transactions (Business to Business)</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -237,7 +238,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>4.3 B2C Transactions (Business to Consumer)</T>
+                4.3 <T>B2C Transactions (Business to Consumer)</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
@@ -248,7 +249,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>4.4 International Transactions</T>
+                4.4 <T> International Transactions</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
@@ -256,7 +257,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>5. Future E Reporting Obligations in Belgium</T>
+                5.<T> Future E Reporting Obligations in Belgium</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -285,7 +286,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>6. Benefits for Belgian Enterprises</T>
+                6.<T> Benefits for Belgian Enterprises</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -317,7 +318,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>7. Technical Requirements Companies Must Follow</T>
+                7.<T>Technical Requirements Companies Must Follow</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -347,7 +348,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>8. Preparing for the 2026 Mandate: Business Readiness Checklist</T>
+                8.<T>Preparing for the 2026 Mandate: Business Readiness Checklist</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -358,7 +359,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>8.1 System and Infrastructure Readiness</T>
+                8.1 <T>System and Infrastructure Readiness</T>
             </h4>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
@@ -374,7 +375,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>8.2 Software Selection</T>
+                8.2 <T> Software Selection</T>
             </h4>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
@@ -390,7 +391,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>8.3 Process Integration</T>
+                8.3 <T> Process Integration</T>
             </h4>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
@@ -406,7 +407,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>8.4 Supplier and Customer Coordination</T>
+                8.4 <T> Supplier and Customer Coordination</T>
             </h4>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
@@ -422,7 +423,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>8.5 Governance and Internal Controls</T>
+                8.5 <T>Governance and Internal Controls</T>
             </h4>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
@@ -438,7 +439,7 @@ function BelgiumEInvoicingMandate() {
             </ul>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>9. Common Challenges Companies Face</T>
+                9. <T>Common Challenges Companies Face</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -465,7 +466,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>10. Penalties for Non Compliance</T>
+                10. <T> Penalties for Non Compliance</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -495,7 +496,7 @@ function BelgiumEInvoicingMandate() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>11. Final Outlook</T>
+                11. <T>Final Outlook</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">

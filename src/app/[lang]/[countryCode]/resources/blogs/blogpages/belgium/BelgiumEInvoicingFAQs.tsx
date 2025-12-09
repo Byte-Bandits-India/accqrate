@@ -1,7 +1,8 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -9,7 +10,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 function BelgiumEInvoicingFAQs() {
     return (
         <BlogLayout
-            pageTitle="Belgium E-Invoicing FAQs: Rules, Scope and What Businesses Must Prepare for in 2026"
+            pageTitle={<T>Belgium E-Invoicing FAQs: Rules, Scope and What Businesses Must Prepare for in 2026</T>}
             updatedOn="Nov 27th, 2024"
             minRead="22"
         >

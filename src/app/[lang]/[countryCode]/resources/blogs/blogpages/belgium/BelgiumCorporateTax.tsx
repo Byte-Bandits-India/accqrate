@@ -1,7 +1,8 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -9,7 +10,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 function BelgiumCorporateTax() {
     return (
         <BlogLayout
-            pageTitle="Corporate Tax in Belgium: Complete Guide to Rates, Filing, Deductions, Incentives, Assessments, and Compliance Obligations"
+            pageTitle={<BelgiumT>Corporate Tax in Belgium: Complete Guide to Rates, Filing, Deductions, Incentives, Assessments, and Compliance Obligations</BelgiumT>}
             updatedOn="Nov 25th, 2024"
             minRead="25"
         >
@@ -43,7 +44,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>1. Understanding Belgium&apos;s Corporate Tax System</T>
+                1. <T>Understanding Belgium&apos;s Corporate Tax System</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -63,7 +64,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>1.1 Key Characteristics of Belgium&apos;s Corporate Tax Framework</T>
+                1.1 <T>Key Characteristics of Belgium&apos;s Corporate Tax Framework</T>
             </h4>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
@@ -87,7 +88,7 @@ function BelgiumCorporateTax() {
             </ul>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>2. Corporate Tax Liability in Belgium</T>
+                2. <T>Corporate Tax Liability in Belgium</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -98,7 +99,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>2.1 Belgian Resident Companies</T>
+                2.1 <T>Belgian Resident Companies</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -126,7 +127,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>2.2 Branches of Foreign Companies</T>
+                2.2 <T>Branches of Foreign Companies</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -144,7 +145,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>2.3 Subsidiaries of Foreign Companies</T>
+                2.3 <T>Subsidiaries of Foreign Companies</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
@@ -155,7 +156,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>2.4 Profit-Generating Activities Triggering Tax Liability</T>
+                2.4 <T>Profit-Generating Activities Triggering Tax Liability</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -185,7 +186,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>3. Corporate Tax Rates in Belgium</T>
+                3. <T>Corporate Tax Rates in Belgium</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -193,7 +194,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>3.1 Standard Corporate Tax Rate: 25 percent</T>
+                3.1 <T>Standard Corporate Tax Rate: 25 percent</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
@@ -201,7 +202,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>3.2 Reduced SME Rate: 20 percent on the first 100,000 euros</T>
+                3.2 <T>Reduced SME Rate: 20 percent on the first 100,000 euros</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -228,7 +229,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>4. Deductible Expenses and Corporate Tax Incentives</T>
+                4. <T>Deductible Expenses and Corporate Tax Incentives</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -239,7 +240,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>4.1 Common Deductible Business Expenses</T>
+                4.1 <T>Common Deductible Business Expenses</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -268,7 +269,7 @@ function BelgiumCorporateTax() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>4.2 Key Belgian Tax Incentives</T>
+                4.2 <T>Key Belgian Tax Incentives</T>
             </h4>
 
             <h5 className="text-fluid-body font-semibold mt-3 mb-2">
@@ -329,7 +330,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>4.3 Basket Limitation Rule</T>
+                4.3 <T>Basket Limitation Rule</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -352,7 +353,7 @@ function BelgiumCorporateTax() {
             </ul>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>5. Capital Gains Taxation in Belgium</T>
+                5. <T>Capital Gains Taxation in Belgium</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -363,7 +364,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>5.1 Capital Gains Exemptions on Share Disposals</T>
+                5.1 <T>Capital Gains Exemptions on Share Disposals</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -387,7 +388,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>6. Corporate Tax Filing, Compliance, and Deadlines</T>
+                6. <T>Corporate Tax Filing, Compliance, and Deadlines</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -395,7 +396,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>6.1 Fiscal Year and Filing</T>
+                6.1 <T>Fiscal Year and Filing</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -412,7 +413,7 @@ function BelgiumCorporateTax() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>6.2 Required Documentation</T>
+                6.2 <T>Required Documentation</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -445,7 +446,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>6.3 Prepayments</T>
+                6.3 <T>Prepayments</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
@@ -456,7 +457,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>7. Corporate Tax Audits in Belgium</T>
+                7. <T>Corporate Tax Audits in Belgium</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -464,7 +465,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>7.1 Reasons for Audit Selection</T>
+                7.1 <T>Reasons for Audit Selection</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -493,7 +494,7 @@ function BelgiumCorporateTax() {
             </ul>
 
             <h4 className="text-fluid-body font-semibold mt-4 mb-2">
-                <T>7.2 What Happens During an Audit?</T>
+                7.2 <T>What Happens During an Audit?</T>
             </h4>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -529,7 +530,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>8. Strategic Considerations for Businesses</T>
+                8. <T>Strategic Considerations for Businesses</T>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -562,7 +563,7 @@ function BelgiumCorporateTax() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <T>9. Final Takeaways</T>
+                9. <T>Final Takeaways</T>
             </h3>
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">

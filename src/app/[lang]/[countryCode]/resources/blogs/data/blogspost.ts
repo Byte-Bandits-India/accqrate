@@ -185,6 +185,7 @@ const blogPosts: BlogPost[] = [
     desc: "Accounting software built for the modern MSME Accqrate Books brings simplicity, accuracy, and compliance...",
     country: "KSA"
   },
+  //belgium
   {
     id: 24,
     url: "belgium-credit-notes",

@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -51,15 +51,14 @@ export default function PeppolMercuriusBelgium() {
                 </li>
             </ul>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
-                <T>
-                    Understanding how these two systems work together is essential for any business operating in
+                <T>Understanding how these two systems work together is essential for any business operating in
                     Belgium. The following guide unpacks their roles, capabilities, and how companies can prepare for
                     the upcoming requirements.
                 </T>
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>1. Understanding E Invoicing and Its Importance</T>
+                1.<T>Understanding E Invoicing and Its Importance</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -84,7 +83,7 @@ export default function PeppolMercuriusBelgium() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>2. Belgium&apos;s E Invoicing Architecture: Two Key Components</T>
+                2.<T>Belgium&apos;s E Invoicing Architecture: Two Key Components</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -94,7 +93,7 @@ export default function PeppolMercuriusBelgium() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>2.1 Mercurius: The National Processing Hub</T>
+                2.1<T>Mercurius: The National Processing Hub</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -114,51 +113,44 @@ export default function PeppolMercuriusBelgium() {
             </p>
             <ul className="list-disc ml-6 mb-6 text-gray-700 text-fluid-small">
                 <li>
-                    <T>
-                        <strong>Invoice submission and routing</strong> – Ensures that structured invoices are delivered
+                    <T>Invoice submission and routing – Ensures that structured invoices are delivered
                         to the right recipient based on validated routing rules.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Interoperability support</strong> – Works in alignment with the PEPPOL framework, ensuring
+                    <T>Interoperability support – Works in alignment with the PEPPOL framework, ensuring
                         cross system compatibility.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Manual and automated submission options</strong> – Supports both integrated ERP
+                    <T>Manual and automated submission options – Supports both integrated ERP
                         submissions and manual uploads for smaller businesses.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Track and trace features</strong> – Offers real time visibility so users can monitor
+                    <T>Track and trace features – Offers real time visibility so users can monitor
                         invoice status from submission to acceptance.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Document conversion</strong> – Provides human readable views of machine readable XML
+                    <T>Document conversion – Provides human readable views of machine readable XML
                         invoices, making the system accessible for non technical users.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Archiving and reporting</strong> – Retains invoices for audit and compliance purposes and
+                    <T>Archiving and reporting – Retains invoices for audit and compliance purposes and
                         supports reporting requirements for both public and private entities.
                     </T>
                 </li>
             </ul>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
-                <T>
-                    Overall, Mercurius ensures that Belgian entities have a reliable and secure mechanism for sending
+                <T>Overall, Mercurius ensures that Belgian entities have a reliable and secure mechanism for sending
                     and receiving structured invoices.
                 </T>
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>2.2 PEPPOL: The Standard and Network Behind E Invoicing</T>
+                2.2<T> PEPPOL: The Standard and Network Behind E Invoicing</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -178,45 +170,39 @@ export default function PeppolMercuriusBelgium() {
             </p>
             <ul className="list-disc ml-6 mb-6 text-gray-700 text-fluid-small">
                 <li>
-                    <T>
-                        <strong>Standardized invoice structure</strong> – Ensures compatibility with the EN16931 standard
+                    <T>Standardized invoice structure – Ensures compatibility with the EN16931 standard
                         used across Europe.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Certified Access Points</strong> – These providers connect businesses to the PEPPOL
+                    <T>Certified Access Points – These providers connect businesses to the PEPPOL
                         network and guarantee secure, authenticated invoice exchanges.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Interoperable international network</strong> – Allows businesses in Belgium to transact
+                    <T>Interoperable international network – Allows businesses in Belgium to transact
                         with parties in other PEPPOL enabled countries without format or protocol mismatches.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>Security and compliance</strong> – Offers encrypted data transfer and rules for
+                    <T>Security and compliance – Offers encrypted data transfer and rules for
                         authenticity and integrity.
                     </T>
                 </li>
                 <li>
-                    <T>
-                        <strong>National recipient register</strong> – Helps identify entities that can receive PEPPOL
+                    <T>National recipient register – Helps identify entities that can receive PEPPOL
                         compliant invoices, simplifying onboarding and delivery.
                     </T>
                 </li>
             </ul>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
-                <T>
-                    PEPPOL ensures that data exchange remains consistent, secure, and universally accessible, regardless
+                <T>PEPPOL ensures that data exchange remains consistent, secure, and universally accessible, regardless
                     of the systems used.
                 </T>
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>3. How Mercurius Enables Belgium&apos;s E Invoicing Mandate</T>
+                3.<T>How Mercurius Enables Belgium&apos;s E Invoicing Mandate</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -273,7 +259,7 @@ export default function PeppolMercuriusBelgium() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>4. How PEPPOL Strengthens Belgium&apos;s Digital Invoicing Framework</T>
+                4.<T>How PEPPOL Strengthens Belgium&apos;s Digital Invoicing Framework</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -329,7 +315,7 @@ export default function PeppolMercuriusBelgium() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>5. Preparing for PEPPOL and Mercurius Adoption</T>
+                5.<T>Preparing for PEPPOL and Mercurius Adoption</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -339,29 +325,24 @@ export default function PeppolMercuriusBelgium() {
             </p>
             <ol className="list-decimal ml-6 mb-4 text-gray-700 text-fluid-small">
                 <li className="mb-2">
-                    <T>
-                        <strong>Assess current invoicing tools</strong> to ensure they support PEPPOL BIS and EN16931
+                    <T>Assess current invoicing tools to ensure they support PEPPOL BIS and EN16931
                         formats.
                     </T>
                 </li>
                 <li className="mb-2">
-                    <T>
-                        <strong>Register through a certified Access Point</strong> to obtain a PEPPOL ID.
+                    <T>Register through a certified Access Point to obtain a PEPPOL ID.
                     </T>
                 </li>
                 <li className="mb-2">
-                    <T>
-                        <strong>Enable system integration with Mercurius</strong> or prepare to use the manual portal.
+                    <T>Enable system integration with Mercurius or prepare to use the manual portal.
                     </T>
                 </li>
                 <li className="mb-2">
-                    <T>
-                        <strong>Validate invoice formats</strong> before production use.
+                    <T>Validate invoice formats before production use.
                     </T>
                 </li>
                 <li className="mb-2">
-                    <T>
-                        <strong>Train finance and operations teams</strong> to manage the new processes confidently.
+                    <T>Train finance and operations teams to manage the new processes confidently.
                     </T>
                 </li>
             </ol>

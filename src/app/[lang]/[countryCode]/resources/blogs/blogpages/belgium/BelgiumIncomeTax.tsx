@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -40,7 +41,7 @@ export default function BelgiumIncomeTax() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>1. Understanding Belgium&apos;s Income Tax Structure</T>
+                1.<T>Understanding Belgium&apos;s Income Tax Structure</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Belgium applies income tax through two principal categories:</T>
@@ -67,10 +68,10 @@ export default function BelgiumIncomeTax() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>2. Personal Income Tax in Belgium</T>
+                2.<T>Personal Income Tax in Belgium</T>
             </h2>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>2.1 Who Is Taxed?</T>
+                2.1<T>Who Is Taxed?</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Belgium distinguishes between residents and non-residents.</T>
@@ -114,7 +115,7 @@ export default function BelgiumIncomeTax() {
             </ul>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>3. Personal Income Tax Rates for 2025</T>
+                3.<T>Personal Income Tax Rates for 2025</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -181,7 +182,7 @@ export default function BelgiumIncomeTax() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>4. What Counts as Taxable Income?</T>
+                4. <T>What Counts as Taxable Income?</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Belgium taxes a wide range of income categories. The main ones include:</T>
@@ -211,7 +212,7 @@ export default function BelgiumIncomeTax() {
             </ul>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>5. Deductions Available for Personal Income Tax</T>
+                5. <T>Deductions Available for Personal Income Tax</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -381,10 +382,10 @@ export default function BelgiumIncomeTax() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>6. Filing Personal Income Tax</T>
+                6. <T>Filing Personal Income Tax</T>
             </h2>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>6.1 Who Must File?</T>
+                6.1 <T>Who Must File?</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -393,7 +394,7 @@ export default function BelgiumIncomeTax() {
                 </T>
             </p>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>6.2 Tax Year and Filing Cycle</T>
+                6.2 <T>Tax Year and Filing Cycle</T>
             </h3>
             <ul className="list-disc ml-6 mb-4 text-gray-700 text-fluid-small">
                 <li>
@@ -404,7 +405,7 @@ export default function BelgiumIncomeTax() {
                 </li>
             </ul>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>6.3 Filing Deadlines (Assessment Year 2024 Reference)</T>
+                6.3 <T>Filing Deadlines (Assessment Year 2024 Reference)</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>These are the most recent official deadlines available:</T>
@@ -427,7 +428,7 @@ export default function BelgiumIncomeTax() {
                 <T>Deadlines for Assessment Year 2025 will be announced by FPS Finance.</T>
             </p>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>6.4 Filing Methods</T>
+                6.4 <T>Filing Methods</T>
             </h3>
             <ul className="list-disc ml-6 mb-4 text-gray-700 text-fluid-small">
                 <li>
@@ -441,7 +442,7 @@ export default function BelgiumIncomeTax() {
                 </li>
             </ul>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>6.5 Payment</T>
+                6.5 <T>Payment</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Payments may be made through:</T>
@@ -462,7 +463,7 @@ export default function BelgiumIncomeTax() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>7. Corporate Income Tax in Belgium</T>
+                7. <T>Corporate Income Tax in Belgium</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Corporate income tax applies to:</T>
@@ -479,7 +480,7 @@ export default function BelgiumIncomeTax() {
                 </li>
             </ul>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>7.1 Corporate Tax Rates</T>
+                7.1 <T>Corporate Tax Rates</T>
             </h3>
             <h4 className="text-fluid-body font-semibold mt-3 mb-2 text-gray-900">
                 <T>2025 CIT Framework</T>
@@ -521,7 +522,7 @@ export default function BelgiumIncomeTax() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>8. Corporate Income Tax Deductions and Incentives</T>
+                8. <T>Corporate Income Tax Deductions and Incentives</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Belgium offers strong incentives, particularly for R&D and innovation.</T>
@@ -627,10 +628,10 @@ export default function BelgiumIncomeTax() {
             </div>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>9. Filing Corporate Income Tax</T>
+                9. <T>Filing Corporate Income Tax</T>
             </h2>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>9.1 Filing Requirements</T>
+                9.1 <T>Filing Requirements</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -639,7 +640,7 @@ export default function BelgiumIncomeTax() {
                 </T>
             </p>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>9.2 Filing Deadlines</T>
+                9.2 <T>Filing Deadlines</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>For Assessment Year 2024 (reference):</T>
@@ -655,7 +656,7 @@ export default function BelgiumIncomeTax() {
                 </li>
             </ul>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>9.3 Filing Method</T>
+                9.3 <T>Filing Method</T>
             </h3>
             <ul className="list-disc ml-6 mb-4 text-gray-700 text-fluid-small">
                 <li>
@@ -666,7 +667,7 @@ export default function BelgiumIncomeTax() {
                 </li>
             </ul>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>9.4 Payment</T>
+                9.4 <T>Payment</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
                 <T>
@@ -676,7 +677,7 @@ export default function BelgiumIncomeTax() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>10. Role of FPS Finance</T>
+                10. <T>Role of FPS Finance</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>The Federal Public Service Finance manages:</T>

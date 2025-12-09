@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -45,7 +46,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>1. How Belgium's Tax System Is Structured</T>
+                1.<T>How Belgium's Tax System Is Structured</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Belgium's taxes fall under three administrative levels:</T>
@@ -81,7 +82,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>2. Overview of Major Taxes in Belgium (2025 Snapshot)</T>
+                2.<T>Overview of Major Taxes in Belgium (2025 Snapshot)</T>
             </h2>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
                 <T>Key Belgian Taxes at a Glance</T>
@@ -236,10 +237,10 @@ export default function BelgiumTaxSystem2025() {
             </div>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>3. Direct Taxation in Belgium</T>
+                3.<T>Direct Taxation in Belgium</T>
             </h2>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>3.1 Personal Income Tax</T>
+                3.1<T>Personal Income Tax</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -327,7 +328,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>3.2 Corporate Tax</T>
+                3.2<T>Corporate Tax</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Corporate tax is levied on profits of companies with activities in Belgium.</T>
@@ -412,7 +413,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>4. Municipal-Level Taxes</T>
+                4.<T>Municipal-Level Taxes</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Municipalities levy their own taxes and service charges, which vary widely across regions.</T>
@@ -481,7 +482,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>5. Social Security Contributions</T>
+                5.<T>Social Security Contributions</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -538,10 +539,10 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>6. Indirect Taxes</T>
+                6.<T>Indirect Taxes</T>
             </h2>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>6.1 VAT</T>
+                6.1<T>VAT</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>VAT applies to most goods and services purchased in Belgium.</T>
@@ -594,7 +595,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
-                <T>6.2 Excise Duties</T>
+                6.2<T> Excise Duties</T>
             </h3>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>Excise duties are consumption-based taxes applied to specific items.</T>
@@ -695,7 +696,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>7. Environmental Taxes</T>
+                7. <T>Environmental Taxes</T>
             </h2>
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
                 <T>
@@ -775,7 +776,7 @@ export default function BelgiumTaxSystem2025() {
             </p>
 
             <h2 className="text-fluid-body font-semibold mt-6 mb-3 text-gray-900">
-                <T>8. Filing Taxes in Belgium (Individuals and Companies)</T>
+                8.<T> Filing Taxes in Belgium (Individuals and Companies)</T>
             </h2>
             <h3 className="text-fluid-body font-semibold mt-4 mb-3 text-gray-900">
                 <T>Step 1: Gather Documentation</T>

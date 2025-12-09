@@ -404,7 +404,7 @@ function BelgiumCreditNotes() {
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
-                <BelgiumT>Conclusion</BelgiumT>
+                <BelgiumT> Conclusion</BelgiumT>
             </h3>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">

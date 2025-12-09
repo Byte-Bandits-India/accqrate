@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import T from "@/Components/T";
+import BelgiumT from "@/Components/BelgiumT";
+const T = BelgiumT;
 import BlogLayout from "../../layout/BlogLayout";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
