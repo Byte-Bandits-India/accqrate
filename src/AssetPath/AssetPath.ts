@@ -334,8 +334,8 @@ import zatcaIntegratedDashboard from "@/Assets/images/invoicing/zatca-integrated
 import zatca2 from "@/Assets/images/invoicing/zatca2.png";
 import iso from "@/Assets/images/invoicing/iso.png";
 import peppol from "@/Assets/images/invoicing/peppol.png";
-import datahosted from "@/Assets/images/invoicing/server.png"
-import gdpr from "@/Assets/images/invoicing/gdpr.png"
+import datahosted from "@/Assets/images/invoicing/server.png";
+import gdpr from "@/Assets/images/invoicing/gdpr.png";
 
 // Invoicing Integration
 import integrationDarkBlue from "@/Assets/images/invoicing/integration/darkblue.png";
