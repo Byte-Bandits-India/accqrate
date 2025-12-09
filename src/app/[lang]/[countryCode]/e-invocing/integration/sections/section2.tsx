@@ -2,7 +2,6 @@
 
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import { COUNTRY_FEATURES } from "../data/CountryFeatures";
 import T from "@/Components/T";
 
@@ -91,21 +90,7 @@ const Section2 = () => {
           </div>
         </div>
 
-        {/* ---------- CTA BUTTON ---------- */}
-        <div className="flex flex-col items-center mt-16">
-          <p className="text-[#5A6183] text-[15px] md:text-[18px] mb-6 text-center ">
-            {content.ctaDescription}
-          </p>
-          <Link
-            href={`/${lang}/${countryCode}/contact-us`}
-            className="px-8 py-3 bg-[#F05A28] text-white rounded-full font-medium text-[16px] shadow hover:bg-[#ff5722] transition inline-flex items-center gap-2"
-          >
-            Talk to an Expert
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M5 12h14M12 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
-        </div>
+       
 
       </div>
     </section>

@@ -35,7 +35,7 @@ export default function IntegrationFlow() {
                     <div>
                         {/* EU Top Image */}
                         {data.heroImage && (
-                            <div className="flex justify-center mb-12">
+                            <div className="flex flex-col items-center justify-center mb-12">
                                 <Image
                                     src={data.heroImage}
                                     width={600}
@@ -43,6 +43,7 @@ export default function IntegrationFlow() {
                                     alt="Flow"
                                     className="rounded-md"
                                 />
+                                <p className="md:text-[20px] text-[#5A6183] mt-10 mb-10">For B2B transactions, the process is straightforward</p>
                             </div>
                         )}
 

@@ -15,7 +15,7 @@ export default function Section4() {
       <div className="max-w-[1200px] mx-auto">
 
         {/* HEADER */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1C2041]">
             {data.title} <span className="text-[#62B34F]">Accqrate?</span>
           </h2>
@@ -28,7 +28,7 @@ export default function Section4() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
 
           {/* LEFT LIST */}
-          <div className="space-y-10">
+          <div className="space-y-4">
             {data.topLeftItems.map((item, i) => (
               <div key={i} className="flex items-start space-x-4">
                 <Image
@@ -51,14 +51,14 @@ export default function Section4() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center">
+          <div className="flex ">
             {data.topRightImage && (
               <Image
                 src={data.topRightImage}
-                width={800}
+                width={500}
                 height={100}
                 alt="Dashboard"
-                className="md:max-h-[500px] rounded-xl "
+                className="min-w-full md:h-[520px] object-obtain "
               />
             )}
           </div>
@@ -82,7 +82,7 @@ export default function Section4() {
           </div>
 
           {/* RIGHT LIST */}
-          <div className="space-y-6 mt-4">
+          <div className="space-y-4 mt-4">
             {data.bottomRightItems.map((item, i) => (
               <div key={i} className="flex items-start space-x-4">
                 <Image

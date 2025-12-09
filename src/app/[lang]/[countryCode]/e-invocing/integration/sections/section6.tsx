@@ -144,7 +144,7 @@ const DemoVideoSection: React.FC = () => {
                                 {/* Small Feature Text */}
                                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 mb-8 lg:text-nowrap">
                                     <p className="text-fluid-small text-white font-light">
-                                        No credit card needed
+                                        Seamless
                                     </p>
                                     <Image
                                         src={AssetPath.home.starOr}
@@ -154,7 +154,17 @@ const DemoVideoSection: React.FC = () => {
                                         className="w-5 h-5 md:w-auto md:h-auto"
                                     />
                                     <p className="text-fluid-small text-white font-light">
-                                        Unlimited time on Free plan
+                                        Complaint
+                                    </p>
+                                     <Image
+                                        src={AssetPath.home.starOr}
+                                        alt="orange_star"
+                                        width={20}
+                                        height={20}
+                                        className="w-5 h-5 md:w-auto md:h-auto"
+                                    />
+                                    <p className="text-fluid-small text-white font-light">
+                                        Secure
                                     </p>
                                 </div>
 

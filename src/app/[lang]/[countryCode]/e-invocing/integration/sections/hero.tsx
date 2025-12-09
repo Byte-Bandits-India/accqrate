@@ -82,9 +82,11 @@ const Software = () => {
             />
 
             <div className="flex gap-4 mt-8 text-center md:text-[20px]">
-              <p>No credit card needed</p>
-              <Image src={AssetPath.home.starOr} alt="star" width={20} height={20} className="w-5 h-5" />
-              <p>Unlimited time on Free plan</p>
+              <p className=" md:text-[20px] text-gray-600">Seamless</p>
+              <Image src={AssetPath.home.starOr} alt="star" width={20} height={20} className="w-5 h-5 mt-1" />
+              <p className=" md:text-[20px] text-gray-600">Complaint</p>
+              <Image src={AssetPath.home.starOr} alt="star" width={20} height={20} className="w-5 h-5 mt-1" />
+              <p className=" md:text-[20px] text-gray-600">Secure</p>
             </div>
           </div>
 
