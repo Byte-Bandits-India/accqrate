@@ -22,11 +22,11 @@ export const COUNTRY_CONTENT: Record<string, CountryContent> = {
   },
 
   be: {
-    title: "Integrate Your Existing ERPs, POS & Applications With Belgium's",
+    title: "Integrate Your Existing ERPs, POS & Business Applications With Belgium's",
     highlight: "Peppol Network",
-    subtitle: "Peppol E-Invoicing Integration",
+    subtitle: "PEPPOL E-INVOICING INTEGRATION",
     boxTitle: "A Peppol-Ready EN 16931-Compliant Solution",
-    boxSubtitle: "100% Compliance For Belgium's 2026 E-Invoicing Mandate",
+    boxSubtitle: "100% Compliance For Belgium's 2026  B2B E-Invoicing Mandate",
     boxImage: AssetPath.integration.peppol.src,
     highlightColor: "#448E32"
   },

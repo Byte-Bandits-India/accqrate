@@ -88,7 +88,7 @@ ctaDescription:
     integrationHeading: "Flexible methods for",
     integrationHighlight: "Belgium E-Invoicing",
     integrationDescription:
-      "Adaptive approaches for seamless ZATCA compliance and integration solutions.",
+      "Adaptive approaches for seamless Peppol-based e-invoicing and EN 16931 compliance.",
     featureHeading: "Enhanced",
     featureHighlight: "Electronic Invoicing",
     featureDescription:
@@ -129,6 +129,12 @@ features: [
     description:
       "Customer deployments are fully validated against Belgium’s structured e-invoicing standards and Peppol requirements.",
   },
+   {
+    img: AssetPath.invoicing.integrationAssets.cloud.src,
+    title: "Flexibility in Deployment",
+    description:
+      "Choose Accqrate Cloud or deploy on your own server both fully compliant with Belgian e-invoicing rules.",
+  },
   {
     img: AssetPath.invoicing.integrationAssets.ring.src,
     title: "Rapid Implementation",
@@ -136,10 +142,16 @@ features: [
       "Go live in just 5 days with guaranteed Peppol integration and EN 16931-compliant invoice generation.",
   },
   {
-    img: AssetPath.invoicing.integrationAssets.cloud.src,
+    img: AssetPath.invoicing.integrationAssets.set.src,
     title: "High Performance",
     description:
       "Process millions of structured UBL invoices daily with enterprise-grade performance.",
+  },
+  {
+    img: AssetPath.invoicing.integrationAssets.cal.src,
+    title: "End-to-End Support",
+    description:
+      "We provide complete assistance for Belgian e-invoicing integration from onboarding to continuous compliance.",
   },
 ]
 

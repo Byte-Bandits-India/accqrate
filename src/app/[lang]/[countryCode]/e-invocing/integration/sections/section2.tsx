@@ -31,7 +31,7 @@ const Section2 = () => {
         <h2 className="text-fluid-h2 md:text-[38px] font-medium text-black text-left">
           {content.integrationHeading}{" "}
           <span className="text-[#448E32]">{content.integrationHighlight}</span>{" "}
-          integration
+          Integration
         </h2>
 
         <p className="text-[#5A6183] text-fluid-body md:text-[18px] mt-4 text-left max-w-3xl">

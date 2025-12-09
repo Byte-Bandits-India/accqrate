@@ -66,7 +66,7 @@ const DemoVideoSection: React.FC = () => {
     return (
         <>
             <section className="mt-8 md:mt-10 lg:mt-12 relative">
-                <div className="text-center mb-8 px-6 md:px-8 xl:px-0">
+                <div className="hidden text-center mb-8 px-6 md:px-8 xl:px-0">
                     <h2 className="text-fluid-h2 lg:text-[38px] font-medium text-[#1C2041] mb-3">
                         Free proof of concept for <span className="text-[#46A833]"> Integration</span>
                     </h2>
@@ -76,7 +76,7 @@ const DemoVideoSection: React.FC = () => {
                 </div>
 
                 {/* Scroll container with relative positioning for absolute children */}
-                <div className="relative max-w-[1200px] mx-auto px-6 md:px-8 xl:px-0 overflow-x-hidden">
+                <div className="hidden relative max-w-[1200px] mx-auto px-6 md:px-8 xl:px-0 overflow-x-hidden">
                     {/* Scroll Buttons */}
                     <button
                         onClick={() => scroll('left')}

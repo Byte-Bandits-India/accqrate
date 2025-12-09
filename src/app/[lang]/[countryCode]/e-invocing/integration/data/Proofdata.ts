@@ -18,12 +18,12 @@ export const ProofData = {
       {
         title: "Expert Guidance & Training",
         desc:
-          "We guide your internal teams through Peppol standards, Belgian mandate requirements, and best practices."
+          "Your internal team or external partners receive complete technical guidance and hands-on support"
       },
       {
         title: "Onboarding Assistance",
         desc:
-          "Includes Peppol onboarding, SMP/SML configuration, validation testing, and production readiness."
+          "We assist with company onboarding, Peppol profile setup, and structured invoice validation."
       },
       {
         title: "Full Ownership & Responsibility",
@@ -41,7 +41,7 @@ export const ProofData = {
       {
         title: "ERP Expertise",
         desc:
-          "Expertise across global ERPs including SAP, Oracle, Dynamics, Odoo, Infor, Sage, BAAN, and custom systems."
+          "Our team brings deep experience across SAP, Oracle, Dynamics, Infor, BAAN, SAGE, and custom ERPs."
       },
       {
         title: "Compliance Assurance",
@@ -51,7 +51,7 @@ export const ProofData = {
       {
         title: "Fast Integration",
         desc:
-          "Achieve rapid Peppol integration with a guided onboarding experience."
+          "Go live within 5 working days, accelerating your readiness for mandatory B2B e-invoicing."
       }
     ]
   },
