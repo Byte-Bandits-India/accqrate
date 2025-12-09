@@ -1,6 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Star, StarHalf } from "lucide-react";
 import AssetPath from "@/AssetPath/AssetPath";
 
@@ -290,35 +291,37 @@ const Software = () => {
 
                         {[
                             {
-                                img: AssetPath.invoicing.peppol.src,
+                                img: AssetPath.invoicing.peppol,
                                 alt: 'Peppol Certified',
                                 text: 'Peppol Certified',
                                 className: 'w-16 h-16',
                             },
                             {
-                                img: AssetPath.invoicing.gdpr.src,
+                                img: AssetPath.invoicing.gdpr,
                                 alt: 'GDPR Compliant',
                                 text: 'GDPR Compliant',
                                 className: 'w-16 h-16',
                             },
                             {
-                                img: AssetPath.invoicing.datahosted.src,
+                                img: AssetPath.invoicing.datahosted,
                                 alt: 'Data Hosted in Europe',
                                 text: 'Data Hosted in Europe',
                                 className: 'w-16 h-16',
                             },
                             {
-                                img: AssetPath.invoicing.iso.src,
+                                img: AssetPath.invoicing.iso,
                                 alt: 'ISO 27001 Certified',
                                 text: 'ISO 27001 Certified',
                                 className: 'w-16 h-16',
                             },
                         ].map((item, index) => (
                             <div key={index} className="flex items-center gap-3">
-                                <img
+                                <Image
                                     src={item.img}
                                     alt={item.alt}
                                     className={`${item.className} object-contain`}
+                                    width={64}
+                                    height={64}
                                 />
                                 <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
                                     {item.text}
