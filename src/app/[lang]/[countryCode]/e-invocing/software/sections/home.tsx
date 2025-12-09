@@ -3,6 +3,10 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Star, StarHalf } from "lucide-react";
 import AssetPath from "@/AssetPath/AssetPath";
+import peppolImg from "@/Assets/images/invoicing/peppol.png";
+import gdprImg from "@/Assets/images/invoicing/gdpr.png";
+import serverImg from "@/Assets/images/invoicing/server.png";
+import isoImg from "@/Assets/images/invoicing/iso.png";
 
 // Country configuration with all content inside
 const countryConfig = {
@@ -290,25 +294,25 @@ const Software = () => {
 
                         {[
                             {
-                                img: AssetPath.invoicing.peppol.src,
+                                img: peppolImg.src,
                                 alt: 'Peppol Certified',
                                 text: 'Peppol Certified',
                                 className: 'w-16 h-16',
                             },
                             {
-                                img: AssetPath.invoicing.gdpr.src,
+                                img: gdprImg.src,
                                 alt: 'GDPR Compliant',
                                 text: 'GDPR Compliant',
                                 className: 'w-16 h-16',
                             },
                             {
-                                img: AssetPath.invoicing.datahosted.src,
+                                img: serverImg.src,
                                 alt: 'Data Hosted in Europe',
                                 text: 'Data Hosted in Europe',
                                 className: 'w-16 h-16',
                             },
                             {
-                                img: AssetPath.invoicing.iso.src,
+                                img: isoImg.src,
                                 alt: 'ISO 27001 Certified',
                                 text: 'ISO 27001 Certified',
                                 className: 'w-16 h-16',
