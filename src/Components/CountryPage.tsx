@@ -347,7 +347,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             case 'PL':
                 return AssetPath.header.language.poland;
             case 'BE':
-                return AssetPath.home.belgium;
+                return AssetPath.header.language.belgium;
             default:
                 return AssetPath.header.language.saudiArabia;
         }

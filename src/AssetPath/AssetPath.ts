@@ -124,7 +124,6 @@ import gdrpHome from "@/Assets/images/home/gdrp.png";
 import isoHome from "@/Assets/images/home/iso.png";
 import greenAccq from "@/Assets/images/home/green-accq.png";
 import aiImage from "@/Assets/images/home/ai.png";
-import Belgiumflag from "@/Assets/images/home/belgium.png"
 
 // ==================== LANDINGPAGE IMAGES ====================
 import landingIcon1 from "@/Assets/images/landingpage/1.png";
@@ -432,6 +431,7 @@ import Zact from "@/Assets/images/integration/ZATCA-solution.png"
 
 // Home images
 import starOr from "@/Assets/images/home/Star-or.svg";
+import belgiumFlagHome from "@/Assets/images/home/belgium.png";
 
 // ==================== PATTERN IMPORTS ====================
 import logoPattern from "@/Assets/images/pattern/logo-pattern.svg";
@@ -528,7 +528,7 @@ const AssetPath = {
     },
 
     language: {
-      belgium: belgiumFlag,
+      belgium: belgiumFlagHome,
       bahrain: bahrainFlag,
       jordan: jordanFlag,
       malaysia: malaysiaFlag,
@@ -580,7 +580,6 @@ const AssetPath = {
     starWhite: starWhite,
     greenAccq: greenAccq,
     ai: aiImage,
-    belgium: Belgiumflag,
   },
 
   // LANDINGPAGE

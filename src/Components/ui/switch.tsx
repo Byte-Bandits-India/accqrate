@@ -27,7 +27,7 @@ const Switch = React.forwardRef<
       checked={checked}
       onCheckedChange={handleChange}
       className={cn(
-        "peer relative inline-flex h-[40px] w-[296px] cursor-pointer items-center rounded-full bg-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#194BED]/40 disabled:cursor-not-allowed disabled:opacity-50",
+        "peer relative inline-flex h-[40px] w-[280px] cursor-pointer items-center rounded-full bg-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#194BED]/40 disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}
       {...props}
@@ -35,7 +35,7 @@ const Switch = React.forwardRef<
       {/* Thumb - exact same dimensions as outer container */}
       <SwitchPrimitives.Thumb
         className={cn(
-          "pointer-events-none absolute block h-[40px] w-[148px] rounded-full bg-[linear-gradient(90deg,#194BED_0%,#29266E_100%)] transition-transform duration-200",
+          "pointer-events-none absolute block h-[40px] w-[144px] -left-1 rounded-full bg-[linear-gradient(90deg,#194BED_0%,#29266E_100%)] transition-transform duration-200",
           checked ? "translate-x-0" : "translate-x-[148px]"
         )}
       />
@@ -44,7 +44,7 @@ const Switch = React.forwardRef<
       <div className="flex w-full z-10 relative">
         <span
           className={cn(
-            "flex-1 text-center text-[14px] md:text-[16px] tracking-para leading-tight font-medium transition-colors duration-200",
+            "flex-1 text-center text-[14px] md:text-[15px] tracking-para leading-tight font-medium transition-colors duration-200",
             checked ? "text-white" : "text-black"
           )}
         >
