@@ -30,7 +30,7 @@ export default function WebinarSection() {
 
   return (
     <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent overflow-hidden">
-      <section className="bg-gradient-to-t from-[#EFF3FF] to-transparent py-16 md:py-24">
+      <section className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 md:pt-24">
         <div className="mx-auto px-6 md:px-8 xl:px-0 max-w-[1280px]">
           {/* Heading */}
           <div>
@@ -81,7 +81,6 @@ export default function WebinarSection() {
 
         <div className="mt-20">
           <Commingsoon />
-          <ZatcaSection />
         </div>
       </section>
     </div>

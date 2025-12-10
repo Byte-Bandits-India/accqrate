@@ -17,6 +17,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ContactModal } from "@/Components/ContactModal";
 
 
 // ---------------- CarouselCard ----------------
@@ -365,6 +366,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     const { createHref } = useDynamicRouting();
     const [enabled, setEnabled] = React.useState(false);
     const carouselRef = useRef<HTMLDivElement>(null);
+    const [isModalOpen, setModalOpen] = React.useState(false);
+    const handleCloseModal = React.useCallback(() => setModalOpen(false), []);
     // Resolve flag image from AssetPath.header.language using country code
     const getFlagForCountry = (code: string) => {
         switch (code.toUpperCase()) {
@@ -752,6 +755,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </p>
 
                                 <button
+                                    onClick={() => setModalOpen(true)}
                                     className="self-start h-[40px] w-[144px] md:w-[199px] text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-6 lg:mt-0"
                                     style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                                 >
@@ -844,6 +848,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                         <div className="lg:px-6 max-w-[1177px] mx-auto w-full">
                             <button
+                                onClick={() => setModalOpen(true)}
                                 className="h-[40px] w-[144px] md:w-[199px] text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-[20px] md:mt-[30px]"
                                 style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                             >
@@ -965,6 +970,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </ul>
 
                                 <button
+                                    onClick={() => setModalOpen(true)}
                                     className="h-[46px] md:h-[55px] max-w-[250px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"                        >
                                     Book an Appoinment
                                     <svg
@@ -1029,6 +1035,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <button
                                         className="h-[40px] max-w-[399px] mt-10 flex items-center justify-between px-4 text-white text-[16px]"
                                         style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                                        onClick={() => setModalOpen(true)}
                                     >
                                         See Accelera in a 5-Minute Demo
                                         <svg width="20" height="20" fill="none" stroke="currentColor">
@@ -1090,6 +1097,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </div>
 
                             <button
+                                onClick={() => setModalOpen(true)}
                                 className="h-[40px] max-w-[288px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
                                 style={{ background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)" }}
                             >
@@ -1149,6 +1157,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     </div>
                     <div className="flex items-center justify-center">
                         <button
+                            onClick={() => setModalOpen(true)}
                             className="h-[40px] max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
                             style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                         >
@@ -1167,6 +1176,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 <Carousel items={testimonialCards} autoplay autoplayDelay={4000} />
                 <div className="flex items-center justify-center">
                     <button
+                        onClick={() => setModalOpen(true)}
                         className="h-[40px] md:h-[46px] max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
                         style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                     >
@@ -1194,6 +1204,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     {/* Right Button */}
                     <div className="mt-[32px] xl:mt-0 flex justify-start xl:justify-end">
                         <button
+                            onClick={() => setModalOpen(true)}
                             className="h-[40px] md:h-[46px] w-full xl:w-auto max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px]"
                             style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                         >
@@ -1311,6 +1322,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         ].map((text, i) => (
                             <button
                                 key={i}
+                                onClick={() => setModalOpen(true)}
                                 className="
         relative
         lg:w-[303px] w-[270px]
@@ -1350,6 +1362,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     </div>
                 </div>
             </div >
+            {/* Contact Modal */}
+            <ContactModal open={isModalOpen} onClose={handleCloseModal} />
         </main >
     );
 };

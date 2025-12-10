@@ -19,7 +19,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <main className="pt-12 md:py-20">
+      <main className="pt-12 md:pt-20">
         {/* Hero Section */}
         <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent">
           <section className="max-w-[1280px] px-6 md:px-8 xl:px-0 mx-auto mb-6 md:mb-8 lg:mb-[60px]">
@@ -77,9 +77,9 @@ const Index = () => {
       </main>
 
       {/* CTA Section */}
-      <section>
+      {/* <section>
         <CTASection />
-      </section>
+      </section> */}
     </div>
   );
 };
