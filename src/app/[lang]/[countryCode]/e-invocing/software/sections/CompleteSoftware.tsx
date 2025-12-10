@@ -9,24 +9,9 @@ interface Section {
 
 const sections: Section[] = [
     {
-        img: AssetPath.invoicing.bagCheck.src,
-        title: "Purchases & Claims",
-        desc: "Manage bills, purchase orders and expenses from one place",
-    },
-    {
-        img: AssetPath.invoicing.moneyStack.src,
-        title: "Payroll & Employees",
-        desc: "Run payroll and invite employees to submit their expense claims.",
-    },
-    {
         img: AssetPath.invoicing.taxReceipt.src,
         title: "VAT Return",
         desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
-    },
-    {
-        img: AssetPath.invoicing.box.src,
-        title: "Inventory tracking",
-        desc: "Easily keep track of stock levels and let Accqrate automatically book your Cost of Goods",
     },
     {
         img: AssetPath.invoicing.profile2user.src,

@@ -79,12 +79,14 @@ const bottomRow = [
 
 const cards = [
     {
-        title: "Full Compliance with Belgium’s E-Invoicing Mandate",
+        title: "Full Compliance with Belgium’s",
+        subTitle: "E-Invoicing Mandate",
         description:
             "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium’s evolving regulatory framework.",
     },
     {
-        title: "Future-Ready for ViDA (VAT in the Digital Age)",
+        title: "Future-Ready for ViDA",
+        subTitle: "(VAT in the Digital Age)",
         description:
             "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
     },
@@ -149,9 +151,9 @@ const Section1 = () => {
         be: {
             whyAccqrateTitle: "Compliant with Belgium’s Mandatory B2B E-Invoicing Regulation",
             whyAccqrateSubtitle: "Generate invoices fully compliant with Belgium’s FPS Finance 2026 mandate",
-            headingDescription: "EN 16931 and Peppol Requirements",
-            heroDescription: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network, ensuring full readiness for Belgium’s mandatory B2B e-invoicing starting 1 January 2026. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance..",
-            heroTitle: "5,000+ Global companies across all industries",
+            headingDescription: "EN 16931 and Peppol Requirements:",
+            heroDescription: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.",
+            heroTitle: "5,000+ Across 30+ Industries",
             peppolCardText: "Accqrate is Peppol Certified Solution Provider"
         },
         pl: {
@@ -159,7 +161,7 @@ const Section1 = () => {
             whyAccqrateSubtitle: "Generate invoices fully compliant with Poland’s KSeF system",
             headingDescription: "Phase 1 & 2 Requirements",
             heroDescription: "Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.",
-            heroTitle: "E‑Invoicing for Poland",
+            heroTitle: "5,000+ Across 30+ Industries",
             peppolCardText: "Accqrate is Peppol Certified Solution Provider"
         }
     };
@@ -170,7 +172,7 @@ const Section1 = () => {
         headingDescription: countryContent?.heroDescription || 'Accqrate delivers compliant e‑invoicing, automated mapping and secure transmission to authority networks.',
         heroDescription: countryContent?.heroDescription || 'Compliant e‑invoicing for your market.',
         peppolCardText: 'Accqrate supports Peppol e‑Invoicing standards',
-        heroTitle: countryContent?.heroTitle || 'E‑Invoicing Requirements'
+        heroTitle: '5,000+ Across 30+ Industries'
     };
 
     const pageContent = (countryCode === 'be' || countryCode === 'pl') ? { ...defaultPageContent, ...pageOverrides[countryCode] } : defaultPageContent;
@@ -354,7 +356,7 @@ const Section1 = () => {
                             </div>
 
                             {/*  RIGHT COLUMN */}
-                            <div className="lg:col-span-2">
+                            <div className="lg:col-span-2  max-w-[560px]">
                                 <div className="">
                                     <div>
                                         {/* Dynamic compliance content from centralized countryContent */}
@@ -392,7 +394,7 @@ const Section1 = () => {
                                                 <div className="w-full h-px bg-gray-300"></div>
 
                                                 <div className="flex items-center justify-between gap-4">
-                                                    <p className="text-sm leading-tight">
+                                                    <p className="text-sm leading-relaxed">
                                                         <T>{pageContent.peppolCardText}</T>
                                                     </p>
 
@@ -461,8 +463,11 @@ const Section1 = () => {
           lg:h-[310px]
         "
                             >
-                                <h3 className="text-[#303030] font-semibold text-lg mb-3">
+                                <h3 className="text-[#303030] font-semibold text-lg">
                                     {card.title}
+                                </h3>
+                                <h3 className="text-[#303030] font-semibold text-lg mb-3">
+                                    {card.subTitle}
                                 </h3>
 
                                 <p className="text-[#5A6183] text-sm leading-[30px] flex-grow">

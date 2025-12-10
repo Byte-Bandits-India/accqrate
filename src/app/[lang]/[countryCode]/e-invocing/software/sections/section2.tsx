@@ -71,77 +71,78 @@ const Section2 = () => {
                     </div>
                 )}
 
-
                 {/* Accqrate Offerings */}
-                <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-12'>
-                    <div className='px-6 md:px-8 xl:px-0'>
-                        <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
-                            Accqrate Offerings
-                        </h3>
-                        <p className='text-[#333333] text-fluid-body max-w-[428px] mt-4 md:mt-6 '>E-invoicing Solutions from Micro to Enterprise businesses</p>
+                <div className='bg-[#F1F2FF]'>
+                    <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-12'>
+                        <div className='px-6 md:px-8 xl:px-0'>
+                            <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
+                                Flexible Deployment
+                            </h3>
+                            <p className='text-[#333333] text-fluid-body max-w-[428px] mt-4 md:mt-6 '>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</p>
 
-                        <div className="py-6 md:py-8 lg:py-10">
-                            <div className="flex flex-col lg:flex-row justify-start items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
-                                {/* Cloud Based Solutions */}
-                                <div className="rounded-[27px] border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
-                                    <img
-                                        src={AssetPath.invoicing.cloudAcceleration.src}
-                                        alt="cloud"
-                                        className="w-[64px] h-auto"
-                                    />
-                                    <h3 className="text-fluid-body text-[#1C2041]">
-                                        Cloud Based Solutions
-                                    </h3>
-                                    <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
-                                        Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions
-                                    </p>
+                            <div className="py-6 md:py-8 lg:py-10">
+                                <div className="flex flex-col lg:flex-row justify-start items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
+                                    {/* Cloud Based Solutions */}
+                                    <div className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
+                                        <img
+                                            src={AssetPath.invoicing.cloudAcceleration.src}
+                                            alt="cloud"
+                                            className="w-[64px] h-auto"
+                                        />
+                                        <h3 className="text-fluid-body text-[#1C2041]">
+                                            Cloud Based Solutions
+                                        </h3>
+                                        <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
+                                            Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions
+                                        </p>
 
-                                    <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
-                                        {[
-                                            "Subscribe and pay per use",
-                                            "Onboarding in 5 min",
-                                            "High Performance",
-                                            "Encrypted and Secured",
-                                            "Disaster recovery",
-                                            "Download backup anytime",
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex items-start gap-2">
-                                                <span className="mt-[10px] block w-[6px] h-[6px] rounded-full bg-[#91ABFF]" />
-                                                <span className="flex-1">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
+                                        <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
+                                            {[
+                                                "Subscribe and pay per use",
+                                                "Onboarding in 5 min",
+                                                "High Performance",
+                                                "Encrypted and Secured",
+                                                "Disaster recovery",
+                                                "Download backup anytime",
+                                            ].map((item, i) => (
+                                                <li key={i} className="flex items-start gap-2">
+                                                    <span className="mt-[10px] block w-[6px] h-[6px] rounded-full bg-[#91ABFF]" />
+                                                    <span className="flex-1">{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
 
-                                {/* On Premises Solutions */}
-                                <div className="rounded-[27px] border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
-                                    <img
-                                        src={AssetPath.invoicing.serverPath.src}
-                                        alt="server"
-                                        className="w-[64px] h-auto"
-                                    />
-                                    <h3 className="text-fluid-body text-[#1C2041]">
-                                        On Premises Solutions
-                                    </h3>
-                                    <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
-                                        Customized, Secure On-Premises Solutions with Quick Implementation Support
-                                    </p>
+                                    {/* On Premises Solutions */}
+                                    <div className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
+                                        <img
+                                            src={AssetPath.invoicing.serverPath.src}
+                                            alt="server"
+                                            className="w-[64px] h-auto"
+                                        />
+                                        <h3 className="text-fluid-body text-[#1C2041]">
+                                            On Premises Solutions
+                                        </h3>
+                                        <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
+                                            Customized, Secure On-Premises Solutions with Quick Implementation Support
+                                        </p>
 
-                                    <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
-                                        {[
-                                            "Customer infrastructure",
-                                            "Get customized app",
-                                            "High Performance",
-                                            "4 hours of implementation",
-                                            "Secured and high performance",
-                                            "End to end support",
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex items-start gap-2">
-                                                <span className="mt-[10px] block w-[6px] h-[6px] rounded-full bg-[#91ABFF]" />
-                                                <span className="flex-1">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                        <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
+                                            {[
+                                                "Customer infrastructure",
+                                                "Get customized app",
+                                                "High Performance",
+                                                "4 hours of implementation",
+                                                "Secured and high performance",
+                                                "End to end support",
+                                            ].map((item, i) => (
+                                                <li key={i} className="flex items-start gap-2">
+                                                    <span className="mt-[10px] block w-[6px] h-[6px] rounded-full bg-[#91ABFF]" />
+                                                    <span className="flex-1">{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

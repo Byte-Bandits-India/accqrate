@@ -22,7 +22,7 @@ const CTASection = () => {
       description1: "Want the latest on ZATCA updates, fresh product insights, and exclusive Company editorials?",
       description2: "Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!",
       button1: "Get a Free Proof of Concept",
-      button2: "Start 30-Day Free Trial",
+      button2: "Subscribe for Updates",
       button3: "Talk to Sales"
     },
     // Belgium content
@@ -31,7 +31,7 @@ const CTASection = () => {
       description1: "Want the latest on Belgium’s e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
       description2: "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.",
       button1: "Get Peppol Compliance Demo",
-      button2: "Start 30-Day Free Trial",
+      button2: "Subscribe for Updates",
       button3: "Talk to Sales"
     },
     // Poland content
@@ -40,7 +40,7 @@ const CTASection = () => {
       description1: "Want the latest on PEPPOL updates, fresh product insights, and exclusive Company editorials?",
       description2: "Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!",
       button1: "Get KSeF Compliance Demo",
-      button2: "Start 30-Day Free Trial",
+      button2: "Subscribe for Updates",
       button3: "Talk to Sales"
     }
   };

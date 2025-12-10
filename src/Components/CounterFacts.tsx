@@ -18,9 +18,9 @@ interface CounterFactsProps {
 
 const countSet: CountItem[] = [
     { name: 'Trusted customers', value: 5000 },
-    { name: 'Integration engineers', value: 50 },
-    { name: 'Invoices per month', value: 2, additionalText: 'M' },
-    { name: 'Completed integrations', value: 8000 },
+    { name: 'Integration engineers and Consultants', value: 80 },
+    { name: 'Invoices per month', value: 30, additionalText: 'M' },
+    { name: 'Completed integrations', value: 3000 },
 ]
 
 const CounterFacts: React.FC<CounterFactsProps> = ({
@@ -48,20 +48,20 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
                     {countSet.map((item, i) => (
                         <div key={i} className="flex flex-col items-center justify-center">
                             {/* count — responsive font size */}
-                            <div className="text-fluid-h2 text-[38px] font-medium text-[#1C2041] flex items-baseline justify-center">
+                            <div className="text-[18px] md:text-[38px] font-bold text-[#1C2041] flex items-baseline justify-center">
                                 <CountUp start={0} end={item.value} duration={4} />
                                 {item.additionalText && (
-                                    <span className="ml-1 text-fluid-h2 text-[38px] text-[#1C2041]">
+                                    <span className="ml-1 text-fluid-h2 md:text-[38px] text-[#1C2041]">
                                         {item.additionalText}
                                     </span>
                                 )}
-                                <span className="ml-1 text-[#194BED] text-fluid-h2 text-[38px] font-medium">
+                                <span className="ml-1 text-[#194BED] text-fluid-h2 md:text-[38px] font-bold">
                                     +
                                 </span>
                             </div>
 
                             {/* name — responsive font size */}
-                            <p className="text-[#5A6183] text-fluid-small mt-2 leading-tight">
+                            <p className="text-[#5A6183] md:text-[18px] mt-2 h-[40px] leading-tight">
                                 <T>{item.name}</T>
                             </p>
                         </div>

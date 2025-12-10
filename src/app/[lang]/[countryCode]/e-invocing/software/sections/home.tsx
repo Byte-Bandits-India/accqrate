@@ -3,6 +3,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Star, StarHalf } from "lucide-react";
 import AssetPath from "@/AssetPath/AssetPath";
+import Image from "next/image";
 import peppolImg from "@/Assets/images/invoicing/peppol.png";
 import gdprImg from "@/Assets/images/invoicing/gdpr.png";
 import serverImg from "@/Assets/images/invoicing/server.png";
@@ -180,19 +181,60 @@ const Software = () => {
     // Use content directly from country config
     const content = country;
 
+    // Resolve flag image from AssetPath.header.language using country code
+    const getFlagForCountry = (code: string) => {
+        switch (code) {
+            case 'SA':
+                return AssetPath.header.language.saudiArabia;
+            case 'AE':
+                return AssetPath.header.language.uae;
+            case 'OM':
+                return AssetPath.header.language.oman;
+            case 'BH':
+                return AssetPath.header.language.bahrain;
+            case 'MA':
+                return AssetPath.header.language.malaysia;
+            case 'MU':
+                return AssetPath.header.language.mauritius;
+            case 'JD':
+                return AssetPath.header.language.jordan;
+            case 'PL':
+                return AssetPath.header.language.poland;
+            case 'BE':
+                return AssetPath.header.language.belgium;
+            default:
+                return AssetPath.header.language.saudiArabia;
+        }
+    };
+
+    const flagImage = getFlagForCountry(countryCode);
+
     return (
         <section>
             <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
                 <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
                     {/* LEFT CONTENT */}
-                    <div className="flex flex-col justify-center max-w-[560px] w-full">
-                        <p className="text-[#F05A28] text-fluid-small max-w-[560px] leading-[30px] mb-6 md:mb-8 lg:mb-6">
-                            {content.badgeText}
-                        </p>
-                        <p className="text-fluid-h3 lg:text-[18px] font-medium text-[#000000] leading-tight mb-4">
+                    <div className="flex flex-col justify-center max-w-[750px] w-full">
+                        <div className="flex items-center gap-2">
+                            <p className="text-[#F05A28] text-fluid-small leading-[30px] m-0 whitespace-nowrap">
+                                {content.badgeText}
+                            </p>
+
+                            <Image
+                                src={flagImage}
+                                alt={`${content.name || countryCode}-flag`}
+                                width={30}
+                                height={20}
+                                className="w-[30px] h-auto rounded object-contain"
+                                unoptimized
+                            />
+                        </div>
+
+
+                        <p className="text-fluid-h3 lg:text-[38px] font-medium text-[#000000] leading-tight mb-4">
                             Enable Your Business With E-invoicing.
                         </p>
-                        <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] leading-tight">
+                        <h1 className="text-fluid-h2 lg:text-[54px] font-semibold text-[#000000] leading-tight">
                             {content.title}
                         </h1>
 
@@ -200,7 +242,7 @@ const Software = () => {
 
                         {/* Description 1 with green E-invoicing */}
                         <p
-                            className="text-[#000000] text-fluid-body lg:text-[16px] max-w-[560px] leading-[30px]"
+                            className="text-[#000000] text-fluid-body lg:text-[18px] max-w-[560px] leading-[30px]"
                             dangerouslySetInnerHTML={{ __html: content.description1 }}
                         />
 
@@ -250,7 +292,7 @@ const Software = () => {
 
                         <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8">
                             <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                No credit card needed
+                                Simplified
                             </p>
                             <img
                                 src={AssetPath.home.starOr.src}
@@ -258,7 +300,15 @@ const Software = () => {
                                 className="w-5 h-5 md:w-auto md:h-auto"
                             />
                             <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                Unlimited time on Free plan
+                                Smart
+                            </p>
+                            <img
+                                src={AssetPath.home.starOr.src}
+                                alt="orange_star"
+                                className="w-5 h-5 md:w-auto md:h-auto"
+                            />
+                            <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
+                                Complaint
                             </p>
                         </div>
                         <div className="flex items-center gap-2 text-[#333333] mt-6">
@@ -275,10 +325,12 @@ const Software = () => {
 
                     {/* RIGHT IMAGE */}
                     <div className="flex-1 flex justify-center w-full">
-                        <img
-                            src={AssetPath.invoicing.invoiceWithCreateScreen.src}
+                        <Image
+                            src={AssetPath.invoicing.invoiceWithCreateScreen}
                             alt={content.imageAlt}
-                            className="w-full max-w-[591px] rounded-2xl object-contain"
+                            width={591}
+                            height={380}
+                            className="w-full max-w-[441px] rounded-2xl object-contain"
                         />
                     </div>
                 </div>
