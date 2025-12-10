@@ -216,7 +216,7 @@ const DemoVideoSection: React.FC = () => {
                         {/* RIGHT IMAGE SECTION */}
                         <div className="relative flex justify-center items-center w-full top-8 md:top-0 md:w-1/2 z-10 order-1 md:order-2 bg-[#F3F3FF] md:bg-transparent py-10 md:py-0 overflow-hidden">
                             <Image
-                                src={AssetPath.invoicing.manageTeam}
+                                src={AssetPath.integration.footer}
                                 alt="Accqrate software illustration"
                                 width={591}
                                 height={400}
