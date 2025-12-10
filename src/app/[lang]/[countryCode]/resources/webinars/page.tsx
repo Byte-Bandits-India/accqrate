@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ZatcaSection from "@/Components/ZatcaSection";
 import AssetPath from "@/AssetPath/AssetPath";
+import Commingsoon from "@/Components/CommingSoon";
 
 export default function WebinarSection() {
   const webinars = [
@@ -44,38 +45,42 @@ export default function WebinarSection() {
             </p>
           </div>
 
-          {/* Webinar Cards */}
-          <div className="flex flex-col items-start lg:flex-row md:justify-start md:gap-[80px] lg:gap-[100px] py-8 md:py-10 lg:py-[64px]">
-            {webinars.map((webinar) => (
-              <Link
-                key={webinar.id}
-                href={webinar.link}
-                className="max-w-md md:max-w-[600px] lg:max-w-md text-left group"
-              >
-                <div className="rounded-lg overflow-hidden cursor-pointer">
-                  <Image
-                    src={webinar.image}
-                    alt={webinar.alt}
-                    width={480}
-                    height={340}
-                    className="rounded-[20px]"
-                    priority
-                  />
-                  <div className="py-4 md:py-6">
-                    <h3 className="mt-2 text-fluid-body md:text-[24px] text-black font-semibold leading-tight">
-                      {webinar.title}
-                    </h3>
-                    <p className="mt-3 text-[18px] text-gray-500 mb-2">
-                      {webinar.description}
-                    </p>
+          <div className="hidden">
+            {/* Webinar Cards */}
+            <div className="flex flex-col items-start lg:flex-row md:justify-start md:gap-[80px] lg:gap-[100px] py-8 md:py-10 lg:py-[64px]">
+              {webinars.map((webinar) => (
+                <Link
+                  key={webinar.id}
+                  href={webinar.link}
+                  className="max-w-md md:max-w-[600px] lg:max-w-md text-left group"
+                >
+                  <div className="rounded-lg overflow-hidden cursor-pointer">
+                    <Image
+                      src={webinar.image}
+                      alt={webinar.alt}
+                      width={480}
+                      height={340}
+                      className="rounded-[20px]"
+                      priority
+                    />
+                    <div className="py-4 md:py-6">
+                      <h3 className="mt-2 text-fluid-body md:text-[24px] text-black font-semibold leading-tight">
+                        {webinar.title}
+                      </h3>
+                      <p className="mt-3 text-[18px] text-gray-500 mb-2">
+                        {webinar.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
+
         <div className="mt-20">
+          <Commingsoon />
           <ZatcaSection />
         </div>
       </section>

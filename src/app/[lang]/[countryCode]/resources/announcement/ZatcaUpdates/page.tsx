@@ -11,6 +11,7 @@ import ZatcaSection from '@/Components/ZatcaSection'
 import { useParams } from 'next/navigation'
 import AssetPath from '@/AssetPath/AssetPath'
 import Image from 'next/image'
+import ComingSoon from '@/Components/CommingSoon'
 
 function ZatcaUpdates() {
     const router = useRouter()
@@ -58,8 +59,11 @@ function ZatcaUpdates() {
                 </Row>
             </section>
 
+
+            <ComingSoon />
+
             {/* ===== ZATCA UPDATES ===== */}
-            <section className="bg-white py-16 md:py-20 relative">
+            {/* <section className="bg-white py-16 md:py-20 relative">
                 <div className="container mx-auto px-4">
                     <Row align="middle" justify="center">
                         <Col xs={24} sm={24} md={20} lg={18} xl={16}>
@@ -118,10 +122,10 @@ function ZatcaUpdates() {
                             />
                         </Col>
                     </Row>
-                </div>
+                </div> */}
 
-                {/* Decorative Image */}
-                <Image
+            {/* Decorative Image */}
+            {/* <Image
                     src={AssetPath.pattern.logoPattern}
                     alt="Decorative Pattern"
                     width={56}
@@ -130,7 +134,7 @@ function ZatcaUpdates() {
                     style={{ top: '30%' }}
                     loading="lazy"
                 />
-            </section>
+            </section> */}
 
             {/* ===== CALL TO ACTION SECTION ===== */}
             <section className="pt-12 md:pt-20">

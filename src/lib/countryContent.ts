@@ -10,6 +10,13 @@ export interface Card {
     link: string;
 }
 
+export interface Testimonial {
+  quote: string;
+  name: string;
+  avatar: string | StaticImageData;
+  bg: string | StaticImageData;
+}
+
 export interface CountryContent {
   backgroundImage: string | StaticImageData;
   heroTitle: string;
@@ -21,6 +28,7 @@ export interface CountryContent {
     salesText: string;
   };
   cards: Card[];
+  testimonials?: Testimonial[];
   whyAccqrateTitle?: string;
   whyAccqrateSubtitle?: string;
   whyAccqrateFeatures?: Array<{
@@ -150,6 +158,26 @@ const defaultContent: CountryContent = {
       color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
       link: "SA/business/e-invoicing-standalone",
     }
+  ],
+  testimonials: [
+    {
+      quote: "Ali - Construction Company",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.ali.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Al Laith, UAE Global Health & Beauty Co.",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.uae.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Wail - Jonex",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.wail.src,
+      bg: AssetPath.landingpage.blue.src
+    }
   ]
 };
 
@@ -223,6 +251,26 @@ const belgiumContent: CountryContent = {
       color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
       link: "SA/business/people",
     },
+  ],
+  testimonials: [
+    {
+      quote: "European Enterprise Partner",
+      name: "Accqrate's PEPPOL e-invoicing solution seamlessly integrated with our existing systems. We reduced compliance overhead by 70%.",
+      avatar: AssetPath.landingpage.ali.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Belgium Financial Services",
+      name: "The platform's intuitive interface made adoption painless. Our team was productive within days, not weeks.",
+      avatar: AssetPath.landingpage.uae.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Manufacturing Leader",
+      name: "Real-time compliance validation prevented costly rejections and kept our supply chain moving smoothly.",
+      avatar: AssetPath.landingpage.wail.src,
+      bg: AssetPath.landingpage.blue.src
+    }
   ]
 };
 
@@ -316,6 +364,26 @@ const polandContent: CountryContent = {
       description: "Seamless, compliant tax integration.",
       color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
       link: "SA/business/e-invoicing-standalone",
+    }
+  ],
+  testimonials: [
+    {
+      quote: "Polish Manufacturing Giant",
+      name: "Accqrate's PEPPOL integration eliminated manual invoice processing. We now handle 10x more invoices with the same team.",
+      avatar: AssetPath.landingpage.ali.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Poland B2B Commerce Leader",
+      name: "The AI-powered validation caught errors before submission. Our rejection rate dropped to near zero.",
+      avatar: AssetPath.landingpage.uae.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Polish Logistics Company",
+      name: "Fast deployment, zero disruption. Accqrate's platform fit perfectly into our existing workflows.",
+      avatar: AssetPath.landingpage.wail.src,
+      bg: AssetPath.landingpage.blue.src
     }
   ]
 };

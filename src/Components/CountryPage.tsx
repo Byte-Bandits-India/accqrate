@@ -4,12 +4,10 @@ import InfoCard from "@/Components/ui/Infocard";
 import FadeUp from "@/Components/ui/FadeUp";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
-import { Switch } from "@/Components/ui/switch";
 import React, { useEffect, useState, useRef } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { useCountryContent } from "@/Hooks/useCountryContent";
 import T from "@/Components/T"
-// using local inline chevrons to avoid rendering issues in some environments
 import {
     Accordion,
     AccordionContent,
@@ -18,6 +16,7 @@ import {
 } from "@/Components/Home-accordion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 
 // ---------------- CarouselCard ----------------
@@ -122,6 +121,45 @@ const ChevronRightIcon: React.FC<{ className?: string }> = ({ className }) => (
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
     </svg>
 );
+
+// Renders a primary icon (e.g. lucide) and falls back to an inline SVG if the primary
+// icon does not render properly (helps when global CSS or build issues hide SVGs).
+const IconWithFallback: React.FC<{
+    render: () => React.ReactElement;
+    fallback: React.ReactElement;
+}> = ({ render, fallback }) => {
+    const containerRef = useRef<HTMLSpanElement | null>(null);
+    const [useFallback, setUseFallback] = React.useState(false);
+
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+
+        const svg = el.querySelector('svg');
+        if (!svg) {
+            setUseFallback(true);
+            return;
+        }
+
+        const rect = svg.getBoundingClientRect();
+        const style = getComputedStyle(svg);
+        if (
+            rect.width === 0 ||
+            rect.height === 0 ||
+            style.display === 'none' ||
+            style.visibility === 'hidden'
+        ) {
+            setUseFallback(true);
+        }
+    }, []);
+
+    return (
+        <span ref={containerRef} aria-hidden>
+            {useFallback ? fallback : render()}
+        </span>
+    );
+};
+
 
 // ---------------- CarouselDots ----------------
 interface CarouselDotsProps {
@@ -460,26 +498,33 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         { src: AssetPath.business.books.book26, name: "Fashion" },
     ];
 
-    const testimonialCards: CarouselCardProps[] = [
-        {
-            quote: "Ali - Construction Company",
-            name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
-            avatar: AssetPath.landingpage.ali.src,
-            bg: AssetPath.landingpage.blue.src
-        },
-        {
-            quote: "Al Laith, UAE Global Health & Beauty Co.",
-            name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
-            avatar: AssetPath.landingpage.uae.src,
-            bg: AssetPath.landingpage.blue.src
-        },
-        {
-            quote: "Wail - Jonex",
-            name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
-            avatar: AssetPath.landingpage.wail.src,
-            bg: AssetPath.landingpage.blue.src
-        },
-    ];
+    const testimonialCards: CarouselCardProps[] = countryContent.testimonials && countryContent.testimonials.length > 0
+        ? countryContent.testimonials.map(testimonial => ({
+            quote: testimonial.quote,
+            name: testimonial.name,
+            avatar: typeof testimonial.avatar === 'string' ? testimonial.avatar : testimonial.avatar.src,
+            bg: typeof testimonial.bg === 'string' ? testimonial.bg : testimonial.bg.src
+        }))
+        : [
+            {
+                quote: "Ali - Construction Company",
+                name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+                avatar: AssetPath.landingpage.ali.src,
+                bg: AssetPath.landingpage.blue.src
+            },
+            {
+                quote: "Al Laith, UAE Global Health & Beauty Co.",
+                name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+                avatar: AssetPath.landingpage.uae.src,
+                bg: AssetPath.landingpage.blue.src
+            },
+            {
+                quote: "Wail - Jonex",
+                name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+                avatar: AssetPath.landingpage.wail.src,
+                bg: AssetPath.landingpage.blue.src
+            },
+        ];
 
     const CarouselCardItems: ServiceCard[] = [
         {
@@ -722,14 +767,22 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <button
                                     onClick={() => scroll("left")}
                                     className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow hover:bg-gray-100 transition"
+                                    aria-label="Scroll left"
                                 >
-                                    <ChevronLeftIcon className="w-5 h-5 text-gray-700" />
+                                    <IconWithFallback
+                                        render={() => <ArrowLeft className="w-5 h-5 text-gray-700" />}
+                                        fallback={<ChevronLeftIcon className="w-5 h-5 text-gray-700" />}
+                                    />
                                 </button>
                                 <button
                                     onClick={() => scroll("right")}
                                     className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow hover:bg-gray-100 transition"
+                                    aria-label="Scroll right"
                                 >
-                                    <ChevronRightIcon className="w-5 h-5 text-gray-700" />
+                                    <IconWithFallback
+                                        render={() => <ArrowRight className="w-5 h-5 text-gray-700" />}
+                                        fallback={<ChevronRightIcon className="w-5 h-5 text-gray-700" />}
+                                    />
                                 </button>
                             </div>
 
@@ -859,10 +912,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <i className="fas fa-star"></i>
                             <span className="text-[#333333] text-fluid-small lg:text-[16px] tracking-para ml-2">Based on reviews</span>
                         </div>
-                    </div>
-
-                    <div className="max-w-[1177px] mx-auto flex items-center justify-center md:justify-start mt-[73px] px-6 md:px-8">
-                        <Switch checked={enabled} onCheckedChange={setEnabled} />
                     </div>
 
                     <div className="flex items-center justify-end md:pr-20">
@@ -1045,16 +1094,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     width="20"
                                     height="20"
                                     viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    className="text-white"
+                                    className="text-white inline-block fill-current"
+                                    style={{ color: 'var(--icon-color, #ffffff)' }}
+                                    role="img"
+                                    aria-hidden="true"
+                                    focusable="false"
                                 >
-                                    <path
-                                        d="M9 6l6 6-6 6"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
+                                    <path d="M9 6l6 6-6 6" />
                                 </svg>
                             </button>
                         </FadeUp>
@@ -1097,8 +1143,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                         >
                             Read Customer Stories
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-white">
-                                <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <svg width="20" height="20" viewBox="0 0 24 24" className="text-white inline-block fill-current" style={{ color: 'var(--icon-color, #ffffff)' }} role="img" aria-hidden="true" focusable="false">
+                                <path d="M9 6l6 6-6 6" />
                             </svg>
                         </button>
                     </div>
@@ -1115,8 +1161,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                     >
                         Speak to a Reference Customer
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-white">
-                            <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg width="20" height="20" viewBox="0 0 24 24" className="text-white inline-block fill-current" style={{ color: 'var(--icon-color, #ffffff)' }} role="img" aria-hidden="true" focusable="false">
+                            <path d="M9 6l6 6-6 6" />
                         </svg>
                     </button>
                 </div>

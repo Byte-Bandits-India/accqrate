@@ -124,13 +124,13 @@ const Section1 = () => {
     const countryMap: { [key: string]: { flag: any; code: string; name: string; logo: any; trustedBySubtitle?: string } } = {
         sa: { flag: AssetPath.header.language.saudiArabia, code: "KSA", name: "Saudi Arabia", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         ae: { flag: AssetPath.header.language.uae, code: "UAE", name: "United Arab Emirates", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
-        om: { flag: AssetPath.header.language.oman, code: "OMN", name: "Oman", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
-        bh: { flag: AssetPath.header.language.bahrain, code: "BHR", name: "Bahrain", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
-        ma: { flag: AssetPath.header.language.malaysia, code: "MYS", name: "Malaysia", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
-        mu: { flag: AssetPath.header.language.mauritius, code: "MUS", name: "Mauritius", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
-        jd: { flag: AssetPath.header.language.jordan, code: "JOR", name: "Jordan", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
-        be: { flag: AssetPath.header.language.belgium, code: "BEL", name: "Belgium", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by leading Belgian organisations' },
-        pl: { flag: AssetPath.header.language.poland, code: "POL", name: "Poland", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by Poland’s businesses' },
+        om: { flag: AssetPath.header.language.oman, code: "OM", name: "Oman", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        bh: { flag: AssetPath.header.language.bahrain, code: "BH", name: "Bahrain", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        ma: { flag: AssetPath.header.language.malaysia, code: "MY", name: "Malaysia", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        mu: { flag: AssetPath.header.language.mauritius, code: "MU", name: "Mauritius", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        jd: { flag: AssetPath.header.language.jordan, code: "JD", name: "Jordan", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        be: { flag: AssetPath.header.language.belgium, code: "BE", name: "Belgium", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by leading Belgian organisations' },
+        pl: { flag: AssetPath.header.language.poland, code: "PO", name: "Poland", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by Poland’s businesses' },
     };
 
     const currentCountry = countryMap[countryCode] || countryMap.sa;

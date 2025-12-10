@@ -6,6 +6,7 @@ import UpdateCard from "./UpdateCard";
 import CTASection from "./CTASection";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
+import ComingSoon from "@/Components/CommingSoon";
 
 const Index = () => {
   // ✅ Get dynamic route params like "en" and "ksa"
@@ -40,10 +41,11 @@ const Index = () => {
               Subscribe Now <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </section>
-        </div>
 
+          <ComingSoon />
+        </div>
         {/* Update Cards Section */}
-        <section className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0 mb-16">
+        <section className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0 mb-16 hidden">
           {/* Wrapper that controls spacing */}
           <div className="flex flex-col md:flex-row md:gap-[34px] max-w-[1034px] gap-8">
             {/* ✅ ZATCA Updates Card */}

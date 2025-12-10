@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { StaticImageData } from "next/image";
+import { ContactModal } from "@/Components/ContactModal";
 
 import {
   Accordion,
@@ -461,6 +462,7 @@ const MegaMenu: React.FC<{
 
 // ===================== Header =====================
 const Header: React.FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const { selectedCountry, isInitialized } = useCountry();
@@ -684,7 +686,7 @@ const Header: React.FC = () => {
                       </li>
                     ))}
 
-                    {/* Contact Us */}
+                    {/* about us */}
                     <li className="relative">
                       <Link
                         href={createHref("/contact-us")}
@@ -692,7 +694,7 @@ const Header: React.FC = () => {
                         onClick={handleMenuItemClick}
                       >
                         <span className="whitespace-nowrap text-[14px] text-[#333333]">
-                          Contact Us
+                          About us
                         </span>
                       </Link>
                     </li>
@@ -708,17 +710,17 @@ const Header: React.FC = () => {
                   align="right"
                 />
                 <Link
-                  href={createHref("/contact-sales")}
+                  href={createHref("/contact-us")}
                   className="hidden xl:inline-flex items-center justify-center gap-2 text-[#F05A28] h-[34px] w-[119px] font-medium rounded-[80px] text-[12px] xl:text-[14px] border border-[#29266E] bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
                 >
                   {contactInfo.salesText}
                 </Link>
-                <Link
-                  href={createHref("/book-demo")}
+                <button
+                  onClick={() => setModalOpen(true)}
                   className="hidden xl:inline-flex items-center justify-center gap-2 text-white h-[34px] font-medium w-[121px] rounded-[80px] text-[12px] xl:text-[14px] bg-gradient-to-r from-[#194BED] to-[#29266E]"
                 >
                   Book a Demo
-                </Link>
+                </button>
               </div>
 
               {/* Mobile menu button */}
@@ -838,19 +840,18 @@ const Header: React.FC = () => {
             </div>
 
             {/* Book a Demo Button */}
-            <Link
-              href={createHref("/book-demo")}
+            <button
               className="flex-1 text-center text-white py-3 rounded-full text-sm font-bold bg-gradient-to-r from-[#194BED] to-[#29266E]"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsMobileMenuOpen(false);
-              }}
+              onClick={() => setModalOpen(true)}
             >
               Book a Demo
-            </Link>
+            </button>
           </div>
         </div>
       )}
+
+      {/* Contact Modal */}
+      <ContactModal open={isModalOpen} onClose={() => setModalOpen(false)} />
     </>
   );
 }
@@ -881,6 +882,7 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
           </div>
         </Link>
       </li>
+
     );
   }
 );
