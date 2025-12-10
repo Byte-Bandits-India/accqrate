@@ -16,17 +16,17 @@ const HERO_CONTENT: Record<string, HeroContent> = {
   BE: {
     title: "We Will Keep You Updated At All Times",
     description:
-      "Stay Updated With The Latest News And Updates From PEPPOL Or LHDN Or MRA Or OTA Or NBR Or ISTD, And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
+      "Stay Updated With The Latest News And Updates From PEPPOL And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
   },
   PL: {
     title: "We Will Keep You Updated At All Times",
     description:
-      "Stay Updated With The Latest News And Updates From PEPPOL Or LHDN Or MRA Or OTA Or NBR Or ISTD, And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
+      "Stay Updated With The Latest News And Updates From PEPPOL And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
   },
   default: {
     title: "We Will Keep You Updated At All Times",
     description:
-      "Stay Updated With The Latest News And Updates From ZATCA Or LHDN Or MRA Or OTA Or NBR Or ISTD, And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
+      "Stay Updated With The Latest News And Updates From ZATCA And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
   },
 };
 
