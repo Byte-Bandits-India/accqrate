@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { StaticImageData } from "next/image";
-import { ContactModal } from "@/Components/ContactModal";
+import dynamic from "next/dynamic";
 
 import {
   Accordion,
@@ -20,6 +20,15 @@ import { setLanguage, t } from "@/lib/translations";
 import AssetPath from "@/AssetPath/AssetPath";
 import T from "@/Components/T";
 import { getMenusByCountryCode } from "./data/countryMenus";
+
+// Dynamic import for ContactModal
+const ContactModal = dynamic(
+  () => import("@/Components/ContactModal").then((mod) => mod.ContactModal),
+  {
+    ssr: false,
+    loading: () => null,
+  }
+);
 
 // ===================== Type Definitions =====================
 interface SubItem {
@@ -316,15 +325,29 @@ const getImageSrc = (image: string | StaticImageData | undefined): string | unde
 };
 
 // ===================== Mega Menu Component =====================
-const MegaMenu: React.FC<{
+interface MegaMenuProps {
   menu: Menu;
   activeSection: string;
   onSectionChange: (section: string) => void;
   onItemClick: () => void;
   headerHeight: number;
-}> = ({ menu, activeSection, onSectionChange, onItemClick, headerHeight }) => {
+}
+
+const MegaMenu: React.FC<MegaMenuProps> = ({
+  menu,
+  activeSection,
+  onSectionChange,
+  onItemClick,
+  headerHeight
+}) => {
   const { createHref } = useDynamicRouting();
   const menuRef = useRef<HTMLDivElement>(null);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  // Memoize the onClose callback to prevent ContactModal from being unstable
+  const handleCloseModal = useCallback(() => {
+    setModalOpen(false);
+  }, []);
 
   return (
     <div
@@ -421,16 +444,15 @@ const MegaMenu: React.FC<{
 
         {/* CTA Footer */}
         <div className="mt-auto -mx-8 -mb-10 bg-[#F7F8FF] flex justify-end py-4 gap-4 rounded-b-xl">
-          <Link
-            href={createHref("/book-demo")}
-            className="group inline-flex items-center justify-center gap-2 py-2 px-6 rounded-[80px] text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
-            onClick={onItemClick}
+          <button
+            onClick={() => setModalOpen(true)}
+            className="group inline-flex items-center justify-center text-blue-400 gap-2 py-2 px-6 rounded-[80px] text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
           >
             Book a Demo
             <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
               →
             </span>
-          </Link>
+          </button>
 
           <span
             role="separator"
@@ -439,7 +461,7 @@ const MegaMenu: React.FC<{
           ></span>
 
           <Link
-            href={createHref("/contact-sales")}
+            href={createHref("/contact-us")}
             className="group inline-flex items-center gap-2 py-2 px-6 rounded-[80px] text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
             onClick={onItemClick}
           >
@@ -456,6 +478,14 @@ const MegaMenu: React.FC<{
           ></span>
         </div>
       </div>
+
+      {/* Contact Modal */}
+      {isModalOpen && (
+        <ContactModal
+          open={isModalOpen}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 };
@@ -652,16 +682,15 @@ const Header: React.FC = () => {
 
                               {/* CTA Footer */}
                               <div className="mt-auto -mx-8 -mb-10 bg-[#F7F8FF] flex justify-end py-4 gap-4 rounded-b-xl">
-                                <Link
-                                  href={createHref("/book-demo")}
+                                <button
+                                  onClick={() => setModalOpen(true)}
                                   className="group inline-flex items-center justify-center gap-2 py-2 px-6 rounded-[80px] lg:text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
-                                  onClick={handleMenuItemClick}
                                 >
                                   Book a Demo
                                   <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
                                     →
                                   </span>
-                                </Link>
+                                </button>
 
                                 <span
                                   role="separator"
@@ -670,7 +699,7 @@ const Header: React.FC = () => {
                                 ></span>
 
                                 <Link
-                                  href={createHref("/contact-sales")}
+                                  href={createHref("/contact-us")}
                                   className="group inline-flex items-center gap-2 py-2 px-6 rounded-[80px] text-[14px] hover:text-[#534ED3] transition-colors"
                                   onClick={handleMenuItemClick}
                                 >
@@ -694,7 +723,7 @@ const Header: React.FC = () => {
                     {/* about us */}
                     <li className="relative">
                       <Link
-                        href={createHref("/")}
+                        href={createHref("/about-us")}
                         className={`flex items-center gap-1 px-2 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] text-gray-700 hover:text-[#534ED3]`}
                         onClick={handleMenuItemClick}
                       >
@@ -778,7 +807,6 @@ const Header: React.FC = () => {
                     {sections.map((section, sectionIndex) => (
                       <div key={sectionIndex} className="mb-4 last:mb-0">
                         <div className="px-2 mb-2">
-                          <h4 className="font-medium text-[#333333]">{section.heading}</h4>
                           {section.description && (
                             <p className="text-gray-500 text-sm">{section.description}</p>
                           )}
@@ -813,9 +841,19 @@ const Header: React.FC = () => {
                 </AccordionItem>
               ))}
 
+              <Link
+                href={createHref("/about-us")}
+                className={`flex items-center gap-1 px-2 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] text-gray-700 hover:text-[#534ED3]`}
+                onClick={handleMenuItemClick}
+              >
+                <span className="whitespace-nowrap text-[14px] text-[#333333]">
+                  About us
+                </span>
+              </Link>
+
               {/* Contact Sales link */}
               <Link
-                href={createHref("/contact-sales")}
+                href={createHref("/contact-us")}
                 className="block w-full text-[17px] font-normal mt-4 bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -856,7 +894,12 @@ const Header: React.FC = () => {
       )}
 
       {/* Contact Modal */}
-      <ContactModal open={isModalOpen} onClose={handleCloseModal} />
+      {isModalOpen && (
+        <ContactModal
+          open={isModalOpen}
+          onClose={handleCloseModal}
+        />
+      )}
     </>
   );
 }

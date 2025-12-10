@@ -441,6 +441,13 @@ import belgiumFlagHome from "@/Assets/images/home/belgium.png";
 // ==================== PATTERN IMPORTS ====================
 import logoPattern from "@/Assets/images/pattern/logo-pattern.svg";
 import wavePattern from "@/Assets/images/pattern/wave-pattern.svg";
+import dammamCircle from "@/Assets/images/dammam-circle.webp";
+
+//About us images
+import bluestar from "@/Assets/images/about/bluestar.png";
+import stone from "@/Assets/images/about/stone.png";
+import hands from "@/Assets/images/about/hands.png";
+import ourteam from "@/Assets/images/about/ourteam.png";
 
 const AssetPath = {
   // HEADER SECTION
@@ -887,6 +894,7 @@ const AssetPath = {
   pattern: {
     logoPattern,
     wavePattern,
+    dammamCircle
   },
 
   // BUSINESS BOOKS (Company Logos)
@@ -927,6 +935,14 @@ const AssetPath = {
     feature2: accqrateFeature2,
     feature3: accqrateFeature3,
     feature4: accqrateFeature4,
+  },
+
+  // ABOUT US IMAGES
+  aboutus: {
+    bluestar: bluestar,
+    stone: stone,
+    hands: hands,
+    ourteam: ourteam,
   },
 };
 
