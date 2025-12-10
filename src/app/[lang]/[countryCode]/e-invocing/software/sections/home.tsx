@@ -161,7 +161,7 @@ const countryConfig = {
         authority: "KSeF",
         badgeText: "PEPPOL Certified  E-invoicing Software for Belgium",
         topTitle: "Enable Your Business With E-invoicing.",
-        title: "Integrate With PEPPOL Network European Based E-invoicing Solution For European Companies.",
+        title: "Integrate With PEPPOL Network",
         description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
         description2: "",
         ctaText: "Connect with our Consultant",
@@ -214,7 +214,7 @@ const Software = () => {
             <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
                 <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
                     {/* LEFT CONTENT */}
-                    <div className="flex flex-col justify-center max-w-[750px] w-full">
+                    <div className="flex flex-col justify-center max-w-[730px] w-full">
                         <div className="flex items-center gap-2">
                             <p className="text-[#F05A28] text-fluid-small leading-[30px] m-0 whitespace-nowrap">
                                 {content.badgeText}
@@ -231,7 +231,7 @@ const Software = () => {
                         </div>
 
 
-                        <p className="text-fluid-h3 lg:text-[38px] font-medium text-[#000000] leading-tight mb-4">
+                        <p className="text-fluid-h3 lg:text-[38px] font-medium text-[#000000] mt-4 leading-tight mb-4">
                             Enable Your Business With E-invoicing.
                         </p>
                         <h1 className="text-fluid-h2 lg:text-[54px] font-semibold text-[#000000] leading-tight">

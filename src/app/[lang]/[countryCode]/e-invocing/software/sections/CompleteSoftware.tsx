@@ -75,7 +75,7 @@ const Section3 = () => {
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-fluid-small text-[#5A6183] leading-[24px] sm:leading-[28px] md:leading-[32px]">
+                                <p className="text-fluid-small text-[#5A6183] leading-[24px] sm:leading-[28px]">
                                     {item.desc}
                                 </p>
                             </div>

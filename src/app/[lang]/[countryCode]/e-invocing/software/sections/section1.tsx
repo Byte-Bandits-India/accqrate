@@ -154,7 +154,7 @@ const Section1 = () => {
             headingDescription: "EN 16931 and Peppol Requirements:",
             heroDescription: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
-            peppolCardText: "Accqrate is Peppol Certified Solution Provider"
+            peppolCardText: "Accqrate is a Peppol Certified AP Provider and SMP"
         },
         pl: {
             whyAccqrateTitle: "Compliant with Poland’s Mandatory B2B E-Invoicing Regulation",
@@ -342,7 +342,7 @@ const Section1 = () => {
 
                 <div className="relative mt-6 md:mt-8 lg:mt-[100px] pb-10 md:pb-12">
                     <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
-                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
 
                             {/*LEFT COLUMN - IMAGE */}
                             <div className="lg:col-span-2 flex justify-center">
@@ -365,12 +365,12 @@ const Section1 = () => {
                                                 <T>{pageContent.whyAccqrateTitle}</T>
                                             </h3>
 
-                                            <h3 className='text-fluid-body font-medium text-[#000000] mt-6 text-left leading-relaxed'>
+                                            <h3 className='text-fluid-body font-medium text-[#000000] mt-4 text-left leading-relaxed'>
                                                 <T>{pageContent.whyAccqrateSubtitle}</T>
                                             </h3>
 
 
-                                            <p className='text-[16px] font-medium mt-6 text-[#000000] text-left leading-tight'>
+                                            <p className='text-[16px] font-medium mt-10 text-[#000000] text-left leading-tight'>
                                                 <T>{pageContent.headingDescription}</T>
                                             </p>
                                             <p className='text-fluid-small font-normal mt-2 text-[#000000] text-left leading-tight'>
@@ -380,7 +380,7 @@ const Section1 = () => {
 
                                         {/* Conditional compliance card: Peppol for BE/PL, ZATCA for others */}
                                         {countryCode === 'be' || countryCode === 'pl' ? (
-                                            <div className="bg-white max-h-[194px] w-[410px] rounded-2xl shadow p-4 flex flex-col gap-3 mt-6 md:mt-8">
+                                            <div className="bg-white max-h-[194px] w-[410px] rounded-2xl shadow p-4 flex flex-col gap-3 mt-6 md:mt-10">
                                                 {/* Peppol Logo */}
                                                 <Image
                                                     src={AssetPath.integration.peppol}

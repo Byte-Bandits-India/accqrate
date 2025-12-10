@@ -69,7 +69,7 @@ const CTASection = () => {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-l from-[#242087] overflow-y-hidden to-[#1A0C48] relative shadow-xl">
+    <div className="w-full bg-gradient-to-l from-[#242087] to-[#1A0C48] relative shadow-xl">
       <div className="md:flex gap-8 xl:max-h-[336px] relative z-10 max-w-[1440px] p-6 md:p-10 lg:pb-0 mx-auto">
         {/* LEFT CONTENT */}
         <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">

@@ -5,7 +5,7 @@ import Section2 from "./sections/section2";
 
 const software = () => {
     return (
-        <section className="overflow-x-hidden">
+        <section className="overflow-x-hidden overflow-y-hidden">
             <Home />
             <Section1 />
             <Section2 />
