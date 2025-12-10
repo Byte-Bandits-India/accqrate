@@ -159,7 +159,7 @@ const belgiumContent: CountryContent = {
   heroTitle: "PEPPOL-Ready. VAT-Compliant. Built For Enterprise.",
   heroSubtitle: "E-invoicing Solution for Belgium",
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for Belgian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
-  heroTagline: "Complaintr . Seamless . Secure",
+  heroTagline: "complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
   whyAccqrateFeatures: [
