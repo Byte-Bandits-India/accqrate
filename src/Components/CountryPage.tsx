@@ -1049,8 +1049,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         />
                                     </div>
                                 </FadeUp>
-
-
                             </div>
                         </div>
                     </div>
@@ -1063,7 +1061,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
                                 Future-Ready for ViDA
                             </h2>
-                            <div className="bg-[#D9D9D9] w-full h-full"></div>
+                            <Image
+                                src={AssetPath.home.vida}
+                                alt="VIDA Compliance"
+                                width={520}
+                                height={420}
+                                className="w-full h-auto object-contain"
+                            />
                         </div>
 
                         {/* Right Side: Text + List + Button */}
@@ -1107,7 +1111,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                         {/* Image (Mobile) */}
                         <div className="lg:hidden flex items-center justify-center">
-                            <div className="bg-[#D9D9D9] h-[436px] md:h-[386px] w-full"></div>
+                            <Image
+                                src={AssetPath.home.vida}
+                                alt="VIDA Compliance"
+                                width={520}
+                                height={420}
+                                className="w-full h-auto object-contain"
+                            />
                         </div>
                     </div>
                 </div>

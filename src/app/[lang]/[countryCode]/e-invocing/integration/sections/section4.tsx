@@ -25,7 +25,7 @@ export default function Section4() {
         </div>
 
         {/* TOP GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+        <div className="flex flex-col lg:flex-row gap-12 ">
 
           {/* LEFT LIST */}
           <div className="space-y-4">
@@ -51,14 +51,15 @@ export default function Section4() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex ">
+          <div className=" ">
             {data.topRightImage && (
               <Image
                 src={data.topRightImage}
-                width={500}
-                height={100}
+                width={800}
+                height={600}
                 alt="Dashboard"
-                className="min-w-full md:h-[520px] object-obtain "
+
+                className=" rounded-xl "
               />
             )}
           </div>

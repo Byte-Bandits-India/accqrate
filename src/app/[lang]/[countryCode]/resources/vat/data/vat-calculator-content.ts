@@ -33,7 +33,7 @@ export const belgiumVATContent: VATCalculatorContent = {
   title: "Simplify VAT Calculations with Our Belgium VAT Calculator",
   subtitle: "Navigating VAT calculations has never been easier. Our Belgium VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
   whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in Belgium in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.",
-  howToCalculateTitle: "How to Calculate VAT in KSA",
+  howToCalculateTitle: "How to Calculate VAT in Belgium",
   howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
   calculationBenefitsTitle: "VAT Calculation Made Simple",
   calculationBenefitsDesc: "Excluding VAT: Ideal for sales prices that already include VAT.",

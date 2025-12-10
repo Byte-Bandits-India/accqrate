@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
@@ -477,6 +477,11 @@ const Header: React.FC = () => {
 
   const { createHref } = useDynamicRouting();
 
+  // Memoize the onClose callback to prevent ContactModal from being unstable
+  const handleCloseModal = useCallback(() => {
+    setModalOpen(false);
+  }, []);
+
   // Get country-specific menus
   const menus = useMemo(() => {
     if (!selectedCountry.code || !isInitialized) return [];
@@ -689,7 +694,7 @@ const Header: React.FC = () => {
                     {/* about us */}
                     <li className="relative">
                       <Link
-                        href={createHref("/contact-us")}
+                        href={createHref("/")}
                         className={`flex items-center gap-1 px-2 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] text-gray-700 hover:text-[#534ED3]`}
                         onClick={handleMenuItemClick}
                       >
@@ -851,7 +856,7 @@ const Header: React.FC = () => {
       )}
 
       {/* Contact Modal */}
-      <ContactModal open={isModalOpen} onClose={() => setModalOpen(false)} />
+      <ContactModal open={isModalOpen} onClose={handleCloseModal} />
     </>
   );
 }

@@ -124,8 +124,11 @@ import gdrpHome from "@/Assets/images/home/gdrp.png";
 import isoHome from "@/Assets/images/home/iso.png";
 import greenAccq from "@/Assets/images/home/green-accq.png";
 import aiImage from "@/Assets/images/home/ai.png";
+import acceleraWebp from "@/Assets/images/home/accelera.webp";
+import vidaHome from "@/Assets/images/home/VIDA_home.webp";
 
 // ==================== LANDINGPAGE IMAGES ====================
+
 import landingIcon1 from "@/Assets/images/landingpage/1.png";
 import landingIcon2 from "@/Assets/images/landingpage/2.png";
 import landingIcon3 from "@/Assets/images/landingpage/3.png";
@@ -260,7 +263,7 @@ import b2bpoland from "@/Assets/images/integration/b2b-poland.png";
 import intdash from "@/Assets/images/integration/int-dash.png";
 import inttax from "@/Assets/images/integration/int-tax.png";
 import tick from "@/Assets/images/integration/tick.png";
-import integrationInvoice from "@/Assets/images/integration/integration-invoice.png";
+import integrationInvoice from "@/Assets/images/integration/dashboard_eur.webp";
 import integration1 from "@/Assets/images/integration/integration1.webp";
 import integration2 from "@/Assets/images/integration/integration2.webp";
 import integration3 from "@/Assets/images/integration/integration3.webp";
@@ -273,6 +276,8 @@ import integration9 from "@/Assets/images/integration/integration9.webp";
 import integration10 from "@/Assets/images/integration/integration10.webp";
 import integration11 from "@/Assets/images/integration/integration11.webp";
 import integration12 from "@/Assets/images/integration/integration12.webp";
+import integrationDashboard from "@/Assets/images/integration/dashboard.webp";
+import integrationFooter from "@/Assets/images/integration/footer.webp";
 import peppolIntegration from "@/Assets/images/integration/peppol.png";
 
 // ==================== INVOICING IMPORTS ====================
@@ -579,7 +584,8 @@ const AssetPath = {
     starOr: starOr,
     starWhite: starWhite,
     greenAccq: greenAccq,
-    ai: aiImage,
+    ai: acceleraWebp,
+    vida: vidaHome,
   },
 
   // LANDINGPAGE
@@ -694,6 +700,8 @@ const AssetPath = {
     inttax,
     tick,
     invoice: integrationInvoice,
+    dashboard: integrationDashboard,
+    footer: integrationFooter,
     integration1,
     integration2,
     integration3,

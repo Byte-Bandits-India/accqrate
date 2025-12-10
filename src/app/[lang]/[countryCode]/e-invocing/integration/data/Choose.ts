@@ -37,7 +37,7 @@ export const Choose = {
       }
     ],
 
-    topRightImage: AssetPath.integration.intdash.src,
+    topRightImage: AssetPath.integration.dashboard.src,
 
     bottomRightItems: [
       "Integration with ZATCA’s Fatoora portal",
@@ -98,7 +98,7 @@ be: {
     }
   ],
 
-  topRightImage: AssetPath.integration.intdash.src,
+  topRightImage: AssetPath.integration.dashboard.src,
 
   bottomLeftImage: AssetPath.integration.inttax.src,
 
@@ -156,7 +156,7 @@ pl: {
     }
   ],
 
-  topRightImage: AssetPath.integration.intdash.src,
+  topRightImage: AssetPath.integration.dashboard.src,
 
   bottomLeftImage: AssetPath.integration.inttax.src,
 
