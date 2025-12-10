@@ -282,13 +282,13 @@ export const countryMenus: CountryMenus = {
             },
             {
               title: "Tax Calculator",
-              description: "Calculate your Saudi VAT obligations",
+              description: "Calculate your Belgium VAT obligations",
               href: "/resources/vat",
               icon: AssetPath.header.navbar.outline.tax,
             },
             {
               title: "Events",
-              description: "Upcoming events and webinars in Saudi Arabia",
+              description: "Upcoming events and webinars in Belgium",
               href: "/resources/webinars",
               icon: AssetPath.header.navbar.outline.event,
             },
@@ -354,13 +354,13 @@ export const countryMenus: CountryMenus = {
             },
             {
               title: "Tax Calculator",
-              description: "Calculate your Saudi VAT obligations",
+              description: "Calculate your Poland VAT obligations",
               href: "/resources/vat",
               icon: AssetPath.header.navbar.outline.tax,
             },
             {
               title: "Events",
-              description: "Upcoming events and webinars in Saudi Arabia",
+              description: "Upcoming events and webinars in Poland",
               href: "/resources/webinars",
               icon: AssetPath.header.navbar.outline.event,
             },
