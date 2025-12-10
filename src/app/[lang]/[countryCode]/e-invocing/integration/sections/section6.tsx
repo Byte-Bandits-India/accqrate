@@ -133,17 +133,17 @@ const DemoVideoSection: React.FC = () => {
                                     Talk to our expert
                                 </p>
 
-                                <h1 className="text-white text-fluid-h2 lg:text-[38px] font-medium leading-tight mb-3">
+                                <h1 className="text-white text-fluid-h2 lg:text-[34px] font-bold leading-tight mb-3">
                                     Do You Want To Know More?
                                 </h1>
 
-                                <p className="text-white text-fluid-body leading-[30px] mb-6">
+                                <p className="text-white md:text-[24px] leading-[30px] font-light mb-6">
                                     Kick start your free proof of concept
                                 </p>
 
                                 {/* Small Feature Text */}
                                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 mb-8 lg:text-nowrap">
-                                    <p className="text-fluid-small text-white font-light">
+                                    <p className="text-fluid-small md:text-[18px] text-white font-light">
                                         Seamless
                                     </p>
                                     <Image
@@ -153,7 +153,7 @@ const DemoVideoSection: React.FC = () => {
                                         height={20}
                                         className="w-5 h-5 md:w-auto md:h-auto"
                                     />
-                                    <p className="text-fluid-small text-white font-light">
+                                    <p className="text-fluid-small md:text-[18px] text-white font-light">
                                         Complaint
                                     </p>
                                      <Image
@@ -163,7 +163,7 @@ const DemoVideoSection: React.FC = () => {
                                         height={20}
                                         className="w-5 h-5 md:w-auto md:h-auto"
                                     />
-                                    <p className="text-fluid-small text-white font-light">
+                                    <p className="text-fluid-small md:text-[18px] text-white font-light">
                                         Secure
                                     </p>
                                 </div>
@@ -172,9 +172,9 @@ const DemoVideoSection: React.FC = () => {
                                 <div className="flex justify-center md:justify-start">
                                     <Link
                                         href={`/${lang}/${countryCode}/contact-us`}
-                                        className="relative flex items-center justify-center w-[160px] h-[46px] md:w-[180px] md:h-[52px] bg-[#F05A28] rounded-[50px] px-2 text-white text-[14px] md:text-[16px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
+                                        className="relative flex items-center justify-center w-[160px] h-[46px] md:w-[160px] md:h-[52px] bg-[#F05A28] rounded-[50px] px-2  text-white text-[14px] md:text-[16px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
                                     >
-                                        <span className="mx-auto">Get Started</span>
+                                        <span className="mr-4">Get Started</span>
                                         <svg
                                             width="14"
                                             height="14"
