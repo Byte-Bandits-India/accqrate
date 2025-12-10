@@ -71,7 +71,7 @@ const countries = [
 ];
 
 // Define supported languages as a type
-type SupportedLanguage = 'en' | 'ar';
+type SupportedLanguage = 'en' | 'ar' | 'ml' | 'fr' | 'nl' | 'de';
 
 interface CountryPageProps {
     params: Promise<{
@@ -81,7 +81,7 @@ interface CountryPageProps {
 }
 
 export async function generateStaticParams() {
-    const supportedLanguages: SupportedLanguage[] = ['en', 'ar'];
+    const supportedLanguages: SupportedLanguage[] = ['en', 'ar', 'ml', 'fr', 'nl', 'de'];
     const params = [];
 
     for (const lang of supportedLanguages) {
@@ -101,7 +101,7 @@ export default async function CountryHomePage({ params }: CountryPageProps) {
 
     // Validate language and country code with proper typing
     const isValidLanguage = (lang: string): lang is SupportedLanguage => {
-        return ['en', 'ar'].includes(lang);
+        return ['en', 'ar', 'ml', 'fr', 'nl', 'de'].includes(lang);
     };
 
     const isValidCountry = countries.some(

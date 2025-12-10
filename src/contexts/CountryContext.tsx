@@ -4,6 +4,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { setLanguage, currentLang } from "@/lib/translations";
 import AssetPath from "@/AssetPath/AssetPath";
 import { StaticImageData } from "next/image";
+import { countryLanguageOptions } from "@/Layout/data/countryMenus";
 
 interface Country {
     name: string;
@@ -30,6 +31,20 @@ interface CountryContextType {
 }
 
 const CountryContext = createContext<CountryContextType | undefined>(undefined);
+
+const allLanguages: Language[] = [
+    { code: "ar", name: "Arabic", display: "العربية" },
+    { code: "ml", name: "Malay", display: "Malay" },
+    { code: "en", name: "English", display: "Eng" },
+    { code: "fr", name: "French", display: "Français" },
+    { code: "nl", name: "Dutch", display: "Dutch" },
+    { code: "de", name: "German", display: "Deutsch" },
+];
+
+const getLanguagesForCountry = (countryCode: string): Language[] => {
+    const byCountry = countryLanguageOptions[countryCode.toUpperCase()];
+    return byCountry && byCountry.length ? byCountry : allLanguages;
+};
 
 // ===================== Data =====================
 export const countries: Country[] = [
@@ -98,18 +113,17 @@ export const countries: Country[] = [
     },
 ];
 
-export const languages: Language[] = [
-    { code: "ar", name: "Arabic", display: "العربية" },
-    { code: "ml", name: "Malay", display: "Malay" },
-    { code: "en", name: "English", display: "Eng" },
-    { code: "fr", name: "French", display: "Français" },
-    { code: "nl", name: "Dutch", display: "Dutch" },
-];
+export const languages: Language[] = allLanguages;
 
 // ===================== Context Type =====================
 export function CountryProvider({ children }: { children: ReactNode }) {
-    const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
-    const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
+    const defaultCountry = countries[0];
+    const defaultLanguageList = getLanguagesForCountry(defaultCountry.code);
+    const defaultLanguage = defaultLanguageList[0] || allLanguages[0];
+
+    const [selectedCountry, setSelectedCountry] = useState<Country>(defaultCountry);
+    const [availableLanguages, setAvailableLanguages] = useState<Language[]>(defaultLanguageList);
+    const [selectedLanguage, setSelectedLanguage] = useState<Language>(defaultLanguage);
     const [isInitialized, setIsInitialized] = useState(false);
 
     // Initialize from URL - this runs only on client side
@@ -120,31 +134,51 @@ export function CountryProvider({ children }: { children: ReactNode }) {
         const initializeFromURL = () => {
             const pathSegments = window.location.pathname.split('/').filter(segment => segment);
 
-            // Set language from URL
-            if (pathSegments.length >= 1) {
-                const urlLang = pathSegments[0];
-                const foundLang = languages.find(l => l.code === urlLang);
-                if (foundLang) {
-                    setSelectedLanguage(foundLang);
-                    // Update translation system immediately
-                    setLanguage(foundLang.code as 'en' | 'ar');
-                    console.log('🌍 CountryContext: Initialized language to', foundLang.code);
-                }
+            const urlLang = pathSegments[0];
+            const urlCountry = pathSegments[1]?.toUpperCase();
+
+            const countryFromUrl = urlCountry
+                ? countries.find(c => c.code === urlCountry)
+                : undefined;
+            const resolvedCountry = countryFromUrl || defaultCountry;
+
+            const langsForCountry = getLanguagesForCountry(resolvedCountry.code);
+
+            const langFromUrl = urlLang
+                ? langsForCountry.find(l => l.code === urlLang)
+                : undefined;
+            const resolvedLanguage = langFromUrl
+                || langsForCountry.find(l => l.code === 'en')
+                || langsForCountry[0]
+                || allLanguages[0];
+
+            setSelectedCountry(resolvedCountry);
+            setAvailableLanguages(langsForCountry);
+            setSelectedLanguage(resolvedLanguage);
+
+            // Update translation system immediately for supported languages
+            if (resolvedLanguage.code === 'en' || resolvedLanguage.code === 'ar') {
+                setLanguage(resolvedLanguage.code as 'en' | 'ar');
             }
 
-            // Set country from URL
-            if (pathSegments.length >= 2) {
-                const urlCountry = pathSegments[1].toUpperCase();
-                const foundCountry = countries.find(c => c.code === urlCountry);
-                if (foundCountry) {
-                    setSelectedCountry(foundCountry);
-                }
-            }
+            console.log('🌍 CountryContext: Initialized country to', resolvedCountry.code, 'with language', resolvedLanguage.code);
         };
 
         initializeFromURL();
         setIsInitialized(true);
     }, []);
+
+    // Update available languages when country changes
+    useEffect(() => {
+        const langsForCountry = getLanguagesForCountry(selectedCountry.code);
+        setAvailableLanguages(langsForCountry);
+
+        const languageStillAllowed = langsForCountry.some(l => l.code === selectedLanguage.code);
+        if (!languageStillAllowed) {
+            const fallback = langsForCountry.find(l => l.code === 'en') || langsForCountry[0] || allLanguages[0];
+            setSelectedLanguage(fallback);
+        }
+    }, [selectedCountry.code]);
 
     // Update translation system whenever selectedLanguage changes
     useEffect(() => {
@@ -168,7 +202,7 @@ export function CountryProvider({ children }: { children: ReactNode }) {
                 selectedLanguage,
                 setSelectedLanguage,
                 countries,
-                languages,
+                languages: availableLanguages,
                 isInitialized,
             }}
         >

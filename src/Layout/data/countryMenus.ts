@@ -3,6 +3,10 @@ import { Menu } from "@/types/menu"; // Adjust path to your Menu type
 
 // Type for country-specific menus
 export type CountryMenus = Record<string, Menu[]>;
+export type CountryLanguages = Record<
+  string,
+  { code: string; name: string; display: string }[]
+>;
 
 // Country-specific menu data
 export const countryMenus: CountryMenus = {
@@ -364,6 +368,53 @@ export const countryMenus: CountryMenus = {
         },
       ],
     },
+  ],
+};
+
+// Country-specific language options
+export const countryLanguageOptions: CountryLanguages = {
+  // Middle East
+  SA: [
+    { code: "ar", name: "Arabic", display: "العربية" },
+    { code: "en", name: "English", display: "Eng" },
+  ],
+  AE: [
+    { code: "ar", name: "Arabic", display: "العربية" },
+    { code: "en", name: "English", display: "Eng" },
+  ],
+  OM: [
+    { code: "ar", name: "Arabic", display: "العربية" },
+    { code: "en", name: "English", display: "Eng" },
+  ],
+  BH: [
+    { code: "ar", name: "Arabic", display: "العربية" },
+    { code: "en", name: "English", display: "Eng" },
+  ],
+  JD: [
+    { code: "ar", name: "Arabic", display: "العربية" },
+    { code: "en", name: "English", display: "Eng" },
+  ],
+
+  // Africa / Asia
+  MA: [
+    { code: "ml", name: "Malay", display: "Malay" },
+    { code: "en", name: "English", display: "Eng" },
+  ],
+  MU: [
+    { code: "en", name: "English", display: "Eng" },
+    { code: "fr", name: "French", display: "Français" },
+  ],
+
+  // Europe
+  BE: [
+    { code: "en", name: "English", display: "Eng" },
+    { code: "fr", name: "French", display: "French" },
+    { code: "nl", name: "Dutch", display: "Dutch" },
+    { code: "de", name: "German", display: "German" },
+  ],
+  PL: [
+    { code: "en", name: "English", display: "Eng" },
+    { code: "fr", name: "French", display: "Français" },
   ],
 };
 
