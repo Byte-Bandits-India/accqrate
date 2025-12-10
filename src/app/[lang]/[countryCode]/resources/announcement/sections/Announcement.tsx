@@ -3,19 +3,42 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import UpdateCard from "./UpdateCard";
-import CTASection from "./CTASection";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
 import ComingSoon from "@/Components/CommingSoon";
 
+type HeroContent = {
+  title: string;
+  description: string;
+};
+
+const HERO_CONTENT: Record<string, HeroContent> = {
+  BE: {
+    title: "We Will Keep You Updated At All Times",
+    description:
+      "Stay Updated With The Latest News And Updates From PEPPOL Or LHDN Or MRA Or OTA Or NBR Or ISTD, And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
+  },
+  PL: {
+    title: "We Will Keep You Updated At All Times",
+    description:
+      "Stay Updated With The Latest News And Updates From PEPPOL Or LHDN Or MRA Or OTA Or NBR Or ISTD, And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
+  },
+  default: {
+    title: "We Will Keep You Updated At All Times",
+    description:
+      "Stay Updated With The Latest News And Updates From ZATCA Or LHDN Or MRA Or OTA Or NBR Or ISTD, And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
+  },
+};
+
 const Index = () => {
-  // ✅ Get dynamic route params like "en" and "ksa"
+  // Get dynamic route params like "en" and "ksa"
   const params = useParams();
   const lang = params?.lang as string;
   const countryCode = params?.countryCode as string;
 
-  // ✅ Build dynamic base route for announcements
+  //  Build dynamic base route for announcements
   const announcementBase = `/${lang}/${countryCode}/resources/announcement`;
+  const heroContent = HERO_CONTENT[countryCode?.toUpperCase()] || HERO_CONTENT.default;
 
   return (
     <div className="min-h-screen">
@@ -24,13 +47,11 @@ const Index = () => {
         <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent">
           <section className="max-w-[1280px] px-6 md:px-8 xl:px-0 mx-auto mb-6 md:mb-8 lg:mb-[60px]">
             <h1 className="text-fluid-h3 lg:text-[38px] text-black font-semibold leading-tight">
-              We Will Keep You Updated At All Times
+              {heroContent.title}
             </h1>
             <div className="w-[126px] h-[2px] bg-[#194BED] my-6 md:my-8 lg:my-[45px]" />
             <p className="text-fluid-body max-w-[1100px] font-medium  mb-8 md:mb-[43px] leading-tight">
-              Stay Updated With The Latest News And Updates From ZATCA Or LHDN Or
-              MRA Or OTA Or NBR Or ISTD, And Accurate E-Invoicing Enhancements For
-              Seamless Business Operations.
+              {heroContent.description}
             </p>
 
             {/* ✅ Dynamic route link */}

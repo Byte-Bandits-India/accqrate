@@ -53,7 +53,6 @@ const countries = [
         language: "Arabic",
         currency: "JOD",
     },
-    // ✅ ADD THESE TWO COUNTRIES
     {
         name: "Belgium",
         code: "BE",
