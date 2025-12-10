@@ -17,7 +17,16 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { ContactModal } from "@/Components/ContactModal";
+import dynamic from "next/dynamic";
+
+// Add this dynamic import for ContactModal
+const ContactModal = dynamic(
+    () => import("@/Components/ContactModal").then((mod) => mod.ContactModal),
+    {
+        ssr: false,
+        loading: () => null,
+    }
+);
 
 
 // ---------------- CarouselCard ----------------
@@ -659,13 +668,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <T>{countryContent.heroDescription}</T>
                                 </p>
 
-                                <Link
-                                    href={createHref("/contact-us")}
+                                <button
+                                    onClick={() => setModalOpen(true)}
                                     className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3.563rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem] 2xl:my-[3rem] font-normal lg:w-[13.813rem] rounded-[5rem] text-fluid-body bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
                                 >
                                     <T>Meet an Expert</T>
                                     <Arrow45 />
-                                </Link>
+                                </button>
 
                                 <h2 className="mt-4 md:mt-5 text-fluid-body font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4">
                                     {countryContent.heroTagline.split(".").filter(Boolean).map((part, index, arr) => (
@@ -1362,8 +1371,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     </div>
                 </div>
             </div >
-            {/* Contact Modal */}
-            <ContactModal open={isModalOpen} onClose={handleCloseModal} />
+            {isModalOpen && (
+                <ContactModal
+                    open={isModalOpen}
+                    onClose={handleCloseModal}
+                />
+            )}
         </main >
     );
 };

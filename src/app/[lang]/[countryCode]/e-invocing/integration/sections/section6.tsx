@@ -2,9 +2,18 @@
 import AssetPath from '@/AssetPath/AssetPath'
 import React, { useState, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { useParams } from "next/navigation";
-import Image ,{StaticImageData} from 'next/image'
+import Image, { StaticImageData } from 'next/image'
+
+// Import ContactModal with dynamic loading
+const ContactModal = dynamic(
+    () => import('@/Components/ContactModal').then((mod) => mod.ContactModal),
+    {
+        ssr: false,
+        loading: () => null,
+    }
+)
 
 interface VideoItem {
     title: string
@@ -18,7 +27,8 @@ const DemoVideoSection: React.FC = () => {
     const lang = params?.lang as string;
     const countryCode = params?.countryCode as string;
     const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false)
     const scrollContainerRef = useRef<HTMLDivElement>(null)
 
     const demoVideos: VideoItem[] = [
@@ -44,12 +54,20 @@ const DemoVideoSection: React.FC = () => {
 
     const handleVideoClick = (video: VideoItem) => {
         setSelectedVideo(video)
-        setIsModalOpen(true)
+        setIsVideoModalOpen(true)
     }
 
-    const handleCloseModal = () => {
-        setIsModalOpen(false)
+    const handleCloseVideoModal = () => {
+        setIsVideoModalOpen(false)
         setSelectedVideo(null)
+    }
+
+    const handleContactClick = () => {
+        setIsContactModalOpen(true)
+    }
+
+    const handleCloseContactModal = () => {
+        setIsContactModalOpen(false)
     }
 
     const scroll = (direction: 'left' | 'right') => {
@@ -156,7 +174,7 @@ const DemoVideoSection: React.FC = () => {
                                     <p className="text-fluid-small md:text-[18px] text-white font-light">
                                         Complaint
                                     </p>
-                                     <Image
+                                    <Image
                                         src={AssetPath.home.starOr}
                                         alt="orange_star"
                                         width={20}
@@ -168,11 +186,11 @@ const DemoVideoSection: React.FC = () => {
                                     </p>
                                 </div>
 
-                                {/* Button */}
+                                {/* Button - Changed from Link to button */}
                                 <div className="flex justify-center md:justify-start">
-                                    <Link
-                                        href={`/${lang}/${countryCode}/contact-us`}
-                                        className="relative flex items-center justify-center w-[160px] h-[46px] md:w-[160px] md:h-[52px] bg-[#F05A28] rounded-[50px] px-2  text-white text-[14px] md:text-[16px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
+                                    <button
+                                        onClick={handleContactClick}
+                                        className="relative flex items-center justify-center w-[160px] h-[46px] md:w-[160px] md:h-[52px] bg-[#F05A28] rounded-[50px] px-2 text-white text-[14px] md:text-[16px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
                                     >
                                         <span className="mr-4">Get Started</span>
                                         <svg
@@ -190,7 +208,7 @@ const DemoVideoSection: React.FC = () => {
                                                 strokeLinejoin="round"
                                             />
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -209,14 +227,14 @@ const DemoVideoSection: React.FC = () => {
                 </div>
             </section>
 
-            {/* Modal */}
-            {isModalOpen && selectedVideo && (
+            {/* Video Modal */}
+            {isVideoModalOpen && selectedVideo && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
                     <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
                         <div className="flex justify-between items-center p-4 border-b">
                             <h3 className="text-lg font-semibold text-[#1C2041]">{selectedVideo.title}</h3>
                             <button
-                                onClick={handleCloseModal}
+                                onClick={handleCloseVideoModal}
                                 className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
                             >
                                 ×
@@ -235,6 +253,15 @@ const DemoVideoSection: React.FC = () => {
                         </div>
                     </div>
                 </div>
+            )}
+
+            {/* Contact Modal */}
+            {isContactModalOpen && (
+                <ContactModal
+                    open={isContactModalOpen}
+                    onClose={handleCloseContactModal}
+                // Pass additional props if needed
+                />
             )}
         </>
     )

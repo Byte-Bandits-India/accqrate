@@ -11,7 +11,7 @@ interface ContactModalProps {
   onClose: () => void;
 }
 
-export const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => {
+const ContactModalComponent: React.FC<ContactModalProps> = ({ open, onClose }) => {
   if (!open) return null;
 
   const formik = useFormik({
@@ -144,3 +144,5 @@ export const ContactModal: React.FC<ContactModalProps> = ({ open, onClose }) => 
     </div>
   );
 };
+
+export const ContactModal = React.memo(ContactModalComponent);

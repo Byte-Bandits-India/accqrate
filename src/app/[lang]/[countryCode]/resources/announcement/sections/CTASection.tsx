@@ -1,15 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Sparkles, Clock, Zap } from "lucide-react";
-import { ContactModal } from "@/Components/ContactModal";
+import { ArrowRight } from "lucide-react";
 import { useParams } from "next/navigation";
-import Link from "next/link";
-import AssetPath from "@/AssetPath/AssetPath";
 import Image from "next/image";
+import AssetPath from "@/AssetPath/AssetPath";
+import dynamic from "next/dynamic";
+
+// Import ContactModal with dynamic loading to avoid server-client issues
+const ContactModal = dynamic(
+  () => import("@/Components/ContactModal").then(mod => mod.ContactModal),
+  {
+    ssr: false,
+    loading: () => null // Optional loading component
+  }
+);
 
 const CTASection = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedButton, setSelectedButton] = useState<string>("");
   const params = useParams();
   const lang = params?.lang as string;
   const countryCode = params?.countryCode as string;
@@ -28,7 +37,7 @@ const CTASection = () => {
     // Belgium content
     be: {
       title: "Save time, save money",
-      description1: "Want the latest on Belgium’s e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
+      description1: "Want the latest on Belgium's e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
       description2: "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.",
       button1: "Get Peppol Compliance Demo",
       button2: "Subscribe for Updates",
@@ -47,7 +56,8 @@ const CTASection = () => {
 
   // Get content based on country code
   const getCountryContent = () => {
-    const code = countryCode?.toLowerCase();
+    if (!countryCode) return countryContent.default;
+    const code = countryCode.toString().toLowerCase();
 
     switch (code) {
       case 'be':
@@ -61,12 +71,18 @@ const CTASection = () => {
 
   const content = getCountryContent();
 
-  // Button texts array
-  const buttonTexts = [
-    content.button1,
-    content.button2,
-    content.button3
+  // Button data with types/identifiers
+  const buttonData = [
+    { id: "proof_of_concept", text: content.button1 },
+    { id: "subscribe", text: content.button2 },
+    { id: "sales", text: content.button3 }
   ];
+
+  // Handle button click
+  const handleButtonClick = (buttonId: string) => {
+    setSelectedButton(buttonId);
+    setModalOpen(true);
+  };
 
   return (
     <div className="w-full bg-gradient-to-l from-[#242087] to-[#1A0C48] relative shadow-xl">
@@ -99,11 +115,19 @@ const CTASection = () => {
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="flex items-center gap-2 text-white/90 text-sm">
                 <span>Free Proof of Concept</span>
-                <img src={AssetPath.resources.starYellow.src} alt="star" className="h-4 w-4" />
+                <img
+                  src={AssetPath.resources.starYellow?.src || AssetPath.resources.starYellow}
+                  alt="star"
+                  className="h-4 w-4"
+                />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
                 <span>30 Days Free Trial</span>
-                <img src={AssetPath.resources.starYellow.src} alt="star" className="h-4 w-4" />
+                <img
+                  src={AssetPath.resources.starYellow?.src || AssetPath.resources.starYellow}
+                  alt="star"
+                  className="h-4 w-4"
+                />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
                 <span>No complexity, Subscribe and use</span>
@@ -120,31 +144,34 @@ const CTASection = () => {
             width={499}
             height={350}
             className="xl:max-w-[499px] w-full md:h-[300px] lg:h-[350px] transform hover:scale-105 transition-transform duration-300"
+            priority={false}
           />
         </div>
       </div>
 
       {/* Bottom Buttons */}
       <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 pb-6 md:pb-8 lg:pb-10">
-        {buttonTexts.map((text, i) => (
-          <Link
-            href={`/${lang}/${countryCode}/contact-us`}
-            key={i}
+        {buttonData.map((button) => (
+          <button
+            key={button.id}
+            onClick={() => handleButtonClick(button.id)}
             className="
-        relative
-        lg:w-[300px] w-[270px] md:w-[240px]
-        h-[46px] md:h-[52px]
-        flex items-center justify-center
-        bg-[#F05A28]
-        rounded-[50px]
-        px-2
-        text-white
-        text-fluid-small md:text-[14px] lg:text-[16px] whitespace-nowrap
-        mt-[32px]
-      "
+              relative
+              lg:w-[300px] w-[270px] md:w-[240px]
+              h-[46px] md:h-[52px]
+              flex items-center justify-center
+              bg-[#F05A28]
+              rounded-[50px]
+              px-2
+              text-white
+              text-fluid-small md:text-[14px] lg:text-[16px] whitespace-nowrap
+              mt-[32px]
+              hover:bg-[#E04A18] transition-colors duration-200
+              cursor-pointer
+            "
           >
             {/* Centered Text */}
-            <span className="mx-auto ">{text}</span>
+            <span className="mx-auto ">{button.text}</span>
 
             {/* Arrow aligned to the right */}
             <svg
@@ -162,7 +189,7 @@ const CTASection = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </Link>
+          </button>
         ))}
       </div>
 
@@ -170,8 +197,18 @@ const CTASection = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32" />
 
-      {/* Contact Modal */}
-      <ContactModal open={isModalOpen} onClose={() => setModalOpen(false)} />
+      {/* Contact Modal - Dynamically loaded */}
+      {isModalOpen && (
+        <ContactModal
+          open={isModalOpen}
+          onClose={() => {
+            setModalOpen(false);
+            setSelectedButton("");
+          }}
+        // You can pass additional props if needed, like:
+        // selectedInterest={selectedButton}
+        />
+      )}
     </div>
   );
 };

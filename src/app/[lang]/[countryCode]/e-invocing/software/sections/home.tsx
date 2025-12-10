@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Star, StarHalf } from "lucide-react";
@@ -8,6 +9,7 @@ import peppolImg from "@/Assets/images/invoicing/peppol.png";
 import gdprImg from "@/Assets/images/invoicing/gdpr.png";
 import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
+import { ContactModal } from "@/Components/ContactModal";
 
 // Country configuration with all content inside
 const countryConfig = {
@@ -170,10 +172,13 @@ const countryConfig = {
     }
 };
 
-const Software = () => {
+const Software: React.FC = () => {
+    const [isModalOpen, setModalOpen] = React.useState(false);
     const params = useParams();
     const lang = params?.lang as string || "en";
     const countryCode = (params?.countryCode as string || "sa").toUpperCase();
+
+    const handleCloseModal = React.useCallback(() => setModalOpen(false), []);
 
     // Get country configuration or default to Saudi Arabia
     const country = countryConfig[countryCode as keyof typeof countryConfig] || countryConfig["SA"];
@@ -210,183 +215,191 @@ const Software = () => {
     const flagImage = getFlagForCountry(countryCode);
 
     return (
-        <section>
-            <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
-                <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-                    {/* LEFT CONTENT */}
-                    <div className="flex flex-col justify-center max-w-[730px] w-full">
-                        <div className="flex items-center gap-2">
-                            <p className="text-[#F05A28] text-fluid-small leading-[30px] m-0 whitespace-nowrap">
-                                {content.badgeText}
-                            </p>
+        <>
+            <section>
+                <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
+                    <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+                        {/* LEFT CONTENT */}
+                        <div className="flex flex-col justify-center max-w-[730px] w-full">
+                            <div className="flex items-center gap-2">
+                                <p className="text-[#F05A28] text-fluid-small leading-[30px] m-0 whitespace-nowrap">
+                                    {content.badgeText}
+                                </p>
 
-                            <Image
-                                src={flagImage}
-                                alt={`${content.name || countryCode}-flag`}
-                                width={30}
-                                height={20}
-                                className="w-[30px] h-auto rounded object-contain"
-                                unoptimized
-                            />
-                        </div>
-
-
-                        <p className="text-fluid-h3 lg:text-[38px] font-medium text-[#000000] mt-4 leading-tight mb-4">
-                            Enable Your Business With E-invoicing.
-                        </p>
-                        <h1 className="text-fluid-h2 lg:text-[54px] font-semibold text-[#000000] leading-tight">
-                            {content.title}
-                        </h1>
-
-                        <div className="h-[2px] w-[80px] bg-blue-600 my-6 md:my-8 lg:my-10"></div>
-
-                        {/* Description 1 with green E-invoicing */}
-                        <p
-                            className="text-[#000000] text-fluid-body lg:text-[18px] max-w-[560px] leading-[30px]"
-                            dangerouslySetInnerHTML={{ __html: content.description1 }}
-                        />
-
-                        {/* Description 2 */}
-                        {content.description2 && (
-                            <p className="text-[#000000] text-fluid-body max-w-[560px] leading-[30px]">
-                                {content.description2}
-                            </p>
-                        )}
-
-                        <div className="flex justify-start py-6 md:py-8 lg:py-10">
-                            <Link
-                                href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
-                                className="
-                  relative
-                  flex items-center justify-center
-                  w-[270px] md:w-[240px] lg:w-[300px]
-                  h-[46px] md:h-[52px]
-                  bg-[#F05A28]
-                  rounded-[50px]
-                  px-2
-                  text-white
-                  text-fluid-small md:text-[12px] lg:text-[16px]
-                  whitespace-nowrap
-                  transition-all duration-300 hover:bg-[#d94f22]
-                "
-                            >
-                                <span className="mx-auto">{content.ctaText}</span>
-
-                                <svg
-                                    width="14"
-                                    height="14"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    className="absolute right-4 text-white"
-                                >
-                                    <path
-                                        d="M9 6l6 6-6 6"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                            </Link>
-                        </div>
-
-                        <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8">
-                            <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                Simplified
-                            </p>
-                            <img
-                                src={AssetPath.home.starOr.src}
-                                alt="orange_star"
-                                className="w-5 h-5 md:w-auto md:h-auto"
-                            />
-                            <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                Smart
-                            </p>
-                            <img
-                                src={AssetPath.home.starOr.src}
-                                alt="orange_star"
-                                className="w-5 h-5 md:w-auto md:h-auto"
-                            />
-                            <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                Complaint
-                            </p>
-                        </div>
-                        <div className="flex items-center gap-2 text-[#333333] mt-6">
-                            <div className="flex items-center gap-1 text-[#FEB04C]">
-                                <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
-                            </div>
-                            <p className="text-sm font-medium">4.8 average rating from our customers</p>
-                        </div>
-                    </div>
-
-                    {/* RIGHT IMAGE */}
-                    <div className="flex-1 flex justify-center w-full">
-                        <Image
-                            src={AssetPath.invoicing.invoiceWithCreateScreen}
-                            alt={content.imageAlt}
-                            width={591}
-                            height={380}
-                            className="w-full max-w-[441px] rounded-2xl object-contain"
-                        />
-                    </div>
-                </div>
-            </div>
-
-            {/* IMAGE + TEXT SECTION */}
-            <div className="relative overflow-hidden py-6">
-                {/* Background */}
-                <div className="absolute inset-0" />
-
-                <div className="relative z-10 max-w-[1280px] mx-auto px-6">
-                    <div className="flex flex-wrap items-center justify-center gap-10">
-
-                        {[
-                            {
-                                img: peppolImg.src,
-                                alt: 'Peppol Certified',
-                                text: 'Peppol Certified',
-                                className: 'w-16 h-16',
-                            },
-                            {
-                                img: gdprImg.src,
-                                alt: 'GDPR Compliant',
-                                text: 'GDPR Compliant',
-                                className: 'w-16 h-16',
-                            },
-                            {
-                                img: serverImg.src,
-                                alt: 'Data Hosted in Europe',
-                                text: 'Data Hosted in Europe',
-                                className: 'w-16 h-16',
-                            },
-                            {
-                                img: isoImg.src,
-                                alt: 'ISO 27001 Certified',
-                                text: 'ISO 27001 Certified',
-                                className: 'w-16 h-16',
-                            },
-                        ].map((item, index) => (
-                            <div key={index} className="flex items-center gap-3">
-                                <img
-                                    src={item.img}
-                                    alt={item.alt}
-                                    className={`${item.className} object-contain`}
+                                <Image
+                                    src={flagImage}
+                                    alt={`${content.name || countryCode}-flag`}
+                                    width={30}
+                                    height={20}
+                                    className="w-[30px] h-auto rounded object-contain"
+                                    unoptimized
                                 />
-                                <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
-                                    {item.text}
+                            </div>
+
+
+                            <p className="text-fluid-h3 lg:text-[38px] font-medium text-[#000000] mt-4 leading-tight mb-4">
+                                Enable Your Business With E-invoicing.
+                            </p>
+                            <h1 className="text-fluid-h2 lg:text-[54px] font-semibold text-[#000000] leading-tight">
+                                {content.title}
+                            </h1>
+
+                            <div className="h-[2px] w-[80px] bg-blue-600 my-6 md:my-8 lg:my-10"></div>
+
+                            {/* Description 1 with green E-invoicing */}
+                            <p
+                                className="text-[#000000] text-fluid-body lg:text-[18px] max-w-[560px] leading-[30px]"
+                                dangerouslySetInnerHTML={{ __html: content.description1 }}
+                            />
+
+                            {/* Description 2 */}
+                            {content.description2 && (
+                                <p className="text-[#000000] text-fluid-body max-w-[560px] leading-[30px]">
+                                    {content.description2}
+                                </p>
+                            )}
+
+                            <div className="flex justify-start py-6 md:py-8 lg:py-10">
+                                <Link
+                                    href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setModalOpen(true);
+                                    }}
+                                    className="
+                      relative
+                      flex items-center justify-center
+                      w-[270px] md:w-[240px] lg:w-[300px]
+                      h-[46px] md:h-[52px]
+                      bg-[#F05A28]
+                      rounded-[50px]
+                      px-2
+                      text-white
+                      text-fluid-small md:text-[12px] lg:text-[16px]
+                      whitespace-nowrap
+                      transition-all duration-300 hover:bg-[#d94f22]
+                    "
+                                >
+                                    <span className="mx-auto">{content.ctaText}</span>
+
+                                    <svg
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        className="absolute right-4 text-white"
+                                    >
+                                        <path
+                                            d="M9 6l6 6-6 6"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </Link>
+                            </div>
+
+                            <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8">
+                                <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
+                                    Simplified
+                                </p>
+                                <img
+                                    src={AssetPath.home.starOr.src}
+                                    alt="orange_star"
+                                    className="w-5 h-5 md:w-auto md:h-auto"
+                                />
+                                <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
+                                    Smart
+                                </p>
+                                <img
+                                    src={AssetPath.home.starOr.src}
+                                    alt="orange_star"
+                                    className="w-5 h-5 md:w-auto md:h-auto"
+                                />
+                                <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
+                                    Complaint
                                 </p>
                             </div>
-                        ))}
+                            <div className="flex items-center gap-2 text-[#333333] mt-6">
+                                <div className="flex items-center gap-1 text-[#FEB04C]">
+                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
+                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
+                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
+                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
+                                    <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
+                                </div>
+                                <p className="text-sm font-medium">4.8 average rating from our customers</p>
+                            </div>
+                        </div>
 
+                        {/* RIGHT IMAGE */}
+                        <div className="flex-1 flex justify-center w-full">
+                            <Image
+                                src={AssetPath.invoicing.invoiceWithCreateScreen}
+                                alt={content.imageAlt}
+                                width={591}
+                                height={380}
+                                className="w-full max-w-[441px] rounded-2xl object-contain"
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </section>
+                {/* IMAGE + TEXT SECTION */}
+                <div className="relative overflow-hidden py-6">
+                    {/* Background */}
+                    <div className="absolute inset-0" />
+
+                    <div className="relative z-10 max-w-[1280px] mx-auto px-6">
+                        <div className="flex flex-wrap items-center justify-center gap-10">
+
+                            {[
+                                {
+                                    img: peppolImg.src,
+                                    alt: 'Peppol Certified',
+                                    text: 'Peppol Certified',
+                                    className: 'w-16 h-16',
+                                },
+                                {
+                                    img: gdprImg.src,
+                                    alt: 'GDPR Compliant',
+                                    text: 'GDPR Compliant',
+                                    className: 'w-16 h-16',
+                                },
+                                {
+                                    img: serverImg.src,
+                                    alt: 'Data Hosted in Europe',
+                                    text: 'Data Hosted in Europe',
+                                    className: 'w-16 h-16',
+                                },
+                                {
+                                    img: isoImg.src,
+                                    alt: 'ISO 27001 Certified',
+                                    text: 'ISO 27001 Certified',
+                                    className: 'w-16 h-16',
+                                },
+                            ].map((item, index) => (
+                                <div key={index} className="flex items-center gap-3">
+                                    <img
+                                        src={item.img}
+                                        alt={item.alt}
+                                        className={`${item.className} object-contain`}
+                                    />
+                                    <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
+                                        {item.text}
+                                    </p>
+                                </div>
+                            ))}
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            {/* Contact Modal */}
+            <ContactModal open={isModalOpen} onClose={handleCloseModal} />
+        </>
     );
 };
 
