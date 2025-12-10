@@ -254,20 +254,20 @@ const belgiumContent: CountryContent = {
   ],
   testimonials: [
     {
-      quote: "European Enterprise Partner",
-      name: "Accqrate's PEPPOL e-invoicing solution seamlessly integrated with our existing systems. We reduced compliance overhead by 70%.",
+      quote: "Ali - Construction Company",
+      name: "Accqrate’s e‑invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.",
       avatar: AssetPath.landingpage.ali.src,
       bg: AssetPath.landingpage.blue.src
     },
     {
-      quote: "Belgium Financial Services",
-      name: "The platform's intuitive interface made adoption painless. Our team was productive within days, not weeks.",
+      quote: "Al Laith, UAE Global Health & Beauty Co.",
+      name: "Accqrate’s e‑invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.",
       avatar: AssetPath.landingpage.uae.src,
       bg: AssetPath.landingpage.blue.src
     },
     {
-      quote: "Manufacturing Leader",
-      name: "Real-time compliance validation prevented costly rejections and kept our supply chain moving smoothly.",
+      quote: "Wail - Jonex",
+      name: "Accqrate’s e‑invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.",
       avatar: AssetPath.landingpage.wail.src,
       bg: AssetPath.landingpage.blue.src
     }
@@ -368,20 +368,20 @@ const polandContent: CountryContent = {
   ],
   testimonials: [
     {
-      quote: "Polish Manufacturing Giant",
-      name: "Accqrate's PEPPOL integration eliminated manual invoice processing. We now handle 10x more invoices with the same team.",
+      quote: "Ali - Construction Company",
+      name: "Accqrate’s e‑invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.",
       avatar: AssetPath.landingpage.ali.src,
       bg: AssetPath.landingpage.blue.src
     },
     {
-      quote: "Poland B2B Commerce Leader",
-      name: "The AI-powered validation caught errors before submission. Our rejection rate dropped to near zero.",
+      quote: "Al Laith, UAE Global Health & Beauty Co.",
+      name: "Accqrate’s e‑invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.",
       avatar: AssetPath.landingpage.uae.src,
       bg: AssetPath.landingpage.blue.src
     },
     {
-      quote: "Polish Logistics Company",
-      name: "Fast deployment, zero disruption. Accqrate's platform fit perfectly into our existing workflows.",
+      quote: "Wail - Jonex",
+      name: "Accqrate’s e‑invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.",
       avatar: AssetPath.landingpage.wail.src,
       bg: AssetPath.landingpage.blue.src
     }
