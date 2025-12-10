@@ -119,6 +119,12 @@ import orangeStar from "@/Assets/images/home/orange_star.png";
 import waveVector from "@/Assets/images/home/wave_vector.png";
 import clip from "@/Assets/images/home/clip.png";
 import starWhite from "@/Assets/images/home/Star.png";
+import prppolHome from "@/Assets/images/home/prppol.png";
+import gdrpHome from "@/Assets/images/home/gdrp.png";
+import isoHome from "@/Assets/images/home/iso.png";
+import greenAccq from "@/Assets/images/home/green-accq.png";
+import aiImage from "@/Assets/images/home/ai.png";
+import Belgiumflag from "@/Assets/images/home/belgium.png"
 
 // ==================== LANDINGPAGE IMAGES ====================
 import landingIcon1 from "@/Assets/images/landingpage/1.png";
@@ -542,6 +548,9 @@ const AssetPath = {
     factory: factoryCard,
     people: peopleCard,
     retail: retailCard,
+    peppol: prppolHome,
+    gdpr: gdrpHome,
+    iso: isoHome,
   },
 
   // HOME BACKGROUNDS
@@ -569,6 +578,9 @@ const AssetPath = {
     clip: clip,
     starOr: starOr,
     starWhite: starWhite,
+    greenAccq: greenAccq,
+    ai: aiImage,
+    belgium: Belgiumflag,
   },
 
   // LANDINGPAGE

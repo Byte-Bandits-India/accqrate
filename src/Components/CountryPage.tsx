@@ -9,7 +9,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { useCountryContent } from "@/Hooks/useCountryContent";
 import T from "@/Components/T"
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// using local inline chevrons to avoid rendering issues in some environments
 import {
     Accordion,
     AccordionContent,
@@ -107,6 +107,19 @@ const Arrow45: React.FC = () => (
         strokeWidth={2}
     >
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+);
+
+// Local Chevron icons (inline SVG) — used when lucide icons don't render
+const ChevronLeftIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
+    </svg>
+);
+
+const ChevronRightIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
     </svg>
 );
 
@@ -314,6 +327,32 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     const { createHref } = useDynamicRouting();
     const [enabled, setEnabled] = React.useState(false);
     const carouselRef = useRef<HTMLDivElement>(null);
+    // Resolve flag image from AssetPath.header.language using country code
+    const getFlagForCountry = (code: string) => {
+        switch (code.toUpperCase()) {
+            case 'SA':
+                return AssetPath.header.language.saudiArabia;
+            case 'AE':
+                return AssetPath.header.language.uae;
+            case 'OM':
+                return AssetPath.header.language.oman;
+            case 'BH':
+                return AssetPath.header.language.bahrain;
+            case 'MA':
+                return AssetPath.header.language.malaysia;
+            case 'MU':
+                return AssetPath.header.language.mauritius;
+            case 'JD':
+                return AssetPath.header.language.jordan;
+            case 'PL':
+                return AssetPath.header.language.poland;
+            case 'BE':
+                return AssetPath.home.belgium;
+            default:
+                return AssetPath.header.language.saudiArabia;
+        }
+    };
+    const flagImage = getFlagForCountry(countryCode);
     const bgImage = typeof countryContent.backgroundImage === 'string'
         ? countryContent.backgroundImage
         : countryContent.backgroundImage.src;
@@ -549,19 +588,26 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 //hero section
                 >
                     <div className="max-w-[1177px] lg:h-[100dvh] mx-auto px-6 overflow-hidden">
-                        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_520px] gap-6 lg:gap-8 pt-[3rem] lg:pt-[3rem] 2xl:pt-[4rem] h-full overflow-y-auto">
+                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-fluid-body lg:text-[24px] text-[#FFFFFF] pt-[3rem] lg:pt-[3rem] 2xl:pt-[4rem] tracking-para">
+                            <T>{countryContent.heroSubtitle}</T>
+                            <Image
+                                src={flagImage}
+                                alt={`${countryCode}-flag`}
+                                width={30}
+                                height={20}
+                                className="w-[30px] h-auto"
+                                unoptimized
+                            />
+                        </div>
+                        <h1 className="text-[1.5rem] md:text-[1.75rem] lg:text-[54px]  mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem]  text-[#FFFFFF] max-w-full lg:max-w-[900px] font-normal leading-tight">
+                            <T>{countryContent.heroTitle}</T>
+                        </h1>
+                        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_520px] gap-6 lg:gap-8">
                             {/* LEFT COLUMN */}
                             <div className="flex flex-col justify-start">
-                                <h1 className="text-[1.5rem] md:text-[1.75rem] lg:text-[2.375rem] text-[#FFFFFF] max-w-full lg:max-w-[639px] font-normal leading-tight">
-                                    <T>{countryContent.heroTitle}</T>
-                                </h1>
-                                <p className="font-medium text-fluid-body lg:text-[1.375rem] text-[#FFFFFF] mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] tracking-para">
-                                    <T>{countryContent.heroSubtitle}</T>
-                                </p>
+                                <p className="border-t-2 border-[#FFFFFF] w-full max-w-[110px] mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem]"></p>
 
-                                <p className="border-t-2 border-[#FFFFFF] w-[3.125rem] mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem]"></p>
-
-                                <p className="text-[#FFFFFF] max-w-[586px] text-fluid-small mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] tracking-para leading-[1.875rem] text-left font-normal">
+                                <p className="text-[#FFFFFF] max-w-[586px] text-fluid-body mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] tracking-para leading-[1.875rem] text-left font-normal">
                                     <T>{countryContent.heroDescription}</T>
                                 </p>
 
@@ -595,14 +641,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </div>
 
                             {/* RIGHT COLUMN */}
-                            <div className="hidden lg:flex flex-col justify-start mb-5 lg:mt-0 gap-3">
-                                <h1 className="text-fluid-body font-medium text-[#ffffff]"><T>Products to power every team</T></h1>
+                            <div className="hidden lg:flex flex-col justify-start mb-5 lg:mt-10 gap-3">
                                 {cards.map((card) => (
                                     <InfoCard key={card.title} {...card} />
                                 ))}
-                                <div className="h-[2.5rem] max-w-full md:max-w-[221px] bg-[#D6E0FF] rounded-[0.313rem] mt-2 flex items-center justify-start px-3 md:px-4 cursor-pointer">
-                                    <h3 className="text-[0.875rem] tracking-heading leading-tight text-nowrap"><T>Explore All Products ... </T></h3>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -630,29 +672,49 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 {/* /Why Accqrate? */}
                 <div>
-                    <div className=" px-6 md:px-8 xl:px-8 mt-[48px]">
-                        <div className="lg:px-6 max-w-[1177px] mx-auto w-full">
+                    <div className="px-6 md:px-8 xl:px-8 mt-[48px]">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 lg:px-6 max-w-[1177px] mx-auto w-full">
+
                             {/* Left Column */}
-                            <div>
+                            <div className="max-w-[500px]">
                                 <h2 className="font-medium text-fluid-small tracking-heading uppercase">
                                     <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
+
                                 <Image
                                     src={AssetPath.home.blueStar}
                                     alt="groupstar"
                                     width={28}
                                     height={28}
-                                    className="w-auto h-[28px] md:h-[28px] lg:hidden"
+                                    className="w-auto h-[28px] lg:hidden"
                                 />
 
-                                <h3 className="text-[24px] md:text-[28px] lg:text-[36px] max-w-[1000px] font-medium mt-6 md:mt-8 lg:mt-[40px] leading-tight">
-                                    <T>{countryContent.whyAccqrateSubtitle || "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."}</T>
+                                <h3 className="text-[24px] md:text-[28px] lg:text-[36px] font-medium mt-6 md:mt-8 lg:mt-[40px] leading-tight">
+                                    <T>
+                                        {countryContent.whyAccqrateSubtitle ||
+                                            "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."}
+                                    </T>
                                 </h3>
-                                <div className="hidden lg:flex justify-center max-w-[555px] mt-6 md:mt-8 lg:mt-[43px]">
-                                    <Image src={AssetPath.home.blueStar} className="h-[64px]" width={64} height={64} alt="groupstar" />
-                                </div>
+                            </div>
+
+                            {/* Right Column */}
+                            <div className="max-w-[500px] flex flex-col justify-around">
+                                <p className="text-fluid-small font-normal leading-[24px]">
+                                    <T>
+                                        From compliance to automation, Accqrate ensures a seamless PEPPOL
+                                        e-invoicing experience.
+                                    </T>
+                                </p>
+
+                                <button
+                                    className="self-start h-[40px] w-[144px] md:w-[199px] text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-6 lg:mt-0"
+                                    style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                                >
+                                    <T>See It in Action</T>
+                                </button>
                             </div>
                         </div>
+
 
                         <div className="relative">
                             {/* 🔹 Top Section (Buttons) */}
@@ -661,13 +723,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     onClick={() => scroll("left")}
                                     className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow hover:bg-gray-100 transition"
                                 >
-                                    <ChevronLeft className="w-5 h-5 text-gray-700" />
+                                    <ChevronLeftIcon className="w-5 h-5 text-gray-700" />
                                 </button>
                                 <button
                                     onClick={() => scroll("right")}
                                     className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow hover:bg-gray-100 transition"
                                 >
-                                    <ChevronRight className="w-5 h-5 text-gray-700" />
+                                    <ChevronRightIcon className="w-5 h-5 text-gray-700" />
                                 </button>
                             </div>
 
@@ -799,7 +861,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-center md:justify-start mt-[73px] px-6 md:px-8">
+                    <div className="max-w-[1177px] mx-auto flex items-center justify-center md:justify-start mt-[73px] px-6 md:px-8">
                         <Switch checked={enabled} onCheckedChange={setEnabled} />
                     </div>
 
@@ -813,19 +875,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="flex flex-col flex-1">
                                 <div>
                                     <div className="flex items-center space-x-4">
-                                        <Image src={AssetPath.landingpage.oneErp} alt="one" width={50} height={50} className="h-[40px] md:h-[50px] w-auto" />
+                                        <Image src={AssetPath.home.greenAccq} alt="one" width={50} height={50} className="h-[40px] md:h-[50px] w-auto" />
                                         <span className="text-[#000000] tracking-heading leading-tight text-fluid-body whitespace-nowrap">
-                                            Accqrate ONE <br />
-                                            The Full-Suite ERP
+                                            Accqrate E-invoicing
+                                            <span className="text-sm"> <br /><T>{countryContent.heroSubtitle}</T></span>
                                         </span>
                                     </div>
                                     <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#333333] text-fluid-body mt-[30px]">
-                                        Replace fragmented tools and legacy monoliths with a modern ERP suite designed for speed and adoption.
+                                        Peppol Member and certified Access Point Provider and Service Metadata Publisher.
                                     </p>
                                 </div>
 
                                 <div className="w-full mt-auto">
-                                    <div className="bg-[#D9D9D9] h-[436px] md:h-[386px] rounded-[20px]"></div>
+                                    <div className="border-[#FF9BC1] border h-[436px] md:h-[386px] rounded-[20px]"></div>
                                 </div>
                             </div>
                         </FadeUp>
@@ -833,66 +895,47 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         {/* Right Side: Modules + What you'll achieve */}
                         <div className="flex flex-col gap-6 xl:h-full">
                             <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                <h2 className="text-fluid-body font-medium tracking-heading">Modules included:</h2>
-                                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 mt-8 text-fluid-small lg:text-[16px] text-nowrap tracking-para leading-[26px] list-disc pl-5">
-                                    <li>POS</li>
-                                    <li>Sales</li>
-                                    <li>Purchase</li>
-                                    <li>Accounting</li>
-                                    <li>Project Management</li>
-                                    <li>CRM</li>
-                                    <li>E-Invoicing</li>
-                                    <li>Production</li>
-                                    <li>HR & Payroll</li>
-                                    <li>Cycle Management</li>
-                                    <li>DMS</li>
-                                    <li>Inventory</li>
-                                    <li>Controlling</li>
-                                    <li>Fixed Assets</li>
-                                    <li>Gold Management</li>
+                                <h2 className="text-fluid-body font-medium tracking-heading">Full Compliance with Belgium’s E-Invoicing Mandate</h2>
+                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading">Accqrate ensures end-to-end compliance with Belgium’s B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:</h2>
+                                <ul className="gap-y-2 mt-8 text-fluid-small lg:text-[16px] tracking-para leading-[26px] list-disc pl-5">
+                                    <li>Structured formats fully aligned with Belgian and EU specifications</li>
+                                    <li>Secure, standardized exchange over PEPPOL</li>
+                                    <li>Automated updates for evolving tax and technical regulations</li>
+                                    <li>Seamless integration with Mercurius and tax authority systems</li>
                                 </ul>
                             </FadeUp>
 
                             <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                <h2 className="text-fluid-body font-medium tracking-heading">What you&apos;ll achieve:</h2>
+                                <h2 className="text-fluid-body font-medium tracking-heading">Hassle-Free E-Invoicing Automation</h2>
+                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading">Shift from manual intervention to intelligent automation:</h2>
                                 <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small lg:text-[16px] leading-tight tracking-para">
-                                    <li>Unified operations: Finance to factory on a single source of truth.</li>
-                                    <li>Quicker close, cleaner audits: Built-in controls and automated reconciliations.</li>
-                                    <li>Smarter planning: AI-assisted forecasting and scenario modeling.</li>
-                                    <li>Happier teams: Intuitive UI reduces training time and boosts productivity.</li>
+                                    <li>AI-powered validation to reduce rejections</li>
+                                    <li>Real-time error detection and correction suggestions</li>
+                                    <li>Zero-cost regulatory upgrades</li>
+                                    <li>Automated generation → validation → PEPPOL submission → archiving</li>
                                 </ul>
 
-                                <h2 className="mt-8 text-fluid-body font-medium tracking-heading">Migration advantages:</h2>
-                                <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small lg:text-[16px] leading-tight tracking-para">
-                                    <li>Rapid implementation with minimal downtime.</li>
-                                    <li>Proven playbooks for moving from ERPs & Applications.</li>
-                                    <li>Coexistence options while you phase out legacy.</li>
-                                </ul>
+                                <button
+                                    className="h-[46px] md:h-[55px] max-w-[250px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"                        >
+                                    Book an Appoinment
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        className="text-white"
+                                    >
+                                        <path
+                                            d="M9 6l6 6-6 6"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </button>
                             </FadeUp>
                         </div>
-                    </div>
-
-
-                    <div className="px-6 md:px-8 mt-[32px]">
-                        <button
-                            className="h-[46px] md:h-[55px] max-w-[481px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"                        >
-                            Request an ERP Migration Assessment
-                            <svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                className="text-white"
-                            >
-                                <path
-                                    d="M9 6l6 6-6 6"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                        </button>
                     </div>
                 </div>
 
@@ -912,14 +955,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
 
                         {/* Content */}
-                        <div className="relative z-10 flex items-center min-h-[450px]">
+                        <div className="relative z-10 flex items-center min-h-[450px] max-w-[1200px] mx-auto rounded-[20px] px-6 md:px-8 xl:px-8 bg-white">
                             <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0 grid lg:grid-cols-2 gap-6">
 
                                 {/* Left Part */}
                                 <FadeUp className="font-inter rounded-2xl flex flex-col justify-between p-8 bg-transparent flex-shrink-0">
                                     <div>
                                         <h2 className="text-black text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight">
-                                            Accelerate <br /> Your AI Copilot
+                                            <span className="text-[#194BED]">Accelera</span> Your AI Copilot
                                         </h2>
 
                                         <p className="text-[#333333] text-[14px] md:text-[16px] mt-[40px] mb-6">
@@ -947,8 +990,17 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                 {/* Right Part */}
                                 <FadeUp className="flex items-center justify-center p-8">
-                                    <div className="bg-[#D9D9D9] w-full h-[380px] md:h-[420px] flex-shrink-0"></div>
+                                    <div className="relative w-full max-w-[500px] h-[320px] md:h-[360px] lg:h-[420px]">
+                                        <Image
+                                            src={AssetPath.home.ai}
+                                            alt="AI Copilot"
+                                            fill
+                                            className="object-contain rounded-lg"
+                                            priority
+                                        />
+                                    </div>
                                 </FadeUp>
+
 
                             </div>
                         </div>
@@ -956,11 +1008,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
 
                     {/* COMPLIANCE SECTION */}
-                    <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0 mt-[72px] grid lg:grid-cols-2 gap-6 items-stretch pb-[36px] md:pb-[200px] lg:pb-[300px]">
+                    <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0 mt-[72px] grid lg:grid-cols-2 gap-6 items-stretch pb-[36px]">
                         {/* Left Side: Image (Desktop) */}
                         <div className="hidden lg:flex flex-col items-start justify-between p-6 md:p-8">
                             <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
-                                Compliance & Connectivity
+                                Future-Ready for ViDA
                             </h2>
                             <div className="bg-[#D9D9D9] w-full h-full"></div>
                         </div>
@@ -968,27 +1020,27 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         {/* Right Side: Text + List + Button */}
                         <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-between p-6 md:p-8">
                             {/* Heading (mobile only) */}
-                            <h2 className="text-black lg:hidden tracking-para text-[20px] font-medium md:text-[24px] lg:text-[30px] xl:text-[48px] leading-tight whitespace-nowrap mb-6">
-                                Compliance & Connectivity
+                            <h2 className="text-fluid-small text-left pl-5 leading-[24px] tracking-para mb-4">
+                                Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:
                             </h2>
 
                             <div>
                                 <ul className="list-disc space-y-4 mt-[15px] text-fluid-small text-left pl-5 leading-[24px] tracking-para">
                                     <li>
-                                        ZATCA Phase II: Generate compliant e-invoices at scale; integrate with KSA tax authority.
+                                        Cross-border interoperability within the EU
                                     </li>
-                                    <li>PEPPOL: Cross-border e-invoicing via standardized network.</li>
+                                    <li>Configurable digital reporting aligned with ViDA</li>
                                     <li>
-                                        Open integrations: Connect any ERP, POS or homegrown system through APIs and adapters.
+                                        Multi-entity, multi-VAT number management for MNCs
                                     </li>
                                 </ul>
                             </div>
 
                             <button
-                                className="h-[40px] max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
+                                className="h-[40px] max-w-[288px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
                                 style={{ background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)" }}
                             >
-                                Talk to a Compliance Expert
+                                Talk to our Consultant
                                 <svg
                                     width="20"
                                     height="20"
@@ -1017,7 +1069,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             </div>
 
             {/* Outcomes and The Impact */}
-            <div className="md:mx-8" >
+            <div className="md:mx-8 hidden"  >
                 <div className="relative md:-top-[150px] lg:-top-[200px] max-w-[1151px] pb-8 mx-auto md:border md:rounded-[40px] bg-white min-h-[400px]">
                     <div>
                         <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium text-center mt-8 tracking-heading leading-tight">Outcomes and The Impact</h2>
@@ -1054,7 +1106,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             </div >
 
             {/* Testimonials Section */}
-            <div className="max-w-[1177px] mx-auto px-0 md:px-8 mt-8 md:mt-0" >
+            <div className="max-w-[1177px] mx-auto px-0 md:px-8 mt-8 md:mt-10" >
                 <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left mb-8 px-6">Testimonials</h2>
                 <Carousel items={testimonialCards} autoplay autoplayDelay={4000} />
                 <div className="flex items-center justify-center">
@@ -1160,7 +1212,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                     {item.question}
                                                 </AccordionTrigger>
 
-                                                <AccordionContent className="text-[14px] md:text-[16px] font-light text-gray-600 tracking-para leading-relaxed mt-2">
+                                                <AccordionContent className="text-[14px] md:text-[16px] font-light text-gray-600 tracking-para leading-relaxed mt-2 text-left">
                                                     {item.answer}
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -1198,7 +1250,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6 md:py-8 lg:py-10">
                         {[
                             "Get a Free Proof of Concept",
-                            "Start 30-Day Free Trial",
+                            "Subscribe for Updates",
                             "Talk to Sales",
                         ].map((text, i) => (
                             <button
