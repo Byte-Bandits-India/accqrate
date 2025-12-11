@@ -455,7 +455,7 @@ import bluestar from "@/Assets/images/about/bluestar.png";
 import stone from "@/Assets/images/about/stone.png";
 import hands from "@/Assets/images/about/hands.png";
 import ourteam from "@/Assets/images/about/ourteam.png";
-import aboutHero from "@/Assets/images/about/about-hero.png";
+import aboutHero from "@/Assets/images/about/about-hero.webp";
 
 const AssetPath = {
   // HEADER SECTION
