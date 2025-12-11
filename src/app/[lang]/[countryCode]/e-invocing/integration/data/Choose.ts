@@ -58,7 +58,7 @@ export const Choose = {
 be: {
   title: "Why Choose",
   subtitle:
-    "Seamlessly integrate your existing ERP/POS with Peppol and achieve full EN 16931 compliance for Belgium’s 2026 e-invoicing mandate.",
+    "Seamlessly integrate your existing ERP/POS with Peppol and achieve full EN 16931 compliance for Belgium\'s 2026 e-invoicing mandate.",
 
   topLeftItems: [
     {
