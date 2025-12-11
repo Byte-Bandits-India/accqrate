@@ -53,10 +53,10 @@ export default function ProofSection() {
           {data.rightItems.map((item, i) => (
             <div key={i}>
               <h3 className="text-[#1C2041] font-semibold text-[20px] mb-1">
-                {item.title}
+                <T lang={lang} countryCode={countryCode}>{item.title}</T>
               </h3>
               <p className="text-[#5A6183] leading-relaxed max-w-[430px] text-[16px]">
-                {item.desc}
+                <T lang={lang} countryCode={countryCode}>{item.desc}</T>
               </p>
             </div>
           ))}
