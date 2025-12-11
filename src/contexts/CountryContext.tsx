@@ -156,10 +156,9 @@ export function CountryProvider({ children }: { children: ReactNode }) {
             setAvailableLanguages(langsForCountry);
             setSelectedLanguage(resolvedLanguage);
 
-            // Update translation system immediately for supported languages
-            if (resolvedLanguage.code === 'en' || resolvedLanguage.code === 'ar') {
-                setLanguage(resolvedLanguage.code as 'en' | 'ar');
-            }
+            // Update translation system immediately for the resolved language
+            // (propagates into per-country modules via src/lib/translations)
+            setLanguage(resolvedLanguage.code as any);
 
             console.log('🌍 CountryContext: Initialized country to', resolvedCountry.code, 'with language', resolvedLanguage.code);
         };
@@ -182,9 +181,9 @@ export function CountryProvider({ children }: { children: ReactNode }) {
 
     // Update translation system whenever selectedLanguage changes
     useEffect(() => {
-        if (isInitialized && (selectedLanguage.code === 'en' || selectedLanguage.code === 'ar')) {
+        if (isInitialized) {
             console.log('🔄 CountryContext: Updating language to', selectedLanguage.code);
-            setLanguage(selectedLanguage.code as 'en' | 'ar');
+            setLanguage(selectedLanguage.code as any);
 
             // Force a re-render of translation components
             // This ensures T components update with new translations
