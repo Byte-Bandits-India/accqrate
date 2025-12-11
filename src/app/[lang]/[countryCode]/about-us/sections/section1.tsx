@@ -45,7 +45,7 @@ export default function Section1() {
     alt="about hero"
     width={350}
     height={319}
-    className="object-contain max-w-[300px] max-h-[319px]"
+    className="object-contain max-w-[500px] max-h-[419px]"
   />
 </div>
 
@@ -70,3 +70,4 @@ export default function Section1() {
     </section>
   );
 }
+
