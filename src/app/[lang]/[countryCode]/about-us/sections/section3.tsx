@@ -35,14 +35,14 @@ export default function Section3() {
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}
-              <div className="flex-1 ml-6 md:ml-0 md:max-w-[400px] md:pr-6 md:order-1">
+              <div className="flex-1 ml-6 md:ml-0 md:max-w-[479px] md:pr-6 md:order-1">
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2016</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px]">
+                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
                   Iteron AG: High-End Technology Consultancy
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed">
+                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
                   Iteron AG begins operations in Switzerland, delivering advanced technology
                   consulting across Europe. From enterprise SaaS to blockchain-based solutions,
                   the company lays the groundwork for the modern digital compliance and
@@ -70,14 +70,14 @@ export default function Section3() {
               </div>
 
               {/* CONTENT RIGHT - Right side on mobile, right on md+ */}
-              <div className="flex-1 ml-6 md:ml-0 md:max-w-[400px] md:pl-6 md:order-3">
+              <div className="flex-1 ml-6 md:ml-0 md:max-w-[479px] md:pl-6 md:order-3">
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2020</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px]">
+                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
                   Accqrate Global Platform Initiated
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed">
+                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
                   Accqrate emerges as a unified ERP and E-Invoicing platform engineered for
                   high-compliance jurisdictions, multi-country operations, and enterprise-level
                   digital transformation.
@@ -95,16 +95,16 @@ export default function Section3() {
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}
-              <div className="flex-1 ml-6 md:ml-0 md:max-w-[400px] md:pr-6 md:order-1">
+              <div className="flex-1 ml-6 md:ml-0 md:max-w-[479px] md:pr-6 md:order-1">
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2021</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px]">
+                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
                   E-Invoicing Launch Across Regulated Markets
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed">
-                  Accqrate's engine is launched in the Kingdom of Saudi Arabia, establishing
-                  direct integration with ZATCA and marking the platform's entry into regulated
+                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                  Accqrate's engine is launched in the Kingdom of Belgium, establishing
+                  direct integration with PEPPOL and marking the platform's entry into regulated
                   tax ecosystems.
                 </p>
               </div>
@@ -130,14 +130,14 @@ export default function Section3() {
               </div>
 
               {/* CONTENT RIGHT - Right side on mobile, right on md+ */}
-              <div className="flex-1 ml-6 md:ml-0 md:max-w-[400px] md:pl-6 md:order-3">
+              <div className="flex-1 ml-6 md:ml-0 md:max-w-[479px] md:pl-6 md:order-3">
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2022</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px]">
+                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
                   Expansion of API-First Integrations
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed">
+                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
                   Accqrate strengthens its integration layer with certified connectors and
                   toolkits for SAP, Oracle, Microsoft Dynamics and major ERP/POS platforms.
                 </p>
@@ -154,14 +154,14 @@ export default function Section3() {
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}
-              <div className="flex-1 ml-6 md:ml-0 md:max-w-[400px] md:pr-6 md:order-1">
+              <div className="flex-1 ml-6 md:ml-0 md:max-w-[479px] md:pr-6 md:order-1">
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2023</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px]">
+                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
                   MNC Deployments Across MENA, ASEAN & EU
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed">
+                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
                   Accqrate supports multi-entity deployments, processing millions of monthly
                   transactions across global enterprises with assured compliance.
                 </p>
@@ -188,14 +188,14 @@ export default function Section3() {
               </div>
 
               {/* CONTENT RIGHT - Right side on mobile, right on md+ */}
-              <div className="flex-1 ml-6 md:ml-0 md:max-w-[400px] md:pl-6 md:order-3">
+              <div className="flex-1 ml-6 md:ml-0 md:max-w-[479px] md:pl-6 md:order-3">
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2024</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px]">
+                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
                   Belgium & EU Compliance Acceleration
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed">
+                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
                   Accqrate launches its Belgium PEPPOL engine with Mercurius interoperability
                   and achieves full readiness for ViDA-aligned digital reporting.
                 </p>
@@ -212,14 +212,14 @@ export default function Section3() {
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}
-              <div className="flex-1 ml-6 md:ml-0 md:max-w-[400px] md:pr-6 md:order-1">
+              <div className="flex-1 ml-6 md:ml-0 md:max-w-[479px] md:pr-6 md:order-1">
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2025</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px]">
+                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
                   Enterprise-Grade Automation & AI Validation Engine
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed">
+                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
                   Accqrate introduces AccelerAI, a sophisticated automation layer for real-time
                   compliance checks, anomaly detection, VAT reconciliation, and cross-border reporting.
                 </p>
