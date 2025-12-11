@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
-import BelgiumT from "@/Components/BelgiumT";
+import T from "@/Components/T";
 
 const CTASection = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -25,15 +25,15 @@ const CTASection = () => {
         {/* LEFT CONTENT */}
         <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
           <h2 className="text-fluid-h2 lg:text-[38px] font-medium mb-6">
-            <BelgiumT>Save time, save money</BelgiumT>
+            <T>Save time, save money</T>
           </h2>
 
           <p className="text-fluid-body lg:text-[24px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
-            <BelgiumT>Want the latest on</BelgiumT> {complianceName} <BelgiumT>updates, fresh product insights, and exclusive Company editorials?</BelgiumT>
+            <T>Want the latest on</T> {complianceName} <T>updates, fresh product insights, and exclusive Company editorials?</T>
           </p>
 
           <p className="text-sm text-white/80 leading-tight xl:max-w-[773px] ">
-            <BelgiumT>Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!</BelgiumT>
+            <T>Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!</T>
           </p>
 
           <div className="hidden">
@@ -42,7 +42,7 @@ const CTASection = () => {
               onClick={() => setModalOpen(true)}
               className="inline-flex items-center px-6 py-3 bg-white text-primary font-semibold rounded-full shadow-lg hover:bg-white/90 transition-all duration-200"
             >
-              Sign Up
+             <T>Sign Up</T>
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
 
@@ -50,18 +50,18 @@ const CTASection = () => {
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="flex items-center gap-2 text-white/90 text-sm">
 
-                <span>Free Proof of Concept</span>
+                <span><T>Free Proof of Concept</T></span> 
                 <Image src={AssetPath.resources.starYellow} alt="star" width={16} height={16} className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
 
-                <span>30 Days Free Trial</span>
+                <span><T>Subscribe for updates</T></span>
                 <Image src={AssetPath.resources.starYellow} alt="star" width={16} height={16} className="h-4 w-4" />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
 
-                <span>No complexity, Subscribe and use</span>
-
+                <span><T>No complexity, Subscribe and use</T></span>
+ 
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ const CTASection = () => {
       <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 pb-6 md:pb-8 lg:pb-10">
         {[
           "Get a Free Proof of Concept",
-          "Start 30-Day Free Trial",
+          "Subscribe for Updates",
           "Talk to Sales",
         ].map((text, i) => (
           <Link
@@ -93,19 +93,19 @@ const CTASection = () => {
            
             className="
         relative
-        lg:w-[300px] w-[270px] md:w-[240px]
+        w-auto 
         h-[46px] md:h-[52px]
         flex items-center justify-center
         bg-[#F05A28]
         rounded-[50px]
-        px-2
+        px-8
         text-white
         text-fluid-small md:text-[14px] lg:text-[16px] whitespace-nowrap
         mt-[32px]
       "
           >
             {/* Centered Text */}
-            <span className="mx-auto ">{text}</span>
+            <span className="mx-auto "><T>{text}</T></span>
 
             {/* Arrow aligned to the right */}
             <svg
