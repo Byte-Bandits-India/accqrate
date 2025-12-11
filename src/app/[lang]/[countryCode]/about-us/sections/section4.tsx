@@ -57,8 +57,8 @@ const Section4: React.FC = () => {
       </div>
 
       {/* Scrollable Cards */}
-      <div className="relative mt-10 ml-40">
-        <div className="max-w-[1400px] mx-auto overflow-hidden px-4 lg:px-0">
+      <div className="relative mt-10 xl:ml-40">
+        <div className="max-w-[1400px] mx-auto overflow-hidden">
           <div
             ref={scrollRef}
             className="flex gap-6 md:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
