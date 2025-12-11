@@ -125,7 +125,7 @@ import isoHome from "@/Assets/images/home/iso.png";
 import greenAccq from "@/Assets/images/home/green-accq.png";
 import aiImage from "@/Assets/images/home/ai.png";
 import acceleraWebp from "@/Assets/images/home/accelera.webp";
-import vidaHome from "@/Assets/images/home/VIDA_home.webp";
+import vidaHome from "@/Assets/images/home/VIDA_home.png";
 
 // ==================== LANDINGPAGE IMAGES ====================
 
@@ -307,6 +307,8 @@ import invoiceMalaysia from "@/Assets/images/invoicing/invoice-malaysia.webp";
 import invoiceMy from "@/Assets/images/invoicing/invoice-my.webp";
 import invoiceTabView from "@/Assets/images/invoicing/invoice-tab-view.webp";
 import invoiceWithCreateScreenMalaysia from "@/Assets/images/invoicing/invoice-with-create-screen-malaysia.webp";
+import invoiceSinglePng from "@/Assets/images/invoicing/invoice-1.png";
+import invoiceMultiplePng from "@/Assets/images/invoicing/invoice-2.png";
 import invoiceWithCreateScreen from "@/Assets/images/invoicing/invoice-with-create-screen.webp";
 import invoice from "@/Assets/images/invoicing/invoice.webp";
 import magnifiedInvoice from "@/Assets/images/invoicing/magnified-invoice.webp";
@@ -448,6 +450,7 @@ import bluestar from "@/Assets/images/about/bluestar.png";
 import stone from "@/Assets/images/about/stone.png";
 import hands from "@/Assets/images/about/hands.png";
 import ourteam from "@/Assets/images/about/ourteam.png";
+import aboutHero from "@/Assets/images/about/about-hero.png";
 
 const AssetPath = {
   // HEADER SECTION
@@ -753,6 +756,8 @@ const AssetPath = {
     invoiceTabView,
     invoiceWithCreateScreenMalaysia,
     invoiceWithCreateScreen,
+    invoiceSinglePng,
+    invoiceMultiplePng,
     invoice,
     magnifiedInvoice,
     manageTeam,
@@ -942,6 +947,7 @@ const AssetPath = {
     bluestar: bluestar,
     stone: stone,
     hands: hands,
+    hero: aboutHero,
     ourteam: ourteam,
   },
 };

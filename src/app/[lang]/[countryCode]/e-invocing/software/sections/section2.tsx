@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation'
 import AssetPath from "@/AssetPath/AssetPath";
 import Solutions from './Solutions';
 import CompleteSoftware from './CompleteSoftware';
+import T from '@/Components/T';
 
 const Section2 = () => {
     const params = useParams()
@@ -25,10 +26,10 @@ const Section2 = () => {
                 {!['BE', 'PL'].includes(countryCode?.toUpperCase() || '') && (
                     <div className="bg-[#29266E] text-white text-center py-8 md:py-10 lg:py-[80px] px-6 md:px-8 xl:px-0">
                         <h3 className="text-fluid-h2 lg:text-[38px] font-normal leading-tight">
-                            Easy Onboarding Process
+                            <T>Easy Onboarding Process</T>
                         </h3>
                         <p className="text-fluid-body mt-4 md:mt-6">
-                            Get Digital In Just 30 Minutes With Our Quick On Boarding Process
+                            <T>Get Digital In Just 30 Minutes With Our Quick On Boarding Process</T>
                         </p>
 
                         <div className="mt-8 flex justify-center">
@@ -40,31 +41,31 @@ const Section2 = () => {
                         </div>
 
                         <p className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-8 text-[14px] md:text-fluid-body text-white md:text-center">
-                            <span>No credit card needed</span>
+                            <span><T>No credit card needed</T></span>
                             <img
                                 src={AssetPath.invoicing.starGold.src}
                                 alt="separator"
                                 className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
                             />
-                            <span>Unlimited time on Free plan</span>
+                            <span><T>Unlimited time on Free plan</T></span>
                             <img
                                 src={AssetPath.invoicing.starGold.src}
                                 alt="separator"
                                 className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
                             />
-                            <span>100% Money-Back Guarantee</span>
+                            <span><T>100% Money-Back Guarantee</T></span>
                             <img
                                 src={AssetPath.invoicing.starGold.src}
                                 alt="separator"
                                 className="w-[12px] h-[12px] md:w-[18px] md:h-[18px]"
                             />
-                            <span>Unsubscribe Anytime</span>
+                            <span><T>Unsubscribe Anytime</T></span>
                         </p>
 
                         <button
                             className="inline-flex text-[14px] md:text-[18px] items-center justify-center gap-2 bg-[#F05A28] mt-6 md:mt-8 lg:mt-10 text-[#FFFFFF] font-medium px-6 py-4 rounded-full"
                         >
-                            Book a Demo <ArrowRight className="w-4 h-4 -rotate-45" />
+                            <T>Book a Demo</T> <ArrowRight className="w-4 h-4 -rotate-45" />
                         </button>
 
 
@@ -76,9 +77,9 @@ const Section2 = () => {
                     <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-12'>
                         <div className='px-6 md:px-8 xl:px-0'>
                             <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
-                                Flexible Deployment
+                                <T>Flexible Deployment</T>
                             </h3>
-                            <p className='text-[#333333] text-fluid-body max-w-[428px] mt-4 md:mt-6 '>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</p>
+                            <p className='text-[#333333] text-fluid-body max-w-[428px] mt-4 md:mt-6 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
 
                             <div className="py-6 md:py-8 lg:py-10">
                                 <div className="flex flex-col lg:flex-row justify-start items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
@@ -90,10 +91,10 @@ const Section2 = () => {
                                             className="w-[64px] h-auto"
                                         />
                                         <h3 className="text-fluid-body text-[#1C2041]">
-                                            Cloud Based Solutions
+                                            <T>Cloud Based Solutions</T>
                                         </h3>
                                         <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
-                                            Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions
+                                            <T>Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions</T>
                                         </p>
 
                                         <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
@@ -107,7 +108,7 @@ const Section2 = () => {
                                             ].map((item, i) => (
                                                 <li key={i} className="flex items-start gap-2">
                                                     <span className="mt-[10px] block w-[6px] h-[6px] rounded-full bg-[#91ABFF]" />
-                                                    <span className="flex-1">{item}</span>
+                                                    <span className="flex-1"><T>{item}</T></span>
                                                 </li>
                                             ))}
                                         </ul>
@@ -121,10 +122,10 @@ const Section2 = () => {
                                             className="w-[64px] h-auto"
                                         />
                                         <h3 className="text-fluid-body text-[#1C2041]">
-                                            On Premises Solutions
+                                            <T>On Premises Solutions</T>
                                         </h3>
                                         <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
-                                            Customized, Secure On-Premises Solutions with Quick Implementation Support
+                                            <T>Customized, Secure On-Premises Solutions with Quick Implementation Support</T>
                                         </p>
 
                                         <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
@@ -138,7 +139,7 @@ const Section2 = () => {
                                             ].map((item, i) => (
                                                 <li key={i} className="flex items-start gap-2">
                                                     <span className="mt-[10px] block w-[6px] h-[6px] rounded-full bg-[#91ABFF]" />
-                                                    <span className="flex-1">{item}</span>
+                                                    <span className="flex-1"><T>{item}</T></span>
                                                 </li>
                                             ))}
                                         </ul>

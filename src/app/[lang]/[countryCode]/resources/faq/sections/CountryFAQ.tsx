@@ -11,7 +11,7 @@ import { faqData } from "./CountryFAQData";
 import { useCountry } from "@/contexts/CountryContext";
 import { ContactModal } from "@/Components/ContactModal";
 import ZatcaSection from "./ZatcaSection";
-
+import T from "@/Components/T";
 export const CountryFAQ = () => {
   const { selectedCountry } = useCountry();
   const [isModalOpen, setModalOpen] = useState(false);
@@ -61,12 +61,12 @@ export const CountryFAQ = () => {
           <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
             {/* Heading Section */}
             <h2 className="text-fluid-h2 lg:text-[38px] font-semibold text-foreground leading-tight">
-              Frequently Asked Questions
+              <T>Frequently Asked Questions</T>
             </h2>
             <div className="w-20 h-[2px] bg-[#194BED] my-6 md:my-8 lg:my-[45px]"></div>
 
             <p className=" text-fluid-body font-medium mb-6 md:mb-8 lg:mb-[60px]">
-              Ask Everything You Need To Know About Our Solutions And Services
+              <T>Ask Everything You Need To Know About Our Solutions And Services</T>
             </p>
           </div>
         </div>
@@ -98,10 +98,10 @@ export const CountryFAQ = () => {
                 ) : (
                   <div className="text-center py-12">
                     <p className="text-lg text-muted-foreground">
-                      No FAQs available for this country yet.
+                      <T>No FAQs available for this country yet.</T>
                     </p>
                     <p className="text-sm text-muted-foreground mt-2">
-                      Please check back later or contact us directly.
+                      <T>Please check back later or contact us directly.</T>
                     </p>
                   </div>
                 )}

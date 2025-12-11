@@ -21,7 +21,7 @@ export default function Section3() {
           {/* Vertical Line - Left on mobile, center on md+ */}
           <div
             aria-hidden="true"
-            className="absolute left-2 md:left-1/2 top-1 bottom-0 w-[3px] bg-black md:-translate-x-1/2"
+            className="absolute left-2 md:left-1/2 top-12 bottom-0 w-[4px] bg-black md:-translate-x-1/2"
           />
 
           <div className="flex flex-col space-y-24 md:space-y-32 mt-8">
@@ -30,8 +30,8 @@ export default function Section3() {
             <div className="flex md:grid md:grid-cols-3 gap-4 items-start pl-8 md:pl-0 relative">
 
               {/* DOT - Left on mobile, center on md+ */}
-              <div className="absolute left-0.5 md:relative md:left-auto flex justify-center md:order-2">
-                <div className="w-4 h-4 bg-black rounded-full mt-1 z-10" />
+              <div className="absolute left-0.5 top-1/2 -translate-y-1/2 md:relative md:left-auto md:top-[28%] md:translate-y-0 flex justify-center md:order-2">
+                <div className="w-5 h-5 bg-black rounded-full z-10" />
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}
@@ -60,12 +60,12 @@ export default function Section3() {
             <div className="flex md:grid md:grid-cols-3 gap-4 items-start pl-8 md:pl-0 relative">
 
               {/* DOT - Left on mobile, center on md+ */}
-              <div className="absolute left-0.5 md:relative md:left-auto flex justify-center md:order-2">
-                <div className="w-4 h-4 bg-black rounded-full mt-1 z-10" />
+              <div className="absolute left-0.5 top-1/2 -translate-y-1/2 md:relative md:left-auto md:top-[28%] md:translate-y-0 flex justify-center md:order-2">
+                <div className="w-5 h-5 bg-black rounded-full z-10" />
               </div>
 
               {/* YEAR LEFT - Hidden on mobile, shown on md+ */}
-              <div className="hidden md:flex justify-end pr-6 md:order-1">
+              <div className="hidden md:flex justify-end md:order-1">
                 <span className="text-[32px] md:text-[54px] font-bold">2020</span>
               </div>
 
@@ -90,8 +90,8 @@ export default function Section3() {
             <div className="flex md:grid md:grid-cols-3 gap-4 items-start pl-8 md:pl-0 relative">
 
               {/* DOT - Left on mobile, center on md+ */}
-              <div className="absolute left-0.5 md:relative md:left-auto flex justify-center md:order-2">
-                <div className="w-4 h-4 bg-black rounded-full mt-1 z-10" />
+              <div className="absolute left-0.5 top-1/2 -translate-y-1/2 md:relative md:left-auto md:top-[28%] md:translate-y-0 flex justify-center md:order-2">
+                <div className="w-5 h-5 bg-black rounded-full z-10" />
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}
@@ -120,12 +120,12 @@ export default function Section3() {
             <div className="flex md:grid md:grid-cols-3 gap-4 items-start pl-8 md:pl-0 relative">
 
               {/* DOT - Left on mobile, center on md+ */}
-              <div className="absolute left-0.5 md:relative md:left-auto flex justify-center md:order-2">
-                <div className="w-4 h-4 bg-black rounded-full mt-1 z-10" />
+              <div className="absolute left-0.5 top-1/2 -translate-y-1/2 md:relative md:left-auto md:top-[28%] md:translate-y-0 flex justify-center md:order-2">
+                <div className="w-5 h-5 bg-black rounded-full z-10" />
               </div>
 
               {/* YEAR LEFT - Hidden on mobile, shown on md+ */}
-              <div className="hidden md:flex justify-end pr-6 md:order-1">
+              <div className="hidden md:flex justify-end md:order-1">
                 <span className="text-[32px] md:text-[54px] font-bold">2022</span>
               </div>
 
@@ -149,8 +149,8 @@ export default function Section3() {
             <div className="flex md:grid md:grid-cols-3 gap-4 items-start pl-8 md:pl-0 relative">
 
               {/* DOT - Left on mobile, center on md+ */}
-              <div className="absolute left-0.5 md:relative md:left-auto flex justify-center md:order-2">
-                <div className="w-4 h-4 bg-black rounded-full mt-1 z-10" />
+              <div className="absolute left-0.5 top-1/2 -translate-y-1/2 md:relative md:left-auto md:top-[28%] md:translate-y-0 flex justify-center md:order-2">
+                <div className="w-5 h-5 bg-black rounded-full z-10" />
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}
@@ -178,12 +178,12 @@ export default function Section3() {
             <div className="flex md:grid md:grid-cols-3 gap-4 items-start pl-8 md:pl-0 relative">
 
               {/* DOT - Left on mobile, center on md+ */}
-              <div className="absolute left-0.5 md:relative md:left-auto flex justify-center md:order-2">
-                <div className="w-4 h-4 bg-black rounded-full mt-1 z-10" />
+              <div className="absolute left-0.5 top-1/2 -translate-y-1/2 md:relative md:left-auto md:top-[28%] md:translate-y-0 flex justify-center md:order-2">
+                <div className="w-5 h-5 bg-black rounded-full z-10" />
               </div>
 
               {/* YEAR LEFT - Hidden on mobile, shown on md+ */}
-              <div className="hidden md:flex justify-end pr-6 md:order-1">
+              <div className="hidden md:flex justify-end md:order-1">
                 <span className="text-[32px] md:text-[54px] font-bold">2024</span>
               </div>
 
@@ -207,8 +207,8 @@ export default function Section3() {
             <div className="flex md:grid md:grid-cols-3 gap-4 items-start pl-8 md:pl-0 relative">
 
               {/* DOT - Left on mobile, center on md+ */}
-              <div className="absolute left-0.5 md:relative md:left-auto flex justify-center md:order-2">
-                <div className="w-4 h-4 bg-black rounded-full mt-1 z-10" />
+              <div className="absolute left-0.5 top-1/2 -translate-y-1/2 md:relative md:left-auto md:top-[28%] md:translate-y-0 flex justify-center md:order-2">
+                <div className="w-5 h-5 bg-black rounded-full z-10" />
               </div>
 
               {/* CONTENT LEFT - Right side on mobile, left on md+ */}

@@ -11,10 +11,12 @@ import {
   Youtube
 } from "lucide-react";
 import ContactFormModal from "@/Components/ContactFormModal"; // Import the modal
+import T from "@/Components/T";
 
 const ContactFormPage = () => {
   const params = useParams();
   const countryCode = (params?.countryCode as string)?.toUpperCase();
+  const lang = (params?.lang as string) || "en";
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedModule, setSelectedModule] = useState("");
 
@@ -154,14 +156,14 @@ const ContactFormPage = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-6">
         {/* Left Section - Info (UNCHANGED) */}
         <div className="w-full max-w-[475px] text-left">
-          <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium">{cardContent.title}</h2>
+          <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium"><T lang={lang} countryCode={countryCode}>{cardContent.title}</T></h2>
           <div className="w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-6 md:my-8 lg:my-[40px]"></div>
           <p className="text-[#000000] text-fluid-body mb-8 max-w-[556px]">
-            Call To us
+            <T lang={lang} countryCode={countryCode}>Call To us</T>
           </p>
 
           <h2 className="text-fluid-body font-medium text-[#000000] mb-2">
-            Our Friendly team is here to help
+            <T lang={lang} countryCode={countryCode}>Our Friendly team is here to help</T>
           </h2>
           <p className="text-[#FF6E3E] text-fluid-small mb-2">
             Contact@accqrate-erp.com
@@ -170,7 +172,7 @@ const ContactFormPage = () => {
           {/* Office Locations Section - UNCHANGED */}
           <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
             <h3 className="text-[#1F3FBF] font-semibold text-[20px] mb-4">
-              Our Office Locations
+              <T lang={lang} countryCode={countryCode}>Our Office Locations</T>
             </h3>
 
             <div className="bg-white rounded-xl p-4 space-y-6 shadow-sm">
@@ -185,10 +187,9 @@ const ContactFormPage = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-black">Dammam</h4>
+                  <h4 className="font-semibold text-black"><T lang={lang} countryCode={countryCode}>Dammam</T></h4>
                   <p className="text-sm text-[#9a8e9e] underline leading-relaxed">
-                    2nd Floor, Suit NO. 3, Al khonaini building, king saud street,
-                    P.O BOX 2877 Dammam 31461 Kingdom of Saudi Arabia
+                    <T lang={lang} countryCode={countryCode}>2nd Floor, Suit NO. 3, Al khonaini building, king saud street, P.O BOX 2877 Dammam 31461 Kingdom of Saudi Arabia</T>
                   </p>
                 </div>
               </div>
@@ -204,10 +205,9 @@ const ContactFormPage = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-black">Riyadh</h4>
+                  <h4 className="font-semibold text-black"><T lang={lang} countryCode={countryCode}>Riyadh</T></h4>
                   <p className="text-sm text-[#AB9EAF] underline leading-relaxed">
-                    Level 1, Building Z, Zone A Airport Road, Business Gate
-                    P.O. Box 93597 Riyadh 11683 Kingdom of Saudi Arabia
+                    <T lang={lang} countryCode={countryCode}>Level 1, Building Z, Zone A Airport Road, Business Gate P.O. Box 93597 Riyadh 11683 Kingdom of Saudi Arabia</T>
                   </p>
                 </div>
               </div>
@@ -216,7 +216,7 @@ const ContactFormPage = () => {
             {/* Social Media */}
             <div className="mt-8">
               <p className="text-orange-600 font-semibold text-sm mb-3">
-                SOCIAL MEDIA
+                <T lang={lang} countryCode={countryCode}>SOCIAL MEDIA</T>
               </p>
 
               <div className="flex gap-4 text-gray-500">
@@ -232,50 +232,50 @@ const ContactFormPage = () => {
 
         {/* Right Section - Cards with Modal Triggers */}
         <div className="mt-12">
-          <h2 className="max-w-[785px]">{cardContent.description}</h2>
+          <h2 className="max-w-[785px]"><T lang={lang} countryCode={countryCode}>{cardContent.description}</T></h2>
           <div className="bg-[#F6F7FF] py-12">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Card 1 */}
               <div className="bg-white border border-[#E6E9FF] rounded-2xl px-6 pb-6 shadow-sm">
                 <span className="text-xs font-semibold text-[#4A67FF] bg-[#EEF1FF] px-3 py-2 rounded-b-lg">
-                  {cardContent.cards.card1.badge}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.badge}</T>
                 </span>
 
                 <h3 className="text-xl font-bold mt-4 text-gray-900">
-                  {cardContent.cards.card1.title}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.title}</T>
                 </h3>
 
                 <p className="text-gray-500 mt-2">
-                  {cardContent.cards.card1.description}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.description}</T>
                 </p>
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card1.module)}
                   className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
                 >
-                  {cardContent.cards.card1.buttonText} <span>↗</span>
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.buttonText}</T> <span>↗</span>
                 </button>
               </div>
 
               {/* Card 2 */}
               <div className="bg-white border border-[#E6E9FF] rounded-2xl px-6 pb-6 shadow-sm">
                 <span className="text-xs font-semibold text-[#4A67FF] bg-[#EEF1FF] px-3 py-2 rounded-b-lg">
-                  {cardContent.cards.card2.badge}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.badge}</T>
                 </span>
 
                 <h3 className="text-xl font-bold mt-4 text-gray-900">
-                  {cardContent.cards.card2.title}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.title}</T>
                 </h3>
 
                 <p className="text-gray-500 mt-2">
-                  {cardContent.cards.card2.description}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.description}</T>
                 </p>
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card2.module)}
                   className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
                 >
-                  {cardContent.cards.card2.buttonText} <span>↗</span>
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.buttonText}</T> <span>↗</span>
                 </button>
               </div>
 
@@ -291,22 +291,22 @@ const ContactFormPage = () => {
               {/* Card 3 */}
               <div className="bg-white border border-[#E6E9FF] rounded-2xl px-6 pb-6 shadow-sm">
                 <span className="text-xs font-semibold text-[#4A67FF] bg-[#EEF1FF] px-3 py-2 rounded-b-lg">
-                  {cardContent.cards.card3.badge}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.badge}</T>
                 </span>
 
                 <h3 className="text-xl font-bold mt-4 text-gray-900">
-                  {cardContent.cards.card3.title}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.title}</T>
                 </h3>
 
                 <p className="text-gray-500 mt-2">
-                  {cardContent.cards.card3.description}
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.description}</T>
                 </p>
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card3.module)}
                   className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
                 >
-                  {cardContent.cards.card3.buttonText} <span>↗</span>
+                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.buttonText}</T> <span>↗</span>
                 </button>
               </div>
             </div>

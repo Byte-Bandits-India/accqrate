@@ -5,7 +5,7 @@ import Link from "next/link";
 import ZatcaSection from "@/Components/ZatcaSection";
 import AssetPath from "@/AssetPath/AssetPath";
 import Commingsoon from "@/Components/CommingSoon";
-
+import T from "@/Components/T";
 export default function WebinarSection() {
   const webinars = [
     {
@@ -35,13 +35,13 @@ export default function WebinarSection() {
           {/* Heading */}
           <div>
             <h2 className="text-fluid-h1 lg:text-[38px] font-semibold leading-tight  text-left">
-              Unlocking Insights Of Webinar
+              <T>Unlocking Insights Of Webinar</T>
             </h2>
 
             <div className="w-20 h-[2px] bg-[#194BED] my-6 md:my-8 " />
 
             <p className="text-[16px] md:text-[18px] text-left max-w-[900px]">
-              This Webinar Is Essential For Professionals Who Handle Invoicing And Compliance In Their Organizations
+              <T>This Webinar Is Essential For Professionals Who Handle Invoicing And Compliance In Their Organizations</T>
             </p>
           </div>
 

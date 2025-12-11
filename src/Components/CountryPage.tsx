@@ -1004,7 +1004,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 </div>
 
                 {/* Your AI Copilot */}
-                <div className="hidden md:block">
+                <div className="hidden md:block pb-10">
 
                     {/* HERO SECTION */}
                     <div className="relative min-h-[450px] mt-20">
@@ -1070,12 +1070,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     </div>
 
 
-                    {/* COMPLIANCE SECTION */}
-                    <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0 mt-[72px] grid lg:grid-cols-2 gap-6 items-stretch pb-[36px]">
+                    <div>
+                        {/* COMPLIANCE SECTION */}
+                    <div className="max-w-[1200px] mx-auto px-6 md:px-8 xl:px-0 mt-[72px] grid lg:grid-cols-2 gap-6 pb-[36px] rounded-xl md:rounded-2xl bg-white">
                         {/* Left Side: Image (Desktop) */}
                         <div className="hidden lg:flex flex-col items-start justify-between p-6 md:p-8">
                             <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
-                                Future-Ready for ViDA
+                                Future-Ready for <span className="text-[#194BED]">ViDA</span>
                             </h2>
                             <Image
                                 src={AssetPath.home.vida}
@@ -1087,7 +1088,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         </div>
 
                         {/* Right Side: Text + List + Button */}
-                        <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-between p-6 md:p-8">
+                        <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-6 md:p-8">
                             {/* Heading (mobile only) */}
                             <h2 className="text-fluid-small text-left pl-5 leading-[24px] tracking-para mb-4">
                                 Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:
@@ -1107,7 +1108,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                             <button
                                 onClick={() => setModalOpen(true)}
-                                className="h-[40px] max-w-[288px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
+                                className="h-[40px] max-w-[288px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] lg:mt-16 mt-[32px]"
                                 style={{ background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)" }}
                             >
                                 Talk to our Consultant
@@ -1137,8 +1138,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             />
                         </div>
                     </div>
+                    </div>
                 </div>
-
             </div>
 
             {/* Outcomes and The Impact */}

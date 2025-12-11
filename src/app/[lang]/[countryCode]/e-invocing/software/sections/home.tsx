@@ -10,6 +10,7 @@ import gdprImg from "@/Assets/images/invoicing/gdpr.png";
 import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
 import { ContactModal } from "@/Components/ContactModal";
+import T from "@/Components/T";
 
 // Country configuration with all content inside
 const countryConfig = {
@@ -223,7 +224,7 @@ const Software: React.FC = () => {
                         <div className="flex flex-col justify-center max-w-[730px] w-full">
                             <div className="flex items-center gap-2">
                                 <p className="text-[#F05A28] text-fluid-small leading-[30px] m-0 whitespace-nowrap">
-                                    {content.badgeText}
+                                    <T>{content.badgeText}</T>
                                 </p>
 
                                 <Image
@@ -238,10 +239,10 @@ const Software: React.FC = () => {
 
 
                             <p className="text-fluid-h3 lg:text-[38px] font-medium text-[#000000] mt-4 leading-tight mb-4">
-                                Enable Your Business With E-invoicing.
+                                <T>Enable Your Business With E-invoicing.</T>
                             </p>
                             <h1 className="text-fluid-h2 lg:text-[54px] font-semibold text-[#000000] leading-tight">
-                                {content.title}
+                                <T>{content.title}</T>
                             </h1>
 
                             <div className="h-[2px] w-[80px] bg-blue-600 my-6 md:my-8 lg:my-10"></div>
@@ -255,7 +256,7 @@ const Software: React.FC = () => {
                             {/* Description 2 */}
                             {content.description2 && (
                                 <p className="text-[#000000] text-fluid-body max-w-[560px] leading-[30px]">
-                                    {content.description2}
+                                    <T>{content.description2}</T>
                                 </p>
                             )}
 
@@ -280,7 +281,9 @@ const Software: React.FC = () => {
                       transition-all duration-300 hover:bg-[#d94f22]
                     "
                                 >
-                                    <span className="mx-auto">{content.ctaText}</span>
+                                    <span className="mx-auto">
+                                        <T>{content.ctaText}</T>
+                                    </span>
 
                                     <svg
                                         width="14"
@@ -302,7 +305,7 @@ const Software: React.FC = () => {
 
                             <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8">
                                 <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                    Simplified
+                                    <T>Simplified</T>
                                 </p>
                                 <img
                                     src={AssetPath.home.starOr.src}
@@ -310,7 +313,7 @@ const Software: React.FC = () => {
                                     className="w-5 h-5 md:w-auto md:h-auto"
                                 />
                                 <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                    Smart
+                                    <T>Smart</T>
                                 </p>
                                 <img
                                     src={AssetPath.home.starOr.src}
@@ -318,7 +321,7 @@ const Software: React.FC = () => {
                                     className="w-5 h-5 md:w-auto md:h-auto"
                                 />
                                 <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
-                                    Complaint
+                                    <T>Complaint</T>
                                 </p>
                             </div>
                             <div className="flex items-center gap-2 text-[#333333] mt-6">
@@ -329,7 +332,9 @@ const Software: React.FC = () => {
                                     <Star className="w-3 h-3 fill-[#FEB04C]" />
                                     <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
                                 </div>
-                                <p className="text-sm font-medium">4.8 average rating from our customers</p>
+                                <p className="text-sm font-medium">
+                                    <T>4.8 average rating from our customers</T>
+                                </p>
                             </div>
                         </div>
 
@@ -387,7 +392,7 @@ const Software: React.FC = () => {
                                         className={`${item.className} object-contain`}
                                     />
                                     <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
-                                        {item.text}
+                                        <T>{item.text}</T>
                                     </p>
                                 </div>
                             ))}

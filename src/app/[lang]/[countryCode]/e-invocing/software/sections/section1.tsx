@@ -1,7 +1,6 @@
 "use client";
 import React from 'react'
 import FadeUp from '@/Components/ui/FadeUp'
-import T from '@/Components/T'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useRef, useMemo, useCallback } from "react";
@@ -9,6 +8,7 @@ import { ContactModal } from "@/Components/ContactModal";
 import { useCountryContent } from "@/Hooks/useCountryContent";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
+import T from "@/Components/T";
 
 
 interface Feature {
@@ -201,7 +201,7 @@ const Section1 = () => {
                             <span className="text-[#194BED]"></span>
                             <br className="md:hidden" />
                             <span className="text-[#194BED]">
-                                <T> {pageContent.heroTitle}</T>
+                                <T>{pageContent.heroTitle}</T>
                             </span>
                         </h1>
 
@@ -224,7 +224,7 @@ const Section1 = () => {
                                                 height={48}
                                                 className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                             />
-                                            <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
+                                            <p className=" text-xs md:text-sm text-[#737373] font-medium"><T>{logo.name}</T></p>
                                         </div>
                                     ))}
                                 </div>
@@ -239,7 +239,8 @@ const Section1 = () => {
                                                 height={48}
                                                 className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                             />
-                                            <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
+                                            <p className=" text-xs md:text-sm text-[#737373] font-medium">
+                                                <T>{logo.name}</T></p>
                                         </div>
                                     ))}
                                 </div>
@@ -251,24 +252,24 @@ const Section1 = () => {
                         {/* Left Text */}
                         <div className="flex-1">
                             <h1 className="text-fluid-h2 lg:text-[38px] font-medium pt-[30px] md:pt-[37px] tracking-heading leading-tight">
-                                Customize and send invoices easily
+                                <T>Customize and send invoices easily</T>
                             </h1>
                             <div className='space-y-3 md:space-y-4 mt-4'>
                                 <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
-                                    Sending an invoice should be easy - and we`ve made it so
+                                    <T>Sending an invoice should be easy - and we`ve made it so</T>
                                 </p>
                                 <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
-                                    Perfectly aligned with your needs and brand
+                                    <T>Perfectly aligned with your needs and brand</T>
                                 </p>
                                 <p className="text-fluid-body lg:text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
-                                    Invoices Custom-Made for Your Business
+                                    <T>Invoices Custom-Made for Your Business</T>
                                 </p>
                                 <button
                                     onClick={() => setModalOpen(true)}
                                     className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px]"
                                     style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                                 >
-                                    See It in Action
+                                    <T>See It in Action</T>
                                 </button>
                             </div>
                         </div>
@@ -301,7 +302,7 @@ const Section1 = () => {
                                                     </div>
 
                                                     <span className="font-anonymous text-[38px] font-bold text-[#E6E6E6] leading-none select-none">
-                                                        {String(index + 1).padStart(2, "0")}
+                                                        <T>{String(index + 1).padStart(2, "0")}</T>
                                                     </span>
                                                 </div>
 
@@ -333,7 +334,7 @@ const Section1 = () => {
                                 <div className="lg:col-span-2 flex justify-center">
                                     <div className="sticky top-6 w-full flex justify-center">
                                         <img
-                                            src={AssetPath.invoicing.taxInvoiceMultiple.src}
+                                            src={AssetPath.invoicing.invoiceMultiplePng.src}
                                             alt="Feature Demo"
                                             className="w-full h-auto object-contain mx-auto rounded-[12px]"
                                         />
@@ -352,7 +353,7 @@ const Section1 = () => {
                                 <div className="lg:col-span-2 flex justify-center">
                                     <div className="sticky top-6 w-full flex justify-center">
                                         <img
-                                            src={AssetPath.invoicing.taxIncoiceSingle.src}
+                                            src={AssetPath.invoicing.invoiceSinglePng.src}
                                             alt="Feature Demo"
                                             className="w-full h-auto object-contain mx-auto rounded-[12px]"
                                         />
@@ -411,7 +412,7 @@ const Section1 = () => {
                                                                 className="max-w-[30px] h-auto rounded"
                                                                 unoptimized
                                                             />
-                                                            <p>{currentCountry.code}</p>
+                                                            <p><T>{currentCountry.code}</T></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -440,7 +441,7 @@ const Section1 = () => {
                                                                 className="max-w-[30px] h-auto rounded"
                                                                 unoptimized
                                                             />
-                                                            <p>{currentCountry.code}</p>
+                                                            <p><T>{currentCountry.code}</T></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -468,14 +469,14 @@ const Section1 = () => {
         "
                                 >
                                     <h3 className="text-[#303030] font-semibold text-lg">
-                                        {card.title}
+                                        <T>{card.title}</T>
                                     </h3>
                                     <h3 className="text-[#303030] font-semibold text-lg mb-3">
-                                        {card.subTitle}
+                                        <T>{card.subTitle}</T>
                                     </h3>
 
                                     <p className="text-[#5A6183] text-sm leading-[30px] flex-grow">
-                                        {card.description}
+                                        <T>{card.description}</T>
                                     </p>
                                 </div>
                             ))}

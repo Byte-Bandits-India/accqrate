@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import AssetPath from "@/AssetPath/AssetPath";
+import T from "@/Components/T";
 
 // ✅ Dynamically import ContactModal — prevents RSC static flag errors
 const ContactModal = dynamic(() => import("@/Components/ContactModal").then(mod => mod.ContactModal), {
@@ -88,11 +89,11 @@ export default function ZatcaSection() {
         {/* COLUMN 1 — LEFT CONTENT */}
         <div className="z-20 text-left order-2 md:order-1">
           <h2 className="text-fluid-h2 xl:text-[38px] font-medium mb-6 leading-tight">
-            If you have any other questions not <br className="hidden md:block" /> addressed here
+            <T>If you have any other questions not</T> <br className="hidden md:block" /> <T>addressed here</T>
           </h2>
 
           <p className="text-fluid-body text-[#FFFFFF] my-6 md:my-8">
-            Please feel free to contact us at{" "}
+            <T>Please feel free to contact us at</T>{" "}
             <a
               href="mailto:Contact@accqrate-erp.com"
               className="text-[#FF6E3E] hover:text-[#ff875c] no-underline transition-colors duration-200"
@@ -105,7 +106,7 @@ export default function ZatcaSection() {
             onClick={() => setModalOpen(true)}
             className="inline-flex text-fluid-body items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-6 py-3 rounded-full"
           >
-            Contact Your Consultant <ArrowRight className="w-4 h-4" />
+            <T>Contact Your Consultant</T> <ArrowRight className="w-4 h-4" />
           </button>
         </div>
 

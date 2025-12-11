@@ -1,5 +1,6 @@
 import React from 'react'
 import AssetPath from "@/AssetPath/AssetPath";
+import T from '@/Components/T';
 
 interface Section {
     img: string;
@@ -31,12 +32,12 @@ const Section3 = () => {
             <section className="py-8 md:py-10 lg:py-[80px] max-w-[1280px] mx-auto relative">
                 <div className="px-6 md:px-8 xl:px-0 text-center relative">
                     <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] leading-tight">
-                        A <span className="text-[#194BED]">complete software</span> to run your business better
+                        <T>A <span className="text-[#194BED]"><T>complete software</T></span> to run your business better</T>
                     </h1>
 
                     <div className="relative mt-6 inline-block">
                         <h3 className="text-fluid-body text-[#5A6183] mx-auto max-w-[850px]">
-                            Whether you've just started or are already established, you'll find all the features you need at each stage of your business.
+                            <T>Whether you've just started or are already established, you'll find all the features you need at each stage of your business.</T>
                         </h3>
 
                         {/* Decorative SVG aligned right to the h3 */}
@@ -71,12 +72,12 @@ const Section3 = () => {
 
                                 {/* Title */}
                                 <h3 className="text-fluid-body text-[#1C2041] font-semibold mb-2 leading-tight">
-                                    {item.title}
+                                    <T>{item.title}</T>
                                 </h3>
 
                                 {/* Description */}
                                 <p className="text-fluid-small text-[#5A6183] leading-[24px] sm:leading-[28px]">
-                                    {item.desc}
+                                    <T>{item.desc}</T>
                                 </p>
                             </div>
                         ))}

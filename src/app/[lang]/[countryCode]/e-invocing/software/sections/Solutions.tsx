@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from 'react'
 import { ChevronRight, ChevronUp, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import { getSolutionsContent, ContentItem } from './data/solutions-content'
+import T from '@/Components/T';
 
 interface SolutionsProps {
     countryCode?: string // Add countryCode prop
@@ -113,10 +114,10 @@ export default function Solutions({ countryCode }: SolutionsProps) {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h3 className="text-fluid-h2 lg:text-[38px] font-medium text-[#1C2041] leading-tight">
-                        Accqrate E-Invoicing Solutions
+                        <T>Accqrate E-Invoicing Solutions</T>
                     </h3>
                     <p className="text-[#5A6183] text-fluid-body mt-3">
-                        Streamline Operations and Accelerate Business Growth
+                        <T>Streamline Operations and Accelerate Business Growth</T>
                     </p>
                 </div>
 
@@ -131,7 +132,7 @@ export default function Solutions({ countryCode }: SolutionsProps) {
                                 disabled={selectedIndex === 0}
                             >
                                 <ChevronUp size={16} />
-                                Previous
+                                <T>Previous</T>
                             </button>
 
                             <div
@@ -159,13 +160,13 @@ export default function Solutions({ countryCode }: SolutionsProps) {
                                                                 : 'border-[#91ABFF] text-[#91ABFF]'
                                                             }`}
                                                     >
-                                                        {item.sno}
+                                                        <T>{item.sno}</T>
                                                     </div>
                                                     <span
                                                         className={`text-sm md:text-fluid-body uppercase ${isActive ? 'text-[#1C2041] font-normal' : 'text-[#6C70A1]'
                                                             }`}
                                                     >
-                                                        {item.content}
+                                                        <T>{item.content}</T>
                                                     </span>
                                                 </div>
                                                 <ChevronRight
@@ -184,7 +185,7 @@ export default function Solutions({ countryCode }: SolutionsProps) {
                                 onClick={handleNext}
                                 disabled={selectedIndex === contents.length - 1}
                             >
-                                Next
+                                <T>Next</T>
                                 <ChevronDown size={16} />
                             </button>
                         </div>
@@ -193,10 +194,10 @@ export default function Solutions({ countryCode }: SolutionsProps) {
                     {/* Right Content */}
                     <div className="w-full lg:w-[50%]">
                         <h4 className="text-fluid-h2 lg:text-[38px] font-normal text-[#1C2041] leading-[40px]">
-                            {selectedContent.content}
+                            <T>{selectedContent.content}</T>
                         </h4>
                         <p className="text-[#5A6183] text-fluid-small leading-[37px] mt-4 md:mt-6 mb-8 max-w-[580px]">
-                            {selectedContent.desc}
+                            <T>{selectedContent.desc}</T>
                         </p>
 
                         <div className="relative flex flex-col md:flex-row gap-6">

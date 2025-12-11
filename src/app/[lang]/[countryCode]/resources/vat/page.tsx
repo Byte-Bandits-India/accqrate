@@ -14,6 +14,8 @@ import ZatcaSection from "@/Components/ZatcaSection";
 import { Field } from "@/Components/ui/field"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/Components/ui/select"
 import { useParams } from "next/navigation";
+import T from "@/Components/T";
+import { t } from "@/lib/translations";
 import { getVATCalculatorContent, getCountrySpecificVATDetails } from "./data/vat-calculator-content";
 
 export default function VATCalculator() {
@@ -24,6 +26,7 @@ export default function VATCalculator() {
   const [currency, setCurrency] = useState("SAR");
 
   const params = useParams();
+  const lang = (params?.lang as string) || "en";
   const countryCode = (params?.countryCode as string || "SA").toUpperCase();
 
   // Get country-specific content
@@ -157,9 +160,9 @@ export default function VATCalculator() {
             >
               <DonutChart
                 data={vatData}
-                footerText="Total VAT this month"
+                footerText={t("Total VAT this month", countryCode)}
                 footerIcon={TrendingUp}
-                footerDescription="Showing VAT breakdown for the current month"
+                footerDescription={t("Showing VAT breakdown for the current month", countryCode)}
               />
             </div>
 
@@ -169,7 +172,7 @@ export default function VATCalculator() {
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                   {/* Sale Value */}
                   <div className="flex flex-col">
-                    <h3 className="text-[#333333] text-fluid-body mb-2">Sale Value</h3>
+                    <h3 className="text-[#333333] text-fluid-body mb-2"><T lang={lang} countryCode={countryCode}>Sale Value</T></h3>
                     <div className="relative w-full">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#194BED] text-white text-[12px] font-semibold rounded-full h-[25px] w-[25px] flex items-center justify-center">
                         $
@@ -195,7 +198,7 @@ export default function VATCalculator() {
 
                   {/* VAT Rate */}
                   <div className="flex flex-col">
-                    <h3 className="text-[#333333] text-fluid-body mb-2">VAT Rate (%)</h3>
+                    <h3 className="text-[#333333] text-fluid-body mb-2"><T lang={lang} countryCode={countryCode}>VAT Rate (%)</T></h3>
                     <div className="relative w-full">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#194BED] text-white text-[12px] font-semibold rounded-full h-[25px] w-[25px] flex items-center justify-center">
                         %
@@ -224,7 +227,7 @@ export default function VATCalculator() {
                     <div className="flex flex-row lg:items-center lg:justify-between gap-4 mt-6">
                       <div className="flex-1">
                         <p className="text-fluid-small lg:text-[16px] text-[#333333] font-medium mb-3">
-                          Is Sale Inclusive of VAT?
+                          <T lang={lang} countryCode={countryCode}>Is Sale Inclusive of VAT?</T>
                         </p>
                         <RadioGroup
                           value={isVATInclusive}
@@ -235,11 +238,11 @@ export default function VATCalculator() {
                         >
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="yes" id="yes" />
-                            <Label htmlFor="yes" className="text-[#333333] cursor-pointer">Yes</Label>
+                            <Label htmlFor="yes" className="text-[#333333] cursor-pointer"><T lang={lang} countryCode={countryCode}>Yes</T></Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="no" id="no" />
-                            <Label htmlFor="no" className="text-[#333333] cursor-pointer">No</Label>
+                            <Label htmlFor="no" className="text-[#333333] cursor-pointer"><T lang={lang} countryCode={countryCode}>No</T></Label>
                           </div>
                         </RadioGroup>
                       </div>
@@ -318,40 +321,40 @@ export default function VATCalculator() {
       <div>
         <div className="max-w-[1280px] mx-auto mt-[40px] px-6 md:px-8 xl:px-0 pb-8 md:pb-10 lg:pb-12" data-aos="fade-up">
           <div>
-            <h2 className="text-fluid-body font-semibold">{content.title}</h2>
+                    <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.title}</T></h2>
             <p className="text-fluid-small leading-[26px] lg:leading-[40px] mt-[25px]">
-              {content.subtitle}
+              <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold">What Is VAT?</h2>
+            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>What Is VAT?</T></h2>
             <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">
-              {content.whatIsVAT} {countrySpecificDetails}
+              <T lang={lang} countryCode={countryCode}>{content.whatIsVAT}</T> {countrySpecificDetails}
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold">{content.howToCalculateTitle}</h2>
+            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.howToCalculateTitle}</T></h2>
             <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">
-              {content.howToCalculateDesc}
+              <T lang={lang} countryCode={countryCode}>{content.howToCalculateDesc}</T>
             </p>
             <ul className="list-disc pl-6 space-y-1 text-fluid-small text-[#555555] leading-[26px] lg:leading-[40px] mt-2">
-              <li>Adding VAT: Perfect for when sales are exclusive of VAT.</li>
-              <li>Excluding VAT: Ideal for sales prices that already include VAT.</li>
+              <li><T lang={lang} countryCode={countryCode}>Adding VAT: Perfect for when sales are exclusive of VAT.</T></li>
+              <li><T lang={lang} countryCode={countryCode}>Excluding VAT: Ideal for sales prices that already include VAT.</T></li>
             </ul>
           </div>
 
           <div className="mt-[30px] lg:mb-[60px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold">{content.calculationBenefitsTitle}</h2>
-            <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">With our {getCountryName(countryCode)} VAT Calculator, enjoy:</p>
+            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.calculationBenefitsTitle}</T></h2>
+            <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]"><T lang={lang} countryCode={countryCode}>With our</T> {getCountryName(countryCode)} <T lang={lang} countryCode={countryCode}>VAT Calculator, enjoy:</T></p>
             <ul className="list-disc pl-6 space-y-1 text-fluid-small leading-[26px] lg:leading-[40px] text-[#555555] mt-2">
               {content.benefits.map((benefit, index) => (
-                <li key={index}>{benefit}</li>
+                <li key={index}><T lang={lang} countryCode={countryCode}>{benefit}</T></li>
               ))}
             </ul>
             <p className="text-fluid-small mt-[25px] leading-[26px] lg:leading-[40px]">
-              {content.calculationBenefitsDesc}
+              <T lang={lang} countryCode={countryCode}>{content.calculationBenefitsDesc}</T>
             </p>
           </div>
         </div>

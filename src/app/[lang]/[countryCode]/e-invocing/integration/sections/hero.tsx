@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
 import { COUNTRY_CONTENT } from "../data/CountryContent";
+import T from '@/Components/T';
 
 // Import ContactModal with dynamic loading
 const ContactModal = dynamic(
@@ -31,13 +32,13 @@ const Software = () => {
           {/* LEFT CONTENT */}
           <div className="flex flex-col justify-center max-w-[645px] w-full">
             <p className="text-[#F05A28] text-fluid-small mb-6">
-              {content.subtitle}
+              <T>{content.subtitle}</T>
             </p>
 
             <h1 className="text-fluid-h2 lg:text-[38px] leading-tight font-medium text-black">
-              {content.title}{" "}
+              <T>{content.title}</T>{" "}
               <span style={{ color: content.highlightColor }}>
-                {content.highlight}
+                <T>{content.highlight}</T>
               </span>
               .
             </h1>
@@ -58,10 +59,10 @@ const Software = () => {
               />
               <div>
                 <h3 className="text-[#1C2041] text-fluid-body lg:text-[20px] font-semibold">
-                  {content.boxTitle}
+                  <T>{content.boxTitle}</T>
                 </h3>
                 <p className="text-[#5A6183] text-fluid-small lg:text-[18px] mt-2">
-                  {content.boxSubtitle}
+                  <T>{content.boxSubtitle}</T>
                 </p>
               </div>
             </div>
@@ -105,7 +106,7 @@ const Software = () => {
             />
 
             <div className="flex gap-4 mt-8 text-center md:text-[20px]">
-              <p className="md:text-[20px] text-gray-600">Seamless</p>
+              <p className="md:text-[20px] text-gray-600"><T>Seamless</T></p>
               <Image
                 src={AssetPath.home.starOr}
                 alt="star"
@@ -113,7 +114,7 @@ const Software = () => {
                 height={20}
                 className="w-5 h-5 mt-1"
               />
-              <p className="md:text-[20px] text-gray-600">Complaint</p>
+              <p className="md:text-[20px] text-gray-600"><T>Complaint</T></p>
               <Image
                 src={AssetPath.home.starOr}
                 alt="star"
@@ -121,7 +122,7 @@ const Software = () => {
                 height={20}
                 className="w-5 h-5 mt-1"
               />
-              <p className="md:text-[20px] text-gray-600">Secure</p>
+              <p className="md:text-[20px] text-gray-600"><T>Secure</T></p>
             </div>
           </div>
         </div>

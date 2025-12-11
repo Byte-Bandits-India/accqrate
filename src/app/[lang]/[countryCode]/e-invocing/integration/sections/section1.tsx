@@ -3,6 +3,7 @@
 import CounterFacts from '@/Components/CounterFacts'
 import AssetPath from "@/AssetPath/AssetPath"
 import Image from "next/image"
+import T from '@/Components/T';
 interface IntegrationItem {
     src: string
     alt: string
@@ -63,7 +64,7 @@ export default function Integrator({ className, title }: IntegratorProps) {
                         className="text-fluid-h2 lg:text-[38px] max-w-[871px] mx-auto text-center font-medium text-[#000000] leading-tight relative"
                         data-aos="fade-up"
                     >
-                        Our solutions seamlessly integrate with any <span className='text-[#508847]'>ERP/POS system</span>  you use.
+                        <T>Our solutions seamlessly integrate with any <span className='text-[#508847]'><T>ERP/POS system</T></span>  you use.</T>
                     </h3>
 
                     {/* MARQUEE WRAPPER */}
@@ -87,7 +88,7 @@ export default function Integrator({ className, title }: IntegratorProps) {
                     </div>
 
                     <div>
-                        <p className="text-center text-[#000000] text-fluid-small md:text-[18px] font-normal max-w-[1100px] mx-auto ">Our integrators are equipped to collaborate with a wide range of solutions, including Global ERP systems, Local and Custom ERP, In-House ERP, both Online and Offline POS systems, Custom Applications, Accounting Software, and even Excel & SQL-Based Solutions, ensuring versatile and comprehensive compatibility</p>
+                        <p className="text-center text-[#000000] text-fluid-small md:text-[18px] font-normal max-w-[1100px] mx-auto "><T>Our integrators are equipped to collaborate with a wide range of solutions, including Global ERP systems, Local and Custom ERP, In-House ERP, both Online and Offline POS systems, Custom Applications, Accounting Software, and even Excel & SQL-Based Solutions, ensuring versatile and comprehensive compatibility</T></p>
                     </div>
 
                     <CounterFacts />

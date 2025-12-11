@@ -6,6 +6,7 @@ import UpdateCard from "./UpdateCard";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
 import ComingSoon from "@/Components/CommingSoon";
+import T from "@/Components/T";
 
 type HeroContent = {
   title: string;
@@ -47,11 +48,11 @@ const Index = () => {
         <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent">
           <section className="max-w-[1280px] px-6 md:px-8 xl:px-0 mx-auto mb-6 md:mb-8 lg:mb-[60px]">
             <h1 className="text-fluid-h3 lg:text-[38px] text-black font-semibold leading-tight">
-              {heroContent.title}
+              <T lang={lang} countryCode={countryCode}>{heroContent.title}</T>
             </h1>
             <div className="w-[126px] h-[2px] bg-[#194BED] my-6 md:my-8 lg:my-[45px]" />
             <p className="text-fluid-body max-w-[1100px] font-medium  mb-8 md:mb-[43px] leading-tight">
-              {heroContent.description}
+              <T lang={lang} countryCode={countryCode}>{heroContent.description}</T>
             </p>
 
             {/* ✅ Dynamic route link */}
@@ -59,7 +60,7 @@ const Index = () => {
               href={`/${lang}/${countryCode}/contact-us`}
               className="inline-flex items-center text-white border font-medium px-6 py-3 rounded-full bg-gradient-to-r from-[#29266E] to-[#194BED] mb-6 md:mb-8 lg:mb-[60px]"
             >
-              Subscribe Now <ArrowRight className="ml-2 h-5 w-5" />
+              <T lang={lang} countryCode={countryCode}>Subscribe Now</T> <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </section>
 
@@ -76,8 +77,8 @@ const Index = () => {
             >
               <UpdateCard
                 image={AssetPath.resources.zatcaUp}
-                title="ZATCA Updates"
-                description="Stay informed with the latest news, announcements, and software rollouts from ZATCA."
+                title={<T lang={lang} countryCode={countryCode}>ZATCA Updates</T>}
+                description={<T lang={lang} countryCode={countryCode}>Stay informed with the latest news, announcements, and software rollouts from ZATCA.</T>}
               />
             </Link>
 
@@ -88,8 +89,8 @@ const Index = () => {
             >
               <UpdateCard
                 image={AssetPath.resources.zatcaProd}
-                title="Accqrate Product Evolutions"
-                description="Discover the latest upgrades, feature enhancements, and bug resolutions for Accqrate E-Invoicing platform."
+                title={<T lang={lang} countryCode={countryCode}>Accqrate Product Evolutions</T>}
+                description={<T lang={lang} countryCode={countryCode}>Discover the latest upgrades, feature enhancements, and bug resolutions for Accqrate E-Invoicing platform.</T>}
               />
             </Link>
           </div>
