@@ -6,6 +6,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
+import T from "@/Components/T";
 
 //  Dynamically import ContactModal — prevents RSC static flag errors
 const ContactModal = dynamic(() => import("@/Components/ContactModal").then(mod => mod.ContactModal), {
@@ -16,6 +17,7 @@ export default function ZatcaSection() {
   const [isModalOpen, setModalOpen] = useState(false);
   const params = useParams();
   const countryCode = (params?.countryCode as string || "SA").toUpperCase();
+  const lang = (params?.lang as string) || "en";
 
   // Country-specific content configuration
   type CountryContent = {
@@ -103,7 +105,7 @@ export default function ZatcaSection() {
         {/* COLUMN 1 — LEFT CONTENT */}
         <div className="z-20 text-left order-2 md:order-1">
           <h2 className="text-[20px] md:text-[30px] font-medium mb-6 leading-tight">
-            {content.title}
+            <T lang={lang} countryCode={countryCode}>{content.title}</T>
           </h2>
 
           <ul className="space-y-4 md:space-y-5 mb-8 md:mb-10">
@@ -120,7 +122,7 @@ export default function ZatcaSection() {
                   className="mt-1 flex-shrink-0"
                 />
                 <span className="text-[15px] md:text-[20px]">
-                  {text}
+                  <T lang={lang} countryCode={countryCode}>{text}</T>
                 </span>
               </li>
             ))}
@@ -130,7 +132,7 @@ export default function ZatcaSection() {
             onClick={() => setModalOpen(true)}
             className="inline-flex text-[14px] md:text-[18px] items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-6 py-4 rounded-full"
           >
-            Book a Demo <ArrowRight className="w-4 h-4" />
+            <T lang={lang} countryCode={countryCode}>Book a Demo</T> <ArrowRight className="w-4 h-4" />
           </button>
         </div>
 
