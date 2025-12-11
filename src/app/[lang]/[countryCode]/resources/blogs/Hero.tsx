@@ -3,7 +3,7 @@
 import Image from "next/image";
 import FadeUp from "@/Components/ui/FadeUp";
 import AssetPath from "@/AssetPath/AssetPath";
-
+import T from "@/Components/T";
 export default function HeroResourceSection() {
   return (
     <section className="pt-16 md:pt-20">
@@ -11,7 +11,7 @@ export default function HeroResourceSection() {
         {/* Heading */}
         <FadeUp className="text-left mb-10">
           <h1 className="text-fluid-h1 lg:text-[38px] leading-tight font-semibold text-gray-900">
-            Browse Our Resources
+            <T>Browse Our Resources</T>
           </h1>
 
           {/* Blue underline */}

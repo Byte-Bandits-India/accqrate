@@ -214,7 +214,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
                         className="w-full mb-2 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <h3 className="text-sm font-semibold text-[#1c2041] line-clamp-2 group-hover:text-blue-600">
-                        {data.heading}
+                        <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.heading}</T>
                       </h3>
                     </div>
                   ))}
@@ -256,10 +256,10 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
                   />
                   <div className="flex flex-col flex-grow px-4 pb-4">
                     <h3 className="text-base leading-snug font-semibold text-gray-900 line-clamp-2 mb-2">
-                      <T>{data.heading}</T>
+                      <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.heading}</T>
                     </h3>
                     <p className="text-gray-500 text-sm line-clamp-2 leading-tight">
-                      <T>{data.value}</T>
+                      <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.value}</T>
                     </p>
                   </div>
                 </div>

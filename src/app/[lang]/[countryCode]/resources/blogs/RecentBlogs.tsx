@@ -5,7 +5,7 @@ import Link from "next/link";
 import FadeUp from "@/Components/ui/FadeUp";
 import blogPosts from "./data/blogspost";
 import AssetPath from "@/AssetPath/AssetPath";
-import BelgiumT from "@/Components/BelgiumT";
+import T from "@/Components/T";
 import { useParams } from "next/navigation";
 import { useState, useEffect, useMemo } from "react";
 
@@ -126,11 +126,11 @@ export default function RecentBlogPosts() {
 
         <div className="p-5 border-t border-gray-100 flex-1 flex flex-col">
           <FadeUp className="font-semibold text-[16px] sm:text-[18px] text-gray-900 line-clamp-2 leading-snug mb-3">
-            {currentCountry?.blogCode === "BE" ? <BelgiumT>{post.title}</BelgiumT> : post.title}
+            <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.title}</T>
           </FadeUp>
 
           <FadeUp className="text-gray-600 text-[14px] sm:text-[15px] line-clamp-3 leading-relaxed flex-1">
-            {currentCountry?.blogCode === "BE" ? <BelgiumT>{post.desc}</BelgiumT> : post.desc}
+            <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.desc}</T>
           </FadeUp>
         </div>
       </div>
@@ -154,7 +154,7 @@ export default function RecentBlogPosts() {
       <section className="py-10 md:py-12  text-center">
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0">
           <FadeUp className="text-fluid-h3 font-semibold mb-8 text-gray-900">
-            Country Not Found
+            <T>Country Not Found</T>
           </FadeUp>
           <p className="text-gray-600 text-lg">
             The country code &quot;{countryCode}&quot; is not supported.
@@ -170,9 +170,9 @@ export default function RecentBlogPosts() {
       <section className="py-10 md:py-12 lg:py-[90px]">
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0 text-center">
           <div className="py-12">
-            <h3 className="text-2xl font-semibold mb-4">Coming Soon!</h3>
+            <h3 className="text-2xl font-semibold mb-4"><T>Coming Soon!</T></h3>
             <p className="text-gray-600 text-lg max-w-xl mx-auto">
-              We&apos;re preparing valuable blog content for {currentCountry.name}.
+              <T>We&apos;re preparing valuable blog content for {currentCountry.name}.</T>
             </p>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function RecentBlogPosts() {
     <section className="mb-10 ">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0">
         <FadeUp className="text-[16px] md:text-[20px] font-semibold mb-10 text-gray-900">
-          Blog Posts from Accqrate
+         <T>Recent Blog Posts from Accqrate</T>
         </FadeUp>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
