@@ -214,7 +214,6 @@ const ContactFormPage = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-black"><T lang={lang} countryCode={countryCode}>Dammam</T></h4>
                   <p className="text-sm text-[#9a8e9e] underline leading-relaxed">
                     <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br/>CH-4052 Basel <br/> Switzerland <br/> +41(0)61 272 95 95</T>
                   </p>
