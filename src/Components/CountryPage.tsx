@@ -15,7 +15,7 @@ import {
     AccordionTrigger,
 } from "@/Components/Home-accordion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
 
@@ -90,12 +90,12 @@ const CarouselCardComponent: React.FC<CarouselCardProps> = ({
             <div className="flex flex-col justify-center items-start p-6 md:pl-8 lg:px-[32px] relative z-20">
                 {/* Quote text */}
                 <p className="text-[#000000] text-fluid-small md:text-[18px] leading-tight tracking-heading drop-shadow-md font-bold mb-0">
-                    &quot;{quote}&quot;
+                    &quot;<T>{quote}</T>&quot;
                 </p>
 
                 {/* Name - directly below quote, no gap */}
                 <h4 className="text-[#000000] mt-[20px] md:mt-[30px] font-medium text-[10px] md:text-[14px] lg:text-[16px] drop-shadow-md leading-tight tracking-para">
-                    {name}
+                    <T>{name}</T>
                 </h4>
             </div>
 
@@ -373,6 +373,8 @@ const useDynamicRouting = () => {
 const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     const { countryContent } = useCountryContent();
     const { createHref } = useDynamicRouting();
+    const params = useParams();
+    const lang = (params?.lang as string) || "en";
     const [enabled, setEnabled] = React.useState(false);
     const carouselRef = useRef<HTMLDivElement>(null);
     const [isModalOpen, setModalOpen] = React.useState(false);
@@ -437,13 +439,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         {
             img: AssetPath.home.feature3,
             title: "AI, everywhere.",
-            description: "Accelera, our AI copilot ,accelerates routine work, insights and decisions.",
+            description: "Accelera, our AI copilot, accelerates routine work, insights and decisions.",
             sub: ""
         },
         {
             img: AssetPath.home.feature4,
             title: "Fast time‑to‑value.",
-            description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
+            description: "Lightning-fast UI, one-click installs, and low-disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
             sub: ""
         },
         {
@@ -455,7 +457,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         {
             img: AssetPath.home.feature6,
             title: "Deploy your way.",
-            description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
+            description: "Cloud (managed, subscription) or On-Prem (full control over infra & data).",
             sub: ""
         }
     ];
@@ -546,7 +548,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         },
         {
             title: "Security first.",
-            desc: "Data protection and governance across cloud and on‑prem.",
+            desc: "Data protection and governance across cloud and on-prem.",
             bg: "#BDECC8"
         },
         {
@@ -556,12 +558,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         },
         {
             title: "Performance at scale",
-            desc: "Built for enterprise workloads and real‑time operations.",
+            desc: "Built for enterprise workloads and real-time operations.",
             bg: "#F5D5FF"
         },
         {
             title: "Usability that drives adoption",
-            desc: "Clean, fast, role‑based UX.",
+            desc: "Clean, fast, role-based UX.",
             bg: "#C4E0FF"
         },
     ];
@@ -569,7 +571,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     const faqs = [
         {
             question: "How long is the free trial?",
-            answer: "30 days. (Plus an optional 14‑day practice account for a total of 44 days.)",
+            answer: "30 days. Plus an optional 14-day practice account for a total of 44 days.",
         },
         {
             question: "Can I terminate during the trial?",
@@ -581,7 +583,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         },
         {
             question: "Where is Accqrate Cloud hosted?",
-            answer: "Regional hosting options with data‑residency choices; on‑prem available for full control.",
+            answer: "Regional hosting options with data-residency choices; on-prem available for full control.",
         },
         {
             question: "How do I pay the subscription?",
@@ -670,7 +672,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                 <button
                                     onClick={() => setModalOpen(true)}
-                                    className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3.563rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem] 2xl:my-[3rem] font-normal lg:w-[13.813rem] rounded-[5rem] text-fluid-body bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
+                                    className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3.563rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem] 2xl:my-[3rem] font-normal lg:w-[14.813rem] leading-tight rounded-[5rem] text-fluid-body bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
                                 >
                                     <T>Meet an Expert</T>
                                     <Arrow45 />
@@ -765,7 +767,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                 <button
                                     onClick={() => setModalOpen(true)}
-                                    className="self-start h-[40px] w-[144px] md:w-[199px] text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-6 lg:mt-0"
+                                    className="self-start h-[40px] w-auto text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-6 lg:mt-0"
                                     style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                                 >
                                     <T>See It in Action</T>
@@ -811,7 +813,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 key={index}
                                                 className="relative flex-shrink-0 bg-white rounded-[16px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] scroll-snap-align-start 
               w-[260px] sm:w-[300px] md:w-[340px] lg:w-[380px] 
-              min-h-[360px] sm:min-h-[400px] lg:h-[456px] 
+              min-h-[360px] sm:min-h-[400px] lg:h-[500px] 
               p-8 flex flex-col justify-between overflow-hidden 
               transition-all hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
                                             >
@@ -858,7 +860,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <div className="lg:px-6 max-w-[1177px] mx-auto w-full">
                             <button
                                 onClick={() => setModalOpen(true)}
-                                className="h-[40px] w-[144px] md:w-[199px] text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-[20px] md:mt-[30px]"
+                                className="h-[40px] w-auto text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-[20px] md:mt-[30px]"
                                 style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                             >
                                 <T>See It in Action</T>
@@ -873,7 +875,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                     <FadeUp className="mb-8 md:mb-[40px]">
                         <h3 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto">
-                            <T>Trusted by  </T><br className="md:hidden" /><span className="text-[#194BED]"><T>5,000+ Global companies</T></span>
+                            <T>Trusted by</T> <br className="md:hidden" /><span className="text-[#194BED]"> <T>5,000+ Global companies</T></span>
                         </h3>
                     </FadeUp>
 
@@ -894,7 +896,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 height={48}
                                                 className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                             />
-                                            <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
+                                            <p className=" text-xs md:text-sm text-[#737373] font-medium"> <T>{logo.name}</T> </p>
                                         </div>
                                     ))}
                                 </div>
@@ -924,7 +926,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <i className="fas fa-star"></i>
                             <i className="fas fa-star"></i>
                             <i className="fas fa-star"></i>
-                            <span className="text-[#333333] text-fluid-small lg:text-[16px] tracking-para ml-2">Based on reviews</span>
+                            <span className="text-[#333333] text-fluid-small lg:text-[16px] tracking-para ml-2"><T>Based on reviews</T></span>
                         </div>
                     </div>
 
@@ -940,12 +942,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <div className="flex items-center space-x-4">
                                         <Image src={AssetPath.home.greenAccq} alt="one" width={50} height={50} className="h-[40px] md:h-[50px] w-auto" />
                                         <span className="text-[#000000] tracking-heading leading-tight text-fluid-body whitespace-nowrap">
-                                            Accqrate E-invoicing
+                                           <T>Accqrate E-invoicing</T>
                                             <span className="text-sm"> <br /><T>{countryContent.heroSubtitle}</T></span>
                                         </span>
-                                    </div>
+                                    </div> 
                                     <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#333333] text-fluid-body mt-[30px]">
-                                        Peppol Member and certified Access Point Provider and Service Metadata Publisher.
+                                        <T>Peppol Member and certified Access Point Provider and Service Metadata Publisher.</T>
                                     </p>
                                 </div>
 
@@ -967,30 +969,30 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         {/* Right Side: Modules + What you'll achieve */}
                         <div className="flex flex-col gap-6 xl:h-full">
                             <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                <h2 className="text-fluid-body font-medium tracking-heading">Full Compliance with Belgium’s E-Invoicing Mandate</h2>
-                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading">Accqrate ensures end-to-end compliance with Belgium’s B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:</h2>
+                                <h2 className="text-fluid-body font-medium tracking-heading"><T>Full Compliance with Belgium’s E-Invoicing Mandate</T></h2>
+                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>Accqrate ensures end-to-end compliance with Belgium’s B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:</T></h2>
                                 <ul className="gap-y-2 mt-8 text-fluid-small lg:text-[16px] tracking-para leading-[26px] list-disc pl-5">
-                                    <li>Structured formats fully aligned with Belgian and EU specifications</li>
-                                    <li>Secure, standardized exchange over PEPPOL</li>
-                                    <li>Automated updates for evolving tax and technical regulations</li>
-                                    <li>Seamless integration with Mercurius and tax authority systems</li>
-                                </ul>
+                                    <li><T>Structured formats fully aligned with Belgian and EU specifications</T></li>
+                                    <li><T>Secure, standardized exchange over PEPPOL</T></li>
+                                    <li><T>Automated updates for evolving tax and technical regulations</T></li>
+                                    <li><T>Seamless integration with Mercurius and tax authority systems</T></li>
+                                </ul> 
                             </FadeUp>
 
                             <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                <h2 className="text-fluid-body font-medium tracking-heading">Hassle-Free E-Invoicing Automation</h2>
-                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading">Shift from manual intervention to intelligent automation:</h2>
+                                <h2 className="text-fluid-body font-medium tracking-heading"><T>Hassle-Free E-Invoicing Automation</T></h2>
+                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>Shift from manual intervention to intelligent automation:</T></h2>
                                 <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small lg:text-[16px] leading-tight tracking-para">
-                                    <li>AI-powered validation to reduce rejections</li>
-                                    <li>Real-time error detection and correction suggestions</li>
-                                    <li>Zero-cost regulatory upgrades</li>
-                                    <li>Automated generation → validation → PEPPOL submission → archiving</li>
-                                </ul>
+                                    <li><T>AI-powered validation to reduce rejections</T></li>
+                                    <li><T>Real-time error detection and correction suggestions</T></li>
+                                    <li><T>Zero-cost regulatory upgrades</T></li>
+                                    <li><T>Automated generation → validation → PEPPOL submission → archiving</T></li>
+                                </ul> 
 
                                 <button
                                     onClick={() => setModalOpen(true)}
                                     className="h-[46px] md:h-[55px] max-w-[250px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"                        >
-                                    Book an Appoinment
+                                    <T>Book an Appointment</T>
                                     <svg
                                         width="20"
                                         height="20"
@@ -1035,18 +1037,18 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <FadeUp className="font-inter rounded-2xl flex flex-col justify-between p-8 bg-transparent flex-shrink-0">
                                     <div>
                                         <h2 className="text-black text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight">
-                                            <span className="text-[#194BED]">Accelera</span> Your AI Copilot
+                                            <span className="text-[#194BED]">Accelera</span> <T>Your AI Copilot</T>
                                         </h2>
 
                                         <p className="text-[#333333] text-[14px] md:text-[16px] mt-[40px] mb-6">
-                                            Work faster and decide smarter with AI embedded across the suite.
+                                           <T>Work faster and decide smarter with AI embedded across the suite.</T>
                                         </p>
 
                                         <ul className="list-disc pl-5 space-y-4 text-[14px] md:text-[16px]">
-                                            <li><b>Natural-language actions:</b> Ask, &quot;Show last month&apos;s receivables by region&quot;</li>
-                                            <li><b>Automations:</b> Generate e-invoices, trigger approvals</li>
-                                            <li><b>Insight to action:</b> Spot anomalies, forecast demand</li>
-                                            <li><b>Assistive UX:</b> Contextual help & guided workflows</li>
+                                            <li><b><T>Natural-language actions:</T></b> <T>Ask, &quot;Show last month&apos;s receivables by region&quot;</T></li>
+                                            <li><b><T>Automations:</T></b> <T>Generate e-invoices, trigger approvals</T></li>
+                                            <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand</T></li>
+                                            <li><b><T>Assistive UX:</T></b> <T>Contextual help & guided workflows</T></li>
                                         </ul>
                                     </div>
 
@@ -1055,7 +1057,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                                         onClick={() => setModalOpen(true)}
                                     >
-                                        See Accelera in a 5-Minute Demo
+                                        <T>See Accelera in a 5-Minute Demo</T>
                                         <svg width="20" height="20" fill="none" stroke="currentColor">
                                             <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
@@ -1085,7 +1087,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         {/* Left Side: Image (Desktop) */}
                         <div className="hidden lg:flex flex-col items-start justify-between p-6 md:p-8">
                             <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
-                                Future-Ready for <span className="text-[#194BED]">ViDA</span>
+                                <T>Future-Ready for</T> <span className="text-[#194BED]">ViDA</span>
                             </h2>
                             <Image
                                 src={AssetPath.home.vida}
@@ -1100,27 +1102,27 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-6 md:p-8">
                             {/* Heading (mobile only) */}
                             <h2 className="text-fluid-small text-left pl-5 leading-[24px] tracking-para mb-4">
-                                Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:
+                               <T>Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:</T>
                             </h2>
 
                             <div>
                                 <ul className="list-disc space-y-4 mt-[15px] text-fluid-small text-left pl-5 leading-[24px] tracking-para">
                                     <li>
-                                        Cross-border interoperability within the EU
+                                        <T>Cross-border interoperability within the EU</T>
                                     </li>
-                                    <li>Configurable digital reporting aligned with ViDA</li>
+                                    <li><T>Configurable digital reporting aligned with ViDA</T></li>
                                     <li>
-                                        Multi-entity, multi-VAT number management for MNCs
+                                        <T>Multi-entity, multi-VAT number management for MNCs</T>
                                     </li>
                                 </ul>
                             </div>
 
                             <button
                                 onClick={() => setModalOpen(true)}
-                                className="h-[40px] max-w-[288px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] lg:mt-16 mt-[32px]"
+                                className="h-[50px] max-w-[350px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] lg:mt-16 mt-[32px]"
                                 style={{ background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)" }}
                             >
-                                Talk to our Consultant
+                                <T>Talk to our Consultant</T>
                                 <svg
                                     width="20"
                                     height="20"
@@ -1133,7 +1135,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 >
                                     <path d="M9 6l6 6-6 6" />
                                 </svg>
-                            </button>
+                            </button> 
                         </FadeUp>
 
                         {/* Image (Mobile) */}
@@ -1155,7 +1157,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             <div className="md:mx-8 hidden"  >
                 <div className="relative md:-top-[150px] lg:-top-[200px] max-w-[1151px] pb-8 mx-auto md:border md:rounded-[40px] bg-white min-h-[400px]">
                     <div>
-                        <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium text-center mt-8 tracking-heading leading-tight">Outcomes and The Impact</h2>
+                        <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium text-center mt-8 tracking-heading leading-tight"><T lang={lang} countryCode={countryCode}>Outcomes and The Impact</T></h2>
                     </div>
                     <div className="mt-[73px] grid grid-cols-1 md:grid-cols-3 gap-10">
                         {icon.map((icon, index) => (
@@ -1164,14 +1166,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 className="flex flex-col items-center text-center max-w-[174px] mx-auto md:max-w-[207px]"
                             >
                                 <Image className="mb-4" src={icon.img} alt={icon.title} />
-                                <h2 className="text-fluid-h2 xl:text-[23px] text-[#194BED] font-medium mb-2 tracking-heading leading-tight">{icon.title}</h2>
-                                <p className="text-fluid-body tracking-para leading-tight">{icon.description}</p>
+                                <h2 className="text-fluid-h2 xl:text-[23px] text-[#194BED] font-medium mb-2 tracking-heading leading-tight"><T>{icon.title}</T></h2>
+                                <p className="text-fluid-body tracking-para leading-tight"><T>{icon.description}</T></p>
                             </div>
                         ))}
                     </div>
-                    <div className="border-t-2 text-[#D9D9D9] mt-[40px] max-w-[354px] mx-auto md:max-w-[676px] lg:max-w-[1051px] ">
+                    <div className="border-t-2 text-[#D9D9D9] mt-[40px] max-w-[354px] mx-auto md:max-w-[676px] lg:max-w-[1051px] "> 
                         <h2 className="text-[#000000] text-fluid-body text-center max-w-[273px] md:max-w-[677px] mx-auto mt-[28px] leading-tight tracking-heading">
-                            Operating across MENA & ASEAN, backed by Iteron AG (Switzerland).
+                            <T>Operating across MENA & ASEAN, backed by Iteron AG (Switzerland).</T>
                         </h2>
                     </div>
                     <div className="flex items-center justify-center">
@@ -1180,8 +1182,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             className="h-[40px] max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
                             style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                         >
-                            Read Customer Stories
-                            <svg width="20" height="20" viewBox="0 0 24 24" className="text-white inline-block fill-current" style={{ color: 'var(--icon-color, #ffffff)' }} role="img" aria-hidden="true" focusable="false">
+                            <T>Read Customer Stories</T>
+                            <svg width="20" height="20" viewBox="0 0 24 24" className="text-white inline-block leading-tight fill-current" style={{ color: 'var(--icon-color, #ffffff)' }} role="img" aria-hidden="true" focusable="false">
                                 <path d="M9 6l6 6-6 6" />
                             </svg>
                         </button>
@@ -1191,7 +1193,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
             {/* Testimonials Section */}
             <div className="max-w-[1177px] mx-auto px-0 md:px-8 mt-8 md:mt-10" >
-                <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left mb-8 px-6">Testimonials</h2>
+                <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left mb-8 px-6"><T lang={lang} countryCode={countryCode}>Testimonials</T></h2>
                 <Carousel items={testimonialCards} autoplay autoplayDelay={4000} />
                 <div className="flex items-center justify-center">
                     <button
@@ -1199,7 +1201,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         className="h-[40px] md:h-[46px] max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
                         style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                     >
-                        Speak to a Reference Customer
+                        <T>Speak to a Reference Customer</T>
                         <svg width="20" height="20" viewBox="0 0 24 24" className="text-white inline-block fill-current" style={{ color: 'var(--icon-color, #ffffff)' }} role="img" aria-hidden="true" focusable="false">
                             <path d="M9 6l6 6-6 6" />
                         </svg>
@@ -1213,10 +1215,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     {/* Left Text */}
                     <div className="flex-1">
                         <h1 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium py-[30px] md:py-[37px] tracking-heading leading-tight">
-                            Our Values <br />Drive Everything We Do
+                            <T>Our Values</T> <br /><T>Drive Everything We Do</T>
                         </h1>
                         <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
-                            Built on trust, innovation and excellence, we deliver measurable results that transform business and create lasting impact.
+                            <T>Built on trust, innovation and excellence, we deliver measurable results that transform business and create lasting impact.</T>
                         </p>
                     </div>
 
@@ -1227,7 +1229,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             className="h-[40px] md:h-[46px] w-full xl:w-auto max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px]"
                             style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                         >
-                            Book a Personalized Walkthrough
+                            <T>Book a Personalized Walkthrough</T>
                             <svg
                                 width="20"
                                 height="20"
@@ -1258,12 +1260,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 >
                                     <div className="flex flex-col justify-start items-start gap-6">
                                         <h3 className="font-medium leading-tight tracking-heading text-fluid-body md:text-[20px] text-black">
-                                            {item.title}
+                                         <T>{item.title}</T>
                                         </h3>
                                         <p className="text-fluid-small lg:text-[16px] mt-2 md:mt-3 tracking-para leading-tight text-black">
-                                            {item.desc}
+                                            <T>{item.desc}</T>
                                         </p>
-                                    </div>
+                                    </div> 
                                 </div>
                             ))}
                         </div>
@@ -1280,7 +1282,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="flex flex-col w-full lg:max-w-[505px]">
                                 {/* Heading */}
                                 <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left mb-6 tracking-heading leading-tight">
-                                    Frequently Answered <br className="md:hidden" /> Questions
+                                    <T>Frequently Answered Questions</T>
                                 </h2>
                             </div>
 
@@ -1295,11 +1297,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 className="border-b border-[#BDBDBD] py-4"
                                             >
                                                 <AccordionTrigger className="text-[16px] md:text-[18px] font-medium text-gray-800 hover:no-underline tracking-heading leading-tight text-left">
-                                                    {item.question}
+                                                    <T>{item.question}</T>
                                                 </AccordionTrigger>
 
                                                 <AccordionContent className="text-[14px] md:text-[16px] font-light text-gray-600 tracking-para leading-relaxed mt-2 text-left">
-                                                    {item.answer}
+                                                    <T>{item.answer}</T>
                                                 </AccordionContent>
                                             </AccordionItem>
                                         ))}
@@ -1330,8 +1332,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 {/* Final Conversion Band */}
                 <div className="max-w-[1440px] mx-auto pb-6 md:pb-8 px-6 font-inter">
                     <div className="flex flex-col items-center">
-                        <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left py-[20px] md:py-[37px] tracking-heading leading-tight">Final Conversion Band</h2>
-                        <p className="text-fluid-body max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight">Run compliant, AI‑powered operations with Accqrate.</p>
+                        <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left py-[20px] md:py-[37px] tracking-heading leading-tight"><T lang={lang} countryCode={countryCode}>Final Conversion Band</T></h2>
+                        <p className="text-fluid-body max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight"> <T>Run compliant, AI-powered operations with Accqrate.</T></p>
                     </div>
                     <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6 md:py-8 lg:py-10">
                         {[
@@ -1344,7 +1346,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 onClick={() => setModalOpen(true)}
                                 className="
         relative
-        lg:w-[303px] w-[270px]
+        lg:w-auto w-[270px]
         h-[46px]
         flex items-center justify-center
         rounded-[5px]
@@ -1358,24 +1360,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 }}
                             >
                                 {/* Centered text */}
-                                <span className="mx-auto">{text}</span>
+                                <span className="mx-auto "><T>{text}</T></span>
 
-                                {/* Arrow aligned to right */}
-                                <svg
-                                    width="14"
-                                    height="14"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    className="absolute right-5 text-white"
-                                >
-                                    <path
-                                        d="M9 6l6 6-6 6"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
+                              
                             </button>
                         ))}
                     </div>
