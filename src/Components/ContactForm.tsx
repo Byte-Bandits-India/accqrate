@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
 import Link from "next/link";
+import { PhoneCall } from "lucide-react";
 import {
   Facebook,
   Linkedin,
@@ -64,14 +65,14 @@ const ContactFormPage = () => {
         card2: {
           badge: "INTEGRATION",
           title: "Integrate your ERP with compliance systems",
-          description: "Peppol Ready for Phase II integration? Our experts have got your back.",
+          description: "Peppol Ready e-invoing? Our experts have got your back.",
           buttonText: "Talk to an Expert",
           module: "E-invoicing API Integration Software"
         },
         card3: {
           badge: "PARTNERS",
           title: "Become our Trusted Partner",
-          description: "Eager to streamline Trusting Campiance in Europe for your clientele and expand your horizons? Let us collaborate.",
+          description: "Eager to streamline E-invoicing Compliance in Europe for your clientele and expand your horizons? Let us collaborate.",
           buttonText: "Partner with Us",
           module: "Partner with Us"
         }
@@ -170,13 +171,36 @@ const ContactFormPage = () => {
             Contact@accqrate-erp.com
           </p>
 
-          {/* Office Locations Section - UNCHANGED */}
-          <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
-            <h3 className="text-[#1F3FBF] font-semibold text-[20px] mb-4">
-              <p className="text-[12px] text-[#000000] leading-relaxed">Call our team Monday - Friday from 9am to 5pm</p>
-              <T lang={lang} countryCode={countryCode}>Our Office Locations</T>
-              <p className="text-[12px] text-[#000000] leading-relaxed">+41 764753665</p>
-            </h3>
+          {/* Office Locations Section */}
+<div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
+  <div className="space-y-2">
+    {/* Call Us Label */}
+    <p className="text-[14px] font-bold text-[#000000] leading-relaxed">
+      Call Us
+    </p>
+
+    {/* Phone Timing */}
+    <p className="text-[12px] text-[#000000] font-normal leading-relaxed">
+      Call our team Sun - Thu from 9am to 5pm
+    </p>
+
+    {/* Phone Section with Icon */}
+    <div className="flex items-center gap-2 text-[#1F3FBF]">
+      <PhoneCall className="w-4 h-4" />
+      <span className="text-[14px] font-medium leading-relaxed">
+        +966 54 199 9357
+      </span>
+    </div>
+
+    {/* Office Locations Title */}
+    <h3 className="text-[#1F3FBF] font-semibold text-[20px]">
+      <T lang={lang} countryCode={countryCode}>
+        <span className="text-black">Our</span> Office{" "}
+        <span className="text-black">Locations</span>
+      </T>
+    </h3>
+  </div>
+
 
             <div className="bg-white rounded-xl p-4 space-y-6 shadow-sm">
               {/* Location 1 */}
@@ -192,28 +216,7 @@ const ContactFormPage = () => {
                 <div>
                   <h4 className="font-semibold text-black"><T lang={lang} countryCode={countryCode}>Dammam</T></h4>
                   <p className="text-sm text-[#9a8e9e] underline leading-relaxed">
-                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4
-                      CH-4052 Basel
-                      Switzerland
-                      +41 (0)61 272 95 95</T>
-                  </p>
-                </div>
-              </div>
-
-              {/* Location 2 */}
-              <div className="flex">
-                <div className="flex items-center justify-center flex-shrink-0">
-                  <img
-                    src={AssetPath.pattern.dammamCircle.src}
-                    alt="Location Icon"
-                    className="w-[120px] h-[70px] object-contain"
-                  />
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-black"><T lang={lang} countryCode={countryCode}>Riyadh</T></h4>
-                  <p className="text-sm text-[#AB9EAF] underline leading-relaxed">
-                    <T lang={lang} countryCode={countryCode}>Level 1, Building Z, Zone A Airport Road, Business Gate P.O. Box 93597 Riyadh 11683 Kingdom of Saudi Arabia</T>
+                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br/>CH-4052 Basel <br/> Switzerland <br/> +41(0)61 272 95 95</T>
                   </p>
                 </div>
               </div>
