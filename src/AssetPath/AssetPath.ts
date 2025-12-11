@@ -169,6 +169,9 @@ import creditnote1 from "@/Assets/images/blogs/creditnote1.png";
 import creditnote2 from "@/Assets/images/blogs/creditnote2.png";
 import creditNotesPng from "@/Assets/images/blogs/CreditNotes.png";
 import debitNotes from "@/Assets/images/blogs/debit-notes.webp";
+import blogHeaderUae from "@/Assets/images/blogs/blog-header-UAE.png";
+import blogHeaderPoland from "@/Assets/images/blogs/blog-header-Poland.png";
+import blogHeaderBelgium from "@/Assets/images/blogs/blog-header-belgium.png";
 import eInvoicingProcess from "@/Assets/images/blogs/e-invoicing-process-overview.png";
 import einvoicingOman from "@/Assets/images/blogs/einvoicing-in-the-sultanate-of-oman.webp";
 import einvoicingOmanPng from "@/Assets/images/blogs/einvoicing-in-the-sultanate-of-oman.png";
@@ -674,6 +677,9 @@ const AssetPath = {
     zatcaPrepayment,
     zatcaIntegrationMicrosoft,
     zatcaIntegrationOracle,
+    blogHeaderUae,
+    blogHeaderPoland,
+    blogHeaderBelgium,
   },
 
   // INDUSTRIES SECTION

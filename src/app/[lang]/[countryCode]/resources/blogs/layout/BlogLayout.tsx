@@ -35,9 +35,19 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
   const isMobile = useMediaQuery("(max-width: 900px)");
   const hideRecentBlogs = useMediaQuery("(max-width: 767px)");
 
+  const getDefaultHeaderByCountry = () => {
+    const cc = (countryCode || "").toLowerCase();
+    const countryHeaderMap: Record<string, any> = {
+      be: AssetPath.blogs.blogHeaderBelgium,
+      pl: AssetPath.blogs.blogHeaderPoland,
+      ae: AssetPath.blogs.blogHeaderUae,
+    };
+    return countryHeaderMap[cc] || AssetPath.blogs.accqrateAd;
+  };
+
   // Map image paths to AssetPath
   const getImageFromAssetPath = (img: string) => {
-    if (!img || typeof img !== "string") return AssetPath.blogs.accqrateAd;
+    if (!img || typeof img !== "string") return getDefaultHeaderByCountry();
 
     const filename = img.split('/').pop()?.replace(/\.(png|jpg|jpeg|webp|svg)$/i, '') || '';
 
@@ -75,7 +85,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
       'Mandate': AssetPath.blogs.mandate,
     };
 
-    return imageMap[filename];
+    return imageMap[filename] || getDefaultHeaderByCountry();
   };
 
   // Random blog posts
@@ -132,7 +142,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
           <Row justify="center">
             <Col xs={24} md={18}>
               <Image
-                src={AssetPath.blogs.accqrateAd}
+                src={getDefaultHeaderByCountry()}
                 alt="Accqrate - ZATCA-compliant e-invoicing software"
                 width={1200}
                 height={400}
