@@ -22,7 +22,6 @@ export default function Section1() {
           </h1>
 
           {/* Right-Aligned Stars */}
-
           
         </div>
         <div className="mt-0 lg:-mt-8 lg:ml-[60%] flex justify-center">
@@ -36,38 +35,40 @@ export default function Section1() {
           </div>
 
         {/* Two-Column Content Row */}
-<div className="w-full mt-16 md:mt-[10%] flex flex-col md:flex-row gap-6">
+        <div className="w-full mt-16 md:mt-[10%] flex flex-col md:flex-row gap-6">
 
-{/* LEFT COLUMN → Stats */}
-<div className="flex items-center justify-center text-center md:w-1/2">
-  <Image
-    src={AssetPath.aboutus.hero}
-    alt="about hero"
-    width={350}
-    height={319}
-    className="object-contain max-w-[500px] max-h-[419px]"
-  />
-</div>
+          {/* LEFT COLUMN → Stats */}
+          <div className="flex items-center justify-center md:w-1/2">
+            <div className="relative w-full h-full">
+              <Image
+                src={AssetPath.aboutus.hero}
+                alt="about hero"
+                width={500}
+                height={363}
+                className="object-contain w-full max-h-[363px]"
+                style={{ maxHeight: '363px' }}
+              />
+            </div>
+          </div>
 
-{/* RIGHT COLUMN → Description */}
-<div className="md:max-w-[639px]">
-  <p className="text-[16px] md:text-[18px] leading-tight">
-    Accqrate is a global E-Invoicing platform built to meet the digital tax
-    and reporting modernization sweeping across the EU. From Belgium’s
-    PEPPOL-based B2B mandate to ViDA-driven cross-border reporting,
-    Accqrate delivers a scalable, compliant, and future-ready foundation
-    for enterprises operating across Belgium and broader EU markets.
-    <br /><br />
-    Backed by Iteron AG, Switzerland, Accqrate brings European engineering
-    standards, secure architectures, and a decade-long expertise in digital
-    tax transformations across regulated geographies.
-  </p>
-</div>
+          {/* RIGHT COLUMN → Description */}
+          <div className="md:max-w-[639px] flex items-center">
+            <p className="text-[16px] md:text-[18px] leading-tight">
+              Accqrate is a global E-Invoicing platform built to meet the digital tax
+              and reporting modernization sweeping across the EU. From Belgium's
+              PEPPOL-based B2B mandate to ViDA-driven cross-border reporting,
+              Accqrate delivers a scalable, compliant, and future-ready foundation
+              for enterprises operating across Belgium and broader EU markets.
+              <br /><br />
+              Backed by Iteron AG, Switzerland, Accqrate brings European engineering
+              standards, secure architectures, and a decade-long expertise in digital
+              tax transformations across regulated geographies.
+            </p>
+          </div>
 
-</div>
+        </div>
 
       </div>
     </section>
   );
 }
-
