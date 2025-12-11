@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
+import Link from "next/link";
 import {
   Facebook,
   Linkedin,
@@ -56,21 +57,21 @@ const ContactFormPage = () => {
         card1: {
           badge: "E-INVOICING",
           title: "Buy E-invoicing Software",
-          description: "Seeking cutting-edge E-invoicing software ready for Phase 1 & 2? Let us find the perfect pricing fit for you.",
+          description: "Seeking cutting-edge E-invoicing software ready for Europe? Let us find the perfect pricing fit for you.",
           buttonText: "Chat With Us",
           module: "E-invoicing Standalone Software"
         },
         card2: {
           badge: "INTEGRATION",
           title: "Integrate your ERP with compliance systems",
-          description: "Ready for Phase II integration? Our experts have got your back.",
+          description: "Peppol Ready for Phase II integration? Our experts have got your back.",
           buttonText: "Talk to an Expert",
           module: "E-invoicing API Integration Software"
         },
         card3: {
           badge: "PARTNERS",
           title: "Become our Trusted Partner",
-          description: "Eager to streamline PEPPOL compliance for your clientele and expand your horizons? Let us collaborate.",
+          description: "Eager to streamline Trusting Campiance in Europe for your clientele and expand your horizons? Let us collaborate.",
           buttonText: "Partner with Us",
           module: "Partner with Us"
         }
@@ -163,7 +164,7 @@ const ContactFormPage = () => {
           </p>
 
           <h2 className="text-fluid-body font-medium text-[#000000] mb-2">
-            <T lang={lang} countryCode={countryCode}>Our Friendly team is here to help</T>
+            <T lang={lang} countryCode={countryCode}>Our team is here to help</T>
           </h2>
           <p className="text-[#FF6E3E] text-fluid-small mb-2">
             Contact@accqrate-erp.com
@@ -172,35 +173,40 @@ const ContactFormPage = () => {
           {/* Office Locations Section - UNCHANGED */}
           <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
             <h3 className="text-[#1F3FBF] font-semibold text-[20px] mb-4">
+              <p className="text-[12px] text-[#000000] leading-relaxed">Call our team Monday - Friday from 9am to 5pm</p>
               <T lang={lang} countryCode={countryCode}>Our Office Locations</T>
+              <p className="text-[12px] text-[#000000] leading-relaxed">+41 764753665</p>
             </h3>
 
             <div className="bg-white rounded-xl p-4 space-y-6 shadow-sm">
               {/* Location 1 */}
-              <div className="flex gap-3">
-                <div className="flex items-center justify-center">
+              <div className="flex">
+                <div className="flex items-center justify-center flex-shrink-0">
                   <img
                     src={AssetPath.pattern.dammamCircle.src}
                     alt="Location Icon"
-                    className="w-[120px] h-20 object-contain"
+                    className="w-[120px] h-[70px] object-contain"
                   />
                 </div>
 
                 <div>
                   <h4 className="font-semibold text-black"><T lang={lang} countryCode={countryCode}>Dammam</T></h4>
                   <p className="text-sm text-[#9a8e9e] underline leading-relaxed">
-                    <T lang={lang} countryCode={countryCode}>2nd Floor, Suit NO. 3, Al khonaini building, king saud street, P.O BOX 2877 Dammam 31461 Kingdom of Saudi Arabia</T>
+                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4
+CH-4052 Basel
+Switzerland
++41 (0)61 272 95 95</T>
                   </p>
                 </div>
               </div>
 
               {/* Location 2 */}
-              <div className="flex gap-3">
-                <div className="flex items-center justify-center">
+              <div className="flex">
+                <div className="flex items-center justify-center flex-shrink-0">
                   <img
                     src={AssetPath.pattern.dammamCircle.src}
                     alt="Location Icon"
-                    className="w-[120px] h-20 object-contain"
+                    className="w-[120px] h-[70px] object-contain"
                   />
                 </div>
 
@@ -220,12 +226,48 @@ const ContactFormPage = () => {
               </p>
 
               <div className="flex gap-4 text-gray-500">
-                <Facebook className="w-5 h-5 hover:text-[#194BED] cursor-pointer" />
-                <Linkedin className="w-5 h-5 hover:text-[#194BED] cursor-pointer" />
-                <Twitter className="w-5 h-5 hover:text-[#194BED] cursor-pointer" />
-                <Instagram className="w-5 h-5 hover:text-[#194BED] cursor-pointer" />
-                <Youtube className="w-5 h-5 hover:text-[#194BED] cursor-pointer" />
-              </div>
+
+  <Link
+    href="https://www.facebook.com/people/Accqrate/100077291530631/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Facebook className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
+  </Link>
+
+  <Link
+    href="https://www.linkedin.com/showcase/accqrate-belgium/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Linkedin className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
+  </Link>
+
+  <Link
+    href="https://x.com/accqrate_erp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Twitter className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
+  </Link>
+
+  <Link
+    href="https://www.instagram.com/accqrateerp/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Instagram className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
+  </Link>
+
+  <Link
+    href="https://www.youtube.com/channel/UCAzO34h3KxRrObyRor70D9A"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Youtube className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
+  </Link>
+
+</div>
             </div>
           </div>
         </div>
