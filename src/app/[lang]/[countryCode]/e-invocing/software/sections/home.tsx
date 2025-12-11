@@ -11,6 +11,7 @@ import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
 import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
+import { t, currentLang } from "@/lib/translations";
 
 // Country configuration with all content inside
 const countryConfig = {
@@ -214,6 +215,10 @@ const Software: React.FC = () => {
     };
 
     const flagImage = getFlagForCountry(countryCode);
+    const translatedDescription1 = React.useMemo(
+        () => t(content.description1, countryCode),
+        [content.description1, countryCode, currentLang.lang]
+    );
 
     return (
         <>
@@ -250,7 +255,7 @@ const Software: React.FC = () => {
                             {/* Description 1 with green E-invoicing */}
                             <p
                                 className="text-[#000000] text-fluid-body lg:text-[18px] max-w-[560px] leading-[30px]"
-                                dangerouslySetInnerHTML={{ __html: content.description1 }}
+                                dangerouslySetInnerHTML={{ __html: translatedDescription1 }}
                             />
 
                             {/* Description 2 */}
@@ -271,13 +276,13 @@ const Software: React.FC = () => {
                       relative
                       flex items-center justify-center
                       w-[270px] md:w-[240px] lg:w-[300px]
-                      h-[46px] md:h-[52px]
+                      min-h-[46px] md:min-h-[52px]
                       bg-[#F05A28]
                       rounded-[50px]
-                      px-2
+                      px-4 pr-10
                       text-white
                       text-fluid-small md:text-[12px] lg:text-[16px]
-                      whitespace-nowrap
+                      text-center leading-tight
                       transition-all duration-300 hover:bg-[#d94f22]
                     "
                                 >

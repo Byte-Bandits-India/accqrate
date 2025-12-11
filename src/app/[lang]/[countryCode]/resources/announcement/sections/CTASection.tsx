@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
 import dynamic from "next/dynamic";
+import T from "@/Components/T";
 
 // Import ContactModal with dynamic loading to avoid server-client issues
 const ContactModal = dynamic(
@@ -90,15 +91,15 @@ const CTASection = () => {
         {/* LEFT CONTENT */}
         <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
           <h2 className="text-fluid-h2 lg:text-[38px] font-medium mb-6">
-            {content.title}
+            <T>{content.title}</T>
           </h2>
 
           <p className="text-fluid-body lg:text-[24px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
-            {content.description1}
+            <T>{content.description1}</T>
           </p>
 
           <p className="text-sm text-white/80 leading-tight xl:max-w-[773px] ">
-            {content.description2}
+            <T>{content.description2}</T>
           </p>
 
           <div className="hidden">
@@ -107,7 +108,7 @@ const CTASection = () => {
               onClick={() => setModalOpen(true)}
               className="inline-flex items-center px-6 py-3 bg-white text-primary font-semibold rounded-full shadow-lg hover:bg-white/90 transition-all duration-200"
             >
-              Sign Up
+              <T>Sign Up</T>
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
 
@@ -130,7 +131,7 @@ const CTASection = () => {
                 />
               </div>
               <div className="flex items-center gap-2 text-white/90 text-sm">
-                <span>No complexity, Subscribe and use</span>
+                <span><T>No complexity, Subscribe and use</T></span>
               </div>
             </div>
           </div>
@@ -158,20 +159,21 @@ const CTASection = () => {
             className="
               relative
               lg:w-[300px] w-[270px] md:w-[240px]
-              h-[46px] md:h-[52px]
+              min-h-[46px] md:min-h-[52px]
               flex items-center justify-center
               bg-[#F05A28]
               rounded-[50px]
-              px-2
+              px-4 pr-10
               text-white
-              text-fluid-small md:text-[14px] lg:text-[16px] whitespace-nowrap
+              text-fluid-small md:text-[14px] lg:text-[16px]
+              text-center leading-tight
               mt-[32px]
               hover:bg-[#E04A18] transition-colors duration-200
               cursor-pointer
             "
           >
             {/* Centered Text */}
-            <span className="mx-auto ">{button.text}</span>
+            <span className="mx-auto block"><T>{button.text}</T></span>
 
             {/* Arrow aligned to the right */}
             <svg

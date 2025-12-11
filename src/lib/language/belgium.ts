@@ -6680,12 +6680,6 @@ const translations = {
 
   // ========== SOFTWARE COMPONENT BELGIUM SECTION ==========
 
-  'Get a Free Proof of Concept': {
-    nl: "Ontvang een gratis proof of concept",
-    de: "Erhalten Sie einen kostenlosen Proof of Concept",
-    fr: "Obtenez une preuve de concept gratuite"
-  },
-
   'Seamless': {
     nl: "Naadloos",
     de: "Nahtlos",
@@ -6884,18 +6878,6 @@ const translations = {
     nl: "Vraag een Peppol-conformiteitsdemo aan",
     de: "Fordern Sie eine Peppol-Compliance-Demo an",
     fr: "Obtenez une démo de conformité Peppol"
-  },
-
-  'Subscribe for Updates': {
-    nl: "Abonneer voor updates",
-    de: "Für Updates abonnieren",
-    fr: "Abonnez-vous pour les mises à jour"
-  },
-
-  'Talk to Sales': {
-    nl: "Praat met Sales",
-    de: "Sprechen Sie mit dem Vertrieb",
-    fr: "Parlez aux ventes"
   },
 
   'Free Proof of Concept': {
@@ -7283,13 +7265,6 @@ const translations = {
     de: "Accqrate führt AccelerAI ein, eine hochentwickelte Automatisierungsschicht für Echtzeit-Compliance-Checks, Anomalieerkennung, MwSt-Abstimmung und grenzüberschreitende Berichterstattung.",
     fr: "Accqrate présente AccelerAI, une couche d’automatisation sophistiquée pour les contrôles de conformité en temps réel, la détection d’anomalies, le rapprochement de TVA et les rapports transfrontaliers."
   },
-   'Expansion and Growth in EU': { nl: "Uitbreiding en groei in de EU", de: "Expansion und Wachstum in der EU", fr: "Expansion et croissance dans l’UE" },
-
-  'Accqrate has experienced remarkable growth and innovation, marked by significant achievements:': {
-    nl: "Accqrate heeft opmerkelijke groei en innovatie doorgemaakt, gekenmerkt door belangrijke prestaties:",
-    de: "Accqrate verzeichnet bemerkenswertes Wachstum und Innovation, gekennzeichnet durch bedeutende Errungenschaften:",
-    fr: "Accqrate a connu une croissance et une innovation remarquables, marquées par des réalisations significatives :"
-  },
     'Our Team': { nl: "Ons team", de: "Unser Team", fr: "Notre équipe" },
 
   'A global team of engineers, tax experts, and solution architects operates across Switzerland, India, MENA, and Europe. Our Belgium and EU compliance specialists bring deep knowledge of PEPPOL frameworks, VAT ecosystems, and ERP integrations, ensuring every deployment is accurate, predictable, and aligned with FPS Finance and EU standards.': {
@@ -7534,6 +7509,766 @@ const translations = {
     "Final Conversion Band": { nl: "Eindconversiebereik", de: "Endgültige Konvertierungsband", fr: "Bande de conversion finale" },
   "Run compliant, AI-powered operations with Accqrate.": { nl: "Voer conforme, door AI aangedreven operaties uit met Accqrate.", de: "Führen Sie konforme, KI-gestützte Abläufe mit Accqrate aus.", fr: "Exécutez des opérations conformes et pilotées par l’IA avec Accqrate." },
 
+  //Envoicing Software Section
+  'PEPPOL Certified  E-invoicing Software for Belgium': {
+    en: "PEPPOL Certified E-invoicing Software for Belgium",
+    nl: "PEPPOL Gecertificeerde E-facturatiesoftware voor België",
+    de: "PEPPOL Zertifizierte E-Rechnungssoftware für Belgien",
+    fr: "Logiciel de facturation électronique certifié PEPPOL pour la Belgique",
+   },
+  
+  'Enable Your Business With E-invoicing.': {
+    en: "Enable Your Business With E-invoicing.",
+    nl: "Activeer uw bedrijf met E-facturatie.",
+    de: "Aktivieren Sie Ihr Unternehmen mit E-Rechnungsstellung.",
+    fr: "Activez votre entreprise avec la facturation électronique.",
+   },
+  
+  'Integrate With PEPPOL Network': {
+    en: "Integrate With PEPPOL Network",
+    nl: "Integreer met PEPPOL Netwerk",
+    de: "Integrieren Sie mit dem PEPPOL-Netzwerk",
+    fr: "Intégrez avec le réseau PEPPOL",
+   },
+  
+  'European Based E-invoicing. Solution For European Companies.': {
+    en: "European Based E-invoicing. Solution For European Companies.",
+    nl: "Europees gebaseerde e-facturatie. Oplossing voor Europese bedrijven.",
+    de: "Europa-basierte E-Rechnungsstellung. Lösung für europäische Unternehmen.",
+    fr: "E-facturation basée en Europe. Solution pour les entreprises européennes."
+  },
+  'European Based <span class=\'text-[#508847]\'>E-invoicing.</span> Solution For European Companies.': {
+    en: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
+    nl: "Europese <span class='text-[#508847]'>e-facturatie</span>. Oplossing voor Europese bedrijven.",
+    de: "Europäische <span class='text-[#508847]'>E-Rechnungsstellung</span>. Lösung für europäische Unternehmen.",
+    fr: "Solution européenne de <span class='text-[#508847]'>facturation électronique</span> pour les entreprises européennes."
+  },
+  
+  
+  'Connect with our Consultant': {
+    en: "Connect with our Consultant",
+    nl: "Contacteer onze consultant",
+    de: "Verbinden Sie sich mit unserem Berater",
+    fr: "Connectez-vous avec notre consultant",
+   },
+   'Simplified': {
+    en: "Simplified",
+    nl: "Vereenvoudigd",
+    de: "Vereinfacht",
+    fr: "Simplifié",
+   },
+   'Smart': {
+    en: "Smart",
+    nl: "Slim",
+    de: "Intelligent",
+    fr: "Intelligent",
+   },
+   '4.8 average rating from our customers': {
+    en: "4.8 average rating from our customers",
+    nl: "4.8 gemiddelde beoordeling van onze klanten",
+    de: "4.8 durchschnittliche Bewertung von unseren Kunden",
+    fr: "4.8 note moyenne de nos clients",
+   },
+   'Peppol Certified': {
+    en: "Peppol Certified",
+    nl: "Peppol Gecertificeerd",
+    de: "Peppol Zertifiziert",
+    fr: "Certifié Peppol",
+   },
+  'Data Hosted in Europe': {
+    en: "Data Hosted in Europe",
+    nl: "Gegevens gehost in Europa",
+    de: "Daten in Europa gehostet",
+    fr: "Données hébergées en Europe",
+   },
+  'ISO 27001 Certified': {
+    en: "ISO 27001 Certified",
+    nl: "ISO 27001 gecertificeerd",
+    de: "ISO 27001 zertifiziert",
+    fr: "Certifié ISO 27001",
+   },
+   'GDPR Compliant': {
+    en: "GDPR Compliant",
+    nl: "AVG-conform",
+    de: "DSGVO-konform",
+    fr: "Conforme au RGPD",
+   },
+  
+  'Customize and send invoices easily': {
+    en: "Customize and send invoices easily",
+    nl: "Facturen eenvoudig aanpassen en verzenden",
+    de: "Rechnungen einfach anpassen und versenden",
+    fr: "Personnalisez et envoyez facilement des factures"
+  },
+  
+  'Sending an invoice should be easy - and we`ve made it so': {
+    en: "Sending an invoice should be easy - and we've made it so",
+    nl: "Een factuur verzenden moet gemakkelijk zijn - en wij hebben dat gerealiseerd",
+    de: "Das Versenden einer Rechnung sollte einfach sein - und wir haben es so gemacht",
+    fr: "Envoyer une facture devrait être facile - et nous l'avons rendu ainsi"
+  },
+  
+  'Perfectly aligned with your needs and brand': {
+    en: "Perfectly aligned with your needs and brand",
+    nl: "Perfect afgestemd op uw behoeften en merk",
+    de: "Perfekt auf Ihre Bedürfnisse und Marke abgestimmt",
+    fr: "Parfaitement aligné sur vos besoins et votre marque"
+  },
+  
+  'Invoices Custom-Made for Your Business': {
+    en: "Invoices Custom-Made for Your Business",
+    nl: "Facturen op maat gemaakt voor uw bedrijf",
+    de: "Maßgeschneiderte Rechnungen für Ihr Unternehmen",
+    fr: "Factures sur mesure pour votre entreprise"
+  },
+  
+  'See It in Action': {
+    en: "See It in Action",
+    nl: "Zie het in actie",
+    de: "Sehen Sie es in Aktion",
+    fr: "Voyez-le en action"
+  },
+  
+  'Change column labels': {
+    en: "Change column labels",
+    nl: "Kolomlabels wijzigen",
+    de: "Spaltenbeschriftungen ändern",
+    fr: "Modifier les étiquettes de colonne"
+  },
+  
+  'Modify the text in any column to meet your specific requirements': {
+    en: "Modify the text in any column to meet your specific requirements",
+    nl: "Pas de tekst in elke kolom aan aan uw specifieke vereisten",
+    de: "Ändern Sie den Text in jeder Spalte, um Ihren spezifischen Anforderungen gerecht zu werden",
+    fr: "Modifiez le texte dans n'importe quelle colonne pour répondre à vos exigences spécifiques"
+  },
+  
+  'Enterprise‑grade.': {
+    en: "Enterprise‑grade.",
+    nl: "Enterprise‑grade.",
+    de: "Unternehmensklasse.",
+    fr: "Niveau entreprise."
+  },
+  
+  'Adapt the color palette to align with your brand\'s identity.': {
+    en: "Adapt the color palette to align with your brand's identity.",
+    nl: "Pas het kleurenpalet aan om aan te sluiten bij de identiteit van uw merk.",
+    de: "Passen Sie die Farbpalette an, um mit der Identität Ihrer Marke übereinzustimmen.",
+    fr: "Adaptez la palette de couleurs pour l'aligner sur l'identité de votre marque."
+  },
+  
+  'Save invoice emplates': {
+    en: "Save invoice templates",
+    nl: "Factuursjablonen opslaan",
+    de: "Rechnungsvorlagen speichern",
+    fr: "Enregistrer les modèles de facture"
+  },
+  
+  'Leverage your favorite template for efficiency and time savings.': {
+    en: "Leverage your favorite template for efficiency and time savings.",
+    nl: "Maak gebruik van uw favoriete sjabloon voor efficiëntie en tijdwinst.",
+    de: "Nutzen Sie Ihre bevorzugte Vorlage für Effizienz und Zeitersparnis.",
+    fr: "Tirez parti de votre modèle préféré pour l'efficacité et le gain de temps."
+  },
+  
+  'Add your company Logo': {
+    en: "Add your company Logo",
+    nl: "Voeg uw bedrijfslogo toe",
+    de: "Fügen Sie Ihr Firmenlogo hinzu",
+    fr: "Ajoutez votre logo d'entreprise"
+  },
+  
+  'Incorporate your company\'s seal on invoices, quotes, receipts, and other paperwork.': {
+    en: "Incorporate your company's seal on invoices, quotes, receipts, and other paperwork.",
+    nl: "Voeg het zegel van uw bedrijf toe op facturen, offertes, bonnen en andere documenten.",
+    de: "Integrieren Sie das Siegel Ihres Unternehmens auf Rechnungen, Angeboten, Quittungen und anderen Unterlagen.",
+    fr: "Intégrez le sceau de votre entreprise sur les factures, devis, reçus et autres documents."
+  },
+  
+  'Compliant with Belgium\'s Mandatory B2B E-Invoicing Regulation': {
+    en: "Compliant with Belgium's Mandatory B2B E-Invoicing Regulation",
+    nl: "Conform met de verplichte B2B E-facturatieregeling van België",
+    de: "Konform mit der obligatorischen B2B E-Rechnungsregelung Belgiens",
+    fr: "Conforme à la réglementation belge obligatoire de facturation électronique B2B"
+  },
+  
+  'Generate invoices fully compliant with Belgium\'s FPS Finance 2026 mandate': {
+    en: "Generate invoices fully compliant with Belgium's FPS Finance 2026 mandate",
+    nl: "Genereer facturen volledig conform het FPS Finance 2026-mandaat van België",
+    de: "Generieren Sie Rechnungen vollständig konform mit dem FPS Finance 2026-Mandat Belgiens",
+    fr: "Générez des factures entièrement conformes au mandat FPS Finance 2026 de la Belgique"
+  },
+  
+  'EN 16931 and Peppol Requirements:': {
+    en: "EN 16931 and Peppol Requirements:",
+    nl: "EN 16931 en Peppol Vereisten:",
+    de: "EN 16931 und Peppol Anforderungen:",
+    fr: "Exigences EN 16931 et Peppol :"
+  },
+  
+  'Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.': {
+    en: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.",
+    nl: "Accqrate genereert gestructureerde facturen conform EN 16931 en wisselt ze uit via het Peppol-netwerk. Elke factuur aan BTW-geregistreerde Belgische klanten wordt geleverd in het vereiste UBL-formaat voor gegarandeerde compliance.",
+    de: "Accqrate generiert strukturierte Rechnungen, die EN 16931-konform sind, und tauscht sie über das Peppol-Netzwerk aus. Jede Rechnung an umsatzsteuerpflichtige belgische Kunden wird im erforderlichen UBL-Format geliefert, um Compliance zu gewährleisten.",
+    fr: "Accqrate génère des factures structurées conformes à la norme EN 16931 et les échange via le réseau Peppol. Chaque facture destinée aux clients belges enregistrés à la TVA est livrée au format UBL requis pour une conformité garantie."
+  },
+  
+  '5,000+ Across 30+ Industries': {
+    en: "5,000+ Across 30+ Industries",
+    nl: "5.000+ Over 30+ Industrieën",
+    de: "5.000+ Über 30+ Branchen",
+    fr: "5 000+ Dans 30+ Industries"
+  },
+  
+  'Accqrate is a Peppol Certified AP Provider and SMP': {
+    en: "Accqrate is a Peppol Certified AP Provider and SMP",
+    nl: "Accqrate is een Peppol Gecertificeerde AP-Provider en SMP",
+    de: "Accqrate ist ein Peppol-zertifizierter AP-Provider und SMP",
+    fr: "Accqrate est un fournisseur AP certifié Peppol et SMP"
+  },
+  
+  'Compliant with Poland\'s Mandatory B2B E-Invoicing Regulation': {
+    en: "Compliant with Poland's Mandatory B2B E-Invoicing Regulation",
+    nl: "Conform met de verplichte B2B E-facturatieregeling van Polen",
+    de: "Konform mit der obligatorischen B2B E-Rechnungsregelung Polens",
+    fr: "Conforme à la réglementation polonaise obligatoire de facturation électronique B2B"
+  },
+  
+  'Generate invoices fully compliant with Poland\'s KSeF system': {
+    en: "Generate invoices fully compliant with Poland's KSeF system",
+    nl: "Genereer facturen volledig conform het KSeF-systeem van Polen",
+    de: "Generieren Sie Rechnungen vollständig konform mit dem KSeF-System Polens",
+    fr: "Générez des factures entièrement conformes au système KSeF de la Pologne"
+  },
+  
+  'Phase 1 & 2 Requirements': {
+    en: "Phase 1 & 2 Requirements",
+    nl: "Fase 1 & 2 Vereisten",
+    de: "Phase 1 & 2 Anforderungen",
+    fr: "Exigences de la phase 1 et 2"
+  },
+  
+  'Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.': {
+    en: "Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.",
+    nl: "Accqrate produceert FA(3) XML-facturen die voldoen aan de Poolse normen en dient ze in via het KSeF-platform, waardoor voldaan wordt aan de verplichte B2B-vereisten die in 2026 van kracht worden. Alle facturen aan Poolse BTW-geregistreerde klanten worden via KSeF verwerkt, wat volledige wettelijke en technische compliance garandeert.",
+    de: "Accqrate erstellt Polen-konforme FA(3) XML-Rechnungen und reicht sie über die KSeF-Plattform ein, wobei die obligatorischen B2B-Anforderungen ab 2026 erfüllt werden. Alle Rechnungen an umsatzsteuerpflichtige polnische Kunden werden über KSeF abgewickelt, was vollständige rechtliche und technische Compliance gewährleistet.",
+    fr: "Accqrate produit des factures XML FA(3) conformes aux normes polonaises et les soumet via la plateforme KSeF, répondant aux exigences B2B obligatoires entrant en vigueur en 2026. Toutes les factures destinées aux clients polonais enregistrés à la TVA sont traitées via KSeF, garantissant une conformité juridique et technique complète."
+  },
+  
+  'Accqrate is Peppol Certified Solution Provider': {
+    en: "Accqrate is Peppol Certified Solution Provider",
+    nl: "Accqrate is een Peppol Gecertificeerde Oplossingsprovider",
+    de: "Accqrate ist ein Peppol-zertifizierter Lösungsanbieter",
+    fr: "Accqrate est un fournisseur de solutions certifié Peppol"
+  },
+  
+  'Full Compliance with Belgium\'s': {
+    en: "Full Compliance with Belgium's",
+    nl: "Volledige naleving van België's",
+    de: "Volle Konformität mit Belgien",
+    fr: "Conformité totale avec la Belgique"
+  },
+  
+  'E-Invoicing Mandate': {
+    en: "E-Invoicing Mandate",
+    nl: "E-facturatie Mandaat",
+    de: "E-Rechnungsmandat",
+    fr: "Mandat de facturation électronique"
+  },
+  
+  'Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium\'s evolving regulatory framework.': {
+    en: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium's evolving regulatory framework.",
+    nl: "Accqrate levert gestructureerde e-facturen conform EN 16931 met naadloze Peppol-integratie, waardoor veilige uitwisseling, gestandaardiseerde verwerking en continue afstemming op het evoluerende regelgevingskader van België worden gegarandeerd.",
+    de: "Accqrate liefert strukturierte E-Rechnungen, die EN 16931-konform sind, mit nahtloser Peppol-Integration und gewährleistet so sicheren Austausch, standardisierte Verarbeitung und kontinuierliche Anpassung an den sich entwickelnden regulatorischen Rahmen Belgiens.",
+    fr: "Accqrate fournit des factures électroniques structurées conformes à la norme EN 16931 avec une intégration transparente de Peppol, garantissant un échange sécurisé, un traitement standardisé et un alignement continu avec le cadre réglementaire évolutif de la Belgique."
+  },
+  
+  '(VAT in the Digital Age)': {
+    en: "(VAT in the Digital Age)",
+    nl: "(BTW in het digitale tijdperk)",
+    de: "(Umsatzsteuer im digitalen Zeitalter)",
+    fr: "(TVA à l'ère numérique)"
+  },
+  
+  'Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.': {
+    en: "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+    nl: "Gebouwd voor EU-brede interoperabiliteit, Accqrate ondersteunt grensoverschrijdende e-facturatie, ViDA-conforme digitale rapportage en geautomatiseerde BTW-workflows, waardoor ondernemingen worden gepositioneerd voor komende Europese compliance-vereisten.",
+    de: "Für EU-weite Interoperabilität entwickelt, unterstützt Accqrate grenzüberschreitende E-Rechnungsstellung, ViDA-konforme digitale Berichterstattung und automatisierte Umsatzsteuer-Workflows und positioniert Unternehmen für kommende europäische Compliance-Anforderungen.",
+    fr: "Conçu pour l'interopérabilité à l'échelle de l'UE, Accqrate prend en charge la facturation électronique transfrontalière, la déclaration numérique alignée sur ViDA et les flux de travail automatisés de TVA, positionnant les entreprises pour les futures exigences de conformité européennes."
+  },
+  
+  'Effortless E-Invoicing Automation': {
+    en: "Effortless E-Invoicing Automation",
+    nl: "Moeiteloze E-facturatie Automatisering",
+    de: "Mühelose E-Rechnungsautomatisierung",
+    fr: "Automatisation facile de la facturation électronique"
+  },
+  
+  'Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.': {
+    en: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
+    nl: "Accqrate biedt AI-gestuurde validatie, geautomatiseerde compliance-controles, real-time foutdetectie en end-to-end factuur automatisering van creatie tot verzending, waardoor volledige Belgische compliance wordt gegarandeerd zonder handmatige interventie.",
+    de: "Accqrate bietet KI-gestützte Validierung, automatisierte Compliance-Prüfungen, Echtzeit-Fehlererkennung und End-to-End-Rechnungsautomatisierung von der Erstellung bis zur Übermittlung und gewährleistet so vollständige belgische Compliance ohne manuellen Eingriff.",
+    fr: "Accqrate fournit une validation pilotée par l'IA, des contrôles de conformité automatisés, une détection d'erreurs en temps réel et une automatisation de bout en bout des factures de la création à la transmission, garantissant une conformité belge complète sans intervention manuelle."
+  },
+  
+  'Specialized Support and Implementation Expertise': {
+    en: "Specialized Support and Implementation Expertise",
+    nl: "Gespecialiseerde ondersteuning en implementatie-expertise",
+    de: "Spezialisierte Unterstützung und Implementierungsexpertise",
+    fr: "Support spécialisé et expertise en mise en œuvre"
+  },
+  
+  'Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.': {
+    en: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.",
+    nl: "Onze experts zorgen voor soepele onboarding, continue begeleiding en betrouwbare ondersteuning voor elke fase van uw Belgische e-facturatiereis.",
+    de: "Unsere Experten bieten reibungsloses Onboarding, kontinuierliche Beratung und zuverlässige Unterstützung für jede Phase Ihrer belgischen E-Rechnungsreise.",
+    fr: "Nos experts assurent un onboarding fluide, un accompagnement continu et une assistance fiable à chaque étape de votre parcours de facturation électronique belge."
+  },
+  
+  'Unified Global E-Invoicing Platform': {
+    en: "Unified Global E-Invoicing Platform",
+    nl: "Verenigd wereldwijd E-facturatieplatform",
+    de: "Vereinheitlichte globale E-Rechnungsplattform",
+    fr: "Plateforme mondiale unifiée de facturation électronique"
+  },
+  
+  'Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.': {
+    en: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.",
+    nl: "Multinationale organisaties kunnen vertrouwen op Accqrate om conform e-facturen te genereren, valideren en verzenden in België, de EU en wereldwijde rechtsgebieden, allemaal vanuit één geïntegreerd platform.",
+    de: "Multinationale Organisationen können sich auf Accqrate verlassen, um konforme E-Rechnungen in Belgien, der EU und weltweiten Rechtsgebieten zu erstellen, zu validieren und zu übermitteln, alles von einer einzigen, integrierten Plattform aus.",
+    fr: "Les organisations multinationales peuvent compter sur Accqrate pour générer, valider et transmettre des factures électroniques conformes en Belgique, dans l'UE et dans les juridictions mondiales, le tout à partir d'une seule plateforme intégrée."
+  },'Easy Onboarding Process': {
+    en: "Easy Onboarding Process",
+    nl: "Eenvoudig Onboardingproces",
+    de: "Einfacher Onboarding-Prozess",
+    fr: "Processus d'intégration facile"
+  },
+  
+  'Get Digital In Just 30 Minutes With Our Quick On Boarding Process': {
+    en: "Get Digital In Just 30 Minutes With Our Quick On Boarding Process",
+    nl: "Word digitaal in slechts 30 minuten met ons snelle onboardingproces",
+    de: "Werden Sie in nur 30 Minuten digital mit unserem schnellen Onboarding-Prozess",
+    fr: "Devenez numérique en seulement 30 minutes avec notre processus d'intégration rapide"
+  },
+  
+  'No credit card needed': {
+    en: "No credit card needed",
+    nl: "Geen creditcard nodig",
+    de: "Keine Kreditkarte erforderlich",
+    fr: "Pas de carte de crédit nécessaire"
+  },
+  
+  'Unlimited time on Free plan': {
+    en: "Unlimited time on Free plan",
+    nl: "Onbeperkte tijd op het gratis abonnement",
+    de: "Unbegrenzte Zeit im kostenlosen Plan",
+    fr: "Temps illimité sur le plan gratuit"
+  },
+  
+  '100% Money-Back Guarantee': {
+    en: "100% Money-Back Guarantee",
+    nl: "100% Geld-terug-garantie",
+    de: "100% Geld-zurück-Garantie",
+    fr: "Garantie de remboursement à 100%"
+  },
+  
+  'Unsubscribe Anytime': {
+    en: "Unsubscribe Anytime",
+    nl: "Op elk moment opzeggen",
+    de: "Jederzeit kündbar",
+    fr: "Désabonnez-vous à tout moment"
+  },
+  
+  'Book a Demo': {
+    en: "Book a Demo",
+    nl: "Boek een demo",
+    de: "Demo buchen",
+    fr: "Réserver une démo"
+  },
+  
+  'Flexible Deployment': {
+    en: "Flexible Deployment",
+    nl: "Flexibele Implementatie",
+    de: "Flexible Bereitstellung",
+    fr: "Déploiement flexible"
+  },
+  
+  'Cloud (managed, subscription) or On‑Prem (full control over infra & data).': {
+    en: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
+    nl: "Cloud (beheerd, abonnement) of On‑Prem (volledige controle over infrastructuur & data).",
+    de: "Cloud (verwaltet, Abonnement) oder On‑Prem (volle Kontrolle über Infrastruktur & Daten).",
+    fr: "Cloud (géré, abonnement) ou On‑Prem (contrôle total de l'infrastructure et des données)."
+  },
+  
+  'Cloud Based Solutions': {
+    en: "Cloud Based Solutions",
+    nl: "Cloud-gebaseerde Oplossingen",
+    de: "Cloud-basierte Lösungen",
+    fr: "Solutions basées sur le cloud"
+  },
+  
+  'Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions': {
+    en: "Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions",
+    nl: "Abonneer, Gebruik Op Aanvraag: Snelle, Veilige en Flexibele Cloud Oplossingen",
+    de: "Abonnieren, On-Demand nutzen: Schnelle, Sichere und Flexible Cloud-Lösungen",
+    fr: "Abonnez-vous, Utilisez à la demande : Solutions Cloud Rapides, Sécurisées et Flexibles"
+  },
+  
+  'Subscribe and pay per use': {
+    en: "Subscribe and pay per use",
+    nl: "Abonneer en betaal per gebruik",
+    de: "Abonnieren und pro Nutzung bezahlen",
+    fr: "Abonnez-vous et payez à l'utilisation"
+  },
+  
+  'Onboarding in 5 min': {
+    en: "Onboarding in 5 min",
+    nl: "Onboarding in 5 min",
+    de: "Onboarding in 5 min",
+    fr: "Intégration en 5 min"
+  },
+  
+  'High Performance': {
+    en: "High Performance",
+    nl: "Hoge Prestaties",
+    de: "Hohe Leistung",
+    fr: "Haute performance"
+  },
+  
+  'Encrypted and Secured': {
+    en: "Encrypted and Secured",
+    nl: "Versleuteld en Beveiligd",
+    de: "Verschlüsselt und Gesichert",
+    fr: "Chiffré et Sécurisé"
+  },
+  
+  'Disaster recovery': {
+    en: "Disaster recovery",
+    nl: "Noodherstel",
+    de: "Notfallwiederherstellung",
+    fr: "Récupération après sinistre"
+  },
+  
+  'Download backup anytime': {
+    en: "Download backup anytime",
+    nl: "Back-up op elk moment downloaden",
+    de: "Backup jederzeit herunterladen",
+    fr: "Téléchargez la sauvegarde à tout moment"
+  },
+  
+  'On Premises Solutions': {
+    en: "On Premises Solutions",
+    nl: "On Premises Oplossingen",
+    de: "On-Premises-Lösungen",
+    fr: "Solutions sur site"
+  },
+  
+  'Customized, Secure On-Premises Solutions with Quick Implementation Support': {
+    en: "Customized, Secure On-Premises Solutions with Quick Implementation Support",
+    nl: "Gepersonaliseerde, Veilige On-Premises Oplossingen met Snelle Implementatie Ondersteuning",
+    de: "Maßgeschneiderte, Sichere On-Premises-Lösungen mit Schneller Implementierungsunterstützung",
+    fr: "Solutions Sur Mesure et Sécurisées sur Site avec Support de Mise en Œuvre Rapide"
+  },
+  
+  'Customer infrastructure': {
+    en: "Customer infrastructure",
+    nl: "Klantinfrastructuur",
+    de: "Kundeninfrastruktur",
+    fr: "Infrastructure client"
+  },
+  
+  'Get customized app': {
+    en: "Get customized app",
+    nl: "Krijg gepersonaliseerde app",
+    de: "Erhalten Sie eine angepasste App",
+    fr: "Obtenez une application personnalisée"
+  },
+  
+  '4 hours of implementation': {
+    en: "4 hours of implementation",
+    nl: "4 uur implementatie",
+    de: "4 Stunden Implementierung",
+    fr: "4 heures de mise en œuvre"
+  },
+  
+  'Secured and high performance': {
+    en: "Secured and high performance",
+    nl: "Beveiligd en hoge prestaties",
+    de: "Sicher und leistungsstark",
+    fr: "Sécurisé et haute performance"
+  },
+  
+  'End to end support': {
+    en: "End to end support",
+    nl: "End-to-end ondersteuning",
+    de: "End-to-End-Unterstützung",
+    fr: "Support de bout en bout"
+  },'Accqrate E-Invoicing Solutions': {
+    en: "Accqrate E-Invoicing Solutions",
+    nl: "Accqrate E-facturatie Oplossingen",
+    de: "Accqrate E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Accqrate"
+  },
+  
+  'Streamline Operations and Accelerate Business Growth': {
+    en: "Streamline Operations and Accelerate Business Growth",
+    nl: "Stroomlijn operaties en versnel bedrijfsgroei",
+    de: "Optimieren Sie Abläufe und beschleunigen Sie das Unternehmenswachstum",
+    fr: "Rationalisez les opérations et accélérez la croissance de l'entreprise"
+  },
+  
+  'Previous': {
+    en: "Previous",
+    nl: "Vorige",
+    de: "Vorherige",
+    fr: "Précédent"
+  },
+  
+  'Next': {
+    en: "Next",
+    nl: "Volgende",
+    de: "Nächste",
+    fr: "Suivant"
+  },
+  
+  'UAE E-Invoicing Solutions': {
+    en: "UAE E-Invoicing Solutions",
+    nl: "VAE E-facturatie Oplossingen",
+    de: "VAE E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique EAU"
+  },
+  
+  'Saudi Arabia (ZATCA) E-Invoicing Solutions': {
+    en: "Saudi Arabia (ZATCA) E-Invoicing Solutions",
+    nl: "Saoedi-Arabië (ZATCA) E-facturatie Oplossingen",
+    de: "Saudi-Arabien (ZATCA) E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Arabie Saoudite (ZATCA)"
+  },
+  
+  'Malaysia (LHDN) E-Invoicing Solutions': {
+    en: "Malaysia (LHDN) E-Invoicing Solutions",
+    nl: "Maleisië (LHDN) E-facturatie Oplossingen",
+    de: "Malaysia (LHDN) E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Malaisie (LHDN)"
+  },
+  
+  'Mauritius (MRA) E-Invoicing Solutions': {
+    en: "Mauritius (MRA) E-Invoicing Solutions",
+    nl: "Mauritius (MRA) E-facturatie Oplossingen",
+    de: "Mauritius (MRA) E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Maurice (MRA)"
+  },
+  
+  'Jordan (ISTD) E-Invoicing Solutions': {
+    en: "Jordan (ISTD) E-Invoicing Solutions",
+    nl: "Jordanië (ISTD) E-facturatie Oplossingen",
+    de: "Jordanien (ISTD) E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Jordanie (ISTD)"
+  },
+  
+  'Oman E-Invoicing Solutions': {
+    en: "Oman E-Invoicing Solutions",
+    nl: "Oman E-facturatie Oplossingen",
+    de: "Oman E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Oman"
+  },
+  
+  'Bahrain E-Invoicing Solutions': {
+    en: "Bahrain E-Invoicing Solutions",
+    nl: "Bahrein E-facturatie Oplossingen",
+    de: "Bahrain E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Bahreïn"
+  },
+  
+  'Qatar E-Invoicing Solutions': {
+    en: "Qatar E-Invoicing Solutions",
+    nl: "Qatar E-facturatie Oplossingen",
+    de: "Katar E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Qatar"
+  },
+  
+  'Kuwait E-Invoicing Solutions': {
+    en: "Kuwait E-Invoicing Solutions",
+    nl: "Koeweit E-facturatie Oplossingen",
+    de: "Kuwait E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Koweït"
+  },
+  
+  'Egypt E-Invoicing Solutions': {
+    en: "Egypt E-Invoicing Solutions",
+    nl: "Egypte E-facturatie Oplossingen",
+    de: "Ägypten E-Rechnungsstellungslösungen",
+    fr: "Solutions de facturation électronique Égypte"
+  },
+  
+  'FTA-Compliant Solutions for UAE Businesses': {
+    en: "FTA-Compliant Solutions for UAE Businesses",
+    nl: "FTA-conforme Oplossingen voor VAE-bedrijven",
+    de: "FTA-konforme Lösungen für VAE-Unternehmen",
+    fr: "Solutions conformes à la FTA pour les entreprises des EAU"
+  },
+  
+  'ZATCA Phase 2 Compliant Solutions for Saudi Businesses': {
+    en: "ZATCA Phase 2 Compliant Solutions for Saudi Businesses",
+    nl: "ZATCA Fase 2 Conforme Oplossingen voor Saoedische bedrijven",
+    de: "ZATCA Phase 2 konforme Lösungen für saudi-arabische Unternehmen",
+    fr: "Solutions conformes à la phase 2 de la ZATCA pour les entreprises saoudiennes"
+  },
+  
+  'LHDN-Compliant Solutions for Malaysian Businesses': {
+    en: "LHDN-Compliant Solutions for Malaysian Businesses",
+    nl: "LHDN-conforme Oplossingen voor Maleisische bedrijven",
+    de: "LHDN-konforme Lösungen für malaysische Unternehmen",
+    fr: "Solutions conformes à la LHDN pour les entreprises malaisiennes"
+  },
+  
+  'MRA-Compliant Solutions for Mauritian Businesses': {
+    en: "MRA-Compliant Solutions for Mauritian Businesses",
+    nl: "MRA-conforme Oplossingen voor Mauritiaanse bedrijven",
+    de: "MRA-konforme Lösungen für mauritische Unternehmen",
+    fr: "Solutions conformes à la MRA pour les entreprises mauriciennes"
+  },
+  
+  'ISTD-Compliant Solutions for Jordanian Businesses': {
+    en: "ISTD-Compliant Solutions for Jordanian Businesses",
+    nl: "ISTD-conforme Oplossingen voor Jordaanse bedrijven",
+    de: "ISTD-konforme Lösungen für jordanische Unternehmen",
+    fr: "Solutions conformes à l'ISTD pour les entreprises jordaniennes"
+  },
+  'Flexibility Meets Efficiency': {
+    en: "Flexibility Meets Efficiency",
+    nl: "Flexibiliteit ontmoet efficiëntie",
+    de: "Flexibilität trifft auf Effizienz",
+    fr: "La flexibilité rencontre l’efficacité"
+  },
+  
+  'Transparent and Competitive Pricing': {
+    en: "Transparent and Competitive Pricing",
+    nl: "Transparante en concurrerende prijzen",
+    de: "Transparente und wettbewerbsfähige Preise",
+    fr: "Tarification transparente et compétitive"
+  },
+  
+  'Custom PDF Template Replication': {
+    en: "Custom PDF Template Replication",
+    nl: "Aangepaste PDF-sjabloonreplicatie",
+    de: "Replikation benutzerdefinierter PDF-Vorlagen",
+    fr: "Réplication personnalisée de modèles PDF"
+  },
+  
+  'Long-Term Invoice Archiving': {
+    en: "Long-Term Invoice Archiving",
+    nl: "Langdurige factuurarchivering",
+    de: "Langfristige Rechnungsarchivierung",
+    fr: "Archivage des factures à long terme"
+  },
+  
+  'Automated Email Notifications': {
+    en: "Automated Email Notifications",
+    nl: "Geautomatiseerde e-mailmeldingen",
+    de: "Automatisierte E-Mail-Benachrichtigungen",
+    fr: "Notifications e-mail automatisées"
+  },
+  
+  'AI-Driven Error Analytics': {
+    en: "AI-Driven Error Analytics",
+    nl: "AI-gestuurde foutenanalyse",
+    de: "KI-gestützte Fehleranalyse",
+    fr: "Analyse des erreurs basée sur l’IA"
+  },
+  
+  'Future-Proof with ERP Scalability': {
+    en: "Future-Proof with ERP Scalability",
+    nl: "Toekomstbestendig dankzij ERP-schaalbaarheid",
+    de: "Zukunftssicher durch ERP-Skalierbarkeit",
+    fr: "Évolutif et prêt pour l’avenir grâce à l’ERP"
+  },
+  
+  'High-Performance Application': {
+    en: "High-Performance Application",
+    nl: "Hogeprestatie-applicatie",
+    de: "Hochleistungsanwendung",
+    fr: "Application haute performance"
+  },
+  'VAT Return': {
+    en: "VAT Return",
+    nl: "Btw-aangifte",
+    de: "Mehrwertsteuererklärung",
+    fr: "Déclaration de TVA"
+  },
+  
+  'No need for an accountant – let Accqrate automatically generate your VAT return for you': {
+    en: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
+    nl: "Geen accountant nodig – laat Accqrate automatisch uw btw-aangifte voor u genereren",
+    de: "Kein Buchhalter erforderlich – lassen Sie Accqrate Ihre Mehrwertsteuererklärung automatisch erstellen",
+    fr: "Pas besoin de comptable – laissez Accqrate générer automatiquement votre déclaration de TVA"
+  },
+  
+  'Customers & Suppliers': {
+    en: "Customers & Suppliers",
+    nl: "Klanten & leveranciers",
+    de: "Kunden & Lieferanten",
+    fr: "Clients & fournisseurs"
+  },
+  
+  'Always know who you owe money to and who owes you money': {
+    en: "Always know who you owe money to and who owes you money",
+    nl: "Weet altijd aan wie u geld verschuldigd bent en wie u nog moet betalen",
+    de: "Behalten Sie immer den Überblick darüber, wem Sie Geld schulden und wer Ihnen Geld schuldet",
+    fr: "Sachez toujours à qui vous devez de l’argent et qui vous en doit"
+  },
+  
+  'Reports & Insights': {
+    en: "Reports & Insights",
+    nl: "Rapporten & inzichten",
+    de: "Berichte & Analysen",
+    fr: "Rapports & analyses"
+  },
+  
+  'Generate single or consolidated reports for a holistic view of your finances.': {
+    en: "Generate single or consolidated reports for a holistic view of your finances.",
+    nl: "Genereer afzonderlijke of geconsolideerde rapporten voor een volledig overzicht van uw financiën.",
+    de: "Erstellen Sie einzelne oder konsolidierte Berichte für einen umfassenden Überblick über Ihre Finanzen.",
+    fr: "Générez des rapports individuels ou consolidés pour une vue globale de vos finances."
+  },
+  'A complete software to run your business better': {
+    en: "A complete software to run your business better",
+    nl: "Een volledige software om uw bedrijf beter te runnen",
+    de: "Eine komplette Software, um Ihr Unternehmen besser zu führen",
+    fr: "Un logiciel complet pour mieux gérer votre entreprise"
+  },
+  'A': {
+    en: "A",
+    nl: "Een",
+    de: "Eine",
+    fr: "Un",
+  },
+  'complete software': {
+    en: "complete software",
+    nl: "volledige software",
+    de: "komplette Software",
+    fr: "logiciel complet",
+  },
+  'to run your business better': {
+    en: "to run your business better",
+    nl: "om uw bedrijf beter te runnen",
+    de: "um Ihr Unternehmen besser zu führen",
+    fr: "pour mieux gérer votre entreprise",
+  },
+  'A <span class=\'text-[#194BED]\'>complete software</span> to run your business better': {
+    en: "A <span class='text-[#194BED]'>complete software</span> to run your business better",
+    nl: "Een <span class='text-[#194BED]'>volledige software</span> om uw bedrijf beter te runnen",
+    de: "Eine <span class='text-[#194BED]'>komplette Software</span>, um Ihr Unternehmen besser zu führen",
+    fr: "Un <span class='text-[#194BED]'>logiciel complet</span> pour mieux gérer votre entreprise"
+  },
+  'Whether you\'ve just started or are already established, you\'ll find all the features you need at each stage of your business.': {
+    en: "Whether you've just started or are already established, you'll find all the features you need at each stage of your business.",
+    nl: "Of u nu net begonnen bent of al gevestigd bent, u vindt alle functies die u nodig heeft in elke fase van uw bedrijf.",
+    de: "Egal, ob Sie gerade erst anfangen oder bereits etabliert sind – Sie finden alle Funktionen, die Sie in jeder Phase Ihres Unternehmens benötigen.",
+    fr: "Que vous débutiez ou soyez déjà établi, vous trouverez toutes les fonctionnalités dont vous avez besoin à chaque étape de votre entreprise."
+  }
+  
+  
 };
 
 export const setLanguage = (l: LanguageCode) => {

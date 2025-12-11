@@ -32,7 +32,11 @@ const Section3 = () => {
             <section className="py-8 md:py-10 lg:py-[80px] max-w-[1280px] mx-auto relative">
                 <div className="px-6 md:px-8 xl:px-0 text-center relative">
                     <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] leading-tight">
-                        <T>A <span className="text-[#194BED]"><T>complete software</T></span> to run your business better</T>
+                        <T>A</T>{" "}
+                        <span className="text-[#194BED]">
+                            <T>complete software</T>
+                        </span>{" "}
+                        <T>to run your business better</T>
                     </h1>
 
                     <div className="relative mt-6 inline-block">
