@@ -6949,15 +6949,6 @@ const translations = {
     de: "Registrieren Sie Ihr Unternehmen für eine Testanwendung. Ihre Daten sind in 30 Tagen verfügbar.",
     fr: "Inscrivez votre entreprise pour une application d’essai. Vos données seront disponibles sous 30 jours."
   },
-
-
-
-  'If you have any other questions not addressed here': {
-    nl: "Als u nog andere vragen heeft die hier niet worden behandeld",
-    de: "Wenn Sie weitere Fragen haben, die hier nicht beantwortet werden",
-    fr: "Si vous avez d’autres questions qui ne sont pas traitées ici"
-  },
-
   'Please feel free to contact us at': {
     nl: "Neem gerust contact met ons op via",
     de: "Bitte kontaktieren Sie uns unter",
@@ -7181,11 +7172,7 @@ const translations = {
   
   'About Accqrate:': { nl: "Over Accqrate:", de: "Über Accqrate:", fr: "À propos d’Accqrate :" },
 
-  'Advancing Digital Compliance & E-Invoicing for Belgium and the EU': {
-    nl: "Vooruitgang in digitale naleving en e-facturatie voor België en de EU",
-    de: "Vorantreiben digitaler Compliance & E-Rechnung für Belgien und die EU",
-    fr: "Faire avancer la conformité numérique et l’e-facturation pour la Belgique et l’UE"
-  },
+ 
 
   'Trusted by': { nl: "Vertrouwd door", de: "Vertraut von", fr: "Fiable par" },
   'Companies': { nl: "Bedrijven", de: "Unternehmen", fr: "Entreprises" },
