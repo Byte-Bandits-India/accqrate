@@ -353,7 +353,7 @@ const Section1 = () => {
                                 <div className="lg:col-span-2 flex justify-center">
                                     <div className="sticky top-6 w-full flex justify-center">
                                         <img
-                                            src={AssetPath.invoicing.invoiceSinglePng.src}
+                                            src={AssetPath.invoicing.invoiceStandalone.src}
                                             alt="Feature Demo"
                                             className="w-full h-auto object-contain mx-auto rounded-[12px]"
                                         />

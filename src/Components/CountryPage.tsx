@@ -950,7 +950,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </div>
 
                                 <div className="w-full mt-auto">
-                                    <div className="border-[#FF9BC1] border h-[436px] md:h-[386px] rounded-[20px]"></div>
+                                    <div className="border-[#FF9BC1] border h-[480px] md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
+                                        <Image
+                                            src={AssetPath.invoicing.invoiceHome}
+                                            alt="Invoice preview"
+                                            width={620}
+                                            height={420}
+                                            className="w-full h-full object-cover"
+                                            unoptimized
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </FadeUp>

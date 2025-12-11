@@ -310,6 +310,8 @@ import invoiceWithCreateScreenMalaysia from "@/Assets/images/invoicing/invoice-w
 import invoiceSinglePng from "@/Assets/images/invoicing/invoice-1.png";
 import invoiceMultiplePng from "@/Assets/images/invoicing/invoice-2.png";
 import invoiceWithCreateScreen from "@/Assets/images/invoicing/invoice-with-create-screen.webp";
+import invoiceHome from "@/Assets/images/invoicing/invoice-home.webp";
+import invoiceStandalone from "@/Assets/images/invoicing/e-invoicing_standalone.webp";
 import invoice from "@/Assets/images/invoicing/invoice.webp";
 import magnifiedInvoice from "@/Assets/images/invoicing/magnified-invoice.webp";
 import manageTeam from "@/Assets/images/invoicing/manage-team.webp";
@@ -758,6 +760,8 @@ const AssetPath = {
     invoiceWithCreateScreen,
     invoiceSinglePng,
     invoiceMultiplePng,
+    invoiceHome,
+    invoiceStandalone,
     invoice,
     magnifiedInvoice,
     manageTeam,
