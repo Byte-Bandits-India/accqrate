@@ -193,7 +193,7 @@ const DemoVideoSection: React.FC = () => {
                                         onClick={handleContactClick}
                                         className="relative flex items-center justify-center w-[160px] h-[46px] md:w-[160px] md:h-[52px] bg-[#F05A28] rounded-[50px] px-2 text-white text-[14px] md:text-[16px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
                                     >
-                                        <span className="mr-4"><T lang={lang} countryCode={countryCode}>Get Started</T></span>
+                                        <span className="mr-4"> <T lang={lang} countryCode={countryCode}>Get Started</T> </span>
                                         <svg
                                             width="14"
                                             height="14"
