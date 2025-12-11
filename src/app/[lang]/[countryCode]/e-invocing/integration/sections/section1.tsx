@@ -68,7 +68,7 @@ export default function Integrator({ className, title }: IntegratorProps) {
                         className="text-fluid-h2 lg:text-[38px] max-w-[871px] mx-auto text-center font-medium text-[#000000] leading-tight relative"
                         data-aos="fade-up"
                     >
-                        <T lang={lang} countryCode={countryCode}>Our solutions seamlessly integrate with any <span className='text-[#508847]'>ERP/POS system</span>  you use.</T>
+                        <T lang={lang} countryCode={countryCode}>Our solutions seamlessly integrate with any</T><span className='text-[#508847]'> <T>ERP/POS system</T></span> <T>you use.</T>
                     </h3>
 
                     {/* MARQUEE WRAPPER */}
