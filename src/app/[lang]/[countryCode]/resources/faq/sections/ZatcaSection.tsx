@@ -88,8 +88,8 @@ export default function ZatcaSection() {
       >
         {/* COLUMN 1 — LEFT CONTENT */}
         <div className="z-20 text-left order-2 md:order-1">
-          <h2 className="text-fluid-h2 xl:text-[38px] font-medium mb-6 leading-tight">
-            <T>If you have any other questions not</T> <br className="hidden md:block" /> <T>addressed here</T>
+          <h2 className="text-fluid-h2 xl:text-[38px] font-medium mb-6 leading-tight max-w-xl">
+            <T>If you have any other questions not addressed here</T>
           </h2>
 
           <p className="text-fluid-body text-[#FFFFFF] my-6 md:my-8">
