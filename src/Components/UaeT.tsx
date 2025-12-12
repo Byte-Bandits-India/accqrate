@@ -1,7 +1,7 @@
 'use client';
 
 import { useCountry } from "@/contexts/CountryContext";
-import T from "@/lib/language/uae";
+import T from "./T";
 import { ReactNode } from 'react';
 
 interface TProps {
