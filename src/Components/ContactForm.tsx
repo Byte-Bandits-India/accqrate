@@ -181,7 +181,7 @@ const ContactFormPage = () => {
 
     {/* Phone Timing */}
     <p className="text-[12px] text-[#000000] font-normal leading-relaxed">
-    <T>call our team monday - friday</T>
+    <T>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
     </p>
 
     {/* Phone Section with Icon */}
@@ -374,3 +374,4 @@ const ContactFormPage = () => {
 };
 
 export default ContactFormPage;
+
