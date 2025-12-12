@@ -239,13 +239,13 @@ export const countryMenus: CountryMenus = {
           subItems: [
             {
               title: "Accqrate E-Invoicing",
-              description: "PEPPOL Certified and FPS FInance Complaint e-invoicing software",
+              description: "PEPPOL Certified and FPS Finance Compliant e-invoicing software",
               img: AssetPath.header.navbar.fill.einvoicing,
               href: "/e-invocing/",
             },
             {
               title: "E-Invoicing Integration",
-              description: "Integrate your ERP and POS with PEPPOL Network with our seamless, adaptable e-invoicing API or Offline integrators",
+              description: "Integrate your ERP and POS with the PEPPOL Network using our seamless, adaptable e-invoicing API or offline integrators",
               img: AssetPath.header.navbar.fill.einvoiceIntegration,
               href: "/e-invocing/integration",
             },
