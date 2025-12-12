@@ -420,7 +420,7 @@ const uaeContent: CountryContent = {
   ],
   complianceSection: {
     complianceTitle: "Full Compliance with UAE’s E-Invoicing Mandate",
-    complianceDescription: "Accqrate ensures end-to-end compliance with UAE’s B2B,B2G and G2G e-invoicing mandate and the FTA’s  requirement. Our platform supports:",
+    complianceDescription: "Accqrate ensures end-to-end compliance with UAE’s B2B and B2G e-invoicing mandate and the FTA’s  requirement. Our platform supports:",
     complianceItems: [
       "Structured formats fully aligned with UAE and PEPPOL specifications.",
       "Secure, standardized exchange over PEPPOL",
