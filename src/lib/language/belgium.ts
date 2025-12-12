@@ -8813,7 +8813,451 @@ fr: "Intégration Peppol / EN 16931"
   nl: "Integreer uw ERP en POS met het PEPPOL-netwerk via onze naadloze, flexibele e-facturatie-API of offline-integrators",
   de: "Integrieren Sie Ihr ERP und POS in das PEPPOL-Netzwerk mithilfe unserer nahtlosen, anpassungsfähigen E-Rechnungs-API oder Offline-Integratoren",
 },
+//Footer
+// Section Titles
+'E-invoicing Solution': {
+  en: 'E-invoicing Solution',
+  nl: 'E-facturatie Oplossing',
+  de: 'E-Rechnungs-Lösung',
+  fr: 'Solution de e-facturation'
+},
+'Business Solution': {
+  en: 'Business Solution',
+  nl: 'Zakelijke Oplossing',
+  de: 'Geschäftslösung',
+  fr: 'Solution d\'entreprise'
+},
+'Resources': {
+  en: 'Resources',
+  nl: 'Bronnen',
+  de: 'Ressourcen',
+  fr: 'Ressources'
+},
+'Community': {
+  en: 'Community',
+  nl: 'Gemeenschap',
+  de: 'Community',
+  fr: 'Communauté'
+},
+'Data & Safety management': {
+  en: 'Data & Safety management',
+  nl: 'Data- en veiligheidsbeheer',
+  de: 'Daten- und Sicherheitsmanagement',
+  fr: 'Gestion des données et de la sécurité'
+},
+'Enterprise Solution': {
+  en: 'Enterprise Solution',
+  nl: 'Enterprise-oplossing',
+  de: 'Unternehmenslösung',
+  fr: 'Solution d\'entreprise'
+},
+'Contact Sales': {
+  en: 'Contact Sales',
+  nl: 'Neem contact op met verkoop',
+  de: 'Vertrieb kontaktieren',
+  fr: 'Contacter les ventes'
+},
 
+// E-invoicing Solution Items
+'Accqrate E-invoicing': {
+  en: 'Accqrate E-invoicing',
+  nl: 'Accqrate E-facturatie',
+  de: 'Accqrate E-Rechnungen',
+  fr: 'Accqrate E-facturation'
+},
+'Integration Solution': {
+  en: 'Integration Solution',
+  nl: 'Integratieoplossing',
+  de: 'Integrationslösung',
+  fr: 'Solution d\'intégration'
+},
+'Integration with SAP Suite': {
+  en: 'Integration with SAP Suite',
+  nl: 'Integratie met SAP Suite',
+  de: 'Integration mit SAP Suite',
+  fr: 'Intégration avec la suite SAP'
+},
+'Integration with Microsoft Suite': {
+  en: 'Integration with Microsoft Suite',
+  nl: 'Integratie met Microsoft Suite',
+  de: 'Integration mit Microsoft Suite',
+  fr: 'Intégration avec la suite Microsoft'
+},
+'Integration with Oracle Suite': {
+  en: 'Integration with Oracle Suite',
+  nl: 'Integratie met Oracle Suite',
+  de: 'Integration mit Oracle Suite',
+  fr: 'Intégration avec la suite Oracle'
+},
+'Integration with Homegrown Solution': {
+  en: 'Integration with Homegrown Solution',
+  nl: 'Integratie met eigen oplossing',
+  de: 'Integration mit hauseigener Lösung',
+  fr: 'Intégration avec une solution interne'
+},
+'Integration with Legacy Solutions': {
+  en: 'Integration with Legacy Solutions',
+  nl: 'Integratie met verouderde oplossingen',
+  de: 'Integration mit Legacy-Lösungen',
+  fr: 'Intégration avec des solutions héritées'
+},
+'Multi Country Integration': {
+  en: 'Multi Country Integration',
+  nl: 'Multi-land integratie',
+  de: 'Multi-Länder-Integration',
+  fr: 'Intégration multi-pays'
+},
+
+// Business Solution Items
+'Accqrate Books': {
+  en: 'Accqrate Books',
+  nl: 'Accqrate Books',
+  de: 'Accqrate Books',
+  fr: 'Accqrate Books'
+},
+'Accqrate Retail': {
+  en: 'Accqrate Retail',
+  nl: 'Accqrate Retail',
+  de: 'Accqrate Retail',
+  fr: 'Accqrate Retail'
+},
+'Accqrate People': {
+  en: 'Accqrate People',
+  nl: 'Accqrate People',
+  de: 'Accqrate People',
+  fr: 'Accqrate People'
+},
+'Accqrate CRM': {
+  en: 'Accqrate CRM',
+  nl: 'Accqrate CRM',
+  de: 'Accqrate CRM',
+  fr: 'Accqrate CRM'
+},
+'Accqrate Factory': {
+  en: 'Accqrate Factory',
+  nl: 'Accqrate Factory',
+  de: 'Accqrate Factory',
+  fr: 'Accqrate Factory'
+},
+'Accqrate Plan 360': {
+  en: 'Accqrate Plan 360',
+  nl: 'Accqrate Plan 360',
+  de: 'Accqrate Plan 360',
+  fr: 'Accqrate Plan 360'
+},
+'Accqrate Services': {
+  en: 'Accqrate Services',
+  nl: 'Accqrate Services',
+  de: 'Accqrate Services',
+  fr: 'Accqrate Services'
+},
+'Accqrate FileHub': {
+  en: 'Accqrate FileHub',
+  nl: 'Accqrate FileHub',
+  de: 'Accqrate FileHub',
+  fr: 'Accqrate FileHub'
+},
+
+// Resources Items
+'FAQ': {
+  en: 'FAQ',
+  nl: 'FAQ',
+  de: 'FAQ',
+  fr: 'FAQ'
+},
+'Blogs': {
+  en: 'Blogs',
+  nl: 'Blogs',
+  de: 'Blogs',
+  fr: 'Blogs'
+},
+'Events': {
+  en: 'Events',
+  nl: 'Evenementen',
+  de: 'Veranstaltungen',
+  fr: 'Événements'
+},
+'Case Studies': {
+  en: 'Case Studies',
+  nl: 'Casestudies',
+  de: 'Fallstudien',
+  fr: 'Études de cas'
+},
+'Announcements': {
+  en: 'Announcements',
+  nl: 'Aankondigingen',
+  de: 'Ankündigungen',
+  fr: 'Annonces'
+},
+'Product Updates': {
+  en: 'Product Updates',
+  nl: 'Productupdates',
+  de: 'Produkt-Updates',
+  fr: 'Mises à jour produit'
+},
+'Alternate Product': {
+  en: 'Alternate Product',
+  nl: 'Alternatief product',
+  de: 'Alternatives Produkt',
+  fr: 'Produit alternatif'
+},
+'Knowledge Center': {
+  en: 'Knowledge Center',
+  nl: 'Kennisdatabase',
+  de: 'Wissenszentrum',
+  fr: 'Centre de connaissances'
+},
+
+// Community Items
+'Affiliates': {
+  en: 'Affiliates',
+  nl: 'Affiliates',
+  de: 'Affiliate-Partner',
+  fr: 'Affiliés'
+},
+'Non Profits': {
+  en: 'Non Profits',
+  nl: 'Non-profitorganisaties',
+  de: 'Gemeinnützige Organisationen',
+  fr: 'Organisations à but non lucratif'
+},
+'Accqrate Sprouts': {
+  en: 'Accqrate Sprouts',
+  nl: 'Accqrate Sprouts',
+  de: 'Accqrate Sprouts',
+  fr: 'Accqrate Sprouts'
+},
+'Become a Partner': {
+  en: 'Become a Partner',
+  nl: 'Word partner',
+  de: 'Partner werden',
+  fr: 'Devenir partenaire'
+},
+'Community Forum': {
+  en: 'Community Forum',
+  nl: 'Communityforum',
+  de: 'Community-Forum',
+  fr: 'Forum communautaire'
+},
+'Work with a Partner': {
+  en: 'Work with a Partner',
+  nl: 'Werk samen met een partner',
+  de: 'Mit einem Partner zusammenarbeiten',
+  fr: 'Travailler avec un partenaire'
+},
+'Find an Accountant': {
+  en: 'Find an Accountant',
+  nl: 'Vind een accountant',
+  de: 'Einen Buchhalter finden',
+  fr: 'Trouver un comptable'
+},
+'Partner Marketplace': {
+  en: 'Partner Marketplace',
+  nl: 'Partnermarktplaats',
+  de: 'Partner-Marktplatz',
+  fr: 'Place de marché partenaires'
+},
+
+// Data & Safety Items
+'Security': {
+  en: 'Security',
+  nl: 'Beveiliging',
+  de: 'Sicherheit',
+  fr: 'Sécurité'
+},
+'Contact us': {
+  en: 'Contact us',
+  nl: 'Neem contact op',
+  de: 'Kontaktieren Sie uns',
+  fr: 'Contactez-nous'
+},
+'Compliance': {
+  en: 'Compliance',
+  nl: 'Naleving',
+  de: 'Compliance',
+  fr: 'Conformité'
+},
+'Cookie Policy': {
+  en: 'Cookie Policy',
+  nl: 'Cookiebeleid',
+  de: 'Cookie-Richtlinie',
+  fr: 'Politique des cookies'
+},
+'Privacy Policy': {
+  en: 'Privacy Policy',
+  nl: 'Privacybeleid',
+  de: 'Datenschutzrichtlinie',
+  fr: 'Politique de confidentialité'
+},
+'GDPR Policies': {
+  en: 'GDPR Policies',
+  nl: 'GDPR-beleid',
+  de: 'GDPR-Richtlinien',
+  fr: 'Politiques GDPR'
+},
+'Terms of Service': {
+  en: 'Terms of Service',
+  nl: 'Servicevoorwaarden',
+  de: 'Nutzungsbedingungen',
+  fr: 'Conditions d\'utilisation'
+},
+'IPR Complaints': {
+  en: 'IPR Complaints',
+  nl: 'IPR-klachten',
+  de: 'IPR-Beschwerden',
+  fr: 'Réclamations IPR'
+},
+
+// Left Column Links
+'Home': {
+  en: 'Home',
+  nl: 'Home',
+  de: 'Startseite',
+  fr: 'Accueil'
+},
+'Company': {
+  en: 'Company',
+  nl: 'Bedrijf',
+  de: 'Unternehmen',
+  fr: 'Entreprise'
+},
+'Accelera': {
+  en: 'Accelera',
+  nl: 'Accelera',
+  de: 'Accelera',
+  fr: 'Accelera'
+},
+'Testimonials': {
+  en: 'Testimonials',
+  nl: 'Getuigenissen',
+  de: 'Referenzen',
+  fr: 'Témoignages'
+},
+'Join our Team': {
+  en: 'Join our Team',
+  nl: 'Word lid van ons team',
+  de: 'Unserem Team beitreten',
+  fr: 'Rejoignez notre équipe'
+},
+'Press': {
+  en: 'Press',
+  nl: 'Pers',
+  de: 'Presse',
+  fr: 'Presse'
+},
+'Newsletter': {
+  en: 'Newsletter',
+  nl: 'Nieuwsbrief',
+  de: 'Newsletter',
+  fr: 'Newsletter'
+},
+'Branding Assets': {
+  en: 'Branding Assets',
+  nl: 'Brandingmiddelen',
+  de: 'Branding-Assets',
+  fr: 'Actifs de marque'
+},
+
+// Enterprise Links
+'Assessments': {
+  en: 'Assessments',
+  nl: 'Beoordelingen',
+  de: 'Bewertungen',
+  fr: 'Évaluations'
+},
+'Accqrate ONE': {
+  en: 'Accqrate ONE',
+  nl: 'Accqrate ONE',
+  de: 'Accqrate ONE',
+  fr: 'Accqrate ONE'
+},
+'Custom Developments': {
+  en: 'Custom Developments',
+  nl: 'Aangepaste ontwikkelingen',
+  de: 'Maßgeschneiderte Entwicklungen',
+  fr: 'Développements personnalisés'
+},
+'Business Process Automations': {
+  en: 'Business Process Automations',
+  nl: 'Businessprocesautomatisering',
+  de: 'Geschäftsprozessautomatisierung',
+  fr: 'Automatisation des processus métier'
+},
+
+// Contact Information
+'Call:': {
+  en: 'Call:',
+  nl: 'Bel:',
+  de: 'Anrufen:',
+  fr: 'Appeler:'
+},
+'Email:': {
+  en: 'Email:',
+  nl: 'E-mail:',
+  de: 'E-Mail:',
+  fr: 'E-mail:'
+},
+'WhatsApp:': {
+  en: 'WhatsApp:',
+  nl: 'WhatsApp:',
+  de: 'WhatsApp:',
+  fr: 'WhatsApp:'
+},
+'Connect with Accqrate Concierge': {
+  en: 'Connect with Accqrate Concierge',
+  nl: 'Neem contact op met Accqrate Concierge',
+  de: 'Mit Accqrate Concierge verbinden',
+  fr: 'Se connecter avec Accqrate Concierge'
+},
+
+// Platform Description Text
+'One unified platform with zero silos—integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.': {
+  en: 'One unified platform with zero silos—integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.',
+  nl: 'Eén uniform platform zonder silo\'s—geïntegreerde modules op één datamodel, ingebouwde wereldwijde compliance, AI-gestuurde automatisering, flexibele cloud- of on-premise implementatie, snelle implementatie en enterprise-grade beveiliging en schaalbaarheid.',
+  de: 'Eine einheitliche Plattform ohne Silos—integrierte Module auf einem einzigen Datenmodell, eingebaute globale Compliance, KI-gestützte Automatisierung, flexible Cloud- oder On-Premise-Bereitstellung, schnelle Implementierung und Unternehmenssicherheit und Skalierbarkeit.',
+  fr: 'Une plateforme unifiée sans silos—modules intégrés sur un seul modèle de données, conformité mondiale intégrée, automatisation alimentée par l\'IA, déploiement flexible cloud ou sur site, mise en œuvre rapide, et sécurité et évolutivité de niveau entreprise.'
+},
+
+// Copyright Text
+'© Copyright 2021 - 2025': {
+  en: '© Copyright 2021 - 2025',
+  nl: '© Auteursrecht 2021 - 2025',
+  de: '© Urheberrecht 2021 - 2025',
+  fr: '© Copyright 2021 - 2025'
+},
+'All rights reserved.': {
+  en: 'All rights reserved.',
+  nl: 'Alle rechten voorbehouden.',
+  de: 'Alle Rechte vorbehalten.',
+  fr: 'Tous droits réservés.'
+},
+
+// Dynamic content example format
+'Peppol Ready e-invoicing? Our experts have got your back.': {
+  en: "Peppol Ready e-invoicing? Our experts have got your back.",
+  nl: "Peppol-klare e-facturatie? Onze experts staan voor u klaar.",
+  de: "Peppol-fähige E-Rechnungen? Unsere Experten unterstützen Sie.",
+  fr: "E-facturation compatible Peppol ? Nos experts sont là pour vous."
+},
+
+'Call our team Monday - Friday from 9:00 AM to 5:00 PM': {
+  en: "Call our team Monday - Friday from 9:00 AM to 5:00 PM",
+  nl: "Bel ons team van maandag tot vrijdag van 9.00 tot 17.00 uur",
+  de: "Rufen Sie unser Team Montag bis Freitag von 9:00 bis 17:00 Uhr an",
+  fr: "Appelez notre équipe du lundi au vendredi de 9h00 à 17h00"
+},
+'Copyright 2021 - 2025': {
+  en: '© Copyright 2021 - 2025',
+  nl: '© Auteursrecht 2021 - 2025',
+  de: '© Urheberrecht 2021 - 2025',
+  fr: '© Copyright 2021 - 2025'
+},
+'All rights reserved': {
+  en: 'All rights reserved.',
+  nl: 'Alle rechten voorbehouden.',
+  de: 'Alle Rechte vorbehalten.',
+  fr: 'Tous droits réservés.'
+}
   
 };
 

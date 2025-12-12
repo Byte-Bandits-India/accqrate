@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { comingSoonRoutes } from '@/lib/ComingSoonRoutes';
 import AssetPath from "@/AssetPath/AssetPath"
+import T from "@/Components/T";
 
 
 // ===================== Custom Hook for Dynamic Routing =====================
@@ -139,7 +140,7 @@ export default function Footer() {
                   }
                   className="hover:text-[#194BED] text-[#FFFFFF] tracking-para transition-colors"
                 >
-                  {link.name}
+                  <T>{link.name}</T>
                 </Link>
               ))}
             </div>
@@ -152,7 +153,7 @@ export default function Footer() {
               {footerSections.map((section, idx) => (
                 <div key={idx} className="flex flex-col min-w-[180px]">
                   <h3 className="font-medium mb-6 text-[#FFFFFF] lg:text-[16px] tracking-heading">
-                    {section.title}
+                    <T>{section.title}</T>
                   </h3>
                   <ul className="space-y-2 lg:text-[14px] font-normal">
                     {section.items.map((item, i) => (
@@ -167,7 +168,7 @@ export default function Footer() {
                           className={`hover:text-[#194BED] text-[#F0F0F0] tracking-para transition-colors ${comingSoonRoutes.includes(item.href.replace(/^\//, ''))
                             }`}
                         >
-                          {item.name}
+                          <T>{item.name}</T>
                         </Link>
                       </li>
                     ))}
@@ -180,7 +181,7 @@ export default function Footer() {
             <div className="border-t border-gray-300 mt-12 pt-8 flex justify-start gap-6 text-sm text-gray-700">
               <div>
                 <h4 className="font-medium mb-4 text-[#FFFFFF] text-fluid-small lg:text-[16px]  tracking-heading">
-                  Enterprise Solution
+                  <T>Enterprise Solution</T>
                 </h4>
                 <ul className="space-y-2 lg:text-[14px] text-[#F0F0F0]">
                   {enterpriseLinks.map((link, index) => (
@@ -193,7 +194,7 @@ export default function Footer() {
                         }
                         className="hover:text-[#194BED] tracking-para transition-colors"
                       >
-                        {link.name}
+                        <T>{link.name}</T>
                       </Link>
                     </li>
                   ))}
@@ -203,9 +204,9 @@ export default function Footer() {
               <div>
                 <h4 className="font-medium mb-4 lg:text-[16px]  text-[#FFFFFF] tracking-heading">Contact Sales</h4>
                 <ul className="space-y-2 lg:text-[14px] text-[#F0F0F0] tracking-para">
-                  <li><span className="text-[#FFFFFF]">Call:</span> +966 54 199 9357</li>
-                  <li><span className="text-[#FFFFFF]">Email:</span> contact@accqrate-erp.com</li>
-                  <li><span className="text-[#FFFFFF]">WhatsApp:</span> +966 50 763 5216</li>
+                  <li><span className="text-[#FFFFFF]"><T>Call:</T></span> +966 54 199 9357</li>
+                  <li><span className="text-[#FFFFFF]"><T>Email:</T></span> <T>contact@accqrate-erp.com</T></li>
+                  <li><span className="text-[#FFFFFF]"><T>WhatsApp:</T></span> +966 50 763 5216</li>
                   <li>
                     <Link
                       href={
@@ -215,7 +216,7 @@ export default function Footer() {
                       }
                       className="text-[#FFFFFF] hover:underline transition-colors"
                     >
-                      Connect with Accqrate Concierge
+                      <T>Connect with Accqrate Concierge</T>
                     </Link>
                   </li>
                 </ul>
@@ -223,7 +224,7 @@ export default function Footer() {
 
               <div className="max-w-[400px] leading-6 flex items-start justify-start">
                 <p className="lg:text-[14px] text-[#F0F0F0] tracking-para">
-                  One unified platform with zero silos—integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.
+                  <T>One unified platform with zero silos—integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.</T>
                 </p>
               </div>
             </div>
@@ -310,11 +311,10 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-fluid-small lg:text-[16px] text-[#B7B7B7] text-center">
-          © Copyright 2021 - 2025{" "}
-          <span className="text-[#194BED] font-medium">Accqrate</span>, All rights
-          reserved.
-        </p>
+<p className="text-fluid-small lg:text-[16px] text-[#B7B7B7] text-center">
+  <T>Copyright 2021 - 2025</T>{" "}
+  <span className="text-[#194BED] font-medium">Accqrate</span>, <T>All rights reserved</T>
+</p>
       </div>
     </footer>
   );
