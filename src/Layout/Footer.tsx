@@ -46,9 +46,9 @@ const footerSections = [
   {
     title: "Contact Sales",
     links: [
-      { label: "Call: +966 54 199 9357", isText: true },
+      { label: "Call: +41 76 475 36 65", isText: true },
       { label: "Email: contact@accqrate-erp.com", isText: true },
-      { label: "WhatsApp: +966 50 763 5216", isText: true },
+      { label: "WhatsApp: +41 76 475 36 65", isText: true },
       {
         label: "Connect with Accqrate Concierge",
         href: "/connect-with-concierge",
