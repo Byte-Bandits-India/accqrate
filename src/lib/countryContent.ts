@@ -325,7 +325,7 @@ const uaeContent: CountryContent = {
   backgroundImage: AssetPath.homeBackgrounds.uae,
   heroTitle: "PEPPOL-Ready. VAT-Compliant. Built For Enterprise.",
   heroSubtitle: "E-invoicing Solution for UAE",
-  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for Belgian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
+  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for United Arab Emirates businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
@@ -344,21 +344,21 @@ const uaeContent: CountryContent = {
     },
     {
       img: AssetPath.home.feature3,
-      title: "Deploy your way.",
+      title: "Deploy your",
       description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
-      sub: ""
+      sub: "way."
     },
     {
       img: AssetPath.home.feature4,
-      title: "AI, everywhere.",
+      title: "AI,",
       description: "Accelera, our AI copilot , accelerates routine work, insights and decisions.",
-      sub: ""
+      sub: "everywhere."
     },
     {
       img: AssetPath.home.feature5,
-      title: "Fast time‑to‑value.",
+      title: "Fast",
       description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
-      sub: ""
+      sub: "time‑to‑value."
     },
     {
       img: AssetPath.home.feature6,
