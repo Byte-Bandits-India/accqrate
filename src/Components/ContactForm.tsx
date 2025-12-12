@@ -52,7 +52,7 @@ const ContactFormPage = () => {
   }> = {
     // Belgium
     BE: {
-      title: "Get In Touch With Belgium",
+      title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
       cards: {
         card1: {
@@ -80,7 +80,7 @@ const ContactFormPage = () => {
     },
     // Poland
     PL: {
-      title: "Get In Touch With Belgium",
+      title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
       cards: {
         card1: {
@@ -108,7 +108,7 @@ const ContactFormPage = () => {
     },
     // Default for other countries
     DEFAULT: {
-      title: "Get In Touch With Belgium",
+      title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
       cards: {
         card1: {
@@ -159,35 +159,31 @@ const ContactFormPage = () => {
         {/* Left Section - Info (UNCHANGED) */}
         <div className="w-full max-w-[475px] text-left">
           <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium"><T lang={lang} countryCode={countryCode}>{cardContent.title}</T></h2>
-          <div className="w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-6 md:my-8 lg:my-[40px]"></div>
-          <p className="text-[#000000] text-fluid-body mb-8 max-w-[556px]">
-            <T lang={lang} countryCode={countryCode}>Call To us</T>
-          </p>
-
-          <h2 className="text-fluid-body font-medium text-[#000000] mb-2">
+          <div className="w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-[20px]"></div>
+          <h2 className="text-fluid-body lg:text-[16px] font-medium text-[#000000] mb-2">
             <T lang={lang} countryCode={countryCode}>Our team is here to help</T>
           </h2>
-          <p className="text-[#FF6E3E] text-fluid-small mb-2">
+          <p className="text-[#FF6E3E] text-fluid-small font-medium lg:text-[16px] mb-2">
             Contact@accqrate-erp.com
           </p>
 
           {/* Office Locations Section */}
 <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
-  <div className="space-y-2">
+  <div className="">
     {/* Call Us Label */}
-    <p className="text-[14px] font-bold text-[#000000] leading-relaxed">
+    <p className="text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed">
       <T>Call Us</T>
     </p>
 
     {/* Phone Timing */}
-    <p className="text-[12px] text-[#000000] font-normal leading-relaxed">
+    <p className="text-[12px] pb-2 text-[#000000] font-normal leading-relaxed">
     <T>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
     </p>
 
     {/* Phone Section with Icon */}
-    <div className="flex items-center gap-2 text-[#1F3FBF]">
+    <div className="flex items-center gap-2 pb-2 text-[#1F3FBF]">
       <PhoneCall className="w-4 h-4" />
-      <span className="text-[14px] font-medium leading-relaxed">
+      <span className="text-[16px] font-medium leading-relaxed">
         +966 54 199 9357
       </span>
     </div>
