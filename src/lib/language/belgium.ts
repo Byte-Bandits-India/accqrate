@@ -9257,7 +9257,14 @@ fr: "Intégration Peppol / EN 16931"
   nl: 'Alle rechten voorbehouden.',
   de: 'Alle Rechte vorbehalten.',
   fr: 'Tous droits réservés.'
+},
+'One unified platform with zero silos integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.': {
+  en: "One unified platform with zero silos integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.",
+  nl: "Eén uniform platform zonder silo’s, met geïntegreerde modules op één datamodel, ingebouwde wereldwijde naleving, AI-gestuurde automatisering, flexibele cloud- of on-premise-implementatie, snelle ingebruikname en beveiliging en schaalbaarheid op ondernemingsniveau.",
+  de: "Eine einheitliche Plattform ohne Silos mit integrierten Modulen auf einem einzigen Datenmodell, integrierter globaler Compliance, KI-gestützter Automatisierung, flexiblen Cloud- oder On-Premise-Bereitstellungen, schneller Implementierung sowie Sicherheit und Skalierbarkeit auf Unternehmensniveau.",
+  fr: "Une plateforme unifiée sans silos, avec des modules intégrés sur un modèle de données unique, une conformité mondiale intégrée, une automatisation alimentée par l’IA, un déploiement flexible en cloud ou sur site, une mise en œuvre rapide et une sécurité et une évolutivité de niveau entreprise."
 }
+
   
 };
 
