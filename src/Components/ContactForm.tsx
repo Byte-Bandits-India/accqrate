@@ -138,7 +138,7 @@ const ContactFormPage = () => {
 
   // Get card content based on country code
   const getCountryCardContent = () => {
-    if (['BE', 'PL', 'SA'].includes(countryCode)) {
+    if (['BE', 'PL', ].includes(countryCode)) {
       return countryCardContent[countryCode];
     } else {
       return countryCardContent.DEFAULT;
@@ -215,7 +215,7 @@ const ContactFormPage = () => {
 
                 <div>
                   <p className="text-sm text-[#9a8e9e] underline leading-relaxed">
-                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br/>CH-4052 Basel <br/> Switzerland <br/> +41(0)61 272 95 95</T>
+                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br/>CH-4052 Basel <br/> Switzerland</T>
                   </p>
                 </div>
               </div>
@@ -370,4 +370,5 @@ const ContactFormPage = () => {
 };
 
 export default ContactFormPage;
+
 
