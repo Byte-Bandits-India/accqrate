@@ -8800,7 +8800,19 @@ fr: "Intégration Peppol / EN 16931"
 'Our': { en:'Our', nl:'Onze', de:'Unser', fr:'Notre' },
 'Office': { en:'Office', nl:'Kantoor', de:'Büro', fr:'Bureau' },
 'Locations': { en:'Locations', nl:'Locaties', de:'Standorte', fr:'Emplacements' },
+//----------header
+  
+"PEPPOL Certified and FPS Finance Compliant e-invoicing software": {
+  fr: "Logiciel de facturation électronique certifié PEPPOL et conforme au SPF Finances",
+  nl: "PEPPOL-gecertificeerde en FPS Finance-conforme e-facturatiesoftware",
+  de: "PEPPOL-zertifizierte und FPS Finance-konforme E-Rechnungssoftware",
+},
 
+"Integrate your ERP and POS with the PEPPOL Network using our seamless, adaptable e-invoicing API or offline integrators": {
+  fr: "Intégrez votre ERP et votre POS au réseau PEPPOL grâce à notre API de facturation électronique fluide et adaptable ou à des intégrateurs hors ligne",
+  nl: "Integreer uw ERP en POS met het PEPPOL-netwerk via onze naadloze, flexibele e-facturatie-API of offline-integrators",
+  de: "Integrieren Sie Ihr ERP und POS in das PEPPOL-Netzwerk mithilfe unserer nahtlosen, anpassungsfähigen E-Rechnungs-API oder Offline-Integratoren",
+},
 
   
 };
