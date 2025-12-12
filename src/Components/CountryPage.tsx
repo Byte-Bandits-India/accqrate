@@ -854,14 +854,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                         <T>{feature.title}</T>
                                                     </h2>
                                                     {feature.sub && (
-                                                        <h2 className="text-fluid-h3 font-medium text-[#000000] leading-tight">
+                                                        <h2 className="text-fluid-h3  font-medium text-[#000000] leading-tight">
                                                             <T>{feature.sub}</T>
                                                         </h2>
                                                     )}
                                                 </div>
 
                                                 {/* Description */}
-                                                <p className="mt-3 sm:mt-4 text-[#000000] text-fluid-body leading-snug tracking-para line-clamp-5">
+                                                <p className="mt-3 text-[#000000] text-fluid-body leading-snug tracking-para line-clamp-5">
                                                     <T>{feature.description}</T>
                                                 </p>
                                             </div>
@@ -986,9 +986,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             {countryContent.complianceSection && (
                                 <>
                                     <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                <h2 className="text-fluid-body font-medium tracking-heading"><T>Full Compliance with Belgium’s E-Invoicing Mandate</T></h2>
-                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>Accqrate ensures end-to-end compliance with Belgium’s B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:</T></h2>
-                                <ul className="gap-y-2 mt-8 text-fluid-small lg:text-[16px] tracking-para leading-[26px] list-disc pl-5">
+                                <h2 className="text-fluid-body font-medium tracking-heading"><T>{countryContent.complianceSection?.complianceTitle}</T></h2>
+                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.complianceDescription}</T></h2>
+                                <ul className="gap-y-2 mt-8 text-fluid-small lg:text-[16px] tracking-para leading leading-[26px] list-disc pl-5">
                                             {countryContent.complianceSection?.complianceItems.map((item, index) => (
                                                 <li key={index}><T>{item}</T></li>
                                             ))}
