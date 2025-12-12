@@ -328,7 +328,7 @@ const uaeContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for Belgian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
+  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
   whyAccqrateFeatures: [
     {
       img: AssetPath.home.feature1,

@@ -597,6 +597,21 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
     const duplicatedCards = [...CarouselCardItems, ...CarouselCardItems];
 
+    // Highlight specific words in subtitle (e.g., "specialize", "reliable")
+    const highlightWhySubtitle = React.useCallback((text: string) => {
+        const parts = text.split(/(specialize|reliable)/gi);
+        return parts.map((part, index) => {
+            const isHighlight = /^specialize$/i.test(part) || /^reliable$/i.test(part);
+            return isHighlight ? (
+                <span key={index} className="text-[#194BED]">
+                    <T>{part}</T>
+                </span>
+            ) : (
+                <T key={index}>{part}</T>
+            );
+        });
+    }, []);
+
     useEffect(() => {
         const carousel = carouselRef.current;
         if (!carousel) return;
@@ -749,10 +764,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 />
 
                                 <h3 className="text-[24px] md:text-[28px] lg:text-[36px] font-medium mt-6 md:mt-8 lg:mt-[40px] leading-tight">
-                                    <T>
-                                        {countryContent.whyAccqrateSubtitle ||
-                                            "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."}
-                                    </T>
+                                    {highlightWhySubtitle(
+                                        countryContent.whyAccqrateSubtitle ||
+                                        "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."
+                                    )}
                                 </h3>
                             </div>
 
@@ -991,7 +1006,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                         <button
                                             onClick={() => setModalOpen(true)}
-                                            className="h-[46px] md:h-[55px] max-w-[250px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
+                                            className="h-[46px] md:h-[55px] max-w-[350px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
                                         >
                                             <T>{countryContent.complianceSection?.buttonText}</T>
                                             <svg
