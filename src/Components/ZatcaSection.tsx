@@ -56,6 +56,19 @@ export default function ZatcaSection() {
         boxAlt: "Peppol Certified",
         showZatcaBox: true,
       },
+      // UAE - Peppol
+      AE: {
+        title: "Get 100% Peppol compliant with Accqrate",
+        features: [
+          "EN 16931 compliant structured invoices",
+          "Seamless Peppol network integration",
+          "UBL format invoice generation",
+          "Ready for UAE's 2026 mandate",
+        ],
+        boxImage: AssetPath.integration.peppol,
+        boxAlt: "Peppol Certified",
+        showZatcaBox: true,
+      },
       // Default for other countries
       default: {
         title: "Get 100% compliant e-invoicing with Accqrate",
