@@ -184,7 +184,7 @@ const ContactFormPage = () => {
     <div className="flex items-center gap-2 pb-2 text-[#1F3FBF]">
       <PhoneCall className="w-4 h-4" />
       <span className="text-[16px] font-medium leading-relaxed">
-        +966 54 199 9357
+        +41 76 475 36 65
       </span>
     </div>
 
@@ -370,5 +370,6 @@ const ContactFormPage = () => {
 };
 
 export default ContactFormPage;
+
 
 
