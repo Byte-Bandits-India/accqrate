@@ -8770,11 +8770,7 @@ fr: "Intégration Peppol / EN 16931"
     nl: "Bel ons",
     de: "Rufen Sie uns an",
   },
-  'call our team monday - friday': {
-    fr: "Appelez-nous",
-    nl: "Bel ons",
-    de: "Rufen Sie uns an",
-  },
+ 
   'Seeking cutting-edge E-invoicing software ready for Europe? Let us find the perfect pricing fit for you.': {
   en: "Seeking cutting-edge E-invoicing software ready for Europe? Let us find the perfect pricing fit for you.",
   nl: "Op zoek naar geavanceerde E-facturatiesoftware voor Europa? Wij vinden de ideale prijsoplossing voor u.",
@@ -8787,12 +8783,20 @@ fr: "Intégration Peppol / EN 16931"
   de: "Peppol-fähige E-Rechnungen? Unsere Experten unterstützen Sie.",
   fr: "E-facturation compatible Peppol ? Nos experts sont là pour vous.",
 },
-'Our team is here to help': {
-  en: "Our team is here to help",
-  nl: "Ons team staat klaar om te helpen",
-  de: "Unser Team ist hier, um zu helfen",
-  fr: "Notre équipe est là pour vous aider",
+
+"Call our team Monday - Friday from 9:00 AM to 5:00 PM": {
+  fr: "Appelez notre équipe du lundi au vendredi de 9h00 à 17h00",
+  nl: "Bel ons team van maandag tot vrijdag van 9.00 tot 17.00 uur",
+  de: "Rufen Sie unser Team Montag bis Freitag von 9:00 bis 17:00 Uhr an",
 },
+
+  
+  "Our team is here to help": {
+  fr: "Notre équipe est là pour vous aider",
+  nl: "Ons team staat klaar om te helpen",
+  de: "Unser Team ist hier, um Ihnen zu helfen",
+},
+
 'Our': { en:'Our', nl:'Onze', de:'Unser', fr:'Notre' },
 'Office': { en:'Office', nl:'Kantoor', de:'Büro', fr:'Bureau' },
 'Locations': { en:'Locations', nl:'Locaties', de:'Standorte', fr:'Emplacements' },
