@@ -256,7 +256,7 @@ const LangCountryDropdown: React.FC<
       w-full sm:w-60 max-w-xs bg-white rounded-md shadow-lg z-[9999] p-4 text-sm text-gray-700 overflow-visible`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mb-2 font-semibold text-black">Select Language</div>
+            <div className="mb-2 font-semibold text-black"><T>Select Language</T></div>
 
             <div className="flex flex-wrap gap-2 mb-4">
               {languages.map((lang) => (
@@ -274,8 +274,8 @@ const LangCountryDropdown: React.FC<
               ))}
             </div>
 
-            <div className="mb-2 font-semibold text-black">Select Country</div>
-
+            <div className="mb-2 font-semibold text-black"><T>Select Country</T></div>
+ 
             {/* FULL height, NO scrolling */}
             <div className="space-y-2">
               {countries.map((country) => (
@@ -395,14 +395,14 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                       />
                     )}
                     <span className="xl:hidden">
-                      {section.heading}
+                      <T>{section.heading}</T>
                     </span>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-
+ 
           {/* Right: subitems */}
           <div className="col-span-2 mb-2">
             <h6 className="pl-2.5 font-semibold uppercase text-sm text-gray-500 mb-4">
@@ -429,10 +429,10 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
 
                       <div>
                         <h4 className="text-[16px] font-medium text-[#333333] leading-tight hover:text-[#534ED3]">
-                          {item.title}
+                          <T>{item.title}</T>
                         </h4>
                         <p className="text-[12px] text-gray-500 leading-snug mt-[6px]">
-                          {item.description}
+                          <T>{item.description}</T>
                         </p>
                       </div>
                     </Link>
@@ -448,7 +448,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
             onClick={() => setModalOpen(true)}
             className="group inline-flex items-center justify-center text-blue-400 gap-2 py-2 px-6 rounded-[80px] text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
           >
-            Book a Demo
+            <T>Book a Demo</T>
             <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
               →
             </span>
@@ -465,7 +465,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
             className="group inline-flex items-center gap-2 py-2 px-6 rounded-[80px] text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
             onClick={onItemClick}
           >
-            Contact Sales
+            <T>Contact Sales</T>
             <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
               →
             </span>
@@ -632,7 +632,7 @@ const Header: React.FC = () => {
                           onClick={() => handleMenuClick(menu.id)}
                         >
                           <span className="whitespace-nowrap text-[14px] text-[#333333]">
-                            {menu.title}
+                            <T>{menu.title}</T>
                           </span>
                           <IoChevronDown
                             className={`transition-transform duration-200 ${activeMenu === menu.id ? "rotate-180" : "rotate-0"
@@ -660,9 +660,9 @@ const Header: React.FC = () => {
                                 {menu.sections.map((section, index) => (
                                   <div key={index} className="mb-6">
                                     <h3 className="font-medium text-[#333333] text-lg mb-4">
-                                      {section.heading}
+                                      <T>{section.heading}</T>
                                     </h3>
-                                    <p className="text-gray-500 mb-4">{section.description}</p>
+                                    <p className="text-gray-500 mb-4"><T>{section.description}</T></p>
                                     <ul className="flex flex-wrap gap-4 text-[#717171]">
                                       {section.subItems.map((item, i) => (
                                         <ResourcesListItem
@@ -686,7 +686,7 @@ const Header: React.FC = () => {
                                   onClick={() => setModalOpen(true)}
                                   className="group inline-flex items-center justify-center gap-2 py-2 px-6 rounded-[80px] lg:text-[12px] xl:text-[14px] hover:text-[#534ED3] transition-colors"
                                 >
-                                  Book a Demo
+                                  <T>Book a Demo</T>
                                   <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
                                     →
                                   </span>
@@ -703,7 +703,7 @@ const Header: React.FC = () => {
                                   className="group inline-flex items-center gap-2 py-2 px-6 rounded-[80px] text-[14px] hover:text-[#534ED3] transition-colors"
                                   onClick={handleMenuItemClick}
                                 >
-                                  {contactInfo.salesText}
+                                  <T>{contactInfo.salesText}</T>
                                   <span className="inline-block transform transition-transform duration-300 ease-out group-hover:translate-x-1">
                                     →
                                   </span>
@@ -716,7 +716,7 @@ const Header: React.FC = () => {
                               </div>
                             </div>
                           </div>
-                        )}
+                        )} 
                       </li>
                     ))}
 
@@ -728,7 +728,7 @@ const Header: React.FC = () => {
                         onClick={handleMenuItemClick}
                       >
                         <span className="whitespace-nowrap text-[14px] text-[#333333]">
-                          About us
+                          <T>About us</T>
                         </span>
                       </Link>
                     </li>
@@ -745,15 +745,15 @@ const Header: React.FC = () => {
                 />
                 <Link
                   href={createHref("/contact-us")}
-                  className="hidden xl:inline-flex items-center justify-center gap-2 text-[#F05A28] h-[34px] w-[119px] font-medium rounded-[80px] text-[12px] xl:text-[14px] border border-[#29266E] bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
+                  className="hidden w-auto px-2 xl:inline-flex items-center justify-center gap-2 text-[#F05A28] h-[34px] w-[119px] font-medium rounded-[80px] text-[12px] xl:text-[14px] border border-[#29266E] bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
                 >
-                  {contactInfo.salesText}
+                  <T>{contactInfo.salesText}</T>
                 </Link>
                 <button
                   onClick={() => setModalOpen(true)}
-                  className="hidden xl:inline-flex items-center justify-center gap-2 text-white h-[34px] font-medium w-[121px] rounded-[80px] text-[12px] xl:text-[14px] bg-gradient-to-r from-[#194BED] to-[#29266E]"
+                  className="hidden xl:inline-flex w-auto items-center justify-center gap-2 text-white h-[34px] font-medium w-[121px] rounded-[80px] text-[12px] xl:text-[14px] bg-gradient-to-r from-[#194BED] to-[#29266E]"
                 >
-                  Book a Demo
+                  <T>Book a Demo</T>
                 </button>
               </div>
 
@@ -793,7 +793,7 @@ const Header: React.FC = () => {
                 className="block w-full text-[17px] font-normal py-[16px] text-[#333333]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Home
+                <T>Home</T>
               </Link>
               <hr />
               {menus.map(({ id, title, sections }) => (
@@ -808,7 +808,7 @@ const Header: React.FC = () => {
                       <div key={sectionIndex} className="mb-4 last:mb-0">
                         <div className="px-2 mb-2">
                           {section.description && (
-                            <p className="text-gray-500 text-sm">{section.description}</p>
+                            <p className="text-gray-500 text-sm"><T>{section.description}</T></p>
                           )}
                         </div>
                         <ul className="space-y-2">
@@ -828,8 +828,8 @@ const Header: React.FC = () => {
                                 className="flex-1"
                                 onClick={() => setIsMobileMenuOpen(false)}
                               >
-                                <div className="font-medium">{item.title}</div>
-                                <div className="text-sm text-gray-500">{item.description}</div>
+                                <div className="font-medium"><T>{item.title}</T></div>
+                                <div className="text-sm text-gray-500"><T>{item.description}</T></div>
                               </Link>
                               <Arrow45 />
                             </li>
@@ -847,7 +847,7 @@ const Header: React.FC = () => {
                 onClick={handleMenuItemClick}
               >
                 <span className="whitespace-nowrap text-[14px] text-[#333333]">
-                  About us
+                  <T>About us</T>
                 </span>
               </Link>
 
@@ -857,7 +857,7 @@ const Header: React.FC = () => {
                 className="block w-full text-[17px] font-normal mt-4 bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {contactInfo.salesText}
+                <T>{contactInfo.salesText}</T>
               </Link>
             </Accordion>
           </div>
@@ -887,7 +887,7 @@ const Header: React.FC = () => {
               className="flex-1 text-center text-white py-3 rounded-full text-sm font-bold bg-gradient-to-r from-[#194BED] to-[#29266E]"
               onClick={() => setModalOpen(true)}
             >
-              Book a Demo
+              <T>Book a Demo</T>
             </button>
           </div>
         </div>
@@ -923,9 +923,9 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
             <Image src={img} alt={title} className="w-[45px] h-[45px] mr-3" width={45} height={45} />
           )}
           <div>
-            <div className="text-sm font-semibold leading-none">{title}</div>
+            <div className="text-sm font-semibold leading-none"><T>{title}</T></div>
             <p className="line-clamp-2 text-[12px] text-slate-500 leading-snug text-muted-foreground">
-              {children}
+              <T>{children}</T>
             </p>
           </div>
         </Link>
@@ -994,11 +994,11 @@ const ResourcesListItem = React.forwardRef<HTMLAnchorElement, ResourcesListItemP
           {/* Text */}
           <div className="flex flex-col justify-center">
             <div className="text-[15px] font-medium leading-snug text-gray-800">
-              {title}
+              <T>{title}</T>
             </div>
             {description && (
               <div className="text-sm text-gray-500 leading-snug">
-                {description}
+                <T>{description}</T>
               </div>
             )}
           </div>
@@ -1022,13 +1022,13 @@ const SuccessStoriesListItem = React.forwardRef<HTMLAnchorElement, SuccessStorie
           onClick={onClick}
           {...props}
         >
-          <div className="text-sm font-medium leading-none mb-1">{title}</div>
+          <div className="text-sm font-medium leading-none mb-1"><T>{title}</T></div>
           <p className="text-sm leading-snug text-muted-foreground mb-2">
-            {children}
+            <T>{children}</T>
           </p>
           {stats && (
             <div className="text-xs font-semibold text-[#F05A28] bg-orange-50 px-2 py-1 rounded-full inline-block">
-              {stats}
+              <T>{stats}</T>
             </div>
           )}
         </Link>
