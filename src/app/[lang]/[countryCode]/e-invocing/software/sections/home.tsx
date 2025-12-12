@@ -9,6 +9,7 @@ import peppolImg from "@/Assets/images/invoicing/peppol.png";
 import gdprImg from "@/Assets/images/invoicing/gdpr.png";
 import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
+import eInvoiceHeroImg from "@/Assets/images/invoicing/e-invoice-hero.png";
 import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
 import { t, currentLang } from "@/lib/translations";
@@ -20,7 +21,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
+        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Saudi",
@@ -38,7 +39,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in UAE",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
+        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "UAE",
@@ -56,7 +57,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Oman",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
+        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Omani",
@@ -74,7 +75,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Bahrain",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
+        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         marqueeItems: [
@@ -91,7 +92,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Malaysia",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
+        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Malaysian",
@@ -109,7 +110,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Mauritius",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
+        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Mauritian",
@@ -127,7 +128,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Jordan",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing.</span>",
+        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         marqueeItems: [
@@ -145,7 +146,7 @@ const countryConfig = {
         authority: "KSeF",
         badgeText: "PEPPOL Approved E-invoicing Software in Poland",
         title: "Integrate With PEPPOL Network In Less Than 1 Hour.",
-        description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
+        description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
         description2: "",
         ctaText: "Get 30 days free trial",
         countryName: "Polish",
@@ -166,7 +167,7 @@ const countryConfig = {
         badgeText: "PEPPOL Certified  E-invoicing Software for Belgium",
         topTitle: "Enable Your Business With E-invoicing.",
         title: "Integrate With PEPPOL Network",
-        description1: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
+        description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
         description2: "",
         ctaText: "Connect with our Consultant",
         countryName: "Belgian",
@@ -346,11 +347,11 @@ const Software: React.FC = () => {
                         {/* RIGHT IMAGE */}
                         <div className="flex-1 flex justify-center w-full">
                             <Image
-                                src={AssetPath.invoicing.invoiceWithCreateScreen}
+                                src={eInvoiceHeroImg}
                                 alt={content.imageAlt}
                                 width={591}
                                 height={380}
-                                className="w-full max-w-[441px] rounded-2xl object-contain"
+                                className="w-full max-w-[541px] rounded-2xl object-contain"
                             />
                         </div>
                     </div>

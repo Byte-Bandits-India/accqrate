@@ -112,29 +112,29 @@ export default function RecentBlogPosts() {
   // Blog Card Component
   const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
     <div className="block h-full">
-      <div className="rounded-2xl border border-gray-200 shadow-sm overflow-hidden duration-300 bg-white hover:shadow-md transition-shadow h-full flex flex-col">
-        <FadeUp className="relative w-full h-[188px] xl:h-[250px] bg-gray-50 flex-shrink-0">
-          <Image
-            src={getImageFromAssetPath(post.image)}
-            alt={post.title}
-            fill
-            className="object-cover w-full h-full p-2 rounded-2xl"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            priority={false}
-          />
-        </FadeUp>
+  <div className="rounded-2xl border border-gray-200 shadow-sm overflow-hidden duration-300 bg-white hover:shadow-md transition-shadow h-full flex flex-col">
+    <FadeUp className="relative w-full aspect-[16/9] bg-gray-50 flex-shrink-0">
+      <Image
+        src={getImageFromAssetPath(post.image)}
+        alt={post.title}
+        fill
+        className="object-cover w-full h-full p-2 rounded-2xl"
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        priority={false}
+      />
+    </FadeUp>
 
-        <div className="p-5 border-t border-gray-100 flex-1 flex flex-col">
-          <FadeUp className="font-semibold text-[16px] sm:text-[18px] text-gray-900 line-clamp-2 leading-snug mb-3">
-            <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.title}</T>
-          </FadeUp>
+    <div className="p-5 border-t border-gray-100 flex-1 flex flex-col">
+      <FadeUp className="font-semibold text-[16px] sm:text-[18px] text-gray-900 line-clamp-2 leading-snug mb-3">
+        <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.title}</T>
+      </FadeUp>
 
-          <FadeUp className="text-gray-600 text-[14px] sm:text-[15px] line-clamp-3 leading-relaxed flex-1">
-            <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.desc}</T>
-          </FadeUp>
-        </div>
-      </div>
+      <FadeUp className="text-gray-600 text-[14px] sm:text-[15px] line-clamp-3 leading-relaxed flex-1">
+        <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.desc}</T>
+      </FadeUp>
     </div>
+  </div>
+</div>
   );
 
   // Blog Card with Link

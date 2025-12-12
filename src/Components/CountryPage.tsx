@@ -1015,36 +1015,36 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 </div>
 
                 {/* Your AI Copilot */}
-                <div className="hidden md:block pb-10">
+                <div className="block pb-10">
 
                     {/* HERO SECTION */}
-                    <div className="relative min-h-[450px] mt-20">
+                    <div className="relative min-h-[400px] md:min-h-[450px] mt-10 md:mt-20">
                         {/* Background Image - Positioned at bottom */}
                         <Image
                             src={AssetPath.home.waveVector}
                             alt="Wave Vector"
                             width={1440}
                             height={350}
-                            className="absolute bottom-0 left-0 w-full h-[300px] md:h-[350px] rounded-xl z-0"
+                            className="absolute bottom-0 left-0 w-full h-[250px] md:h-[300px] lg:h-[350px] rounded-xl z-0"
                         />
 
 
                         {/* Content */}
-                        <div className="relative z-10 flex items-center min-h-[450px] max-w-[1200px] mx-auto rounded-[20px] px-6 md:px-8 xl:px-8 bg-white">
-                            <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0 grid lg:grid-cols-2 gap-6">
+                        <div className="relative z-10 flex items-center min-h-[400px] md:min-h-[450px] max-w-[1200px] mx-auto rounded-[20px] px-4 md:px-6 lg:px-8 bg-white">
+                            <div className="max-w-[1177px] mx-auto w-full grid lg:grid-cols-2 gap-4 md:gap-6">
 
                                 {/* Left Part */}
-                                <FadeUp className="font-inter rounded-2xl flex flex-col justify-between p-8 bg-transparent flex-shrink-0">
+                                <FadeUp className="font-inter rounded-2xl flex flex-col justify-between p-4 md:p-6 lg:p-8 bg-transparent flex-shrink-0 order-2 lg:order-1">
                                     <div>
-                                        <h2 className="text-black text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight">
+                                        <h2 className="text-black text-[20px] md:text-[24px] lg:text-[38px] font-medium leading-tight">
                                             <span className="text-[#194BED]">Accelera</span> <T>Your AI Copilot</T>
                                         </h2>
 
-                                        <p className="text-[#333333] text-[14px] md:text-[16px] mt-[40px] mb-6">
+                                        <p className="text-[#333333] text-[13px] md:text-[14px] lg:text-[16px] mt-6 md:mt-[40px] mb-4 md:mb-6">
                                            <T>Work faster and decide smarter with AI embedded across the suite.</T>
                                         </p>
 
-                                        <ul className="list-disc pl-5 space-y-4 text-[14px] md:text-[16px]">
+                                        <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[13px] md:text-[14px] lg:text-[16px]">
                                             <li><b><T>Natural-language actions:</T></b> <T>Ask, &quot;Show last month&apos;s receivables by region&quot;</T></li>
                                             <li><b><T>Automations:</T></b> <T>Generate e-invoices, trigger approvals</T></li>
                                             <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand</T></li>
@@ -1053,25 +1053,26 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </div>
 
                                     <button
-                                        className="h-[40px] max-w-[399px] mt-10 flex items-center justify-between px-4 text-white text-[16px]"
+                                        className="h-[40px] w-full md:max-w-[399px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
                                         style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
                                         onClick={() => setModalOpen(true)}
                                     >
-                                        <T>See Accelera in a 5-Minute Demo</T>
-                                        <svg width="20" height="20" fill="none" stroke="currentColor">
+                                        <span className="truncate mr-2"><T>See Accelera in a 5-Minute Demo</T></span>
+                                        <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
                                             <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </button>
                                 </FadeUp>
 
                                 {/* Right Part */}
-                                <FadeUp className="flex items-center justify-center p-8">
-                                    <div className="relative w-full max-w-[500px] h-[320px] md:h-[360px] lg:h-[420px]">
+                                <FadeUp className="flex items-center justify-center p-4 md:p-6 lg:p-8 order-1 lg:order-2">
+                                    <div className="relative w-full max-w-[520px]">
                                         <Image
                                             src={AssetPath.home.ai}
                                             alt="AI Copilot"
-                                            fill
-                                            className="object-contain rounded-lg"
+                                            width={520}
+                                            height={420}
+                                            className="w-full h-auto object-contain rounded-lg"
                                             priority
                                         />
                                     </div>
@@ -1083,7 +1084,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                     <div>
                         {/* COMPLIANCE SECTION */}
-                    <div className="max-w-[1200px] mx-auto px-6 md:px-8 xl:px-0 mt-[72px] grid lg:grid-cols-2 gap-6 pb-[36px] rounded-xl md:rounded-2xl bg-white">
+                    <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] grid lg:grid-cols-2 gap-4 md:gap-6 pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
                         {/* Left Side: Image (Desktop) */}
                         <div className="hidden lg:flex flex-col items-start justify-between p-6 md:p-8">
                             <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
@@ -1099,14 +1100,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         </div>
 
                         {/* Right Side: Text + List + Button */}
-                        <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-6 md:p-8">
+                        <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8 order-2 lg:order-1">
                             {/* Heading (mobile only) */}
-                            <h2 className="text-fluid-small text-left pl-5 leading-[24px] tracking-para mb-4">
+                            <h2 className="text-[14px] md:text-[16px] lg:text-fluid-small text-left pl-4 md:pl-5 leading-[22px] md:leading-[24px] tracking-para mb-4">
                                <T>Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:</T>
                             </h2>
 
                             <div>
-                                <ul className="list-disc space-y-4 mt-[15px] text-fluid-small text-left pl-5 leading-[24px] tracking-para">
+                                <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-[13px] md:text-[14px] lg:text-fluid-small text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
                                     <li>
                                         <T>Cross-border interoperability within the EU</T>
                                     </li>
@@ -1119,15 +1120,15 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                             <button
                                 onClick={() => setModalOpen(true)}
-                                className="h-[50px] max-w-[350px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] lg:mt-16 mt-[32px]"
+                                className="h-[44px] md:h-[50px] w-full md:max-w-[350px] flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] lg:text-[18px] lg:mt-16 mt-6 md:mt-[32px] rounded-lg"
                                 style={{ background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)" }}
                             >
-                                <T>Talk to our Consultant</T>
+                                <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
                                 <svg
                                     width="20"
                                     height="20"
                                     viewBox="0 0 24 24"
-                                    className="text-white inline-block fill-current"
+                                    className="text-white inline-block fill-current flex-shrink-0"
                                     style={{ color: 'var(--icon-color, #ffffff)' }}
                                     role="img"
                                     aria-hidden="true"
@@ -1139,13 +1140,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         </FadeUp>
 
                         {/* Image (Mobile) */}
-                        <div className="lg:hidden flex items-center justify-center">
+                        <div className="lg:hidden flex items-center justify-center p-4 md:p-6 order-1 lg:order-2">
                             <Image
                                 src={AssetPath.home.vida}
                                 alt="VIDA Compliance"
                                 width={520}
                                 height={420}
-                                className="w-full h-auto object-contain"
+                                className="w-full h-auto object-contain max-w-full"
                             />
                         </div>
                     </div>
