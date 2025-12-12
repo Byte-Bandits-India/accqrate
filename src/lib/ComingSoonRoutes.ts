@@ -11,10 +11,12 @@ export const comingSoonRoutes = [
 
   // Resources
   'resources/events',
+  'resources/webinars',
   'resources/case-studies',
   'resources/product-updates',
   'resources/alternate-product',
   'resources/knowledge-center',
+  'resources/vat',
 
   // Community
   'community/affiliates',
@@ -37,6 +39,7 @@ export const comingSoonRoutes = [
 
   'business/services',
   'business/e-invoicing/accqrate',
+  'business/e-invocing/accqrate',
 
   // Left column links
   'accelera',
@@ -58,6 +61,11 @@ export const comingSoonRoutes = [
   'contact-sales',
   'book-demo',
 
-  '/business/services'
-  
-]
+  '/business/services',
+  'e-invocing',
+  'e-invocing/integration',
+  'join-our-team',
+  'company',
+  'newsletter',
+  'branding-assets',
+];

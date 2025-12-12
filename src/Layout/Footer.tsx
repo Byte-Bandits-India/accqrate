@@ -1,320 +1,208 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { comingSoonRoutes } from '@/lib/ComingSoonRoutes';
-import AssetPath from "@/AssetPath/AssetPath"
+import AssetPath from "@/AssetPath/AssetPath";
+import { comingSoonRoutes } from "@/lib/ComingSoonRoutes";
 import T from "@/Components/T";
 
-
-// ===================== Custom Hook for Dynamic Routing =====================
+// ---------------- Dynamic Routing ----------------
 const useDynamicRouting = () => {
   const pathname = usePathname();
-
   const createHref = (path: string): string => {
-    const segments = pathname.split('/').filter(segment => segment);
-    const lang = segments[0] || 'en';
-    const countryCode = segments[1] || 'sa';
-    const cleanPath = path.startsWith('/') ? path : `/${path}`;
-    return `/${lang}/${countryCode}${cleanPath}`;
+    const segments = pathname.split("/").filter(Boolean);
+    const lang = segments[0] || "en";
+    const countryCode = segments[1] || "sa";
+    const clean = path.startsWith("/") ? path : `/${path}`;
+    return `/${lang}/${countryCode}${clean}`;
   };
-
   return { createHref };
 };
 
-export default function Footer() {
+// ---------------- Footer Data ----------------
+const footerNav = [
+  { label: "Home", href: "/" },
+  { label: "Join our Team", href: "/join-our-team" },
+  { label: "Company", href: "/company" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Accelera", href: "/accelera" },
+  { label: "Press", href: "/press" },
+  { label: "Newsletter", href: "/newsletter" },
+  { label: "Branding Assets", href: "/branding-assets" },
+];
+
+const footerSections = [
+  {
+    title: "Resources",
+    links: [
+      { label: "FAQ", href: "/resources/faq" },
+      { label: "Blogs", href: "/resources/blogs" },
+      { label: "Events", href: "/resources/webinars" },
+      { label: "Announcements", href: "/resources/announcement" },
+      { label: "Tax Calculator", href: "/resources/vat" },
+    ],
+  },
+  {
+    title: "Contact Sales",
+    links: [
+      { label: "Call: +966 54 199 9357", isText: true },
+      { label: "Email: contact@accqrate-erp.com", isText: true },
+      { label: "WhatsApp: +966 50 763 5216", isText: true },
+      {
+        label: "Connect with Accqrate Concierge",
+        href: "/connect-with-concierge",
+      },
+    ],
+  },
+];
+
+const eInvoicingLinks = [
+  { label: "Accqrate E-invoicing", href: "/e-invocing" },
+  { label: "Integration Solution", href: "/e-invocing/integration" },
+];
+
+// ---------------- Component ----------------
+export default function FooterUpdated() {
   const { createHref } = useDynamicRouting();
 
-  const footerSections = [
-    {
-      title: "E-invoicing Solution",
-      items: [
-        { name: "Accqrate E-invoicing", href: "/e-invoicing/accqrate" },
-        { name: "Integration Solution", href: "/e-invoicing/integration" },
-        { name: "Integration with SAP Suite", href: "/e-invoicing/sap" },
-        { name: "Integration with Microsoft Suite", href: "/e-invoicing/microsoft" },
-        { name: "Integration with Oracle Suite", href: "/e-invoicing/oracle" },
-        { name: "Integration with Homegrown Solution", href: "/e-invoicing/custom" },
-        { name: "Integration with Legacy Solutions", href: "/e-invoicing/legacy" },
-        { name: "Multi Country Integration", href: "/e-invoicing/multi-country" },
-      ],
-    },
-    {
-      title: "Business Solution",
-      items: [
-        { name: "Accqrate Books", href: "/business/books" },
-        { name: "Accqrate Retail", href: "/business/retail" },
-        { name: "Accqrate People", href: "/business/people" },
-        { name: "Accqrate CRM", href: "/business/crm" },
-        { name: "Accqrate Factory", href: "/business/factory" },
-        { name: "Accqrate Plan 360", href: "/business/plan360" },
-        { name: "Accqrate Services", href: "/business/services" },
-        { name: "Accqrate FileHub", href: "/business/fileHub" },
-      ],
-    },
-    {
-      title: "Resources",
-      items: [
-        { name: "FAQ", href: "/resources/faq" },
-        { name: "Blogs", href: "/resources/blogs" },
-        { name: "Events", href: "/resources/events" },
-        { name: "Case Studies", href: "/resources/case-studies" },
-        { name: "Announcements", href: "/resources/announcement" },
-        { name: "Product Updates", href: "/resources/product-updates" },
-        { name: "Alternate Product", href: "/resources/alternate-product" },
-        { name: "Knowledge Center", href: "/resources/knowledge-center" },
-      ],
-    },
-    {
-      title: "Community",
-      items: [
-        { name: "Affiliates", href: "/community/affiliates" },
-        { name: "Non Profits", href: "/community/non-profit" },
-        { name: "Accqrate Sprouts", href: "/community/sprouts" },
-        { name: "Become a Partner", href: "/community/become-partner" },
-        { name: "Community Forum", href: "/community/forum" },
-        { name: "Work with a Partner", href: "/community/work-with-partner" },
-        { name: "Find an Accountant", href: "/community/find-accountant" },
-        { name: "Partner Marketplace", href: "/community/marketplace" },
-      ],
-    },
-    {
-      title: "Data & Safety management",
-      items: [
-        { name: "Security", href: "/security" },
-        { name: "Contact us", href: "/contact-us" },
-        { name: "Compliance", href: "/compliance" },
-        { name: "Cookie Policy", href: "/cookie-policy" },
-        { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "GDPR Policies", href: "/gdpr" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "IPR Complaints", href: "/ipr-complaints" },
-      ],
-    },
-  ];
-
-  const leftColumnLinks = [
-    { name: "Home", href: "/" },
-    { name: "Company", href: "/about-us" },
-    { name: "Accelera", href: "/accelera" },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Join our Team", href: "/careers" },
-    { name: "Press", href: "/press" },
-    { name: "Newsletter", href: "/resources/newsletter" },
-    { name: "Branding Assets", href: "/resources/branding-assets" },
-  ];
-
-  const enterpriseLinks = [
-    { name: "Assessments", href: "/assessments" },
-    { name: "Accqrate ONE", href: "/business/one" },
-    { name: "Custom Developments", href: "/custom-development" },
-    { name: "Business Process Automations", href: "/bpa" },
-  ];
+  const resolveHref = (path: string) => {
+    const clean = path.replace(/^\//, "");
+    const target = comingSoonRoutes.includes(clean) ? "/coming-soon" : path;
+    return createHref(target);
+  };
 
   return (
-    <footer className="bg-[#212121] font-inter text-black overflow-x-hidden">
-      {/* ---------- Main Footer Section ---------- */}
-      <div className="hidden xl:block max-w-[1600px] mx-auto px-8 py-12">
-        <div className="flex justify-between items-start gap-12">
-          {/* ---------- Left Column (Logo + Links) ---------- */}
-          <div className="flex flex-col border-r border-gray-300 xl:pr-12 min-w-[220px]">
-            <Link href={createHref("/")}>
+    <footer className="bg-[#1F1F1F] text-white py-16 font-inter">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-10 xl:px-16">
+        <div className="hidden lg:block">
+          {/* Logo */}
+        <Link href={createHref("/")}>
               <Image
                 src={AssetPath.common.white}
-                alt="Accqrate logo"
-                width={160}
+                alt="Accqrate"
+                width={180}
                 height={50}
-                className="mb-4 cursor-pointer"
+                className="mb-6 cursor-pointer"
               />
             </Link>
-            <div className="flex flex-col space-y-[34px] lg:text-[16px] underline mt-[32px]">
-              {leftColumnLinks.map((link, idx) => (
-                <Link
-                  key={idx}
-                  href={
-                    comingSoonRoutes.includes(link.href.replace(/^\//, ''))
-                      ? createHref('/coming-soon')
-                      : createHref(link.href)
-                  }
-                  className="hover:text-[#194BED] text-[#FFFFFF] tracking-para transition-colors"
-                >
-                  <T>{link.name}</T>
-                </Link>
-              ))}
-            </div>
-          </div>
+        </div>
 
-          {/* ---------- Right Column (Main + Enterprise) ---------- */}
-          <div className="flex flex-col flex-grow">
-            {/* Main footer columns */}
-            <div className="flex justify-between gap-4 xl:gap-8">
-              {footerSections.map((section, idx) => (
-                <div key={idx} className="flex flex-col min-w-[180px]">
-                  <h3 className="font-medium mb-6 text-[#FFFFFF] lg:text-[16px] tracking-heading">
-                    <T>{section.title}</T>
-                  </h3>
-                  <ul className="space-y-2 lg:text-[14px] font-normal">
-                    {section.items.map((item, i) => (
-                      <li key={i}>
-                        <Link
-                          key={i}
-                          href={
-                            comingSoonRoutes.includes(item.href.replace(/^\//, ''))
-                              ? createHref('/coming-soon')
-                              : createHref(item.href)
-                          }
-                          className={`hover:text-[#194BED] text-[#F0F0F0] tracking-para transition-colors ${comingSoonRoutes.includes(item.href.replace(/^\//, ''))
-                            }`}
-                        >
-                          <T>{item.name}</T>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+        {/* Main Grid with Full-Height Vertical Divider */}
+        <div className="hidden lg:flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
 
-            {/* Enterprise section BELOW main columns */}
-            <div className="border-t border-gray-300 mt-12 pt-8 flex justify-start gap-6 text-sm text-gray-700">
-              <div>
-                <h4 className="font-medium mb-4 text-[#FFFFFF] text-fluid-small lg:text-[16px]  tracking-heading">
-                  <T>Enterprise Solution</T>
-                </h4>
-                <ul className="space-y-2 lg:text-[14px] text-[#F0F0F0]">
-                  {enterpriseLinks.map((link, index) => (
-                    <li key={index}>
+          {/* LEFT GRID */}
+          <div className="lg:w-[856px]">
+    
+            {/* Description + E-invoicing */}
+            <div className="flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-16 mb-10">
+              {/* Description */}
+              <p className="text-[#E5E5E5] text-[15px] md:text-[16px] leading-7 max-w-[573px]">
+                <T>
+                  One unified platform with zero silos integrated modules on a
+                  single data model, global compliance built-in, AI-powered
+                  automation, flexible cloud or on-prem deployment, fast
+                  implementation, and enterprise-grade security and
+                  scalability.
+                </T>
+              </p>
+
+              {/* E-invoicing Solution */}
+              <div className="md:min-w-[200px]">
+                <h3 className="text-[16px] font-semibold mb-4">
+                  <T>E-invoicing Solution</T>
+                </h3>
+                <ul className="space-y-2 text-[#E5E5E5] text-[14px] md:text-[15px]">
+                  {eInvoicingLinks.map((item, i) => (
+                    <li key={i}>
                       <Link
-                        href={
-                          comingSoonRoutes.includes(link.href.replace(/^\//, ''))
-                            ? createHref('/coming-soon')
-                            : createHref(link.href)
-                        }
-                        className="hover:text-[#194BED] tracking-para transition-colors"
+                        href={resolveHref(item.href)}
+                        className="text-[#ffffff] hover:text-[#5980FF] underline underline-offset-2"
                       >
-                        <T>{link.name}</T>
+                        <T>{item.label}</T>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
-
-              <div>
-                <h4 className="font-medium mb-4 lg:text-[16px]  text-[#FFFFFF] tracking-heading">Contact Sales</h4>
-                <ul className="space-y-2 lg:text-[14px] text-[#F0F0F0] tracking-para">
-                  <li><span className="text-[#FFFFFF]"><T>Call:</T></span> +966 54 199 9357</li>
-                  <li><span className="text-[#FFFFFF]"><T>Email:</T></span> <T>contact@accqrate-erp.com</T></li>
-                  <li><span className="text-[#FFFFFF]"><T>WhatsApp:</T></span> +966 50 763 5216</li>
-                  <li>
-                    <Link
-                      href={
-                        comingSoonRoutes.includes('connect-with-concierge')
-                          ? createHref('/coming-soon')
-                          : createHref('/connect-with-concierge')
-                      }
-                      className="text-[#FFFFFF] hover:underline transition-colors"
-                    >
-                      <T>Connect with Accqrate Concierge</T>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="max-w-[400px] leading-6 flex items-start justify-start">
-                <p className="lg:text-[14px] text-[#F0F0F0] tracking-para">
-                  <T>One unified platform with zero silos—integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.</T>
-                </p>
-              </div>
             </div>
 
-            <div className="hidden">
-              <div className="flex justify-end space-x-5 mt-4">
-                {[
-                  "facebook",
-                  "linkedin",
-                  "twitter",
-                  "instagram",
-                  "youtube",
-                  "reddit",
-                  "snapchat",
-                  "whatsapp",
-                ].map((icon, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className="hover:scale-110 transition-transform"
-                    target="_blank"
-                    rel="noopener noreferrer"
+            {/* Divider */}
+            <div className="my-6 h-[1px] bg-[#F0F0F0]" />
+
+            {/* Middle Nav */}
+            <div className="pt-4">
+              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-[15px] text-white underline underline-offset-4">
+                {footerNav.map((item, i) => (
+                  <Link
+                    key={i}
+                    href={resolveHref(item.href)}
+                    className="hover:text-[#5980FF] text-[#FFFFFF] transition-colors"
                   >
-                    <Image
-                      src={`/images/${icon}.svg`}
-                      alt={icon}
-                      width={22}
-                      height={22}
-                    />
-                  </a>
+                    <T>{item.label}</T>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* ---------- Mobile Footer Section ---------- */}
-      <div className="hidden xl:hidden max-w-[1600px] mx-auto py-8 px-8">
-        <div className="flex justify-center space-x-5">
-          {[
-            "facebook",
-            "linkedin",
-            "twitter",
-            "instagram",
-            "youtube",
-            "reddit",
-            "snapchat",
-            "whatsapp",
-          ].map((icon, idx) => (
-            <a
-              key={idx}
-              href="#"
-              className="hover:scale-110 transition-transform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={`/images/${icon}.svg`}
-                alt={icon}
-                width={22}
-                height={22}
-              />
-            </a>
-          ))}
-        </div>
-      </div>
+          {/* FULL-HEIGHT VERTICAL LINE */}
+          <div className="hidden lg:block w-[1px] bg-[#F0F0F0] self-stretch"></div>
 
-      {/* ---------- Bottom Section ---------- */}
-      <div className="max-w-[1600px] mx-auto pb-8 py-8 flex flex-col items-center">
-        {/* Line with logo in center */}
-        <div className="w-full flex items-center justify-center mb-6">
-          <div className="flex-grow h-[1px] bg-gray-300"></div>
-          <Link href={createHref("/")}>
-            <Image
-              src={AssetPath.common.footerLogo}
-              alt="Accqrate"
-              width={160}
-              height={50}
-              className="mx-6 cursor-pointer"
-            />
-          </Link>
-          <div className="flex-grow h-[1px] bg-gray-300"></div>
+          {/* RIGHT GRID */}
+          <div className="flex-grow grid sm:grid-cols-2 gap-10">
+            {footerSections.map((section, index) => (
+              <div key={index}>
+                <h3 className="text-[16px] font-semibold mb-6">
+                  <T>{section.title}</T>
+                </h3>
+
+                <ul className="space-y-3 text-[#E5E5E5] text-[14px] md:text-[15px]">
+                  {section.links.map((item, i) => (
+                    <li key={i}>
+                      {item.isText ? (
+                        <span className="block">
+                          <T>{item.label}</T>
+                        </span>
+                      ) : (
+                        (() => {
+                          return (
+                            <Link
+                              href={resolveHref(item.href ?? "")}
+                              className="text-[#ffffff] hover:text-[#5980FF] underline underline-offset-2 block"
+                            >
+                              <T>{item.label}</T>
+                            </Link>
+                          );
+                        })()
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Logo Divider */}
+        <div className="flex items-center my-8 lg:mt-16">
+          <div className="flex-grow h-[1px] bg-[#3A3A3A]" />
+          <Image
+            src={AssetPath.common.footerLogo}
+            alt="Accqrate"
+            width={180}
+            height={40}
+            className="mx-6 opacity-90"
+          />
+          <div className="flex-grow h-[1px] bg-[#3A3A3A]" />
         </div>
 
         {/* Copyright */}
-<p className="text-fluid-small lg:text-[16px] text-[#B7B7B7] text-center">
-  <T>Copyright 2021 - 2025</T>{" "}
-  <span className="text-[#194BED] font-medium">Accqrate</span>, <T>All rights reserved</T>
-</p>
+        <p className="text-center text-[#C8C8C8] text-[14px]">
+          <T>© Copyright 2021 - 2025</T>{" "}
+          <span className="text-[#5980FF] font-medium">Accqrate</span>,{" "}
+          <T>All rights reserved.</T>
+        </p>
       </div>
     </footer>
   );
