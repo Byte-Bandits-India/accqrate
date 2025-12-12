@@ -176,12 +176,12 @@ const ContactFormPage = () => {
   <div className="space-y-2">
     {/* Call Us Label */}
     <p className="text-[14px] font-bold text-[#000000] leading-relaxed">
-      Call Us
+      <T>Call Us</T>
     </p>
 
     {/* Phone Timing */}
     <p className="text-[12px] text-[#000000] font-normal leading-relaxed">
-    call our team monday - friday
+    <T>call our team monday - friday</T>
     </p>
 
     {/* Phone Section with Icon */}
@@ -194,11 +194,15 @@ const ContactFormPage = () => {
 
     {/* Office Locations Title */}
     <h3 className="text-[#1F3FBF] font-semibold text-[20px]">
-      <T lang={lang} countryCode={countryCode}>
-        <span className="text-black">Our</span> Office{" "}
-        <span className="text-black">Locations</span>
-      </T>
-    </h3>
+  <span className="text-black">
+    <T>Our</T>
+  </span>{" "}
+  <T>Office</T>{" "}
+  <span className="text-black">
+    <T>Locations</T>
+  </span>
+</h3>
+
   </div>
 
 

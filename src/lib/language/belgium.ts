@@ -6722,12 +6722,6 @@ fr: "Intégration Peppol / EN 16931"
     fr: "Intégration rapide"
   },
 
-  'Go live within 5 working days, accelerating your readiness for mandatory B2B e-invoicing.': {
-    nl: "Ga binnen 5 werkdagen live en versnel uw paraatheid voor verplichte B2B-e-facturatie.",
-    de: "Gehen Sie innerhalb von 5 Arbeitstagen live und beschleunigen Sie so Ihre Bereitschaft für die verpflichtende B2B-E-Rechnung.",
-    fr: "Mettez en production en 5 jours ouvrés et accélérez votre préparation à la facturation électronique B2B obligatoire."
-  },
-
   // ========== SOFTWARE COMPONENT BELGIUM SECTION ==========
 
   'Seamless': {
@@ -7626,20 +7620,18 @@ fr: "Intégration Peppol / EN 16931"
     de: "Integrieren Sie mit dem PEPPOL-Netzwerk",
     fr: "Intégrez avec le réseau PEPPOL",
    },
-  
-  'European Based E-invoicing. Solution For European Companies.': {
-    en: "European Based E-invoicing. Solution For European Companies.",
-    nl: "Europees gebaseerde e-facturatie. Oplossing voor Europese bedrijven.",
-    de: "Europa-basierte E-Rechnungsstellung. Lösung für europäische Unternehmen.",
-    fr: "E-facturation basée en Europe. Solution pour les entreprises européennes."
-  },
-  'European Based <span class=\'text-[#508847]\'>E-invoicing.</span> Solution For European Companies.': {
-    en: "European Based <span class='text-[#508847]'>E-invoicing.</span> Solution For European Companies.",
-    nl: "Europese <span class='text-[#508847]'>e-facturatie</span>. Oplossing voor Europese bedrijven.",
-    de: "Europäische <span class='text-[#508847]'>E-Rechnungsstellung</span>. Lösung für europäische Unternehmen.",
-    fr: "Solution européenne de <span class='text-[#508847]'>facturation électronique</span> pour les entreprises européennes."
-  },
-  
+   'European Based E-invoicing Solution For European Companies.': {
+    en: "European Based E-invoicing Solution For European Companies.",
+    nl: "Europees gebaseerde e-facturatie oplossing voor Europese bedrijven.",
+    de: "Europa-basierte E-Rechnungsstellungslösung für europäische Unternehmen.",
+    fr: "Solution européenne de facturation électronique pour les entreprises européennes.",
+   },
+   "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.": {
+    en: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
+    nl: "Europese <span class='text-[#508847]'>e-facturatie</span> oplossing voor Europese bedrijven.",
+    de: "Europäische <span class='text-[#508847]'>E-Rechnungsstellung</span> Lösung für europäische Unternehmen.",
+    fr: "Solution européenne de <span class='text-[#508847]'>facturation électronique</span> pour les entreprises européennes.",
+   },
   
   'Connect with our Consultant': {
     en: "Connect with our Consultant",
@@ -7703,6 +7695,13 @@ fr: "Intégration Peppol / EN 16931"
     de: "Das Versenden einer Rechnung sollte einfach sein - und wir haben es so gemacht",
     fr: "Envoyer une facture devrait être facile - et nous l'avons rendu ainsi"
   },
+
+  'SOCIAL MEDIA': {
+  en: "Social Media",
+  nl: "Sociale Media",
+  de: "Soziale Medien",
+  fr: "Réseaux Sociaux",
+},
   
   'Perfectly aligned with your needs and brand': {
     en: "Perfectly aligned with your needs and brand",
@@ -8477,7 +8476,7 @@ fr: "Intégration Peppol / EN 16931"
     de: "Accelera, unser KI-Copilot, beschleunigt Routinearbeiten, Erkenntnisse und Entscheidungen.",
   },
 
-  "Fast time-to-value.": {
+  "Fast time‑to‑value.": {
     fr: "Valeur rapide.",
     nl: "Snelle waarde-realisatie.",
     de: "Schnelle Wertschöpfung.",
@@ -8488,7 +8487,7 @@ fr: "Intégration Peppol / EN 16931"
     de: "Blitzschnelle Benutzeroberfläche, Ein-Klick-Installationen und störungsarme Migrationen von SAP/Microsoft/Oracle oder getrennten Tools.",
   },
 
-  "Built-in Global compliance:": {
+  "Built‑in Global compliance:": {
     fr: "Conformité mondiale intégrée :",
     nl: "Ingebouwde wereldwijde compliance:",
     de: "Eingebaute globale Compliance:",
@@ -8753,20 +8752,6 @@ fr: "Intégration Peppol / EN 16931"
     de: "Benutzerfreundlichkeit, die Adoption fördert",
   },
 
-  /* small footer/labels */
-  "Outcomes and The Impact": {
-    fr: "Résultats et impact",
-    nl: "Resultaten en impact",
-    de: "Ergebnisse und Auswirkungen",
-  },
-
-  /* fallback short strings used in page */
-  "Products to power every team": {
-    fr: "Des produits pour soutenir chaque équipe",
-    nl: "Producten om elk team te versterken",
-    de: "Produkte, die jedes Team unterstützen",
-  },
-
   /* Ensure contact CTA strings present */
   "Contact Sales KSA": {
     fr: "Contactez les ventes KSA",
@@ -8779,28 +8764,40 @@ fr: "Intégration Peppol / EN 16931"
     de: "Kontakt Vertrieb Jordanien",
   },
 
-
-  /* generic short strings used in many places */
-  "Book a Personalized Walkthrough": {
-    fr: "Réserver une démonstration personnalisée",
-    nl: "Boek een persoonlijke rondleiding",
-    de: "Buchen Sie eine persönliche Führung",
+  //Contact Form
+  'Call Us': {
+    fr: "Appelez-nous",
+    nl: "Bel ons",
+    de: "Rufen Sie uns an",
   },
-
-  /* ensure FAQ header and accordion labels included */
-  "Frequently Answered Questions": {
-    fr: "Questions fréquemment posées",
-    nl: "Veelgestelde vragen",
-    de: "Häufig gestellte Fragen",
+  'call our team monday - friday': {
+    fr: "Appelez-nous",
+    nl: "Bel ons",
+    de: "Rufen Sie uns an",
   },
+  'Seeking cutting-edge E-invoicing software ready for Europe? Let us find the perfect pricing fit for you.': {
+  en: "Seeking cutting-edge E-invoicing software ready for Europe? Let us find the perfect pricing fit for you.",
+  nl: "Op zoek naar geavanceerde E-facturatiesoftware voor Europa? Wij vinden de ideale prijsoplossing voor u.",
+  de: "Suchen Sie moderne E-Rechnungssoftware für Europa? Wir finden das perfekte Preisangebot für Sie.",
+  fr: "Vous cherchez un logiciel d’e-facturation moderne pour l’Europe ? Nous trouvons l’offre idéale pour vous.",
+},
+'Peppol Ready e-invoicing? Our experts have got your back.': {
+  en: "Peppol Ready e-invoicing? Our experts have got your back.",
+  nl: "Peppol-klare e-facturatie? Onze experts staan voor u klaar.",
+  de: "Peppol-fähige E-Rechnungen? Unsere Experten unterstützen Sie.",
+  fr: "E-facturation compatible Peppol ? Nos experts sont là pour vous.",
+},
+'Our team is here to help': {
+  en: "Our team is here to help",
+  nl: "Ons team staat klaar om te helpen",
+  de: "Unser Team ist hier, um zu helfen",
+  fr: "Notre équipe est là pour vous aider",
+},
+'Our': { en:'Our', nl:'Onze', de:'Unser', fr:'Notre' },
+'Office': { en:'Office', nl:'Kantoor', de:'Büro', fr:'Bureau' },
+'Locations': { en:'Locations', nl:'Locaties', de:'Standorte', fr:'Emplacements' },
 
-  /* final catch-all generic CTA */
-  "Meet an Expert": {
-    fr: "Rencontrez un expert",
-    nl: "Ontmoet een expert",
-    de: "Einen Experten treffen",
-  }
-  
+
   
 };
 
