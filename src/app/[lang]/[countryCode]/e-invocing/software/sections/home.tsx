@@ -9,7 +9,7 @@ import peppolImg from "@/Assets/images/invoicing/peppol.png";
 import gdprImg from "@/Assets/images/invoicing/gdpr.png";
 import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
-import eInvoiceHeroImg from "@/Assets/images/invoicing/e-invoice-hero.png";
+import eInvoiceHeroImg from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
 import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
 import { t, currentLang } from "@/lib/translations";
