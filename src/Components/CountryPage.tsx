@@ -1160,7 +1160,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     {countryCode === 'AE' && (
                     <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
                         <div className="p-6 md:p-8">
-                            <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
+                            <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight mb-6">
                                 <T>Future-Ready for </T> <span className="text-[#194BED]">DCTCE / 5 Corner:</span>
                             </h2>
                             <h2 className="text-[14px] md:text-[16px] lg:text-fluid-body text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
