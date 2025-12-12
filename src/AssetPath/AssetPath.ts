@@ -97,6 +97,7 @@ import einvoicingCard from "@/Assets/images/cards/E‑Invoicing.png";
 import factoryCard from "@/Assets/images/cards/factory.png";
 import peopleCard from "@/Assets/images/cards/people.png";
 import retailCard from "@/Assets/images/cards/retail.png";
+import ftaCard from "@/Assets/images/cards/fta-uae.png";
 
 // ==================== HOME BACKGROUNDS IMPORTS ====================
 import saudiHome from "@/Assets/images/home/saudi.webp";
@@ -126,6 +127,7 @@ import greenAccq from "@/Assets/images/home/green-accq.png";
 import aiImage from "@/Assets/images/home/ai.png";
 import acceleraWebp from "@/Assets/images/home/accelera.webp";
 import vidaHome from "@/Assets/images/home/VIDA_home.png";
+import dctceHome from "@/Assets/images/home/Future-Ready.png";
 
 // ==================== LANDINGPAGE IMAGES ====================
 
@@ -571,6 +573,7 @@ const AssetPath = {
     peppol: prppolHome,
     gdpr: gdrpHome,
     iso: isoHome,
+    fta: ftaCard,
   },
 
   // HOME BACKGROUNDS
@@ -601,6 +604,7 @@ const AssetPath = {
     greenAccq: greenAccq,
     ai: acceleraWebp,
     vida: vidaHome,
+    dctce: dctceHome,
   },
 
   // LANDINGPAGE

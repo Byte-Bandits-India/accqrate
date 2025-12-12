@@ -44,6 +44,15 @@ export interface CountryContent {
     title: string;
     description: string;
   }>;
+  complianceSection?: {
+    complianceTitle: string;
+    complianceDescription: string;
+    complianceItems: string[];
+    automationTitle: string;
+    automationDescription: string;
+    automationItems: string[];
+    buttonText: string;
+  };
 }
 
 // Default content template for most countries
@@ -178,7 +187,26 @@ const defaultContent: CountryContent = {
       avatar: AssetPath.landingpage.wail.src,
       bg: AssetPath.landingpage.blue.src
     }
-  ]
+  ],
+  complianceSection: {
+    complianceTitle: "Full Compliance with Belgium's E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with Belgium's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
+    complianceItems: [
+      "Structured formats fully aligned with Belgian and EU specifications",
+      "Secure, standardized exchange over PEPPOL",
+      "Automated updates for evolving tax and technical regulations",
+      "Seamless integration with Mercurius and tax authority systems"
+    ],
+    automationTitle: "Hassle-Free E-Invoicing Automation",
+    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationItems: [
+      "AI-powered validation to reduce rejections",
+      "Real-time error detection and correction suggestions",
+      "Zero-cost regulatory upgrades",
+      "Automated generation → validation → PEPPOL submission → archiving"
+    ],
+    buttonText: "Book an Appointment"
+  }
 };
 
 // Special content for Belgium
@@ -271,7 +299,26 @@ const belgiumContent: CountryContent = {
       avatar: AssetPath.landingpage.wail.src,
       bg: AssetPath.landingpage.blue.src
     }
-  ]
+  ],
+  complianceSection: {
+    complianceTitle: "Full Compliance with Belgium's E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with Belgium's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
+    complianceItems: [
+      "Structured formats fully aligned with Belgian and EU specifications",
+      "Secure, standardized exchange over PEPPOL",
+      "Automated updates for evolving tax and technical regulations",
+      "Seamless integration with Mercurius and tax authority systems"
+    ],
+    automationTitle: "Hassle-Free E-Invoicing Automation",
+    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationItems: [
+      "AI-powered validation to reduce rejections",
+      "Real-time error detection and correction suggestions",
+      "Zero-cost regulatory upgrades",
+      "Automated generation → validation → PEPPOL submission → archiving"
+    ],
+    buttonText: "Book an Appointment"
+  }
 };
 
 const uaeContent: CountryContent = {
@@ -286,14 +333,14 @@ const uaeContent: CountryContent = {
     {
       img: AssetPath.home.feature1,
       title: "One Platform.",
-      description: "Connect Multiple ERP or POS into one unified platform for E-invoicing.",
+      description: "Connect Multiple ERP or POS into one unified platform for FTA-invoicing.",
       sub: " Harmonised Data."
     },
     {
       img: AssetPath.home.feature2,
-      title: "Enterprise‑grade.",
-      description: "Security, scalability and performance proven across 30+ industries.",
-      sub: ""
+      title: "Built‑in FTA",
+      description: "Connect ERP/POS to FTA from Direct to PEPPOL based Integration..",
+      sub: "e-invoicing compliance:"
     },
     {
       img: AssetPath.home.feature3,
@@ -315,8 +362,8 @@ const uaeContent: CountryContent = {
     },
     {
       img: AssetPath.home.feature6,
-      title: "Built‑in Global compliance:",
-      description: "Connect ERP/POS to tax authorities; from Direct to PEPPOL based Integration.",
+      title: "Enterprise‑grade.",
+      description: "Security, scalability and performance proven across 30+ industries.",
       sub: ""
     }
   ],
@@ -344,7 +391,7 @@ const uaeContent: CountryContent = {
       link: "SA/business/people",
     },
     {
-      icon: AssetPath.cards.iso,
+      icon: AssetPath.cards.fta,
       title: "FTA e-invoicing",
       description: "Accreditation in Progress",
       color: "linear-gradient(to right, #FFFFFF, #FFE8E8)",
@@ -370,7 +417,26 @@ const uaeContent: CountryContent = {
       avatar: AssetPath.landingpage.wail.src,
       bg: AssetPath.landingpage.blue.src
     }
-  ]
+  ],
+  complianceSection: {
+    complianceTitle: "Full Compliance with UAE’s E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with UAE’s B2B,B2G and G2G e-invoicing mandate and the FTA’s  requirement. Our platform supports:",
+    complianceItems: [
+      "Structured formats fully aligned with UAE and PEPPOL specifications.",
+      "Secure, standardized exchange over PEPPOL",
+      "Automated updates for evolving tax and technical regulations",
+      "Seamless integration with FTA."
+    ],
+    automationTitle: "Hassle-Free E-Invoicing Automation",
+    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationItems: [
+      "AI-powered validation to reduce rejections",
+      "Real-time error detection and correction suggestions",
+      "Zero-cost regulatory upgrades",
+      "Automated generation → validation → PEPPOL submission → archiving"
+    ],
+    buttonText: "Book an Appointment"
+  }
 };
 
 // Special content for Poland (same as Belgium in your example)
@@ -484,7 +550,26 @@ const polandContent: CountryContent = {
       avatar: AssetPath.landingpage.wail.src,
       bg: AssetPath.landingpage.blue.src
     }
-  ]
+  ],
+  complianceSection: {
+    complianceTitle: "Full Compliance with Belgium's E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with Belgium's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
+    complianceItems: [
+      "Structured formats fully aligned with Belgian and EU specifications",
+      "Secure, standardized exchange over PEPPOL",
+      "Automated updates for evolving tax and technical regulations",
+      "Seamless integration with Mercurius and tax authority systems"
+    ],
+    automationTitle: "Hassle-Free E-Invoicing Automation",
+    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationItems: [
+      "AI-powered validation to reduce rejections",
+      "Real-time error detection and correction suggestions",
+      "Zero-cost regulatory upgrades",
+      "Automated generation → validation → PEPPOL submission → archiving"
+    ],
+    buttonText: "Book an Appointment"
+  }
 };
 
 export const countryContentMap: Record<string, CountryContent> = {

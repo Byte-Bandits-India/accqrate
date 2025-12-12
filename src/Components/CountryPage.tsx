@@ -968,48 +968,51 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                         {/* Right Side: Modules + What you'll achieve */}
                         <div className="flex flex-col gap-6 xl:h-full">
-                            <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                            {countryContent.complianceSection && (
+                                <>
+                                    <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                 <h2 className="text-fluid-body font-medium tracking-heading"><T>Full Compliance with Belgium’s E-Invoicing Mandate</T></h2>
                                 <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>Accqrate ensures end-to-end compliance with Belgium’s B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:</T></h2>
                                 <ul className="gap-y-2 mt-8 text-fluid-small lg:text-[16px] tracking-para leading-[26px] list-disc pl-5">
-                                    <li><T>Structured formats fully aligned with Belgian and EU specifications</T></li>
-                                    <li><T>Secure, standardized exchange over PEPPOL</T></li>
-                                    <li><T>Automated updates for evolving tax and technical regulations</T></li>
-                                    <li><T>Seamless integration with Mercurius and tax authority systems</T></li>
+                                            {countryContent.complianceSection?.complianceItems.map((item, index) => (
+                                                <li key={index}><T>{item}</T></li>
+                                            ))}
                                 </ul> 
                             </FadeUp>
 
-                            <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                <h2 className="text-fluid-body font-medium tracking-heading"><T>Hassle-Free E-Invoicing Automation</T></h2>
-                                <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>Shift from manual intervention to intelligent automation:</T></h2>
-                                <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small lg:text-[16px] leading-tight tracking-para">
-                                    <li><T>AI-powered validation to reduce rejections</T></li>
-                                    <li><T>Real-time error detection and correction suggestions</T></li>
-                                    <li><T>Zero-cost regulatory upgrades</T></li>
-                                    <li><T>Automated generation → validation → PEPPOL submission → archiving</T></li>
-                                </ul> 
+                                    <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                        <h2 className="text-fluid-body font-medium tracking-heading"><T>{countryContent.complianceSection?.automationTitle}</T></h2>
+                                        <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.automationDescription}</T></h2>
+                                        <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small lg:text-[16px] leading-tight tracking-para">
+                                            {countryContent.complianceSection?.automationItems.map((item, index) => (
+                                                <li key={index}><T>{item}</T></li>
+                                            ))}
+                                        </ul> 
 
-                                <button
-                                    onClick={() => setModalOpen(true)}
-                                    className="h-[46px] md:h-[55px] max-w-[250px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"                        >
-                                    <T>Book an Appointment</T>
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        className="text-white"
-                                    >
-                                        <path
-                                            d="M9 6l6 6-6 6"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </button>
-                            </FadeUp>
+                                        <button
+                                            onClick={() => setModalOpen(true)}
+                                            className="h-[46px] md:h-[55px] max-w-[250px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
+                                        >
+                                            <T>{countryContent.complianceSection?.buttonText}</T>
+                                            <svg
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                className="text-white"
+                                            >
+                                                <path
+                                                    d="M9 6l6 6-6 6"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </FadeUp>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -1083,8 +1086,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
 
                     <div>
-                        {/* COMPLIANCE SECTION */}
-                    <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] grid lg:grid-cols-2 gap-4 md:gap-6 pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
+                        {/* COMPLIANCE SECTION - ViDA (Hidden for UAE) */}
+                        {countryCode !== 'AE' && (
+                        <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] grid lg:grid-cols-2 gap-4 md:gap-6 pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
                         {/* Left Side: Image (Desktop) */}
                         <div className="hidden lg:flex flex-col items-start justify-between p-6 md:p-8">
                             <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
@@ -1150,6 +1154,38 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             />
                         </div>
                     </div>
+                        )}
+
+                    {/* DCTCE SECTION ONLY FOR UAE */}
+                    {countryCode === 'AE' && (
+                    <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
+                        <div className="p-6 md:p-8">
+                            <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
+                                <T>Future-Ready for </T> <span className="text-[#194BED]">DCTCE / 5 Corner:</span>
+                            </h2>
+                            <h2 className="text-[14px] md:text-[16px] lg:text-fluid-body text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
+                               <T>Accqrate equips enterprises to be compliant across the upcoming UAE E-invoicing model DCTCE / 5 corner :</T>
+                            </h2>
+                            <Image
+                                src={AssetPath.home.dctce}
+                                alt="VIDA Compliance"
+                                width={520}
+                                height={420}
+                                className="w-full h-auto object-contain"
+                            />
+                            <button
+                                        className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
+                                        style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                                        onClick={() => setModalOpen(true)}
+                                    >
+                                        <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
+                                        <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
+                                            <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </button>
+                        </div>
+                    </div>
+                    )}
                     </div>
                 </div>
             </div>
