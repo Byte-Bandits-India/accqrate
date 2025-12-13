@@ -340,7 +340,7 @@ const Section1 = () => {
                 <div className='bg-gradient-to-t from-[#EFF3FF] to-transparent'>
                     <FadeUp className="mb-8 md:mb-[40px] pt-12 md:pt-[80px] lg:pt-[100px]">
                         <h1 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto mt-6">
-                            <T>Trusted by</T>
+                            <T>Trusted by </T>
                             <br className="md:hidden" />
                             <span className="text-[#194BED]"></span>
                             <br className="md:hidden" />
@@ -566,7 +566,7 @@ const Section1 = () => {
                                                         <Image
                                                             src={AssetPath.cards.fta}
                                                             alt="peppol-logo"
-                                                            width={100}
+                                                            width={70}
                                                             height={80}
                                                             className="max-w-[191px] h-auto rounded-md"
                                                             unoptimized
@@ -576,10 +576,10 @@ const Section1 = () => {
                                                         <span className="w-px h-12 bg-gray-300" />
 
                                                         <Image
-                                                            src={AssetPath.integration.peppol}
+                                                            src={AssetPath.header.logoPeppol}
                                                             alt="peppol-logo"
-                                                            width={100}
-                                                            height={80}
+                                                            width={140}
+                                                            height={100}
                                                             className="max-w-[191px] h-auto rounded-md"
                                                             unoptimized
                                                         />

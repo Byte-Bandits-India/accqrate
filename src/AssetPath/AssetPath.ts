@@ -444,6 +444,7 @@ import compliantInvoicing from "@/Assets/images/a-compliant-e-invoicing-fatoorah
 import jonexImg from "@/Assets/images/jonex.png";
 import ssImg from "@/Assets/images/ss.png";
 import Zact from "@/Assets/images/integration/ZATCA-solution.png"
+import logoPeppol from "@/Assets/images/peppol.png"
 
 // Home images
 import starOr from "@/Assets/images/home/Star-or.svg";
@@ -465,6 +466,7 @@ const AssetPath = {
   // HEADER SECTION
   header: {
     logo: Logo,
+    logoPeppol,
     
     fill: {
       books: BooksIcon,
