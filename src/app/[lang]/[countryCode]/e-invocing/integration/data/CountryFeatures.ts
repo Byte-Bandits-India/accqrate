@@ -222,4 +222,83 @@ features: [
   ],
 },
 
+ae: {
+  integrationHeading: "Flexible methods for",
+  integrationHighlight: "UAE E-Invoicing",
+  integrationDescription:
+    "Adaptive, scalable approaches for seamless UAE PINT–compliant, Peppol-based e-invoicing under the FTA’s DCTCE framework",
+  featureHeading: "Enhanced",
+  featureHighlight: "UAE e-Invoicing Integration",
+  featureDescription:
+    "Streamline your invoicing with Accqrate’s automated, Peppol-ready, UAE PINT–compliant platform built for secure, scalable, FTA-aligned e-invoicing across the UAE.",
+  ctaDescription:
+    "We provide complete assistance for Belgian e-invoicing integration from onboarding to continuous compliance.",
+
+sections: [
+{
+  img: AssetPath.invoicing.integrationAssets.integration1.src,
+  title: "API-Based Integrations",
+  desc: "Accqrate’s REST APIs enable real-time creation, validation, and exchange of UAE PINT-structured invoices through the UAE’s Peppol network. Achieve instant FTA alignment, automated status updates, and end-to-end connectivity across the UAE’s 5-corner model.",
+},
+{
+  img: AssetPath.invoicing.integrationAssets.integration2.src,
+  title: "FTP/S-FTP Integrations",
+  desc: "Accqrate supports secure file-based integrations with automated processing and a complete feedback loop. Your ERP or POS systems remain fully synchronized with all Peppol transactions, FTA responses, and DCTCE validations even in high-volume environments.",
+},
+{
+  img: AssetPath.invoicing.integrationAssets.integration3.src,
+  title: "Manual or Excel Uploads",
+  desc: "No integration? No problem. Upload invoices via our Excel template, and Accqrate automatically converts them into UAE PINT-compliant, EN 16931–aligned structured invoices ready for Peppol exchange. Perfect for SMEs and multi-entity setups transitioning into UAE e-invoicing.",
+},
+],
+
+
+
+features: [
+{
+  img: AssetPath.invoicing.integrationAssets.cal.src,
+  title: "Fully Compliant",
+  description:
+    "Accqrate is UAE PINT–compliant and aligned with the FTA’s DCTCE 5-corner model, ensuring 100% audit-ready e-invoicing for the UAE mandate.",
+},
+{
+  img: AssetPath.invoicing.integrationAssets.set.src,
+  title: "Audited & Verified",
+  description:
+    "Customer deployments are validated against UAE PINT specifications, Peppol exchange rules, and FTA compliance requirements to guarantee seamless interoperability.",
+},
+ {
+  img: AssetPath.invoicing.integrationAssets.cloud.src,
+  title: "Flexibility in Deployment",
+  description:
+    "Choose Accqrate Cloud or deploy on your own infrastructure both fully compliant with UAE e-invoicing, DCTCE workflow rules, and Peppol interoperability standards.",
+},
+{
+  img: AssetPath.invoicing.integrationAssets.ring.src,
+  title: "Rapid Implementation",
+  description:
+    "Go live in days with guaranteed UAE PINT onboarding, Peppol Access Point connectivity, and FTA-aligned structured invoice generation.",
+},
+{
+  img: AssetPath.invoicing.integrationAssets.set.src,
+  title: "Packaged Solution",
+  description:
+    "Accqrate delivers pre-built integrations for SAP, Oracle, Microsoft Dynamics, Sage, Infor, Odoo, custom ERPs/POS, and more accelerating UAE e-invoicing readiness.",
+},
+{
+  img: AssetPath.invoicing.integrationAssets.cal.src,
+  title: "High Performance",
+  description:
+    "Process high-volume structured invoices with enterprise-grade performance across UAE’s Peppol network and DCTCE validation flows.",
+},
+{
+  img: AssetPath.invoicing.integrationAssets.cal.src,
+  title: "End-to-End Support",
+  description:
+    "From onboarding to continuous compliance, Accqrate provides full UAE e-invoicing implementation support, including Access Point setup, VAT mapping, and DCTCE workflow alignment.",
+},
+]
+
+},
+
 };

@@ -40,7 +40,7 @@ const Software = () => {
               <span style={{ color: content.highlightColor }}>
                 <T lang={lang} countryCode={countryCode}>{content.highlight}</T>
               </span>
-              .
+              <span>{content.titlend}</span>
             </h1>
 
             <div

@@ -1,4 +1,61 @@
 export const ProofData = {
+  ae: {
+    title: "Free Proof of Concept for Peppol / UAE PINT Integration",
+    subtitle:
+      "Explore Accqrate’s UAE E-Invoicing Integration with a Free, Zero-Risk Proof of Concept. ",
+
+    leftItems: [
+      {
+        title: "Zero–Risk Trial",
+        desc:
+          "Test seamless integration between your ERP/POS and the UAE Peppol test environment with no commitment. Validate UAE PINT outputs and DCTCE workflows before you decide."
+      },
+      {
+        title: "Ease of Integration",
+        desc:
+          "See how quickly your systems connect to Peppol and generate UAE PINT-compliant, EN 16931-aligned invoices ready for 5-corner exchange."
+      },
+      {
+        title: "Expert Guidance & Training",
+        desc:
+          "Your internal teams or implementation partners receive full technical guidance, UAE PINT training, and hands-on support throughout the POC."
+      },
+      {
+        title: "Onboarding Assistance",
+        desc:
+          "We assist with company onboarding, Peppol participant setup, UAE PINT validation, and readiness for DCTCE reporting."
+      },
+      {
+        title: "Full Ownership & Responsibility",
+        desc:
+          "Accqrate takes end-to-end responsibility for compliance, validation, MLS handling, audit readiness, and technical accuracy."
+      }
+    ],
+
+    rightItems: [
+      {
+        title: "No Upfront Contracts",
+        desc:
+          "Start with trust—no contracts, no advance payments. NDA included for complete confidentiality."
+      },
+      {
+        title: "ERP Expertise",
+        desc:
+          "Our specialists bring deep integration experience across SAP, Oracle, Microsoft Dynamics, Infor, Odoo, Baan, Sage, and custom ERP/POS environments."
+      },
+      {
+        title: "Compliance Assurance",
+        desc:
+          "We ensure your organization meets full FTA e-invoicing requirements, including UAE PINT, Peppol interoperability, VAT rules, and DCTCE transaction reporting."
+      },
+      {
+        title: "Fast Integration",
+        desc:
+          "Go live in 5 working days, accelerating your readiness for upcoming mandatory UAE B2B e-invoicing."
+      }
+    ]
+  },
+
   be: {
     title: "Free Proof of Concept for Peppol / EN 16931 Integration",
     subtitle:

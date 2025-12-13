@@ -171,4 +171,62 @@ pl: {
   ]
 },
 
+ae: {
+  title: "Why Choose ",
+  subtitle:
+    "Seamlessly integrate your ERP/POS with the UAE’s Peppol-based DCTCE framework and achieve full UAE PINT compliance for FTA e-invoicing. ",
+
+  topLeftItems: [
+    {
+      title: "Effortless Invoice Generation",
+      desc:
+        "Create fully compliant UAE PINT–structured e-invoices, including credit notes and debit notes, ready for Peppol exchange within the UAE’s 5-corner model. "
+    },
+    {
+      title: "Secure Storage",
+      desc:
+        "Store all UAE-compliant invoices in a high-availability, tamper-proof archiving environment, fully aligned with FTA retention and audit requirements. "
+    },
+    {
+      title: "Compliant Templates",
+      desc:
+        "Access standardized UAE PINT-aligned invoice templates while preserving your brand formatting and business rules."
+    },
+    {
+      title: "Peppol Connectivity",
+      desc:
+        "Exchange invoices securely through the UAE Peppol network, ensuring guaranteed interoperability and regulatory compliance across all Accredited Service Providers."
+    },
+    {
+      title: "Validation & Error Handling",
+      desc:
+        "Automated UAE PINT, VAT, and schema validations ensure your invoices pass all FTA and Peppol checks before transmission—reducing rejections and MLS failures."
+    },
+    {
+      title: "Automated Communication",
+      desc:
+        "Deliver invoices directly to buyers via Peppol, email, or file-based workflows fully integrated with your ERP/POS and UAE ASP. "
+    },
+    {
+      title: "Financial Control",
+      desc:
+        "Track payments, monitor outstanding balances, and maintain full visibility across your UAE e-invoice lifecycle, including MLS acknowledgments and DCTCE reporting status. "
+    }
+  ],
+
+  topRightImage: AssetPath.integration.dashboard.src,
+
+  bottomLeftImage: AssetPath.integration.inttax.src,
+
+  bottomRightItems: [
+    "Peppol-ready onboarding",
+    "Generate UAE PINT–Compliant XML Invoices ",
+    "PDF/A-3 with embedded XML",
+    "Optional digital signature",
+    "Track submissions, acceptance & rejections",
+    "Simple corrective actions",
+    "Send Invoices via Email, Peppol, or File-Based Workflows "
+  ]
+},
+
 };

@@ -15,8 +15,10 @@ export default function ProofSection() {
     countryCode === "be"
       ? "Peppol / EN 16931 Integration"
       : countryCode === "pl"
-      ? "KSeF Integration"
-      : "ZATCA Integration";
+        ? "KSeF Integration"
+        : countryCode === "ae"
+          ? "Peppol / UAE PINT Integration"
+          : "ZATCA Integration";
 
   return (
     <section className="px-6 md:px-8 lg:px-0 py-12">
