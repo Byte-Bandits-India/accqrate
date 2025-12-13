@@ -281,7 +281,7 @@ const blogPosts: BlogPost[] = [
     id: 35,
     url: "PolandKSeF",
     title: "KSeF in Poland: How Mandatory E-Invoicing Creates a Strategic Opportunity for Financial Transformation",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.poland.ksefInPoland.src,
     desc: "Poland’s transition toward mandatory e-invoicing marks one of the most significant tax digitalization efforts in Europe....",
     country: "PL"
   },
@@ -289,7 +289,7 @@ const blogPosts: BlogPost[] = [
     id: 36,
     url: "PolandKSeFMandatory",
     title: "Poland’s Mandatory B2B Electronic Invoicing from February 2026",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.poland.b2b.src,
     desc: "Poland is entering a decisive stage in its tax digitalisation journey. The Ministry of Finance has confirmed that mandatory business to business electronic invoicing will begin in February 2026...",
     country: "PL"
   },
@@ -297,7 +297,7 @@ const blogPosts: BlogPost[] = [
     id: 37,
     url: "PolandKSeF2",
     title: "Poland’s KSeF 2.0: Understanding the Official E-Invoicing Mandate",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.poland.ksef2.src,
     desc: "Poland’s transition toward mandatory electronic invoicing has entered a decisive phase, driven by confirmed legislation...",
     country: "PL"
   },
