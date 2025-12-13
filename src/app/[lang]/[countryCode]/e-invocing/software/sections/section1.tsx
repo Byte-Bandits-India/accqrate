@@ -104,7 +104,7 @@ const Section1 = () => {
     // Country to flag mapping
     const countryMap: { [key: string]: { flag: any; code: string; name: string; logo: any; trustedBySubtitle?: string } } = {
         sa: { flag: AssetPath.header.language.saudiArabia, code: "KSA", name: "Saudi Arabia", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
-        ae: { flag: AssetPath.header.language.uae, code: "UAE", name: "United Arab Emirates", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
+        ae: { flag: AssetPath.header.language.uae, code: "AE", name: "United Arab Emirates", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         om: { flag: AssetPath.header.language.oman, code: "OM", name: "Oman", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         bh: { flag: AssetPath.header.language.bahrain, code: "BH", name: "Bahrain", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         ma: { flag: AssetPath.header.language.malaysia, code: "MY", name: "Malaysia", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
