@@ -6194,6 +6194,755 @@ export const blogTranslations: TranslationsMap = {
     ar: "",
   },
 
+  //---------------FAQS----------------
+    "Frequently Asked Questions": { ar: "" },
+
+  "Ask Everything You Need To Know About Our Solutions And Services": { ar: "" },
+
+  "No FAQs available for this country yet.": { ar: "" },
+
+  "Please check back later or contact us directly.": { ar: "" },
+  "How long is the free trial?": { ar: "" },
+
+  "UAE-based businesses receive a 90-day free trial.": { ar: "" },
+
+  "Can I cancel my trial at any time?": { ar: "" },
+
+  "Absolutely. You may cancel whenever you wish. Your account remains active for the full 90-day period and is automatically removed afterward.": { ar: "" },
+
+  "Is Accqrate cloud-based in the UAE?": { ar: "" },
+
+  "Yes. Accqrate Cloud is hosted within the UAE, with a disaster recovery server located in the GCC.": { ar: "" },
+
+  "Should I provide my Credit card or debit card or bank account details during the trial period?": { ar: "" },
+
+  "No. We do not take any credit card or debit card or bank details. It is absolutely free and has no link with any payments.": { ar: "" },
+
+  "How do I pay my subscription?": { ar: "" },
+
+  "You pay through invoices. Based on your subscription plan, we send you a tax invoice. You can pay it to our bank account within 10 days from the receipt of the invoice.": { ar: "" },
+
+  "What subscription plans are available?": { ar: "" },
+
+  "We offer flexible half-yearly or annual subscription plans. Feel free to choose the option that best suits your business needs.": { ar: "" },
+
+  "Is there any discount for annual subscription?": { ar: "" },
+
+  "Annual subscription has 8% discount on the total subscription value.": { ar: "" },
+
+  "What is PEPPOL e-invoicing, and how does it work in the UAE?": { ar: "" },
+
+  "PEPPOL e-invoicing standardizes the electronic exchange of invoices across borders using a decentralized model. Accqrate’s solution integrates with the PEPPOL network, ensuring your invoices meet UAE standards for secure and efficient transmission.": { ar: "" },
+
+  "When will mandatory e-invoicing be implemented in the UAE?": { ar: "" },
+
+  "Mandatory e-invoicing for B2B and B2G transactions in the UAE is expected to begin in July 2026. Accqrate is preparing its platform to support this transition with full compliance and smooth integration.": { ar: "" },
+
+  "How does Accqrate ensure compliance with UAE tax and data regulations?": { ar: "" },
+
+  "We adhere to UAE regulations by using robust digital signatures, encryption protocols, and secure data hosting practices. Our platform works with Accredited Service Providers to guarantee that all invoice exchanges meet regulatory standards.": { ar: "" },
+
+  "Can I integrate my current accounting software with Accqrate’s PEPPOL e-invoicing solution?": { ar: "" },
+
+  "Yes, Accqrate is designed for easy integration with your existing accounting or ERP systems, allowing you to leverage the benefits of the PEPPOL network without overhauling your current infrastructure.": { ar: "" },
+
+  "How does Accqrate facilitate secure and timely invoice exchanges in the UAE?": { ar: "" },
+
+  "Our system ensures near real-time data integration and validation through certified channels, so your invoices are securely exchanged and reported to the Federal Tax Authority in compliance with local regulations.": { ar: "" },
+
+  //---------Zatca section-----
+   "If you have any other questions not addressed here": { ar: "" },
+
+  "Please feel free to contact us at": { ar: "" },
+
+  "Contact Your Consultant": { ar: "" },
+
+  "ZATCA Lock Illustration": { ar: "" },
+
+   /* ===== UAE-SPECIFIC ===== */
+  "Get 100% Peppol compliant with Accqrate": { ar: "" },
+  "Ready for UAE's 2026 mandate": { ar: "" },
+
+  /* ===== COMMON / SHARED ===== */
+  "EN 16931 compliant structured invoices": { ar: "" },
+  "Seamless Peppol network integration": { ar: "" },
+  "UBL format invoice generation": { ar: "" },
+
+  "Seamless integration with any ERP/POS": { ar: "" },
+  "Direct Integration & People integration": { ar: "" },
+  "E-invoice generation in a fraction of a second": { ar: "" },
+
+  /* ===== CTA ===== */
+  "Book a Demo": { ar: "" },
+
+  /* ===== Accessibility / UI ===== */
+  "Tick": { ar: "" },
+  "Invoice": { ar: "" },
+  "Peppol Certified": { ar: "" },
+  "Compliance Box": { ar: "" },
+  "Security Lock Illustration": { ar: "" },
+
+   "Save time, save money": {
+    ar: "",
+  },
+
+  "Want the latest on ZATCA updates, fresh product insights, and exclusive company editorials?": {
+    
+    ar: "",
+  },
+
+  "Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!": {
+   
+    ar: "",
+  },
+
+  "Get a Free Proof of Concept": {
+  
+    ar: "",
+  },
+
+  "Subscribe for Updates": {
+   
+    ar: "",
+  },
+
+  "Talk to Sales": {
+  
+    ar: "",
+  },
+
+  "Want the latest on UAE e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?": {
+    
+    ar: "",
+  },
+
+  "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.": {
+   
+    ar: "",
+  },
+
+  "Get Peppol Compliance Demo": {
+   
+    ar: "",
+  },
+
+  //-----------------E-Invoicing---------------------
+  
+   "Flexibility Meets Efficiency": { ar: "" },
+  "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.": { ar: "" },
+
+  "Transparent and Competitive Pricing": { ar: "" },
+  "Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.": { ar: "" },
+
+  "Swift Peppol Onboarding": { ar: "" },
+  "Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT compliant, Peppol-ready setup instantly fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.": { ar: "" },
+
+  "Automatic UAE PINT & EN 16931 Field Mapping": { ar: "" },
+  "Eliminate formatting and VAT compliance errors with Accqrate’s automated mapping engine. All required UAE PINT and EN 16931 fields are validated and structured correctly, ensuring every invoice meets FTA, Peppol, and UBL 2.1 standards no manual intervention needed.": { ar: "" },
+
+  "Custom PDF Template Replication": { ar: "" },
+  "Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.": { ar: "" },
+
+  "Long-Term Invoice Archiving": { ar: "" },
+  "Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.": { ar: "" },
+
+  "Automated Email Notifications": { ar: "" },
+  "Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.": { ar: "" },
+
+  "Comprehensive Peppol Exchange & Reconciliation Dashboard": { ar: "" },
+  "Accqrate offers a unified dashboard to monitor and reconcile all invoices exchanged through the UAE’s Peppol network. Track submissions, confirmations, rejections, and statuses with real-time visibility, detailed FTA compliance reports, and exportable summaries for audit and VAT workflows.": { ar: "" },
+
+  "AI-Driven Error Analytics": { ar: "" },
+  "Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.": { ar: "" },
+
+  "Future-Proof with ERP Scalability": { ar: "" },
+  "When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.": { ar: "" },
+
+  "Full Support for FTA E-Invoicing Compliance Reviews": { ar: "" },
+  "Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant before, during, and after FTA audits.": { ar: "" },
+
+  "High-Performance Application": { ar: "" },
+  "Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.": { ar: "" },
+
+   "A": { ar: "" },
+  "complete software": { ar: "" },
+  "to run your business better": { ar: "" },
+
+  "Whether you've just started or are already established, you'll find all the features you need at each stage of your business.": {
+    ar: "",
+  },
+
+  /* =====================
+     COMMON – SHARED SECTIONS
+     ===================== */
+
+  "VAT Return": { ar: "" },
+  "No need for an accountant – let Accqrate automatically generate your VAT return for you": {
+    ar: "",
+  },
+
+  "Customers & Suppliers": { ar: "" },
+  "Always know who you owe money to and who owes you money": {
+    ar: "",
+  },
+
+  "Reports & Insights": { ar: "" },
+  "Generate single or consolidated reports for a holistic view of your finances.": {
+    ar: "",
+  },
+
+  "Purchases & Claims": { ar: "" },
+  "Manage bills, purchase orders and expenses from one place": {
+    ar: "",
+  },
+
+  "Payroll & Employees": { ar: "" },
+  "Run payroll and invite employees to submit their expense claims.": {
+    ar: "",
+  },
+
+  "Inventory tracking": { ar: "" },
+  "Easily keep track of stock levels and let Accqrate automatically book your Cost of Goods": {
+    ar: "",
+  },
+
+   "Enable Your Business With E-invoicing.": { ar: "" },
+
+  "Get 30 days free trial": { ar: "" },
+
+  "Simplified": { ar: "" },
+  "Smart": { ar: "" },
+  "Complaint": { ar: "" },
+
+  "4.8 average rating from our customers": { ar: "" },
+
+  "Free Proof of Concept": { ar: "" },
+  "Flexible Solution: Cloud or On-Premises": { ar: "" },
+
+  "PEPPOL Certified E-invoicing Software for UAE": { ar: "" },
+
+  "Integrate With PEPPOL Network.": { ar: "" },
+
+  "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.": {
+    ar: "",
+  },
+
+  "FTA VAT Compliance": { ar: "" },
+  "Data Hosted in UAE Cloud": { ar: "" },
+  "Ready for Emirates Phase 2": { ar: "" },
+
+  "GDPR Compliant": { ar: "" },
+  "Data Hosted in UAE": { ar: "" },
+  "ISO 27001 Certified": { ar: "" },
+  "Accreditation in Progress": { ar: "" },
+
+  "Trusted by": { ar: "" },
+  "5,000+ Across 30+ Industries": { ar: "" },
+
+  /* =====================
+     COMMON – INDUSTRIES
+     ===================== */
+
+  "Construction & Engineering": { ar: "" },
+  "Logistics": { ar: "" },
+  "Insurance": { ar: "" },
+  "Conglomerate": { ar: "" },
+  "Pharmacy": { ar: "" },
+  "Energy": { ar: "" },
+  "Packaging solutions": { ar: "" },
+  "Food & Beverage": { ar: "" },
+  "Trading": { ar: "" },
+  "Chemicals": { ar: "" },
+  "Hospitality and Tourism": { ar: "" },
+  "FMCD": { ar: "" },
+  "Oil & Gas": { ar: "" },
+  "Home Appliances": { ar: "" },
+  "Manufacturing": { ar: "" },
+  "Electrical Industries Co.": { ar: "" },
+  "Aerospace & Defense": { ar: "" },
+  "Retail": { ar: "" },
+  "Ecommerce": { ar: "" },
+  "Fashion": { ar: "" },
+
+  /* =====================
+     COMMON – INVOICE UI
+     ===================== */
+
+  "Customize and send invoices easily": { ar: "" },
+  "Sending an invoice should be easy - and we`ve made it so": { ar: "" },
+  "Perfectly aligned with your needs and brand": { ar: "" },
+  "Invoices Custom-Made for Your Business": { ar: "" },
+  "See It in Action": { ar: "" },
+
+  /* =====================
+     COMMON – FEATURES
+     ===================== */
+
+  "Change column labels": { ar: "" },
+  "Modify the text in any column to meet your specific requirements": { ar: "" },
+
+  "Enterprise-grade.": { ar: "" },
+  "Adapt the color palette to align with your brand's identity.": { ar: "" },
+
+  "Save invoice emplates": { ar: "" },
+  "Leverage your favorite template for efficiency and time savings.": { ar: "" },
+
+  "Add your company Logo": { ar: "" },
+  "Incorporate your company's seal on invoices, quotes, receipts, and other paperwork.": {
+    ar: "",
+  },
+
+  /* =====================
+     COMMON – DEFAULT CARDS
+     ===================== */
+
+  "Full Compliance with E-Invoicing Regulations": { ar: "" },
+  "Accqrate delivers compliant structured e-invoices with seamless integration, ensuring secure exchange, standardized processing, and continuous alignment with evolving regulatory frameworks.": {
+    ar: "",
+  },
+
+  "Future-Ready E-Invoicing Solution": { ar: "" },
+  "Built for interoperability, Accqrate supports cross-border e-invoicing, digital reporting, and automated workflows, positioning enterprises for upcoming compliance requirements.": {
+    ar: "",
+  },
+
+  "Effortless E-Invoicing Automation": { ar: "" },
+  "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete compliance without manual intervention.": {
+    ar: "",
+  },
+
+  "Specialized Support and Implementation Expertise": { ar: "" },
+  "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your e-invoicing journey.": {
+    ar: "",
+  },
+
+  "Unified Global E-Invoicing Platform": { ar: "" },
+  "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across multiple jurisdictions, all from a single, integrated platform.": {
+    ar: "",
+  },
+
+  /* =====================
+     UAE – COMPLIANCE SECTION
+     ===================== */
+
+  "Compliant with UAE’s Mandatory B2B E-Invoicing Regulation": { ar: "" },
+
+  "Generate invoices fully compliant with UAE’s FTA 5 Corner Model (DCTCE)": {
+    ar: "",
+  },
+
+  "FTA and Peppol Requirements:": { ar: "" },
+
+  "Accqrate generates fully FTA-compliant structured eInvoices aligned to the UAE PINT framework and supports exchange through the DCTCE / 5-corner (PEPPOL) model.": {
+    ar: "",
+  },
+
+  "Accqrate is a Peppol Certified AP Provider and SMP": { ar: "" },
+
+  /* =====================
+     UAE – CARDS
+     ===================== */
+
+  "Full Compliance with UAE": { ar: "" },
+  "E-Invoicing (FTA DCTCE)": { ar: "" },
+
+  "Accqrate ensures complete compliance with the UAE’s Decentralized Continuous Transaction Control and Exchange (DCTCE) framework. We generate UAE PINT–compliant e-invoices, aligned with EN 16931 and fully integrated with the national Peppol network for secure, standardized exchange. Every invoice is validated, signed, transmitted, and archived according to the latest FTA e-invoicing regulations.": {
+    ar: "",
+  },
+
+  "Effortless E-Invoicing": { ar: "" },
+  "Automation": { ar: "" },
+
+  "Accqrate automates the complete UAE e-invoicing cycle with:": { ar: "" },
+
+  "AI-driven invoice validation": { ar: "" },
+  "Automated FTA compliance checks": { ar: "" },
+  "Real-time error and anomaly detection": { ar: "" },
+  "End-to-end creation, exchange, and archiving": { ar: "" },
+
+  "Designed to reduce manual work and eliminate compliance risks.": { ar: "" },
+
+  "Expert UAE E-Invoicing Implementation Support": { ar: "" },
+  "Our team provides smooth onboarding with:": { ar: "" },
+
+  "Fast ERP/POS integrations": { ar: "" },
+  "UAE PINT templates and APIs": { ar: "" },
+  "Setup with certified Peppol Access Points": { ar: "" },
+  "Dedicated UAE compliance guidance": { ar: "" },
+
+  "Accqrate ensures a reliable and low-disruption rollout for businesses of all sizes.": {
+    ar: "",
+  },
+
+  "Future-Ready for UAE Digital Tax & VAT Compliance": { ar: "" },
+  "Accqrate is engineered for the UAE’s evolving digital taxation landscape. We support automated VAT validation, structured invoice exchange, and upcoming FTA digital reporting requirements, helping businesses stay compliant as the UAE expands its Peppol-based framework.": {
+    ar: "",
+  },
+
+  "Built for the UAE 5-Corner Peppol Model": { ar: "" },
+
+  "Accqrate supports the full UAE 5-corner e-invoicing model, enabling seamless interaction across suppliers, buyers, Peppol Access Points, and the FTA.": {
+    ar: "",
+  },
+
+  "Our UAE PINT engine ensures consistent interoperability, real-time exchange, and full traceability across the digital tax ecosystem.": {
+    ar: "",
+  },
+
+  "One Platform for Global E-Invoicing": { ar: "" },
+
+  "Accqrate enables businesses to manage e-invoicing across UAE, GCC, EU, and other regulated markets from one platform.": {
+    ar: "",
+  },
+
+  "Generate, validate, transmit, and archive compliant e-invoices globally with a unified, scalable solution.": {
+    ar: "",
+  },
+   "Flexible Deployment": { ar: "" },
+
+  "Cloud (managed, subscription) or On-Prem (full control over infra & data).": {
+    ar: "",
+  },
+
+  /* =====================
+     CLOUD SOLUTIONS
+     ===================== */
+
+  "Cloud Based Solutions": { ar: "" },
+
+  "Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions": {
+    ar: "",
+  },
+
+  "Subscribe and pay per use": { ar: "" },
+  "Onboarding in 5 min": { ar: "" },
+  "High Performance": { ar: "" },
+  "Encrypted and Secured": { ar: "" },
+  "Disaster recovery": { ar: "" },
+  "Download backup anytime": { ar: "" },
+
+  /* =====================
+     ON-PREMISES SOLUTIONS
+     ===================== */
+
+  "On Premises Solutions": { ar: "" },
+
+  "Customized, Secure On-Premises Solutions with Quick Implementation Support": {
+    ar: "",
+  },
+
+  "Customer infrastructure": { ar: "" },
+  "Get customized app": { ar: "" },
+  "4 hours of implementation": { ar: "" },
+  "Secured and high performance": { ar: "" },
+  "End to end support": { ar: "" },
+
+
+  "Automatic UAE PINT & EN 16931 Field Mapping ": { ar: "" },
+
+  "Eliminate formatting and VAT compliance errors with Accqrate’s automated mapping engine. All required UAE PINT and EN 16931 fields are validated and structured correctly, ensuring every invoice meets FTA, Peppol, and UBL 2.1 standards—no manual intervention needed.": {
+    ar: "",
+  },
+
+"Simplify VAT Calculations with Our KSA VAT Calculator": { ar: "" },
+
+  "Navigating VAT calculations has never been easier. Our KSA VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.": {
+    ar: "",
+  },
+
+  "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in KSA in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.": {
+    ar: "",
+  },
+
+  "How to Calculate VAT in KSA": { ar: "" },
+
+  "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:": {
+    ar: "",
+  },
+
+  "VAT Calculation Made Simple": { ar: "" },
+
+  "Excluding VAT: Ideal for sales prices that already include VAT.": {
+    ar: "",
+  },
+
+  "Instant Calculations: Quick and straightforward VAT computations.": {
+    ar: "",
+  },
+
+  "Accuracy: Precise invoicing every time.": {
+    ar: "",
+  },
+
+  "Error Reduction: Minimize manual calculation mistakes.": {
+    ar: "",
+  },
+
+  "Time Savings: Spend less time on math and more on your business.": {
+    ar: "",
+  },
+
+  "Simplify VAT Calculations with Our UAE VAT Calculator": { ar: "" },
+
+  "Navigating VAT calculations has never been easier. Our UAE VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.": {
+    ar: "",
+  },
+
+  "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.": {
+    ar: "",
+  },
+
+  "How to Calculate VAT in UAE": { ar: "" },
+
+  "Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.": {
+    ar: "",
+  },
+  
+  "VAT Calculator": { ar: "" },
+  "Sale Value": { ar: "" },
+  "VAT Rate (%)": { ar: "" },
+  "Is Sale Inclusive of VAT?": { ar: "" },
+  "Yes": { ar: "" },
+  "No": { ar: "" },
+  "Inclusive of VAT": { ar: "" },
+  "Exclusive of VAT": { ar: "" },
+  "VAT Amount": { ar: "" },
+  "Total Value": { ar: "" },
+
+  "Total VAT this month": { ar: "" },
+  "Showing VAT breakdown for the current month": { ar: "" },
+
+  "What Is VAT?": { ar: "" },
+
+  "Adding VAT: Perfect for when sales are exclusive of VAT.": { ar: "" },
+
+  "With our": { ar: "" },
+  "VAT Calculator, enjoy:": { ar: "" },
+
+ 
+  "Unlocking Insights Of Webinar": {
+    ar: ""
+  },
+
+  "This Webinar Is Essential For Professionals Who Handle Invoicing And Compliance In Their Organizations": {
+    ar: ""
+  },
+
+    "We Will Keep You Updated At All Times": {
+    ar: ""
+  },
+
+  "Stay Updated With The Latest News And Updates From FTA and Accurate E-Invoicing Enhancements For Seamless Business Operations.": {
+    ar: ""
+  },
+
+  "Subscribe Now": {
+    ar: ""
+  },
+
+"Coming Soon ...": {
+  ar: ""
+},
+
+"Get The Trial Version By Subscribing Here And Get A Feel Of Our Application": {
+  ar: ""
+},
+
+"Register your company for a trial application. Your data will be available in 30 days.": {
+  ar: ""
+},
+
+//----------------Navbar Items-----------------
+
+"E-invoicing": {
+  ar: ""
+},
+
+"Accqrate E-Invoicing": {
+  ar: ""
+},
+
+"Simplify transactions, manage invoices effortlessly with our PEPPOL & FTA Compliant e-invoicing software.": {
+  ar: ""
+},
+
+"E-Invoicing Integration": {
+  ar: ""
+},
+
+"Integrate your ERP and POS with PEPPOL Network with our seamless, adaptable e-invoicing API or Offline integrators": {
+  ar: ""
+},
+
+"Resources": {
+  ar: ""
+},
+
+"Support": {
+  ar: ""
+},
+
+"Get help when you need it": {
+  ar: ""
+},
+
+"Blogs": {
+  ar: ""
+},
+
+"Insights, tips and industry news": {
+  ar: ""
+},
+
+"Announcements": {
+  ar: ""
+},
+
+"Find answers to common questions": {
+  ar: ""
+},
+
+"FAQs": {
+  ar: ""
+},
+
+"Connect with other users": {
+  ar: ""
+},
+
+"Tax Calculator": {
+  ar: ""
+},
+
+"Calculate your VAT obligations": {
+  ar: ""
+},
+
+"Events": {
+  ar: ""
+},
+
+"Upcoming events and webinars": {
+  ar: ""
+},
+
+"About us": {
+  ar: ""
+},
+
+
+"Contact Sales": {
+  ar: ""
+},
+
+"Contact sales": {
+  ar: ""
+},
+
+"Select Language": {
+  ar: ""
+},
+
+"Select Country": {
+  ar: ""
+},
+
+"Loading...": {
+  ar: ""
+},
+
+
+"E-Invoicing": {
+  ar: ""
+},
+"Home": {
+  ar: ""
+},
+
+/* ===================== Footer ===================== */
+
+"One unified platform with zero silos integrated modules on a single data model, global compliance built-in, AI-powered automation, flexible cloud or on-prem deployment, fast implementation, and enterprise-grade security and scalability.": {
+  ar: ""
+},
+
+"E-invoicing Solution": {
+  ar: ""
+},
+
+"Accqrate E-invoicing": {
+  ar: ""
+},
+
+"Integration Solution": {
+  ar: ""
+},
+
+/* ===================== Footer Navigation ===================== */
+
+
+"Join our Team": {
+  ar: ""
+},
+
+"Company": {
+  ar: ""
+},
+
+"Testimonials": {
+  ar: ""
+},
+
+"Accelera": {
+  ar: ""
+},
+
+"Press": {
+  ar: ""
+},
+
+"Newsletter": {
+  ar: ""
+},
+
+"Branding Assets": {
+  ar: ""
+},
+
+/* ===================== Footer Sections ===================== */
+
+
+"FAQ": {
+  ar: ""
+},
+
+"Call: +41 76 475 36 65": {
+  ar: ""
+},
+
+"Email: contact@accqrate-erp.com": {
+  ar: ""
+},
+
+"WhatsApp: +41 76 475 36 65": {
+  ar: ""
+},
+
+"Connect with Accqrate Concierge": {
+  ar: ""
+},
+
+/* ===================== Footer Bottom ===================== */
+
+"© Copyright 2021 - 2025": {
+  ar: ""
+},
+
+"All rights reserved.": {
+  ar: ""
+}
+
+
+
 };
 
 export default function T({ children }: TProps): ReactNode {
