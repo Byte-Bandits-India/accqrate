@@ -24,6 +24,11 @@ const HERO_CONTENT: Record<string, HeroContent> = {
     description:
       "Stay Updated With The Latest News And Updates From PEPPOL And Accurate E-Invoicing Enhancements For Seamless Business Operations.",
   },
+  AE: {
+    title: "We Will Keep You Updated At All Times",
+    description:
+      "Stay Updated With The Latest News And Updates From FTA and Accurate E-Invoicing Enhancements For Seamless Business Operations.",
+  },
   default: {
     title: "We Will Keep You Updated At All Times",
     description:
