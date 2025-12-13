@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic'
 import { useParams } from "next/navigation";
 import Image, { StaticImageData } from 'next/image'
 import T from "@/Components/T";
+import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
+import uaeImg from "@/Assets/images/invoicing/uae.webp";
 
 // Import ContactModal with dynamic loading
 const ContactModal = dynamic(
@@ -31,6 +33,17 @@ const DemoVideoSection: React.FC = () => {
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
     const [isContactModalOpen, setIsContactModalOpen] = useState(false)
     const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+    const getInvoiceMultipleImage = () => {
+        switch (countryCode) {
+            case 'be':
+                return AssetPath.integration.footer;
+            case 'pl':
+                return AssetPath.integration.footer;
+            default:
+                return AssetPath.invoicing.manageTeam;
+        }
+    };
 
     const demoVideos: VideoItem[] = [
         {
@@ -217,7 +230,7 @@ const DemoVideoSection: React.FC = () => {
                         {/* RIGHT IMAGE SECTION */}
                         <div className="relative flex justify-center items-center w-full top-8 md:top-0 md:w-1/2 z-10 order-1 md:order-2 bg-[#F3F3FF] md:bg-transparent py-10 md:py-0 overflow-hidden">
                             <Image
-                                src={AssetPath.integration.footer}
+                                src={getInvoiceMultipleImage().src}
                                 alt="Accqrate software illustration"
                                 width={591}
                                 height={400}

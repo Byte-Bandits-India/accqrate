@@ -28,6 +28,8 @@ const ContactModal = dynamic(
     }
 );
 
+import uaeInvoiceImg from "@/Assets/images/home/UAE_invoice.png";
+
 
 // ---------------- CarouselCard ----------------
 interface CarouselCardProps {
@@ -409,6 +411,15 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         ? countryContent.backgroundImage
         : countryContent.backgroundImage.src;
     const scrollRef = useRef<HTMLDivElement | null>(null);
+
+    const getInvoiceHomeImage = () => {
+        switch (countryCode.toUpperCase()) {
+            case 'AE':
+                return uaeInvoiceImg;
+            default:
+                return AssetPath.invoicing.invoiceHome;
+        }
+    };
 
     const scroll = (direction: "left" | "right") => {
         const container = scrollRef.current;
@@ -967,9 +978,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </div>
 
                                 <div className="w-full mt-auto">
-                                    <div className="border-[#FF9BC1] border h-[480px] md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
+                                    <div className="h-[480px] md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
                                         <Image
-                                            src={AssetPath.invoicing.invoiceHome}
+                                            src={getInvoiceHomeImage()}
                                             alt="Invoice preview"
                                             width={620}
                                             height={420}
