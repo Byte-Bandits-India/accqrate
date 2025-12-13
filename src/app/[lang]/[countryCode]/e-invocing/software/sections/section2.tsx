@@ -23,7 +23,7 @@ const Section2 = () => {
 
 
 
-                {!['BE', 'PL'].includes(countryCode?.toUpperCase() || '') && (
+                {/* {!['BE', 'PL'].includes(countryCode?.toUpperCase() || '') && (
                     <div className="bg-[#29266E] text-white text-center py-8 md:py-10 lg:py-[80px] px-6 md:px-8 xl:px-0">
                         <h3 className="text-fluid-h2 lg:text-[38px] font-normal leading-tight">
                             <T>Easy Onboarding Process</T>
@@ -70,7 +70,7 @@ const Section2 = () => {
 
 
                     </div>
-                )}
+                )} */}
 
                 {/* Accqrate Offerings */}
                 <div className='bg-[#F1F2FF]'>

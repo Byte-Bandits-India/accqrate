@@ -1,6 +1,7 @@
 import React from 'react'
 import AssetPath from "@/AssetPath/AssetPath";
 import T from '@/Components/T';
+import { useParams } from "next/navigation";
 
 interface Section {
     img: string;
@@ -8,25 +9,100 @@ interface Section {
     desc: string;
 }
 
-const sections: Section[] = [
-    {
-        img: AssetPath.invoicing.taxReceipt.src,
-        title: "VAT Return",
-        desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
-    },
-    {
-        img: AssetPath.invoicing.profile2user.src,
-        title: "Customers & Suppliers",
-        desc: "Always know who you owe money to and who owes you money",
-    },
-    {
-        img: AssetPath.invoicing.chart2.src,
-        title: "Reports & Insights",
-        desc: "Generate single or consolidated reports for a holistic view of your finances.",
-    },
-];
-
 const Section3 = () => {
+    const params = useParams();
+    const countryCode = (params?.countryCode as string || "sa").toLowerCase();
+
+    // Default sections
+    const defaultSections: Section[] = [
+        {
+            img: AssetPath.invoicing.taxReceipt.src,
+            title: "VAT Return",
+            desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
+        },
+        {
+            img: AssetPath.invoicing.profile2user.src,
+            title: "Customers & Suppliers",
+            desc: "Always know who you owe money to and who owes you money",
+        },
+        {
+            img: AssetPath.invoicing.chart2.src,
+            title: "Reports & Insights",
+            desc: "Generate single or consolidated reports for a holistic view of your finances.",
+        },
+    ];
+
+    // Country-specific sections overrides
+    const sectionOverrides: Record<string, Section[]> = {
+        be: [
+            {
+                img: AssetPath.invoicing.taxReceipt.src,
+                title: "VAT Return",
+                desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
+            },
+            {
+                img: AssetPath.invoicing.profile2user.src,
+                title: "Customers & Suppliers",
+                desc: "Always know who you owe money to and who owes you money",
+            },
+            {
+                img: AssetPath.invoicing.chart2.src,
+                title: "Reports & Insights",
+                desc: "Generate single or consolidated reports for a holistic view of your finances.",
+            },
+        ],
+        pl: [
+            {
+                img: AssetPath.invoicing.taxReceipt.src,
+                title: "VAT Return",
+                desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
+            },
+            {
+                img: AssetPath.invoicing.profile2user.src,
+                title: "Customers & Suppliers",
+                desc: "Always know who you owe money to and who owes you money",
+            },
+            {
+                img: AssetPath.invoicing.chart2.src,
+                title: "Reports & Insights",
+                desc: "Generate single or consolidated reports for a holistic view of your finances.",
+            },
+        ],
+        ae: [
+            {
+                img: AssetPath.invoicing.taxReceipt.src,
+                title: "VAT Return",
+                desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
+            },
+            {
+                img: AssetPath.invoicing.profile2user.src,
+                title: "Customers & Suppliers",
+                desc: "Always know who you owe money to and who owes you money",
+            },
+            {
+                img: AssetPath.invoicing.chart2.src,
+                title: "Reports & Insights",
+                desc: "Generate single or consolidated reports for a holistic view of your finances.",
+            },
+            {
+                img: AssetPath.invoicing.bagCheck.src,
+                title: "Purchases & Claims",
+                desc: "Manage bills, purchase orders and expenses from one place",
+            },
+            {
+                img: AssetPath.invoicing.moneyStack.src,
+                title: "Payroll & Employees",
+                desc: "Run payroll and invite employees to submit their expense claims.",
+            },
+            {
+                img: AssetPath.invoicing.box.src,
+                title: "Inventory tracking",
+                desc: "Easily keep track of stock levels and let Accqrate automatically book your Cost of Goods",
+            },
+        ],
+    };
+
+    const sections = sectionOverrides[countryCode] || defaultSections;
     return (
         <>
             <section className="py-8 md:py-10 lg:py-[80px] max-w-[1280px] mx-auto relative">

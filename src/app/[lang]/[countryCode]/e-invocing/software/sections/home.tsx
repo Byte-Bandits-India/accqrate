@@ -175,6 +175,153 @@ const countryConfig = {
     }
 };
 
+// Badges configuration by country
+const badgesConfig: Record<string, Array<{
+    img: string;
+    alt: string;
+    text: string;
+    className: string;
+}>> = {
+    SA: [
+        {
+            img: peppolImg.src,
+            alt: 'Peppol Certified',
+            text: 'Peppol Certified',
+            className: 'w-16 h-16',
+        },
+        {
+            img: gdprImg.src,
+            alt: 'GDPR Compliant',
+            text: 'GDPR Compliant',
+            className: 'w-16 h-16',
+        },
+        {
+            img: serverImg.src,
+            alt: 'Data Hosted in Europe',
+            text: 'Data Hosted in Europe',
+            className: 'w-16 h-16',
+        },
+        {
+            img: isoImg.src,
+            alt: 'ISO 27001 Certified',
+            text: 'ISO 27001 Certified',
+            className: 'w-16 h-16',
+        },
+    ],
+    AE: [
+        {
+            img: peppolImg.src,
+            alt: 'Peppol Certified',
+            text: 'Peppol Certified',
+            className: 'w-16 h-16',
+        },
+        {
+            img: gdprImg.src,
+            alt: 'GDPR Compliant',
+            text: 'GDPR Compliant',
+            className: 'w-16 h-16',
+        },
+        {
+            img: serverImg.src,
+            alt: 'Data Hosted in UAE',
+            text: 'Data Hosted in UAE',
+            className: 'w-16 h-16',
+        },
+        {
+            img: isoImg.src,
+            alt: 'ISO 27001 Certified',
+            text: 'ISO 27001 Certified',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.cards.fta.src,
+            alt: 'Accreditation-in-Progress',
+            text: 'Accreditation in Progress',
+            className: 'w-16 h-16',
+        },
+    ],
+    BE: [
+        {
+            img: peppolImg.src,
+            alt: 'Peppol Certified',
+            text: 'Peppol Certified',
+            className: 'w-16 h-16',
+        },
+        {
+            img: gdprImg.src,
+            alt: 'GDPR Compliant',
+            text: 'GDPR Compliant',
+            className: 'w-16 h-16',
+        },
+        {
+            img: serverImg.src,
+            alt: 'Data Hosted in Europe',
+            text: 'Data Hosted in Europe',
+            className: 'w-16 h-16',
+        },
+        {
+            img: isoImg.src,
+            alt: 'ISO 27001 Certified',
+            text: 'ISO 27001 Certified',
+            className: 'w-16 h-16',
+        },
+    ],
+    PL: [
+        {
+            img: peppolImg.src,
+            alt: 'Peppol Certified',
+            text: 'Peppol Certified',
+            className: 'w-16 h-16',
+        },
+        {
+            img: gdprImg.src,
+            alt: 'GDPR Compliant',
+            text: 'GDPR Compliant',
+            className: 'w-16 h-16',
+        },
+        {
+            img: serverImg.src,
+            alt: 'Data Hosted in Europe',
+            text: 'Data Hosted in Europe',
+            className: 'w-16 h-16',
+        },
+        {
+            img: isoImg.src,
+            alt: 'ISO 27001 Certified',
+            text: 'ISO 27001 Certified',
+            className: 'w-16 h-16',
+        },
+    ],
+};
+
+// Default badges
+const defaultBadges = [
+    {
+        img: peppolImg.src,
+        alt: 'Peppol Certified',
+        text: 'Peppol Certified',
+        className: 'w-16 h-16',
+    },
+    {
+        img: gdprImg.src,
+        alt: 'GDPR Compliant',
+        text: 'GDPR Compliant',
+        className: 'w-16 h-16',
+    },
+    {
+        img: serverImg.src,
+        alt: 'Data Hosted Locally',
+        text: 'Data Hosted Locally',
+        className: 'w-16 h-16',
+    },
+    {
+        img: isoImg.src,
+        alt: 'ISO 27001 Certified',
+        text: 'ISO 27001 Certified',
+        className: 'w-16 h-16',
+    },
+];
+
 const Software: React.FC = () => {
     const [isModalOpen, setModalOpen] = React.useState(false);
     const params = useParams();
@@ -188,6 +335,9 @@ const Software: React.FC = () => {
 
     // Use content directly from country config
     const content = country;
+
+    // Get country-specific badges
+    const badges = badgesConfig[countryCode] || defaultBadges;
 
     // Resolve flag image from AssetPath.header.language using country code
     const getFlagForCountry = (code: string) => {
@@ -363,35 +513,10 @@ const Software: React.FC = () => {
                     <div className="absolute inset-0" />
 
                     <div className="relative z-10 max-w-[1280px] mx-auto px-6">
-                        <div className="flex flex-wrap items-center justify-center gap-10">
+                        <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-6 md:gap-8 lg:gap-10">
 
-                            {[
-                                {
-                                    img: peppolImg.src,
-                                    alt: 'Peppol Certified',
-                                    text: 'Peppol Certified',
-                                    className: 'w-16 h-16',
-                                },
-                                {
-                                    img: gdprImg.src,
-                                    alt: 'GDPR Compliant',
-                                    text: 'GDPR Compliant',
-                                    className: 'w-16 h-16',
-                                },
-                                {
-                                    img: serverImg.src,
-                                    alt: 'Data Hosted in Europe',
-                                    text: 'Data Hosted in Europe',
-                                    className: 'w-16 h-16',
-                                },
-                                {
-                                    img: isoImg.src,
-                                    alt: 'ISO 27001 Certified',
-                                    text: 'ISO 27001 Certified',
-                                    className: 'w-16 h-16',
-                                },
-                            ].map((item, index) => (
-                                <div key={index} className="flex items-center gap-3">
+                            {badges.map((item, index) => (
+                                <div key={index} className="flex items-center gap-3 flex-shrink-0">
                                     <img
                                         src={item.img}
                                         alt={item.alt}

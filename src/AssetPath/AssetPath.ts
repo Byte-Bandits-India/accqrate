@@ -127,7 +127,7 @@ import greenAccq from "@/Assets/images/home/green-accq.png";
 import aiImage from "@/Assets/images/home/ai.png";
 import acceleraWebp from "@/Assets/images/home/accelera.webp";
 import vidaHome from "@/Assets/images/home/VIDA_home.png";
-import dctceHome from "@/Assets/images/home/Future-Ready.png";
+import dctceHome from "@/Assets/images/home/UAE_Peppol.webp";
 
 // ==================== LANDINGPAGE IMAGES ====================
 
@@ -314,6 +314,8 @@ import invoiceTabView from "@/Assets/images/invoicing/invoice-tab-view.webp";
 import invoiceWithCreateScreenMalaysia from "@/Assets/images/invoicing/invoice-with-create-screen-malaysia.webp";
 import invoiceSinglePng from "@/Assets/images/invoicing/invoice-1.png";
 import invoiceMultiplePng from "@/Assets/images/invoicing/invoice-2.png";
+import UAE_invoice_1 from "@/Assets/images/invoicing/UAE_invoice_1.webp";
+import UAE_invoice from "@/Assets/images/invoicing/UAE_invoice.webp";
 import invoiceWithCreateScreen from "@/Assets/images/invoicing/invoice-with-create-screen.webp";
 import invoiceHome from "@/Assets/images/invoicing/invoice-home.webp";
 import invoiceStandalone from "@/Assets/images/invoicing/e-invoicing_standalone.webp";
@@ -770,6 +772,8 @@ const AssetPath = {
     invoiceWithCreateScreen,
     invoiceSinglePng,
     invoiceMultiplePng,
+    UAE_invoice_1,
+    UAE_invoice,
     invoiceHome,
     invoiceStandalone,
     invoice,
