@@ -55,7 +55,7 @@ export const blogTranslations: TranslationsMap = {
 "Lightning-fast UI, one-click installs, and low-disruption migrations from SAP/Microsoft/Oracle or disjointed tools.": { ar: "" },
 
 "Built-in Global compliance:": { ar: "" },
-"Connect ERP/POS to tax authorities; from ZATCA Phase II to PEPPOL standards.": { ar: "" },
+
 
 "Deploy your way.": { ar: "" },
 "Cloud (managed, subscription) or On-Prem (full control over infra & data).": { ar: "" },
@@ -6537,14 +6537,14 @@ export const blogTranslations: TranslationsMap = {
 
   "Our system ensures near real-time data integration and validation through certified channels, so your invoices are securely exchanged and reported to the Federal Tax Authority in compliance with local regulations.": { ar: "" },
 
-  //---------Zatca section-----
+
    "If you have any other questions not addressed here": { ar: "" },
 
   "Please feel free to contact us at": { ar: "" },
 
   "Contact Your Consultant": { ar: "" },
 
-  "ZATCA Lock Illustration": { ar: "" },
+ 
 
    /* ===== UAE-SPECIFIC ===== */
   "Get 100% Peppol compliant with Accqrate": { ar: "" },
@@ -6570,11 +6570,6 @@ export const blogTranslations: TranslationsMap = {
   "Security Lock Illustration": { ar: "" },
 
    "Save time, save money": {
-    ar: "",
-  },
-
-  "Want the latest on ZATCA updates, fresh product insights, and exclusive company editorials?": {
-    
     ar: "",
   },
 
@@ -6911,18 +6906,6 @@ export const blogTranslations: TranslationsMap = {
   "Eliminate formatting and VAT compliance errors with Accqrate’s automated mapping engine. All required UAE PINT and EN 16931 fields are validated and structured correctly, ensuring every invoice meets FTA, Peppol, and UBL 2.1 standards—no manual intervention needed.": {
     ar: "",
   },
-
-"Simplify VAT Calculations with Our KSA VAT Calculator": { ar: "" },
-
-  "Navigating VAT calculations has never been easier. Our KSA VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.": {
-    ar: "",
-  },
-
-  "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in KSA in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.": {
-    ar: "",
-  },
-
-  "How to Calculate VAT in KSA": { ar: "" },
 
   "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:": {
     ar: "",
@@ -7504,11 +7487,7 @@ export const blogTranslations: TranslationsMap = {
 "Integrating your existing application through various formats. Schedule your integration with ISTD.": {
   ar: ""
 },
-/* ===================== Common ===================== */
 
-"Integrating your existing application through various formats. Schedule your integration with ZATCA.": {
-  ar: ""
-},
 
 "Our connectors, seamlessly integrated into your ERP, will handle all subsequent processes efficiently.": {
   ar: ""
