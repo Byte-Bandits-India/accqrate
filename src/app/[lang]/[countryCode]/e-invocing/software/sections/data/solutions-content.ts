@@ -536,8 +536,8 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
       tab: 2
     },
     {
-  content: 'Automatic EN 16931 Field Mapping',
-  desc: 'Remove formatting and compliance errors with Accqrate\'s automated mapping of all mandatory EN 16931 fields, ensuring every Belgian e-invoice meets the structured Peppol and UBL standards, no manual intervention required.',
+  content: 'Automatic UAE PINT & EN 16931 Field Mapping ',
+  desc: 'Eliminate formatting and VAT compliance errors with Accqrate’s automated mapping engine. All required UAE PINT and EN 16931 fields are validated and structured correctly, ensuring every invoice meets FTA, Peppol, and UBL 2.1 standards—no manual intervention needed.',
   image: AssetPath.integration.footer,
   sno: '04',
   index: 3,
@@ -569,8 +569,8 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
       tab: 6
     },
     {
-      content: 'Comprehensive Peppol Reconciliation Dashboard',
-      desc: 'Effortlessly reconcile invoices exchanged through Peppol with your internal systems using Accqrate\'s unified dashboards, detailed compliance reports, and exportable Excel summaries.',
+      content: 'Comprehensive Peppol Exchange & Reconciliation Dashboard',
+      desc: 'Accqrate offers a unified dashboard to monitor and reconcile all invoices exchanged through the UAE’s Peppol network. Track submissions, confirmations, rejections, and statuses with real-time visibility, detailed FTA compliance reports, and exportable summaries for audit and VAT workflows.',
       image: AssetPath.integration.footer,
       sno: '08',
       index: 7,
@@ -593,8 +593,8 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
       tab: 9
     },
     {
-      content: 'Full Support for Belgian E-Invoicing Compliance Reviews',
-      desc: 'Accqrate goes beyond enablement. We provide end-to-end support during Belgian e-invoicing compliance checks, ensuring your Peppol and EN 16931 processes meet all regulatory requirements.',
+      content: 'Full Support for FTA E-Invoicing Compliance Reviews',
+      desc: 'Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant—before, during, and after FTA audits.',
       image: AssetPath.integration.footer,
       sno: '11',
       index: 10,

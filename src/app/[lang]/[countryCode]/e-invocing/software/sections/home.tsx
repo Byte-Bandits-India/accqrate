@@ -37,10 +37,10 @@ const countryConfig = {
     "AE": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in UAE",
-        title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
-        description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
+        badgeText: "PEPPOL Certified E-invoicing Software for UAE",
+        title: "Integrate With PEPPOL Network.",
+        description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.",
+        description2: "",
         ctaText: "Get 30 days free trial",
         countryName: "UAE",
         marqueeItems: [
