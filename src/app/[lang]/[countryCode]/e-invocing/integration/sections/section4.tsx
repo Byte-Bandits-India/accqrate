@@ -25,6 +25,19 @@ export default function Section4() {
         return AssetPath.invoicing.invoiceMultiplePng;
     }
   };
+   const getDashboardMultipleImage = () => {
+    switch (countryCode) {
+      case 'be':
+        return AssetPath.integration.dashboard;
+      case 'pl':
+        return AssetPath.integration.dashboard;
+      case 'ae':
+        return AssetPath.integration.uaedash;
+      default:
+        return AssetPath.integration.dashboard;
+    }
+  };
+
 
   return (
     <section className="py-16 md:py-20 px-6 md:px-8 lg:px-0 bg-[#F7F9FF]">
@@ -70,7 +83,7 @@ export default function Section4() {
           <div className=" ">
             {data.topRightImage && (
               <Image
-                src={data.topRightImage}
+                src={getDashboardMultipleImage().src}
                 width={800}
                 height={600}
                 alt="Dashboard"
