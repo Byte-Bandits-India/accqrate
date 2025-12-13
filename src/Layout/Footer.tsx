@@ -77,15 +77,15 @@ export default function FooterUpdated() {
       <div className="max-w-[1600px] mx-auto px-6 md:px-10 xl:px-16">
         <div className="hidden lg:block">
           {/* Logo */}
-        <Link href={createHref("/")}>
-              <Image
-                src={AssetPath.common.white}
-                alt="Accqrate"
-                width={180}
-                height={50}
-                className="mb-6 cursor-pointer"
-              />
-            </Link>
+          <Link href={createHref("/")}>
+            <Image
+              src={AssetPath.common.white}
+              alt="Accqrate"
+              width={180}
+              height={50}
+              className="mb-6 cursor-pointer"
+            />
+          </Link>
         </div>
 
         {/* Main Grid with Full-Height Vertical Divider */}
@@ -93,7 +93,7 @@ export default function FooterUpdated() {
 
           {/* LEFT GRID */}
           <div className="lg:w-[856px]">
-    
+
             {/* Description + E-invoicing */}
             <div className="flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-16 mb-10">
               {/* Description */}
