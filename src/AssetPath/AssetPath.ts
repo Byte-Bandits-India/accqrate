@@ -269,6 +269,7 @@ import intdash from "@/Assets/images/integration/int-dash.png";
 import inttax from "@/Assets/images/integration/int-tax.png";
 import tick from "@/Assets/images/integration/tick.png";
 import integrationInvoice from "@/Assets/images/integration/dashboard_eur.webp";
+import uaedash from "@/Assets/images/integration/dashboard_Uae.webp";
 import uaeHero from "@/Assets/images/integration/UAE_integration_hero.webp"
 import integration1 from "@/Assets/images/integration/integration1.webp";
 import integration2 from "@/Assets/images/integration/integration2.webp";
@@ -728,6 +729,7 @@ const AssetPath = {
     tick,
     invoice: integrationInvoice,
     dashboard: integrationDashboard,
+    uaedash,
     footer: integrationFooter,
     integration1,
     integration2,
