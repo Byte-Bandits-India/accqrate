@@ -79,7 +79,7 @@ const Section2 = () => {
                             <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
                                 <T>Flexible Deployment</T>
                             </h3>
-                            <p className='text-[#333333] text-fluid-body max-w-[428px] mt-4 md:mt-6 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
+                            <p className='text-[#333333] text-fluid-body mt-4 md:mt-6 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
 
                             <div className="py-6 md:py-8 lg:py-10">
                                 <div className="flex flex-col lg:flex-row justify-start items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
