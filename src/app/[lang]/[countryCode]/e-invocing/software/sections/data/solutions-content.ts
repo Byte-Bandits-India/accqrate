@@ -217,7 +217,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Flexibility Meets Efficiency',
       desc: "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.",
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '01',
       index: 0,
       tab: 0
@@ -225,7 +225,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Transparent and Competitive Pricing',
       desc: 'Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '02',
       index: 1,
       tab: 1
@@ -233,7 +233,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Swift Onboarding to IRBM\'s system',
       desc: 'Head Start your journey with quick onboarding to IRBM\'s System. Simply have your company data at hand, and let Accqrate onboard you swiftly and efficiently.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '03',
       index: 2,
       tab: 2
@@ -241,7 +241,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automatic Malay Translations',
       desc: 'Eliminate the language barrier with our automatic translation of all mandatory fields for LHDN compliance, ensuring accuracy without the need for dedicated translation personnel.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '04',
       index: 3,
       tab: 3
@@ -249,7 +249,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Custom PDF Template Replication',
       desc: 'Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '05',
       index: 4,
       tab: 4
@@ -257,7 +257,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Long-Term Invoice Archiving',
       desc: 'Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '06',
       index: 5,
       tab: 5
@@ -265,7 +265,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automated Email Notifications',
       desc: 'Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '07',
       index: 6,
       tab: 6
@@ -273,7 +273,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Comprehensive Reconciliation Dashboard',
       desc: 'Effortlessly reconcile invoices across your applications and IRBM\'s System with our comprehensive dashboards, detailed reports, and exportable excel documents.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '08',
       index: 7,
       tab: 7
@@ -281,7 +281,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'AI-Driven Error Analytics',
       desc: 'Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '09',
       index: 8,
       tab: 8
@@ -289,7 +289,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Future-Proof with ERP Scalability',
       desc: 'When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '10',
       index: 9,
       tab: 9
@@ -297,7 +297,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Full Support for LHDN Audits',
       desc: 'We go beyond implementation. Our commitment to compliance includes full support during LHDN audits, ensuring your business meets all regulatory requirements.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '11',
       index: 10,
       tab: 10
@@ -305,7 +305,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'High-Performance Application',
       desc: 'Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '12',
       index: 11,
       tab: 11
@@ -316,7 +316,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Flexibility Meets Efficiency',
       desc: "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.",
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '01',
       index: 0,
       tab: 0
@@ -324,7 +324,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Transparent and Competitive Pricing',
       desc: 'Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '02',
       index: 1,
       tab: 1
@@ -332,7 +332,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Swift Fatoora Onboarding',
       desc: 'Jumpstart your journey with Fatoora in less than 5 minutes. Simply have your company data at hand, and let Accqrate onboard you swiftly and efficiently.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '03',
       index: 2,
       tab: 2
@@ -340,7 +340,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automatic Arabic Translations',
       desc: 'Eliminate the language barrier with our automatic translation of all mandatory fields for MRA compliance, ensuring accuracy without the need for dedicated translation personnel.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '04',
       index: 3,
       tab: 3
@@ -348,7 +348,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Custom PDF Template Replication',
       desc: 'Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '05',
       index: 4,
       tab: 4
@@ -356,7 +356,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Long-Term Invoice Archiving',
       desc: 'Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '06',
       index: 5,
       tab: 5
@@ -364,7 +364,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automated Email Notifications',
       desc: 'Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '07',
       index: 6,
       tab: 6
@@ -372,7 +372,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Comprehensive Reconciliation Dashboard',
       desc: 'Effortlessly reconcile invoices across your applications and MRA with our comprehensive dashboards, detailed reports, and exportable excel documents.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '08',
       index: 7,
       tab: 7
@@ -380,7 +380,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'AI-Driven Error Analytics',
       desc: 'Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '09',
       index: 8,
       tab: 8
@@ -388,7 +388,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Future-Proof with ERP Scalability',
       desc: 'When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '10',
       index: 9,
       tab: 9
@@ -396,7 +396,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Full Support for MRA Audits',
       desc: 'We go beyond implementation. Our commitment to compliance includes full support during MRA audits, ensuring your business meets all regulatory requirements.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '11',
       index: 10,
       tab: 10
@@ -404,7 +404,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'High-Performance Application',
       desc: 'Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '12',
       index: 11,
       tab: 11
@@ -415,7 +415,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Flexibility Meets Efficiency',
       desc: "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.",
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '01',
       index: 0,
       tab: 0
@@ -423,7 +423,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Transparent and Competitive Pricing',
       desc: 'Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '02',
       index: 1,
       tab: 1
@@ -431,7 +431,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Swift Fatoora Onboarding',
       desc: 'Jumpstart your journey with Fatoora in less than 5 minutes. Simply have your company data at hand, and let Accqrate onboard you swiftly and efficiently.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '03',
       index: 2,
       tab: 2
@@ -439,7 +439,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automatic Arabic Translations',
       desc: 'Eliminate the language barrier with our automatic translation of all mandatory fields for ISTD compliance, ensuring accuracy without the need for dedicated translation personnel.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '04',
       index: 3,
       tab: 3
@@ -447,7 +447,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Custom PDF Template Replication',
       desc: 'Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '05',
       index: 4,
       tab: 4
@@ -455,7 +455,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Long-Term Invoice Archiving',
       desc: 'Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '06',
       index: 5,
       tab: 5
@@ -463,7 +463,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automated Email Notifications',
       desc: 'Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '07',
       index: 6,
       tab: 6
@@ -471,7 +471,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Comprehensive Reconciliation Dashboard',
       desc: 'Effortlessly reconcile invoices across your applications and ISTD with our comprehensive dashboards, detailed reports, and exportable excel documents.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '08',
       index: 7,
       tab: 7
@@ -479,7 +479,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'AI-Driven Error Analytics',
       desc: 'Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '09',
       index: 8,
       tab: 8
@@ -487,7 +487,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Future-Proof with ERP Scalability',
       desc: 'When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.',
-      image: '/images/invoicing/manage-team.webp',
+      image: AssetPath.invoicing.manageTeam,
       sno: '10',
       index: 9,
       tab: 9
@@ -495,7 +495,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Full Support for ISTD Audits',
       desc: 'We go beyond implementation. Our commitment to compliance includes full support during ISTD audits, ensuring your business meets all regulatory requirements.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '11',
       index: 10,
       tab: 10
@@ -503,7 +503,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'High-Performance Application',
       desc: 'Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '12',
       index: 11,
       tab: 11
@@ -514,7 +514,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Flexibility Meets Efficiency',
       desc: "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.",
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '01',
       index: 0,
       tab: 0
@@ -522,7 +522,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Transparent and Competitive Pricing',
       desc: 'Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '02',
       index: 1,
       tab: 1
@@ -530,7 +530,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Swift Peppol Onboarding',
       desc: 'Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT compliant, Peppol-ready setup instantly fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.',
-      image:AssetPath.integration.footer,
+      image:AssetPath.invoicing.manageTeam,
       sno: '03',
       index: 2,
       tab: 2
@@ -538,7 +538,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
   content: 'Automatic UAE PINT & EN 16931 Field Mapping ',
   desc: 'Eliminate formatting and VAT compliance errors with Accqrate’s automated mapping engine. All required UAE PINT and EN 16931 fields are validated and structured correctly, ensuring every invoice meets FTA, Peppol, and UBL 2.1 standards—no manual intervention needed.',
-  image: AssetPath.integration.footer,
+  image: AssetPath.invoicing.manageTeam,
   sno: '04',
   index: 3,
   tab: 3
@@ -547,7 +547,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Custom PDF Template Replication',
       desc: 'Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '05',
       index: 4,
       tab: 4
@@ -555,7 +555,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Long-Term Invoice Archiving',
       desc: 'Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '06',
       index: 5,
       tab: 5
@@ -563,7 +563,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automated Email Notifications',
       desc: 'Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '07',
       index: 6,
       tab: 6
@@ -571,7 +571,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Comprehensive Peppol Exchange & Reconciliation Dashboard',
       desc: 'Accqrate offers a unified dashboard to monitor and reconcile all invoices exchanged through the UAE’s Peppol network. Track submissions, confirmations, rejections, and statuses with real-time visibility, detailed FTA compliance reports, and exportable summaries for audit and VAT workflows.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '08',
       index: 7,
       tab: 7
@@ -579,7 +579,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'AI-Driven Error Analytics',
       desc: 'Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '09',
       index: 8,
       tab: 8
@@ -587,7 +587,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Future-Proof with ERP Scalability',
       desc: 'When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '10',
       index: 9,
       tab: 9
@@ -595,7 +595,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Full Support for FTA E-Invoicing Compliance Reviews',
       desc: 'Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant before, during, and after FTA audits.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '11',
       index: 10,
       tab: 10
@@ -603,7 +603,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'High-Performance Application',
       desc: 'Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '12',
       index: 11,
       tab: 11
@@ -614,7 +614,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Flexibility Meets Efficiency',
       desc: "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.",
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '01',
       index: 0,
       tab: 0
@@ -622,7 +622,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Transparent and Competitive Pricing',
       desc: 'Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '02',
       index: 1,
       tab: 1
@@ -630,7 +630,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Swift Fatoora Onboarding',
       desc: 'Jumpstart your journey with Fatoora in less than 5 minutes. Simply have your company data at hand, and let Accqrate onboard you swiftly and efficiently.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '03',
       index: 2,
       tab: 2
@@ -638,7 +638,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automatic Arabic Translations',
       desc: 'Eliminate the language barrier with our automatic translation of all mandatory fields for ZATCA compliance, ensuring accuracy without the need for dedicated translation personnel.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '04',
       index: 3,
       tab: 3
@@ -646,7 +646,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Custom PDF Template Replication',
       desc: 'Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '05',
       index: 4,
       tab: 4
@@ -654,7 +654,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Long-Term Invoice Archiving',
       desc: 'Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '06',
       index: 5,
       tab: 5
@@ -662,7 +662,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Automated Email Notifications',
       desc: 'Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '07',
       index: 6,
       tab: 6
@@ -670,7 +670,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Comprehensive Reconciliation Dashboard',
       desc: 'Effortlessly reconcile invoices across your applications and ZATCA with our comprehensive dashboards, detailed reports, and exportable excel documents.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '08',
       index: 7,
       tab: 7
@@ -678,7 +678,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'AI-Driven Error Analytics',
       desc: 'Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '09',
       index: 8,
       tab: 8
@@ -686,7 +686,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Future-Proof with ERP Scalability',
       desc: 'When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '10',
       index: 9,
       tab: 9
@@ -694,7 +694,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'Full Support for ZATCA Audits',
       desc: 'We go beyond implementation. Our commitment to compliance includes full support during ZATCA audits, ensuring your business meets all regulatory requirements.',
-      image: AssetPath.integration.footer,
+      image:AssetPath.invoicing.manageTeam,
       sno: '11',
       index: 10,
       tab: 10
@@ -702,7 +702,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     {
       content: 'High-Performance Application',
       desc: 'Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.',
-      image: AssetPath.integration.footer,
+      image: AssetPath.invoicing.manageTeam,
       sno: '12',
       index: 11,
       tab: 11

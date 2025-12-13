@@ -10,6 +10,7 @@ import gdprImg from "@/Assets/images/invoicing/gdpr.png";
 import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
 import eInvoiceHeroImg from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
+import uaeImg from "@/Assets/images/invoicing/uae.webp";
 import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
 import { t, currentLang } from "@/lib/translations";
@@ -371,6 +372,17 @@ const Software: React.FC = () => {
         [content.description1, countryCode, currentLang.lang]
     );
 
+    const getHeroImage = () => {
+        switch (countryCode) {
+            case 'AE':
+                return uaeImg;
+            case 'BE':
+                return eInvoiceHeroImg;
+            default:
+                return eInvoiceHeroImg;
+        }
+    };
+
     return (
         <>
             <section>
@@ -497,7 +509,7 @@ const Software: React.FC = () => {
                         {/* RIGHT IMAGE */}
                         <div className="flex-1 flex justify-center w-full">
                             <Image
-                                src={eInvoiceHeroImg}
+                                src={getHeroImage()}
                                 alt={content.imageAlt}
                                 width={591}
                                 height={380}

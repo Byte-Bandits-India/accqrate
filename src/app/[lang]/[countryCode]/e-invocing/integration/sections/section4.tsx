@@ -1,16 +1,30 @@
 "use client";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
-import { Choose} from "../data/Choose";
+import { Choose } from "../data/Choose";
 import { useParams } from "next/navigation";
 import T from "@/Components/T";
+import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
 
 export default function Section4() {
   const params = useParams();
   const countryCode = (params?.countryCode as string) || "sa";
   const lang = (params?.lang as string) || "en";
-  
+
   const data = Choose[countryCode as keyof typeof Choose] || Choose["sa"];
+
+  const getInvoiceMultipleImage = () => {
+    switch (countryCode) {
+      case 'be':
+        return belgiumInvoiceHero;
+      case 'pl':
+        return AssetPath.invoicing.invoiceMultiplePng;
+      case 'ae':
+        return AssetPath.invoicing.UAE_invoice_1;
+      default:
+        return AssetPath.invoicing.invoiceMultiplePng;
+    }
+  };
 
   return (
     <section className="py-16 md:py-20 px-6 md:px-8 lg:px-0 bg-[#F7F9FF]">
@@ -69,13 +83,13 @@ export default function Section4() {
         </div>
 
         {/* BOTTOM GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20 bg-[#ECEDFF] rounded-[30px]">
 
           {/* LEFT INVOICE IMAGE */}
           <div className="flex justify-center">
             {data.bottomLeftImage && (
               <Image
-                src={data.bottomLeftImage}
+                src={getInvoiceMultipleImage().src}
                 width={520}
                 height={420}
                 alt="Invoice Example"
@@ -85,9 +99,9 @@ export default function Section4() {
           </div>
 
           {/* RIGHT LIST */}
-          <div className="space-y-4 mt-4">
+          <div className="space-y-4 flex flex-col justify-center mt-4">
             {data.bottomRightItems.map((item, i) => (
-              <div key={i} className="flex items-start space-x-4">
+              <div key={i} className="flex items-center space-x-4">
                 <Image
                   src={AssetPath.integration.tick}
                   width={24}
