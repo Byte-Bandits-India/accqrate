@@ -473,6 +473,7 @@ import jonexImg from "@/Assets/images/jonex.png";
 import ssImg from "@/Assets/images/ss.png";
 import Zact from "@/Assets/images/integration/ZATCA-solution.png"
 import logoPeppol from "@/Assets/images/peppol.png"
+import middleEast from "@/Assets/images/blogs/midddleEast.png"
 
 // Home images
 import starOr from "@/Assets/images/home/Star-or.svg";
@@ -716,6 +717,7 @@ const AssetPath = {
     blogHeaderUae,
     blogHeaderPoland,
     blogHeaderBelgium,
+    middleEast,
     uae: {
       calVat,
       corporateTax: uaeCorporateTax,

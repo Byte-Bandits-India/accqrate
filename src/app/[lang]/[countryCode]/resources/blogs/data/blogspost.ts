@@ -506,7 +506,7 @@ const blogPosts: BlogPost[] = [
     id: 62,
     url: "MiddleEastEInvoicing",
     title: "E-Invoicing in the Middle East",
-    image: "/images/blogs/midddleEast.png",
+    image: AssetPath.blogs.middleEast.src,
     desc: "Across the Middle East, governments are moving decisively toward electronic invoicing as a foundation for modern tax administration and transparent commerce...",
     country: "KSA,JD,BH,OM,AE"
   },
