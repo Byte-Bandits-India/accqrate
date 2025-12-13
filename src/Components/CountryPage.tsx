@@ -1063,10 +1063,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </p>
 
                                         <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[13px] md:text-[14px] lg:text-[16px]">
-                                            <li><b><T>Natural-language actions:</T></b> <T>Ask, &quot;Show last month&apos;s receivables by region&quot;</T></li>
-                                            <li><b><T>Automations:</T></b> <T>Generate e-invoices, trigger approvals</T></li>
-                                            <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand</T></li>
-                                            <li><b><T>Assistive UX:</T></b> <T>Contextual help & guided workflows</T></li>
+                                            <li><b><T>Natural-language actions:</T></b> <T>Ask, “Show last month’s receivables by region” and get the answer, fast.</T></li>
+                                            <li><b><T>Automations:</T></b> <T>Generate e‑invoices, match POs, trigger approvals and alerts.</T></li>
+                                            <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand, and recommend next steps.</T></li>
+                                            <li><b><T>Assistive UX:</T></b> <T>Contextual help, data enrichment and guided workflows.</T></li>
                                         </ul>
                                     </div>
 

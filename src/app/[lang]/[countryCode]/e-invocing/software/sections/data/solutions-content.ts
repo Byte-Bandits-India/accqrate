@@ -529,7 +529,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Swift Peppol Onboarding',
-      desc: 'Get started with Belgiums e-invoicing mandate in minutes. Provide your company details, and Accqrate activates your Peppol-ready, EN 16931-compliant setup instantly for seamless B2B e-invoicing.',
+      desc: 'Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT–compliant, Peppol-ready setup instantly—fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.',
       image:AssetPath.integration.footer,
       sno: '03',
       index: 2,
