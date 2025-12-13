@@ -1,3 +1,5 @@
+import AssetPath from "@/AssetPath/AssetPath";
+
 interface BlogPost {
   id: number;
   url: string;
@@ -313,7 +315,7 @@ const blogPosts: BlogPost[] = [
     id: 39,
     url: "UAEeInvoicing",
     title: "E-Invoicing in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.eInvoicing.src,
     desc: "Key Requirements, Implementation Timeline and the Latest Regulatory Updates...",
     country: "AE"
   },
@@ -321,7 +323,7 @@ const blogPosts: BlogPost[] = [
     id: 40,
     url: "UAEvat2025",
     title: "VAT in the UAE: Rates, Thresholds, Exemptions and Compliance Rules for 2025",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.calVat.src,
     desc: "Value Added Tax has been a core element of the UAE’s tax framework since its introduction on 1 January 2018...",
     country: "AE"
   },
@@ -329,7 +331,7 @@ const blogPosts: BlogPost[] = [
     id: 41,
     url: "UAECorporateTax",
     title: "Corporate Tax in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.corporateTax.src,
     desc: "A Complete Guide to Rates, Scope, Compliance and the Domestic Minimum Top up Tax...",
     country: "AE"
   },
@@ -337,7 +339,7 @@ const blogPosts: BlogPost[] = [
     id: 42,
     url: "UAEVATReturnFiling",
     title: "How to File a VAT Return in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.vatReturn.src,
     desc: "Businesses that are registered for Value Added Tax in the UAE are required to submit VAT returns for every tax period assigned to them by the Federal Tax Authority...",
     country: "AE"
   },
@@ -345,7 +347,7 @@ const blogPosts: BlogPost[] = [
     id: 43,
     url: "UAEVATCalculation",
     title: "How to Calculate VAT in the UAE in 2025",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.vat.src,
     desc: "Calculating VAT in the United Arab Emirates is straightforward once you understand how the five percent rate applies to different types of transactions...",
     country: "AE"
   },
@@ -353,7 +355,7 @@ const blogPosts: BlogPost[] = [
     id: 44,
     url: "UAECorporateTaxFAQ",
     title: "UAE Corporate Tax 2025",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.corporateTax.src,
     desc: "This guide answers common questions about the UAE corporate tax regime, explains who is covered...",
     country: "AE"
   },
@@ -361,7 +363,7 @@ const blogPosts: BlogPost[] = [
     id: 45,
     url: "UAEVATInvoice",
     title: "VAT Invoice in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.vatInvoice.src,
     desc: "Value Added Tax has become an integral part of commercial operations in the United Arab Emirates...",
     country: "AE"
   },
@@ -369,7 +371,7 @@ const blogPosts: BlogPost[] = [
     id: 46,
     url: "UAEVATRateStructure",
     title: "VAT Rate Structure in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.vatRate.src,
     desc: "The Value Added Tax framework in the United Arab Emirates began on the first of January 2018 through Federal Decree Law No. 8 of 2017...",
     country: "AE"
   },
@@ -377,7 +379,7 @@ const blogPosts: BlogPost[] = [
     id: 47,
     url: "UAEVATRefund",
     title: "How to Claim a VAT Refund in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.vatRefund.src,
     desc: "Since the introduction of Value Added Tax in the United Arab Emirates in January 2018, several refund mechanisms...",
     country: "AE"
   },
@@ -385,7 +387,7 @@ const blogPosts: BlogPost[] = [
     id: 48,
     url: "UAEVATPenalties",
     title: "Penalties for Non Compliance Under UAE VAT",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.penalites.src,
     desc: "The introduction of Value Added Tax in the United Arab Emirates marked a major shift in how businesses record...",
     country: "AE"
   },
@@ -393,7 +395,7 @@ const blogPosts: BlogPost[] = [
     id: 49,
     url: "UAEVATComplete2025",
     title: "VAT in the UAE: Complete 2025 Guide to Rates, Registration, Exemptions and Compliance",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.vat.src,
     desc: "Value Added Tax has become a central part of the UAE’s fiscal system since its introduction in 2018...",
     country: "AE"
   },
@@ -401,7 +403,7 @@ const blogPosts: BlogPost[] = [
     id: 50,
     url: "UAEExciseTax",
     title: "Excise Tax in the UAE: Rates, Exemptions, Compliance Rules, and How the Tax Is Calculated",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.exciseTax.src,
     desc: "Excise tax has become an important element of the UAE’s modern tax system. Introduced to discourage the consumption of products that negatively affect public health or the environment...",
     country: "AE"
   },
@@ -409,7 +411,7 @@ const blogPosts: BlogPost[] = [
     id: 51,
     url: "UAEVATZeroRatedVsExempt",
     title: "Zero Rated versus Exempt Supplies in the UAE VAT System",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.zero.src,
     desc: "Understanding whether a supply is zero rated or exempt is one of the most important VAT decisions a business has to make...",
     country: "AE"
   },
@@ -417,7 +419,7 @@ const blogPosts: BlogPost[] = [
     id: 52,
     url: "UAEMoFAAttestation",
     title: "MoFA Attestation in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.mofa.src,
     desc: "Document attestation by the Ministry of Foreign Affairs is a mandatory requirement across many legal, immigration and commercial processes in the United Arab Emirates...",
     country: "AE"
   },
@@ -425,7 +427,7 @@ const blogPosts: BlogPost[] = [
     id: 53,
     url: "PeppolCTCUAE",
     title: "The Peppol CTC Model in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.ctc.src,
     desc: "The UAE’s transition toward mandatory e-invoicing marks one of its most significant digital taxation reforms to date. By selecting the Peppol Continuous Transaction Controls model as its national framework...",
     country: "AE"
   },
@@ -433,7 +435,7 @@ const blogPosts: BlogPost[] = [
     id: 54,
     url: "UAETaxCreditNotes",
     title: "UAE Tax Credit Notes",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.creditNotes.src,
     desc: "Tax credit notes play a central role in the UAE VAT ecosystem. They ensure that errors, returns and adjustments are documented correctly without compromising compliance, revenue reporting...",
     country: "AE"
   },
@@ -441,7 +443,7 @@ const blogPosts: BlogPost[] = [
     id: 55,
     url: "UAEDigitalSignatureCertificate",
     title: "Digital Signature Certificate in the UAE",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.digital.src,
     desc: "Digital transformation in the UAE has accelerated rapidly, and the shift toward mandatory e-invoicing by 2026 makes Digital Signature Certificates one of the core identity...",
     country: "AE"
   },
@@ -449,7 +451,7 @@ const blogPosts: BlogPost[] = [
     id: 56,
     url: "UAE_TRN_Verification",
     title: "TRN Verification in UAE: A Complete and Practical Guide",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.trn.src,
     desc: "A Tax Registration Number, commonly known as a TRN, is one of the most essential identifiers for any VAT-registered business in the United Arab Emirates...",
     country: "AE"
   },
@@ -457,7 +459,7 @@ const blogPosts: BlogPost[] = [
     id: 57,
     url: "UAE_Excise_Registration",
     title: "Excise Registration in the UAE: Complete, Updated Guide for Businesses",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: AssetPath.blogs.uae.registration.src,
     desc: "Excise tax in the United Arab Emirates is a regulatory tool designed to curb the consumption of goods that have negative health or environmental impacts...",
     country: "AE"
   },
@@ -504,7 +506,7 @@ const blogPosts: BlogPost[] = [
     id: 62,
     url: "MiddleEastEInvoicing",
     title: "E-Invoicing in the Middle East",
-    image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
+    image: "/images/blogs/midddleEast.png",
     desc: "Across the Middle East, governments are moving decisively toward electronic invoicing as a foundation for modern tax administration and transparent commerce...",
     country: "KSA,JD,BH,OM,AE"
   },

@@ -202,6 +202,32 @@ import zatcaPrepayment from "@/Assets/images/blogs/zatca-prepayment.webp";
 import zatcaIntegrationMicrosoft from "@/Assets/images/blogs/zatcaintegration-with-microsoft365.webp";
 import zatcaIntegrationOracle from "@/Assets/images/blogs/zatcaintegration-with-oracle.webp";
 
+//uae invoicing Blogs
+import calVat from "@/Assets/images/blogs/uae/calVat.png";
+import uaeCorporateTax from "@/Assets/images/blogs/uae/corporateTax.png";
+import uaeCorporateTax2025 from "@/Assets/images/blogs/uae/corporateTax2025.png";
+import uaeCreditNotes from "@/Assets/images/blogs/uae/creditNotes.png";
+import uaeCtc from "@/Assets/images/blogs/uae/ctc.png";
+import uaeDigital from "@/Assets/images/blogs/uae/digital.png";
+import uaeEInvoicing from "@/Assets/images/blogs/uae/E-Invoicing.png";
+import uaeExciseTax from "@/Assets/images/blogs/uae/exciseTax.png";
+import uaeMofa from "@/Assets/images/blogs/uae/mofa.png";
+import uaePenalites from "@/Assets/images/blogs/uae/penalites.png";
+import uaeRegistration from "@/Assets/images/blogs/uae/registration.png";
+import uaeTrn from "@/Assets/images/blogs/uae/trn.png";
+import uaeVat from "@/Assets/images/blogs/uae/vat.png";
+import uaeVatInUae from "@/Assets/images/blogs/uae/vatInUae.png";
+import uaeVatInvoice from "@/Assets/images/blogs/uae/vatInvoice.png";
+import uaeVatRate from "@/Assets/images/blogs/uae/vatRate.png";
+import uaeVatRefund from "@/Assets/images/blogs/uae/vatRefund.png";
+import uaeVatReturn from "@/Assets/images/blogs/uae/vatReturn.png";
+import uaeZero from "@/Assets/images/blogs/uae/zero.png";
+
+//Poland Invoicing Blogs
+import b2b from "@/Assets/images/blogs/poland/b2b.png";
+import ksef2 from "@/Assets/images/blogs/poland/ksef2.0.png";
+import ksefInPoland from "@/Assets/images/blogs/poland/ksefInPoland.png";
+
 // ==================== INDUSTRIES IMPORTS ====================
 import aerospaceDefense from "@/Assets/images/industries/aerospace-defense.webp";
 import automobile from "@/Assets/images/industries/automobile.webp";
@@ -690,6 +716,32 @@ const AssetPath = {
     blogHeaderUae,
     blogHeaderPoland,
     blogHeaderBelgium,
+    uae: {
+      calVat,
+      corporateTax: uaeCorporateTax,
+      corporateTax2025: uaeCorporateTax2025,
+      creditNotes: uaeCreditNotes,
+      ctc: uaeCtc,
+      digital: uaeDigital,
+      eInvoicing: uaeEInvoicing,
+      exciseTax: uaeExciseTax,
+      mofa: uaeMofa,
+      penalites: uaePenalites,
+      registration: uaeRegistration,
+      trn: uaeTrn,
+      vat: uaeVat,
+      vatInUae: uaeVatInUae,
+      vatInvoice: uaeVatInvoice,
+      vatRate: uaeVatRate,
+      vatRefund: uaeVatRefund,
+      vatReturn: uaeVatReturn,
+      zero: uaeZero,
+    },
+    poland: {
+      b2b,
+      ksef2,
+      ksefInPoland,
+    },
   },
 
   // INDUSTRIES SECTION
