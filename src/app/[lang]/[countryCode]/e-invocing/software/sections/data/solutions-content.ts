@@ -529,7 +529,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Swift Peppol Onboarding',
-      desc: 'Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT–compliant, Peppol-ready setup instantly—fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.',
+      desc: 'Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT compliant, Peppol-ready setup instantly fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.',
       image:AssetPath.integration.footer,
       sno: '03',
       index: 2,
@@ -594,7 +594,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Full Support for FTA E-Invoicing Compliance Reviews',
-      desc: 'Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant—before, during, and after FTA audits.',
+      desc: 'Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant before, during, and after FTA audits.',
       image: AssetPath.integration.footer,
       sno: '11',
       index: 10,
