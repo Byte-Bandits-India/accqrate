@@ -14,7 +14,7 @@ function UAEVATRefund() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.eInvoicingProcess}
+                    src={AssetPath.blogs.uae.vatRefund}
                     alt="UAE VAT Refund Guide for Businesses and Tourists"
                     fill
                     className="object-cover rounded-lg"

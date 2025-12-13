@@ -14,7 +14,7 @@ function PeppolCTCUAE() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.automotiveIndustry}
+                    src={AssetPath.blogs.uae.ctc}
                     alt="UAE Peppol CTC E-Invoicing Model"
                     fill
                     className="object-cover rounded-lg"

@@ -14,7 +14,7 @@ function UAEVATRateStructure() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.automotiveIndustry}
+                    src={AssetPath.blogs.uae.vatRate}
                     alt="UAE VAT Rate Structure Complete Guide"
                     fill
                     className="object-cover rounded-lg"

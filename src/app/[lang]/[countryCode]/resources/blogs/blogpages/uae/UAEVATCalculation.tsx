@@ -14,7 +14,7 @@ function UAEVATCalculation() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.corporateTax} // Add this image to your AssetPath
+                    src={AssetPath.blogs.uae.calVat} // Add this image to your AssetPath
                     alt="UAE VAT Calculation Guide 2025"
                     fill
                     className="object-cover rounded-lg"

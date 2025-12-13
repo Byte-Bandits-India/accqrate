@@ -14,7 +14,7 @@ function UAEVATComplete2025() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.creditNotes}
+                    src={AssetPath.blogs.uae.vat}
                     alt="UAE VAT Complete 2025 Comprehensive Guide"
                     fill
                     className="object-cover rounded-lg"

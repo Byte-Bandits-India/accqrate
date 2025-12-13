@@ -14,7 +14,7 @@ function UAEMoFAAttestation() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.goodsReceipts}
+                    src={AssetPath.blogs.uae.mofa}
                     alt="UAE MoFA Attestation Complete Guide"
                     fill
                     className="object-cover rounded-lg"

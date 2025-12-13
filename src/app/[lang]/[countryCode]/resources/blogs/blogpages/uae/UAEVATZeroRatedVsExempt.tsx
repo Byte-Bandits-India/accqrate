@@ -14,7 +14,7 @@ function UAEVATZeroRatedVsExempt() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.eInvoicingProcess}
+                    src={AssetPath.blogs.uae.zero}
                     alt="UAE VAT Zero Rated vs Exempt Supplies Guide"
                     fill
                     className="object-cover rounded-lg"

@@ -14,7 +14,7 @@ function UAEVATInvoice() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.eInvoicingProcess}
+                    src={AssetPath.blogs.uae.vatInvoice}
                     alt="UAE VAT Invoice Compliance Guide"
                     fill
                     className="object-cover rounded-lg"

@@ -14,7 +14,7 @@ function UAE_TRN_Verification() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.creditNotesPng}
+                    src={AssetPath.blogs.uae.trn}
                     alt="UAE TRN Verification Guide"
                     fill
                     className="object-cover rounded-lg"

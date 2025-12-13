@@ -14,7 +14,7 @@ function UAEeInvoicing() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.creditNotes}
+                    src={AssetPath.blogs.uae.eInvoicing}
                     alt="UAE E-Invoicing System Requirements"
                     fill
                     className="object-cover rounded-lg"

@@ -14,7 +14,7 @@ function UAEVATPenalties() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.einvoicingOmanPng}
+                    src={AssetPath.blogs.uae.penalites}
                     alt="UAE VAT Penalties and Non-Compliance Guide"
                     fill
                     className="object-cover rounded-lg"

@@ -14,7 +14,7 @@ function UAECorporateTax() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.automotiveIndustry}
+                    src={AssetPath.blogs.uae.corporateTax}
                     alt="UAE Corporate Tax Guide 2025"
                     fill
                     className="object-cover rounded-lg"

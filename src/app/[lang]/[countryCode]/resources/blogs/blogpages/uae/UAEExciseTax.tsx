@@ -14,7 +14,7 @@ function UAEExciseTax() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.attaininZATCA}
+                    src={AssetPath.blogs.uae.exciseTax}
                     alt="UAE Excise Tax Complete Guide"
                     fill
                     className="object-cover rounded-lg"

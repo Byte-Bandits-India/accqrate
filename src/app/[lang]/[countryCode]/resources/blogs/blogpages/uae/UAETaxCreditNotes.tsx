@@ -14,7 +14,7 @@ function UAETaxCreditNotes() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.adaptingBusinessZATCA}
+                    src={AssetPath.blogs.uae.creditNotes}
                     alt="UAE Tax Credit Notes Guide"
                     fill
                     className="object-cover rounded-lg"

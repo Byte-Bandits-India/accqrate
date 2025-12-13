@@ -14,7 +14,7 @@ function UAEVATReturnFiling() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.creditnote2}
+                    src={AssetPath.blogs.uae.vatReturn}
                     alt="UAE VAT Return Filing Guide"
                     fill
                     className="object-cover rounded-lg"

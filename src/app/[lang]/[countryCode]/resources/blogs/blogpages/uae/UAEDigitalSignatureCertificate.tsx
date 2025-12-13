@@ -14,7 +14,7 @@ function UAEDigitalSignatureCertificate() {
         >
             <div className="relative w-full h-[400px] mb-6">
                 <Image
-                    src={AssetPath.blogs.debitNotes}
+                    src={AssetPath.blogs.uae.digital}
                     alt="Digital Signature Certificate Guide UAE"
                     fill
                     className="object-cover rounded-lg"

@@ -85,7 +85,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
       'Mandate': AssetPath.blogs.mandate,
     };
 
-    return imageMap[filename] || getDefaultHeaderByCountry();
+    return imageMap[filename] || img;
   };
 
   // Random blog posts
