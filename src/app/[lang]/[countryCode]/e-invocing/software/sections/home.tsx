@@ -40,7 +40,7 @@ const countryConfig = {
         authority: "ZATCA",
         badgeText: "PEPPOL Certified E-invoicing Software for UAE",
         title: "Integrate With PEPPOL Network.",
-        description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.",
+        description1: "UAE Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.",
         description2: "",
         ctaText: "Get 30 days free trial",
         countryName: "UAE",
