@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "ACQRATE",
+  title: "ACCQRATE",
   description: "Business and Retail Solutions",
 };
 
