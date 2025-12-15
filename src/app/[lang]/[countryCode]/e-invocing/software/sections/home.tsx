@@ -36,8 +36,8 @@ const countryConfig = {
         imageAlt: "Accqrate newsletter illustration"
     },
     "AE": {
-        name: "Saudi Arabia",
-        authority: "ZATCA",
+        name: "UAE",
+        authority: "FTA",
         badgeText: "PEPPOL Certified E-invoicing Software for UAE",
         title: "Integrate With PEPPOL Network.",
         description1: "UAE Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.",
