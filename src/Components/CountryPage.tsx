@@ -1198,6 +1198,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         width={520}
                                         height={420}
                                         className="w-full h-auto object-contain"
+                                        unoptimized
                                     />
                                     <button
                                         className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
