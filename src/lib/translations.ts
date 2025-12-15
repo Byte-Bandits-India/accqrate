@@ -4,6 +4,7 @@
 import * as belgium from "./language/belgium";
 import * as poland from "./language/poland";
 import * as saudi from "./language/saudi";
+import * as uae from "./language/uae";
 
 // Keep a minimal runtime language state for consumers that import from here
 export const currentLang: { lang: string } = { lang: "en" };
@@ -20,6 +21,9 @@ export const setLanguage = (l: string) => {
   try {
     (saudi as any).setLanguage?.(l);
   } catch (e) {}
+  try {
+    (uae as any).setLanguage?.(l);
+  } catch (e) {}
 };
 
 // t(text, countryCode?) will delegate to the best fit translator based on country code.
@@ -35,8 +39,13 @@ export const t = (text: string, countryCode?: string): string => {
     return (poland as any).t ? (poland as any).t(text) : text;
   }
 
-  // Arabic / GCC countries: delegate to the saudi module which provides Arabic translations
-  if (["SA", "AE", "OM", "BH", "JD"].includes(cc)) {
+  // UAE: use the UAE-specific translator
+  if (cc === "AE") {
+    return (uae as any).t ? (uae as any).t(text) : text;
+  }
+
+  // Arabic / other GCC countries: delegate to the saudi module which provides Arabic translations
+  if (["SA", "OM", "BH", "JD"].includes(cc)) {
     return (saudi as any).t ? (saudi as any).t(text) : text;
   }
 
