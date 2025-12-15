@@ -37,7 +37,7 @@ const Software = () => {
             </p>
 
             <h1 className="text-fluid-h2 lg:text-[38px] leading-tight font-medium text-black">
-              <T lang={lang} countryCode={countryCode}>{content.title}</T>{" "}
+              <T lang={lang} countryCode={countryCode}>{content.title}</T> {" "}
               <span style={{ color: content.highlightColor }}>
                 <T lang={lang} countryCode={countryCode}>{content.highlight}</T>
               </span>
