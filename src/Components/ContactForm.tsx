@@ -106,6 +106,33 @@ const ContactFormPage = () => {
         }
       }
     },
+     AE: { 
+      title: "Get in touch with us for more information.",
+      description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
+      cards: {
+        card1: {
+          badge: "E-INVOICING",
+          title: "Buy E-invoicing Software",
+          description: "Seeking cutting-edge E-invoicing software ready for UAE? Let us find the perfect pricing fit for you.",
+          buttonText: "Chat With Us",
+          module: "E-invoicing Standalone Software"
+        },
+        card2: {
+          badge: "INTEGRATION",
+          title: "Integrate your ERP with compliance systems",
+          description: "Peppol Ready e-invoing? Our experts have got your back.",
+          buttonText: "Talk to an Expert",
+          module: "E-invoicing API Integration Software"
+        },
+        card3: {
+          badge: "PARTNERS",
+          title: "Become our Trusted Partner",
+          description: "Eager to streamline E-invoicing Compliance in UAE for your clientele and expand your horizons? Let us collaborate.",
+          buttonText: "Partner with Us",
+          module: "Partner with Us"
+        }
+      }
+    },
     // Default for other countries
     DEFAULT: {
       title: "Get in touch with us for more information.",
@@ -138,7 +165,7 @@ const ContactFormPage = () => {
 
   // Get card content based on country code
   const getCountryCardContent = () => {
-    if (['BE', 'PL',].includes(countryCode)) {
+    if (['BE', 'PL','AE'].includes(countryCode)) {
       return countryCardContent[countryCode];
     } else {
       return countryCardContent.DEFAULT;
@@ -370,6 +397,7 @@ const ContactFormPage = () => {
 };
 
 export default ContactFormPage;
+
 
 
 
