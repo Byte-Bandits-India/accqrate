@@ -508,15 +508,15 @@ const blogPosts: BlogPost[] = [
     title: "E-Invoicing in the Middle East",
     image: AssetPath.blogs.middleEast.src,
     desc: "Across the Middle East, governments are moving decisively toward electronic invoicing as a foundation for modern tax administration and transparent commerce...",
-    country: "KSA,JD,BH,OM,AE"
+    country: "KSA"
   },
   {
     id: 63,
     url: "BahrainEInvoicing",
-    title: "Bahrain: Accelerating VAT Integrity Through Digital Invoicing",
+    title: "Accelerating VAT Integrity Through Digital Invoicing",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "Bahrain’s exploration of an electronic invoicing regime marks a natural progression after its VAT introduction in 2019 and the rate...",
-    country: "KSA,JD,BH,OM,AE"
+    country: "BH"
   },
   {
     id: 64,
@@ -524,7 +524,7 @@ const blogPosts: BlogPost[] = [
     title: "Egypt: A Mature, Phased Digital Tax Transformation",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "Egypt continues to lead regional transformation efforts with a comprehensive national mandate that spans business to business...",
-    country: "KSA,JD,BH,OM,AE"
+    country: ""
   },
   {
     id: 65,
@@ -532,7 +532,7 @@ const blogPosts: BlogPost[] = [
     title: "Jordan: Expansion of JoFotara and Mandatory Phase Two",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "Jordan’s national invoicing system, JoFotara, has transitioned from initial rollout to compulsory use under Phase Two...",
-    country: "KSA,JD,BH,OM,AE"
+    country: "JD"
   },
   {
     id: 66,
@@ -540,7 +540,7 @@ const blogPosts: BlogPost[] = [
     title: "Oman: Infrastructure Reboot and the Five Corner Vision",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "Oman has renewed its electronic invoicing agenda by entering a strategic development partnership that will rebuild the national infrastructure required for compliance...",
-    country: "KSA,JD,BH,OM,AE"
+    country: "OM"
   },
   {
     id: 67,
@@ -548,23 +548,23 @@ const blogPosts: BlogPost[] = [
     title: "Saudi Arabia: The Region’s Benchmark for Real Time Digital Tax Controls",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "Saudi Arabia’s FATOORA system remains the most advanced mandate in the region. The Zakat, Tax and Customs Authority requires structured XML invoices...",
-    country: "KSA,JD,BH,OM,AE"
+    country: "KSA"
   },
   {
     id: 68,
     url: "UAEInvoicing",
-    title: "United Arab Emirates: Preparing for a PEPPOL Driven E-Billing System",
+    title: "Preparing for a PEPPOL Driven E-Billing System",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "The United Arab Emirates is preparing a nationwide electronic invoicing framework built on a decentralised model inspired by PEPPOL’s Continuous Transaction Control...",
-    country: "KSA,JD,BH,OM,AE"
+    country: "AE"
   },
   {
     id: 69,
     url: "TurkeyEInvoicing",
-    title: "Turkey: A Long Standing Digital Pioneer",
+    title: "A Long Standing Digital Pioneer",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "Turkey remains one of the earliest adopters of electronic invoicing worldwide. Its mature ecosystem spans business to business, business to government...",
-    country: "KSA,JD,BH,OM,AE"
+    country: ""
   },
   {
     id: 70,
@@ -572,7 +572,7 @@ const blogPosts: BlogPost[] = [
     title: "A New Era for Middle Eastern Businesses",
     image: "/images/blogs/einvoicing-in-the-sultanate-of-oman.png",
     desc: "The expanding network of national electronic invoicing mandates signals a regional shift toward unified digital tax ecosystems...",
-    country: "KSA,JD,BH,OM,AE"
+    country: "AE"
   },
 ];
 

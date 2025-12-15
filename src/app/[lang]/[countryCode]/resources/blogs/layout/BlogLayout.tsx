@@ -129,7 +129,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
   }, [countryCode, lang]);
 
   const breadcrumbItems = [
-    { title: "Home", href: "/" },
+    { title: "Home", href: `/${lang}/${countryCode}` },
     { title: "Blogs", href: `/${lang}/${countryCode}/resources/blogs` },
     { title: pageTitle },
   ];
