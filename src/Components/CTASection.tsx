@@ -109,7 +109,7 @@ const CTASection = () => {
             <T>{content.description1}</T>
           </p>
 
-          <p className="text-sm text-white/80 leading-tight xl:max-w-[773px] ">
+          <p className="text-fluid-small text-white/80 leading-tight xl:max-w-[773px] ">
             <T>{content.description2}</T>
           </p>
 
@@ -141,7 +141,7 @@ const CTASection = () => {
                   className="h-4 w-4"
                 />
               </div>
-              <div className="flex items-center gap-2 text-white/90 text-sm">
+              <div className="flex items-center gap-2 text-white/90 text-fluid-small">
                 <span><T>No complexity, Subscribe and use</T></span>
               </div>
             </div>

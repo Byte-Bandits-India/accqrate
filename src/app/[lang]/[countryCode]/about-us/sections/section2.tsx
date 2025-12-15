@@ -33,12 +33,12 @@ export default function Section2() {
 
           {/* Right Content */}
           <div className="flex flex-col text-[14px] md:text-[18px] leading-relaxed w-full overflow-hidden">
-            
+
             <div className="break-words">
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
                 <T lang={lang} countryCode={countryCode}>Built for Belgium’s PEPPOL & FPS Finance Mandate</T>
               </h3>
-              <p className="text-[14px] md:text-[16px] break-words">
+              <p className="text-fluid-small break-words">
                 <T lang={lang} countryCode={countryCode}>Accqrate brings a Belgium-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.</T>
               </p>
             </div>
@@ -47,7 +47,7 @@ export default function Section2() {
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
                 <T lang={lang} countryCode={countryCode}>European Precision, Global Scalability</T>
               </h3>
-              <p className="text-[14px] md:text-[16px] break-words">
+              <p className="text-fluid-small break-words">
                 <T lang={lang} countryCode={countryCode}>With Swiss-led engineering and global deployment experience across 30+ sectors, Accqrate delivers an enterprise-grade platform capable of handling Belgium’s upcoming B2B rollout and multi-country operations inside and outside the EU.</T>
               </p>
             </div>
@@ -56,7 +56,7 @@ export default function Section2() {
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
                 <T lang={lang} countryCode={countryCode}>Compliance Made Simple</T>
               </h3>
-              <p className="text-[14px] md:text-[16px] break-words">
+              <p className="text-fluid-small break-words">
                 <T lang={lang} countryCode={countryCode}>Accqrate combines automation, AI-driven validations, and standardized interoperability to make compliance intuitive, predictable, and scalable for companies of all sizes.</T>
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function Section2() {
         </div>
 
         {/* ---------------------- SECTION 2: Our Mission ---------------------- */}
-        
+
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
           {/* Left Content */}
@@ -78,7 +78,7 @@ export default function Section2() {
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
                 <T lang={lang} countryCode={countryCode}>Modernizing Europe’s E-Invoicing & Digital Tax Landscape</T>
               </h3>
-              <p className="text-[14px] md:text-[16px] break-words">
+              <p className="text-fluid-small break-words">
                 <T lang={lang} countryCode={countryCode}>We empower businesses with technology that simplifies PEPPOL connectivity, digital reporting, VAT oversight, and multi-entity governance.</T>
               </p>
             </div>
@@ -87,7 +87,7 @@ export default function Section2() {
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
                 <T lang={lang} countryCode={countryCode}>Accelerating Digital Adoption</T>
               </h3>
-              <p className="text-[14px] md:text-[16px] break-words">
+              <p className="text-fluid-small break-words">
                 <T lang={lang} countryCode={countryCode}>Accqrate eliminates the traditional complexities of ERP and e-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability.</T>
               </p>
             </div>

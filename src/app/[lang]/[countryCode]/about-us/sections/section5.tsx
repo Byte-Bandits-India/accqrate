@@ -32,7 +32,7 @@ const Section5 = () => {
 
                     {/* Right: Description */}
                     <div className="flex justify-center lg:justify-start">
-                        <p className="text-[14px] md:text-[16px]  leading-relaxed max-w-[750px]">
+                        <p className="text-fluid-small  leading-relaxed max-w-[750px]">
                             <T>
                                 A global team of engineers, tax experts, and solution architects
                                 operates across Switzerland, India, MENA, and Europe. Our Belgium

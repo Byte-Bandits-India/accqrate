@@ -138,7 +138,7 @@ const ContactFormPage = () => {
 
   // Get card content based on country code
   const getCountryCardContent = () => {
-    if (['BE', 'PL', ].includes(countryCode)) {
+    if (['BE', 'PL',].includes(countryCode)) {
       return countryCardContent[countryCode];
     } else {
       return countryCardContent.DEFAULT;
@@ -163,43 +163,43 @@ const ContactFormPage = () => {
           <h2 className="text-fluid-body lg:text-[16px] font-medium text-[#000000] mb-2">
             <T lang={lang} countryCode={countryCode}>Our team is here to help</T>
           </h2>
-          <p className="text-[#FF6E3E] text-fluid-small font-medium lg:text-[16px] mb-2">
+          <p className="text-[#FF6E3E] text-fluid-small font-medium mb-2">
             Contact@accqrate-erp.com
           </p>
 
           {/* Office Locations Section */}
-<div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
-  <div className="">
-    {/* Call Us Label */}
-    <p className="text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed">
-      <T>Call Us</T>
-    </p>
+          <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
+            <div className="">
+              {/* Call Us Label */}
+              <p className="text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed">
+                <T>Call Us</T>
+              </p>
 
-    {/* Phone Timing */}
-    <p className="text-[12px] pb-2 text-[#000000] font-normal leading-relaxed">
-    <T>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
-    </p>
+              {/* Phone Timing */}
+              <p className="text-[12px] pb-2 text-[#000000] font-normal leading-relaxed">
+                <T>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
+              </p>
 
-    {/* Phone Section with Icon */}
-    <div className="flex items-center gap-2 pb-2 text-[#1F3FBF]">
-      <PhoneCall className="w-4 h-4" />
-      <span className="text-[16px] font-medium leading-relaxed">
-        +41 76 475 36 65
-      </span>
-    </div>
+              {/* Phone Section with Icon */}
+              <div className="flex items-center gap-2 pb-2 text-[#1F3FBF]">
+                <PhoneCall className="w-4 h-4" />
+                <span className="text-[16px] font-medium leading-relaxed">
+                  +41 76 475 36 65
+                </span>
+              </div>
 
-    {/* Office Locations Title */}
-    <h3 className="text-[#1F3FBF] font-semibold text-[20px]">
-  <span className="text-black">
-    <T>Our</T>
-  </span>{" "}
-  <T>Office</T>{" "}
-  <span className="text-black">
-    <T>Locations</T>
-  </span>
-</h3>
+              {/* Office Locations Title */}
+              <h3 className="text-[#1F3FBF] font-semibold text-[20px]">
+                <span className="text-black">
+                  <T>Our</T>
+                </span>{" "}
+                <T>Office</T>{" "}
+                <span className="text-black">
+                  <T>Locations</T>
+                </span>
+              </h3>
 
-  </div>
+            </div>
 
 
             <div className="bg-white rounded-xl p-4 space-y-6 shadow-sm">
@@ -215,7 +215,7 @@ const ContactFormPage = () => {
 
                 <div>
                   <p className="text-sm text-[#9a8e9e] underline leading-relaxed">
-                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br/>CH-4052 Basel <br/> Switzerland</T>
+                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br />CH-4052 Basel <br /> Switzerland</T>
                   </p>
                 </div>
               </div>
@@ -276,7 +276,7 @@ const ContactFormPage = () => {
 
         {/* Right Section - Cards with Modal Triggers */}
         <div className="mt-12">
-          <h2 className="max-w-[785px]"><T lang={lang} countryCode={countryCode}>{cardContent.description}</T></h2>
+          <h2 className="max-w-[785px] text-fluid-body"><T lang={lang} countryCode={countryCode}>{cardContent.description}</T></h2>
           <div className="bg-[#F6F7FF] py-12">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Card 1 */}
@@ -285,11 +285,11 @@ const ContactFormPage = () => {
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.badge}</T>
                 </span>
 
-                <h3 className="text-xl font-bold mt-4 text-gray-900">
+                <h3 className="font-bold mt-4 text-fluid-body text-gray-900">
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.title}</T>
                 </h3>
 
-                <p className="text-gray-500 mt-2">
+                <p className="text-gray-500 text-fluid-small mt-2">
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.description}</T>
                 </p>
 
@@ -307,11 +307,11 @@ const ContactFormPage = () => {
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.badge}</T>
                 </span>
 
-                <h3 className="text-xl font-bold mt-4 text-gray-900">
+                <h3 className="font-bold mt-4 text-fluid-body text-gray-900">
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.title}</T>
                 </h3>
 
-                <p className="text-gray-500 mt-2">
+                <p className="text-gray-500 text-fluid-small mt-2">
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.description}</T>
                 </p>
 
@@ -338,11 +338,11 @@ const ContactFormPage = () => {
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.badge}</T>
                 </span>
 
-                <h3 className="text-xl font-bold mt-4 text-gray-900">
+                <h3 className="text-fluid-body font-bold mt-4 text-gray-900">
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.title}</T>
                 </h3>
 
-                <p className="text-gray-500 mt-2">
+                <p className="text-gray-500 text-fluid-small mt-2">
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.description}</T>
                 </p>
 

@@ -43,10 +43,10 @@ export default function Section3() {
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2016</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
+                <h3 className="font-semibold text-fluid-body xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Iteron AG: High-End Technology Consultancy</T>
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                <p className="text-gray-700 text-fluid-small mt-2 leading-relaxed xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Iteron AG begins operations in Switzerland, delivering advanced technology consulting across Europe. From enterprise SaaS to blockchain-based solutions, the company lays the groundwork for the modern digital compliance and e-invoicing platforms that would follow.</T>
                 </p>
               </div>
@@ -75,10 +75,10 @@ export default function Section3() {
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2020</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
+                <h3 className="font-semibold text-fluid-body xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Accqrate Global Platform Initiated</T>
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                <p className="text-gray-700 text-fluid-small mt-2 leading-relaxed xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Accqrate emerges as a unified ERP and E-Invoicing platform engineered for high-compliance jurisdictions, multi-country operations, and enterprise-level digital transformation.</T>
                 </p>
               </div>
@@ -98,10 +98,10 @@ export default function Section3() {
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2021</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
+                <h3 className="font-semibold text-fluid-body xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>E-Invoicing Launch Across Regulated Markets</T>
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                <p className="text-gray-700 text-fluid-small mt-2 leading-relaxed xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Accqrate's engine is launched in the Kingdom of Belgium, establishing direct integration with PEPPOL and marking the platform's entry into regulated tax ecosystems.</T>
                 </p>
               </div>
@@ -131,10 +131,10 @@ export default function Section3() {
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2022</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
+                <h3 className="font-semibold text-fluid-body xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Expansion of API-First Integrations</T>
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                <p className="text-gray-700 text-fluid-small mt-2 leading-relaxed xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Accqrate strengthens its integration layer with certified connectors and toolkits for SAP, Oracle, Microsoft Dynamics and major ERP/POS platforms.</T>
                 </p>
               </div>
@@ -154,10 +154,10 @@ export default function Section3() {
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2023</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
+                <h3 className="font-semibold text-fluid-body xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>MNC Deployments Across MENA, ASEAN & EU</T>
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                <p className="text-gray-700 text-fluid-small mt-2 leading-relaxed xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Accqrate supports multi-entity deployments, processing millions of monthly transactions across global enterprises with assured compliance.</T>
                 </p>
               </div>
@@ -187,10 +187,10 @@ export default function Section3() {
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2024</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
+                <h3 className="font-semibold text-fluid-body xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Belgium & EU Compliance Acceleration</T>
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                <p className="text-gray-700 text-fluid-small mt-2 leading-relaxed xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Accqrate launches its Belgium PEPPOL engine with Mercurius interoperability and achieves full readiness for ViDA-aligned digital reporting.</T>
                 </p>
               </div>
@@ -210,10 +210,10 @@ export default function Section3() {
                 <div className="md:hidden mb-2">
                   <span className="text-[32px] font-bold">2025</span>
                 </div>
-                <h3 className="font-semibold text-[14px] md:text-[18px] xl:w-[479px]">
+                <h3 className="font-semibold text-fluid-body xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Enterprise-Grade Automation & AI Validation Engine</T>
                 </h3>
-                <p className="text-gray-700 text-[12px] md:text-[16px] mt-2 leading-relaxed xl:w-[479px]">
+                <p className="text-gray-700 text-fluid-small mt-2 leading-relaxed xl:w-[479px]">
                   <T lang={lang} countryCode={countryCode}>Accqrate introduces AccelerAI, a sophisticated automation layer for real-time compliance checks, anomaly detection, VAT reconciliation, and cross-border reporting.</T>
                 </p>
               </div>
