@@ -111,7 +111,7 @@ const Section1 = () => {
         mu: { flag: AssetPath.header.language.mauritius, code: "MU", name: "Mauritius", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         jd: { flag: AssetPath.header.language.jordan, code: "JD", name: "Jordan", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         be: { flag: AssetPath.header.language.belgium, code: "BE", name: "Belgium", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by leading Belgian organisations' },
-        pl: { flag: AssetPath.header.language.poland, code: "PL", name: "Poland", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by Poland\'s businesses' },
+        pl: { flag: AssetPath.header.language.poland, code: "PO", name: "Poland", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by Poland\'s businesses' },
     };
 
     const currentCountry = countryMap[countryCode] || countryMap.sa;
@@ -225,8 +225,8 @@ const Section1 = () => {
             ]
         },
         pl: {
-            whyAccqrateTitle: "Compliant with Poland’s Mandatory B2B E-Invoicing Regulation",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with Poland’s KSeF system",
+            whyAccqrateTitle: "Compliant with Poland\'s Mandatory B2B E-Invoicing Regulation",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with Poland\'s KSeF system",
             headingDescription: "Phase 1 & 2 Requirements",
             heroDescription: "Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
@@ -234,20 +234,20 @@ const Section1 = () => {
             cards: [
                 {
                     title: "Full Compliance with Poland's",
-                    subTitle: " E-Invoicing Mandate",
+                    subTitle: "KSeF E-Invoicing System",
                     description:
-                        "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Poland’s evolving regulatory framework.",
+                        "Accqrate delivers FA(3) XML-compliant structured e-invoices with seamless KSeF integration, ensuring secure submission, standardized processing, and continuous alignment with Poland's evolving regulatory framework.",
                 },
                 {
-                    title: "Future-Ready for ViDA",
-                    subTitle: "(VAT in the Digital Age)",
+                    title: "Future-Ready for EU Standards",
+                    subTitle: "(ViDA and Peppol)",
                     description:
-                        "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements",
+                        "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
                 },
                 {
                     title: "Effortless E-Invoicing Automation",
                     description:
-                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Polish compliance without manual intervention.",
+                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to KSeF submission, ensuring complete Polish compliance without manual intervention.",
                 },
                 {
                     title: "Specialized Support and Implementation Expertise",
@@ -304,7 +304,7 @@ const Section1 = () => {
                 {
                     title: "One Platform for Global E-Invoicing",
                     description: "",
-                    listItems: ['Accqrate enables businesses to manage e-invoicing across UAE, GCC, EU, and other regulated markets from one platform.', ' Generate, validate, transmit, and archive compliant e-invoices globally with a unified, scalable solution.']
+                    listItems: ['Accqrate enables businesses to manage e-invoicing across UAE, GCC, EU, and other regulated markets from one platform.', 'Generate, validate, transmit, and archive compliant e-invoices globally with a unified, scalable solution.']
                 },
             ]
         }
@@ -340,7 +340,7 @@ const Section1 = () => {
                 <div className='bg-gradient-to-t from-[#EFF3FF] to-transparent'>
                     <FadeUp className="mb-8 md:mb-[40px] pt-12 md:pt-[80px] lg:pt-[100px]">
                         <h1 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto mt-6">
-                            <T>Trusted by </T>
+                             <T>Trusted by</T>{" "}
                             <br className="md:hidden" />
                             <span className="text-[#194BED]"></span>
                             <br className="md:hidden" />
