@@ -17,6 +17,17 @@ const translations = {
     nl: "Creditnota's in België: betekenis, doel, regels en hoe ze correct uit te geven",
     de: "Gutschriften in Belgien: Bedeutung, Zweck, Regeln und wie man sie korrekt ausstellt",
   },
+  "Accqrate ensures end-to-end compliance with Belgium's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:": {
+  fr: "Accqrate garantit une conformité de bout en bout avec l’obligation belge de facturation électronique B2B et les exigences du SPF Finances. Notre plateforme prend en charge :",
+  nl: "Accqrate waarborgt end-to-end naleving van de Belgische B2B-verplichting voor elektronische facturatie en de vereisten van de FOD Financiën. Ons platform ondersteunt:",
+  de: "Accqrate gewährleistet eine durchgängige Konformität mit der belgischen B2B-Pflicht zur elektronischen Rechnungsstellung und den Anforderungen des FÖD Finanzen. Unsere Plattform unterstützt:"
+},
+"Full Compliance with Belgium's E-Invoicing Mandate": {
+  fr: "Conformité totale avec l’obligation belge de facturation électronique",
+  nl: "Volledige naleving van de Belgische verplichting voor elektronische facturatie",
+  de: "Vollständige Konformität mit der belgischen Verpflichtung zur elektronischen Rechnungsstellung"
+},
+
   "A credit note is a commercial document issued by a seller to a buyer, reducing the amount owed on a previously issued invoice...": {
     fr: "Une note de crédit est un document commercial émis par un vendeur à un acheteur, réduisant le montant dû sur une facture précédemment émise...",
     nl: "Een creditnota is een commercieel document dat door een verkoper aan een koper wordt uitgegeven en het verschuldigde bedrag op een eerder uitgegeven factuur vermindert...",
