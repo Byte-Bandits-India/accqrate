@@ -25,7 +25,7 @@ export default function Section4() {
         return AssetPath.invoicing.invoiceMultiplePng;
     }
   };
-   const getDashboardMultipleImage = () => {
+  const getDashboardMultipleImage = () => {
     switch (countryCode) {
       case 'be':
         return AssetPath.integration.dashboard;
@@ -54,7 +54,7 @@ export default function Section4() {
         </div>
 
         {/* TOP GRID */}
-        <div className="flex flex-col lg:flex-row gap-12 ">
+        <div className="flex flex-col lg:flex-row gap-6">
 
           {/* LEFT LIST */}
           <div className="space-y-4">
@@ -71,7 +71,7 @@ export default function Section4() {
                   <h3 className="text-[#1C2041] font-semibold text-[18px] mb-1">
                     <T lang={lang} countryCode={countryCode}>{item.title}</T>
                   </h3>
-                  <p className="text-[#5A6183] text-[15px] leading-relaxed max-w-[450px]">
+                  <p className="text-[#5A6183] text-fluid-small leading-relaxed max-w-[450px]">
                     <T lang={lang} countryCode={countryCode}>{item.desc}</T>
                   </p>
                 </div>
@@ -80,7 +80,7 @@ export default function Section4() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className=" ">
+          <div className="flex justify-center items-center max-w-[600px]">
             {data.topRightImage && (
               <Image
                 src={getDashboardMultipleImage().src}
@@ -122,7 +122,7 @@ export default function Section4() {
                   alt="check"
                   className="mt-1"
                 />
-                <p className="text-[#1C2041] text-[16px] md:text-[17px] leading-relaxed">
+                <p className="text-[#1C2041] text-fluid-small leading-relaxed">
                   <T lang={lang} countryCode={countryCode}>{item}</T>
                 </p>
               </div>

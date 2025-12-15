@@ -54,10 +54,10 @@ export default function InfoCard({ icon, title, description, color }: InfoCardPr
           </div>
 
           <div className="flex-1 min-w-0 flex flex-col justify-center overflow-hidden">
-            <h3 className="text-[1.125rem] font-medium text-[#000000] leading-tight tracking-heading">
+            <h3 className="text-fluid-body font-medium text-[#000000] leading-tight tracking-heading">
               <T>{title}</T>
             </h3>
-            <p className="text-[#333333] text-[1rem] leading-tight mt-0.5 tracking-para line-clamp-2">
+            <p className="text-[#333333] text-fluid-small leading-tight mt-0.5 tracking-para line-clamp-2">
               <T>{description}</T>
             </p>
           </div>

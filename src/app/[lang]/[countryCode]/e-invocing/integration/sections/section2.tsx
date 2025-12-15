@@ -116,7 +116,7 @@ const Section2 = () => {
                 <Image src={item.img} alt={item.title} width={100} height={60} className="w-[70px] h-auto" />
               </div>
               <h3 className="text-[18px] md:text-[20px] font-semibold mb-3 text-[#1C2041]"><T lang={lang} countryCode={countryCode}>{item.title}</T></h3>
-              <p className="text-[#7C8DB0] text-[14px] md:text-[16px] leading-relaxed">
+              <p className="text-[#7C8DB0] text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed">
                 <T lang={lang} countryCode={countryCode}>{item.desc}</T>
               </p>
             </div>
@@ -174,7 +174,7 @@ const Section2 = () => {
                   <T lang={lang} countryCode={countryCode}>{feature.title}</T>
                 </h3>
 
-                <p className="text-[#7C8DB0] text-[13px] md:text-[16px] leading-relaxed">
+                <p className="text-[#7C8DB0] text-[13px] md:text-[16px] lg:text-[18px] leading-relaxed">
                   <T lang={lang} countryCode={countryCode}>{feature.description}</T>
                 </p>
               </div>

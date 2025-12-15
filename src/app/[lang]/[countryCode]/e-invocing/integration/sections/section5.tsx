@@ -43,7 +43,7 @@ export default function ProofSection() {
               <h3 className="text-[#1C2041] font-semibold text-[20px] mb-1">
                 <T lang={lang} countryCode={countryCode}>{item.title}</T>
               </h3>
-              <p className="text-[#5A6183] leading-relaxed max-w-[430px] text-[16px]">
+              <p className="text-[#5A6183] leading-relaxed max-w-[430px] text-fluid-small">
                 <T lang={lang} countryCode={countryCode}>{item.desc}</T>
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function ProofSection() {
               <h3 className="text-[#1C2041] font-semibold text-[20px] mb-1">
                 <T lang={lang} countryCode={countryCode}>{item.title}</T>
               </h3>
-              <p className="text-[#5A6183] leading-relaxed max-w-[430px] text-[16px]">
+              <p className="text-[#5A6183] leading-relaxed max-w-[430px] text-fluid-small">
                 <T lang={lang} countryCode={countryCode}>{item.desc}</T>
               </p>
             </div>

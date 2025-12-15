@@ -97,35 +97,31 @@ const Software = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex-1 flex flex-col items-center">
+          <div className="flex-1 min-w-0 flex flex-col items-center">
             <Image
               src={countryCode === "ae" ? uaeHero : AssetPath.integration.invoice}
               alt="software ui"
               width={591}
               height={400}
-              className="md:max-w-[591px] md:rounded-2xl"
+              className="w-full max-w-[591px] h-auto rounded-2xl"
+              priority
             />
 
             <div className="flex gap-4 mt-8 text-center md:text-[20px]">
-              <p className="md:text-[20px] text-gray-600"><T lang={lang} countryCode={countryCode}>Seamless</T></p>
-              <Image
-                src={AssetPath.home.starOr}
-                alt="star"
-                width={20}
-                height={20}
-                className="w-5 h-5 mt-1"
-              />
-              <p className="md:text-[20px] text-gray-600"><T lang={lang} countryCode={countryCode}>Complaint</T></p>
-              <Image
-                src={AssetPath.home.starOr}
-                alt="star"
-                width={20}
-                height={20}
-                className="w-5 h-5 mt-1"
-              />
-              <p className="md:text-[20px] text-gray-600"><T lang={lang} countryCode={countryCode}>Secure</T></p>
+              <p className="md:text-[20px] text-gray-600">
+                <T lang={lang} countryCode={countryCode}>Seamless</T>
+              </p>
+              <Image src={AssetPath.home.starOr} alt="star" width={20} height={20} className="w-5 h-5 mt-1" />
+              <p className="md:text-[20px] text-gray-600">
+                <T lang={lang} countryCode={countryCode}>Compliant</T>
+              </p>
+              <Image src={AssetPath.home.starOr} alt="star" width={20} height={20} className="w-5 h-5 mt-1" />
+              <p className="md:text-[20px] text-gray-600">
+                <T lang={lang} countryCode={countryCode}>Secure</T>
+              </p>
             </div>
           </div>
+
         </div>
       </div>
 

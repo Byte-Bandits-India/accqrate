@@ -125,11 +125,11 @@ export default function RecentBlogPosts() {
         </FadeUp>
 
         <div className="p-5 border-t border-gray-100 flex-1 flex flex-col">
-          <FadeUp className="font-semibold text-[16px] sm:text-[18px] text-gray-900 line-clamp-2 leading-snug mb-3">
+          <FadeUp className="font-semibold text-fluid-body text-gray-900 line-clamp-2 leading-snug mb-3">
             <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.title}</T>
           </FadeUp>
 
-          <FadeUp className="text-gray-600 text-[14px] sm:text-[15px] line-clamp-3 leading-relaxed flex-1">
+          <FadeUp className="text-gray-600 text-fluid-small line-clamp-3 leading-relaxed flex-1">
             <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.desc}</T>
           </FadeUp>
         </div>

@@ -275,7 +275,7 @@ const LangCountryDropdown: React.FC<
             </div>
 
             <div className="mb-2 font-semibold text-black"><T>Select Country</T></div>
- 
+
             {/* FULL height, NO scrolling */}
             <div className="space-y-2">
               {countries.map((country) => (
@@ -402,7 +402,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
               ))}
             </ul>
           </div>
- 
+
           {/* Right: subitems */}
           <div className="col-span-2 mb-2">
             <h6 className="pl-2.5 font-semibold uppercase text-sm text-gray-500 mb-4">
@@ -716,7 +716,7 @@ const Header: React.FC = () => {
                               </div>
                             </div>
                           </div>
-                        )} 
+                        )}
                       </li>
                     ))}
 
@@ -745,13 +745,13 @@ const Header: React.FC = () => {
                 />
                 <Link
                   href={createHref("/contact-us")}
-                  className="hidden w-auto px-2 xl:inline-flex items-center justify-center gap-2 text-[#F05A28] h-[34px] w-[119px] font-medium rounded-[80px] text-[12px] xl:text-[14px] border border-[#29266E] bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
+                  className="hidden px-2 xl:inline-flex items-center justify-center gap-2 text-[#F05A28] h-[34px] w-[119px] font-medium rounded-[80px] text-[12px] xl:text-[14px] border border-[#29266E] bg-gradient-to-r from-[#194BED] to-[#29266E] bg-clip-text text-transparent"
                 >
                   <T>{contactInfo.salesText}</T>
                 </Link>
                 <button
                   onClick={() => setModalOpen(true)}
-                  className="hidden xl:inline-flex w-auto items-center justify-center gap-2 text-white h-[34px] font-medium w-[121px] rounded-[80px] text-[12px] xl:text-[14px] bg-gradient-to-r from-[#194BED] to-[#29266E]"
+                  className="hidden xl:inline-flex items-center justify-center gap-2 text-white h-[34px] font-medium w-[121px] rounded-[80px] text-[12px] xl:text-[14px] bg-gradient-to-r from-[#194BED] to-[#29266E]"
                 >
                   <T>Book a Demo</T>
                 </button>

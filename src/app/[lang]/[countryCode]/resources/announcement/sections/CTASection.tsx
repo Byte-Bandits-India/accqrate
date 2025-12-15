@@ -109,7 +109,7 @@ const CTASection = () => {
             <T>{content.description1}</T>
           </p>
 
-          <p className="text-sm text-white/80 leading-tight xl:max-w-[773px] ">
+          <p className="text-fluid-small text-white/80 leading-tight xl:max-w-[773px] ">
             <T>{content.description2}</T>
           </p>
 

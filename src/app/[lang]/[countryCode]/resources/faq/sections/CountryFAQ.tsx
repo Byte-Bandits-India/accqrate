@@ -86,10 +86,10 @@ export const CountryFAQ = () => {
                         value={`faq-${index}`}
                         className="border-b border-border py-4"
                       >
-                        <AccordionTrigger className="text-[16px] md:text-[18px] font-semibold hover:no-underline leading-tight text-left">
+                        <AccordionTrigger className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold hover:no-underline leading-tight text-left">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-[14px] md:text-[16px] font-normal text-[#262626] leading-tight mt-2">
+                        <AccordionContent className="text-[14px] md:text-[16px] lg:text-[18px] font-normal text-[#262626] leading-tight mt-2">
                           {faq.answer}
                         </AccordionContent>
                       </AccordionItem>

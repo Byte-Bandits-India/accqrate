@@ -33,18 +33,8 @@ export default function VATCalculator() {
   const content = getVATCalculatorContent(countryCode);
   const countrySpecificDetails = getCountrySpecificVATDetails(countryCode);
 
-  useEffect(() => {
-    setHydrated(true);
-    AOS.init({ once: true, duration: 800 });
-
-    // Set country-specific defaults when component mounts or country changes
-    const countryDefaults = getCountryDefaults(countryCode);
-    setVatRate(countryDefaults.vatRate.toString());
-    setCurrency(countryDefaults.currency);
-  }, [countryCode]);
-
   // Country-specific configuration
-  const getCountryDefaults = (code: string) => {
+  const getCountryDefaults = (code: string): { vatRate: number; currency: string; vatName: string } => {
     const countryConfig: Record<string, { vatRate: number; currency: string; vatName: string }> = {
       // Saudi Arabia
       SA: { vatRate: 15, currency: "SAR", vatName: "KSA VAT" },
@@ -66,6 +56,16 @@ export default function VATCalculator() {
 
     return countryConfig[code] || { vatRate: 15, currency: "SAR", vatName: "VAT" };
   };
+
+  useEffect(() => {
+    setHydrated(true);
+    AOS.init({ once: true, duration: 800 });
+
+    // Set country-specific defaults when component mounts or country changes
+    const countryDefaults = getCountryDefaults(countryCode);
+    setVatRate(countryDefaults.vatRate.toString());
+    setCurrency(countryDefaults.currency);
+  }, [countryCode]);
 
   // Get country-specific VAT calculator title
   const getVatCalculatorTitle = () => {
@@ -226,7 +226,7 @@ export default function VATCalculator() {
                   <div className="lg:col-span-2">
                     <div className="flex flex-row lg:items-center lg:justify-between gap-4 mt-6">
                       <div className="flex-1">
-                        <p className="text-fluid-small lg:text-[16px] text-[#333333] font-medium mb-3">
+                        <p className="text-fluid-small text-[#333333] font-medium mb-3">
                           <T lang={lang} countryCode={countryCode}>Is Sale Inclusive of VAT?</T>
                         </p>
                         <RadioGroup
@@ -238,11 +238,11 @@ export default function VATCalculator() {
                         >
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="yes" id="yes" />
-                            <Label htmlFor="yes" className="text-[#333333] cursor-pointer"><T lang={lang} countryCode={countryCode}>Yes</T></Label>
+                            <Label htmlFor="yes" className="text-[#333333] text-fluid-small cursor-pointer"><T lang={lang} countryCode={countryCode}>Yes</T></Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="no" id="no" />
-                            <Label htmlFor="no" className="text-[#333333] cursor-pointer"><T lang={lang} countryCode={countryCode}>No</T></Label>
+                            <Label htmlFor="no" className="text-[#333333] text-fluid-small cursor-pointer"><T lang={lang} countryCode={countryCode}>No</T></Label>
                           </div>
                         </RadioGroup>
                       </div>
@@ -321,7 +321,7 @@ export default function VATCalculator() {
       <div>
         <div className="max-w-[1280px] mx-auto mt-[40px] px-6 md:px-8 xl:px-0 pb-8 md:pb-10 lg:pb-12" data-aos="fade-up">
           <div>
-                    <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.title}</T></h2>
+            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.title}</T></h2>
             <p className="text-fluid-small leading-[26px] lg:leading-[40px] mt-[25px]">
               <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
             </p>

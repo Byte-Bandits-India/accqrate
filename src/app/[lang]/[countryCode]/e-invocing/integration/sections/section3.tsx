@@ -171,7 +171,7 @@ export default function IntegrationFlow() {
                                             <T lang={lang} countryCode={countryCode}>{step.title}</T>
                                         </h4>
 
-                                        <p className="text-[#5A6183] md:text-[16px] leading-relaxed">
+                                        <p className="text-[#5A6183] md:text-[16px] lg:text-[18px] leading-relaxed">
                                             <T lang={lang} countryCode={countryCode}>{step.description}</T>
                                         </p>
                                     </div>
@@ -235,7 +235,7 @@ export default function IntegrationFlow() {
                                             {step.title}
                                         </h3>
 
-                                        <p className="text-[#5A6183] md:text-[16px] leading-relaxed">
+                                        <p className="text-[#5A6183] md:text-[16px] lg:text-[18px] leading-relaxed">
                                             {step.description}
                                         </p>
                                     </Col>

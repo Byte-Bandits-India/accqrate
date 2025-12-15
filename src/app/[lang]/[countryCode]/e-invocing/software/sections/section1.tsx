@@ -399,13 +399,13 @@ const Section1 = () => {
                                 <T>Customize and send invoices easily</T>
                             </h1>
                             <div className='space-y-3 md:space-y-4 mt-4'>
-                                <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
+                                <p className="text-fluid-small max-w-[662px] tracking-para leading-tight">
                                     <T>Sending an invoice should be easy - and we`ve made it so</T>
                                 </p>
-                                <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
+                                <p className="text-fluid-small max-w-[662px] tracking-para leading-tight">
                                     <T>Perfectly aligned with your needs and brand</T>
                                 </p>
-                                <p className="text-fluid-body lg:text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
+                                <p className="text-fluid-small text-[#194BED] max-w-[662px] tracking-para leading-tight">
                                     <T>Invoices Custom-Made for Your Business</T>
                                 </p>
                                 <button
@@ -519,7 +519,7 @@ const Section1 = () => {
                                                 </h3>
 
 
-                                                <p className='text-[16px] font-medium mt-10 text-[#000000] text-left leading-tight'>
+                                                <p className='text-fluid-small font-medium mt-10 text-[#000000] text-left leading-tight'>
                                                     <T>{pageContent.headingDescription}</T>
                                                 </p>
                                                 <p className='text-fluid-small font-normal mt-2 text-[#000000] text-left leading-tight'>
@@ -588,7 +588,7 @@ const Section1 = () => {
                                                     <div className="w-full h-px bg-gray-300"></div>
 
                                                     <div className="flex items-center justify-between gap-4">
-                                                        <p className="text-sm leading-relaxed">
+                                                        <p className="text-fluid-small leading-relaxed">
                                                             <T>{pageContent.peppolCardText}</T>
                                                         </p>
 
@@ -620,7 +620,7 @@ const Section1 = () => {
                                                     <div className="w-full h-px bg-gray-300"></div>
 
                                                     <div className="flex items-center justify-between gap-4">
-                                                        <p className="text-sm leading-relaxed">
+                                                        <p className="text-fluid-small leading-relaxed">
                                                             <T>{pageContent.zatcaCardText}</T>
                                                         </p>
 
@@ -662,11 +662,11 @@ const Section1 = () => {
                                     "
                                 >
                                     <div className="flex-shrink-0 mb-2 md:mb-3">
-                                        <h3 className="text-[#303030] font-semibold text-base sm:text-lg leading-tight break-words">
+                                        <h3 className="text-[#303030] font-semibold text-fluid-body leading-tight break-words">
                                             <T>{card.title}</T>
                                         </h3>
                                         {card.subTitle && (
-                                            <h3 className="text-[#303030] font-semibold text-base sm:text-lg mb-2 md:mb-3 leading-tight break-words">
+                                            <h3 className="text-[#303030] font-semibold text-fluid-body mb-2 md:mb-3 leading-tight break-words">
                                                 <T>{card.subTitle}</T>
                                             </h3>
                                         )}
@@ -674,12 +674,12 @@ const Section1 = () => {
 
                                     <div className="flex-grow overflow-hidden">
                                         {card.description && (
-                                            <p className="text-[#5A6183] text-sm sm:text-sm leading-relaxed md:leading-[28px] break-words mb-3">
+                                            <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
                                                 <T>{card.description}</T>
                                             </p>
                                         )}
                                         {card.listItems && card.listItems.length > 0 && (
-                                            <ul className="text-[#5A6183] text-sm sm:text-sm leading-relaxed md:leading-[28px] list-disc list-inside space-y-1.5 md:space-y-2 pl-2 md:pl-3 break-words">
+                                            <ul className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] list-disc list-inside space-y-1.5 md:space-y-2 pl-2 md:pl-3 break-words">
                                                 {card.listItems.map((item, itemIndex) => (
                                                     <li key={itemIndex} className="break-words">
                                                         <T>{item}</T>
@@ -688,7 +688,7 @@ const Section1 = () => {
                                             </ul>
                                         )}
                                         {card.para && (
-                                            <p className="text-[#5A6183] text-sm sm:text-sm leading-relaxed md:leading-[28px] break-words mb-3">
+                                            <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
                                                 <T>{card.para}</T>
                                             </p>
                                         )}

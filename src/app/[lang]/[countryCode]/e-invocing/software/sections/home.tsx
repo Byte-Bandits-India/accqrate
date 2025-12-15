@@ -389,7 +389,7 @@ const Software: React.FC = () => {
                 <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
                     <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
                         {/* LEFT CONTENT */}
-                        <div className="flex flex-col justify-center max-w-[730px] w-full">
+                        <div className="flex flex-col justify-center max-w-[600px] w-full">
                             <div className="flex items-center gap-2">
                                 <p className="text-[#F05A28] text-fluid-small leading-[30px] m-0 whitespace-nowrap">
                                     <T>{content.badgeText}</T>

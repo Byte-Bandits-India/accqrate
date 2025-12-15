@@ -97,7 +97,7 @@ export default function FooterUpdated() {
             {/* Description + E-invoicing */}
             <div className="flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-16 mb-10">
               {/* Description */}
-              <p className="text-[#E5E5E5] text-[15px] md:text-[16px] leading-7 max-w-[573px]">
+              <p className="text-[#E5E5E5] text-fluid-small leading-7 max-w-[573px]">
                 <T>
                   One unified platform with zero silos integrated modules on a
                   single data model, global compliance built-in, AI-powered
@@ -109,10 +109,10 @@ export default function FooterUpdated() {
 
               {/* E-invoicing Solution */}
               <div className="md:min-w-[200px]">
-                <h3 className="text-[16px] font-semibold mb-4">
+                <h3 className="text-fluid-body font-semibold mb-4">
                   <T>E-invoicing Solution</T>
                 </h3>
-                <ul className="space-y-2 text-[#E5E5E5] text-[14px] md:text-[15px]">
+                <ul className="space-y-2 text-[#E5E5E5] text-fluid-small">
                   {eInvoicingLinks.map((item, i) => (
                     <li key={i}>
                       <Link
@@ -132,7 +132,7 @@ export default function FooterUpdated() {
 
             {/* Middle Nav */}
             <div className="pt-4">
-              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-[15px] text-white underline underline-offset-4">
+              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-fluid-small text-white underline underline-offset-4">
                 {footerNav.map((item, i) => (
                   <Link
                     key={i}
@@ -153,11 +153,11 @@ export default function FooterUpdated() {
           <div className="flex-grow grid sm:grid-cols-2 gap-10">
             {footerSections.map((section, index) => (
               <div key={index}>
-                <h3 className="text-[16px] font-semibold mb-6">
+                <h3 className="text-fluid-body font-semibold mb-6">
                   <T>{section.title}</T>
                 </h3>
 
-                <ul className="space-y-3 text-[#E5E5E5] text-[14px] md:text-[15px]">
+                <ul className="space-y-3 text-[#E5E5E5] text-fluid-small">
                   {section.links.map((item, i) => (
                     <li key={i}>
                       {item.isText ? (
@@ -198,7 +198,7 @@ export default function FooterUpdated() {
         </div>
 
         {/* Copyright */}
-        <p className="text-center text-[#C8C8C8] text-[14px]">
+        <p className="text-center text-[#C8C8C8] text-fluid-small">
           <T>© Copyright 2021 - 2025</T>{" "}
           <span className="text-[#5980FF] font-medium">Accqrate</span>,{" "}
           <T>All rights reserved.</T>

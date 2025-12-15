@@ -158,7 +158,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
       <section className="bg-white py-4">
         <div className="container mx-auto px-4 md:px-40">
           {/* Breadcrumb Row */}
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center text-fluid-small justify-between">
             <Breadcrumb
               items={breadcrumbItems.map((item) => ({
                 title: <T>{item.title}</T>,
@@ -197,7 +197,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
                 {pageTitle}
               </h1>
               {updatedOn && (
-                <p className="text-gray-500 text-[14px] mb-6">
+                <p className="text-gray-500 text-fluid-small mb-6">
                   <T>
                     Updated On : {updatedOn} | {minRead} min read
                   </T>
@@ -223,7 +223,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
                         height={200}
                         className="w-full mb-2 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
-                      <h3 className="text-sm font-semibold text-[#1c2041] line-clamp-2 group-hover:text-blue-600">
+                      <h3 className="text-fluid-small font-semibold text-[#1c2041] line-clamp-2 group-hover:text-blue-600">
                         <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.heading}</T>
                       </h3>
                     </div>

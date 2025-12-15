@@ -91,12 +91,12 @@ const CarouselCardComponent: React.FC<CarouselCardProps> = ({
 
             <div className="flex flex-col justify-center items-start p-6 md:pl-8 lg:px-[32px] relative z-20">
                 {/* Quote text */}
-                <p className="text-[#000000] text-fluid-small md:text-[18px] leading-tight tracking-heading drop-shadow-md font-bold mb-0">
+                <p className="text-[#000000] text-fluid-body leading-tight tracking-heading drop-shadow-md font-bold mb-0">
                     &quot;<T>{quote}</T>&quot;
                 </p>
 
                 {/* Name - directly below quote, no gap */}
-                <h4 className="text-[#000000] mt-[20px] md:mt-[30px] font-medium text-[10px] md:text-[14px] lg:text-[16px] drop-shadow-md leading-tight tracking-para">
+                <h4 className="text-[#000000] mt-[20px] md:mt-[30px] font-medium text-fluid-small drop-shadow-md leading-tight tracking-para">
                     <T>{name}</T>
                 </h4>
             </div>
@@ -704,7 +704,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <Arrow45 />
                                 </button>
 
-                                <h2 className="mt-4 md:mt-5 text-fluid-body font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4">
+                                <h2 className=" text-fluid-body font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4">
                                     {countryContent.heroTagline.split(".").filter(Boolean).map((part, index, arr) => (
                                         <React.Fragment key={index}>
                                             <T>{part.trim()}</T>
@@ -998,8 +998,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <>
                                     <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-fluid-body font-medium tracking-heading"><T>{countryContent.complianceSection?.complianceTitle}</T></h2>
-                                        <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.complianceDescription}</T></h2>
-                                        <ul className="gap-y-2 mt-8 text-fluid-small lg:text-[16px] tracking-para leading leading-[26px] list-disc pl-5">
+                                        <h2 className="text-fluid-small mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.complianceDescription}</T></h2>
+                                        <ul className="gap-y-2 mt-8 text-fluid-small tracking-para leading leading-[26px] list-disc pl-5">
                                             {countryContent.complianceSection?.complianceItems.map((item, index) => (
                                                 <li key={index}><T>{item}</T></li>
                                             ))}
@@ -1008,8 +1008,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                     <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-fluid-body font-medium tracking-heading"><T>{countryContent.complianceSection?.automationTitle}</T></h2>
-                                        <h2 className="text-fluid-small lg:text-[16px] mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.automationDescription}</T></h2>
-                                        <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small lg:text-[16px] leading-tight tracking-para">
+                                        <h2 className="text-fluid-small mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.automationDescription}</T></h2>
+                                        <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small leading-tight tracking-para">
                                             {countryContent.complianceSection?.automationItems.map((item, index) => (
                                                 <li key={index}><T>{item}</T></li>
                                             ))}
@@ -1069,11 +1069,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             <span className="text-[#194BED]">Accelera</span> <T>Your AI Copilot</T>
                                         </h2>
 
-                                        <p className="text-[#333333] text-[13px] md:text-[14px] lg:text-[16px] mt-6 md:mt-[40px] mb-4 md:mb-6">
+                                        <p className="text-[#333333] text-fluid-small mt-6 md:mt-[40px] mb-4 md:mb-6">
                                             <T>Work faster and decide smarter with AI embedded across the suite.</T>
                                         </p>
 
-                                        <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[13px] md:text-[14px] lg:text-[16px]">
+                                        <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-fluid-small">
                                             <li><b><T>Natural-language actions:</T></b> <T>Ask, “Show last month’s receivables by region” and get the answer, fast.</T></li>
                                             <li><b><T>Automations:</T></b> <T>Generate e‑invoices, match POs, trigger approvals and alerts.</T></li>
                                             <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand, and recommend next steps.</T></li>
@@ -1132,12 +1132,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 {/* Right Side: Text + List + Button */}
                                 <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8 order-2 lg:order-1">
                                     {/* Heading (mobile only) */}
-                                    <h2 className="text-[14px] md:text-[16px] lg:text-fluid-small text-left pl-4 md:pl-5 leading-[22px] md:leading-[24px] tracking-para mb-4">
+                                    <h2 className="text-fluid-small text-left pl-4 md:pl-5 leading-[22px] md:leading-[24px] tracking-para mb-4">
                                         <T>Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:</T>
                                     </h2>
 
                                     <div>
-                                        <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-[13px] md:text-[14px] lg:text-fluid-small text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
+                                        <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-fluid-small text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
                                             <li>
                                                 <T>Cross-border interoperability within the EU</T>
                                             </li>
@@ -1189,7 +1189,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight mb-6">
                                         <T>Future-Ready for </T> <span className="text-[#194BED]">DCTCE / 5 Corner:</span>
                                     </h2>
-                                    <h2 className="text-[14px] md:text-[16px] lg:text-fluid-body text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
+                                    <h2 className="text-fluid-small text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
                                         <T>Accqrate equips enterprises to be compliant across the upcoming UAE E-invoicing model DCTCE / 5 corner :</T>
                                     </h2>
                                     <Image
@@ -1280,7 +1280,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <h1 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium py-[30px] md:py-[37px] tracking-heading leading-tight">
                             <T>Our Values</T> <br /><T>Drive Everything We Do</T>
                         </h1>
-                        <p className="text-fluid-body lg:text-[16px] max-w-[662px] tracking-para leading-tight">
+                        <p className="text-fluid-small max-w-[662px] tracking-para leading-tight">
                             <T>Built on trust, innovation and excellence, we deliver measurable results that transform business and create lasting impact.</T>
                         </p>
                     </div>
@@ -1322,10 +1322,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     style={{ scrollSnapAlign: "start", background: item.bg }}
                                 >
                                     <div className="flex flex-col justify-start items-start gap-6">
-                                        <h3 className="font-medium leading-tight tracking-heading text-fluid-body md:text-[20px] text-black">
+                                        <h3 className="font-medium leading-tight tracking-heading text-fluid-body text-black">
                                             <T>{item.title}</T>
                                         </h3>
-                                        <p className="text-fluid-small lg:text-[16px] mt-2 md:mt-3 tracking-para leading-tight text-black">
+                                        <p className="text-fluid-small mt-2 md:mt-3 tracking-para leading-tight text-black">
                                             <T>{item.desc}</T>
                                         </p>
                                     </div>
@@ -1359,11 +1359,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 value={`faq-${index}`}
                                                 className="border-b border-[#BDBDBD] py-4"
                                             >
-                                                <AccordionTrigger className="text-[16px] md:text-[18px] font-medium text-gray-800 hover:no-underline tracking-heading leading-tight text-left">
+                                                <AccordionTrigger className="text-[16px] md:text-[18px] lg:text-[20px] font-medium text-gray-800 hover:no-underline tracking-heading leading-tight text-left">
                                                     <T>{item.question}</T>
                                                 </AccordionTrigger>
 
-                                                <AccordionContent className="text-[14px] md:text-[16px] font-light text-gray-600 tracking-para leading-relaxed mt-2 text-left">
+                                                <AccordionContent className="text-[14px] md:text-[16px] lg:text-[20px] font-light text-gray-600 tracking-para leading-relaxed mt-2 text-left">
                                                     <T>{item.answer}</T>
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -1415,7 +1415,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         rounded-[5px]
         px-6
         text-white
-        text-fluid-small md:text-[14px] lg:text-[16px] whitespace-nowrap
+        text-fluid-small md:text-[14px] lg:text-[18px] whitespace-nowrap
         mt-[32px]
       "
                                 style={{
