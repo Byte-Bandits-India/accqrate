@@ -8,6 +8,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { useCountryContent } from "@/Hooks/useCountryContent";
 import T from "@/Components/T"
+import { t } from "@/lib/translations";
 import {
     Accordion,
     AccordionContent,
@@ -373,7 +374,7 @@ const useDynamicRouting = () => {
 };
 
 const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
-    const { countryContent } = useCountryContent({ countryCode });
+    const { countryContent, selectedCountry } = useCountryContent();
     const { createHref } = useDynamicRouting();
     const params = useParams();
     const lang = (params?.lang as string) || "en";
@@ -606,10 +607,17 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         },
     ];
 
-    const duplicatedCards = [...CarouselCardItems, ...CarouselCardItems];
+    // Show the real set of solution cards once (no duplication, no looping)
+    const duplicatedCards = CarouselCardItems;
 
     // Highlight specific words in subtitle (e.g., "specialize", "reliable")
     const highlightWhySubtitle = React.useCallback((text: string) => {
+        // Prefer full-sentence translation first to avoid lost matches when
+        // components split the string into parts (which breaks exact-key lookup).
+        const cc = (selectedCountry || 'SA') as string;
+        const full = t(text, cc);
+        if (full && full !== text) return <>{full}</>;
+
         const parts = text.split(/(specialize|reliable)/gi);
         return parts.map((part, index) => {
             const isHighlight = /^specialize$/i.test(part) || /^reliable$/i.test(part);
@@ -621,46 +629,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 <T key={index}>{part}</T>
             );
         });
-    }, []);
+    }, [selectedCountry]);
 
-    useEffect(() => {
-        const carousel = carouselRef.current;
-        if (!carousel) return;
-
-        let ticking = false;
-
-        const onScroll = () => {
-            if (ticking) return;
-            ticking = true;
-
-            requestAnimationFrame(() => {
-                const totalWidth = carousel.scrollWidth;
-                const singleSetWidth = totalWidth / 2;
-
-                // When scrolled past end of first set → jump back seamlessly
-                if (carousel.scrollLeft >= singleSetWidth) {
-                    carousel.scrollLeft -= singleSetWidth;
-                }
-                // When scrolled backward before start → jump forward seamlessly
-                else if (carousel.scrollLeft <= 0) {
-                    carousel.scrollLeft += singleSetWidth;
-                }
-
-                ticking = false;
-            });
-        };
-
-        carousel.addEventListener("scroll", onScroll, { passive: true });
-
-        // tiny offset helps with reverse scroll detection
-        if (carousel.scrollLeft === 0) {
-            carousel.scrollLeft = 1;
-        }
-
-        return () => {
-            carousel.removeEventListener("scroll", onScroll);
-        };
-    }, []);
+    // No looping behavior for the solutions carousel — user can scroll through the
+    // cards but we won't programmatically wrap or reposition the scroll.
 
     return (
         <main className="overflow-x-hidden font-inter">
@@ -1187,12 +1159,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
                                 <div className="p-6 md:p-8">
                                     <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight mb-6">
-                                        <T>Future-Ready for </T> <span className="text-[#194BED]">DCTCE / 5 Corner:</span>
+                                        <T>Future-Ready for</T> <span className="text-[#194BED]"><T>DCTCE / 5 Corner:</T></span>
                                     </h2>
                                     <h2 className="text-fluid-small text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
                                         <T>Accqrate equips enterprises to be compliant across the upcoming UAE E-invoicing model DCTCE / 5 corner :</T>
                                     </h2>
-                                    <Image
+                                     <Image
                                         src={AssetPath.home.dctce}
                                         alt="VIDA Compliance"
                                         width={520}
