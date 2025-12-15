@@ -86,21 +86,21 @@ const ContactFormPage = () => {
         card1: {
           badge: "E-INVOICING",
           title: "Buy E-invoicing Software",
-          description: "Seeking cutting-edge E-invoicing software ready for Phase 1 & 2? Let us find the perfect pricing fit for you.",
+          description: "Seeking cutting-edge E-invoicing software ready for Europe? Let us find the perfect pricing fit for you.",
           buttonText: "Chat With Us",
           module: "E-invoicing Standalone Software"
         },
         card2: {
           badge: "INTEGRATION",
           title: "Integrate your ERP with compliance systems",
-          description: "Ready for Phase II integration? Our experts have got your back.",
+          description: "Peppol Ready e-invoing? Our experts have got your back.",
           buttonText: "Talk to an Expert",
           module: "E-invoicing API Integration Software"
         },
         card3: {
           badge: "PARTNERS",
           title: "Become our Trusted Partner",
-          description: "Eager to streamline PEPPOL compliance for your clientele and expand your horizons? Let us collaborate.",
+          description: "Eager to streamline E-invoicing Compliance in Europe for your clientele and expand your horizons? Let us collaborate.",
           buttonText: "Partner with Us",
           module: "Partner with Us"
         }
