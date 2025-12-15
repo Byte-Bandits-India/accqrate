@@ -373,7 +373,7 @@ const useDynamicRouting = () => {
 };
 
 const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
-    const { countryContent } = useCountryContent();
+    const { countryContent } = useCountryContent({ countryCode });
     const { createHref } = useDynamicRouting();
     const params = useParams();
     const lang = (params?.lang as string) || "en";

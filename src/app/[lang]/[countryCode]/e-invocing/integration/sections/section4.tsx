@@ -34,7 +34,7 @@ export default function Section4() {
   const getDashboardMultipleImage = () => {
     switch (countryCode) {
       case 'be':
-        return AssetPath.integration.dashboard;
+        return AssetPath.integration.uaedash;
       case 'pl':
         return AssetPath.integration.dashboard;
       case 'ae':
