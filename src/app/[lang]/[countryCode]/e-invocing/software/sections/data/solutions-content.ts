@@ -529,14 +529,14 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Swift Peppol Onboarding',
-      desc: 'Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT compliant, Peppol-ready setup instantly fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.',
+      desc: 'Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT–compliant, Peppol-ready setup instantly—fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.',
       image:AssetPath.invoicing.manageTeam,
       sno: '03',
       index: 2,
       tab: 2
     },
     {
-  content: 'Automatic UAE PINT & EN 16931 Field Mapping ',
+  content: 'Automatic UAE PINT & EN 16931 Field Mapping',
   desc: 'Eliminate formatting and VAT compliance errors with Accqrate’s automated mapping engine. All required UAE PINT and EN 16931 fields are validated and structured correctly, ensuring every invoice meets FTA, Peppol, and UBL 2.1 standards—no manual intervention needed.',
   image: AssetPath.invoicing.manageTeam,
   sno: '04',
@@ -594,7 +594,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Full Support for FTA E-Invoicing Compliance Reviews',
-      desc: 'Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant before, during, and after FTA audits.',
+      desc: 'Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant—before, during, and after FTA audits.',
       image: AssetPath.invoicing.manageTeam,
       sno: '11',
       index: 10,

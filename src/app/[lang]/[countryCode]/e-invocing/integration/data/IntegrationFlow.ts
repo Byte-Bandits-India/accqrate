@@ -137,7 +137,7 @@ ae: {
   title: "UAE ",
 
   subtitle:
-    "The following steps provide an overview of UAE’s e-Invoicing model (Decentralized Continuous Transaction Control and Exchange - DCTCE):",
+    "The UAE’s e-invoicing framework is built on the Decentralized Continuous Transaction Control and Exchange (DCTCE) model, powered by UAE PINT and the Peppol network. Invoices flow through a 5-corner model involving suppliers, buyers, accredited service providers, and the Federal Tax Authority.",
 
   heroImage: AssetPath.integration.b2b.src,
 

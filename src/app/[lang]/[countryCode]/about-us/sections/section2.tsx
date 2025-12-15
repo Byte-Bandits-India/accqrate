@@ -4,18 +4,20 @@ import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
 import T from "@/Components/T";
 import { useParams } from "next/navigation";
+import { section2Content } from "../data/section2Content";
 
 export default function Section2() {
   const params = useParams();
-  const countryCode = (params?.countryCode as string)?.toUpperCase();
+  const countryCode = (params?.countryCode as string)?.toLowerCase() || 'be';
   const lang = (params?.lang as string) || "en";
+  const content = section2Content[countryCode as keyof typeof section2Content] || section2Content.default;
   return (
     <section className="w-full overflow-x-hidden bg-[#f0f4ff] py-20 px-4 md:px-6">
       <div className="max-w-[1177px] mx-auto w-full">
 
         {/* ---------------------- SECTION 1: Accqrate in Belgium ---------------------- */}
         <h2 className="text-[28px] md:text-[38px] font-semibold mb-10 break-words">
-          <T lang={lang} countryCode={countryCode}>Accqrate In Belgium</T>
+          <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section1Title}</T>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-20 md:mb-28 items-center">
@@ -36,28 +38,28 @@ export default function Section2() {
 
             <div className="break-words">
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
-                <T lang={lang} countryCode={countryCode}>Built for Belgium’s PEPPOL & FPS Finance Mandate</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section1.title1}</T>
               </h3>
               <p className="text-fluid-small break-words">
-                <T lang={lang} countryCode={countryCode}>Accqrate brings a Belgium-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section1.desc1}</T>
               </p>
             </div>
 
             <div className="mt-6">
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
-                <T lang={lang} countryCode={countryCode}>European Precision, Global Scalability</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section1.title2}</T>
               </h3>
               <p className="text-fluid-small break-words">
-                <T lang={lang} countryCode={countryCode}>With Swiss-led engineering and global deployment experience across 30+ sectors, Accqrate delivers an enterprise-grade platform capable of handling Belgium’s upcoming B2B rollout and multi-country operations inside and outside the EU.</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section1.desc2}</T>
               </p>
             </div>
 
             <div className="mt-6">
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
-                <T lang={lang} countryCode={countryCode}>Compliance Made Simple</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section1.title3}</T>
               </h3>
               <p className="text-fluid-small break-words">
-                <T lang={lang} countryCode={countryCode}>Accqrate combines automation, AI-driven validations, and standardized interoperability to make compliance intuitive, predictable, and scalable for companies of all sizes.</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section1.desc3}</T>
               </p>
             </div>
           </div>
@@ -71,24 +73,24 @@ export default function Section2() {
           {/* Left Content */}
           <div className="text-[14px] md:text-[15px] leading-relaxed w-full overflow-hidden">
             <h2 className="text-[28px] md:text-[38px] font-semibold mb-10 break-words">
-              <T lang={lang} countryCode={countryCode}>Our Mission</T>
+              <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section2Title}</T>
             </h2>
 
             <div className="break-words">
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
-                <T lang={lang} countryCode={countryCode}>Modernizing Europe’s E-Invoicing & Digital Tax Landscape</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section2.title1}</T>
               </h3>
               <p className="text-fluid-small break-words">
-                <T lang={lang} countryCode={countryCode}>We empower businesses with technology that simplifies PEPPOL connectivity, digital reporting, VAT oversight, and multi-entity governance.</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section2.desc1}</T>
               </p>
             </div>
 
             <div className="mt-6">
               <h3 className="font-semibold text-[16px] md:text-[20px] mb-1 break-words">
-                <T lang={lang} countryCode={countryCode}>Accelerating Digital Adoption</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section2.title2}</T>
               </h3>
               <p className="text-fluid-small break-words">
-                <T lang={lang} countryCode={countryCode}>Accqrate eliminates the traditional complexities of ERP and e-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability.</T>
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.section2.desc2}</T>
               </p>
             </div>
 

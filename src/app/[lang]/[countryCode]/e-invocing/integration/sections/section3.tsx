@@ -93,6 +93,7 @@ export default function IntegrationFlow() {
                         <T lang={lang} countryCode={countryCode}>{data.title.split("E-invoicing")[0]}</T>
                         <span className="text-[#448E32]"><T lang={lang} countryCode={countryCode}>{"E-invoicing"}</T></span> <T lang={lang} countryCode={countryCode}>Process</T>
                         <T lang={lang} countryCode={countryCode}>{data.title.split("E-invoicing")[1]}</T>
+                        {countryCode === 'ae' && <span> (DCTCE Model)</span>}
                     </h3>
 
                     <p className="text-[#5A6183] text-fluid-body lg:text-[20px]"><T lang={lang} countryCode={countryCode}>{data.subtitle}</T></p>
@@ -177,7 +178,7 @@ export default function IntegrationFlow() {
                     </div>
                 )}
 
-               
+
                 {!isEUFlow && (
                     <>
                         {/* Desktop Layout */}

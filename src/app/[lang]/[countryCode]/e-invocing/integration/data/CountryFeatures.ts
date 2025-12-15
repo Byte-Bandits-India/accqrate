@@ -244,9 +244,9 @@ ae: {
   integrationHeading: "Flexible methods for",
   integrationHighlight: "UAE E-Invoicing",
   integrationDescription:
-    "Adaptive, scalable approaches for seamless UAE PINT–compliant, Peppol-based e-invoicing under the FTA’s DCTCE framework",
+    "Adaptive, scalable approaches for seamless UAE PINT–compliant, Peppol-based e-invoicing under the FTA’s DCTCE framework.",
   featureHeading: "Enhanced",
-  featureHighlight: "UAE e-Invoicing Integration",
+  featureHighlight: "UAE E-Invoicing",
   featureDescription:
     "Streamline your invoicing with Accqrate’s automated, Peppol-ready, UAE PINT–compliant platform built for secure, scalable, FTA-aligned e-invoicing across the UAE.",
   ctaDescription:
@@ -261,7 +261,7 @@ sections: [
 {
   img: AssetPath.invoicing.integrationAssets.integration2.src,
   title: "FTP/S-FTP Integrations",
-  desc: "Accqrate supports secure file-based integrations with automated processing and a complete feedback loop. Your ERP or POS systems remain fully synchronized with all Peppol transactions, FTA responses, and DCTCE validations even in high-volume environments.",
+  desc: "Accqrate supports secure file-based integrations with automated processing and a complete feedback loop. Your ERP or POS systems remain fully synchronized with all Peppol transactions, FTA responses, and DCTCE validations—even in high-volume environments.",
 },
 {
   img: AssetPath.invoicing.integrationAssets.integration3.src,
@@ -290,7 +290,7 @@ features: [
   img: AssetPath.invoicing.integrationAssets.cloud.src,
   title: "Flexibility in Deployment",
   description:
-    "Choose Accqrate Cloud or deploy on your own infrastructure both fully compliant with UAE e-invoicing, DCTCE workflow rules, and Peppol interoperability standards.",
+    "Choose Accqrate Cloud or deploy on your own infrastructure—both fully compliant with UAE e-invoicing, DCTCE workflow rules, and Peppol interoperability standards.",
 },
 {
   img: AssetPath.invoicing.integrationAssets.ring.src,
@@ -302,7 +302,7 @@ features: [
   img: AssetPath.invoicing.integrationAssets.set.src,
   title: "Packaged Solution",
   description:
-    "Accqrate delivers pre-built integrations for SAP, Oracle, Microsoft Dynamics, Sage, Infor, Odoo, custom ERPs/POS, and more accelerating UAE e-invoicing readiness.",
+    "Accqrate delivers pre-built integrations for SAP, Oracle, Microsoft Dynamics, Sage, Infor, Odoo, custom ERPs/POS, and more—accelerating UAE e-invoicing readiness.",
 },
 {
   img: AssetPath.invoicing.integrationAssets.cal.src,

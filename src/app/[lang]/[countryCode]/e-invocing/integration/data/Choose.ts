@@ -174,7 +174,7 @@ pl: {
 ae: {
   title: "Why Choose ",
   subtitle:
-    "Seamlessly integrate your ERP/POS with the UAE’s Peppol-based DCTCE framework and achieve full UAE PINT compliance for FTA e-invoicing. ",
+    "Seamlessly integrate your ERP/POS with the UAE’s Peppol-based DCTCE framework and achieve full UAE PINT compliance for FTA e-invoicing.",
 
   topLeftItems: [
     {
