@@ -133,7 +133,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Swift KSeF Onboarding',
-      desc: 'Begin your KSeF journey effortlessly. Share your company information, and Accqrate onboard you quickly with a fully compliant FA(3) XML and KSeF-connected setup ready for Poland\'s mandatory e-invoicing framework.',
+      desc: 'Begin your KSeF journey effortlessly. Share your company information, and Accqrate onboard you quickly with a fully compliant FA(3) XML and KSeF-connected setup—ready for Poland’s mandatory e-invoicing framework.',
       image: AssetPath.integration.footer,
       sno: '03',
       index: 2,
@@ -141,7 +141,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Automatic FA(3) XML Field Mapping',
-      desc: 'Avoid validation failures with Accqrate\'s automatic population of all mandatory KSeF FA(3) fields, guaranteeing every Polish e-invoice is generated in the correct schema, without needing dedicated technical resources.',
+      desc: 'Avoid validation failures with Accqrate’s automatic population of all mandatory KSeF FA(3) fields, guaranteeing every Polish e-invoice is generated in the correct schema, without needing dedicated technical resources.',
       image: AssetPath.integration.footer,
       sno: '04',
       index: 3,
@@ -173,7 +173,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Comprehensive KSeF Reconciliation Dashboard',
-      desc: 'Easily match and reconcile invoices submitted or retrieved from KSeF with your business applications through Accqrate\'s intuitive dashboards, granular reports, and Excel-ready reconciliation outputs.',
+      desc: 'Easily match and reconcile invoices submitted or retrieved from KSeF with your business applications through Accqrate’s intuitive dashboards, granular reports, and Excel-ready reconciliation outputs.',
       image: AssetPath.integration.footer,
       sno: '08',
       index: 7,
@@ -197,7 +197,7 @@ export const solutionsContent: Record<CountryCode, ContentItem[]> = {
     },
     {
       content: 'Full Support for KSeF Compliance Reviews',
-      desc: 'Accqrate doesn\'t stop at implementation. We offer complete assistance during KSeF-related compliance reviews, ensuring every FA(3) invoice and integration meets Poland\'s mandatory e-invoicing standards.',
+      desc: 'Accqrate doesn’t stop at implementation. We offer complete assistance during KSeF-related compliance reviews, ensuring every FA(3) invoice and integration meets Poland’s mandatory e-invoicing standards.',
       image: AssetPath.integration.footer,
       sno: '11',
       index: 10,

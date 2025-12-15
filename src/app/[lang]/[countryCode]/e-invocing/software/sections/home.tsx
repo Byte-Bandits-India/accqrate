@@ -145,8 +145,8 @@ const countryConfig = {
     "PL": {
         name: "Poland",
         authority: "KSeF",
-        badgeText: "PEPPOL Approved E-invoicing Software in Poland",
-        title: "Integrate With PEPPOL Network In Less Than 1 Hour.",
+        badgeText: "PEPPOL Certified  E-invoicing Software for Poland",
+        title: "Integrate With PEPPOL Network ",
         description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
         description2: "",
         ctaText: "Get 30 days free trial",

@@ -46,9 +46,9 @@ const CTASection = () => {
     },
     // Poland content
     pl: {
-      title: "Compliant KSeF E‑Invoicing for Poland",
-      description1: "Want the latest on PEPPOL updates, fresh product insights, and exclusive Company editorials?",
-      description2: "Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!",
+      title: "Save time, save money",
+      description1: "Looking for the newest KSeF updates, product enhancements, and exclusive Accqrate editorials?",
+      description2: "Sign up for our newsletter and get the latest, directly in your inbox.",
       button1: "Get KSeF Compliance Demo",
       button2: "Subscribe for Updates",
       button3: "Talk to Sales"

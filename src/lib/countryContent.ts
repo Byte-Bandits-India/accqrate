@@ -442,18 +442,18 @@ const uaeContent: CountryContent = {
 // Special content for Poland (same as Belgium in your example)
 const polandContent: CountryContent = {
   backgroundImage: AssetPath.homeBackgrounds.jordan,
-  heroTitle: "Accqrate E-Invoicing: PEPPOL-Ready. VAT-Compliant. Built for Enterprises.",
-  heroSubtitle: "E-invoicing Solution for Poland",
+  heroTitle: "PEPPOL-Ready. KSeF-Compliant. Built For Enterprise.",
+  heroSubtitle: "E-invoicing Solution for Belgium",
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for Polish businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
-  heroTagline: "ZAPTCHA Member . GDPR . ISO 27001",
+  heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience for Poland.",
+  whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
   whyAccqrateFeatures: [
     {
       img: AssetPath.home.feature1,
-      title: "One platform.",
-      description: "All modules run on a single, integrated data model.",
-      sub: " Zero silos."
+      title: "One Platform.",
+      description: "Connect Multiple ERP or POS into one unified platform for E-invoicing.",
+      sub: " Harmonised Data."
     },
     {
       img: AssetPath.home.feature2,
@@ -463,73 +463,52 @@ const polandContent: CountryContent = {
     },
     {
       img: AssetPath.home.feature3,
-      title: "AI, everywhere.",
-      description: "Accelera, our AI copilot ,accelerates routine work, insights and decisions.",
+      title: "Deploy your way.",
+      description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
       sub: ""
     },
     {
       img: AssetPath.home.feature4,
+      title: "AI, everywhere.",
+      description: "Accelera, our AI copilot , accelerates routine work, insights and decisions.",
+      sub: ""
+    },
+    {
+      img: AssetPath.home.feature5,
       title: "Fast time‑to‑value.",
       description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
       sub: ""
     },
     {
-      img: AssetPath.home.feature5,
-      title: "Built‑in Global compliance:",
-      description: "Connect ERP/POS to tax authorities; from ZATCA Phase II to PEPPOL standards.",
-      sub: ""
-    },
-    {
       img: AssetPath.home.feature6,
-      title: "Deploy your way.",
-      description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
+      title: "Built‑in Global compliance:",
+      description: "Connect ERP/POS to tax authorities; from Direct to PEPPOL based Integration.",
       sub: ""
     }
   ],
   contactInfo: { phone: "+962 123 456 789", salesText: "Contact Sales Jordan" },
   cards: [
     {
-      icon: AssetPath.cards.crm,
-      title: "CRM",
-      description: "Automate leads. Boost conversions.",
+      icon: AssetPath.cards.peppol,
+      title: "PEPPOL Member",
+      description: "Certified AP Provider & SMP",
       color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
       link: "SA/business/crm",
     },
     {
-      icon: AssetPath.cards.books,
-      title: "Books",
-      description: "Smart accounting made simple.",
+      icon: AssetPath.cards.gdpr,
+      title: "GDPR Complaint",
+      description: "Secure, Transparent, Responsible",
       color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
       link: "SA/business/books",
     },
     {
-      icon: AssetPath.cards.people,
-      title: "People",
-      description: "Complete HR & payroll solution",
+      icon: AssetPath.cards.iso,
+      title: "ISO 27001 Certified",
+      description: "Robust Security. Reliable Governance",
       color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
       link: "SA/business/people",
     },
-    {
-      icon: AssetPath.cards.retail,
-      title: "Retail",
-      description: "All-in-one smart retail POS.",
-      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
-      link: "SA/business/retail",
-    },
-    {
-      icon: AssetPath.cards.factory,
-      title: "Factory",
-      description: "Optimize full manufacturing process.",
-      color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
-      link: "SA/business/factory",
-    },
-    {
-      icon: AssetPath.cards.einvoicing,
-      title: "E‑Invoicing",
-      description: "Seamless, compliant tax integration.",
-      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
-      link: "SA/business/e-invoicing-standalone",
-    }
   ],
   testimonials: [
     {
@@ -552,13 +531,13 @@ const polandContent: CountryContent = {
     }
   ],
   complianceSection: {
-    complianceTitle: "Full Compliance with Belgium's E-Invoicing Mandate",
-    complianceDescription: "Accqrate ensures end-to-end compliance with Belgium's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
+    complianceTitle: "Full Compliance with Poland's E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with Poland B2B e-invoicing mandate and the KSeF requirements. Our platform supports:",
     complianceItems: [
-      "Structured formats fully aligned with Belgian and EU specifications",
+      "Structured formats fully aligned with Polish and EU specifications",
       "Secure, standardized exchange over PEPPOL",
       "Automated updates for evolving tax and technical regulations",
-      "Seamless integration with Mercurius and tax authority systems"
+      "Seamless integration with KseF and tax authority systems"
     ],
     automationTitle: "Hassle-Free E-Invoicing Automation",
     automationDescription: "Shift from manual intervention to intelligent automation:",

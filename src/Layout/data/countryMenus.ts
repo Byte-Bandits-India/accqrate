@@ -311,7 +311,7 @@ export const countryMenus: CountryMenus = {
           subItems: [
             {
               title: "Accqrate E-Invoicing",
-              description: "Simplify transactions, manage invoices effortlessly with our PEPPOL & KSeF Complaint e-invoicing software.",
+              description: "PEPPOL & KSeF Complaint e-invoicing software",
               img: AssetPath.header.navbar.fill.einvoicing,
               href: "/e-invocing/",
             },

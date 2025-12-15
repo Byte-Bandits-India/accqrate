@@ -101,7 +101,7 @@ sa: {
   title: "Poland ",
 
   subtitle:
-    "Poland's e-invoicing framework is built around KSeF (Krajowy System e-Faktur), the national platform used for the structured creation, submission, and retrieval of invoices. All businesses must use KSeF-compatible software to generate and exchange e-invoices in the mandated FA(3) XML format.",
+    "Poland’s e-invoicing framework is built around KSeF (Krajowy System e-Faktur), the national platform used for the structured creation, submission, and retrieval of invoices. All businesses must use KSeF-compatible software to generate and exchange e-invoices in the mandated FA(3) XML format.",
 
   heroImage: AssetPath.integration.b2bpoland.src,
 
@@ -110,7 +110,7 @@ sa: {
       number: "01",
       title: "Invoice Creation",
       description:
-        "A structured FA(3) XML e-invoice is generated according to Poland's KSeF schema and validation rules.",
+        "A structured FA(3) XML e-invoice is generated according to Poland’s KSeF schema and validation rules.",
     },
     {
       number: "02",

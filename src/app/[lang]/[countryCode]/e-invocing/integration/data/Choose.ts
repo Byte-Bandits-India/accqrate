@@ -116,7 +116,7 @@ be: {
 pl: {
   title: "Why Choose",
   subtitle:
-    "Integrate your ERP/POS with KSeF and achieve end-to-end FA(3) XML compliance for Poland's mandatory e-invoicing framework.",
+    "Integrate your ERP/POS with KSeF and achieve end-to-end FA(3) XML compliance for Poland’s mandatory e-invoicing framework.",
 
   topLeftItems: [
     {
