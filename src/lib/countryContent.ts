@@ -443,7 +443,7 @@ const uaeContent: CountryContent = {
 const polandContent: CountryContent = {
   backgroundImage: AssetPath.homeBackgrounds.jordan,
   heroTitle: "PEPPOL-Ready. KSeF-Compliant. Built For Enterprise.",
-  heroSubtitle: "E-invoicing Solution for Belgium",
+  heroSubtitle: "E-invoicing Solution for Poland",
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for Polish businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
