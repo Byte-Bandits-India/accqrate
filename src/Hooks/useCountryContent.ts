@@ -11,15 +11,15 @@ export const useCountryContent = (props?: UseCountryContentProps) => {
     const { selectedCountry } = useCountry();
     
     // Priority: prop > context > default
-    const countryCode = props?.countryCode || selectedCountry?.code || 'SA';
+    const countryCode = props?.countryCode || selectedCountry?.code || 'BE';
     
     // Validate country code
     if (!countryCode || typeof countryCode !== 'string') {
-      console.warn('Invalid countryCode, defaulting to SA');
-      const defaultContent = getCountryContent('SA');
+      console.warn('Invalid countryCode, defaulting to BE');
+      const defaultContent = getCountryContent('BE');
       return {
         countryContent: defaultContent,
-        selectedCountry: 'SA'
+        selectedCountry: 'BE'
       };
     }
     
@@ -32,10 +32,10 @@ export const useCountryContent = (props?: UseCountryContentProps) => {
   } catch (error) {
     console.error('Error in useCountryContent:', error);
     // Return default content if hook fails
-    const defaultContent = getCountryContent('SA');
+    const defaultContent = getCountryContent('BE');
     return {
       countryContent: defaultContent,
-      selectedCountry: 'SA'
+      selectedCountry: 'BE'
     };
   }
 };

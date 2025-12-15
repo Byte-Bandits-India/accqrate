@@ -14,10 +14,10 @@ import {
 
 export default function Section4() {
   const params = useParams();
-  const countryCode = (params?.countryCode as string) || "sa";
+  const countryCode = (params?.countryCode as string) || "be";
   const lang = (params?.lang as string) || "en";
 
-  const data = Choose[countryCode as keyof typeof Choose] || Choose["sa"];
+  const data = Choose[countryCode as keyof typeof Choose] || Choose["be"];
 
   const getInvoiceMultipleImage = () => {
     switch (countryCode) {

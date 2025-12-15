@@ -10,5 +10,5 @@ export default async function LangHomePage({ params }: LangPageProps) {
     const { lang } = await params;
 
     // Redirect to default country for this language
-    redirect(`/${lang}/sa`);
+    redirect(`/${lang}/be`);
 }

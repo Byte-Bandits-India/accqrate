@@ -108,7 +108,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
 
   // Populate random blog posts from the same country only
   useEffect(() => {
-    const cc = (countryCode || "sa").toLowerCase();
+    const cc = (countryCode || "be").toLowerCase();
     const current = countryConfig.find((c) => c.code === cc);
     const blogCode = current?.blogCode || "KSA";
 
