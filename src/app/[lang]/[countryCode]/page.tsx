@@ -120,7 +120,7 @@ export async function generateMetadata({ params }: CountryPageProps) {
     const country = countries.find(c => c.code.toLowerCase() === countryCode.toLowerCase());
 
     return {
-        title: country ? `ACQRATE - ${country.name}` : 'ACQRATE',
+        title: country ? `ACCQRATE - ${country.name}` : 'ACCQRATE',
         description: `Business and Retail Solutions for ${country?.name || 'your country'}`,
     };
 }

@@ -5,6 +5,12 @@ import { Choose } from "../data/Choose";
 import { useParams } from "next/navigation";
 import T from "@/Components/T";
 import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/Components/ui/accordion";
 
 export default function Section4() {
   const params = useParams();
@@ -54,49 +60,76 @@ export default function Section4() {
         </div>
 
         {/* TOP GRID */}
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
-          {/* LEFT LIST */}
-          <div className="space-y-4">
-            {data.topLeftItems.map((item, i) => (
-              <div key={i} className="flex items-start space-x-4">
-                <Image
-                  src={AssetPath.integration.tick}
-                  width={24}
-                  height={24}
-                  alt="check"
-                  className="mt-1"
-                />
-                <div>
-                  <h3 className="text-[#1C2041] font-semibold text-[18px] mb-1">
-                    <T lang={lang} countryCode={countryCode}>{item.title}</T>
-                  </h3>
-                  <p className="text-[#5A6183] text-fluid-small leading-relaxed max-w-[450px]">
-                    <T lang={lang} countryCode={countryCode}>{item.desc}</T>
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* LEFT – ACCORDION LIST */}
+          <div className="order-2 lg:order-1">
+            <Accordion type="single" collapsible className="space-y-4">
+              {data.topLeftItems.map((item, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`item-${i}`}
+                  className=""
+                >
+                  <AccordionTrigger
+                    className="
+          flex
+          items-start
+          justify-start
+          gap-4
+          py-4
+          text-left
+          hover:no-underline
+        "
+                  >
+                    {/* ICON */}
+                    <Image
+                      src={AssetPath.integration.tick}
+                      width={22}
+                      height={22}
+                      alt="check"
+                      className="mt-1 shrink-0"
+                    />
+
+                    {/* TEXT */}
+                    <h3 className="text-[#1C2041] font-semibold text-[18px]">
+                      <T lang={lang} countryCode={countryCode}>
+                        {item.title}
+                      </T>
+                    </h3>
+
+                    {/* PUSH ARROW RIGHT */}
+                    <span className="ml-auto" />
+                  </AccordionTrigger>
+
+                  <AccordionContent className="pl-10 pb-4">
+                    <p className="text-[#5A6183] text-fluid-small leading-relaxed max-w-[450px]">
+                      <T lang={lang} countryCode={countryCode}>
+                        {item.desc}
+                      </T>
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center items-center max-w-[600px]">
+          {/* RIGHT – IMAGE */}
+          <div className="flex justify-center items-center order-1 lg:order-2">
             {data.topRightImage && (
               <Image
                 src={getDashboardMultipleImage().src}
                 width={800}
                 height={600}
                 alt="Dashboard"
-
-                className=" rounded-xl "
+                className="rounded-2xl shadow-sm"
               />
             )}
           </div>
-
         </div>
 
         {/* BOTTOM GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20 bg-[#ECEDFF] rounded-[30px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20 bg-[#ECEDFF] p-4 rounded-[30px]">
 
           {/* LEFT INVOICE IMAGE */}
           <div className="flex justify-center">

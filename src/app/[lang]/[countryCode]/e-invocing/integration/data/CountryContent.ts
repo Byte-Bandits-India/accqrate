@@ -36,8 +36,8 @@ export const COUNTRY_CONTENT: Record<string, CountryContent> = {
 
   ae: {
     title: "Integrate Your Existing ",
-    titlend: "ERPs, POS",
-    highlight: "& Applications With FTA (UAE PINT)",
+    titlend: "ERPs, POS & Applications With FTA (UAE PINT)",
+    highlight: "",
     subtitle: "FTA E-INVOICING INTEGRATION",
     boxTitle: "A Peppol Certified - UAE PINT, 5 Corner Model Ready Solution",
     boxSubtitle: "100% Compliance for UAE's E-Invoicing.",
