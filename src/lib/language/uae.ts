@@ -79,6 +79,24 @@ const blogTranslations: TranslationsMap = {
 
 "Seamless integration with FTA.": { "ar": "تكامل سلس مع الهيئة الاتحادية للضرائب." },
 
+"Built‑in FTA ": { "ar": "مُدمج مع FTA" },
+"Built‑in FTA": { "ar": "مُدمج مع FTA" },
+
+"Cloud (managed, subscription) or On‑Prem (full control over infra & data).": { "ar": "سحابي (مدار بالاشتراك) أو داخل المنشأة (تحكم كامل في البنية التحتية والبيانات)." },
+
+"time‑to‑value.": { "ar": "وقت‑لتحقيق القيمة." },
+"Fast time‑to‑value.": { "ar": "قيمة سريعة التحقيق." },
+
+"Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.": { "ar": "واجهة مستخدم فائقة السرعة، وتثبيت بنقرة واحدة، وهجرات منخفضة التعطيل من SAP/Microsoft/Oracle أو الأدوات المتفرقة." },
+
+"Enterprise‑grade.": { "ar": "بمستوى المؤسسات." },
+
+"Generate e‑invoices, match POs, trigger approvals and alerts.": { "ar": "إنشاء الفواتير الإلكترونية، مطابقة أوامر الشراء، تشغيل الموافقات والتنبيهات." },
+
+"Accqrate’s e‑invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.": { "ar": "حل الفوترة الإلكترونية من أكيوريت متكامل بسلاسة مع PEPPOL. وفرنا الوقت وخفضنا مخاطر الامتثال." },
+
+"Accqrate ensures end-to-end compliance with UAE’s B2B and B2G e-invoicing mandate and the FTA’s  requirement. Our platform supports:": { "ar": "تضمن أكيوريت الامتثال التام لمتطلبات الفوترة الإلكترونية بين الشركات (B2B) وبين الأعمال والحكومة (B2G) في دولة الإمارات، ومعايير الهيئة الاتحادية للضرائب. وتدعم منصتنا:" },
+
 "Hassle-Free E-Invoicing Automation": { "ar": "أتمتة الفوترة الإلكترونية بلا تعقيد" },
 
 "Shift from manual intervention to intelligent automation:": { "ar": "الانتقال من التدخل اليدوي إلى الأتمتة الذكية:" },
@@ -272,12 +290,28 @@ const blogTranslations: TranslationsMap = {
 "Accqrate’s e-invoice solution integrated seamlessly with PEPPOL. We saved time and cut compliance risk.": {
   "ar": "تكامل حل الفوترة الإلكترونية من أكيوريت بسلاسة مع PEPPOL. وفرنا الوقت وقللنا مخاطر عدم الامتثال."
 },
+"Future-Ready for DCTCE / 5 Corner:": {
+  ar: "جاهز للمستقبل لنظام DCTCE / نموذج الخمس زوايا"
+},
+"Compliance without compromise": { "ar": "الامتثال بلا تنازلات" },
+"Regulations met by design.": { "ar": "اللوائح مضمونة من التصميم." },
+
+"Security first.": { "ar": "الأمان أولاً." },
+"Data protection and governance across cloud and on-prem.": { "ar": "حماية البيانات والحوكمة عبر السحابة وفي الموقع." },
+
+"Customer obsessed delivery": { "ar": "توصيل يركز على العميل" },
+"On time. In scope. With measurable outcomes.": { "ar": "في الوقت المحدد. ضمن النطاق. بنتائج قابلة للقياس." },
+
+"Performance at scale": { "ar": "أداء على نطاق واسع" },
+"Built for enterprise workloads and real-time operations.": { "ar": "مصمم لأعباء عمل المؤسسات والعمليات في الوقت الفعلي." },
+
+"Usability that drives adoption": { "ar": "قابلية استخدام تدفع التبنّي" },
+"Clean, fast, role-based UX.": { "ar": "تجربة مستخدم نظيفة وسريعة ومستندة للأدوار." },
 
 
 "Contact Sales Jordan": {
   "ar": "تواصل مع مبيعات الأردن"
 },
-
 
 "The Peppol CTC Model in the UAE: A Strategic Overview of the Country's New E-Invoicing Architecture": {
   "ar": "نموذج ‏Peppol CTC في الإمارات: نظرة استراتيجية على بنية الفوترة الإلكترونية الجديدة في الدولة"
@@ -6883,7 +6917,21 @@ const blogTranslations: TranslationsMap = {
 
 "Flexible Deployment": { ar: "مرونة في النشر" },
 
-
+"UAE Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.": {
+  ar: "حل <span class='text-[#508847]'>الفوترة الإلكترونية</span> القائم في دولة الإمارات والمخصص للشركات الإماراتية."
+},
+"Accqrate E-Invoicing Solutions": {
+  ar: "حلول الفوترة الإلكترونية من أككريت"
+},
+"Streamline Operations and Accelerate Business Growth": {
+  ar: "تبسيط العمليات وتسريع نمو الأعمال"
+},
+"Integrate Your Existing": {
+  ar: "قم بدمج أنظمتك الحالية"
+},
+"ERPs, POS & Applications With FTA (UAE PINT)": {
+  ar: "أنظمة تخطيط موارد المؤسسات (ERP)، ونقاط البيع (POS)، والتطبيقات مع هيئة الضرائب الاتحادية (UAE PINT)"
+},
 /* =====================
    CLOUD SOLUTIONS
    ===================== */
@@ -7265,6 +7313,7 @@ const blogTranslations: TranslationsMap = {
   ar: "اتصال تلقائي"
 },
 
+
 "Deliver invoices directly to buyers via Peppol, email, or file-based workflows fully integrated with your ERP/POS and UAE ASP. ": {
   ar: "إرسال الفواتير مباشرة إلى المشترين عبر بيبول أو البريد الإلكتروني أو مسارات العمل القائمة على الملفات، والمتكاملة بالكامل مع نظام ERP/POS ومزوّد الخدمة المعتمد في الإمارات."
 },
@@ -7276,6 +7325,19 @@ const blogTranslations: TranslationsMap = {
 "Track payments, monitor outstanding balances, and maintain full visibility across your UAE e-invoice lifecycle, including MLS acknowledgments and DCTCE reporting status. ": {
   ar: "تتبع المدفوعات ومراقبة الأرصدة المستحقة والحفاظ على رؤية شاملة لدورة حياة الفاتورة الإلكترونية في دولة الإمارات، بما في ذلك إشعارات MLS وحالة تقارير DCTCE."
 },
+
+  "Trusted customers": {
+    ar: "عملاء موثوقون"
+  },
+  "Integration engineers and Consultants": {
+    ar: "مهندسو التكامل والمستشارون"
+  },
+  "Invoices per month": {
+    ar: "الفواتير شهريًا"
+  },
+  "Completed integrations": {
+    ar: "عمليات التكامل المكتملة"
+  },
 
 /* ===================== Bottom Right List ===================== */
 
