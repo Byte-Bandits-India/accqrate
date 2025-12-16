@@ -10472,6 +10472,12 @@ const translations = {
   '5,000+ Global companies': {
     ar: 'أكثر من 5000 شركة عالمية'
   },
+  'Updated On :': {
+    ar: 'تم التحديث في :'
+  },
+  'min read': {
+    ar: 'دقيقة قراءة'
+  },
 
 };
 

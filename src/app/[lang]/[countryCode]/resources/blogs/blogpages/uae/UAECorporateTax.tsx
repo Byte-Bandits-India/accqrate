@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import T from "@/Components/UaeT";
+import T from "@/Components/T";
 import BlogLayout from "../../layout/BlogLayout";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -8,7 +8,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 function UAECorporateTax() {
     return (
         <BlogLayout
-            pageTitle="Corporate Tax in the UAE: A Complete Guide to Rates, Scope, Compliance and the Domestic Minimum Top-up Tax"
+            pageTitle={<T>Corporate Tax in the UAE: A Complete Guide to Rates, Scope, Compliance and the Domestic Minimum Top-up Tax</T>}
             updatedOn="Nov 25th, 2024"
             minRead="30"
         >

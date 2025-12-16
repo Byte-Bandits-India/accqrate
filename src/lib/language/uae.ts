@@ -7981,6 +7981,12 @@ const blogTranslations: TranslationsMap = {
 },
 "Browse Our Resources": {
   ar: "تصفح مواردنا"
+},
+"Updated On :": {
+  ar: "تم التحديث في :"
+},
+"min read": {
+  ar: "دقيقة قراءة"
 }
 };
 // Minimal runtime language state and API to match other language modules

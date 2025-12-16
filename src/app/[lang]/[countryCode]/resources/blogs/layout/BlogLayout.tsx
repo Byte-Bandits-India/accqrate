@@ -11,7 +11,7 @@ import CTASection from "@/Components/CTASection";
 import blogPosts from "../data/blogspost";
 import "@/Components/Blogs.scss";
 import AssetPath from "@/AssetPath/AssetPath";
-import BelgiumT from "@/Components/BelgiumT";
+import BelgiumT from "@/Components/T";
 
 interface BlogLayoutProps {
   children: React.ReactNode;
@@ -161,7 +161,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
           <div className="flex flex-col md:flex-row items-center text-fluid-small justify-between">
             <Breadcrumb
               items={breadcrumbItems.map((item) => ({
-                title: <T>{item.title}</T>,
+                title: <T lang={lang} countryCode={countryCode?.toUpperCase()}>{item.title}</T>,
                 href: item.href,
               }))}
             />
@@ -194,13 +194,11 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
             {/* Blog main content */}
             <Col xs={24} md={12}>
               <h1 className="text-2xl md:text-[30px] leading-tight font-semibold mb-3 text-[#1c2041] max-w-[700px]">
-                {pageTitle}
+                <T lang={lang} countryCode={countryCode?.toUpperCase()}>{pageTitle}</T>
               </h1>
               {updatedOn && (
                 <p className="text-gray-500 text-fluid-small mb-6">
-                  <T>
-                    Updated On : {updatedOn} | {minRead} min read
-                  </T>
+                  <T lang={lang} countryCode={countryCode?.toUpperCase()}>Updated On :</T> {updatedOn} | {minRead} <T lang={lang} countryCode={countryCode?.toUpperCase()}>min read</T>
                 </p>
               )}
               <div className="prose max-w-[800px]">{children}</div>
