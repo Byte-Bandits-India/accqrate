@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import T from "@/Components/UaeT";
+import T from "@/Components/T";
 import BlogLayout from "../../layout/BlogLayout";
 import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
@@ -8,7 +8,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 function UAEVATZeroRatedVsExempt() {
     return (
         <BlogLayout
-            pageTitle="Zero Rated versus Exempt Supplies in the UAE VAT System: Complete Guide to Classification and Compliance"
+            pageTitle={<T>Zero Rated versus Exempt Supplies in the UAE VAT System: Complete Guide to Classification and Compliance</T>}
             updatedOn="Nov 25th, 2024"
             minRead="32"
         >
