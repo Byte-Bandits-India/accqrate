@@ -8,7 +8,7 @@ interface LangLayoutProps {
     }>;
 }
 
-const supportedLanguages = ['en', 'ar', 'ml', 'fr', 'nl', 'de'];
+const supportedLanguages = ['en', 'ar', 'ml', 'fr', 'nl', 'de', 'pl'];
 
 export default async function LangLayout({ children, params }: LangLayoutProps) {
     const { lang } = await params;
