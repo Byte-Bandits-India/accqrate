@@ -17,6 +17,24 @@ export const section2Content = {
             desc2: "Accqrate eliminates the traditional complexities of ERP and e-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability."
         }
     },
+    pl: {
+        section1Title: "Accqrate In Poland",
+        section1: {
+            title1: "Built for Poland's PEPPOL & FPS Finance Mandate",
+            desc1: "Accqrate brings a Poland-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.",
+            title2: "European Precision, Global Scalability",
+            desc2: "With Swiss-led engineering and global deployment experience across 30+ sectors, Accqrate delivers an enterprise-grade platform capable of handling Poland's upcoming B2B rollout and multi-country operations inside and outside the EU.",
+            title3: "Compliance Made Simple",
+            desc3: "Accqrate combines automation, AI-driven validations, and standardized interoperability to make compliance intuitive, predictable, and scalable for companies of all sizes."
+        },
+        section2Title: "Our Mission",
+        section2: {
+            title1: "Modernizing Europe's E-Invoicing & Digital Tax Landscape",
+            desc1: "We empower businesses with technology that simplifies PEPPOL connectivity, digital reporting, VAT oversight, and multi-entity governance.",
+            title2: "Accelerating Digital Adoption",
+            desc2: "Accqrate eliminates the traditional complexities of ERP and e-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability."
+        }
+    },
     ae: {
         section1Title: "Accqrate In UAE",
         section1: {

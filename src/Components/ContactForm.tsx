@@ -106,7 +106,7 @@ const ContactFormPage = () => {
         }
       }
     },
-     AE: { 
+    AE: {
       title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
       cards: {
@@ -165,7 +165,7 @@ const ContactFormPage = () => {
 
   // Get card content based on country code
   const getCountryCardContent = () => {
-    if (['BE', 'PL','AE'].includes(countryCode)) {
+    if (['BE', 'PL', 'AE'].includes(countryCode)) {
       return countryCardContent[countryCode];
     } else {
       return countryCardContent.DEFAULT;
