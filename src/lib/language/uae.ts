@@ -2,6 +2,7 @@
 
 import { useCountry } from "@/contexts/CountryContext";
 import { ReactNode } from 'react';
+import { aboutTranslations } from './UAEAboutTranslation';
 
 interface TProps {
     children: ReactNode;
@@ -18,6 +19,7 @@ interface TranslationsMap {
 }
 
 const blogTranslations: TranslationsMap = {
+...aboutTranslations,
   
 
 
@@ -7761,9 +7763,6 @@ const blogTranslations: TranslationsMap = {
   ar: "انطلق خلال 5 أيام عمل، مما يسرّع جاهزيتك لمتطلبات الفوترة الإلكترونية الإلزامية للمعاملات B2B في الإمارات."
 },
 
-"Integrate Your Existing": {
-  ar: "دمج نظامك الحالي"
-},
 
 "Seamless": {
   ar: "سلس"
@@ -7851,6 +7850,137 @@ const blogTranslations: TranslationsMap = {
 
 "Get Started": {
   ar: "ابدأ الآن"
+},
+
+// UAE Blog Post Translations
+"Key Requirements, Implementation Timeline and the Latest Regulatory Updates...": {
+  ar: "المتطلبات الرئيسية وجدول التنفيذ والتحديثات التنظيمية الأحدث..."
+},
+"VAT in the UAE: Rates, Thresholds, Exemptions and Compliance Rules for 2025": {
+  ar: "ضريبة القيمة المضافة في الإمارات: المعدلات والحدود والإعفاءات وقواعد الامتثال لعام 2025"
+},
+"Value Added Tax has been a core element of the UAE’s tax framework since its introduction on 1 January 2018...": {
+  ar: "أصبحت ضريبة القيمة المضافة عنصراً أساسياً في إطار الضرائب في الإمارات العربية المتحدة منذ إدخالها في 1 يناير 2018..."
+},
+"Corporate Tax in the UAE": {
+  ar: "الضريبة الشركات في الإمارات العربية المتحدة"
+},
+"A Complete Guide to Rates, Scope, Compliance and the Domestic Minimum Top up Tax...": {
+  ar: "دليل شامل للمعدلات والنطاق والامتثال وضريبة الحد الأدنى المحلية..."
+},
+"How to File a VAT Return in the UAE": {
+  ar: "كيفية تقديم إقرار ضريبة القيمة المضافة في الإمارات العربية المتحدة"
+},
+"Businesses that are registered for Value Added Tax in the UAE are required to submit VAT returns for every tax period assigned to them by the Federal Tax Authority...": {
+  ar: "يجب على الشركات المسجلة لضريبة القيمة المضافة في الإمارات العربية المتحدة تقديم إقرارات ضريبة القيمة المضافة لكل فترة ضريبية يتم تعيينها لها من قبل الهيئة الاتحادية للضرائب..."
+},
+"How to Calculate VAT in the UAE in 2025": {
+  ar: "كيفية حساب ضريبة القيمة المضافة في الإمارات العربية المتحدة في 2025"
+},
+"Calculating VAT in the United Arab Emirates is straightforward once you understand how the five percent rate applies to different types of transactions...": {
+  ar: "حساب ضريبة القيمة المضافة في الإمارات العربية المتحدة أمر مباشر بمجرد فهم كيفية تطبيق معدل الخمسة بالمائة على أنواع مختلفة من المعاملات..."
+},
+"UAE Corporate Tax 2025": {
+  ar: "ضريبة الشركات في الإمارات 2025"
+},
+"This guide answers common questions about the UAE corporate tax regime, explains who is covered...": {
+  ar: "يجيب هذا الدليل على الأسئلة الشائعة حول نظام ضريبة الشركات في الإمارات، ويشرح من يغطي..."
+},
+"VAT Invoice in the UAE": {
+  ar: "فاتورة ضريبة القيمة المضافة في الإمارات العربية المتحدة"
+},
+"Value Added Tax has become an integral part of commercial operations in the United Arab Emirates...": {
+  ar: "أصبحت ضريبة القيمة المضافة جزءاً لا يتجزأ من العمليات التجارية في الإمارات العربية المتحدة..."
+},
+"VAT Rate Structure in the UAE": {
+  ar: "هيكل معدلات ضريبة القيمة المضافة في الإمارات العربية المتحدة"
+},
+"The Value Added Tax framework in the United Arab Emirates began on the first of January 2018 through Federal Decree Law No. 8 of 2017...": {
+  ar: "بدأ إطار ضريبة القيمة المضافة في الإمارات العربية المتحدة في الأول من يناير 2018 من خلال المرسوم بقانون اتحادي رقم 8 لسنة 2017..."
+},
+"How to Claim a VAT Refund in the UAE": {
+  ar: "كيفية المطالبة باسترداد ضريبة القيمة المضافة في الإمارات العربية المتحدة"
+},
+"Since the introduction of Value Added Tax in the United Arab Emirates in January 2018, several refund mechanisms...": {
+  ar: "منذ إدخال ضريبة القيمة المضافة في الإمارات العربية المتحدة في يناير 2018، تم إدخال عدة آليات للاسترداد..."
+},
+"Penalties for Non Compliance Under UAE VAT": {
+  ar: "العقوبات لعدم الامتثال بموجب ضريبة القيمة المضافة في الإمارات"
+},
+"The introduction of Value Added Tax in the United Arab Emirates marked a major shift in how businesses record...": {
+  ar: "أدخال ضريبة القيمة المضافة في الإمارات العربية المتحدة علامة تحول كبيرة في كيفية تسجيل الشركات..."
+},
+"VAT in the UAE: Complete 2025 Guide to Rates, Registration, Exemptions and Compliance": {
+  ar: "ضريبة القيمة المضافة في الإمارات: دليل 2025 الكامل للمعدلات والتسجيل والإعفاءات والامتثال"
+},
+"Value Added Tax has become a central part of the UAE’s fiscal system since its introduction in 2018...": {
+  ar: "أصبحت ضريبة القيمة المضافة جزءاً مركزياً من النظام المالي في الإمارات منذ إدخالها في 2018..."
+},
+"Excise Tax in the UAE: Rates, Exemptions, Compliance Rules, and How the Tax Is Calculated": {
+  ar: "ضريبة الاستهلاك في الإمارات: المعدلات والإعفاءات وقواعد الامتثال وكيفية حساب الضريبة"
+},
+"Excise tax has become an important element of the UAE’s modern tax system. Introduced to discourage the consumption of products that negatively affect public health or the environment...": {
+  ar: "أصبحت ضريبة الاستهلاك عنصراً مهماً في النظام الضريبي الحديث في الإمارات. تم إدخالها للحد من استهلاك المنتجات التي تؤثر سلباً على الصحة العامة أو البيئة..."
+},
+"Zero Rated versus Exempt Supplies in the UAE VAT System": {
+  ar: "المعفاة من الضريبة مقابل المعفاة في نظام ضريبة القيمة المضافة في الإمارات"
+},
+"Understanding whether a supply is zero rated or exempt is one of the most important VAT decisions a business has to make...": {
+  ar: "فهم ما إذا كان العرض معفى من الضريبة أو معفى هو أحد أهم القرارات المتعلقة بضريبة القيمة المضافة التي يجب على الشركة اتخاذها..."
+},
+"MoFA Attestation in the UAE": {
+  ar: "تصديق وزارة الخارجية في الإمارات العربية المتحدة"
+},
+"Document attestation by the Ministry of Foreign Affairs is a mandatory requirement across many legal, immigration and commercial processes in the United Arab Emirates...": {
+  ar: "تصديق الوثائق من قبل وزارة الخارجية هو متطلب إلزامي في العديد من العمليات القانونية والهجرة والتجارية في الإمارات العربية المتحدة..."
+},
+"The Peppol CTC Model in the UAE": {
+  ar: "نموذج Peppol CTC في الإمارات العربية المتحدة"
+},
+"The UAE’s transition toward mandatory e-invoicing marks one of its most significant digital taxation reforms to date. By selecting the Peppol Continuous Transaction Controls model as its national framework...": {
+  ar: "يمثل انتقال الإمارات نحو الفوترة الإلكترونية الإلزامية أحد أكبر الإصلاحات الضريبية الرقمية حتى الآن. من خلال اختيار نموذج Peppol Continuous Transaction Controls كإطارها الوطني..."
+},
+"UAE Tax Credit Notes": {
+  ar: "إشعارات الائتمان الضريبية في الإمارات"
+},
+"Tax credit notes play a central role in the UAE VAT ecosystem. They ensure that errors, returns and adjustments are documented correctly without compromising compliance, revenue reporting...": {
+  ar: "تلعب إشعارات الائتمان الضريبية دوراً مركزياً في نظام ضريبة القيمة المضافة في الإمارات. تضمن أن يتم توثيق الأخطاء والإرجاعات والتعديلات بشكل صحيح دون المساس بالامتثال وإبلاغ الإيرادات..."
+},
+"Digital Signature Certificate in the UAE": {
+  ar: "شهادة التوقيع الرقمي في الإمارات العربية المتحدة"
+},
+"Digital transformation in the UAE has accelerated rapidly, and the shift toward mandatory e-invoicing by 2026 makes Digital Signature Certificates one of the core identity...": {
+  ar: "تسارعت التحول الرقمي في الإمارات بسرعة كبيرة، ويجعل الانتقال نحو الفوترة الإلكترونية الإلزامية بحلول 2026 شهادات التوقيع الرقمي واحدة من الهويات الأساسية..."
+},
+"TRN Verification in UAE: A Complete and Practical Guide": {
+  ar: "التحقق من رقم التسجيل الضريبي في الإمارات: دليل شامل وعملي"
+},
+"A Tax Registration Number, commonly known as a TRN, is one of the most essential identifiers for any VAT-registered business in the United Arab Emirates...": {
+  ar: "رقم التسجيل الضريبي، المعروف عادة باسم TRN، هو أحد أهم المعرفات لأي شركة مسجلة لضريبة القيمة المضافة في الإمارات العربية المتحدة..."
+},
+"Excise Registration in the UAE: Complete, Updated Guide for Businesses": {
+  ar: "التسجيل لضريبة الاستهلاك في الإمارات: دليل شامل ومحدث للشركات"
+},
+"Excise tax in the United Arab Emirates is a regulatory tool designed to curb the consumption of goods that have negative health or environmental impacts...": {
+  ar: "ضريبة الاستهلاك في الإمارات العربية المتحدة هي أداة تنظيمية مصممة للحد من استهلاك السلع التي تؤثر سلباً على الصحة أو البيئة..."
+},
+"Preparing for a PEPPOL Driven E-Billing System": {
+  ar: "الاستعداد لنظام الفوترة الإلكترونية المبني على PEPPOL"
+},
+  "The United Arab Emirates is preparing a nationwide electronic invoicing framework built on a decentralised model inspired by PEPPOL's Continuous Transaction Control...": {
+    ar: "الإمارات العربية المتحدة تستعد لإطار عمل وطني للفوترة الإلكترونية مبني على نموذج لامركزي مستوحى من نظام PEPPOL للرقابة المستمرة على المعاملات..."
+  },
+"A New Era for Middle Eastern Businesses": {
+  ar: "عصر جديد للشركات في الشرق الأوسط"
+},
+"The expanding network of national electronic invoicing mandates signals a regional shift toward unified digital tax ecosystems...": {
+  ar: "الشبكة الموسعة من المتطلبات الوطنية للفوترة الإلكترونية تشير إلى تحول إقليمي نحو نظم ضريبية رقمية موحدة..."
+},
+"Recent Blog Posts from Accqrate": {
+  ar: "أحدث مقالات المدونة من أكيوريت"
+},
+"Browse Our Resources": {
+  ar: "تصفح مواردنا"
 }
 };
 // Minimal runtime language state and API to match other language modules

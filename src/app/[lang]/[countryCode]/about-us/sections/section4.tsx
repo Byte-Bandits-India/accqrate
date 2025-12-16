@@ -89,9 +89,9 @@ const Section4: React.FC = () => {
                     className="w-[140px] sm:w-[160px] md:w-[180px] object-contain"
                   />
 
-                  <span className="absolute right-1 bottom-0 
+                  <span className={`absolute ${lang === 'ar' ? 'left-1' : 'right-1'} bottom-0 
                     text-[70px] md:text-[90px] lg:text-[90px]
-                    font-bold text-[#E6E6E6] select-none leading-none font-anonymous"
+                    font-bold text-[#E6E6E6] select-none leading-none font-anonymous`}
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
