@@ -149,7 +149,7 @@ const countryConfig = {
         title: "Integrate With PEPPOL Network ",
         description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
         description2: "",
-        ctaText: "Get 30 days free trial",
+        ctaText: "Connect with our Consultant",
         countryName: "Polish",
         marqueeItems: [
             "Peppol Certified",

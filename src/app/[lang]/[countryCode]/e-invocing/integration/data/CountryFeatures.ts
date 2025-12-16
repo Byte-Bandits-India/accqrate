@@ -210,13 +210,13 @@ features: [
       img: AssetPath.invoicing.integrationAssets.ring.src,
       title: "Flexibility in Deployment",
       description:
-         "Go live in 5 days with guaranteed KSeF integration and FA(3) XML readiness.",
+         "Deploy on Accqrate Cloud or your own infrastructure—both optimized for seamless KSeF operations.",
     },
     {
       img: AssetPath.invoicing.integrationAssets.cloud.src,
       title: "Rapid Implementation",
       description:
-       "Deploy on Accqrate Cloud or your own infrastructure both optimized for seamless KSeF operations.",
+       "Go live in 5 days with guaranteed KSeF integration and FA(3) XML readiness.",
     },
     {
   img: AssetPath.invoicing.integrationAssets.set.src,

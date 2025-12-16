@@ -155,7 +155,7 @@ export const ProofData = {
       {
         title: "ERP Expertise",
         desc:
-          "Strong expertise across global ERPs including SAP, Oracle, Dynamics, Infor, BAAN, Sage, and custom systems."
+          "Strong expertise across global ERPs including SAP, Oracle, Dynamics, Infor, BAAN, SAGE, and custom systems."
       },
       {
         title: "Compliance Assurance",

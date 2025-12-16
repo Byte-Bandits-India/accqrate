@@ -233,21 +233,21 @@ const Section1 = () => {
             peppolCardText: "Accqrate is Peppol Certified Solution Provider",
             cards: [
                 {
-                    title: "Full Compliance with Poland's",
-                    subTitle: "KSeF E-Invoicing System",
+                    title: "Full Compliance with Poland’s",
+                    subTitle: "E-Invoicing Mandate",
                     description:
-                        "Accqrate delivers FA(3) XML-compliant structured e-invoices with seamless KSeF integration, ensuring secure submission, standardized processing, and continuous alignment with Poland's evolving regulatory framework.",
+                        "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Poland’s evolving regulatory framework.",
                 },
                 {
-                    title: "Future-Ready for EU Standards",
-                    subTitle: "(ViDA and Peppol)",
+                    title: "Future-Ready for ViDA",
+                    subTitle: "(VAT in the Digital Age)",
                     description:
                         "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
                 },
                 {
                     title: "Effortless E-Invoicing Automation",
                     description:
-                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to KSeF submission, ensuring complete Polish compliance without manual intervention.",
+                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Polish compliance without manual intervention.",
                 },
                 {
                     title: "Specialized Support and Implementation Expertise",
@@ -340,7 +340,7 @@ const Section1 = () => {
                 <div className='bg-gradient-to-t from-[#EFF3FF] to-transparent'>
                     <FadeUp className="mb-8 md:mb-[40px] pt-12 md:pt-[80px] lg:pt-[100px]">
                         <h1 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto mt-6">
-                             <T>Trusted by</T>{" "}
+                            <T>Trusted by</T>{" "}
                             <br className="md:hidden" />
                             <span className="text-[#194BED]"></span>
                             <br className="md:hidden" />

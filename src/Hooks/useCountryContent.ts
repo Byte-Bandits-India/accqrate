@@ -23,11 +23,11 @@ export const useCountryContent = (props?: UseCountryContentProps) => {
       };
     }
     
-    const countryContent = getCountryContent(countryCode);
+    const countryContent = getCountryContent(countryCode.toUpperCase());
     
     return {
       countryContent,
-      selectedCountry: countryCode
+      selectedCountry: countryCode.toUpperCase()
     };
   } catch (error) {
     console.error('Error in useCountryContent:', error);
