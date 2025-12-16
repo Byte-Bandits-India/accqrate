@@ -111,7 +111,7 @@ const Section1 = () => {
         mu: { flag: AssetPath.header.language.mauritius, code: "MU", name: "Mauritius", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         jd: { flag: AssetPath.header.language.jordan, code: "JD", name: "Jordan", logo: AssetPath.resources.Zact, trustedBySubtitle: '5,000+ Global companies' },
         be: { flag: AssetPath.header.language.belgium, code: "BE", name: "Belgium", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by leading Belgian organisations' },
-        pl: { flag: AssetPath.header.language.poland, code: "PO", name: "Poland", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by Poland\'s businesses' },
+        pl: { flag: AssetPath.header.language.poland, code: "PL", name: "Poland", logo: AssetPath.integration.peppol, trustedBySubtitle: 'Trusted by Poland\'s businesses' },
     };
 
     const currentCountry = countryMap[countryCode] || countryMap.sa;
