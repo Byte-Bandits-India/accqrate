@@ -8,6 +8,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { useCountryContent } from "@/Hooks/useCountryContent";
 import T from "@/Components/T"
+import { useCountry } from "@/contexts/CountryContext";
 import { t } from "@/lib/translations";
 import {
     Accordion,
@@ -387,6 +388,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     const carouselRef = useRef<HTMLDivElement>(null);
     const [isModalOpen, setModalOpen] = React.useState(false);
     const handleCloseModal = React.useCallback(() => setModalOpen(false), []);
+    const { selectedLanguage } = useCountry();
     // Resolve flag image from AssetPath.header.language using country code
     const getFlagForCountry = (code: string) => {
         switch (code.toUpperCase()) {
@@ -1351,7 +1353,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </div>
 
                             {/* Image fixed at the bottom inside the white card */}
-                            <div className="absolute bottom-0 hidden lg:-left-[200px] xl:-left-[400px] w-full lg:flex justify-center">
+                            <div className={`absolute bottom-0 hidden lg:${selectedLanguage.code === 'ar' ? 'right-0' : '-left-[200px]'} xl:${selectedLanguage.code === 'ar' ? 'right-0' : '-left-[400px]'} w-full lg:flex justify-center ${selectedLanguage.code === 'ar' ? 'lg:hidden' : ''}`}>
                                 <Image
                                     src={AssetPath.home.clip}
                                     alt="faq"
@@ -1363,11 +1365,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                         </div>
                     </div>
-
-
-
-
-
                 </div>
 
                 {/* Final Conversion Band */}

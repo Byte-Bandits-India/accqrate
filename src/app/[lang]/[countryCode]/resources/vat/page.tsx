@@ -149,7 +149,7 @@ export default function VATCalculator() {
             className="text-[26px] md:text-[32px] lg:text-[38px] font-medium pb-[30px] md:pb-[37px] text-[#000000] tracking-heading leading-tight"
             data-aos="fade-up"
           >
-            {getVatCalculatorTitle()}
+            <T>{getVatCalculatorTitle()}</T>
           </h1>
 
           <div className="lg:flex items-stretch justify-evenly font-inter space-y-6 lg:space-y-0 lg:gap-[35px]">
@@ -274,14 +274,14 @@ export default function VATCalculator() {
                       <div className="flex items-center justify-between py-2">
                         <div>
                           <p className="text-fluid-body text-[#333333] font-medium">
-                            Sale Value:
+                            <T>Sale Value</T>:
                           </p>
                           <p className="text-fluid-small text-[#717171] mt-2">
-                            {isVATInclusive === "yes" ? "Inclusive of VAT" : "Exclusive of VAT"}
+                            <T>{isVATInclusive === "yes" ? "Inclusive of VAT" : "Exclusive of VAT"}</T>
                           </p>
                         </div>
                         <p className="text-fluid-body text-[#333333] font-bold mt-10">
-                          {currency} {hydrated ? saleValueNum.toLocaleString() : saleValueNum}
+                          <T>{currency} {hydrated ? saleValueNum.toLocaleString() : saleValueNum}</T>
                         </p>
                       </div>
 
@@ -290,7 +290,7 @@ export default function VATCalculator() {
                       {/* VAT Amount Row */}
                       <div className="flex items-center justify-between py-2">
                         <p className="text-fluid-body text-[#333333] font-medium">
-                          VAT Amount:
+                          <T>VAT Amount</T>:
                         </p>
                         <p className="text-fluid-body text-[#333333] font-bold">
                           {currency} {hydrated ? vatAmount.toFixed(2) : vatAmount.toFixed(2)}
@@ -302,7 +302,7 @@ export default function VATCalculator() {
                       {/* Total Value Row */}
                       <div className="flex items-center justify-between py-2">
                         <p className="text-fluid-body text-[#333333] font-semibold">
-                          Total Value:
+                          <T>Total Value</T>:
                         </p>
                         <p className="text-fluid-body text-[#333333] font-bold">
                           {currency} {hydrated ? totalAmount.toFixed(2) : totalAmount.toFixed(2)}

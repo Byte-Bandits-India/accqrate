@@ -5,9 +5,10 @@ import dynamic from "next/dynamic"
 import { Pie, PieChart, Sector, Cell } from "recharts"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
 import { ResponsiveContainer } from "recharts"
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from "@/Components/ui/card"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/Components/ui/card"
 import { LucideIcon } from "lucide-react"
-import {ChartConfig,ChartContainer,ChartTooltip,ChartTooltipContent} from "@/Components/ui/chart"
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/Components/ui/chart"
+import T from "@/Components/T";
 
 export interface DonutChartData {
   label: string
@@ -98,13 +99,13 @@ export const DonutChart = dynamic(
               {/* Sale Value */}
               <div className="flex items-center gap-2">
                 <div className="w-[30px] h-[30px] rounded-full bg-[#3E6CFF]"></div>
-                <span className="leading-none font-medium text-fluid-body">Sale Value</span>
+                <span className="leading-none font-medium text-fluid-body"><T>Sale Value</T></span>
               </div>
 
               {/* VAT Amount */}
               <div className="flex items-center gap-2">
                 <div className="w-[30px] h-[30px] rounded-full bg-[#29266E]"></div>
-                <span className="leading-none font-medium text-fluid-body">VAT Amount</span>
+                <span className="leading-none font-medium text-fluid-body"><T>VAT Amount</T></span>
               </div>
             </div>
           </CardFooter>

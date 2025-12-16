@@ -66,7 +66,7 @@ export const polandVATContent: VATCalculatorContent = {
 export const uaeVATContent: VATCalculatorContent = {
   title: "Simplify VAT Calculations with Our UAE VAT Calculator",
   subtitle: "Navigating VAT calculations has never been easier. Our UAE VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
-  whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.",
+  whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts. Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.",
   howToCalculateTitle: "How to Calculate VAT in UAE",
   howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
   calculationBenefitsTitle: "VAT Calculation Made Simple",
@@ -99,7 +99,6 @@ export const getVATCalculatorContent = (countryCode?: string): VATCalculatorCont
 export const getCountrySpecificVATDetails = (countryCode: string): string => {
   const countryDetails: Record<string, string> = {
     'SA': 'Implemented in KSA in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.',
-    'AE': 'Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.',
     'BH': 'Implemented in Bahrain in 2019 at a standard rate of 10% on most goods and services.',
     'MA': 'Malaysia has a Sales and Service Tax (SST) rate of 6% on most goods and services.',
     'MU': 'Mauritius has a standard VAT rate of 15% on most goods and services.',

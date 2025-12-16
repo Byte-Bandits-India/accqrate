@@ -7005,14 +7005,14 @@ const blogTranslations: TranslationsMap = {
   ar: "لم تكن عمليات حساب الضريبة أسهل من قبل. حاسبة ضريبة القيمة المضافة في الإمارات الخاصة بنا تزيل التعقيدات وتحسب الضريبة لأي مبلغ مبيعات على الفور. انسَ المعادلات؛ بضغطة زر تحدد السعر النهائي ومبلغ الضريبة بسهولة."
 },
 
-"Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.": {
-  ar: "ضريبة القيمة المضافة هي ضريبة غير مباشرة تُفرض على معظم السلع والخدمات في كل مرحلة من مراحل سلسلة التوريد من الإنتاج حتى نقطة البيع. تم تطبيقها في الإمارات عام 2018 بنسبة 5%، ثم تم تعديلها إلى 15% في يوليو 2020 لمواجهة آثار جائحة كوفيد-19."
+"Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts. Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.": {
+  "ar": "ضريبة القيمة المضافة (VAT) هي ضريبة غير مباشرة تُفرض على معظم السلع والخدمات في كل مرحلة من مراحل سلسلة التوريد، من الإنتاج وحتى نقطة البيع. تم تطبيقها في دولة الإمارات العربية المتحدة عام 2018 بنسبة 5%، وتم تعديل المعدل إلى 15% في يوليو 2020 لمعالجة آثار جائحة كوفيد-19. كما تم تطبيقها في دولة الإمارات عام 2018 بمعدل قياسي قدره 5% على معظم السلع والخدمات."
 },
 
 "How to Calculate VAT in UAE": { ar: "كيفية حساب ضريبة القيمة المضافة في الإمارات" },
 
 "Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.": {
-  ar: "تم تطبيقها في الإمارات عام 2018 بمعدل قياسي بلغ 5% على معظم السلع والخدمات."
+  "ar": "تم تطبيقها في دولة الإمارات العربية المتحدة عام 2018 بمعدل قياسي قدره 5% على معظم السلع والخدمات."
 },
 
 "VAT Calculator": { ar: "حاسبة ضريبة القيمة المضافة" },
@@ -7030,6 +7030,10 @@ const blogTranslations: TranslationsMap = {
 "Showing VAT breakdown for the current month": { ar: "عرض تفاصيل الضريبة للشهر الحالي" },
 
 "What Is VAT?": { ar: "ما هي ضريبة القيمة المضافة؟" },
+
+"UAE VAT Calculator": {
+  "ar": "حاسبة ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة"
+},
 
 "Adding VAT: Perfect for when sales are exclusive of VAT.": {
   ar: "إضافة الضريبة: مثالي عندما تكون الأسعار غير شاملة لضريبة القيمة المضافة."
@@ -8348,6 +8352,51 @@ const blogTranslations: TranslationsMap = {
 "Digital Signature Certificate in the UAE: A Practical Guide to Its Role, Benefits, and Adoption": {
   "ar": "شهادة التوقيع الرقمي في دولة الإمارات العربية المتحدة: دليل عملي لدورها، فوائدها، وتبنيها"
 },
+"Calculate your Poland VAT obligations": {
+  "ar": "احسب التزامات ضريبة القيمة المضافة في بولندا"
+},
+"Upcoming events and webinars in Poland": {
+  "ar": "الفعاليات والندوات الإلكترونية القادمة في بولندا"
+},
+"Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT–compliant, Peppol-ready setup instantly—fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.": {
+  "ar": "ابدأ الفوترة الإلكترونية في دولة الإمارات خلال دقائق. شارك بيانات شركتك، وتقوم Accqrate بتفعيل إعداد متوافق مع UAE PINT وجاهز لـ Peppol فورًا—ومتوافق بالكامل مع نموذج DCTCE ذي الخمس زوايا المعتمد من الهيئة الاتحادية للضرائب، لضمان تبادل فواتير B2B بسلاسة."
+},
+"Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant—before, during, and after FTA audits.": {
+  "ar": "توفر Accqrate دعمًا كاملاً أثناء فحوصات الامتثال التي تجريها الهيئة الاتحادية للضرائب، مع ضمان توافق إعدادات UAE PINT، وتدفقات تبادل DCTCE، والتوقيعات الرقمية، وعمليات Peppol مع جميع المتطلبات التنظيمية. يبقى عملك متوافقًا بشكل مستمر—قبل وأثناء وبعد عمليات تدقيق الهيئة."
+},
+"Adaptive, scalable approaches for seamless UAE PINT–compliant, Peppol-based e-invoicing under the FTA’s DCTCE framework.": {
+  "ar": "نهج مرنة وقابلة للتوسع للفوترة الإلكترونية بسلاسة، متوافقة مع UAE PINT وقائمة على Peppol، ضمن إطار DCTCE المعتمد من الهيئة الاتحادية للضرائب."
+},
+"Accqrate supports secure file-based integrations with automated processing and a complete feedback loop. Your ERP or POS systems remain fully synchronized with all Peppol transactions, FTA responses, and DCTCE validations—even in high-volume environments.": {
+  "ar": "تدعم Accqrate عمليات تكامل آمنة قائمة على الملفات مع معالجة آلية ودورة تغذية راجعة متكاملة. تبقى أنظمة ERP أو POS لديك متزامنة بالكامل مع جميع معاملات Peppol، واستجابات الهيئة الاتحادية للضرائب، وعمليات تحقق DCTCE—even في بيئات المعاملات عالية الحجم."
+},
+"Choose Accqrate Cloud or deploy on your own infrastructure—both fully compliant with UAE e-invoicing, DCTCE workflow rules, and Peppol interoperability standards.": {
+  "ar": "اختر Accqrate Cloud أو النشر على بنيتك التحتية الخاصة—وكلا الخيارين متوافقان بالكامل مع متطلبات الفوترة الإلكترونية في دولة الإمارات، وقواعد سير عمل DCTCE، ومعايير التشغيل البيني لـ Peppol."
+},
+"Accqrate delivers pre-built integrations for SAP, Oracle, Microsoft Dynamics, Sage, Infor, Odoo, custom ERPs/POS, and more—accelerating UAE e-invoicing readiness.": {
+  "ar": "توفر Accqrate تكاملات جاهزة مع SAP وOracle وMicrosoft Dynamics وSage وInfor وOdoo وأنظمة ERP/POS المخصصة وغيرها—مما يسرّع جاهزية الفوترة الإلكترونية في دولة الإمارات."
+},
+"The UAE’s e-invoicing framework is built on the Decentralized Continuous Transaction Control and Exchange (DCTCE) model, powered by UAE PINT and the Peppol network. Invoices flow through a 5-corner model involving suppliers, buyers, accredited service providers, and the Federal Tax Authority.": {
+  "ar": "يعتمد إطار الفوترة الإلكترونية في دولة الإمارات على نموذج التحكم والتبادل اللامركزي المستمر للمعاملات (DCTCE)، والمدعوم بـ UAE PINT وشبكة Peppol. تمر الفواتير عبر نموذج الخمس زوايا الذي يشمل المورّدين، والمشترين، ومقدمي الخدمات المعتمدين، والهيئة الاتحادية للضرائب."
+},
+"Seamlessly integrate your ERP/POS with the UAE’s Peppol-based DCTCE framework and achieve full UAE PINT compliance for FTA e-invoicing.": {
+  "ar": "قم بدمج أنظمة ERP/POS لديك بسلاسة مع إطار DCTCE القائم على Peppol في دولة الإمارات، وحقق امتثالًا كاملًا لمتطلبات UAE PINT الخاصة بالفوترة الإلكترونية لدى الهيئة الاتحادية للضرائب."
+},
+"ZATCA Compliant": {
+  "ar": "متوافق مع متطلبات هيئة الزكاة والضريبة والجمارك (ZATCA)"
+},
+"Free Proof of Concept ": {
+  "ar": "إثبات مفهوم مجاني "
+},
+"for": {
+  "ar": "لـ"
+},
+"Explore Accqrate’s UAE E-Invoicing Integration with a Free, Zero-Risk Proof of Concept": {
+  "ar": "استكشف تكامل الفوترة الإلكترونية في دولة الإمارات من Accqrate من خلال إثبات مفهوم مجاني وبدون أي مخاطر"
+},
+"About Accqrate:": {
+  "ar": "نبذة عن Accqrate:"
+}
 
 
 };

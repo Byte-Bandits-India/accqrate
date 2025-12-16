@@ -181,12 +181,12 @@ const ContactFormPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F6FF] px-4 pb-12 pt-10 md:pt-[60px] lg:pt-[80px]">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-6">
+    <div className={`min-h-screen bg-[#F8F6FF] px-4 pb-12 pt-10 md:pt-[60px] lg:pt-[80px] ${lang === 'ar' ? 'rtl' : ''}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+      <div className={`max-w-7xl mx-auto flex flex-col lg:${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'} items-center lg:items-start gap-6`}>
         {/* Left Section - Info (UNCHANGED) */}
-        <div className="w-full max-w-[475px] text-left">
+        <div className={`w-full max-w-[475px] ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
           <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium"><T lang={lang} countryCode={countryCode}>{cardContent.title}</T></h2>
-          <div className="w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-[20px]"></div>
+          <div className={`w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-[20px] ${lang === 'ar' ? 'ml-auto' : ''}`}></div>
           <h2 className="text-fluid-body lg:text-[16px] font-medium text-[#000000] mb-2">
             <T lang={lang} countryCode={countryCode}>Our team is here to help</T>
           </h2>

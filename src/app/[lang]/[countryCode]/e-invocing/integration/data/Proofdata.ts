@@ -2,7 +2,7 @@ export const ProofData = {
   ae: {
     title: "Free Proof of Concept for Peppol / UAE PINT Integration",
     subtitle:
-      "Explore Accqrate’s UAE E-Invoicing Integration with a Free, Zero-Risk Proof of Concept. ",
+      "Explore Accqrate’s UAE E-Invoicing Integration with a Free, Zero-Risk Proof of Concept.",
 
     leftItems: [
       {
