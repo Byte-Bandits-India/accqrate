@@ -16,8 +16,8 @@ export default function PolandT({ children }: PolandTProps) {
     useEffect(() => {
         if (
             selectedLanguage.code === "en" ||
-            selectedLanguage.code === "fr" ||
-            selectedLanguage.code === "nl"
+            selectedLanguage.code === "pl" 
+           
         ) {
             setLanguage(selectedLanguage.code as LanguageCode);
             setForceUpdate((prev) => prev + 1);
