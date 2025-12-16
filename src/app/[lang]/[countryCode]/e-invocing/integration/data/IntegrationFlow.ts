@@ -150,7 +150,7 @@ ae: {
     },
     {
       number: "02",
-      title: "Validation & UAE PINT Conversion (Corner 2) ",
+      title: "Validation & UAE PINT Conversion (Corner 2)",
       description:
         "The ASP validates the invoice and converts it into the UAE standard XML (UAE PINT) if a different format was submitted.",
     },

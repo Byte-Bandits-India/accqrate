@@ -181,8 +181,8 @@ const ContactFormPage = () => {
   };
 
   return (
-    <div className={`min-h-screen bg-[#F8F6FF] px-4 pb-12 pt-10 md:pt-[60px] lg:pt-[80px] ${lang === 'ar' ? 'rtl' : ''}`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-      <div className={`max-w-7xl mx-auto flex flex-col lg:${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'} items-center lg:items-start gap-6`}>
+    <div className="min-h-screen bg-[#F8F6FF] px-4 pb-12 pt-10 md:pt-[60px] lg:pt-[80px]" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-6">
         {/* Left Section - Info (UNCHANGED) */}
         <div className={`w-full max-w-[475px] ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
           <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium"><T lang={lang} countryCode={countryCode}>{cardContent.title}</T></h2>
@@ -198,31 +198,31 @@ const ContactFormPage = () => {
           <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
             <div className="">
               {/* Call Us Label */}
-              <p className="text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed">
-                <T>Call Us</T>
+              <p className={`text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
+                <T lang={lang} countryCode={countryCode}>Call Us</T>
               </p>
 
               {/* Phone Timing */}
-              <p className="text-[12px] pb-2 text-[#000000] font-normal leading-relaxed">
-                <T>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
+              <p className={`text-[12px] pb-2 text-[#000000] font-normal leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
+                <T lang={lang} countryCode={countryCode}>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
               </p>
 
               {/* Phone Section with Icon */}
-              <div className="flex items-center gap-2 pb-2 text-[#1F3FBF]">
+              <div className={`flex items-center gap-2 pb-2 text-[#1F3FBF] ${lang === 'ar' ? 'flex items-start justify-start' : ''}`}>
                 <PhoneCall className="w-4 h-4" />
-                <span className="text-[16px] font-medium leading-relaxed">
+                <span className={`text-[16px] font-medium leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
                   +41 76 475 36 65
                 </span>
               </div>
 
               {/* Office Locations Title */}
-              <h3 className="text-[#1F3FBF] font-semibold text-[20px]">
+              <h3 className={`text-[#1F3FBF] font-semibold text-[20px] ${lang === 'ar' ? 'text-right' : ''}`}>
                 <span className="text-black">
-                  <T>Our</T>
+                  <T lang={lang} countryCode={countryCode}>Our</T>
                 </span>{" "}
-                <T>Office</T>{" "}
+                <T lang={lang} countryCode={countryCode}>Office</T>{" "}
                 <span className="text-black">
-                  <T>Locations</T>
+                  <T lang={lang} countryCode={countryCode}>Locations</T>
                 </span>
               </h3>
 
@@ -231,7 +231,7 @@ const ContactFormPage = () => {
 
             <div className="bg-white rounded-xl p-4 space-y-6 shadow-sm">
               {/* Location 1 */}
-              <div className="flex">
+              <div className={`flex ${lang === 'ar' ? 'flex items-start justify-start' : ''}`}>
                 <div className="flex items-center justify-center flex-shrink-0">
                   <img
                     src={AssetPath.pattern.dammamCircle.src}
@@ -241,7 +241,7 @@ const ContactFormPage = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm text-[#9a8e9e] underline leading-relaxed">
+                  <p className={`text-sm text-[#9a8e9e] underline leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
                     <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br />CH-4052 Basel <br /> Switzerland</T>
                   </p>
                 </div>
@@ -249,12 +249,12 @@ const ContactFormPage = () => {
             </div>
 
             {/* Social Media */}
-            <div className="mt-8">
-              <p className="text-orange-600 font-semibold text-sm mb-3">
+            <div className={`mt-8 ${lang === 'ar' ? 'flex flex-col items-start justify-start' : ''}`}>
+              <p className={`text-orange-600 font-semibold text-sm mb-3 ${lang === 'ar' ? 'text-right' : ''}`}>
                 <T lang={lang} countryCode={countryCode}>SOCIAL MEDIA</T>
               </p>
 
-              <div className="flex gap-4 text-gray-500">
+              <div className={`flex gap-4 text-gray-500 ${lang === 'ar' ? 'flex-row-reverse' : ''}`}>
 
                 <Link
                   href="https://www.facebook.com/people/Accqrate/100077291530631/"
@@ -322,7 +322,7 @@ const ContactFormPage = () => {
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card1.module)}
-                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
+                  className={`mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition ${lang === 'ar' ? 'flex-row-reverse' : ''}`}
                 >
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.buttonText}</T> <span>↗</span>
                 </button>
@@ -344,7 +344,7 @@ const ContactFormPage = () => {
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card2.module)}
-                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
+                  className={`mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition ${lang === 'ar' ? 'flex-row-reverse' : ''}`}
                 >
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.buttonText}</T> <span>↗</span>
                 </button>
@@ -375,7 +375,7 @@ const ContactFormPage = () => {
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card3.module)}
-                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
+                  className={`mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition ${lang === 'ar' ? 'flex-row-reverse' : ''}`}
                 >
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.buttonText}</T> <span>↗</span>
                 </button>
