@@ -39,6 +39,7 @@ const allLanguages: Language[] = [
     { code: "fr", name: "French", display: "Français" },
     { code: "nl", name: "Dutch", display: "Dutch" },
     { code: "de", name: "German", display: "Deutsch" },
+     {code: "pl", name: "Polish", display: "Polski" },
 ];
 
 const getLanguagesForCountry = (countryCode: string): Language[] => {
