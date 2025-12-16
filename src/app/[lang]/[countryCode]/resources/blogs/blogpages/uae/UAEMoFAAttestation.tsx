@@ -181,40 +181,19 @@ function UAEMoFAAttestation() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Confirmation of authenticity:</span> It protects
-                        employers, institutions, and government bodies from fraudulent credentials or
-                        misrepresented qualifications
-                    </T>
+                    <span className="font-semibold"><T>Confirmation of authenticity:</T></span> <T>It protects employers, institutions, and government bodies from fraudulent credentials or misrepresented qualifications</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Compliance with immigration and labour requirements:</span>
-                        Residency applications, work permits, and dependent sponsorships require attested
-                        educational and civil documents to confirm identity, eligibility, and legal status
-                    </T>
+                    <span className="font-semibold"><T>Compliance with immigration and labour requirements:</T></span> <T>Residency applications, work permits, and dependent sponsorships require attested educational and civil documents to confirm identity, eligibility, and legal status</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Validation for commercial activities:</span> Banks,
-                        free zone authorities, courts, and licensing bodies usually require attested
-                        commercial documents to process corporate approvals, transactions, or renewals
-                    </T>
+                    <span className="font-semibold"><T>Validation for commercial activities:</T></span> <T>Banks, free zone authorities, courts, and licensing bodies usually require attested commercial documents to process corporate approvals, transactions, or renewals</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Protection of contractual and legal rights:</span>
-                        Attestation ensures that agreements and authorizations used in UAE jurisdictions
-                        originate from legitimate authorities
-                    </T>
+                    <span className="font-semibold"><T>Protection of contractual and legal rights:</T></span> <T>Attestation ensures that agreements and authorizations used in UAE jurisdictions originate from legitimate authorities</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Alignment with international legal practice:</span>
-                        Most countries follow a similar multi-stage attestation process. The UAE&apos;s
-                        attestation system ensures global compatibility and cross-border document
-                        recognition
-                    </T>
+                    <span className="font-semibold"><T>Alignment with international legal practice:</T></span> <T>Most countries follow a similar multi-stage attestation process. The UAE's attestation system ensures global compatibility and cross-border document recognition</T>
                 </li>
             </ul>
 
@@ -436,35 +415,19 @@ function UAEMoFAAttestation() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Start early:</span> Attestation can involve several
-                        authorities. Beginning the process early avoids delays in visa or corporate filings
-                    </T>
+                    <span className="font-semibold"><T>Start early:</T></span> <T>Attestation can involve several authorities. Beginning the process early avoids delays in visa or corporate filings</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Always follow the original order:</span> Foreign
-                        ministry attestation, then UAE embassy attestation, then MoFAIC attestation.
-                        Changing the order can lead to rejection
-                    </T>
+                    <span className="font-semibold"><T>Always follow the original order:</T></span> <T>Foreign ministry attestation, then UAE embassy attestation, then MoFAIC attestation. Changing the order can lead to rejection</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Maintain clear scans:</span> Most submissions
-                        require high quality digital versions with visible seals and signatures
-                    </T>
+                    <span className="font-semibold"><T>Maintain clear scans:</T></span> <T>Most submissions require high quality digital versions with visible seals and signatures</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Keep duplicates:</span> It is advisable to maintain
-                        both physical and digital copies of all attested documents for future use
-                    </T>
+                    <span className="font-semibold"><T>Keep duplicates:</T></span> <T>It is advisable to maintain both physical and digital copies of all attested documents for future use</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Use approved translators:</span> Translation quality
-                        and legal acceptance depend on using translators approved by the Ministry of Justice
-                    </T>
+                    <span className="font-semibold"><T>Use approved translators:</T></span> <T>Translation quality and legal acceptance depend on using translators approved by the Ministry of Justice</T>
                 </li>
             </ul>
 

@@ -12,9 +12,7 @@ const UAEInvoicing: React.FC = () => {
     return (
         <BlogLayout
             pageTitle={
-                <T>
-                    United Arab Emirates: Preparing for a PEPPOL Driven E-Billing System
-                </T>
+                <T>United Arab Emirates: Preparing for a PEPPOL Driven E-Billing System</T>
             }
             updatedOn="Mar 8th, 2025"
             minRead="9"

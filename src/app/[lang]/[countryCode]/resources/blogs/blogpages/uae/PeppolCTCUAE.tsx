@@ -283,40 +283,23 @@ function PeppolCTCUAE() {
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Interoperability with international markets:</span> Peppol
-                    is widely used across Europe and Asia, making the UAE's trade environment more globally
-                    compatible.
-                </T>
+                <span className="font-semibold"><T>Interoperability with international markets:</T></span> <T>Peppol is widely used across Europe and Asia, making the UAE's trade environment more globally compatible.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Support for future digital tax reforms:</span> Real-time
-                    data access enables analytics-driven oversight, risk scoring, and intelligent audit mechanisms.
-                </T>
+                <span className="font-semibold"><T>Support for future digital tax reforms:</T></span> <T>Real-time data access enables analytics-driven oversight, risk scoring, and intelligent audit mechanisms.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Reduced operational friction for businesses:</span>
-                    Decentralised systems allow companies to work through their existing service providers
-                    without adapting to rigid government platforms.
-                </T>
+                <span className="font-semibold"><T>Reduced operational friction for businesses:</T></span> <T>Decentralised systems allow companies to work through their existing service providers without adapting to rigid government platforms.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Security and message integrity:</span> The AS4 protocol and
-                    Access Point accreditation introduce strict security and consistency controls.
-                </T>
+                <span className="font-semibold"><T>Security and message integrity:</T></span> <T>The AS4 protocol and Access Point accreditation introduce strict security and consistency controls.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
-                <T>
-                    <span className="font-semibold">Scalable national infrastructure:</span> A decentralised
-                    model does not require a high-capacity single national server, reducing systemic risk.
-                </T>
+                <span className="font-semibold"><T>Scalable national infrastructure:</T></span> <T>A decentralised model does not require a high-capacity single national server, reducing systemic risk.</T>
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">
@@ -330,39 +313,23 @@ function PeppolCTCUAE() {
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Automation of invoice handling:</span> Structured formats
-                    reduce manual work and accelerate accounts payable and receivable cycles.
-                </T>
+                <span className="font-semibold"><T>Automation of invoice handling:</T></span> <T>Structured formats reduce manual work and accelerate accounts payable and receivable cycles.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Lower risk of human error:</span> Machine-readable validation
-                    catches structural inconsistencies before invoices move through the network.
-                </T>
+                <span className="font-semibold"><T>Lower risk of human error:</T></span> <T>Machine-readable validation catches structural inconsistencies before invoices move through the network.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Efficient compliance:</span> Real-time visibility and
-                    standardized data simplify VAT reporting and audit readiness.
-                </T>
+                <span className="font-semibold"><T>Efficient compliance:</T></span> <T>Real-time visibility and standardized data simplify VAT reporting and audit readiness.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-                <T>
-                    <span className="font-semibold">Cross-border readiness:</span> Companies trading across GCC,
-                    Europe, and Asia can use the same infrastructure without building separate integrations.
-                </T>
+                <span className="font-semibold"><T>Cross-border readiness:</T></span> <T>Companies trading across GCC, Europe, and Asia can use the same infrastructure without building separate integrations.</T>
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed mb-6">
-                <T>
-                    <span className="font-semibold">Predictability in tax governance:</span> Continuous
-                    transaction reporting reduces the likelihood of disputes, retrospective audits, or
-                    mismatched filings.
-                </T>
+                <span className="font-semibold"><T>Predictability in tax governance:</T></span> <T>Continuous transaction reporting reduces the likelihood of disputes, retrospective audits, or mismatched filings.</T>
             </p>
 
             <h3 className="text-fluid-body font-semibold mt-6 mb-2">

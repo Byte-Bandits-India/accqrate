@@ -54,35 +54,19 @@ function UAEVATComplete2025() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">2017:</span> The government issues the foundational
-                        legislation that outlines the implementation of VAT
-                    </T>
+                    <span className="font-semibold"><T>2017:</T></span> <T>The government issues the foundational legislation that outlines the implementation of VAT</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">January 2018:</span> VAT becomes applicable at a
-                        standard rate of 5 percent
-                    </T>
+                    <span className="font-semibold"><T>January 2018:</T></span> <T>VAT becomes applicable at a standard rate of 5 percent</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">2023:</span> Significant updates are introduced to
-                        the VAT Law, enhancing clarity around several taxable activities and documentation
-                        rules
-                    </T>
+                    <span className="font-semibold"><T>2023:</T></span> <T>Significant updates are introduced to the VAT Law, enhancing clarity around several taxable activities and documentation rules</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Late 2024:</span> The Cabinet approves new Executive
-                        Regulations that reshape procedural and compliance requirements
-                    </T>
+                    <span className="font-semibold"><T>Late 2024:</T></span> <T>The Cabinet approves new Executive Regulations that reshape procedural and compliance requirements</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">2026 (Planned):</span> Mandatory e-invoicing is
-                        scheduled to go live in phases for B2B and B2G transactions
-                    </T>
+                    <span className="font-semibold"><T>2026 (Planned):</T></span> <T>Mandatory e-invoicing is scheduled to go live in phases for B2B and B2G transactions</T>
                 </li>
             </ul>
 
@@ -104,16 +88,10 @@ function UAEVATComplete2025() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Collect VAT on its taxable sales:</span> This is
-                        known as output tax
-                    </T>
+                    <span className="font-semibold"><T>Collect VAT on its taxable sales:</T></span> <T>This is known as output tax</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Recover VAT paid on its eligible business expenses:</span>
-                        This is input tax
-                    </T>
+                    <span className="font-semibold"><T>Recover VAT paid on its eligible business expenses:</T></span> <T>This is input tax</T>
                 </li>
             </ul>
 
@@ -500,34 +478,19 @@ function UAEVATComplete2025() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Education:</span> Core services are zero rated, while
-                        uniforms and materials are standard rated
-                    </T>
+                    <span className="font-semibold"><T>Education:</T></span> <T>Core services are zero rated, while uniforms and materials are standard rated</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Real Estate:</span> Commercial buildings are fully
-                        taxable, while most residential supplies are exempt after the first supply
-                    </T>
+                    <span className="font-semibold"><T>Real Estate:</T></span> <T>Commercial buildings are fully taxable, while most residential supplies are exempt after the first supply</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Healthcare:</span> Essential services are zero rated,
-                        but non-essential procedures may attract the standard rate
-                    </T>
+                    <span className="font-semibold"><T>Healthcare:</T></span> <T>Essential services are zero rated, but non-essential procedures may attract the standard rate</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Oil and Gas:</span> Crude oil is zero rated, while
-                        downstream products carry the standard rate
-                    </T>
+                    <span className="font-semibold"><T>Oil and Gas:</T></span> <T>Crude oil is zero rated, while downstream products carry the standard rate</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Financial Services:</span> Margin-based financial
-                        activities are exempt
-                    </T>
+                    <span className="font-semibold"><T>Financial Services:</T></span> <T>Margin-based financial activities are exempt</T>
                 </li>
             </ul>
 

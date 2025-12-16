@@ -265,28 +265,16 @@ function UAEVATZeroRatedVsExempt() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Financial services where consideration is implicit:</span>
-                        This includes margin-based lending or similar products where fees are embedded in spreads
-                    </T>
+                    <span className="font-semibold"><T>Financial services where consideration is implicit:</T></span> <T>This includes margin-based lending or similar products where fees are embedded in spreads</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Residential rental and sale outside the zero rating conditions:</span>
-                        Subsequent sales or leases of a building beyond the first time supply often fall under exemption rules
-                    </T>
+                    <span className="font-semibold"><T>Residential rental and sale outside the zero rating conditions:</T></span> <T>Subsequent sales or leases of a building beyond the first time supply often fall under exemption rules</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Local passenger transport:</span> Tickets and receipts
-                        showing domestic transport services
-                    </T>
+                    <span className="font-semibold"><T>Local passenger transport:</T></span> <T>Tickets and receipts showing domestic transport services</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Bare land:</span> Sale of undeveloped land without buildings
-                        or infrastructure
-                    </T>
+                    <span className="font-semibold"><T>Bare land:</T></span> <T>Sale of undeveloped land without buildings or infrastructure</T>
                 </li>
             </ul>
 
@@ -345,46 +333,22 @@ function UAEVATZeroRatedVsExempt() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Start with the contract and the invoice:</span>
-                        Place of supply and the contractual terms often determine whether a supply qualifies
-                        for zero rating or is exempt
-                    </T>
+                    <span className="font-semibold"><T>Start with the contract and the invoice:</T></span> <T>Place of supply and the contractual terms often determine whether a supply qualifies for zero rating or is exempt</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Confirm the recipient and destination:</span>
-                        For exports and international supplies, the customer location and movement documents
-                        determine the VAT treatment
-                    </T>
+                    <span className="font-semibold"><T>Confirm the recipient and destination:</T></span> <T>For exports and international supplies, the customer location and movement documents determine the VAT treatment</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Check statutory conditions:</span> Zero rating and
-                        exemptions have conditions in legislation or guidance. Do not rely on commercial
-                        practice alone
-                    </T>
+                    <span className="font-semibold"><T>Check statutory conditions:</T></span> <T>Zero rating and exemptions have conditions in legislation or guidance. Do not rely on commercial practice alone</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Document everything:</span> Hold contracts, transport
-                        documents, customs paperwork, accreditation certificates and any third party
-                        confirmations needed for the VAT treatment
-                    </T>
+                    <span className="font-semibold"><T>Document everything:</T></span> <T>Hold contracts, transport documents, customs paperwork, accreditation certificates and any third party confirmations needed for the VAT treatment</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Use written policies:</span> Adopt and publish
-                        internal VAT classification policies to ensure consistency across teams. That reduces
-                        human error and improves audit readiness
-                    </T>
+                    <span className="font-semibold"><T>Use written policies:</T></span> <T>Adopt and publish internal VAT classification policies to ensure consistency across teams. That reduces human error and improves audit readiness</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Review annually:</span> Legislation, FTA guidance and
-                        judicial decisions change. Review classifications at least once a year or whenever
-                        you enter a new line of business
-                    </T>
+                    <span className="font-semibold"><T>Review annually:</T></span> <T>Legislation, FTA guidance and judicial decisions change. Review classifications at least once a year or whenever you enter a new line of business</T>
                 </li>
             </ul>
 
@@ -484,25 +448,13 @@ function UAEVATZeroRatedVsExempt() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Margin impact:</span> Exempt supplies create a higher
-                        effective cost base because input VAT cannot be offset. This often requires a pricing
-                        review to maintain margin
-                    </T>
+                    <span className="font-semibold"><T>Margin impact:</T></span> <T>Exempt supplies create a higher effective cost base because input VAT cannot be offset. This often requires a pricing review to maintain margin</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Competitive implications:</span> Suppliers of zero
-                        rated goods can remain price competitive because they can recover input VAT.
-                        Suppliers of exempt goods may need to redesign procurement or pass costs to customers
-                    </T>
+                    <span className="font-semibold"><T>Competitive implications:</T></span> <T>Suppliers of zero rated goods can remain price competitive because they can recover input VAT. Suppliers of exempt goods may need to redesign procurement or pass costs to customers</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Working capital:</span> Zero rated suppliers recover
-                        VAT which improves working capital. Exempt suppliers should model VAT on inputs as a
-                        permanent cost
-                    </T>
+                    <span className="font-semibold"><T>Working capital:</T></span> <T>Zero rated suppliers recover VAT which improves working capital. Exempt suppliers should model VAT on inputs as a permanent cost</T>
                 </li>
             </ul>
 
@@ -595,39 +547,19 @@ function UAEVATZeroRatedVsExempt() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Map your processes:</span> Map procurement, sales,
-                        and logistics processes against VAT treatments to identify where supporting
-                        documents are created and stored
-                    </T>
+                    <span className="font-semibold"><T>Map your processes:</T></span> <T>Map procurement, sales, and logistics processes against VAT treatments to identify where supporting documents are created and stored</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Centralise evidence:</span> Keep proof of exports,
-                        transport, certification, and institutional recognition in a central repository with
-                        version control
-                    </T>
+                    <span className="font-semibold"><T>Centralise evidence:</T></span> <T>Keep proof of exports, transport, certification, and institutional recognition in a central repository with version control</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Automate where possible:</span> Use accounting or
-                        ERP systems that tag transactions according to VAT treatment and support reporting.
-                        Automation cuts errors in mixed activity apportionment
-                    </T>
+                    <span className="font-semibold"><T>Automate where possible:</T></span> <T>Use accounting or ERP systems that tag transactions according to VAT treatment and support reporting. Automation cuts errors in mixed activity apportionment</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Train relevant teams:</span> Finance, sales,
-                        logistics, and the commercial team should understand the VAT implications of zero
-                        rated and exempt supplies
-                    </T>
+                    <span className="font-semibold"><T>Train relevant teams:</T></span> <T>Finance, sales, logistics, and the commercial team should understand the VAT implications of zero rated and exempt supplies</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Schedule tax health checks:</span> Run a VAT health
-                        check at least annually or whenever you add a new product line or expand into new
-                        territories
-                    </T>
+                    <span className="font-semibold"><T>Schedule tax health checks:</T></span> <T>Run a VAT health check at least annually or whenever you add a new product line or expand into new territories</T>
                 </li>
             </ul>
 

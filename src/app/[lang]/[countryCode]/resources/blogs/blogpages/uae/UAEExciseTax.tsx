@@ -545,13 +545,7 @@ function UAEExciseTax() {
             </p>
 
             <p className="text-gray-700 text-fluid-small leading-relaxed">
-                <T>
-                    Many companies are now turning to advanced financial platforms to manage these
-                    obligations more efficiently. Solutions such as Accqrate help automate tax calculations,
-                    maintain accurate stock and transaction records, and streamline return preparation,
-                    enabling businesses to manage excise responsibilities with greater accuracy and
-                    confidence.
-                </T>
+                <T>Many companies are now turning to advanced financial platforms to manage these obligations more efficiently. Solutions such as Accqrate help automate tax calculations, maintain accurate stock and transaction records, and streamline return preparation, enabling businesses to manage excise responsibilities with greater accuracy and confidence.</T>
             </p>
         </BlogLayout>
     );

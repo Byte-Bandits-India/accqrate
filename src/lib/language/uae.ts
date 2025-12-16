@@ -24,6 +24,14 @@ const blogTranslations: TranslationsMap = {
   
 "E-invoicing Solution for UAE": { "ar": "حل الفوترة الإلكترونية لدولة الإمارات" },
 
+"United Arab Emirates: Preparing for a PEPPOL Driven E-Billing System": {
+  "ar": "دولة الإمارات العربية المتحدة: الاستعداد لنظام فوترة إلكترونية قائم على منصة Peppol"
+},
+
+"Zero Rated versus Exempt Supplies in the UAE VAT System: Complete Guide to Classification and Compliance": {
+  "ar": "السلع المصنفة بمعدل صفري مقابل السلع المعفاة في نظام ضريبة القيمة المضافة في الإمارات: دليل شامل للتصنيف والامتثال"
+},
+
 "Meet an Expert": { "ar": "قابل خبيراً" },
 
 "Products to power every team": { "ar": "منتجات تدعم أداء كل فريق" },
@@ -8340,9 +8348,6 @@ const blogTranslations: TranslationsMap = {
 "Penalties for Non-Compliance Under UAE VAT: A Complete, Authoritative Guide for Businesses": {
   "ar": "العقوبات المترتبة على عدم الامتثال لضريبة القيمة المضافة في دولة الإمارات العربية المتحدة: دليل شامل وموثوق للشركات"
 },
-"Zero Rated versus Exempt Supplies in the UAE VAT System: Complete Guide to Classification and Compliance": {
-  "ar": "التوريدات الخاضعة لنسبة الصفر مقابل التوريدات المعفاة في نظام ضريبة القيمة المضافة في دولة الإمارات: دليل كامل للتصنيف والامتثال"
-},
 "MoFA Attestation in the UAE: Complete Guide to Requirements, Eligibility and Step-by-Step Process": {
   "ar": "تصديق وزارة الخارجية في دولة الإمارات العربية المتحدة: دليل شامل للمتطلبات، الأهلية، وخطوات الإجراء بالتفصيل"
 },
@@ -8396,7 +8401,309 @@ const blogTranslations: TranslationsMap = {
 },
 "About Accqrate:": {
   "ar": "نبذة عن Accqrate:"
-}
+},
+
+"The United Arab Emirates is preparing a nationwide electronic invoicing framework built on a decentralised model inspired by PEPPOL's Continuous Transaction Control and Exchange architecture. The upcoming system will require structured invoice formats, connectivity to accredited service providers, and real-time routing of business to business and business to government transactions.": {
+  "ar": "تستعد دولة الإمارات العربية المتحدة لإطلاق إطار وطني للفوترة الإلكترونية قائم على نموذج لامركزي مستوحى من بنية التحكم المستمر في المعاملات والتبادل (CTCE) الخاصة بمنصة Peppol. وسيتطلب النظام المرتقب استخدام صيغ فواتير مهيكلة، والاتصال بمزودي خدمات معتمدين، والتوجيه الفوري لمعاملات الأعمال بين الشركات (B2B) وبين الشركات والجهات الحكومية (B2G)."
+},
+"As the transition approaches its expected launch window in 2026, businesses are encouraged to modernise their invoicing infrastructure early. The future system will provide the government with near real-time visibility into economic activity and help both regulators and policymakers identify areas requiring targeted support.": {
+  "ar": "ومع اقتراب الموعد المتوقع لإطلاق هذا التحول في عام 2026، يُشجَّعَت الشركات على تحديث بنية الفوترة لديها مبكرًا. وسيوفر النظام المستقبلي للحكومة رؤية شبه فورية للنشاط الاقتصادي، كما سيساعد الجهات التنظيمية وصناع السياسات على تحديد المجالات التي تتطلب دعمًا موجهًا."
+},
+"The expanding network of national electronic invoicing mandates signals a regional shift toward unified digital tax ecosystems. Businesses must prepare for structured data exchange, automated validation, real time reporting, and integration with national tax systems. Those that modernise early will enjoy reduced compliance burdens, more efficient workflows, and stronger financial governance.": {
+  "ar": "تشير الشبكة المتنامية لالتزامات الفوترة الإلكترونية الوطنية إلى تحول إقليمي نحو أنظمة ضريبية رقمية موحدة. ويتعين على الشركات الاستعداد لتبادل البيانات المهيكلة، والتحقق الآلي، وإعداد التقارير في الوقت الفعلي، والتكامل مع الأنظمة الضريبية الوطنية. وستستفيد الشركات التي تبادر بالتحديث مبكرًا من تقليل أعباء الامتثال، وتحسين كفاءة سير العمل، وتعزيز الحوكمة المالية."
+},
+"As these transitions accelerate, organisations across the region increasingly rely on advanced, compliant platforms to handle real time validation, structured document exchange, and multi country tax automation. Enterprise grade solutions such as Accqrate already support this direction by helping companies integrate seamlessly with government systems, automate cross border compliance, and maintain operational efficiency as digital tax regimes expand across the Middle East.": {
+  "ar": "ومع تسارع هذه التحولات، تعتمد المؤسسات في مختلف أنحاء المنطقة بشكل متزايد على منصات متقدمة ومتوافقة للتعامل مع التحقق في الوقت الفعلي، وتبادل المستندات المهيكلة، وأتمتة الضرائب متعددة الدول. وتدعم الحلول المؤسسية مثل Accqrate هذا التوجه بالفعل من خلال مساعدة الشركات على التكامل بسلاسة مع الأنظمة الحكومية، وأتمتة الامتثال عبر الحدود، والحفاظ على الكفاءة التشغيلية مع توسع الأنظمة الضريبية الرقمية في أنحاء الشرق الأوسط."
+},
+"Financial services where consideration is implicit:": {
+  "ar": "الخدمات المالية حيث يكون الاعتبار ضمنياً:"
+},
+"This includes margin-based lending or similar products where fees are embedded in spreads": {
+  "ar": "يشمل ذلك الإقراض القائم على الهامش أو المنتجات المماثلة حيث تكون الرسوم مدمجة في الفروقات"
+},
+"Residential rental and sale outside the zero rating conditions:": {
+  "ar": "تأجير وتسويق المساكن خارج شروط التصنيف الصفري:"
+},
+"Subsequent sales or leases of a building beyond the first time supply often fall under exemption rules": {
+  "ar": "غالباً ما تندرج المبيعات أو التأجيرات اللاحقة للمبنى بعد التوريد الأول تحت قواعد الإعفاء"
+},
+"Local passenger transport:": {
+  "ar": "النقل المحلي للركاب:"
+},
+"Tickets and receipts showing domestic transport services": {
+  "ar": "التذاكر والإيصالات التي تظهر خدمات النقل المحلية"
+},
+"Bare land:": {
+  "ar": "الأرض الخالية:"
+},
+"Sale of undeveloped land without buildings or infrastructure": {
+  "ar": "بيع الأرض غير المطورة بدون مبانٍ أو بنية تحتية"
+},
+"Start with the contract and the invoice:": {
+  "ar": "ابدأ بالعقد والفاتورة:"
+},
+"Place of supply and the contractual terms often determine whether a supply qualifies for zero rating or is exempt": {
+  "ar": "غالباً ما يحدد مكان التوريد والشروط التعاقدية ما إذا كان التوريد يؤهل للتصنيف الصفري أو الإعفاء"
+},
+"Confirm the recipient and destination:": {
+  "ar": "تأكيد المستلم والوجهة:"
+},
+"For exports and international supplies, the customer location and movement documents determine the VAT treatment": {
+  "ar": "بالنسبة للصادرات والتوريدات الدولية، يحدد موقع العميل ووثائق الحركة معاملة ضريبة القيمة المضافة"
+},
+"Check statutory conditions:": {
+  "ar": "تحقق من الشروط القانونية:"
+},
+"Zero rating and exemptions have conditions in legislation or guidance. Do not rely on commercial practice alone": {
+  "ar": "التصنيف الصفري والإعفاءات لها شروط في التشريع أو الإرشادات. لا تعتمد على الممارسة التجارية وحدها"
+},
+"Document everything:": {
+  "ar": "وثق كل شيء:"
+},
+"Hold contracts, transport documents, customs paperwork, accreditation certificates and any third party confirmations needed for the VAT treatment": {
+  "ar": "احتفظ بالعقود، ووثائق النقل، والأوراق الجمركية، وشهادات الاعتماد، وأي تأكيدات من طرف ثالث مطلوبة لمعاملة ضريبة القيمة المضافة"
+},
+"Use written policies:": {
+  "ar": "استخدم السياسات المكتوبة:"
+},
+"Adopt and publish internal VAT classification policies to ensure consistency across teams. That reduces human error and improves audit readiness": {
+  "ar": "اعتمد ونشر سياسات تصنيف ضريبة القيمة المضافة الداخلية لضمان الاتساق عبر الفرق. هذا يقلل من الخطأ البشري ويحسن الاستعداد للتدقيق"
+},
+"Review annually:": {
+  "ar": "مراجعة سنوية:"
+},
+"Legislation, FTA guidance and judicial decisions change. Review classifications at least once a year or whenever you enter a new line of business": {
+  "ar": "يتغير التشريع وإرشادات الهيئة الاتحادية للضرائب والقرارات القضائية. راجع التصنيفات مرة واحدة على الأقل سنوياً أو كلما دخلت خط عمل جديد"
+},
+"Margin impact:": {
+  "ar": "تأثير الهامش:"
+},
+"Exempt supplies create a higher effective cost base because input VAT cannot be offset. This often requires a pricing review to maintain margin": {
+  "ar": "يخلق التوريدات المعفاة قاعدة تكلفة فعالة أعلى لأن ضريبة القيمة المضافة المدخلة لا يمكن تعويضها. هذا غالباً ما يتطلب مراجعة التسعير للحفاظ على الهامش"
+},
+"Competitive implications:": {
+  "ar": "التأثيرات التنافسية:"
+},
+"Suppliers of zero rated goods can remain price competitive because they can recover input VAT. Suppliers of exempt goods may need to redesign procurement or pass costs to customers": {
+  "ar": "يمكن لموردي السلع المصنفة بمعدل صفري البقاء تنافسيين في الأسعار لأنهم يمكنهم استرداد ضريبة القيمة المضافة المدخلة. قد يحتاج موردو السلع المعفاة إلى إعادة تصميم المشتريات أو تحميل التكاليف على العملاء"
+},
+"Working capital:": {
+  "ar": "رأس المال العامل:"
+},
+"Zero rated suppliers recover VAT which improves working capital. Exempt suppliers should model VAT on inputs as a permanent cost": {
+  "ar": "يسترد الموردون المصنفون بمعدل صفري ضريبة القيمة المضافة مما يحسن رأس المال العامل. يجب على الموردين المعفيين نمذجة ضريبة القيمة المضافة على المدخلات كتكلفة دائمة"
+},
+"Map your processes:": {
+  "ar": "رسم عملياتك:"
+},
+"Map procurement, sales, and logistics processes against VAT treatments to identify where supporting documents are created and stored": {
+  "ar": "رسم عمليات المشتريات والمبيعات واللوجستيات مقابل معاملات ضريبة القيمة المضافة لتحديد أماكن إنشاء وتخزين الوثائق الداعمة"
+},
+"Centralise evidence:": {
+  "ar": "مركزة الأدلة:"
+},
+"Keep proof of exports, transport, certification, and institutional recognition in a central repository with version control": {
+  "ar": "احتفظ بإثبات الصادرات والنقل والشهادات والاعتراف المؤسسي في مستودع مركزي مع التحكم في الإصدارات"
+},
+"Automate where possible:": {
+  "ar": "أتمتة حيثما أمكن:"
+},
+"Use accounting or ERP systems that tag transactions according to VAT treatment and support reporting. Automation cuts errors in mixed activity apportionment": {
+  "ar": "استخدم أنظمة المحاسبة أو ERP التي تُصنف المعاملات وفقاً لمعاملة ضريبة القيمة المضافة وتدعم التقارير. تقلل الأتمتة من الأخطاء في تخصيص الأنشطة المختلطة"
+},
+"Train relevant teams:": {
+  "ar": "تدريب الفرق ذات الصلة:"
+},
+"Finance, sales, logistics, and the commercial team should understand the VAT implications of zero rated and exempt supplies": {
+  "ar": "يجب أن يفهم فرق المالية والمبيعات واللوجستيات والتجارية تأثيرات ضريبة القيمة المضافة للتوريدات المصنفة بمعدل صفري والمعفاة"
+},
+"Schedule tax health checks:": {
+  "ar": "جدولة فحوصات الصحة الضريبية:"
+},
+"Run a VAT health check at least annually or whenever you add a new product line or expand into new territories": {
+  "ar": "قم بفحص صحة ضريبة القيمة المضافة سنوياً على الأقل أو كلما أضفت خط إنتاج جديد أو توسعت في أقاليم جديدة"
+},
+"Start early:": {
+  "ar": "ابدأ مبكراً:"
+},
+"Attestation can involve several authorities. Beginning the process early avoids delays in visa or corporate filings": {
+  "ar": "يمكن أن تشمل التصديق عدة جهات. بدء العملية مبكراً يتجنب التأخيرات في التأشيرات أو الإيداعات الشركاتية"
+},
+"Always follow the original order:": {
+  "ar": "اتبع دائماً الترتيب الأصلي:"
+},
+"Foreign ministry attestation, then UAE embassy attestation, then MoFAIC attestation. Changing the order can lead to rejection": {
+  "ar": "تصديق وزارة الخارجية، ثم تصديق سفارة الإمارات، ثم تصديق MoFAIC. تغيير الترتيب قد يؤدي إلى الرفض"
+},
+"Maintain clear scans:": {
+  "ar": "حافظ على مسح واضح:"
+},
+"Most submissions require high quality digital versions with visible seals and signatures": {
+  "ar": "معظم التقديمات تتطلب نسخاً رقمية عالية الجودة مع الأختام والتوقيعات المرئية"
+},
+"Keep duplicates:": {
+  "ar": "احتفظ بنسخ مكررة:"
+},
+"It is advisable to maintain both physical and digital copies of all attested documents for future use": {
+  "ar": "من المستحسن الحفاظ على نسخ مادية ورقمية من جميع الوثائق المصدقة للاستخدام المستقبلي"
+},
+"Use approved translators:": {
+  "ar": "استخدم مترجمين معتمدين:"
+},
+"Translation quality and legal acceptance depend on using translators approved by the Ministry of Justice": {
+  "ar": "تعتمد جودة الترجمة والقبول القانوني على استخدام مترجمين معتمدين من وزارة العدل"
+},
+"Confirmation of authenticity:": {
+  "ar": "تأكيد الأصالة:"
+},
+"It protects employers, institutions, and government bodies from fraudulent credentials or misrepresented qualifications": {
+  "ar": "يحمي أصحاب العمل والمؤسسات والهيئات الحكومية من الشهادات المزيفة أو الشهادات الممثلة بشكل خاطئ"
+},
+"Compliance with immigration and labour requirements:": {
+  "ar": "الامتثال لمتطلبات الهجرة والعمل:"
+},
+"Residency applications, work permits, and dependent sponsorships require attested educational and civil documents to confirm identity, eligibility, and legal status": {
+  "ar": "تتطلب طلبات الإقامة وتصاريح العمل ورعاية التابعين وثائق تعليمية ومدنية مصدقة لتأكيد الهوية والأهلية والوضع القانوني"
+},
+"Validation for commercial activities:": {
+  "ar": "التحقق للأنشطة التجارية:"
+},
+"Banks, free zone authorities, courts, and licensing bodies usually require attested commercial documents to process corporate approvals, transactions, or renewals": {
+  "ar": "عادة ما تتطلب البنوك وسلطات المناطق الحرة والمحاكم وهيئات الترخيص وثائق تجارية مصدقة لمعالجة الموافقات الشركاتية أو المعاملات أو التجديدات"
+},
+"Protection of contractual and legal rights:": {
+  "ar": "حماية الحقوق التعاقدية والقانونية:"
+},
+"Attestation ensures that agreements and authorizations used in UAE jurisdictions originate from legitimate authorities": {
+  "ar": "يضمن التصديق أن الاتفاقيات والتفويضات المستخدمة في الولايات القضائية للإمارات تنشأ من سلطات مشروعة"
+},
+"Alignment with international legal practice:": {
+  "ar": "التوافق مع الممارسة القانونية الدولية:"
+},
+"Most countries follow a similar multi-stage attestation process. The UAE's attestation system ensures global compatibility and cross-border document recognition": {
+  "ar": "تتبع معظم الدول عملية تصديق متعددة المراحل مشابهة. يضمن نظام التصديق في الإمارات التوافق العالمي والاعتراف بالوثائق عبر الحدود"
+},
+"Companies handling multiple document flows often benefit from using organized digital systems that track documentation, store verification evidence, and maintain compliance records. Platforms like Accqrate help centralize such processes by unifying documentation management across departments, reducing administrative errors, and supporting audit readiness without adding operational burden.": {
+  "ar": "غالباً ما تستفيد الشركات التي تتعامل مع تدفقات وثائق متعددة من استخدام أنظمة رقمية منظمة تتبع الوثائق، وتخزن أدلة التحقق، وتحافظ على سجلات الامتثال. تساعد منصات مثل Accqrate في مركزة مثل هذه العمليات من خلال توحيد إدارة الوثائق عبر الأقسام، مما يقلل من الأخطاء الإدارية، ويدعم الاستعداد للتدقيق دون إضافة عبء تشغيلي."
+},
+"Strengthening tax compliance:": {
+  "ar": "تعزيز الامتثال الضريبي:"
+},
+"The system ensures that all registered businesses follow consistent rules when issuing invoices, maintaining records, and reporting VAT.": {
+  "ar": "يضمن النظام أن جميع الشركات المسجلة تتبع قواعد متسقة عند إصدار الفواتير، والحفاظ على السجلات، وإعداد تقارير ضريبة القيمة المضافة."
+},
+"Promoting fair competition:": {
+  "ar": "تعزيز المنافسة العادلة:"
+},
+"Companies that meet their tax obligations should not be placed at a disadvantage when competing with businesses that underreport or delay payment.": {
+  "ar": "يجب ألا توضع الشركات التي تفي بالتزاماتها الضريبية في وضع غير عادل عند المنافسة مع الشركات التي تقلل من الإبلاغ أو تؤخر الدفع."
+},
+"Preserving the integrity of the tax ecosystem:": {
+  "ar": "الحفاظ على سلامة النظام الضريبي:"
+},
+"Accurate VAT reporting allows the government to monitor supply chains, prevent fraudulent practices, and maintain stable revenue streams.": {
+  "ar": "يسمح إعداد تقارير دقيقة لضريبة القيمة المضافة للحكومة بمراقبة سلاسل التوريد، ومنع الممارسات الاحتيالية، والحفاظ على تدفقات إيرادات مستقرة."
+},
+"2017:": {
+  "ar": "2017:"
+},
+"The government issues the foundational legislation that outlines the implementation of VAT": {
+  "ar": "تصدر الحكومة التشريع الأساسي الذي يحدد تنفيذ ضريبة القيمة المضافة"
+},
+"January 2018:": {
+  "ar": "يناير 2018:"
+},
+"VAT becomes applicable at a standard rate of 5 percent": {
+  "ar": "تصبح ضريبة القيمة المضافة سارية بمعدل قياسي قدره 5 في المائة"
+},
+"2023:": {
+  "ar": "2023:"
+},
+"Significant updates are introduced to the VAT Law, enhancing clarity around several taxable activities and documentation rules": {
+  "ar": "يتم إدخال تحديثات كبيرة على قانون ضريبة القيمة المضافة، مما يعزز الوضوح حول عدة أنشطة خاضعة للضريبة وقواعد التوثيق"
+},
+"Late 2024:": {
+  "ar": "أواخر 2024:"
+},
+"The Cabinet approves new Executive Regulations that reshape procedural and compliance requirements": {
+  "ar": "يوافق مجلس الوزراء على لوائح تنفيذية جديدة تعيد تشكيل المتطلبات الإجرائية ومتطلبات الامتثال"
+},
+"2026 (Planned):": {
+  "ar": "2026 (مخطط):"
+},
+"Mandatory e-invoicing is scheduled to go live in phases for B2B and B2G transactions": {
+  "ar": "من المقرر أن يبدأ الفوترة الإلكترونية الإلزامية تدريجياً للمعاملات بين الشركات (B2B) وبين الشركات والحكومة (B2G)"
+},
+"Collect VAT on its taxable sales:": {
+  "ar": "تحصيل ضريبة القيمة المضافة على مبيعاتها الخاضعة للضريبة:"
+},
+"This is known as output tax": {
+  "ar": "هذا يُعرف بضريبة الإخراج"
+},
+"Recover VAT paid on its eligible business expenses:": {
+  "ar": "استرداد ضريبة القيمة المضافة المدفوعة على نفقاتها التجارية المؤهلة:"
+},
+"This is input tax": {
+  "ar": "هذا هو ضريبة الإدخال"
+},
+"Education:": {
+  "ar": "التعليم:"
+},
+"Core services are zero rated, while uniforms and materials are standard rated": {
+  "ar": "الخدمات الأساسية مصنفة بمعدل صفري، بينما الزي المدرسي والمواد مصنفة بمعدل قياسي"
+},
+"Real Estate:": {
+  "ar": "العقارات:"
+},
+"Commercial buildings are fully taxable, while most residential supplies are exempt after the first supply": {
+  "ar": "المباني التجارية خاضعة للضريبة بالكامل، بينما معظم التوريدات السكنية معفاة بعد التوريد الأول"
+},
+"Healthcare:": {
+  "ar": "الرعاية الصحية:"
+},
+"Essential services are zero rated, but non-essential procedures may attract the standard rate": {
+  "ar": "الخدمات الأساسية مصنفة بمعدل صفري، لكن الإجراءات غير الأساسية قد تكون خاضعة للمعدل القياسي"
+},
+"Oil and Gas:": {
+  "ar": "النفط والغاز:"
+},
+"Crude oil is zero rated, while downstream products carry the standard rate": {
+  "ar": "النفط الخام مصنف بمعدل صفري، بينما المنتجات النهائية تحمل المعدل القياسي"
+},
+"Financial Services:": {
+  "ar": "الخدمات المالية:"
+},
+"Margin-based financial activities are exempt": {
+  "ar": "الأنشطة المالية القائمة على الهامش معفاة"
+},
+
+"Many companies are now turning to advanced financial platforms to manage these obligations more efficiently. Solutions such as Accqrate help automate tax calculations, maintain accurate stock and transaction records, and streamline return preparation, enabling businesses to manage excise responsibilities with greater accuracy and confidence.": {
+    "ar": "تتجه العديد من الشركات الآن إلى المنصات المالية المتقدمة لإدارة هذه الالتزامات بكفاءة أكبر. تساعد الحلول مثل Accqrate في أتمتة حسابات الضرائب، والحفاظ على سجلات دقيقة للمخزون والمعاملات، وتبسيط إعداد الإقرارات، مما يمكن الشركات من إدارة مسؤوليات الضرائب الانتقائية بدقة وثقة أكبر."
+  },
+"Standard rated supplies:": {
+  "ar": "التوريدات المصنفة بمعدل قياسي:"
+},
+"These attract a VAT rate of five percent": {
+  "ar": "هذه تكون خاضعة لمعدل ضريبة القيمة المضافة قدره خمسة في المائة"
+},
+"Zero rated supplies:": {
+  "ar": "التوريدات المصنفة بمعدل صفري:"
+},
+"These attract a VAT rate of zero percent, but the supplier is still within the VAT system and may recover input VAT": {
+  "ar": "هذه تكون خاضعة لمعدل ضريبة القيمة المضافة قدره صفر في المائة، لكن المورد لا يزال ضمن نظام ضريبة القيمة المضافة وقد يسترد ضريبة الإدخال"
+},
+"Exempt supplies:": {
+  "ar": "التوريدات المعفاة:"
+},
+"These do not attract VAT, and the supplier cannot recover input VAT on related expenses": {
+  "ar": "هذه لا تكون خاضعة لضريبة القيمة المضافة، والمورد لا يمكنه استرداد ضريبة الإدخال على النفقات ذات الصلة"
+},
+"As companies rework their invoicing infrastructure, many are turning to modern platforms that simplify these compliance requirements. Solutions such as Accqrate can play a supportive role by enabling structured e-invoicing, automating data validation, and offering seamless integration capabilities that help businesses transition smoothly into the new regulatory environment.": {
+    "ar": "بينما تعمل الشركات على إعادة هيكلة بنيتها التحتية للفوترة، يتجه الكثير منها إلى منصات حديثة تبسط متطلبات الامتثال هذه. يمكن للحلول مثل Accqrate أن تلعب دورًا داعمًا من خلال تمكين الفوترة الإلكترونية المهيكلة، وأتمتة التحقق من البيانات، وتقديم قدرات تكامل سلسة تساعد الشركات على الانتقال بسلاسة إلى البيئة التنظيمية الجديدة."
+  }
+
+
+
 
 
 };
@@ -8412,31 +8719,3 @@ export const t = (text: string): string => {
     const translation = (blogTranslations as any)[text];
     return translation && translation.ar && translation.ar.trim() !== '' ? translation.ar : text;
 };
-export default function T({ children }: TProps): ReactNode {
-    const { selectedLanguage } = useCountry();
-    const translateText = (text: string): string => {
-        // Early return for English
-        if (selectedLanguage.code === 'en') {
-            return text;
-        }
-        
-        // For Arabic, try to find translation
-        if (selectedLanguage.code === 'ar') {
-            const translation = blogTranslations[text];
-            // Check if translation exists and is not empty
-            if (translation && translation.ar && translation.ar.trim() !== "") {
-                return translation.ar;
-            }
-        }
-        
-        // Fallback to original text for other languages or missing translations
-        return text;
-    };
-
-    // If children is a string, translate it
-    if (typeof children === 'string') {
-        return translateText(children);
-    }
-
-    return children;
-}

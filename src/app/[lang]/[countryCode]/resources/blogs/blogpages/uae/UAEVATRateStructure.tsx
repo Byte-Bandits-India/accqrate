@@ -63,21 +63,13 @@ function UAEVATRateStructure() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Standard rated supplies:</span> These attract a VAT rate of five percent
-                    </T>
+                    <span className="font-semibold"><T>Standard rated supplies:</T></span> <T>These attract a VAT rate of five percent</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Zero rated supplies:</span> These attract a VAT rate of zero percent, but the
-                        supplier is still within the VAT system and may recover input VAT
-                    </T>
+                    <span className="font-semibold"><T>Zero rated supplies:</T></span> <T>These attract a VAT rate of zero percent, but the supplier is still within the VAT system and may recover input VAT</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Exempt supplies:</span> These do not attract VAT, and the supplier cannot
-                        recover input VAT on related expenses
-                    </T>
+                    <span className="font-semibold"><T>Exempt supplies:</T></span> <T>These do not attract VAT, and the supplier cannot recover input VAT on related expenses</T>
                 </li>
             </ul>
 

@@ -61,25 +61,13 @@ function UAEVATPenalties() {
 
             <ul className="story text-gray-700 text-fluid-small mb-6 space-y-2">
                 <li>
-                    <T>
-                        <span className="font-semibold">Strengthening tax compliance:</span> The system ensures
-                        that all registered businesses follow consistent rules when issuing invoices,
-                        maintaining records, and reporting VAT.
-                    </T>
+                    <span className="font-semibold"><T>Strengthening tax compliance:</T></span> <T>The system ensures that all registered businesses follow consistent rules when issuing invoices, maintaining records, and reporting VAT.</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Promoting fair competition:</span> Companies that meet
-                        their tax obligations should not be placed at a disadvantage when competing with
-                        businesses that underreport or delay payment.
-                    </T>
+                    <span className="font-semibold"><T>Promoting fair competition:</T></span> <T>Companies that meet their tax obligations should not be placed at a disadvantage when competing with businesses that underreport or delay payment.</T>
                 </li>
                 <li>
-                    <T>
-                        <span className="font-semibold">Preserving the integrity of the tax ecosystem:</span>
-                        Accurate VAT reporting allows the government to monitor supply chains, prevent
-                        fraudulent practices, and maintain stable revenue streams.
-                    </T>
+                    <span className="font-semibold"><T>Preserving the integrity of the tax ecosystem:</T></span> <T>Accurate VAT reporting allows the government to monitor supply chains, prevent fraudulent practices, and maintain stable revenue streams.</T>
                 </li>
             </ul>
 
