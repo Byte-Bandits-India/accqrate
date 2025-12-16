@@ -21,18 +21,18 @@ export const section2Content = {
         section1Title: "Accqrate In UAE",
         section1: {
             title1: "Built for UAE VAT & FTA Compliance",
-            desc1: "Accqrate delivers a UAE-ready e-invoicing and reporting engine aligned with FTA VAT regulations, audit requirements, and data retention mandates. The platform is designed to support structured invoice data, automated validations, and seamless reporting—while remaining future-proof for upcoming real-time or continuous transaction control models.",
+            desc1: "Accqrate delivers a UAE-ready e-invoicing and reporting engine aligned with FTA VAT regulations, audit requirements, and data retention mandates. The platform is designed to support structured invoice data, automated validations, and seamless reporting while remaining future-proof for upcoming real-time or continuous transaction control models.",
             title2: "Enterprise-Grade Architecture for the GCC",
-            desc2: "With Swiss-led engineering and large-scale deployments across 30+ industries, Accqrate supports complex, multi-entity organizations operating across the UAE, KSA, and the wider GCC—ensuring consistency, governance, and operational control across borders.",
+            desc2: "With Swiss-led engineering and large-scale deployments across 30+ industries, Accqrate supports complex, multi-entity organizations operating across the UAE, KSA, and the wider GCC ensuring consistency, governance, and operational control across borders.",
             title3: "Compliance Without Complexity",
             desc3: "Accqrate combines automation, AI-driven checks, and standardized integrations to reduce manual effort, minimize compliance risk, and simplify VAT operations for organizations of every size."
         },
         section2Title: "Our Mission",
         section2: {
             title1: "Modernizing the UAE’s Digital Tax Ecosystem",
-            desc1: "We empower businesses with technology that simplifies VAT compliance, invoice governance, audit readiness, and cross-entity financial reporting—while aligning with the UAE’s national digital transformation vision.",
+            desc1: "We empower businesses with technology that simplifies VAT compliance, invoice governance, audit readiness, and cross-entity financial reporting while aligning with the UAE’s national digital transformation vision.",
             title2: "Accelerating Digital Adoption",
-            desc2: "Accqrate eliminates traditional ERP and compliance bottlenecks through rapid integrations, modular scalability, and enterprise-grade reliability—allowing organizations to modernize without operational disruption."
+            desc2: "Accqrate eliminates traditional ERP and compliance bottlenecks through rapid integrations, modular scalability, and enterprise-grade reliability allowing organizations to modernize without operational disruption."
         }
     },
     default: {

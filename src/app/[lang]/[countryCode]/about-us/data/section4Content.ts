@@ -41,7 +41,7 @@ export const section4Content = {
             {
                 img: AssetPath.home.feature1,
                 title: "Compliance-Ready Architecture",
-                description: "Accqrate is engineered to align with UAE VAT laws, FTA audit requirements, and enterprise governance standards—ensuring long-term regulatory readiness."
+                description: "Accqrate is engineered to align with UAE VAT laws, FTA audit requirements, and enterprise governance standards-ensuring long-term regulatory readiness."
             },
             {
                 img: AssetPath.home.feature2,

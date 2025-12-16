@@ -9,6 +9,7 @@ import { section1Content } from "../data/section1Content";
 export default function Section1() {
   const params = useParams();
   const countryCode = (params?.countryCode as string)?.toLowerCase() || 'be';
+  const lang = (params?.lang as string) || "en";
   const content = section1Content[countryCode as keyof typeof section1Content] || section1Content.default;
   return (
     <section className="overflow-x-hidden w-full bg-white py-20 px-6 flex justify-center">
@@ -30,7 +31,7 @@ export default function Section1() {
           {/* Right-Aligned Stars */}
 
         </div>
-        <div className="mt-0 lg:-mt-8 lg:ml-[60%] flex justify-center">
+        <div className={`mt-0 lg:-mt-8 ${lang === 'ar' ? 'lg:mr-[60%]' : 'lg:ml-[60%]'} flex justify-center`}>
           <Image
             src={AssetPath.aboutus.bluestar}
             alt="stars"

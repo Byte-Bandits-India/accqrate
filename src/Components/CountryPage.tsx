@@ -40,6 +40,7 @@ interface CarouselCardProps {
     bg: string;
     style?: React.CSSProperties;
     onClick?: () => void;
+    lang?: string;
 }
 
 interface CountryPageProps {
@@ -59,7 +60,8 @@ const CarouselCardComponent: React.FC<CarouselCardProps> = ({
     bg,
     avatar,
     style,
-    onClick
+    onClick,
+    lang
 }) => {
     return (
         <div
@@ -85,7 +87,7 @@ const CarouselCardComponent: React.FC<CarouselCardProps> = ({
                         alt={name}
                         width={60}
                         height={60}
-                        className="absolute top-1/2 left-[75px] md:left-[70px] transform -translate-y-1/2 w-12 h-12 md:h-[60px] md:w-[60px] rounded-full object-cover border-2 border-white z-20"
+                        className={`absolute top-1/2 ${lang === 'ar' ? 'right-[75px] md:right-[70px]' : 'left-[75px] md:left-[70px]'} transform -translate-y-1/2 w-12 h-12 md:h-[60px] md:w-[60px] rounded-full object-cover border-2 border-white z-20`}
                     />
                 </div>
             </div>
@@ -204,6 +206,7 @@ interface CarouselProps {
     autoplayDelay?: number;
     pauseOnHover?: boolean;
     loop?: boolean;
+    lang?: string;
 }
 
 const Carousel: React.FC<CarouselProps> = ({
@@ -212,6 +215,7 @@ const Carousel: React.FC<CarouselProps> = ({
     autoplayDelay = 3000,
     pauseOnHover = true,
     loop = true,
+    lang
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
@@ -325,6 +329,7 @@ const Carousel: React.FC<CarouselProps> = ({
                                 zIndex
                             }}
                             onClick={() => setCurrentIndex(index)}
+                            lang={lang}
                         />
                     );
                 })}
@@ -1164,7 +1169,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <h2 className="text-fluid-small text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
                                         <T>Accqrate equips enterprises to be compliant across the upcoming UAE E-invoicing model DCTCE / 5 corner :</T>
                                     </h2>
-                                     <Image
+                                    <Image
                                         src={AssetPath.home.dctce}
                                         alt="VIDA Compliance"
                                         width={520}
@@ -1230,7 +1235,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             {/* Testimonials Section */}
             <div className="max-w-[1177px] mx-auto px-0 md:px-8 mt-8 md:mt-10" >
                 <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left mb-8 px-6"><T lang={lang} countryCode={countryCode}>Testimonials</T></h2>
-                <Carousel items={testimonialCards} autoplay autoplayDelay={4000} />
+                <Carousel items={testimonialCards} autoplay autoplayDelay={4000} lang={lang} />
                 <div className="flex items-center justify-center">
                     <button
                         onClick={() => setModalOpen(true)}

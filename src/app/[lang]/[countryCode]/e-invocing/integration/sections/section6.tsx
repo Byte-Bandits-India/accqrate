@@ -18,6 +18,8 @@ const ContactModal = dynamic(
     }
 )
 
+import { section6Content } from "../data/section6Content";
+
 interface VideoItem {
     title: string
     thumbnail: string | StaticImageData
@@ -29,6 +31,7 @@ const DemoVideoSection: React.FC = () => {
     const params = useParams();
     const lang = params?.lang as string || "en";
     const countryCode = params?.countryCode as string;
+    const content = section6Content[countryCode as keyof typeof section6Content] || section6Content.default;
     const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
     const [isContactModalOpen, setIsContactModalOpen] = useState(false)
@@ -154,7 +157,7 @@ const DemoVideoSection: React.FC = () => {
                 <div className="relative mt-8 md:mt-10 lg:mt-12 h-auto md:h-[537px] overflow-hidden">
                     {/* BACKGROUND LAYERS (DESKTOP) */}
                     <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-[#1A0C48] to-[#242087]" />
-                    <div className="hidden md:block absolute top-0 right-0 h-full w-[50%] bg-[#F3F3FF] rounded-l-[30px]" />
+                    <div className={`hidden md:block absolute top-0 h-full w-[50%] bg-[#F3F3FF] ${lang === 'ar' ? 'left-0 rounded-r-[30px]' : 'right-0 rounded-l-[30px]'}`} />
 
                     {/* CONTENT */}
                     <div className="relative flex flex-col md:flex-row items-center justify-between max-w-[1280px] mx-auto w-full h-full md:px-8 px-0 md:py-0 gap-0 md:gap-0">
@@ -162,42 +165,35 @@ const DemoVideoSection: React.FC = () => {
                         <div className="relative flex flex-col justify-center items-center md:items-start text-center md:text-left w-full bg-gradient-to-br from-[#1A0C48] to-[#242087] md:bg-none md:w-1/2 z-20 order-2 md:order-1 md:bg-transparent rounded-t-[30px] md:rounded-none px-6 md:px-0 py-10 md:py-0">
                             <div className="max-w-[520px] md:pl-4 lg:pl-8 w-full">
                                 <p className="text-white uppercase text-fluid-small leading-[30px] mb-4 md:mb-6">
-                                    <T lang={lang} countryCode={countryCode}>Talk to our expert</T>
+                                    <T lang={lang} countryCode={countryCode}>{content.expertText}</T>
                                 </p>
 
                                 <h1 className="text-white text-fluid-h2 lg:text-[34px] font-bold leading-tight mb-3">
-                                    <T lang={lang} countryCode={countryCode}>Do You Want To Know More?</T>
+                                    <T lang={lang} countryCode={countryCode}>{content.title}</T>
                                 </h1>
 
                                 <p className="text-white md:text-[24px] leading-[30px] font-light mb-6">
-                                    <T lang={lang} countryCode={countryCode}>Kick start your free proof of concept</T>
+                                    <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
                                 </p>
 
                                 {/* Small Feature Text */}
                                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 mb-8 lg:text-nowrap">
-                                    <p className="text-fluid-small md:text-[18px] text-white font-light">
-                                        <T lang={lang} countryCode={countryCode}>Seamless</T>
-                                    </p>
-                                    <Image
-                                        src={AssetPath.home.starOr}
-                                        alt="orange_star"
-                                        width={20}
-                                        height={20}
-                                        className="w-5 h-5 md:w-auto md:h-auto"
-                                    />
-                                    <p className="text-fluid-small md:text-[18px] text-white font-light">
-                                        <T lang={lang} countryCode={countryCode}>Complaint</T>
-                                    </p>
-                                    <Image
-                                        src={AssetPath.home.starOr}
-                                        alt="orange_star"
-                                        width={20}
-                                        height={20}
-                                        className="w-5 h-5 md:w-auto md:h-auto"
-                                    />
-                                    <p className="text-fluid-small md:text-[18px] text-white font-light">
-                                        <T lang={lang} countryCode={countryCode}>Secure</T>
-                                    </p>
+                                    {content.features.map((feature, index) => (
+                                        <React.Fragment key={index}>
+                                            <p className="text-fluid-small md:text-[18px] text-white font-light">
+                                                <T lang={lang} countryCode={countryCode}>{feature}</T>
+                                            </p>
+                                            {index < content.features.length - 1 && (
+                                                <Image
+                                                    src={AssetPath.home.starOr}
+                                                    alt="orange_star"
+                                                    width={20}
+                                                    height={20}
+                                                    className="w-5 h-5 md:w-auto md:h-auto"
+                                                />
+                                            )}
+                                        </React.Fragment>
+                                    ))}
                                 </div>
 
                                 {/* Button - Changed from Link to button */}
@@ -206,14 +202,14 @@ const DemoVideoSection: React.FC = () => {
                                         onClick={handleContactClick}
                                         className="relative flex items-center justify-center w-[160px] h-[46px] md:w-[160px] md:h-[52px] bg-[#F05A28] rounded-[50px] px-2 text-white text-[14px] md:text-[16px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
                                     >
-                                        <span className="mr-4"> <T lang={lang} countryCode={countryCode}>Get Started</T> </span>
+                                        <span className={lang === 'ar' ? 'ml-4' : 'mr-4'}> <T lang={lang} countryCode={countryCode}>{content.buttonText}</T> </span>
                                         <svg
                                             width="14"
                                             height="14"
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             stroke="currentColor"
-                                            className="absolute right-4 text-white"
+                                            className={`absolute ${lang === 'ar' ? 'left-4 scale-x-[-1]' : 'right-4'} text-white`}
                                         >
                                             <path
                                                 d="M9 6l6 6-6 6"

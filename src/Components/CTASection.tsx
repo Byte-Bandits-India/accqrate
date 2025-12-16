@@ -57,7 +57,7 @@ const CTASection = () => {
     ae: {
       title: "Save time. Reduce risk. Stay compliant.",
       description1: "Want the latest updates on UAE VAT regulations, upcoming e-invoicing frameworks, and Accqrate product innovations?",
-      description2: "Subscribe to our newsletter and stay ahead—delivered straight to your inbox.",
+      description2: "Subscribe to our newsletter and stay ahead delivered straight to your inbox.",
       button1: "Get Peppol Compliance Demo",
       button2: "Subscribe for Updates",
       button3: "Talk to Sales"

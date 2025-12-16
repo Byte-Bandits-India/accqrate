@@ -72,7 +72,7 @@ export const section3Content = {
             {
                 year: 2024,
                 title: "UAE & GCC Compliance Acceleration",
-                description: "Accqrate strengthens its UAE VAT engine, audit controls, and reporting frameworks—supporting complex group structures and cross-border operations."
+                description: "Accqrate strengthens its UAE VAT engine, audit controls, and reporting frameworks supporting complex group structures and cross-border operations."
             },
             {
                 year: 2025,
