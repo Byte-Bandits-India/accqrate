@@ -485,7 +485,7 @@ export const countryLanguageOptions: CountryLanguages = {
   ],
   PL: [
     { code: "en", name: "English", display: "Eng" },
-    { code: "fr", name: "French", display: "Français" },
+     {code: "pl", name: "Polish", display: "Polski" },
   ],
 };
 
