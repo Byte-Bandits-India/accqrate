@@ -10,6 +10,8 @@ import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
 import T from "@/Components/T";
 import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
+import taxInvoiceMultiple from "@/Assets/images/invoicing/tax-invoice-multiple.webp";
+import magnifiedInvoice from "@/Assets/images/invoicing/magnified-invoice.webp";
 
 
 interface Feature {
@@ -119,6 +121,8 @@ const Section1 = () => {
     // Helper function to get country-specific invoice images
     const getInvoiceMultipleImage = () => {
         switch (countryCode) {
+            case 'sa':
+                return taxInvoiceMultiple;
             case 'be':
                 return belgiumInvoiceHero;
             case 'pl':
@@ -132,6 +136,8 @@ const Section1 = () => {
 
     const getInvoiceStandaloneImage = () => {
         switch (countryCode) {
+            case 'sa':
+                return magnifiedInvoice;
             case 'be':
                 return belgiumInvoiceHero;
             case 'pl':
@@ -187,6 +193,43 @@ const Section1 = () => {
         zatcaCardText: string;
         cards: Card[];
     }>> = {
+        sa: {
+            whyAccqrateTitle: "Compliant with ZATCA, Tax and Customs Authority",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with ZATCA",
+            headingDescription: "Phase 2 requirements",
+            heroDescription: "Accqrate seamlessly generates ZATCA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ZATCA Phase 2 for every invoice sent to your customers.",
+            heroTitle: "5,000+ Saudi companies across all industries",
+            zatcaCardText: "Accqrate is 100% ZATCA Approved E-invoicing solution in KSA",
+            cards: [
+                {
+                    title: "Full Compliance with Belgium’s",
+                    subTitle: "E-Invoicing Mandate",
+                    description:
+                        "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium’s evolving regulatory framework.",
+                },
+                {
+                    title: "Future-Ready for ViDA",
+                    subTitle: "(VAT in the Digital Age)",
+                    description:
+                        "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+                },
+                {
+                    title: "Effortless E-Invoicing Automation",
+                    description:
+                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
+                },
+                {
+                    title: "Specialized Support and Implementation Expertise",
+                    description:
+                        "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.",
+                },
+                {
+                    title: "Unified Global E-Invoicing Platform",
+                    description:
+                        "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.",
+                },
+            ]
+        },
         be: {
             whyAccqrateTitle: "Compliant with Belgium\'s Mandatory B2B E-Invoicing Regulation",
             whyAccqrateSubtitle: "Generate invoices fully compliant with Belgium\'s FPS Finance 2026 mandate",
@@ -620,7 +663,7 @@ const Section1 = () => {
                                                     <div className="w-full h-px bg-gray-300"></div>
 
                                                     <div className="flex items-center justify-between gap-4">
-                                                        <p className="text-fluid-small leading-relaxed">
+                                                        <p className="text-fluid-small leading-tight">
                                                             <T>{pageContent.zatcaCardText}</T>
                                                         </p>
 
@@ -646,13 +689,15 @@ const Section1 = () => {
                     </div>
                 </div>
 
-                <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-[80px]'>
-                    <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
-                        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                            {cards.map((card, index) => (
-                                <div
-                                    key={index}
-                                    className="
+                {/* Cards section - hidden for Saudi Arabia (SA) */}
+                {countryCode !== 'sa' && (
+                    <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-[80px]'>
+                        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
+                            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                                {cards.map((card, index) => (
+                                    <div
+                                        key={index}
+                                        className="
                                         w-full
                                         border border-[#508847] bg-[#F4FFF2]
                                         p-4 sm:p-5 md:p-6 rounded-xl
@@ -660,45 +705,47 @@ const Section1 = () => {
                                         min-h-[280px] md:min-h-[300px] lg:min-h-[320px]
                                         overflow-hidden
                                     "
-                                >
-                                    <div className="flex-shrink-0 mb-2 md:mb-3">
-                                        <h3 className="text-[#303030] font-semibold text-fluid-body leading-tight break-words">
-                                            <T>{card.title}</T>
-                                        </h3>
-                                        {card.subTitle && (
-                                            <h3 className="text-[#303030] font-semibold text-fluid-body mb-2 md:mb-3 leading-tight break-words">
-                                                <T>{card.subTitle}</T>
+                                    >
+                                        <div className="flex-shrink-0 mb-2 md:mb-3">
+                                            <h3 className="text-[#303030] font-semibold text-fluid-body leading-tight break-words">
+                                                <T>{card.title}</T>
                                             </h3>
-                                        )}
-                                    </div>
+                                            {card.subTitle && (
+                                                <h3 className="text-[#303030] font-semibold text-fluid-body mb-2 md:mb-3 leading-tight break-words">
+                                                    <T>{card.subTitle}</T>
+                                                </h3>
+                                            )}
+                                        </div>
 
-                                    <div className="flex-grow overflow-hidden">
-                                        {card.description && (
-                                            <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
-                                                <T>{card.description}</T>
-                                            </p>
-                                        )}
-                                        {card.listItems && card.listItems.length > 0 && (
-                                            <ul className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] list-disc list-inside space-y-1.5 md:space-y-2 pl-2 md:pl-3 break-words">
-                                                {card.listItems.map((item, itemIndex) => (
-                                                    <li key={itemIndex} className="break-words">
-                                                        <T>{item}</T>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                        {card.para && (
-                                            <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
-                                                <T>{card.para}</T>
-                                            </p>
-                                        )}
+                                        <div className="flex-grow overflow-hidden">
+                                            {card.description && (
+                                                <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
+                                                    <T>{card.description}</T>
+                                                </p>
+                                            )}
+                                            {card.listItems && card.listItems.length > 0 && (
+                                                <ul className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] list-disc list-inside space-y-1.5 md:space-y-2 pl-2 md:pl-3 break-words">
+                                                    {card.listItems.map((item, itemIndex) => (
+                                                        <li key={itemIndex} className="break-words">
+                                                            <T>{item}</T>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                            {card.para && (
+                                                <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
+                                                    <T>{card.para}</T>
+                                                </p>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
-                    </div>
 
-                </div>
+                    </div>
+                )}
+
             </section>
             <ContactModal open={isModalOpen} onClose={handleCloseModal} />
         </>

@@ -30,7 +30,7 @@ const CTASection = () => {
     default: {
       title: "Save time, save money",
       description1: "Want the latest on ZATCA updates, fresh product insights, and exclusive Company editorials?",
-      description2: "Get fresh product insights and exclusive company editorials delivered straight to your inbox. Subscribe now to never miss a beat!",
+      description2: "Dive in and subscribe to our newsletter. Be the first to know, straight to your inbox!",
       button1: "Get a Free Proof of Concept",
       button2: "Subscribe for Updates",
       button3: "Talk to Sales"

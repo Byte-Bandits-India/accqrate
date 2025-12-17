@@ -30,6 +30,21 @@ const Section3 = () => {
             title: "Reports & Insights",
             desc: "Generate single or consolidated reports for a holistic view of your finances.",
         },
+        {
+            img: AssetPath.invoicing.bagCheck.src,
+            title: "Purchases & Claims",
+            desc: "Manage bills, purchase orders and expenses from one place",
+        },
+        {
+            img: AssetPath.invoicing.moneyStack.src,
+            title: "Payroll & Employees",
+            desc: "Run payroll and invite employees to submit their expense claims.",
+        },
+        {
+            img: AssetPath.invoicing.box.src,
+            title: "Inventory tracking",
+            desc: "Easily keep track of stock levels and let Accqrate automatically book your Cost of Goods",
+        },
     ];
 
     // Country-specific sections overrides

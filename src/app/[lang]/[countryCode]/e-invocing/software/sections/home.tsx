@@ -11,18 +11,34 @@ import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
 import eInvoiceHeroImg from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
 import uaeImg from "@/Assets/images/invoicing/uae.webp";
+import saHeroImg from "@/Assets/images/invoicing/invoice-with-create-screen copy.webp";
 import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
 import { t, currentLang } from "@/lib/translations";
 
+// Country configuration item type
+type CountryConfigItem = {
+    name: string;
+    authority: string;
+    badgeText?: string;
+    topTitle?: string;
+    title: string;
+    description1?: string;
+    description2?: string;
+    ctaText?: string;
+    countryName?: string;
+    marqueeItems?: string[];
+    imageAlt?: string;
+};
+
 // Country configuration with all content inside
-const countryConfig = {
+const countryConfig: Record<string, CountryConfigItem> = {
     "SA": {
         name: "Saudi Arabia",
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
+        description1: "",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Saudi",
@@ -368,12 +384,14 @@ const Software: React.FC = () => {
 
     const flagImage = getFlagForCountry(countryCode);
     const translatedDescription1 = React.useMemo(
-        () => t(content.description1, countryCode),
+        () => t(content.description1 ?? '', countryCode),
         [content.description1, countryCode, currentLang.lang]
     );
 
     const getHeroImage = () => {
         switch (countryCode) {
+            case 'SA':
+                return saHeroImg;
             case 'AE':
                 return uaeImg;
             case 'BE':
@@ -510,7 +528,7 @@ const Software: React.FC = () => {
                         <div className="flex-1 flex justify-center w-full">
                             <Image
                                 src={getHeroImage()}
-                                alt={content.imageAlt}
+                                alt={content.imageAlt ?? ''}
                                 width={591}
                                 height={380}
                                 className="w-full max-w-[541px] rounded-2xl object-contain"
@@ -519,30 +537,100 @@ const Software: React.FC = () => {
                     </div>
                 </div>
 
-                {/* IMAGE + TEXT SECTION */}
-                <div className="relative overflow-hidden py-6">
-                    {/* Background */}
-                    <div className="absolute inset-0" />
+                {/* IMAGE + TEXT SECTION - hidden for Saudi Arabia (SA) */}
+                {countryCode !== 'SA' && (
+                    <div className="relative overflow-hidden py-6">
+                        {/* Background */}
+                        <div className="absolute inset-0" />
 
-                    <div className="relative z-10 max-w-[1280px] mx-auto px-6">
-                        <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-6 md:gap-8 lg:gap-10">
+                        <div className="relative z-10 max-w-[1280px] mx-auto px-6">
+                            <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-6 md:gap-8 lg:gap-10">
 
-                            {badges.map((item, index) => (
-                                <div key={index} className="flex items-center gap-3 flex-shrink-0">
-                                    <img
-                                        src={item.img}
-                                        alt={item.alt}
-                                        className={`${item.className} object-contain`}
-                                    />
-                                    <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
-                                        <T>{item.text}</T>
-                                    </p>
-                                </div>
-                            ))}
+                                {badges.map((item, index) => (
+                                    <div key={index} className="flex items-center gap-3 flex-shrink-0">
+                                        <img
+                                            src={item.img}
+                                            alt={item.alt}
+                                            className={`${item.className} object-contain`}
+                                        />
+                                        <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
+                                            <T>{item.text}</T>
+                                        </p>
+                                    </div>
+                                ))}
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
+
+                {/* MARQUEE SECTION - render only for Saudi Arabia (SA) */}
+                {countryCode === 'SA' && content.marqueeItems && (
+                    <div className="marquee-wrapper relative overflow-hidden h-[74px]">
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#1C2041] to-[#194BED] shadow-[0_8px_30px_rgba(0,0,0,0.18)]" />
+
+                        <div className="relative z-10 flex items-center h-full">
+                            <div className="w-full max-w-[1280px] mx-auto relative overflow-hidden">
+                                <div
+                                    className="marquee-track flex items-center"
+                                    style={{ ['--marquee-duration' as any]: '22s' }}
+                                    aria-hidden="false"
+                                >
+                                    {/* First copy */}
+                                    <div className="marquee-copy flex-none">
+                                        <ul className="inline-flex items-center whitespace-nowrap gap-12 min-w-max px-6 text-fluid-small font-medium text-white pointer-events-none">
+                                            {content.marqueeItems.map((item, index) => (
+                                                <li key={`first-${index}`}><T>{item}</T></li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Second copy for seamless animation */}
+                                    <div className="marquee-copy flex-none" aria-hidden="true">
+                                        <ul className="inline-flex items-center whitespace-nowrap gap-12 min-w-max px-6 text-fluid-small font-medium text-white pointer-events-none">
+                                            {content.marqueeItems.map((item, index) => (
+                                                <li key={`second-${index}`}><T>{item}</T></li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style jsx>{`
+            .marquee-track {
+                animation: marquee var(--marquee-duration) linear infinite;
+                will-change: transform;
+                user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+            }
+
+            @keyframes marquee {
+                from { transform: translateX(0); }
+                to   { transform: translateX(-50%); }
+            }
+
+            .marquee-wrapper:hover .marquee-track,
+            .marquee-wrapper:active .marquee-track {
+                animation-play-state: paused;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .marquee-track { 
+                    animation: none !important; 
+                    transform: none !important; 
+                }
+            }
+
+            .marquee-copy { 
+                flex: 0 0 auto; 
+                display: flex; 
+                align-items: center; 
+            }
+        `}</style>
+                    </div>
+                )}
 
             </section>
             {/* Contact Modal */}
