@@ -106,7 +106,7 @@ const ContactFormPage = () => {
         }
       }
     },
-     AE: { 
+    AE: {
       title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
       cards: {
@@ -165,7 +165,7 @@ const ContactFormPage = () => {
 
   // Get card content based on country code
   const getCountryCardContent = () => {
-    if (['BE', 'PL','AE'].includes(countryCode)) {
+    if (['BE', 'PL', 'AE'].includes(countryCode)) {
       return countryCardContent[countryCode];
     } else {
       return countryCardContent.DEFAULT;
@@ -206,7 +206,7 @@ const ContactFormPage = () => {
     },
 
     PL: {
-    offices: [
+      offices: [
         {
           phone: "+41 76 475 36 65",
           city: "",
@@ -323,36 +323,36 @@ const ContactFormPage = () => {
 
             <div className="bg-white rounded-xl p-4 space-y-6  shadow-sm">
               {/* Offices: left column images, right column addresses */}
-             <div className="space-y-6">
-  {officeDetails.offices?.map((office, officeIdx) => (
-    <div key={officeIdx} className="flex items-start gap-4">
-      {/* Image */}
-      <img
-        src={office.image || AssetPath.pattern.dammamCircle.src}
-        alt={office.city || `Office ${officeIdx + 1}`}
-        className="w-[120px] h-[70px] object-contain flex-shrink-0"
-      />
+              <div className="space-y-6">
+                {officeDetails.offices?.map((office, officeIdx) => (
+                  <div key={officeIdx} className="flex items-start gap-4">
+                    {/* Image */}
+                    <img
+                      src={office.image || AssetPath.pattern.dammamCircle.src}
+                      alt={office.city || `Office ${officeIdx + 1}`}
+                      className="w-[120px] h-[70px] object-contain flex-shrink-0"
+                    />
 
-      {/* Address */}
-      <div>
-        {office.city && (
-          <p className="text-sm font-semibold text-gray-800 mb-1">
-            {office.city}
-          </p>
-        )}
+                    {/* Address */}
+                    <div>
+                      {office.city && (
+                        <p className="text-sm font-semibold text-gray-800 mb-1">
+                          {office.city}
+                        </p>
+                      )}
 
-        {office.addressLines.map((line, idx) => (
-          <p
-            key={idx}
-            className="text-[15px] text-[#9a8e9e] underline leading-relaxed"
-          >
-            <T lang={lang} countryCode={countryCode}>{line}</T>
-          </p>
-        ))}
-      </div>
-    </div>
-  ))}
-</div>
+                      {office.addressLines.map((line, idx) => (
+                        <p
+                          key={idx}
+                          className="text-[15px] text-[#9a8e9e] underline leading-relaxed"
+                        >
+                          <T lang={lang} countryCode={countryCode}>{line}</T>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
 
             </div>
 

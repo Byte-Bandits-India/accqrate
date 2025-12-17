@@ -68,4 +68,5 @@ export const comingSoonRoutes = [
   'company',
   'newsletter',
   'branding-assets',
+  'connect-with-concierge'
 ];

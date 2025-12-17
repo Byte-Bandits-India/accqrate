@@ -10,14 +10,15 @@ import T from "@/Components/T";
 // ---------------- Dynamic Routing ----------------
 const useDynamicRouting = () => {
   const pathname = usePathname();
+  const segments = pathname.split("/").filter(Boolean);
+  const lang = segments[0] || "en";
+  const countryCode = segments[1] || "sa";
+
   const createHref = (path: string): string => {
-    const segments = pathname.split("/").filter(Boolean);
-    const lang = segments[0] || "en";
-    const countryCode = segments[1] || "sa";
     const clean = path.startsWith("/") ? path : `/${path}`;
     return `/${lang}/${countryCode}${clean}`;
   };
-  return { createHref };
+  return { createHref, countryCode };
 };
 
 // ---------------- Footer Data ----------------
@@ -36,26 +37,61 @@ const footerSections = [
   {
     title: "Resources",
     links: [
-      { label: "FAQ", href: "/resources/faq" },
-      { label: "Blogs", href: "/resources/blogs" },
-      { label: "Events", href: "/resources/webinars" },
-      { label: "Announcements", href: "/resources/announcement" },
-      { label: "Tax Calculator", href: "/resources/vat" },
-    ],
-  },
-  {
-    title: "Contact Sales",
-    links: [
-      { label: "Call: +41 76 475 36 65", isText: true },
-      { label: "Email: contact@accqrate-erp.com", isText: true },
-      { label: "WhatsApp: +41 76 475 36 65", isText: true },
-      {
-        label: "Connect with Accqrate Concierge",
-        href: "/connect-with-concierge",
-      },
+      { label: "FAQ", href: "/resources/faq", isText: false },
+      { label: "Blogs", href: "/resources/blogs", isText: false },
+      { label: "Events", href: "/resources/webinars", isText: false },
+      { label: "Announcements", href: "/resources/announcement", isText: false },
+      { label: "Tax Calculator", href: "/resources/vat", isText: false },
     ],
   },
 ];
+
+// Function to get country-specific contact sales section
+const getContactSalesSection = (countryCode: string) => {
+  const contactData: Record<string, { call: string; email: string; whatsapp: string }> = {
+    sa: {
+      call: "Call: +966 54 199 9357",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +966 54 199 9357"
+    },
+    ae: {
+      call: "Call: +971505515388",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +971505515388"
+    },
+    be: {
+      call: "Call: +971505515388",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +971505515388"
+    },
+    pl: {
+      call: "Call: +971505515388",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +971505515388"
+    },
+    default: {
+      call: "Call: +966 54 199 9357",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +966 54 199 9357"
+    },
+  };
+
+  const data = contactData[countryCode.toLowerCase()] || contactData.default;
+
+  return {
+    title: "Contact Sales",
+    links: [
+      { label: data.call, isText: true },
+      { label: data.email, isText: true },
+      { label: data.whatsapp, isText: true },
+      {
+        label: "Connect with Accqrate Concierge",
+        href: "/connect-with-concierge",
+        isText: false,
+      },
+    ],
+  };
+};
 
 const eInvoicingLinks = [
   { label: "Accqrate E-invoicing", href: "/e-invocing" },
@@ -64,13 +100,19 @@ const eInvoicingLinks = [
 
 // ---------------- Component ----------------
 export default function FooterUpdated() {
-  const { createHref } = useDynamicRouting();
+  const { createHref, countryCode } = useDynamicRouting();
 
   const resolveHref = (path: string) => {
     const clean = path.replace(/^\//, "");
     const target = comingSoonRoutes.includes(clean) ? "/coming-soon" : path;
     return createHref(target);
   };
+
+  // Dynamic footer sections based on country
+  const dynamicFooterSections = [
+    ...footerSections,
+    getContactSalesSection(countryCode)
+  ];
 
   return (
     <footer className="bg-[#1F1F1F] text-white py-16 font-inter">
@@ -151,7 +193,7 @@ export default function FooterUpdated() {
 
           {/* RIGHT GRID */}
           <div className="flex-grow grid sm:grid-cols-2 gap-10">
-            {footerSections.map((section, index) => (
+            {dynamicFooterSections.map((section, index) => (
               <div key={index}>
                 <h3 className="text-fluid-body font-semibold mb-6">
                   <T>{section.title}</T>

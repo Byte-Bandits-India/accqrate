@@ -7766,10 +7766,6 @@ const blogTranslations: TranslationsMap = {
   ar: "انطلق خلال 5 أيام عمل، مما يسرّع جاهزيتك لمتطلبات الفوترة الإلكترونية الإلزامية للمعاملات B2B في الإمارات."
 },
 
-"Integrate Your Existing": {
-  ar: "دمج نظامك الحالي"
-},
-
 "Seamless": {
   ar: "سلس"
 },
@@ -8073,21 +8069,6 @@ const blogTranslations: TranslationsMap = {
     // Description 2
     "Subscribe to our newsletter and stay ahead delivered straight to your inbox.": { 
         ar: "اشترك في نشرتنا الإخبارية وابقَ على اطلاع دائم بكل جديد يصل مباشرة إلى بريدك." 
-    },
-
-    // Button 1
-    "Get Peppol Compliance Demo": { 
-        ar: "احصل على عرض امتثال Peppol" 
-    },
-
-    // Button 2
-    "Subscribe for Updates": { 
-        ar: "اشترك للحصول على التحديثات" 
-    },
-
-    // Button 3
-    "Talk to Sales": { 
-        ar: "تحدث إلى فريق المبيعات" 
     },
 
     "Get in touch with us for more information.": {
