@@ -231,6 +231,45 @@ const ContactFormPage = () => {
       ],
     },
 
+    MA: {
+      offices: [
+        {
+          phone: "+60 12-998 6011\n+60 17-302 1401\n+60 12-295 6867\n+60 11-1166 2601",
+          city: "Kuala Lumpur",
+          addressLines: [
+            "Level 23A, NAZA Towers, 10, Persiaran KLCC, 50088, Kuala Lumpur, Malaysia.",
+          ],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+
+    MU: {
+      offices: [
+        {
+          phone: "+230 5795 1711",
+          city: "Mauritius",
+          addressLines: [
+            "5 Abbe Mazuy Street, Venkatasamy Lane, Beau Bassin, Mauritius.",
+          ],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+
+    JD: {
+      offices: [
+        {
+          phone: "+962 7 8800 3525",
+          city: "Jordan",
+          addressLines: [
+            "4 - Yacoub Plaza 195 King Abdullah II street - Amman Jordan",
+          ],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+
     // Example: Saudi with two offices
     SA: {
       offices: [
@@ -260,8 +299,23 @@ const ContactFormPage = () => {
     DEFAULT: {
       offices: [
         {
-          phone: "+41 76 475 36 65",
-          addressLines: ["Picassoplatz 4", "CH-4052 Basel", "Switzerland"],
+          phone: "+966 54 199 9357",
+          city: "Dammam",
+          addressLines: [
+            "2nd Floor, Suit No.3, Al Khonaini building",
+            "King Saud Street, P.O Box 2877 Dammam 31461",
+            "Kingdom of Saudi Arabia",
+          ],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+        {
+          phone: "+966 55 123 4567",
+          city: "Riyadh",
+          addressLines: [
+            "Level 1,Building 7,Zone A Airport road",
+            "Business Gate, P.O Box 93597 Riyadh 11683",
+            "Kingdom of Saudi Arabia",
+          ],
           image: AssetPath.pattern.dammamCircle.src,
         },
       ],
@@ -300,11 +354,15 @@ const ContactFormPage = () => {
               </p>
 
               {/* Phone Section with Icon */}
-              <div className="flex items-center gap-2 pb-2 text-[#1F3FBF]">
-                <PhoneCall className="w-4 h-4" />
-                <span className="text-[18px] md:text-[22px] font-semibold leading-relaxed">
-                  {primaryPhone}
-                </span>
+              <div className="pb-2 text-[#1F3FBF]">
+                {primaryPhone.split('\n').map((line, index) => (
+                  <div key={index} className="flex items-center gap-2 mb-1">
+                    <PhoneCall className="w-4 h-4 flex-shrink-0" />
+                    <span className="text-[18px] md:text-[22px] font-semibold leading-relaxed">
+                      {line}
+                    </span>
+                  </div>
+                ))}
               </div>
 
               {/* Office Locations Title */}

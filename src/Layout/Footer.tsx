@@ -54,6 +54,33 @@ const getContactSalesSection = (countryCode: string) => {
       email: "Email: contact@accqrate-erp.com",
       whatsapp: "WhatsApp: +966 54 199 9357"
     },
+    om: {
+      call: "Call: +966 54 199 9357",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +966 54 199 9357"
+    },
+    bh: {
+      call: "Call: +966 54 199 9357",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +966 54 199 9357"
+    },
+    ma: {
+      call: "Call: +60 12-998 6011\nCall: +60 17-302 1401\nCall: +60 12-295 6867\nCall: +60 11-1166 2601",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +60 12-998 6011"
+    },
+    mu: {
+      call: "Call: +230 5795 1711",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +230 5795 1711"
+    },
+
+    jd: {
+      call: "Call: +962 7 8800 3525",
+      email: "Email: contact@accqrate-erp.com",
+      whatsapp: "WhatsApp: +962 7 8800 3525"
+    },
+
     ae: {
       call: "Call: +971505515388",
       email: "Email: contact@accqrate-erp.com",
@@ -203,9 +230,13 @@ export default function FooterUpdated() {
                   {section.links.map((item, i) => (
                     <li key={i}>
                       {item.isText ? (
-                        <span className="block">
-                          <T>{item.label}</T>
-                        </span>
+                        <div className="block">
+                          {item.label.split('\n').map((line, lineIndex) => (
+                            <span key={lineIndex} className="block">
+                              <T>{line}</T>
+                            </span>
+                          ))}
+                        </div>
                       ) : (
                         (() => {
                           return (
