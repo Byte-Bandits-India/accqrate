@@ -6802,6 +6802,10 @@ const blogTranslations: TranslationsMap = {
   ar: "امتثال كامل للوائح الفوترة الإلكترونية" 
 },
 
+"Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts. Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.": {
+    ar: "ضريبة القيمة المضافة (VAT) هي ضريبة غير مباشرة تفرض على معظم السلع والخدمات في كل مرحلة من مراحل سلسلة التوريد، من الإنتاج إلى نقطة البيع. تم تطبيق ضريبة القيمة المضافة في الإمارات العربية المتحدة في عام 2018 بنسبة 5٪، وتم تعديل السعر إلى 15٪ في يوليو 2020 لمعالجة آثار جائحة كوفيد-19. تم تطبيق ضريبة القيمة المضافة في الإمارات العربية المتحدة في عام 2018 بمعدل قياسي 5٪ على معظم السلع والخدمات."
+  },
+
 "Accqrate delivers compliant structured e-invoices with seamless integration, ensuring secure exchange, standardized processing, and continuous alignment with evolving regulatory frameworks.": {
   ar: "توفر أكيوريت فواتير إلكترونية منظمة ومتوافقة، مع تكامل سلس يضمن تبادلاً آمناً، ومعالجة قياسية، ومواءمة مستمرة مع الأطر التنظيمية المتطورة."
 },
@@ -7768,10 +7772,6 @@ const blogTranslations: TranslationsMap = {
   ar: "انطلق خلال 5 أيام عمل، مما يسرّع جاهزيتك لمتطلبات الفوترة الإلكترونية الإلزامية للمعاملات B2B في الإمارات."
 },
 
-"Integrate Your Existing": {
-  ar: "دمج نظامك الحالي"
-},
-
 "Seamless": {
   ar: "سلس"
 },
@@ -8079,21 +8079,6 @@ const blogTranslations: TranslationsMap = {
     // Description 2
     "Subscribe to our newsletter and stay ahead delivered straight to your inbox.": { 
         ar: "اشترك في نشرتنا الإخبارية وابقَ على اطلاع دائم بكل جديد يصل مباشرة إلى بريدك." 
-    },
-
-    // Button 1
-    "Get Peppol Compliance Demo": { 
-        ar: "احصل على عرض امتثال Peppol" 
-    },
-
-    // Button 2
-    "Subscribe for Updates": { 
-        ar: "اشترك للحصول على التحديثات" 
-    },
-
-    // Button 3
-    "Talk to Sales": { 
-        ar: "تحدث إلى فريق المبيعات" 
     },
 
     "Get in touch with us for more information.": {
@@ -8415,9 +8400,6 @@ const blogTranslations: TranslationsMap = {
 },
 "Explore Accqrate’s UAE E-Invoicing Integration with a Free, Zero-Risk Proof of Concept": {
   "ar": "استكشف تكامل الفوترة الإلكترونية في دولة الإمارات من Accqrate من خلال إثبات مفهوم مجاني وبدون أي مخاطر"
-},
-"About Accqrate:": {
-  "ar": "نبذة عن Accqrate:"
 },
 
 "The United Arab Emirates is preparing a nationwide electronic invoicing framework built on a decentralised model inspired by PEPPOL's Continuous Transaction Control and Exchange architecture. The upcoming system will require structured invoice formats, connectivity to accredited service providers, and real-time routing of business to business and business to government transactions.": {
