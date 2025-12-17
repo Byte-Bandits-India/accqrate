@@ -8,6 +8,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 import { COUNTRY_CONTENT } from "../data/CountryContent";
 import T from "@/Components/T";
 import uaeHero from "@/Assets/images/integration/UAE_integration_hero.webp";
+import saHero from "@/Assets/images/invoicing/create-invoice.webp";
 
 // Import ContactModal with dynamic loading
 const ContactModal = dynamic(
@@ -99,7 +100,7 @@ const Software = () => {
           {/* RIGHT IMAGE */}
           <div className="flex-1 min-w-0 flex flex-col items-center">
             <Image
-              src={countryCode === "ae" ? uaeHero : AssetPath.integration.invoice}
+              src={countryCode === "ae" ? uaeHero : countryCode === "sa" ? saHero : AssetPath.integration.invoice}
               alt="software ui"
               width={591}
               height={400}

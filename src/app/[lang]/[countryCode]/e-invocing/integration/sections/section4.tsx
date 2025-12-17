@@ -5,6 +5,7 @@ import { Choose } from "../data/Choose";
 import { useParams } from "next/navigation";
 import T from "@/Components/T";
 import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
+import zatcaIntegratedDashboard from "@/Assets/images/invoicing/zatca-integrated-dashboard.webp";
 import {
   Accordion,
   AccordionContent,
@@ -28,7 +29,7 @@ export default function Section4() {
       case 'ae':
         return AssetPath.invoicing.UAE_invoice_1;
       default:
-        return AssetPath.invoicing.invoiceMultiplePng;
+        return AssetPath.invoicing.invocingCta;
     }
   };
   const getDashboardMultipleImage = () => {
@@ -39,6 +40,8 @@ export default function Section4() {
         return AssetPath.integration.dashboard;
       case 'ae':
         return AssetPath.integration.uaedash;
+      case 'sa':
+        return zatcaIntegratedDashboard;
       default:
         return AssetPath.integration.dashboard;
     }
@@ -118,7 +121,7 @@ export default function Section4() {
           <div className="flex justify-center items-center order-1 lg:order-2">
             {data.topRightImage && (
               <Image
-                src={getDashboardMultipleImage().src}
+                src={countryCode === 'sa' ? zatcaIntegratedDashboard : getDashboardMultipleImage().src}
                 width={800}
                 height={600}
                 alt="Dashboard"

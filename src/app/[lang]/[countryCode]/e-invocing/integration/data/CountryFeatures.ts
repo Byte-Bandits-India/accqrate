@@ -35,7 +35,7 @@ export const COUNTRY_FEATURES: Record<string, CountryFeatures> = {
        featureHeading: "Enhanced",
 featureHighlight: "Electronic Invoicing",
 featureDescription:
-  "Streamline your invoicing with Accqrate's automated, Peppol-ready, EN 16931–compliant platform built for secure, scalable European operations.",
+  "Streamline your invoicing with our automated, globally compatible solution featuring advanced security.",
 ctaDescription:
   "We provide complete assistance for ZATCA e-invoicing integration from onboarding to continuous compliance.",
 
@@ -67,20 +67,38 @@ ctaDescription:
       },
       {
         img: AssetPath.invoicing.integrationAssets.set.src,
-        title: "Phase 1 & Phase 2 ready",
+        title: "Audited & Certified",
         description:
-          "Supports all ZATCA phases with auto XML generation and validation.",
+          "Our customers setups right from ZATCA wave 1 are 100% audited and certified.",
       },
       {
         img: AssetPath.invoicing.integrationAssets.ring.src,
-        title: "Approved e-invoices",
-        description: "Real-time reporting with unified QR code.",
+        title: "Flexibility in Deployment",
+        description: "Choose our SAAS Cloud or your own server for deployment.",
       },
       {
         img: AssetPath.invoicing.integrationAssets.cloud.src,
-        title: "Cloud or On-prem",
-        description: "Flexible deployment based on business needs.",
+        title: "Rapid Implementation",
+        description: "Go live in just 5 days with guaranteed ZATCA integration",
       },
+      {
+  img: AssetPath.invoicing.integrationAssets.set.src,
+  title: "Packaged Solution",
+  description:
+    "Comprehensive solutions tailored for SAP, Oracle, MSD, Infor, BAAN, SAGE, Custom & Inhouse ERP/POS",
+},
+    {
+    img: AssetPath.invoicing.integrationAssets.set.src,
+    title: "High Performance",
+    description:
+      "Capable of processing millions of invoices daily.",
+  },
+  {
+    img: AssetPath.invoicing.integrationAssets.cal.src,
+    title: "End-to-End Support",
+    description:
+      "We will provide Full end-to-end support for ZATCA integration, from start to finish.",
+  },
     ],
   },
 
