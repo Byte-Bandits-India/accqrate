@@ -24,7 +24,7 @@ export default function ProofSection() {
     <section className="px-6 md:px-8 lg:px-0 py-12">
       <div className="max-w-[1100px] mx-auto text-center mb-12">
         <h2 className="text-[28px] md:text-[34px] font-semibold text-[#1C2041] mb-3">
-          <T lang={lang} countryCode={countryCode}>{data.title.split("for")[0]}</T> <T lang={lang} countryCode={countryCode}>for</T> {" "}
+          <T lang={lang} countryCode={countryCode}>{data.title}</T>{" "}
           <span className="text-[#448E32]"><T lang={lang} countryCode={countryCode}>{integrationLabel}</T></span>
         </h2>
 

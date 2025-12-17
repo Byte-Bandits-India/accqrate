@@ -28,22 +28,20 @@ export default function CreditNote() {
       />
 
       <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
+        <a
+          href="https://zatca.gov.sa/en/E-Invoicing/Introduction/Guidelines/Documents/E-Invoicing_Detailed__Guideline.pdf"
+          className="text-blue-600 "
+        >
+          <T>The credit note</T>
+        </a>
+        ,&nbsp;
         <T>
-          <a
-            href="https://zatca.gov.sa/en/E-Invoicing/Introduction/Guidelines/Documents/E-Invoicing_Detailed__Guideline.pdf"
-            className="text-blue-600 "
-          >
-            <T>The credit note</T>
-          </a>
-          ,&nbsp;
-          <T>
-            also known as a credit memo, plays a pivotal role in business financial transactions. It signifies
-            the return of funds to a company under various circumstances such as invoice errors, the receipt
-            of incorrect or damaged products, or the cancellation of a purchase order. Credit notes can be
-            issued for the full invoice amount or a partial sum. Not only do they adjust your account
-            receivables, but they also rectify the taxes associated with the invoices. It’s essential to note
-            that the credited sum should not surpass the invoice’s total gross amount.
-          </T>
+          also known as a credit memo, plays a pivotal role in business financial transactions. It signifies
+          the return of funds to a company under various circumstances such as invoice errors, the receipt
+          of incorrect or damaged products, or the cancellation of a purchase order. Credit notes can be
+          issued for the full invoice amount or a partial sum. Not only do they adjust your account
+          receivables, but they also rectify the taxes associated with the invoices. It’s essential to note
+          that the credited sum should not surpass the invoice’s total gross amount.
         </T>
       </p>
 

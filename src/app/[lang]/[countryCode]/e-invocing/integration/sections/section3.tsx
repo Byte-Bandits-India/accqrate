@@ -222,15 +222,15 @@ export default function IntegrationFlow() {
                                         className={index % 2 === 0 ? "pl-8" : "pr-8 text-right"}
                                     >
                                         <div className="text-[#FF8D67] text-[40px] font-medium mb-2">
-                                            {step.number}
+                                            <T>{step.number}</T>
                                         </div>
 
                                         <h3 className="text-[20px] font-medium text-[#1C2041] mb-4">
-                                            {step.title}
+                                            <T>{step.title}</T>
                                         </h3>
 
                                         <p className="text-[#5A6183] md:text-[16px] lg:text-[18px] leading-relaxed">
-                                            {step.description}
+                                            <T>{step.description}</T>
                                         </p>
                                     </Col>
                                 </Row>
@@ -263,11 +263,11 @@ export default function IntegrationFlow() {
                                         />
 
                                         <h4 className="text-[18px] font-medium text-[#1C2041] mb-3">
-                                            {step.title}
+                                            <T>{step.title}</T>
                                         </h4>
 
                                         <p className="text-[#5A6183] text-[14px] leading-relaxed">
-                                            {step.description}
+                                            <T>{step.description}</T>
                                         </p>
                                     </div>
                                 </div>

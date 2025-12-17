@@ -351,7 +351,7 @@ export default function ZatcaPhaseTwoBlog() {
           <h3 className="text-2xl font-bold leading-[39px] font-['Inter'] mb-4">Ready to streamline your e-invoicing compliance?</h3>
 
           <p className="story text-fluid-small mb-4">
-            Contact Accqrate today and make the switch to seamless, ZATCA-compliant e-invoicing!
+            <T>Contact Accqrate today and make the switch to seamless, ZATCA-compliant e-invoicing!</T>
           </p>
 
           <hr className="my-6 border-[#ebecf3]" />
@@ -359,9 +359,10 @@ export default function ZatcaPhaseTwoBlog() {
           <h3 className="text-fluid-body font-bold leading-[39px] font-['Inter'] mb-4">Disclaimer:</h3>
 
           <p className="story mb-4 text-fluid-small">
-            This blog post provides general information based on ZATCA guidelines and updates available as of
-            2025. For personalized advice tailored to your specific business situation, consult your tax advisor
-            or reach out directly to ZATCA.
+            <T>This blog post provides general information based on ZATCA guidelines and updates available as of
+              2025. For personalized advice tailored to your specific business situation, consult your tax advisor
+              or reach out directly to ZATCA.
+            </T>
           </p>
 
           <h3 className="text-fluid-body font-bold leading-[39px] font-['Inter'] mb-4">About Accqrate</h3>

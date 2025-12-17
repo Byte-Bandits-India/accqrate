@@ -97,7 +97,7 @@ ctaDescription:
     img: AssetPath.invoicing.integrationAssets.cal.src,
     title: "End-to-End Support",
     description:
-      "We will provide Full end-to-end support for ZATCA integration, from start to finish.",
+      "We deliver full support for your complete KSeF integration lifecycle from setup to continuous compliance",
   },
     ],
   },

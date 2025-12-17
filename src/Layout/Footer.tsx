@@ -121,7 +121,7 @@ const getContactSalesSection = (countryCode: string) => {
 };
 
 const eInvoicingLinks = [
-  { label: "Accqrate E-invoicing", href: "/e-invocing" },
+  { label: "Accqrate E-Invoicing", href: "/e-invocing" },
   { label: "Integration Solution", href: "/e-invocing/integration" },
 ];
 

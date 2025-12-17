@@ -98,7 +98,7 @@ export const getVATCalculatorContent = (countryCode?: string): VATCalculatorCont
 // Function to get country-specific implementation details
 export const getCountrySpecificVATDetails = (countryCode: string): string => {
   const countryDetails: Record<string, string> = {
-    'SA': 'Implemented in KSA in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.',
+    'SA': '',
     'BH': 'Implemented in Bahrain in 2019 at a standard rate of 10% on most goods and services.',
     'MA': 'Malaysia has a Sales and Service Tax (SST) rate of 6% on most goods and services.',
     'MU': 'Mauritius has a standard VAT rate of 15% on most goods and services.',

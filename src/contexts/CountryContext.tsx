@@ -39,7 +39,7 @@ const allLanguages: Language[] = [
     { code: "fr", name: "French", display: "Français" },
     { code: "nl", name: "Dutch", display: "Dutch" },
     { code: "de", name: "German", display: "Deutsch" },
-     {code: "pl", name: "Polish", display: "Polski" },
+    { code: "pl", name: "Polish", display: "Polski" },
 ];
 
 const getLanguagesForCountry = (countryCode: string): Language[] => {
@@ -49,42 +49,42 @@ const getLanguagesForCountry = (countryCode: string): Language[] => {
 
 // ===================== Data =====================
 export const countries: Country[] = [
-    /* {
-         name: "Saudi Arabia",
-         code: "SA",
-         flag: AssetPath.header.language.saudiArabia,
-         language: "Arabic",
-         currency: "SAR",
-     },
-    
-     {
-         name: "Oman",
-         code: "OM",
-         flag: AssetPath.header.language.oman,
-         language: "Arabic",
-         currency: "OMR",
-     },
-     {
-         name: "Bahrain",
-         code: "BH",
-         flag: AssetPath.header.language.bahrain,
-         language: "Arabic",
-         currency: "BHD",
-     },
-     {
-         name: "Malaysia",
-         code: "MA",
-         flag: AssetPath.header.language.malaysia,
-         language: "Malay",
-         currency: "MYR",
-     },
-     {
-         name: "Mauritius",
-         code: "MU",
-         flag: AssetPath.header.language.mauritius,
-         language: "English",
-         currency: "MUR",
-     },*/
+    {
+        name: "Saudi Arabia",
+        code: "SA",
+        flag: AssetPath.header.language.saudiArabia,
+        language: "Arabic",
+        currency: "SAR",
+    },
+
+    {
+        name: "Oman",
+        code: "OM",
+        flag: AssetPath.header.language.oman,
+        language: "Arabic",
+        currency: "OMR",
+    },
+    {
+        name: "Bahrain",
+        code: "BH",
+        flag: AssetPath.header.language.bahrain,
+        language: "Arabic",
+        currency: "BHD",
+    },
+    {
+        name: "Malaysia",
+        code: "MA",
+        flag: AssetPath.header.language.malaysia,
+        language: "Malay",
+        currency: "MYR",
+    },
+    {
+        name: "Mauritius",
+        code: "MU",
+        flag: AssetPath.header.language.mauritius,
+        language: "English",
+        currency: "MUR",
+    },
     {
         name: "Belgium",
         code: "BE",
@@ -99,8 +99,8 @@ export const countries: Country[] = [
         language: "Arabic",
         currency: "AED",
     },
-   
-    /* {
+
+    {
         name: "Poland",
         code: "PL",
         flag: AssetPath.header.language.poland,
@@ -113,7 +113,7 @@ export const countries: Country[] = [
         flag: AssetPath.header.language.jordan,
         language: "Arabic",
         currency: "JOD",
-    },*/
+    },
 ];
 
 export const languages: Language[] = allLanguages;

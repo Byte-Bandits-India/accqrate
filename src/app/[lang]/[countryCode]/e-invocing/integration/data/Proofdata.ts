@@ -170,7 +170,7 @@ export const ProofData = {
     ]
   },
   sa: {
-  title: "Free proof of concept for ZATCA Integration",
+  title: "Free proof of concept for",
   subtitle:
     "ZATCA Integration Explore Accqrate`s ZATCA Integration with a Free Proof of Concept",
 
