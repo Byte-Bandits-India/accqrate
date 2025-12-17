@@ -106,7 +106,7 @@ const ContactFormPage = () => {
         }
       }
     },
-    AE: {
+     AE: { 
       title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
       cards: {
@@ -165,7 +165,7 @@ const ContactFormPage = () => {
 
   // Get card content based on country code
   const getCountryCardContent = () => {
-    if (['BE', 'PL', 'AE'].includes(countryCode)) {
+    if (['BE', 'PL','AE'].includes(countryCode)) {
       return countryCardContent[countryCode];
     } else {
       return countryCardContent.DEFAULT;
@@ -180,13 +180,105 @@ const ContactFormPage = () => {
     setIsModalOpen(true);
   };
 
+  // Support multiple offices per country. Each country maps to an object
+  // with an `offices` array. Each office can optionally include a `city` field
+  // which will be rendered as a heading above its address lines.
+  const countryOfficeDetails: Record<
+    string,
+    {
+      offices: {
+        phone?: string;
+        city?: string;
+        addressLines: string[];
+        image?: string;
+      }[];
+    }
+  > = {
+    BE: {
+      offices: [
+        {
+          phone: "+41 76 475 36 65",
+          city: "",
+          addressLines: ["Picassoplatz 4", "CH-4052 Basel", "Switzerland"],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+
+    PL: {
+    offices: [
+        {
+          phone: "+41 76 475 36 65",
+          city: "",
+          addressLines: ["Picassoplatz 4", "CH-4052 Basel", "Switzerland"],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+
+    AE: {
+      offices: [
+        {
+          phone: "+971505515388",
+          city: "Dubai",
+          addressLines: [
+            "Business Center 1, M Floor",
+            "The Maydan Hotel, Nad Al Sheba Road",
+            "Dubai, United Arab Emirates",
+          ],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+
+    // Example: Saudi with two offices
+    SA: {
+      offices: [
+        {
+          phone: "+966 54 199 9357",
+          city: "Dammam",
+          addressLines: [
+            "2nd Floor, Suit No.3, Al Khonaini building",
+            "King Saud Street, P.O Box 2877 Dammam 31461",
+            "Kingdom of Saudi Arabia",
+          ],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+        {
+          phone: "+966 55 123 4567",
+          city: "Riyadh",
+          addressLines: [
+            "Level 1,Building 7,Zone A Airport road",
+            "Business Gate, P.O Box 93597 Riyadh 11683",
+            "Kingdom of Saudi Arabia",
+          ],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+
+    DEFAULT: {
+      offices: [
+        {
+          phone: "+41 76 475 36 65",
+          addressLines: ["Picassoplatz 4", "CH-4052 Basel", "Switzerland"],
+          image: AssetPath.pattern.dammamCircle.src,
+        },
+      ],
+    },
+  };
+
+
+  const officeDetails = countryOfficeDetails[countryCode] || countryOfficeDetails.DEFAULT;
+  const primaryPhone = officeDetails.offices?.[0]?.phone || officeDetails.offices?.[0]?.addressLines?.[0] || '';
+
   return (
-    <div className="min-h-screen bg-[#F8F6FF] px-4 pb-12 pt-10 md:pt-[60px] lg:pt-[80px]" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+    <div className="min-h-screen bg-[#F8F6FF] px-4 pb-12 pt-10 md:pt-[60px] lg:pt-[80px]">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-6">
         {/* Left Section - Info (UNCHANGED) */}
-        <div className={`w-full max-w-[475px] ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+        <div className="w-full max-w-[475px] text-left">
           <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium"><T lang={lang} countryCode={countryCode}>{cardContent.title}</T></h2>
-          <div className={`w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-[20px] ${lang === 'ar' ? 'ml-auto' : ''}`}></div>
+          <div className="w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-[20px]"></div>
           <h2 className="text-fluid-body lg:text-[16px] font-medium text-[#000000] mb-2">
             <T lang={lang} countryCode={countryCode}>Our team is here to help</T>
           </h2>
@@ -198,63 +290,79 @@ const ContactFormPage = () => {
           <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
             <div className="">
               {/* Call Us Label */}
-              <p className={`text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
-                <T lang={lang} countryCode={countryCode}>Call Us</T>
+              <p className="text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed">
+                <T>Call Us</T>
               </p>
 
               {/* Phone Timing */}
-              <p className={`text-[12px] pb-2 text-[#000000] font-normal leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
-                <T lang={lang} countryCode={countryCode}>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
+              <p className="text-[12px] md:text-[16px] pb-2 text-[#000000] font-normal leading-relaxed">
+                <T>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
               </p>
 
               {/* Phone Section with Icon */}
-              <div className={`flex items-center gap-2 pb-2 text-[#1F3FBF] ${lang === 'ar' ? 'flex items-start justify-start' : ''}`}>
+              <div className="flex items-center gap-2 pb-2 text-[#1F3FBF]">
                 <PhoneCall className="w-4 h-4" />
-                <span className={`text-[16px] font-medium leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
-                  +41 76 475 36 65
+                <span className="text-[18px] md:text-[22px] font-semibold leading-relaxed">
+                  {primaryPhone}
                 </span>
               </div>
 
               {/* Office Locations Title */}
-              <h3 className={`text-[#1F3FBF] font-semibold text-[20px] ${lang === 'ar' ? 'text-right' : ''}`}>
+              <h3 className="text-[#1F3FBF] font-semibold text-[20px] md:text-[24px] leading-relaxed mb-4">
                 <span className="text-black">
-                  <T lang={lang} countryCode={countryCode}>Our</T>
+                  <T>Our</T>
                 </span>{" "}
-                <T lang={lang} countryCode={countryCode}>Office</T>{" "}
+                <T>Office</T>{" "}
                 <span className="text-black">
-                  <T lang={lang} countryCode={countryCode}>Locations</T>
+                  <T>Locations</T>
                 </span>
               </h3>
 
             </div>
 
 
-            <div className="bg-white rounded-xl p-4 space-y-6 shadow-sm">
-              {/* Location 1 */}
-              <div className={`flex ${lang === 'ar' ? 'flex items-start justify-start' : ''}`}>
-                <div className="flex items-center justify-center flex-shrink-0">
-                  <img
-                    src={AssetPath.pattern.dammamCircle.src}
-                    alt="Location Icon"
-                    className="w-[120px] h-[70px] object-contain"
-                  />
-                </div>
+            <div className="bg-white rounded-xl p-4 space-y-6  shadow-sm">
+              {/* Offices: left column images, right column addresses */}
+             <div className="space-y-6">
+  {officeDetails.offices?.map((office, officeIdx) => (
+    <div key={officeIdx} className="flex items-start gap-4">
+      {/* Image */}
+      <img
+        src={office.image || AssetPath.pattern.dammamCircle.src}
+        alt={office.city || `Office ${officeIdx + 1}`}
+        className="w-[120px] h-[70px] object-contain flex-shrink-0"
+      />
 
-                <div>
-                  <p className={`text-sm text-[#9a8e9e] underline leading-relaxed ${lang === 'ar' ? 'text-right' : ''}`}>
-                    <T lang={lang} countryCode={countryCode}>Picassoplatz 4 <br />CH-4052 Basel <br /> Switzerland</T>
-                  </p>
-                </div>
-              </div>
+      {/* Address */}
+      <div>
+        {office.city && (
+          <p className="text-sm font-semibold text-gray-800 mb-1">
+            {office.city}
+          </p>
+        )}
+
+        {office.addressLines.map((line, idx) => (
+          <p
+            key={idx}
+            className="text-[15px] text-[#9a8e9e] underline leading-relaxed"
+          >
+            <T lang={lang} countryCode={countryCode}>{line}</T>
+          </p>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
             </div>
 
             {/* Social Media */}
-            <div className={`mt-8 ${lang === 'ar' ? 'flex flex-col items-start justify-start' : ''}`}>
-              <p className={`text-orange-600 font-semibold text-sm mb-3 ${lang === 'ar' ? 'text-right' : ''}`}>
+            <div className="mt-8">
+              <p className="text-orange-600 font-semibold text-sm mb-3">
                 <T lang={lang} countryCode={countryCode}>SOCIAL MEDIA</T>
               </p>
 
-              <div className={`flex gap-4 text-gray-500 ${lang === 'ar' ? 'flex-row-reverse' : ''}`}>
+              <div className="flex gap-4 text-gray-500">
 
                 <Link
                   href="https://www.facebook.com/people/Accqrate/100077291530631/"
@@ -322,7 +430,7 @@ const ContactFormPage = () => {
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card1.module)}
-                  className={`mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition ${lang === 'ar' ? 'flex-row-reverse' : ''}`}
+                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
                 >
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.buttonText}</T> <span>↗</span>
                 </button>
@@ -344,7 +452,7 @@ const ContactFormPage = () => {
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card2.module)}
-                  className={`mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition ${lang === 'ar' ? 'flex-row-reverse' : ''}`}
+                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
                 >
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.buttonText}</T> <span>↗</span>
                 </button>
@@ -375,7 +483,7 @@ const ContactFormPage = () => {
 
                 <button
                   onClick={() => handleCardButtonClick(cardContent.cards.card3.module)}
-                  className={`mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition ${lang === 'ar' ? 'flex-row-reverse' : ''}`}
+                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
                 >
                   <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.buttonText}</T> <span>↗</span>
                 </button>
