@@ -60,12 +60,12 @@ const getContactSalesSection = (countryCode: string) => {
       whatsapp: "WhatsApp: +971505515388"
     },
     be: {
-      call: "Call: +971505515388",
+      call: "Call: +41 76 475 36 65",
       email: "Email: contact@accqrate-erp.com",
       whatsapp: "WhatsApp: +971505515388"
     },
     pl: {
-      call: "Call: +971505515388",
+      call: "Call: +41 76 475 36 65",
       email: "Email: contact@accqrate-erp.com",
       whatsapp: "WhatsApp: +971505515388"
     },

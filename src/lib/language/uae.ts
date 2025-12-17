@@ -7877,6 +7877,10 @@ const blogTranslations: TranslationsMap = {
         ar: "مع تقدم دولة الإمارات في تطوير البنية التحتية للضرائب الرقمية تحت إشراف وزارة المالية والهيئة الاتحادية للضرائب، يوفر أكيوريت قاعدة قابلة للتوسع ومتوافقة وجاهزة للمستقبل لدعم الشركات العاملة عبر الإمارات ودول مجلس التعاون الخليجي. وبفضل دعم شركة Iteron AG السويسرية، يجمع أكيوريت بين الانضباط الهندسي الأوروبي والخبرة الإقليمية العميقة، مقدّماً بنى آمنة وتنفيذاً مثبتاً عبر الأسواق شديدة التنظيم في الشرق الأوسط وشمال أفريقيا، وآسيان، وأمريكا الشمالية، وأوروبا." 
     },
 
+    "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. . Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts. Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.": { 
+    ar: "ضريبة القيمة المضافة (VAT) هي ضريبة غير مباشرة تفرض على معظم السلع والخدمات في كل مرحلة من مراحل سلسلة التوريد، من الإنتاج إلى نقطة البيع." 
+  },
+
     "Accqrate In UAE": { 
         ar: "أكيوريت في الإمارات" 
     },
