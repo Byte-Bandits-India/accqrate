@@ -24,14 +24,6 @@ const blogTranslations: TranslationsMap = {
   
 "E-invoicing Solution for UAE": { "ar": "حل الفوترة الإلكترونية لدولة الإمارات" },
 
-"United Arab Emirates: Preparing for a PEPPOL Driven E-Billing System": {
-  "ar": "دولة الإمارات العربية المتحدة: الاستعداد لنظام فوترة إلكترونية قائم على منصة Peppol"
-},
-
-"Zero Rated versus Exempt Supplies in the UAE VAT System: Complete Guide to Classification and Compliance": {
-  "ar": "السلع المصنفة بمعدل صفري مقابل السلع المعفاة في نظام ضريبة القيمة المضافة في الإمارات: دليل شامل للتصنيف والامتثال"
-},
-
 "Meet an Expert": { "ar": "قابل خبيراً" },
 
 "Products to power every team": { "ar": "منتجات تدعم أداء كل فريق" },
@@ -7013,14 +7005,14 @@ const blogTranslations: TranslationsMap = {
   ar: "لم تكن عمليات حساب الضريبة أسهل من قبل. حاسبة ضريبة القيمة المضافة في الإمارات الخاصة بنا تزيل التعقيدات وتحسب الضريبة لأي مبلغ مبيعات على الفور. انسَ المعادلات؛ بضغطة زر تحدد السعر النهائي ومبلغ الضريبة بسهولة."
 },
 
-"Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts. Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.": {
-  "ar": "ضريبة القيمة المضافة (VAT) هي ضريبة غير مباشرة تُفرض على معظم السلع والخدمات في كل مرحلة من مراحل سلسلة التوريد، من الإنتاج وحتى نقطة البيع. تم تطبيقها في دولة الإمارات العربية المتحدة عام 2018 بنسبة 5%، وتم تعديل المعدل إلى 15% في يوليو 2020 لمعالجة آثار جائحة كوفيد-19. كما تم تطبيقها في دولة الإمارات عام 2018 بمعدل قياسي قدره 5% على معظم السلع والخدمات."
+"Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.": {
+  ar: "ضريبة القيمة المضافة هي ضريبة غير مباشرة تُفرض على معظم السلع والخدمات في كل مرحلة من مراحل سلسلة التوريد من الإنتاج حتى نقطة البيع. تم تطبيقها في الإمارات عام 2018 بنسبة 5%، ثم تم تعديلها إلى 15% في يوليو 2020 لمواجهة آثار جائحة كوفيد-19."
 },
 
 "How to Calculate VAT in UAE": { ar: "كيفية حساب ضريبة القيمة المضافة في الإمارات" },
 
 "Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.": {
-  "ar": "تم تطبيقها في دولة الإمارات العربية المتحدة عام 2018 بمعدل قياسي قدره 5% على معظم السلع والخدمات."
+  ar: "تم تطبيقها في الإمارات عام 2018 بمعدل قياسي بلغ 5% على معظم السلع والخدمات."
 },
 
 "VAT Calculator": { ar: "حاسبة ضريبة القيمة المضافة" },
@@ -7038,10 +7030,6 @@ const blogTranslations: TranslationsMap = {
 "Showing VAT breakdown for the current month": { ar: "عرض تفاصيل الضريبة للشهر الحالي" },
 
 "What Is VAT?": { ar: "ما هي ضريبة القيمة المضافة؟" },
-
-"UAE VAT Calculator": {
-  "ar": "حاسبة ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة"
-},
 
 "Adding VAT: Perfect for when sales are exclusive of VAT.": {
   ar: "إضافة الضريبة: مثالي عندما تكون الأسعار غير شاملة لضريبة القيمة المضافة."
@@ -7267,7 +7255,12 @@ const blogTranslations: TranslationsMap = {
 "All rights reserved.": {
   ar: "جميع الحقوق محفوظة."
 },
-
+"Calculate your UAE VAT obligations": {
+  ar: "احسب التزامات ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة"
+},
+"Upcoming events and webinars in UAE": {
+  ar: "الفعاليات والندوات عبر الإنترنت القادمة في دولة الإمارات العربية المتحدة"
+},
 
 /* ------------------Integration Page-------------------- */
 
@@ -7773,6 +7766,9 @@ const blogTranslations: TranslationsMap = {
   ar: "انطلق خلال 5 أيام عمل، مما يسرّع جاهزيتك لمتطلبات الفوترة الإلكترونية الإلزامية للمعاملات B2B في الإمارات."
 },
 
+"Integrate Your Existing": {
+  ar: "دمج نظامك الحالي"
+},
 
 "Seamless": {
   ar: "سلس"
@@ -7861,146 +7857,8 @@ const blogTranslations: TranslationsMap = {
 "Get Started": {
   ar: "ابدأ الآن"
 },
-
-// UAE Blog Post Translations
-"Key Requirements, Implementation Timeline and the Latest Regulatory Updates...": {
-  ar: "المتطلبات الرئيسية وجدول التنفيذ والتحديثات التنظيمية الأحدث..."
-},
-"VAT in the UAE: Rates, Thresholds, Exemptions and Compliance Rules for 2025": {
-  ar: "ضريبة القيمة المضافة في الإمارات: المعدلات والحدود والإعفاءات وقواعد الامتثال لعام 2025"
-},
-"Value Added Tax has been a core element of the UAE’s tax framework since its introduction on 1 January 2018...": {
-  ar: "أصبحت ضريبة القيمة المضافة عنصراً أساسياً في إطار الضرائب في الإمارات العربية المتحدة منذ إدخالها في 1 يناير 2018..."
-},
-"Corporate Tax in the UAE": {
-  ar: "الضريبة الشركات في الإمارات العربية المتحدة"
-},
-"A Complete Guide to Rates, Scope, Compliance and the Domestic Minimum Top up Tax...": {
-  ar: "دليل شامل للمعدلات والنطاق والامتثال وضريبة الحد الأدنى المحلية..."
-},
-"How to File a VAT Return in the UAE": {
-  ar: "كيفية تقديم إقرار ضريبة القيمة المضافة في الإمارات العربية المتحدة"
-},
-"Businesses that are registered for Value Added Tax in the UAE are required to submit VAT returns for every tax period assigned to them by the Federal Tax Authority...": {
-  ar: "يجب على الشركات المسجلة لضريبة القيمة المضافة في الإمارات العربية المتحدة تقديم إقرارات ضريبة القيمة المضافة لكل فترة ضريبية يتم تعيينها لها من قبل الهيئة الاتحادية للضرائب..."
-},
-"How to Calculate VAT in the UAE in 2025": {
-  ar: "كيفية حساب ضريبة القيمة المضافة في الإمارات العربية المتحدة في 2025"
-},
-"Calculating VAT in the United Arab Emirates is straightforward once you understand how the five percent rate applies to different types of transactions...": {
-  ar: "حساب ضريبة القيمة المضافة في الإمارات العربية المتحدة أمر مباشر بمجرد فهم كيفية تطبيق معدل الخمسة بالمائة على أنواع مختلفة من المعاملات..."
-},
-"UAE Corporate Tax 2025": {
-  ar: "ضريبة الشركات في الإمارات 2025"
-},
-"This guide answers common questions about the UAE corporate tax regime, explains who is covered...": {
-  ar: "يجيب هذا الدليل على الأسئلة الشائعة حول نظام ضريبة الشركات في الإمارات، ويشرح من يغطي..."
-},
-"VAT Invoice in the UAE": {
-  ar: "فاتورة ضريبة القيمة المضافة في الإمارات العربية المتحدة"
-},
-"Value Added Tax has become an integral part of commercial operations in the United Arab Emirates...": {
-  ar: "أصبحت ضريبة القيمة المضافة جزءاً لا يتجزأ من العمليات التجارية في الإمارات العربية المتحدة..."
-},
-"VAT Rate Structure in the UAE": {
-  ar: "هيكل معدلات ضريبة القيمة المضافة في الإمارات العربية المتحدة"
-},
-"The Value Added Tax framework in the United Arab Emirates began on the first of January 2018 through Federal Decree Law No. 8 of 2017...": {
-  ar: "بدأ إطار ضريبة القيمة المضافة في الإمارات العربية المتحدة في الأول من يناير 2018 من خلال المرسوم بقانون اتحادي رقم 8 لسنة 2017..."
-},
-"How to Claim a VAT Refund in the UAE": {
-  ar: "كيفية المطالبة باسترداد ضريبة القيمة المضافة في الإمارات العربية المتحدة"
-},
-"Since the introduction of Value Added Tax in the United Arab Emirates in January 2018, several refund mechanisms...": {
-  ar: "منذ إدخال ضريبة القيمة المضافة في الإمارات العربية المتحدة في يناير 2018، تم إدخال عدة آليات للاسترداد..."
-},
-"Penalties for Non Compliance Under UAE VAT": {
-  ar: "العقوبات لعدم الامتثال بموجب ضريبة القيمة المضافة في الإمارات"
-},
-"The introduction of Value Added Tax in the United Arab Emirates marked a major shift in how businesses record...": {
-  ar: "أدخال ضريبة القيمة المضافة في الإمارات العربية المتحدة علامة تحول كبيرة في كيفية تسجيل الشركات..."
-},
-"VAT in the UAE: Complete 2025 Guide to Rates, Registration, Exemptions and Compliance": {
-  ar: "ضريبة القيمة المضافة في الإمارات: دليل 2025 الكامل للمعدلات والتسجيل والإعفاءات والامتثال"
-},
-"Value Added Tax has become a central part of the UAE’s fiscal system since its introduction in 2018...": {
-  ar: "أصبحت ضريبة القيمة المضافة جزءاً مركزياً من النظام المالي في الإمارات منذ إدخالها في 2018..."
-},
-"Excise Tax in the UAE: Rates, Exemptions, Compliance Rules, and How the Tax Is Calculated": {
-  ar: "ضريبة الاستهلاك في الإمارات: المعدلات والإعفاءات وقواعد الامتثال وكيفية حساب الضريبة"
-},
-"Excise tax has become an important element of the UAE’s modern tax system. Introduced to discourage the consumption of products that negatively affect public health or the environment...": {
-  ar: "أصبحت ضريبة الاستهلاك عنصراً مهماً في النظام الضريبي الحديث في الإمارات. تم إدخالها للحد من استهلاك المنتجات التي تؤثر سلباً على الصحة العامة أو البيئة..."
-},
-"Zero Rated versus Exempt Supplies in the UAE VAT System": {
-  ar: "المعفاة من الضريبة مقابل المعفاة في نظام ضريبة القيمة المضافة في الإمارات"
-},
-"Understanding whether a supply is zero rated or exempt is one of the most important VAT decisions a business has to make...": {
-  ar: "فهم ما إذا كان العرض معفى من الضريبة أو معفى هو أحد أهم القرارات المتعلقة بضريبة القيمة المضافة التي يجب على الشركة اتخاذها..."
-},
-"MoFA Attestation in the UAE": {
-  ar: "تصديق وزارة الخارجية في الإمارات العربية المتحدة"
-},
-"Document attestation by the Ministry of Foreign Affairs is a mandatory requirement across many legal, immigration and commercial processes in the United Arab Emirates...": {
-  ar: "تصديق الوثائق من قبل وزارة الخارجية هو متطلب إلزامي في العديد من العمليات القانونية والهجرة والتجارية في الإمارات العربية المتحدة..."
-},
-"The Peppol CTC Model in the UAE": {
-  ar: "نموذج Peppol CTC في الإمارات العربية المتحدة"
-},
-"The UAE’s transition toward mandatory e-invoicing marks one of its most significant digital taxation reforms to date. By selecting the Peppol Continuous Transaction Controls model as its national framework...": {
-  ar: "يمثل انتقال الإمارات نحو الفوترة الإلكترونية الإلزامية أحد أكبر الإصلاحات الضريبية الرقمية حتى الآن. من خلال اختيار نموذج Peppol Continuous Transaction Controls كإطارها الوطني..."
-},
-"UAE Tax Credit Notes": {
-  ar: "إشعارات الائتمان الضريبية في الإمارات"
-},
-"Tax credit notes play a central role in the UAE VAT ecosystem. They ensure that errors, returns and adjustments are documented correctly without compromising compliance, revenue reporting...": {
-  ar: "تلعب إشعارات الائتمان الضريبية دوراً مركزياً في نظام ضريبة القيمة المضافة في الإمارات. تضمن أن يتم توثيق الأخطاء والإرجاعات والتعديلات بشكل صحيح دون المساس بالامتثال وإبلاغ الإيرادات..."
-},
-"Digital Signature Certificate in the UAE": {
-  ar: "شهادة التوقيع الرقمي في الإمارات العربية المتحدة"
-},
-"Digital transformation in the UAE has accelerated rapidly, and the shift toward mandatory e-invoicing by 2026 makes Digital Signature Certificates one of the core identity...": {
-  ar: "تسارعت التحول الرقمي في الإمارات بسرعة كبيرة، ويجعل الانتقال نحو الفوترة الإلكترونية الإلزامية بحلول 2026 شهادات التوقيع الرقمي واحدة من الهويات الأساسية..."
-},
-"TRN Verification in UAE: A Complete and Practical Guide": {
-  ar: "التحقق من رقم التسجيل الضريبي في الإمارات: دليل شامل وعملي"
-},
-"A Tax Registration Number, commonly known as a TRN, is one of the most essential identifiers for any VAT-registered business in the United Arab Emirates...": {
-  ar: "رقم التسجيل الضريبي، المعروف عادة باسم TRN، هو أحد أهم المعرفات لأي شركة مسجلة لضريبة القيمة المضافة في الإمارات العربية المتحدة..."
-},
-"Excise Registration in the UAE: Complete, Updated Guide for Businesses": {
-  ar: "التسجيل لضريبة الاستهلاك في الإمارات: دليل شامل ومحدث للشركات"
-},
-"Excise tax in the United Arab Emirates is a regulatory tool designed to curb the consumption of goods that have negative health or environmental impacts...": {
-  ar: "ضريبة الاستهلاك في الإمارات العربية المتحدة هي أداة تنظيمية مصممة للحد من استهلاك السلع التي تؤثر سلباً على الصحة أو البيئة..."
-},
-"Preparing for a PEPPOL Driven E-Billing System": {
-  ar: "الاستعداد لنظام الفوترة الإلكترونية المبني على PEPPOL"
-},
-  "The United Arab Emirates is preparing a nationwide electronic invoicing framework built on a decentralised model inspired by PEPPOL's Continuous Transaction Control...": {
-    ar: "الإمارات العربية المتحدة تستعد لإطار عمل وطني للفوترة الإلكترونية مبني على نموذج لامركزي مستوحى من نظام PEPPOL للرقابة المستمرة على المعاملات..."
-  },
-"A New Era for Middle Eastern Businesses": {
-  ar: "عصر جديد للشركات في الشرق الأوسط"
-},
-"The expanding network of national electronic invoicing mandates signals a regional shift toward unified digital tax ecosystems...": {
-  ar: "الشبكة الموسعة من المتطلبات الوطنية للفوترة الإلكترونية تشير إلى تحول إقليمي نحو نظم ضريبية رقمية موحدة..."
-},
-"Recent Blog Posts from Accqrate": {
-  ar: "أحدث مقالات المدونة من أكيوريت"
-},
-"Browse Our Resources": {
-  ar: "تصفح مواردنا"
-},
-"Updated On :": {
-  ar: "تم التحديث في :"
-},
-"min read": {
-  ar: "دقيقة قراءة"
-},
-// About page badge
-    "Modernizing the UAE’s Digital Tax Ecosystem": {
-        ar: "تحديث النظام الضريبي الرقمي في دولة الإمارات"
+ "About Accqrate:": { 
+        ar: "حول أكيوريت:" 
     },
 
     // About page heading for UAE
@@ -8217,6 +8075,21 @@ const blogTranslations: TranslationsMap = {
         ar: "اشترك في نشرتنا الإخبارية وابقَ على اطلاع دائم بكل جديد يصل مباشرة إلى بريدك." 
     },
 
+    // Button 1
+    "Get Peppol Compliance Demo": { 
+        ar: "احصل على عرض امتثال Peppol" 
+    },
+
+    // Button 2
+    "Subscribe for Updates": { 
+        ar: "اشترك للحصول على التحديثات" 
+    },
+
+    // Button 3
+    "Talk to Sales": { 
+        ar: "تحدث إلى فريق المبيعات" 
+    },
+
     "Get in touch with us for more information.": {
         ar: "تواصل معنا لمزيد من المعلومات."
     },
@@ -8299,413 +8172,7 @@ const blogTranslations: TranslationsMap = {
 
     "Partner with Us": {
         ar: "شاركنا"
-    },
-
-    "Accqrate is a global E-Invoicing and digital compliance platform built to support the UAE’s accelerating shift toward structured tax reporting, VAT transparency, and real-time financial governance. As the UAE advances its digital tax infrastructure under the MoF and FTA, Accqrate provides a scalable, compliant, and future-ready foundation for businesses operating across the Emirates and the wider GCC. Backed by Iteron AG, Switzerland, Accqrate combines European engineering discipline with deep regional expertise, delivering secure architectures and proven execution across highly regulated markets in MENA, ASEAN, North American and Europe.": {
-        ar: "أكيوريت هي منصة عالمية للفوترة الإلكترونية والامتثال الرقمي، صُممت لدعم تسارع دولة الإمارات نحو التقارير الضريبية المنظمة، وشفافية ضريبة القيمة المضافة، وحوكمة مالية آنية. مع تقدم دولة الإمارات في تطوير البنية التحتية للضرائب الرقمية تحت إشراف وزارة المالية والهيئة الاتحادية للضرائب، يوفر أكيوريت قاعدة قابلة للتوسع ومتوافقة وجاهزة للمستقبل لدعم الشركات العاملة عبر الإمارات ودول مجلس التعاون الخليجي. وبفضل دعم شركة Iteron AG السويسرية، يجمع أكيوريت بين الانضباط الهندسي الأوروبي والخبرة الإقليمية العميقة، مقدّماً بنى آمنة وتنفيذاً مثبتاً عبر الأسواق شديدة التنظيم في الشرق الأوسط وشمال أفريقيا، وآسيان، وأمريكا الشمالية، وأوروبا."
-    },
-
-    "We empower businesses with technology that simplifies VAT compliance, invoice governance, audit readiness, and cross-entity financial reporting while aligning with the UAE’s national digital transformation vision.": {
-        ar: "نمكن الشركات عبر تقنيات تبسط الامتثال لضريبة القيمة المضافة، وحوكمة الفواتير، والاستعداد للتدقيق، والتقارير المالية العابرة للكيانات، بما ينسجم مع رؤية التحول الرقمي الوطنية لدولة الإمارات."
-    },
-
-    " Iteron AG begins operations in Switzerland, delivering advanced technology consulting across Europe and the Middle East, laying the foundation for enterprise-grade compliance platforms.": {
-        ar: "بدأت شركة Iteron AG عملياتها في سويسرا، مقدّمة خدمات استشارية تقنية متقدمة عبر أوروبا والشرق الأوسط، مما وضع الأساس لمنصات امتثال بمستوى مؤسسي."
-    },
-
-    " Accqrate is launched as a unified ERP and E-Invoicing platform designed for high-compliance jurisdictions and multi-country enterprises.": {
-        ar: "أُطلق أكيوريت كمنصة موحدة للـERP والفوترة الإلكترونية، مصممة لأسواق عالية الامتثال ولمؤسسات متعددة الدول."
-    },
-
-    "The United Arab Emirates is preparing a nationwide electronic invoicing framework built on a decentralised model inspired by PEPPOL’s Continuous Transaction Control...": {
-        ar: "تستعد دولة الإمارات العربية المتحدة لإطلاق إطار فوترة إلكترونية وطني مبني على نموذج لامركزي مستوحى من نظام PEPPOL للرقابة المستمرة على المعاملات..."
-    },
-    "E-Invoicing in the UAE: Key Requirements, Implementation Timeline and Latest Regulatory Updates": {
-  "ar": "الفوترة الإلكترونية في دولة الإمارات العربية المتحدة: المتطلبات الرئيسية، الجدول الزمني للتنفيذ، وآخر التحديثات التنظيمية"
-},
-
-"Corporate Tax in the UAE: A Complete Guide to Rates, Scope, Compliance and the Domestic Minimum Top-up Tax": {
-  "ar": "ضريبة الشركات في دولة الإمارات العربية المتحدة: دليل شامل للمعدلات، النطاق، الامتثال، وضريبة الحد الأدنى المحلية التكميلية"
-},
-"How to File a VAT Return in the UAE: A Complete and Practical Step-by-Step Guide": {
-  "ar": "كيفية تقديم إقرار ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة: دليل عملي شامل خطوة بخطوة"
-},
-"How to Calculate VAT in the UAE in 2025: A Complete Guide to Inclusive, Exclusive, and Reverse Charge Scenarios": {
-  "ar": "كيفية احتساب ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة في عام 2025: دليل شامل للحالات الشاملة، وغير الشاملة، وآلية الاحتساب العكسي"
-},
-"UAE Corporate Tax 2025: Frequently Asked Questions, Practical Guidance, and Compliance Essentials": {
-  "ar": "ضريبة الشركات في دولة الإمارات العربية المتحدة 2025: الأسئلة الشائعة، الإرشادات العملية، ومتطلبات الامتثال الأساسية"
-},
-"VAT Invoice in the UAE: Comprehensive Guide to Formats, Mandatory Fields and Compliance Requirements": {
-  "ar": "فاتورة ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة: دليل شامل للصيغ، الحقول الإلزامية، ومتطلبات الامتثال"
-},
-"UAE VAT Rate Structure: Complete Guide to Standard, Zero Rated and Exempt Supplies": {
-  "ar": "هيكل معدلات ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة: دليل كامل للمعدلات القياسية، الصفرية، والتوريدات المعفاة"
-},
-"How to Claim a VAT Refund in the UAE: A Complete Guide for Businesses, UAE Nationals and Tourists": {
-  "ar": "كيفية استرداد ضريبة القيمة المضافة في دولة الإمارات العربية المتحدة: دليل شامل للشركات، مواطني الدولة، والسياح"
-},
-"Penalties for Non-Compliance Under UAE VAT: A Complete, Authoritative Guide for Businesses": {
-  "ar": "العقوبات المترتبة على عدم الامتثال لضريبة القيمة المضافة في دولة الإمارات العربية المتحدة: دليل شامل وموثوق للشركات"
-},
-"MoFA Attestation in the UAE: Complete Guide to Requirements, Eligibility and Step-by-Step Process": {
-  "ar": "تصديق وزارة الخارجية في دولة الإمارات العربية المتحدة: دليل شامل للمتطلبات، الأهلية، وخطوات الإجراء بالتفصيل"
-},
-"UAE Tax Credit Notes: A Comprehensive Guide to Purpose, Format, Use Cases and Compliance": {
-  "ar": "إشعارات الخصم الضريبي في دولة الإمارات العربية المتحدة: دليل شامل للغرض، الصيغة، حالات الاستخدام، والامتثال"
-},
-"Digital Signature Certificate in the UAE: A Practical Guide to Its Role, Benefits, and Adoption": {
-  "ar": "شهادة التوقيع الرقمي في دولة الإمارات العربية المتحدة: دليل عملي لدورها، فوائدها، وتبنيها"
-},
-"Calculate your Poland VAT obligations": {
-  "ar": "احسب التزامات ضريبة القيمة المضافة في بولندا"
-},
-"Upcoming events and webinars in Poland": {
-  "ar": "الفعاليات والندوات الإلكترونية القادمة في بولندا"
-},
-"Get started with UAE e-invoicing in minutes. Share your company details, and Accqrate activates your UAE PINT–compliant, Peppol-ready setup instantly—fully aligned with the FTA’s DCTCE 5-corner model for seamless B2B invoice exchange.": {
-  "ar": "ابدأ الفوترة الإلكترونية في دولة الإمارات خلال دقائق. شارك بيانات شركتك، وتقوم Accqrate بتفعيل إعداد متوافق مع UAE PINT وجاهز لـ Peppol فورًا—ومتوافق بالكامل مع نموذج DCTCE ذي الخمس زوايا المعتمد من الهيئة الاتحادية للضرائب، لضمان تبادل فواتير B2B بسلاسة."
-},
-"Accqrate provides complete assistance during FTA compliance checks, ensuring your UAE PINT configurations, DCTCE exchange flows, digital signatures, and Peppol processes meet all regulatory expectations. Your business remains continuously compliant—before, during, and after FTA audits.": {
-  "ar": "توفر Accqrate دعمًا كاملاً أثناء فحوصات الامتثال التي تجريها الهيئة الاتحادية للضرائب، مع ضمان توافق إعدادات UAE PINT، وتدفقات تبادل DCTCE، والتوقيعات الرقمية، وعمليات Peppol مع جميع المتطلبات التنظيمية. يبقى عملك متوافقًا بشكل مستمر—قبل وأثناء وبعد عمليات تدقيق الهيئة."
-},
-"Adaptive, scalable approaches for seamless UAE PINT–compliant, Peppol-based e-invoicing under the FTA’s DCTCE framework.": {
-  "ar": "نهج مرنة وقابلة للتوسع للفوترة الإلكترونية بسلاسة، متوافقة مع UAE PINT وقائمة على Peppol، ضمن إطار DCTCE المعتمد من الهيئة الاتحادية للضرائب."
-},
-"Accqrate supports secure file-based integrations with automated processing and a complete feedback loop. Your ERP or POS systems remain fully synchronized with all Peppol transactions, FTA responses, and DCTCE validations—even in high-volume environments.": {
-  "ar": "تدعم Accqrate عمليات تكامل آمنة قائمة على الملفات مع معالجة آلية ودورة تغذية راجعة متكاملة. تبقى أنظمة ERP أو POS لديك متزامنة بالكامل مع جميع معاملات Peppol، واستجابات الهيئة الاتحادية للضرائب، وعمليات تحقق DCTCE—even في بيئات المعاملات عالية الحجم."
-},
-"Choose Accqrate Cloud or deploy on your own infrastructure—both fully compliant with UAE e-invoicing, DCTCE workflow rules, and Peppol interoperability standards.": {
-  "ar": "اختر Accqrate Cloud أو النشر على بنيتك التحتية الخاصة—وكلا الخيارين متوافقان بالكامل مع متطلبات الفوترة الإلكترونية في دولة الإمارات، وقواعد سير عمل DCTCE، ومعايير التشغيل البيني لـ Peppol."
-},
-"Accqrate delivers pre-built integrations for SAP, Oracle, Microsoft Dynamics, Sage, Infor, Odoo, custom ERPs/POS, and more—accelerating UAE e-invoicing readiness.": {
-  "ar": "توفر Accqrate تكاملات جاهزة مع SAP وOracle وMicrosoft Dynamics وSage وInfor وOdoo وأنظمة ERP/POS المخصصة وغيرها—مما يسرّع جاهزية الفوترة الإلكترونية في دولة الإمارات."
-},
-"The UAE’s e-invoicing framework is built on the Decentralized Continuous Transaction Control and Exchange (DCTCE) model, powered by UAE PINT and the Peppol network. Invoices flow through a 5-corner model involving suppliers, buyers, accredited service providers, and the Federal Tax Authority.": {
-  "ar": "يعتمد إطار الفوترة الإلكترونية في دولة الإمارات على نموذج التحكم والتبادل اللامركزي المستمر للمعاملات (DCTCE)، والمدعوم بـ UAE PINT وشبكة Peppol. تمر الفواتير عبر نموذج الخمس زوايا الذي يشمل المورّدين، والمشترين، ومقدمي الخدمات المعتمدين، والهيئة الاتحادية للضرائب."
-},
-"Seamlessly integrate your ERP/POS with the UAE’s Peppol-based DCTCE framework and achieve full UAE PINT compliance for FTA e-invoicing.": {
-  "ar": "قم بدمج أنظمة ERP/POS لديك بسلاسة مع إطار DCTCE القائم على Peppol في دولة الإمارات، وحقق امتثالًا كاملًا لمتطلبات UAE PINT الخاصة بالفوترة الإلكترونية لدى الهيئة الاتحادية للضرائب."
-},
-"ZATCA Compliant": {
-  "ar": "متوافق مع متطلبات هيئة الزكاة والضريبة والجمارك (ZATCA)"
-},
-"Free Proof of Concept ": {
-  "ar": "إثبات مفهوم مجاني "
-},
-"for": {
-  "ar": "لـ"
-},
-"Explore Accqrate’s UAE E-Invoicing Integration with a Free, Zero-Risk Proof of Concept": {
-  "ar": "استكشف تكامل الفوترة الإلكترونية في دولة الإمارات من Accqrate من خلال إثبات مفهوم مجاني وبدون أي مخاطر"
-},
-"About Accqrate:": {
-  "ar": "نبذة عن Accqrate:"
-},
-
-"The United Arab Emirates is preparing a nationwide electronic invoicing framework built on a decentralised model inspired by PEPPOL's Continuous Transaction Control and Exchange architecture. The upcoming system will require structured invoice formats, connectivity to accredited service providers, and real-time routing of business to business and business to government transactions.": {
-  "ar": "تستعد دولة الإمارات العربية المتحدة لإطلاق إطار وطني للفوترة الإلكترونية قائم على نموذج لامركزي مستوحى من بنية التحكم المستمر في المعاملات والتبادل (CTCE) الخاصة بمنصة Peppol. وسيتطلب النظام المرتقب استخدام صيغ فواتير مهيكلة، والاتصال بمزودي خدمات معتمدين، والتوجيه الفوري لمعاملات الأعمال بين الشركات (B2B) وبين الشركات والجهات الحكومية (B2G)."
-},
-"As the transition approaches its expected launch window in 2026, businesses are encouraged to modernise their invoicing infrastructure early. The future system will provide the government with near real-time visibility into economic activity and help both regulators and policymakers identify areas requiring targeted support.": {
-  "ar": "ومع اقتراب الموعد المتوقع لإطلاق هذا التحول في عام 2026، يُشجَّعَت الشركات على تحديث بنية الفوترة لديها مبكرًا. وسيوفر النظام المستقبلي للحكومة رؤية شبه فورية للنشاط الاقتصادي، كما سيساعد الجهات التنظيمية وصناع السياسات على تحديد المجالات التي تتطلب دعمًا موجهًا."
-},
-"The expanding network of national electronic invoicing mandates signals a regional shift toward unified digital tax ecosystems. Businesses must prepare for structured data exchange, automated validation, real time reporting, and integration with national tax systems. Those that modernise early will enjoy reduced compliance burdens, more efficient workflows, and stronger financial governance.": {
-  "ar": "تشير الشبكة المتنامية لالتزامات الفوترة الإلكترونية الوطنية إلى تحول إقليمي نحو أنظمة ضريبية رقمية موحدة. ويتعين على الشركات الاستعداد لتبادل البيانات المهيكلة، والتحقق الآلي، وإعداد التقارير في الوقت الفعلي، والتكامل مع الأنظمة الضريبية الوطنية. وستستفيد الشركات التي تبادر بالتحديث مبكرًا من تقليل أعباء الامتثال، وتحسين كفاءة سير العمل، وتعزيز الحوكمة المالية."
-},
-"As these transitions accelerate, organisations across the region increasingly rely on advanced, compliant platforms to handle real time validation, structured document exchange, and multi country tax automation. Enterprise grade solutions such as Accqrate already support this direction by helping companies integrate seamlessly with government systems, automate cross border compliance, and maintain operational efficiency as digital tax regimes expand across the Middle East.": {
-  "ar": "ومع تسارع هذه التحولات، تعتمد المؤسسات في مختلف أنحاء المنطقة بشكل متزايد على منصات متقدمة ومتوافقة للتعامل مع التحقق في الوقت الفعلي، وتبادل المستندات المهيكلة، وأتمتة الضرائب متعددة الدول. وتدعم الحلول المؤسسية مثل Accqrate هذا التوجه بالفعل من خلال مساعدة الشركات على التكامل بسلاسة مع الأنظمة الحكومية، وأتمتة الامتثال عبر الحدود، والحفاظ على الكفاءة التشغيلية مع توسع الأنظمة الضريبية الرقمية في أنحاء الشرق الأوسط."
-},
-"Financial services where consideration is implicit:": {
-  "ar": "الخدمات المالية حيث يكون الاعتبار ضمنياً:"
-},
-"This includes margin-based lending or similar products where fees are embedded in spreads": {
-  "ar": "يشمل ذلك الإقراض القائم على الهامش أو المنتجات المماثلة حيث تكون الرسوم مدمجة في الفروقات"
-},
-"Residential rental and sale outside the zero rating conditions:": {
-  "ar": "تأجير وتسويق المساكن خارج شروط التصنيف الصفري:"
-},
-"Subsequent sales or leases of a building beyond the first time supply often fall under exemption rules": {
-  "ar": "غالباً ما تندرج المبيعات أو التأجيرات اللاحقة للمبنى بعد التوريد الأول تحت قواعد الإعفاء"
-},
-"Local passenger transport:": {
-  "ar": "النقل المحلي للركاب:"
-},
-"Tickets and receipts showing domestic transport services": {
-  "ar": "التذاكر والإيصالات التي تظهر خدمات النقل المحلية"
-},
-"Bare land:": {
-  "ar": "الأرض الخالية:"
-},
-"Sale of undeveloped land without buildings or infrastructure": {
-  "ar": "بيع الأرض غير المطورة بدون مبانٍ أو بنية تحتية"
-},
-"Start with the contract and the invoice:": {
-  "ar": "ابدأ بالعقد والفاتورة:"
-},
-"Place of supply and the contractual terms often determine whether a supply qualifies for zero rating or is exempt": {
-  "ar": "غالباً ما يحدد مكان التوريد والشروط التعاقدية ما إذا كان التوريد يؤهل للتصنيف الصفري أو الإعفاء"
-},
-"Confirm the recipient and destination:": {
-  "ar": "تأكيد المستلم والوجهة:"
-},
-"For exports and international supplies, the customer location and movement documents determine the VAT treatment": {
-  "ar": "بالنسبة للصادرات والتوريدات الدولية، يحدد موقع العميل ووثائق الحركة معاملة ضريبة القيمة المضافة"
-},
-"Check statutory conditions:": {
-  "ar": "تحقق من الشروط القانونية:"
-},
-"Zero rating and exemptions have conditions in legislation or guidance. Do not rely on commercial practice alone": {
-  "ar": "التصنيف الصفري والإعفاءات لها شروط في التشريع أو الإرشادات. لا تعتمد على الممارسة التجارية وحدها"
-},
-"Document everything:": {
-  "ar": "وثق كل شيء:"
-},
-"Hold contracts, transport documents, customs paperwork, accreditation certificates and any third party confirmations needed for the VAT treatment": {
-  "ar": "احتفظ بالعقود، ووثائق النقل، والأوراق الجمركية، وشهادات الاعتماد، وأي تأكيدات من طرف ثالث مطلوبة لمعاملة ضريبة القيمة المضافة"
-},
-"Use written policies:": {
-  "ar": "استخدم السياسات المكتوبة:"
-},
-"Adopt and publish internal VAT classification policies to ensure consistency across teams. That reduces human error and improves audit readiness": {
-  "ar": "اعتمد ونشر سياسات تصنيف ضريبة القيمة المضافة الداخلية لضمان الاتساق عبر الفرق. هذا يقلل من الخطأ البشري ويحسن الاستعداد للتدقيق"
-},
-"Review annually:": {
-  "ar": "مراجعة سنوية:"
-},
-"Legislation, FTA guidance and judicial decisions change. Review classifications at least once a year or whenever you enter a new line of business": {
-  "ar": "يتغير التشريع وإرشادات الهيئة الاتحادية للضرائب والقرارات القضائية. راجع التصنيفات مرة واحدة على الأقل سنوياً أو كلما دخلت خط عمل جديد"
-},
-"Margin impact:": {
-  "ar": "تأثير الهامش:"
-},
-"Exempt supplies create a higher effective cost base because input VAT cannot be offset. This often requires a pricing review to maintain margin": {
-  "ar": "يخلق التوريدات المعفاة قاعدة تكلفة فعالة أعلى لأن ضريبة القيمة المضافة المدخلة لا يمكن تعويضها. هذا غالباً ما يتطلب مراجعة التسعير للحفاظ على الهامش"
-},
-"Competitive implications:": {
-  "ar": "التأثيرات التنافسية:"
-},
-"Suppliers of zero rated goods can remain price competitive because they can recover input VAT. Suppliers of exempt goods may need to redesign procurement or pass costs to customers": {
-  "ar": "يمكن لموردي السلع المصنفة بمعدل صفري البقاء تنافسيين في الأسعار لأنهم يمكنهم استرداد ضريبة القيمة المضافة المدخلة. قد يحتاج موردو السلع المعفاة إلى إعادة تصميم المشتريات أو تحميل التكاليف على العملاء"
-},
-"Working capital:": {
-  "ar": "رأس المال العامل:"
-},
-"Zero rated suppliers recover VAT which improves working capital. Exempt suppliers should model VAT on inputs as a permanent cost": {
-  "ar": "يسترد الموردون المصنفون بمعدل صفري ضريبة القيمة المضافة مما يحسن رأس المال العامل. يجب على الموردين المعفيين نمذجة ضريبة القيمة المضافة على المدخلات كتكلفة دائمة"
-},
-"Map your processes:": {
-  "ar": "رسم عملياتك:"
-},
-"Map procurement, sales, and logistics processes against VAT treatments to identify where supporting documents are created and stored": {
-  "ar": "رسم عمليات المشتريات والمبيعات واللوجستيات مقابل معاملات ضريبة القيمة المضافة لتحديد أماكن إنشاء وتخزين الوثائق الداعمة"
-},
-"Centralise evidence:": {
-  "ar": "مركزة الأدلة:"
-},
-"Keep proof of exports, transport, certification, and institutional recognition in a central repository with version control": {
-  "ar": "احتفظ بإثبات الصادرات والنقل والشهادات والاعتراف المؤسسي في مستودع مركزي مع التحكم في الإصدارات"
-},
-"Automate where possible:": {
-  "ar": "أتمتة حيثما أمكن:"
-},
-"Use accounting or ERP systems that tag transactions according to VAT treatment and support reporting. Automation cuts errors in mixed activity apportionment": {
-  "ar": "استخدم أنظمة المحاسبة أو ERP التي تُصنف المعاملات وفقاً لمعاملة ضريبة القيمة المضافة وتدعم التقارير. تقلل الأتمتة من الأخطاء في تخصيص الأنشطة المختلطة"
-},
-"Train relevant teams:": {
-  "ar": "تدريب الفرق ذات الصلة:"
-},
-"Finance, sales, logistics, and the commercial team should understand the VAT implications of zero rated and exempt supplies": {
-  "ar": "يجب أن يفهم فرق المالية والمبيعات واللوجستيات والتجارية تأثيرات ضريبة القيمة المضافة للتوريدات المصنفة بمعدل صفري والمعفاة"
-},
-"Schedule tax health checks:": {
-  "ar": "جدولة فحوصات الصحة الضريبية:"
-},
-"Run a VAT health check at least annually or whenever you add a new product line or expand into new territories": {
-  "ar": "قم بفحص صحة ضريبة القيمة المضافة سنوياً على الأقل أو كلما أضفت خط إنتاج جديد أو توسعت في أقاليم جديدة"
-},
-"Start early:": {
-  "ar": "ابدأ مبكراً:"
-},
-"Attestation can involve several authorities. Beginning the process early avoids delays in visa or corporate filings": {
-  "ar": "يمكن أن تشمل التصديق عدة جهات. بدء العملية مبكراً يتجنب التأخيرات في التأشيرات أو الإيداعات الشركاتية"
-},
-"Always follow the original order:": {
-  "ar": "اتبع دائماً الترتيب الأصلي:"
-},
-"Foreign ministry attestation, then UAE embassy attestation, then MoFAIC attestation. Changing the order can lead to rejection": {
-  "ar": "تصديق وزارة الخارجية، ثم تصديق سفارة الإمارات، ثم تصديق MoFAIC. تغيير الترتيب قد يؤدي إلى الرفض"
-},
-"Maintain clear scans:": {
-  "ar": "حافظ على مسح واضح:"
-},
-"Most submissions require high quality digital versions with visible seals and signatures": {
-  "ar": "معظم التقديمات تتطلب نسخاً رقمية عالية الجودة مع الأختام والتوقيعات المرئية"
-},
-"Keep duplicates:": {
-  "ar": "احتفظ بنسخ مكررة:"
-},
-"It is advisable to maintain both physical and digital copies of all attested documents for future use": {
-  "ar": "من المستحسن الحفاظ على نسخ مادية ورقمية من جميع الوثائق المصدقة للاستخدام المستقبلي"
-},
-"Use approved translators:": {
-  "ar": "استخدم مترجمين معتمدين:"
-},
-"Translation quality and legal acceptance depend on using translators approved by the Ministry of Justice": {
-  "ar": "تعتمد جودة الترجمة والقبول القانوني على استخدام مترجمين معتمدين من وزارة العدل"
-},
-"Confirmation of authenticity:": {
-  "ar": "تأكيد الأصالة:"
-},
-"It protects employers, institutions, and government bodies from fraudulent credentials or misrepresented qualifications": {
-  "ar": "يحمي أصحاب العمل والمؤسسات والهيئات الحكومية من الشهادات المزيفة أو الشهادات الممثلة بشكل خاطئ"
-},
-"Compliance with immigration and labour requirements:": {
-  "ar": "الامتثال لمتطلبات الهجرة والعمل:"
-},
-"Residency applications, work permits, and dependent sponsorships require attested educational and civil documents to confirm identity, eligibility, and legal status": {
-  "ar": "تتطلب طلبات الإقامة وتصاريح العمل ورعاية التابعين وثائق تعليمية ومدنية مصدقة لتأكيد الهوية والأهلية والوضع القانوني"
-},
-"Validation for commercial activities:": {
-  "ar": "التحقق للأنشطة التجارية:"
-},
-"Banks, free zone authorities, courts, and licensing bodies usually require attested commercial documents to process corporate approvals, transactions, or renewals": {
-  "ar": "عادة ما تتطلب البنوك وسلطات المناطق الحرة والمحاكم وهيئات الترخيص وثائق تجارية مصدقة لمعالجة الموافقات الشركاتية أو المعاملات أو التجديدات"
-},
-"Protection of contractual and legal rights:": {
-  "ar": "حماية الحقوق التعاقدية والقانونية:"
-},
-"Attestation ensures that agreements and authorizations used in UAE jurisdictions originate from legitimate authorities": {
-  "ar": "يضمن التصديق أن الاتفاقيات والتفويضات المستخدمة في الولايات القضائية للإمارات تنشأ من سلطات مشروعة"
-},
-"Alignment with international legal practice:": {
-  "ar": "التوافق مع الممارسة القانونية الدولية:"
-},
-"Most countries follow a similar multi-stage attestation process. The UAE's attestation system ensures global compatibility and cross-border document recognition": {
-  "ar": "تتبع معظم الدول عملية تصديق متعددة المراحل مشابهة. يضمن نظام التصديق في الإمارات التوافق العالمي والاعتراف بالوثائق عبر الحدود"
-},
-"Companies handling multiple document flows often benefit from using organized digital systems that track documentation, store verification evidence, and maintain compliance records. Platforms like Accqrate help centralize such processes by unifying documentation management across departments, reducing administrative errors, and supporting audit readiness without adding operational burden.": {
-  "ar": "غالباً ما تستفيد الشركات التي تتعامل مع تدفقات وثائق متعددة من استخدام أنظمة رقمية منظمة تتبع الوثائق، وتخزن أدلة التحقق، وتحافظ على سجلات الامتثال. تساعد منصات مثل Accqrate في مركزة مثل هذه العمليات من خلال توحيد إدارة الوثائق عبر الأقسام، مما يقلل من الأخطاء الإدارية، ويدعم الاستعداد للتدقيق دون إضافة عبء تشغيلي."
-},
-"Strengthening tax compliance:": {
-  "ar": "تعزيز الامتثال الضريبي:"
-},
-"The system ensures that all registered businesses follow consistent rules when issuing invoices, maintaining records, and reporting VAT.": {
-  "ar": "يضمن النظام أن جميع الشركات المسجلة تتبع قواعد متسقة عند إصدار الفواتير، والحفاظ على السجلات، وإعداد تقارير ضريبة القيمة المضافة."
-},
-"Promoting fair competition:": {
-  "ar": "تعزيز المنافسة العادلة:"
-},
-"Companies that meet their tax obligations should not be placed at a disadvantage when competing with businesses that underreport or delay payment.": {
-  "ar": "يجب ألا توضع الشركات التي تفي بالتزاماتها الضريبية في وضع غير عادل عند المنافسة مع الشركات التي تقلل من الإبلاغ أو تؤخر الدفع."
-},
-"Preserving the integrity of the tax ecosystem:": {
-  "ar": "الحفاظ على سلامة النظام الضريبي:"
-},
-"Accurate VAT reporting allows the government to monitor supply chains, prevent fraudulent practices, and maintain stable revenue streams.": {
-  "ar": "يسمح إعداد تقارير دقيقة لضريبة القيمة المضافة للحكومة بمراقبة سلاسل التوريد، ومنع الممارسات الاحتيالية، والحفاظ على تدفقات إيرادات مستقرة."
-},
-"2017:": {
-  "ar": "2017:"
-},
-"The government issues the foundational legislation that outlines the implementation of VAT": {
-  "ar": "تصدر الحكومة التشريع الأساسي الذي يحدد تنفيذ ضريبة القيمة المضافة"
-},
-"January 2018:": {
-  "ar": "يناير 2018:"
-},
-"VAT becomes applicable at a standard rate of 5 percent": {
-  "ar": "تصبح ضريبة القيمة المضافة سارية بمعدل قياسي قدره 5 في المائة"
-},
-"2023:": {
-  "ar": "2023:"
-},
-"Significant updates are introduced to the VAT Law, enhancing clarity around several taxable activities and documentation rules": {
-  "ar": "يتم إدخال تحديثات كبيرة على قانون ضريبة القيمة المضافة، مما يعزز الوضوح حول عدة أنشطة خاضعة للضريبة وقواعد التوثيق"
-},
-"Late 2024:": {
-  "ar": "أواخر 2024:"
-},
-"The Cabinet approves new Executive Regulations that reshape procedural and compliance requirements": {
-  "ar": "يوافق مجلس الوزراء على لوائح تنفيذية جديدة تعيد تشكيل المتطلبات الإجرائية ومتطلبات الامتثال"
-},
-"2026 (Planned):": {
-  "ar": "2026 (مخطط):"
-},
-"Mandatory e-invoicing is scheduled to go live in phases for B2B and B2G transactions": {
-  "ar": "من المقرر أن يبدأ الفوترة الإلكترونية الإلزامية تدريجياً للمعاملات بين الشركات (B2B) وبين الشركات والحكومة (B2G)"
-},
-"Collect VAT on its taxable sales:": {
-  "ar": "تحصيل ضريبة القيمة المضافة على مبيعاتها الخاضعة للضريبة:"
-},
-"This is known as output tax": {
-  "ar": "هذا يُعرف بضريبة الإخراج"
-},
-"Recover VAT paid on its eligible business expenses:": {
-  "ar": "استرداد ضريبة القيمة المضافة المدفوعة على نفقاتها التجارية المؤهلة:"
-},
-"This is input tax": {
-  "ar": "هذا هو ضريبة الإدخال"
-},
-"Education:": {
-  "ar": "التعليم:"
-},
-"Core services are zero rated, while uniforms and materials are standard rated": {
-  "ar": "الخدمات الأساسية مصنفة بمعدل صفري، بينما الزي المدرسي والمواد مصنفة بمعدل قياسي"
-},
-"Real Estate:": {
-  "ar": "العقارات:"
-},
-"Commercial buildings are fully taxable, while most residential supplies are exempt after the first supply": {
-  "ar": "المباني التجارية خاضعة للضريبة بالكامل، بينما معظم التوريدات السكنية معفاة بعد التوريد الأول"
-},
-"Healthcare:": {
-  "ar": "الرعاية الصحية:"
-},
-"Essential services are zero rated, but non-essential procedures may attract the standard rate": {
-  "ar": "الخدمات الأساسية مصنفة بمعدل صفري، لكن الإجراءات غير الأساسية قد تكون خاضعة للمعدل القياسي"
-},
-"Oil and Gas:": {
-  "ar": "النفط والغاز:"
-},
-"Crude oil is zero rated, while downstream products carry the standard rate": {
-  "ar": "النفط الخام مصنف بمعدل صفري، بينما المنتجات النهائية تحمل المعدل القياسي"
-},
-"Financial Services:": {
-  "ar": "الخدمات المالية:"
-},
-"Margin-based financial activities are exempt": {
-  "ar": "الأنشطة المالية القائمة على الهامش معفاة"
-},
-
-"Many companies are now turning to advanced financial platforms to manage these obligations more efficiently. Solutions such as Accqrate help automate tax calculations, maintain accurate stock and transaction records, and streamline return preparation, enabling businesses to manage excise responsibilities with greater accuracy and confidence.": {
-    "ar": "تتجه العديد من الشركات الآن إلى المنصات المالية المتقدمة لإدارة هذه الالتزامات بكفاءة أكبر. تساعد الحلول مثل Accqrate في أتمتة حسابات الضرائب، والحفاظ على سجلات دقيقة للمخزون والمعاملات، وتبسيط إعداد الإقرارات، مما يمكن الشركات من إدارة مسؤوليات الضرائب الانتقائية بدقة وثقة أكبر."
-  },
-"Standard rated supplies:": {
-  "ar": "التوريدات المصنفة بمعدل قياسي:"
-},
-"These attract a VAT rate of five percent": {
-  "ar": "هذه تكون خاضعة لمعدل ضريبة القيمة المضافة قدره خمسة في المائة"
-},
-"Zero rated supplies:": {
-  "ar": "التوريدات المصنفة بمعدل صفري:"
-},
-"These attract a VAT rate of zero percent, but the supplier is still within the VAT system and may recover input VAT": {
-  "ar": "هذه تكون خاضعة لمعدل ضريبة القيمة المضافة قدره صفر في المائة، لكن المورد لا يزال ضمن نظام ضريبة القيمة المضافة وقد يسترد ضريبة الإدخال"
-},
-"Exempt supplies:": {
-  "ar": "التوريدات المعفاة:"
-},
-"These do not attract VAT, and the supplier cannot recover input VAT on related expenses": {
-  "ar": "هذه لا تكون خاضعة لضريبة القيمة المضافة، والمورد لا يمكنه استرداد ضريبة الإدخال على النفقات ذات الصلة"
-},
-"As companies rework their invoicing infrastructure, many are turning to modern platforms that simplify these compliance requirements. Solutions such as Accqrate can play a supportive role by enabling structured e-invoicing, automating data validation, and offering seamless integration capabilities that help businesses transition smoothly into the new regulatory environment.": {
-    "ar": "بينما تعمل الشركات على إعادة هيكلة بنيتها التحتية للفوترة، يتجه الكثير منها إلى منصات حديثة تبسط متطلبات الامتثال هذه. يمكن للحلول مثل Accqrate أن تلعب دورًا داعمًا من خلال تمكين الفوترة الإلكترونية المهيكلة، وأتمتة التحقق من البيانات، وتقديم قدرات تكامل سلسة تساعد الشركات على الانتقال بسلاسة إلى البيئة التنظيمية الجديدة."
-  }
-
-
-
-
-
+    }
 };
 // Minimal runtime language state and API to match other language modules
 export const currentLang = { lang: 'en' as 'en' | 'ar' };
@@ -8719,3 +8186,31 @@ export const t = (text: string): string => {
     const translation = (blogTranslations as any)[text];
     return translation && translation.ar && translation.ar.trim() !== '' ? translation.ar : text;
 };
+export default function T({ children }: TProps): ReactNode {
+    const { selectedLanguage } = useCountry();
+    const translateText = (text: string): string => {
+        // Early return for English
+        if (selectedLanguage.code === 'en') {
+            return text;
+        }
+        
+        // For Arabic, try to find translation
+        if (selectedLanguage.code === 'ar') {
+            const translation = blogTranslations[text];
+            // Check if translation exists and is not empty
+            if (translation && translation.ar && translation.ar.trim() !== "") {
+                return translation.ar;
+            }
+        }
+        
+        // Fallback to original text for other languages or missing translations
+        return text;
+    };
+
+    // If children is a string, translate it
+    if (typeof children === 'string') {
+        return translateText(children);
+    }
+
+    return children;
+}
