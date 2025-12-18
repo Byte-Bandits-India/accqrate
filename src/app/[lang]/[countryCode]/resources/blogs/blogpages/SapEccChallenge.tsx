@@ -27,7 +27,7 @@ function SapEcc() {
 
       <p className="text-fluid-small leading-relaxed text-gray-800">
         <T>
-          If your organization relies on SAP ECC for core business processes, you’re likely aware that the
+          If your organization relies on SAP ECC for core business processes, you're likely aware that the
           platform is nearing the end of its support lifecycle. SAP Business Suite 7, which includes SAP ECC,
           SAP CRM, SAP SRM, SAP SCM, and SAP PLM, will reach end of life on December 31, 2027. After this
           date, mainstream support and updates from SAP will cease, exposing companies to increasing
@@ -38,14 +38,14 @@ function SapEcc() {
 
       <p className="text-fluid-small leading-relaxed text-gray-800">
         <T>
-          This looming deadline raises a critical question for medium and semi-large businesses: What’s the
+          This looming deadline raises a critical question for medium and semi-large businesses: What's the
           best way forward to ensure business continuity, E-invoicing compliance, and digital growth?
         </T>
       </p>
 
       <p className="text-fluid-small leading-relaxed text-gray-800 mb-4">
         <T>
-          In this article, we’ll explore your key options and introduce Accqrate ONE, a future-ready ERP
+          In this article, we'll explore your key options and introduce Accqrate ONE, a future-ready ERP
           solution designed as an affordable, robust, and easily-adoptable alternative to SAP ECC.
         </T>
       </p>
@@ -89,26 +89,26 @@ function SapEcc() {
 
       <p className="text-fluid-small leading-relaxed text-gray-800">
         <T>
-          Migrating to SAP S/4HANA is the official upgrade path. This next-generation ERP runs on SAP’s
+          Migrating to SAP S/4HANA is the official upgrade path. This next-generation ERP runs on SAP's
           in-memory HANA database and promises new efficiencies. However, migration can be complex and costly.
           There are three main migration strategies:
         </T>
       </p>
 
-      <b className="block mt-4 mb-2 text-gray-900">1. Greenfield: Fresh Implementation</b>
+      <b className="block mt-4 mb-2 text-gray-900"><T>1. Greenfield: Fresh Implementation</T></b>
       <ul className="list-disc pl-6 text-fluid-small leading-relaxed text-gray-800 space-y-1">
         <li><T>Re-implement your ERP system from scratch</T></li>
         <li><T>Opportunity to optimize processes and migrate to cloud (public or private)</T></li>
         <li><T>Suitable for organizations willing to completely redesign their ERP landscape</T></li>
       </ul>
 
-      <b className="block mt-4 mb-2 text-gray-900">2. Brownfield: System Conversion</b>
+      <b className="block mt-4 mb-2 text-gray-900"><T>2. Brownfield: System Conversion</T></b>
       <ul className="list-disc pl-6 text-fluid-small leading-relaxed text-gray-800 space-y-1">
         <li><T>Upgrade your existing SAP ECC system to S/4HANA, preserving customizations and data</T></li>
         <li><T>Less disruptive, but limited improvements to business processes</T></li>
       </ul>
 
-      <b className="block mt-4 mb-2 text-gray-900">3. Selective Data Transition (Hybrid)</b>
+      <b className="block mt-4 mb-2 text-gray-900"><T>3. Selective Data Transition (Hybrid)</T></b>
       <ul className="list-disc pl-6 text-fluid-small leading-relaxed text-gray-800 space-y-1">
         <li><T>Migrate select data and processes in an agile, phased approach</T></li>
         <li><T>Offers a balance between fresh implementation and system conversion</T></li>
@@ -209,7 +209,7 @@ function SapEcc() {
 
       <p className="text-fluid-small leading-relaxed text-gray-800">
         <T>
-          As E-invoicing mandates expand globally, and with SAP ECC’s end of life approaching fast, there’s
+          As E-invoicing mandates expand globally, and with SAP ECC's end of life approaching fast, there's
           never been a better time to future-proof your business with an agile, compliant, and scalable ERP
           solution.
         </T>
@@ -220,7 +220,7 @@ function SapEcc() {
       </p>
 
       <ul className="list-disc pl-6 text-fluid-small leading-relaxed text-gray-800 space-y-1">
-        <li><T>Ensure uninterrupted operations beyond SAP ECC’s end of support</T></li>
+        <li><T>Ensure uninterrupted operations beyond SAP ECC's end of support</T></li>
         <li><T>Achieve global E-invoicing compliance with ease</T></li>
         <li><T>Unlock modern business process automation and analytics</T></li>
         <li><T>Save costs and accelerate your digital transformation</T></li>
@@ -232,7 +232,7 @@ function SapEcc() {
 
       <p className="text-fluid-small leading-relaxed text-gray-800">
         <T>
-          Don’t wait until 2027 to start your ERP transformation journey. Contact us today to book a demo of
+          Don't wait until 2027 to start your ERP transformation journey. Contact us today to book a demo of
           Accqrate ONE and discover why we are the preferred SAP ECC alternative for E-invoicing compliance
           and next-generation ERP.
         </T>

@@ -162,29 +162,25 @@ function OracleInvoicing() {
       </h3>
       <ul className="list-disc ml-6 text-fluid-small text-gray-700 mb-4 space-y-2">
         <li>
-          <strong>
-            <T>🔒 Unparalleled Security:</T>
-          </strong>
-          <T> Enjoy end-to-end encryption ensuring data safety and audit-compliant invoices.</T>
+          <T>
+            <b>🔒 Unparalleled Security:</b> Enjoy end-to-end encryption ensuring data safety and audit-compliant invoices.
+          </T>
         </li>
         <li>
-          <strong>
-            <T>⏰ Swift Implementation:</T>
-          </strong>
-          <T> Get ZATCA integration live in under two weeks with minimal disruption.</T>
+          <T>
+            <b>⏰ Swift Implementation:</b> Get ZATCA integration live in under two weeks with minimal disruption.
+          </T>
         </li>
         <li>
-          <strong>
-            <T>🔍 Trust Before Commitment:</T>
-          </strong>
-          <T> Experience Accqrate’s capabilities with a complimentary ZATCA Sandbox test.</T>
+          <T>
+            <b>🔍 Trust Before Commitment:</b> Experience Accqrate's capabilities with a complimentary ZATCA Sandbox test.
+          </T>
         </li>
         <li>
-          <strong>
-            <T>📞 Always Here for You:</T>
-          </strong>{" "}
+          <T>
+            <b>📞 Always Here for You:</b> Let us navigate you through seamless integrations and unmatched security.
+          </T>
           <CtaNumber />
-          <T> Let us navigate you through seamless integrations and unmatched security.</T>
         </li>
       </ul>
 

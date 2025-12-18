@@ -42,12 +42,12 @@ export default function ZatcaPhaseTwoWaves() {
             {/* Left details */}
             <div className="details flex justify-between items-center w-[calc(100%-170px)] sm:w-[calc(100%-200px)] md:w-[calc(100%-220px)] text-center">
               <h3 className="mb-0 w-[15%] text-[10px] sm:text-[14px] md:text-[18px] font-bold font-['Inter']">
-                {data.title}
+                <T>{data.title}</T>
               </h3>
 
               <div className="eligibility flex-1 px-1 sm:px-3 md:px-4">
                 <h4 className="text-[#194bed] mb-0 text-[9px] sm:text-[13px] md:text-[15px] lg:text-base font-bold font-['Inter'] leading-snug">
-                  {data.eligibility}
+                  <T>{data.eligibility}</T>
                 </h4>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function ZatcaPhaseTwoWaves() {
             {/* Right card */}
             <div className="integration-period flex flex-col justify-center items-center bg-[#194bed] rounded-[8px] sm:rounded-[10px] text-white h-[60px] sm:h-[75px] md:h-[85px] min-w-[140px] sm:min-w-[180px] md:min-w-[214px] py-2 sm:py-3 md:py-3.5 px-2 sm:px-3 absolute right-2 md:right-6 text-center">
               <h5 className="mb-0 font-bold text-[9px] sm:text-[13px] md:text-[16px] font-['Inter']">
-                {data.gracePeriod}
+                <T>{data.gracePeriod}</T>
               </h5>
               {i === 0 && (
                 <span className="text-[8px] sm:text-[11px] md:text-[12px] font-normal leading-[12px] sm:leading-[16px] md:leading-[18px] block mt-1">

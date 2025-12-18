@@ -33,7 +33,7 @@ const MiddleEastEInvoicing: React.FC = () => {
 
             <p className="mb-4 text-fluid-small">
                 <T>
-                    The adoption of electronic invoicing is not simply a technical upgrade. It is a national economic strategy that influences policymaking, fiscal stability, business efficiency, and overall competitiveness. The region is transitioning from paper dependent processes to highly automated digital ecosystems, enabling tax authorities to collect, analyse, and validate data with unprecedented precision.
+                    The adoption of electronic invoicing is not simply a technical upgrade. It is a national economic strategy that influences policymaking, fiscal stability, business efficiency, and overall competitiveness. The region is transitioning from paper dependent processes to highly automated digital ecosystems, enabling tax authorities to collect, analyze, and validate data with unprecedented precision.
                 </T>
             </p>
         </BlogLayout>

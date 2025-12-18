@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 "use client";
@@ -14,7 +13,7 @@ function AutomotiveIndustry() {
     <BlogLayout
       pageTitle={
         <T>
-          Accelerating Digital Transformation: Tackling ZATCA E-invoicing Challenges in Saudi Arabia’s
+          Accelerating Digital Transformation: Tackling ZATCA E-invoicing Challenges in Saudi Arabia's
           Automotive Industry
         </T>
       }
@@ -32,14 +31,14 @@ function AutomotiveIndustry() {
           The automotive industry in Saudi Arabia is rapidly evolving. Manufacturers, auto-parts retailers,
           and custom vehicle workshops are increasingly adopting digital transformation initiatives, enabling
           greater efficiency, customer engagement, and streamlined compliance with regulatory mandates. Among
-          the top priorities for these businesses today is compliance with Zakat, Tax and Customs Authority’s
+          the top priorities for these businesses today is compliance with Zakat, Tax and Customs Authority's
           (ZATCA) mandatory e-invoicing regulation.
         </T>
       </p>
 
       <p className="text-fluid-small mt-6 tracking-para">
         <T>
-          In this article, we explore how the automotive sector can efficiently address ZATCA’s e-invoicing
+          In this article, we explore how the automotive sector can efficiently address ZATCA's e-invoicing
           requirements, overcome compliance hurdles, and achieve comprehensive digital transformation with the
           right ERP and middleware solutions.
         </T>
@@ -53,7 +52,7 @@ function AutomotiveIndustry() {
 
       <p className="text-fluid-small mb-6 tracking-para">
         <T>
-          Since its inception in 2021, ZATCA’s e-invoicing (Fatoorah) initiative has been significantly
+          Since its inception in 2021, ZATCA's e-invoicing (Fatoorah) initiative has been significantly
           reshaping invoicing practices across Saudi Arabia. Automotive businesses, from manufacturers and
           dealerships to specialized workshops, now face the urgent necessity to fully comply with ZATCA's
           guidelines to avoid regulatory penalties and stay competitive in an increasingly digitized market.
@@ -68,7 +67,7 @@ function AutomotiveIndustry() {
         <T>
           The automotive industry operates in a uniquely complex environment. Businesses must manage large
           inventories, intricate production workflows, sales networks, after-sales services, and extensive
-          supplier relationships. Amidst this complexity, adhering strictly to ZATCA’s e-invoicing rules
+          supplier relationships. Amidst this complexity, adhering strictly to ZATCA's e-invoicing rules
           presents several distinct challenges:
         </T>
       </p>
@@ -91,7 +90,7 @@ function AutomotiveIndustry() {
         <li>
           <T>
             <b>Integration Complexity:</b> Businesses operating legacy ERP or custom-developed IT solutions
-            often find integrating with ZATCA’s platform costly, time-consuming, and technically demanding.
+            often find integrating with ZATCA's platform costly, time-consuming, and technically demanding.
           </T>
         </li>
         <li>
@@ -125,14 +124,14 @@ function AutomotiveIndustry() {
       <p className="text-fluid-small mb-6 tracking-para">
         <T>
           If your automotive business already leverages existing ERP, POS, or other business systems, Accqrate
-          seamlessly integrates your applications with ZATCA’s e-invoicing portal. The middleware solution
+          seamlessly integrates your applications with ZATCA's e-invoicing portal. The middleware solution
           serves as a streamlined gateway between your existing ERP/POS solutions and ZATCA, handling
           compliance seamlessly and reducing implementation time dramatically.
         </T>
       </p>
 
       <p className="text-fluid-small mb-6 tracking-para">
-        <T>Key benefits of Accqrate’s Middleware include:</T>
+        <T>Key benefits of Accqrate's Middleware include:</T>
       </p>
 
       <ul className="list-disc pl-6 space-y-2 text-fluid-small mb-6 tracking-para">
@@ -144,7 +143,7 @@ function AutomotiveIndustry() {
         </li>
         <li>
           <T>
-            <b>Real-time Compliance:</b> Instant and accurate validation of e-invoices as per ZATCA’s Phase 2
+            <b>Real-time Compliance:</b> Instant and accurate validation of e-invoices as per ZATCA's Phase 2
             regulations, with simplified transaction reporting and archiving.
           </T>
         </li>
@@ -166,7 +165,7 @@ function AutomotiveIndustry() {
         <T>
           For automotive businesses yet to embark on their digital transformation journey, Accqrate offers a
           comprehensive ERP suite covering Sales, CRM, Purchase, Accounting, Inventory, Production, and HR &
-          Payroll. Accqrate’s fully digitalized environment doesn't just ensure compliance but also transforms
+          Payroll. Accqrate's fully digitalized environment doesn't just ensure compliance but also transforms
           your business processes, driving efficiency, transparency, and profitability.
         </T>
       </p>
@@ -220,7 +219,7 @@ function AutomotiveIndustry() {
 
       <p className="text-fluid-small mb-6 tracking-para">
         <T>
-          Embracing digitalization today with Accqrate doesn’t only mean staying compliant. It also means
+          Embracing digitalization today with Accqrate doesn't only mean staying compliant. It also means
           unlocking significant growth opportunities and achieving lasting competitive advantage.
         </T>
       </p>
@@ -233,9 +232,9 @@ function AutomotiveIndustry() {
 
       <p className="text-fluid-small mb-6 tracking-para">
         <T>
-          To learn more about Accqrate’s ERP or Middleware solutions,{" "}
+          To learn more about Accqrate's ERP or Middleware solutions,{" "}
           <a href="https://accqrate-erp.com/" className="text-blue-600 hover:underline">
-            visit our website
+            <T>visit our website</T>
           </a>{" "}
           or contact our specialists for a personalized consultation. Our team is committed to guiding your
           automotive business smoothly through ZATCA compliance and beyond.

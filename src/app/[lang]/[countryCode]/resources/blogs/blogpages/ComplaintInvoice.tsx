@@ -1,10 +1,10 @@
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import T from "@/Components/T";
 import BlogLayout from "../layout/BlogLayout";
 import AssetPath from "@/AssetPath/AssetPath";
 import Image from "next/image";
+
 function ComplaintInvoice() {
   return (
     <BlogLayout
@@ -32,7 +32,7 @@ function ComplaintInvoice() {
         <T>
           Accqrate provides a <b>ZATCA-approved e-invoicing solution</b> that
           enables businesses to easily generate, store, and transmit digital
-          invoices to ZATCA. Let’s dive into how e-invoicing works in Saudi
+          invoices to ZATCA. Let's dive into how e-invoicing works in Saudi
           Arabia and how Accqrate can simplify the process for your business.
         </T>
       </p>
@@ -60,12 +60,16 @@ function ComplaintInvoice() {
 
       <ul className="space-y-2 text-gray-700 mb-6 text-fluid-small">
         <li>
-          <b>Phase 1:</b> Businesses must issue digital invoices with a QR code
-          and unique invoice number.
+          <T>
+            <b>Phase 1:</b> Businesses must issue digital invoices with a QR code
+            and unique invoice number.
+          </T>
         </li>
         <li>
-          <b>Phase 2:</b> Invoices must be transmitted to ZATCA in real-time,
-          and approval from ZATCA is mandatory.
+          <T>
+            <b>Phase 2:</b> Invoices must be transmitted to ZATCA in real-time,
+            and approval from ZATCA is mandatory.
+          </T>
         </li>
       </ul>
 
@@ -89,11 +93,11 @@ function ComplaintInvoice() {
       </p>
 
       <ul className="space-y-2 text-gray-700 mb-6 text-fluid-small">
-        <li>✅ <b>Create digital invoices in a few clicks</b></li>
-        <li>✅ <b>Embed QR codes for compliance</b></li>
-        <li>✅ <b>Store and retrieve invoices anytime for audits</b></li>
-        <li>✅ <b>Avoid manual errors in calculations</b></li>
-        <li>✅ <b>Transmit invoices to ZATCA seamlessly</b></li>
+        <li><T>✅ <b>Create digital invoices in a few clicks</b></T></li>
+        <li><T>✅ <b>Embed QR codes for compliance</b></T></li>
+        <li><T>✅ <b>Store and retrieve invoices anytime for audits</b></T></li>
+        <li><T>✅ <b>Avoid manual errors in calculations</b></T></li>
+        <li><T>✅ <b>Transmit invoices to ZATCA seamlessly</b></T></li>
       </ul>
 
       <p className="text-gray-700 mb-6 text-fluid-small">
@@ -105,7 +109,7 @@ function ComplaintInvoice() {
             rel="noreferrer"
             className="text-blue-600 underline"
           >
-            Contact Us
+            <T>Contact Us</T>
           </a>
         </T>
       </p>
@@ -118,32 +122,25 @@ function ComplaintInvoice() {
 
       <p className="text-gray-700 mb-4 text-fluid-small">
         <T>
-          Accqrate’s e-invoicing solution offers a fast and seamless process to
+          Accqrate's e-invoicing solution offers a fast and seamless process to
           generate ZATCA-compliant invoices.
         </T>
       </p>
 
       <p className="text-gray-700 mb-3 text-fluid-small">
-        <b>Key Features of Accqrate’s E-Invoicing Software:</b>
+        <T><b>Key Features of Accqrate's E-Invoicing Software:</b></T>
       </p>
 
       <ul className="space-y-2 text-gray-700 mb-6 text-fluid-small">
-        <li>📌 <b>Automatic QR code embedding</b></li>
-        <li>📌 <b>Generate tax invoices or simplified invoices</b></li>
-        <li>📌 <b>Customize invoice templates with your logo and branding</b></li>
-        <li>📌 <b>One-click invoice sharing with customers</b></li>
-        <li>📌 <b>Built-in error detection and correction</b></li>
-        <li>📌 <b>Transmit invoices to ZATCA instantly</b></li>
-        <li>📌 <b>Automatic document archiving for future reference</b></li>
-        <li>📌 <b>User role and access management</b></li>
+        <li><T>📌 <b>Automatic QR code embedding</b></T></li>
+        <li><T>📌 <b>Generate tax invoices or simplified invoices</b></T></li>
+        <li><T>📌 <b>Customize invoice templates with your logo and branding</b></T></li>
+        <li><T>📌 <b>One-click invoice sharing with customers</b></T></li>
+        <li><T>📌 <b>Built-in error detection and correction</b></T></li>
+        <li><T>📌 <b>Transmit invoices to ZATCA instantly</b></T></li>
+        <li><T>📌 <b>Automatic document archiving for future reference</b></T></li>
+        <li><T>📌 <b>User role and access management</b></T></li>
       </ul>
-
-      {/* Note: invoice.jpg is corrupted/missing - commented out */}
-      {/* <img
-        src="/images/invoice.jpg"
-        alt="Invoice example"
-        className="w-3/4 mx-auto rounded-lg mb-6"
-      /> */}
 
       <hr className="my-6" />
 
@@ -153,33 +150,32 @@ function ComplaintInvoice() {
 
       <p className="text-gray-700 mb-4 text-fluid-small">
         <T>
-          Getting started with Accqrate is simple, whether you’re new to
+          Getting started with Accqrate is simple, whether you're new to
           e-invoicing or switching from another software.
         </T>
       </p>
 
-
       <div>
-        <T>
-          <h4 className="text-semibold text-fluid-body">1. If You’re Not Using Any Software:</h4>
-        </T>
+        <h4 className="text-semibold text-fluid-body">
+          <T>1. If You're Not Using Any Software:</T>
+        </h4>
       </div>
 
       <div className="space-y-2 text-gray-700 mb-6 text-fluid-small story">
         <ul>
           <li>
             <T>
-              &#9989; <b>Register your company</b>on Accqrate
+              &#9989; <b>Register your company</b> on Accqrate
             </T>
           </li>
           <li>
             <T>
-              &#9989; <b>Create your customer list </b>or upload it from Excel
+              &#9989; <b>Create your customer list</b> or upload it from Excel
             </T>
           </li>
           <li>
             <T>
-              &#9989; <b>Create your product list </b>or upload it from Excel
+              &#9989; <b>Create your product list</b> or upload it from Excel
             </T>
           </li>
           <li>
@@ -196,16 +192,16 @@ function ComplaintInvoice() {
       </div>
 
       <div>
-        <T>
-          <h4 className="text-semibold text-fluid-body">2. If You’re Using Another Software:</h4>
-        </T>
+        <h4 className="text-semibold text-fluid-body">
+          <T>2. If You're Using Another Software:</T>
+        </h4>
       </div>
 
       <div className="story space-y-2 text-gray-700 mb-6 text-fluid-small">
         <ul>
           <li>
             <T>
-              &#9989; <b>Register your company</b>on Accqrate
+              &#9989; <b>Register your company</b> on Accqrate
             </T>
           </li>
           <li>
@@ -225,18 +221,22 @@ function ComplaintInvoice() {
           </li>
         </ul>
       </div>
+
       <hr />
+
       <h3 className="text-semibold text-fluid-body mt-4">
         <T>E-Invoicing Process Flow in Accqrate</T>
       </h3>
+
       <div className="">
-        <T>
-          <p className="story text-semibold mt-2 text-fluid-small">
-            Here’s a <b>step-by-step guide</b> to how Accqrate’s e-invoicing system works:
-          </p>
-        </T>
+        <p className="story text-semibold mt-2 text-fluid-small">
+          <T>
+            Here's a <b>step-by-step guide</b> to how Accqrate's e-invoicing system works:
+          </T>
+        </p>
       </div>
-      <div className="story space-y-2  mb-6  text-fluid-small">
+
+      <div className="story space-y-2 mb-6 text-fluid-small">
         <ul>
           <li>
             <T>
@@ -260,7 +260,7 @@ function ComplaintInvoice() {
           </li>
           <li>
             <T>
-              5️ <b>Accqrate converts the invoice</b> into ZATCA required machine-readable XML format I
+              5️ <b>Accqrate converts the invoice</b> into ZATCA required machine-readable XML format
             </T>
           </li>
           <li>
@@ -280,93 +280,107 @@ function ComplaintInvoice() {
           </li>
           <li>
             <T>
-              9️ <b>Seller reviews rejected invoices </b>and corrects errors
+              9️ <b>Seller reviews rejected invoices</b> and corrects errors
             </T>
           </li>
           <li>
             <T>
-              10 <b>Seller sends accepted invoices </b>to the buyer
+              10 <b>Seller sends accepted invoices</b> to the buyer
             </T>
           </li>
           <li>
             <T>
-              11 <b>Buyer scans the QR code </b>using ZATCA’s mobile app
+              11 <b>Buyer scans the QR code</b> using ZATCA's mobile app
             </T>
           </li>
           <li>
             <T>
-              12 <b>ZATCA authenticates the invoice </b>and confirms receipt
+              12 <b>ZATCA authenticates the invoice</b> and confirms receipt
             </T>
           </li>
         </ul>
       </div>
+
       <hr />
+
       <h3 className="story text-semibold mt-2 text-fluid-body">
         <T>Benefits of Using Accqrate for E-Invoicing</T>
       </h3>
-      <div className="story space-y-2  mb-6  text-fluid-small ">
+
+      <div className="story space-y-2 mb-6 text-fluid-small">
         <ul>
           <li>
             <T>
-              <b>Phase 2 Compliance Made Simple: </b> Stay compliant with ZATCA regulations without hassle.
+              <b>Phase 2 Compliance Made Simple:</b> Stay compliant with ZATCA regulations without hassle.
             </T>
           </li>
           <li>
             <T>
-              <b>Error Reduction: </b> Eliminate manual errors in invoice generation and calculation.
+              <b>Error Reduction:</b> Eliminate manual errors in invoice generation and calculation.
             </T>
           </li>
           <li>
             <T>
-              <b>Time-Saving Process: </b> Generate and transmit invoices in just a few clicks.
+              <b>Time-Saving Process:</b> Generate and transmit invoices in just a few clicks.
             </T>
           </li>
           <li>
             <T>
-              <b>Automatic Archiving: </b> All invoices are automatically archived for future reference
+              <b>Automatic Archiving:</b> All invoices are automatically archived for future reference
             </T>
           </li>
           <li>
             <T>
-              <b>Secure and Cloud-Based: </b> Access your invoices anytime, from anywhere.
+              <b>Secure and Cloud-Based:</b> Access your invoices anytime, from anywhere.
             </T>
           </li>
         </ul>
       </div>
+
       <hr />
-      <h3 className="  mb-2 mt-4 text-fluid-body font-semibold">
+
+      <h3 className="mb-2 mt-4 text-fluid-body font-semibold">
         <T>Get Your Free E-Invoicing Demo Today!</T>
       </h3>
-      <p className="story space-y-2  mb-6  text-fluid-small">
-        Take the first step toward {""}
-        <b>transforming your business with Accqrate’s E-invoicing and ERP solutions.</b>
-        Experience the ease and power of our e-invoicing software by requesting a <b>free demo.</b>
+
+      <p className="story space-y-2 mb-6 text-fluid-small">
+        <T>Take the first step toward{" "}</T>
+        <b><T>transforming your business with Accqrate's E-invoicing and ERP solutions.</T></b>
+        <T>Experience the ease and power of our e-invoicing software by requesting a <b>free demo.</b></T>
       </p>
-      <p className="story space-y-2  mb-2  text-fluid-small">
-        📞 Call us at <b>+(966 13) 833200</b>
+
+      <p className="story space-y-2 mb-2 text-fluid-small">
+        <T>
+          📞 Call us at <b>+(966 13) 833200</b>
+        </T>
       </p>
-      <p className="story space-y-2  mb-6  text-fluid-small">
-        📧 Or email us at <b>contact: @accqrate-erp.com</b>
+
+      <p className="story space-y-2 mb-6 text-fluid-small">
+        <T>
+          📧 Or email us at <b>contact@accqrate-erp.com</b>
+        </T>
       </p>
-      <h3 className="font-semibold  mb-4  text-fluid-body">
+
+      <h3 className="font-semibold mb-4 text-fluid-body">
         <T>About Accqrate</T>
       </h3>
-      <p className="story space-y-2  mb-6  text-fluid-small">
+
+      <p className="story space-y-2 mb-6 text-fluid-small">
         <T>
           <a href="https://accqrate-erp.com/" target="_blank" rel="noreferrer">
             Accqrate
           </a>{' '}
           is a Saudi-based e-invoicing and ERP solution provider offering comprehensive accounting,
           e-invoicing integrators, and a full-suite ERP system, including POS solutions. Recognized as one of
-          the most cost-effective platforms in KSA, Accqrate ensures seamless integration with ZATCA’s Fatoora
+          the most cost-effective platforms in KSA, Accqrate ensures seamless integration with ZATCA's Fatoora
           portal, making Phase 2 compliance straightforward. Powered by GenAI and GPT technologies, the
           platform enhances user experience with intelligent features that boost business efficiency and
           inter-department collaboration.
         </T>
       </p>
-      <p className="story space-y-2  mb-6 text-fluid-small">
+
+      <p className="story space-y-2 mb-6 text-fluid-small">
         <T>
-          {' '}
           With scalability and flexibility at its core, Accqrate offers both cloud and on-premise solutions,
           encouraging businesses in KSA to embrace digital transformation. Trusted across MENA, European, and
           ASEAN markets, Accqrate is a global solution helping organizations achieve operational excellence.

@@ -1,4 +1,3 @@
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import Image from "next/image";
@@ -149,7 +148,7 @@ function TransformComplaint() {
       </h3>
       <p className="story text-fluid-small leading-relaxed text-gray-800">
         <T>
-          Accqrate’s e-invoicing software addresses the complexities of marketplace compliance. With minimal
+          Accqrate's e-invoicing software addresses the complexities of marketplace compliance. With minimal
           setup time—often just a few hours—you can:
         </T>
       </p>
@@ -210,8 +209,7 @@ function TransformComplaint() {
         height={600}
       />
       <i className="text-fluid-small text-gray-600 flex justify-center mb-6">
-        Fig. 1. E-invoicing process flow between marketplace and ZATCA through Accqrate E-invoicing
-        solutions
+        <T>Fig. 1. E-invoicing process flow between marketplace and ZATCA through Accqrate E-invoicing solutions</T>
       </i>
 
       <h3 className="text-fluid-body font-semibold text-gray-900 mb-2 mt-6">
@@ -219,7 +217,7 @@ function TransformComplaint() {
       </h3>
       <p className="story text-fluid-small leading-relaxed text-gray-800">
         <T>
-          When a buyer procures a seller’s product or service, the marketplace application should
+          When a buyer procures a seller's product or service, the marketplace application should
           automatically generate a compliant e-invoice through a ZATCA-approved solution. This integration
           happens in real time — triggering the e-invoice submission to ZATCA servers the moment the invoice
           is raised.
@@ -238,7 +236,7 @@ function TransformComplaint() {
       </p>
 
       <h3 className="text-fluid-body font-semibold text-gray-900 mb-2 mt-6">
-        <T>Provider’s Compliance</T>
+        <T>Provider's Compliance</T>
       </h3>
       <p className="story text-fluid-small leading-relaxed text-gray-800">
         <T>
@@ -272,7 +270,7 @@ function TransformComplaint() {
       <ol className="story list-decimal pl-6 text-fluid-small leading-relaxed text-gray-800">
         <li className="mt-2">
           <T>
-            <b>Faster and more accurate invoicing </b> for buyers and sellers.
+            <b>Faster and more accurate invoicing</b> for buyers and sellers.
           </T>
         </li>
         <li>
@@ -287,14 +285,14 @@ function TransformComplaint() {
         </li>
         <li>
           <T>
-            <b>Quick time to value,</b> thanks to Accqrate’s proven integration capabilities.
+            <b>Quick time to value,</b> thanks to Accqrate's proven integration capabilities.
           </T>
         </li>
       </ol>
 
       <p className="story text-fluid-body leading-relaxed text-gray-800">
         <T>
-          Don’t let the complexities of e-invoicing hold your marketplace back. With Accqrate, you can become
+          Don't let the complexities of e-invoicing hold your marketplace back. With Accqrate, you can become
           compliant in a matter of hours. To learn more or schedule a free integration proof of concept,
           contact us at contact@accqrate-erp.com.
         </T>

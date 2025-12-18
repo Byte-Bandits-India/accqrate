@@ -24,7 +24,7 @@ function BreakingBarriers() {
         className="w-full mb-6 rounded-lg"
       />
 
-   
+
       <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
         <T>
           The Zakat, Tax, and Customs Authority (ZATCA) of the Kingdom of Saudi
@@ -103,16 +103,16 @@ function BreakingBarriers() {
       {/* List */}
       <ul className="story mb-6 space-y-2 text-gray-700 text-fluid-small">
         <li>
-          <b>Legacy Systems:</b> Older ERP systems often lack the necessary APIs
-          or integration capabilities.
+          <T><b>Legacy Systems:</b> Older ERP systems often lack the necessary APIs
+            or integration capabilities.</T>
         </li>
         <li>
-          <b>Customization:</b> Heavily customized ERP solutions tailored to
-          specific business processes can make integration more complex.
+          <T><b>Customization:</b> Heavily customized ERP solutions tailored to
+            specific business processes can make integration more complex.</T>
         </li>
         <li>
-          <b>Security Policies:</b> Organizations with strict data control
-          policies may restrict integration.
+          <T><b>Security Policies:</b> Organizations with strict data control
+            policies may restrict integration.</T>
         </li>
       </ul>
 
@@ -138,18 +138,14 @@ function BreakingBarriers() {
       </h3>
 
       <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-        <T>
-          Accqrate offers a specialized{" "}
-          <a
-            href="https://zatca.gov.sa/en/Pages/default.aspx"
-            className="text-blue-600 underline"
-          >
-            <T>E-Invoicing Middleware Module</T>
-          </a>{" "}
-          designed to bridge the gap between your existing systems and ZATCA’s
-          Fatoora portal. This middleware ensures compliance through flexible
-          integration options and data validation.
-        </T>
+        <T>Accqrate offers a specialized </T>
+        <a
+          href="https://zatca.gov.sa/en/Pages/default.aspx"
+          className="text-blue-600 underline"
+        >
+          <T>E-Invoicing Middleware Module</T>
+        </a>
+        <T>{" "}designed to bridge the gap between your existing systems and ZATCA’s Fatoora portal. This middleware ensures compliance through flexible integration options and data validation.</T>
       </p>
 
       <p className="text-gray-700 text-fluid-small leading-relaxed mb-3 font-semibold">
@@ -208,12 +204,7 @@ function BreakingBarriers() {
       </h3>
 
       <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
-        <T>
-          As ZATCA continues to roll out its phased e-invoicing regulations,
-          businesses must ensure compliance readiness. Whether your ERP
-          integrates directly with the Fatoora portal or not, solutions like
-          Accqrate’s middleware can bridge the gap efficiently.
-        </T>
+        <T>As ZATCA continues to roll out its phased e-invoicing regulations, businesses must ensure compliance readiness. Whether your ERP integrates directly with the Fatoora portal or not, solutions like Accqrate’s middleware can bridge the gap efficiently.</T>
       </p>
 
       <p className="text-gray-700 text-fluid-small leading-relaxed mb-4">
@@ -237,10 +228,10 @@ function BreakingBarriers() {
           >
             Accqrate
           </a>{" "}
-          is a Saudi-based ERP and e-invoicing provider offering accounting,
-          POS, and full ERP suites. Recognized for cost-efficiency and seamless
-          ZATCA integration, Accqrate’s GenAI-powered platform enhances
-          collaboration and automation.
+          <T>is a Saudi-based ERP and e-invoicing provider offering accounting,
+            POS, and full ERP suites. Recognized for cost-efficiency and seamless
+            ZATCA integration, Accqrate’s GenAI-powered platform enhances
+            collaboration and automation.</T>
         </T>
       </p>
 

@@ -62,8 +62,8 @@ export default function ZatcaFatooraDeviceRequirments() {
       </h2>
       <p className="text-fluid-small leading-relaxed text-gray-800">
         <T>
-          The essence of the ZATCA’s notification, titled "FATOORA - Device
-          Onboarding Outreach," is to remind taxpayers of the criticality of
+          The essence of the ZATCA’s notification, titled FATOORA - Device
+          Onboarding Outreach, is to remind taxpayers of the criticality of
           accurately entering CSR details during device setup. This process is
           pivotal as it establishes a secure communication channel between
           taxpayers and ZATCA, enabling accurate and compliant e-invoicing.
@@ -93,46 +93,46 @@ export default function ZatcaFatooraDeviceRequirments() {
       </h2>
       <ol className="list-decimal pl-5 space-y-1 text-fluid-small leading-relaxed text-gray-800">
         <li>
-          <b>Common Name (CN):</b>{" "}
+          <b><T>Common Name (CN):</T></b>{" "}
           <T>Name or Asset Tracking Number of the Solution Unit</T>
         </li>
         <li>
-          <b>EGS Serial Number:</b>{" "}
+          <b><T>EGS Serial Number:</T></b>{" "}
           <T>Manufacturer Name, Model, Version, and Serial Number</T>
         </li>
         <li>
-          <b>Organization Identifier:</b>{" "}
+          <b><T>Organization Identifier:</T></b>{" "}
           <T>
             VAT Registration Number to associate the device correctly with your
             TIN
           </T>
         </li>
         <li>
-          <b>Organization Unit Name:</b>{" "}
+          <b><T>Organization Unit Name:</T></b>{" "}
           <T>
             For branches or VAT groups, include the TIN of the group member
             whose device is being onboarded
           </T>
         </li>
         <li>
-          <b>Organization Name:</b> <T>Organization/Taxpayer Name</T>
+          <b><T>Organization Name:</T></b> <T>Organization/Taxpayer Name</T>
         </li>
         <li>
-          <b>Country Name:</b> <T>The location of operation</T>
+          <b><T>Country Name:</T></b> <T>The location of operation</T>
         </li>
         <li>
-          <b>Invoice Type:</b>{" "}
+          <b><T>Invoice Type:</T></b>{" "}
           <T>
             Specify supported invoice types using a code system (e.g., 1100 for
             Standard and Simplified Tax Invoice)
           </T>
         </li>
         <li>
-          <b>Location:</b>{" "}
+          <b><T>Location:</T></b>{" "}
           <T>Address of the branch or primary location of the device</T>
         </li>
         <li>
-          <b>Industry:</b>{" "}
+          <b><T>Industry:</T></b>{" "}
           <T>Sector for which the device will generate invoices</T>
         </li>
       </ol>
@@ -164,26 +164,26 @@ export default function ZatcaFatooraDeviceRequirments() {
       </h4>
       <ol className="list-decimal pl-5 space-y-1 text-fluid-small leading-relaxed text-gray-800">
         <li>
-          <b>Create a New Device:</b> <T>Duplicate the existing device.</T>
+          <b><T>Create a New Device:</T></b> <T>Duplicate the existing device.</T>
         </li>
         <li>
-          <b>Update the Serial Number:</b>{" "}
+          <b><T>Update the Serial Number:</T></b>{" "}
           <T>Ensure it follows the correct format.</T>
         </li>
         <li>
-          <b>Access FATOORA:</b>{" "}
+          <b><T>Access FATOORA:</T></b>{" "}
           <T>Log in to obtain a One-Time Password (OTP).</T>
         </li>
         <li>
-          <b>Onboard the New Device:</b>{" "}
+          <b><T>Onboard the New Device:</T></b>{" "}
           <T>Register it with ZATCA for compliance.</T>
         </li>
         <li>
-          <b>Switch Source Systems:</b>{" "}
+          <b><T>Switch Source Systems:</T></b>{" "}
           <T>Use the newly onboarded device.</T>
         </li>
         <li>
-          <b>Deactivate the Old Device:</b>{" "}
+          <b><T>Deactivate the Old Device:</T></b>{" "}
           <T>Remove it to prevent duplication.</T>
         </li>
       </ol>

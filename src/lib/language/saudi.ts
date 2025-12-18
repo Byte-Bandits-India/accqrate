@@ -13070,28 +13070,71 @@ const translations = {
 "Additional Waves Announced:  As of 2025 , ZATCA has announced more waves that cover small and medium enterprises. For instance, companies with revenues above SAR 1.75 million are now entering new waves by 30th September 2025.": {
   ar: "الإعلان عن موجات إضافية: اعتبارًا من عام 2025، أعلنت زاتكا عن مزيد من الموجات التي تغطي المنشآت الصغيرة والمتوسطة. على سبيل المثال، الشركات ذات الإيرادات التي تزيد عن 1.75 مليون ريال سعودي تدخل الآن موجات جديدة بحلول 30 سبتمبر 2025."
 },
-"Penalties for Non-Compliance:  While ZATCA showed leniency for the initial waves, they have issued recent press releases emphasizing stricter penalties for missing deadlines in later waves. These fines can include monetary penalties based on the extent of non-compliance.": {
+"Penalties for Non-Compliance: While ZATCA showed leniency for the initial waves, they have issued recent press releases emphasizing stricter penalties for missing deadlines in later waves. These fines can include monetary penalties based on the extent of non-compliance.": {
   ar: "العقوبات على عدم الامتثال: بينما أظهرت زاتكا تساهلاً في الموجات الأولية، فقد أصدرت بيانات صحفية حديثة تؤكد على عقوبات أكثر صرامة لتجاوز المواعيد النهائية في الموجات اللاحقة. يمكن أن تشمل هذه الغرامات عقوبات مالية بناءً على مدى عدم الامتثال."
 },
-"No Free Pass:  ZATCA reiterates in their 2024 press release that the grace period is not a time to delay implementation but rather to test and stabilize. Businesses still need to integrate as soon as possible.": {
+"No Free Pass: ZATCA reiterates in their 2024 press release that the grace period is not a time to delay implementation but rather to test and stabilize. Businesses still need to integrate as soon as possible.": {
   ar: "لا جواز مرور مجاني: تؤكد زاتكا في بيانها الصحفي لعام 2024 أن فترة السماح ليست وقتًا لتأخير التنفيذ بل للاختبار والاستقرار. لا تزال المنشآت بحاجة إلى الدمج في أقرب وقت ممكن."
 },
-"Shorter Grace for New Waves:  Newer waves announced for 2025 have shorter grace periods, sometimes as little as one month.": {
+"Shorter Grace for New Waves: Newer waves announced for 2025 have shorter grace periods, sometimes as little as one month.": {
   ar: "فترة سماح أقصر للموجات الجديدة: الموجات الأحدث المعلن عنها لعام 2025 لديها فترات سماح أقصر، أحيانًا تصل إلى شهر واحد فقط."
 },
+"Accqrate, an approved ZATCA provider, leads SAP integration by ensuring security, speed, and compliance:": {
+    ar: "تقود أككوريت، كمزود معتمد لزاتكا، تكامل SAP من خلال ضمان الأمان والسرعة والامتثال:"
+  },
+  
+  // List items with emojis
+  "🔒 Security First:": {
+    ar: "🔒 الأمان أولاً:"
+  },
+  "End-to-end encryption guarantees data integrity and audit-proof invoices.": {
+    ar: "ضمان التشفير من طرف إلى طرف لسلامة البيانات والفواتير القابلة للتدقيق."
+  },
+  "⏰ Swift Implementation:": {
+    ar: "⏰ تنفيذ سريع:"
+  },
+  "Go live with ZATCA integration in under two weeks.": {
+    ar: "التشغيل مع تكامل زاتكا في أقل من أسبوعين."
+  },
+  "🔍 Try Before You Commit:": {
+    ar: "🔍 جرب قبل الالتزام:"
+  },
+  "Get a free Proof of Concept in the Sandbox environment before production deployment.": {
+    ar: "احصل على إثبات مفهوم مجاني في بيئة الساندبوكس قبل النشر في الإنتاج."
+  },
+  "📞 Dedicated Support:": {
+    ar: "📞 دعم مخصص:"
+  },
+  "Contact yasir.mohammad@ethergulf.com for demo and support.": {
+    ar: "اتصل بـ yasir.mohammad@ethergulf.com للحصول على عرض تجريبي ودعم."
+  },
+  
+  // Combined versions (if your T component handles full sentences)
+  "🔒 Security First: End-to-end encryption guarantees data integrity and audit-proof invoices.": {
+    ar: "🔒 الأمان أولاً: ضمان التشفير من طرف إلى طرف لسلامة البيانات والفواتير القابلة للتدقيق."
+  },
+  "⏰ Swift Implementation: Go live with ZATCA integration in under two weeks.": {
+    ar: "⏰ تنفيذ سريع: التشغيل مع تكامل زاتكا في أقل من أسبوعين."
+  },
+  "🔍 Try Before You Commit: Get a free Proof of Concept in the Sandbox environment before production deployment.": {
+    ar: "🔍 جرب قبل الالتزام: احصل على إثبات مفهوم مجاني في بيئة الساندبوكس قبل النشر في الإنتاج."
+  },
+  "📞 Dedicated Support: Contact yasir.mohammad@ethergulf.com for demo and support.": {
+    ar: "📞 دعم مخصص: اتصل بـ yasir.mohammad@ethergulf.com للحصول على عرض تجريبي ودعم."
+  },
 "If your wave's official deadline is January 31, 2025:": {
   ar: "إذا كان الموعد النهائي الرسمي لموجتك هو 31 يناير 2025:"
 },
 "Before February 1, 2025: You operate under Phase 1 norms and file invoices manually.": {
   ar: "قبل 1 فبراير 2025: تعمل وفق معايير المرحلة الأولى وتقوم بتسجيل الفواتير يدويًا."
 },
-"From February 1, 2025, onwards:  You must comply with ZATCA's Phase 2 requirements, and all e-invoices must be automatically filed through a compliant system.": {
+"From February 1, 2025, onwards: You must comply with ZATCA's Phase 2 requirements, and all e-invoices must be automatically filed through a compliant system.": {
   ar: "من 1 فبراير 2025 فصاعدًا: يجب عليك الامتثال لمتطلبات المرحلة الثانية من زاتكا، ويجب تسجيل جميع الفواتير الإلكترونية تلقائيًا من خلال نظام متوافق."
 },
 "Immediate Action: If you've missed your wave's deadline, start the integration process right away.": {
   ar: "الإجراء الفوري: إذا فاتك الموعد النهائي لموجتك، ابدأ عملية الدمج فورًا."
 },
-"One-Time Leniency:  Though ZATCA showed leniency for initial waves, they have warned of stricter enforcement for later waves. Past invoices may be submitted once you are integrated, but this is typically a one-time exception.": {
+"One-Time Leniency: Though ZATCA showed leniency for initial waves, they have warned of stricter enforcement for later waves. Past invoices may be submitted once you are integrated, but this is typically a one-time exception.": {
   ar: "التساهل لمرة واحدة: على الرغم من أن زاتكا أظهرت تساهلاً في الموجات الأولية، فقد حذرت من إنفاذ أكثر صرامة للموجات اللاحقة. قد يتم تقديم الفواتير السابقة بمجرد دمجك، لكن هذا عادةً استثناء لمرة واحدة."
 },
 "Best Practices for ZATCA Phase 2 Compliance": {
@@ -13213,7 +13256,1829 @@ const translations = {
 },
 "2. E-invoice Creation": {
   ar: "2. إنشاء الفاتورة الإلكترونية"
-}
+},
+"In the evolving digital landscape, Saudi Arabia's Zakat, Tax, and Customs Authority": {
+    ar: "في المشهد الرقمي المتطور، أطلقت هيئة الزكاة والضريبة والجمارك السعودية"
+  },
+  "(ZATCA)": {
+    ar: "(زاتكا)"
+  },
+  "has pioneered electronic invoicing, launching its first phase on 4th December 2021 and progressing into the second phase from 1st January 2023. The initiative ensures transparency, efficiency, and compliance within the digital economy.": {
+    ar: "الفوترة الإلكترونية كرائدة في هذا المجال، حيث أطلقت مرحلتها الأولى في 4 ديسمبر 2021 وتقدمت إلى المرحلة الثانية من 1 يناير 2023. تضمن هذه المبادرة الشفافية والكفاءة والامتثال داخل الاقتصاد الرقمي."
+  },
+  
+  // Combined first paragraph (if T component handles full text)
+  "In the evolving digital landscape, Saudi Arabia's Zakat, Tax, and Customs Authority (ZATCA) has pioneered electronic invoicing, launching its first phase on 4th December 2021 and progressing into the second phase from 1st January 2023. The initiative ensures transparency, efficiency, and compliance within the digital economy.": {
+    ar: "في المشهد الرقمي المتطور، أطلقت هيئة الزكاة والضريبة والجمارك السعودية (زاتكا) الفوترة الإلكترونية كرائدة في هذا المجال، حيث أطلقت مرحلتها الأولى في 4 ديسمبر 2021 وتقدمت إلى المرحلة الثانية من 1 يناير 2023. تضمن هذه المبادرة الشفافية والكفاءة والامتثال داخل الاقتصاد الرقمي."
+  },
+
+  // Header
+  "Accqrate E-Invoicing Solutions: Bridging SAP and ZATCA": {
+    ar: "حلول الفوترة الإلكترونية من أككوريت: ربط SAP وزاتكا"
+  },
+
+  // Second paragraph (split)
+  "Accqrate provides specialized": {
+    ar: "توفر أككوريت"
+  },
+  "ERP integrators": {
+    ar: "مكاملات ERP"
+  },
+  "for SAP to integrate with ZATCA via APIs, ensuring smooth real-time and batch processing between systems.": {
+    ar: "مخصصة لـ SAP للتكامل مع زاتكا عبر واجهات برمجة التطبيقات (APIs)، مما يضمن معالجة سلسة في الوقت الفعلي ومعالجة مجمعة بين الأنظمة."
+  },
+
+  // Combined second paragraph (if T component handles full text)
+  "Accqrate provides specialized ERP integrators for SAP to integrate with ZATCA via APIs, ensuring smooth real-time and batch processing between systems.": {
+    ar: "توفر أككوريت مكاملات ERP مخصصة لـ SAP للتكامل مع زاتكا عبر واجهات برمجة التطبيقات (APIs)، مما يضمن معالجة سلسة في الوقت الفعلي ومعالجة مجمعة بين الأنظمة."
+  },
+
+  // List items
+  "Batch Mode Efficiency:": {
+    ar: "كفاءة وضع الدُفعات:"
+  },
+  "Through RFC calls, Accqrate optimizes the generation of simplified invoices efficiently.": {
+    ar: "من خلال مكالمات RFC، تحسن أككوريت توليد الفواتير المبسطة بكفاءة."
+  },
+  "Real-time Excellence:": {
+    ar: "التميز في الوقت الفعلي:"
+  },
+  "Leveraging API calls via ABAP programming to ensure instantaneous integration and validation.": {
+    ar: "الاستفادة من مكالمات API عبر برمجة ABAP لضمان التكامل والتحقق الفوري."
+  },
+
+  // Combined list items with bold text
+  "Batch Mode Efficiency: Through RFC calls, Accqrate optimizes the generation of simplified invoices efficiently.": {
+    ar: "كفاءة وضع الدُفعات: من خلال مكالمات RFC، تحسن أككوريت توليد الفواتير المبسطة بكفاءة."
+  },
+  "Real-time Excellence: Leveraging API calls via ABAP programming to ensure instantaneous integration and validation.": {
+    ar: "التميز في الوقت الفعلي: الاستفادة من مكالمات API عبر برمجة ABAP لضمان التكامل والتحقق الفوري."
+  },
+  "Fines and Financial Penalties Exemption by ZATCA, Saudi Arabia": {
+    ar: "إعفاء الغرامات والعقوبات المالية من قبل زاتكا، المملكة العربية السعودية"
+  },
+
+  // First paragraph
+  "The Zakat, Tax and Customs Authority (ZATCA) re-launched an initiative to cancel fines and exempt financial penalties imposed on taxpayers for six months, beginning on June 1, 2022, and ending on November 30, 2022. This program was introduced to mitigate the financial strain on businesses impacted by the COVID-19 pandemic.": {
+    ar: "أعادت هيئة الزكاة والضريبة والجمارك (زاتكا) إطلاق مبادرة لإلغاء الغرامات وإعفاء العقوبات المالية المفروضة على دافعي الضرائب لمدة ستة أشهر، بدءًا من 1 يونيو 2022 وانتهاءً في 30 نوفمبر 2022. تم تقديم هذا البرنامج للتخفيف من الضغط المالي على الشركات المتأثرة بجائحة كوفيد-19."
+  },
+
+  // Note paragraph
+  "Note (Updated): While the exemption period mentioned above ended on November 30, 2022, ZATCA has periodically introduced and extended certain programs to support taxpayers. As of the latest press releases in 2023 and 2024, there have been no further blanket extensions of this specific exemption initiative. However, ZATCA continues to announce targeted relief measures on a case-by-case basis. Taxpayers are advised to regularly monitor official ZATCA announcements for any new or upcoming relief programs.": {
+    ar: "ملاحظة (محدثة): بينما انتهت فترة الإعفاء المذكورة أعلاه في 30 نوفمبر 2022، فقد أطلقت زاتكا بشكل دوري ومددت برامج معينة لدعم دافعي الضرائب. اعتبارًا من أحدث البيانات الصحفية في عامي 2023 و2024، لم تكن هناك تمديدات شاملة أخرى لهذه المبادرة الإعفائية المحددة. ومع ذلك، تواصل زاتكا الإعلان عن إجراءات إغاثة مستهدفة على أساس كل حالة على حدة. يُنصح دافعو الضرائب بمراقبة إعلانات زاتكا الرسمية بانتظام لأي برامج إغاثة جديدة أو قادمة."
+  },
+
+  // Headers
+  "Scope of the Exemption": {
+    ar: "نطاق الإعفاء"
+  },
+  "Under the initial exemption (June 1 – November 30, 2022), the cancellation of fines covered the following areas:": {
+    ar: "بموجب الإعفاء الأولي (1 يونيو - 30 نوفمبر 2022)، شمل إلغاء الغرامات المجالات التالية:"
+  },
+  "Eligibility Criteria": {
+    ar: "معايير الأهلية"
+  },
+  "To qualify for and fully benefit from the exemption initiative (when it was in effect), ZATCA specified the following requirements:": {
+    ar: "لتكون مؤهلاً للاستفادة الكاملة من مبادرة الإعفاء (عندما كانت سارية)، حددت زاتكا المتطلبات التالية:"
+  },
+  "Exclusions from the Initiative": {
+    ar: "الاستثناءات من المبادرة"
+  },
+  "Contacting ZATCA": {
+    ar: "الاتصال بزاتكا"
+  },
+  "E-Invoicing Compliance: Phase I and Phase II": {
+    ar: "الامتثال للفوترة الإلكترونية: المرحلة الأولى والمرحلة الثانية"
+  },
+  "Phase I: Core E-Invoicing Requirements": {
+    ar: "المرحلة الأولى: متطلبات الفوترة الإلكترونية الأساسية"
+  },
+  "Phase II: Integration Phase": {
+    ar: "المرحلة الثانية: مرحلة التكامل"
+  },
+  "Conclusion": {
+    ar: "الخلاصة"
+  },
+
+  // List items for Scope of Exemption
+  "Late registration in all tax systems": {
+    ar: "التسجيل المتأخر في جميع أنظمة الضرائب"
+  },
+  "Late payments": {
+    ar: "المدفوعات المتأخرة"
+  },
+  "Late submission of returns": {
+    ar: "التقديم المتأخر للإقرارات"
+  },
+  "Corrections to VAT returns": {
+    ar: "تصحيحات إقرارات ضريبة القيمة المضافة"
+  },
+  "Violations of VAT field control related to e-invoicing regulations": {
+    ar: "مخالفات الرقابة الميدانية لضريبة القيمة المضافة المتعلقة بأنظمة الفوترة الإلكترونية"
+  },
+  "Other general regulations under ZATCA's purview": {
+    ar: "الأنظمة العامة الأخرى ضمن نطاق اختصاص زاتكا"
+  },
+
+  // List items for Eligibility Criteria
+  "VAT Registration: Individuals or entities not yet registered for VAT had to register.": {
+    ar: "تسجيل ضريبة القيمة المضافة: كان على الأفراد أو الكيانات غير المسجلة بعد لضريبة القيمة المضافة التسجيل."
+  },
+  "Submission of All Due Returns: Any outstanding returns had to be filed.": {
+    ar: "تقديم جميع الإقرارات المستحقة: كان يجب تقديم أي إقرارات معلقة."
+  },
+  "Disclosure of Undeclared Taxes: Any previously undisclosed taxes needed to be reported.": {
+    ar: "الكشف عن الضرائب غير المعلنة: كان يجب الإبلاغ عن أي ضرائب لم يتم الإعلان عنها سابقًا."
+  },
+  "Payment of Tax Debt: All outstanding tax debts had to be settled or scheduled under an approved installment plan.": {
+    ar: "سداد الدين الضريبي: كان يجب تسوية جميع الديون الضريبية المعلقة أو جدولتها بموجب خطة أقساط معتمدة."
+  },
+
+  // Additional note
+  "Note (Updated): Even though the broad exemption period has closed, taxpayers who fall behind on payments or disclosures should still proactively contact ZATCA. The authority may allow installment plans or other accommodations to facilitate compliance and minimize penalties, but these are handled on a case-by-case basis.": {
+    ar: "ملاحظة (محدثة): على الرغم من انتهاء فترة الإعفاء الواسعة، لا يزال يتعين على دافعي الضرائب الذين يتخلفون عن السداد أو الكشوف الاتصال بزاتكا بشكل استباقي. قد تسمح الهيئة بخطط أقساط أو تسهيلات أخرى لتسهيل الامتثال وتقليل العقوبات، ولكن يتم التعامل مع هذه على أساس كل حالة على حدة."
+  },
+
+  // Exclusions list
+  "The following were explicitly not included in the original initiative:": {
+    ar: "لم يتم تضمين ما يلي صراحة في المبادرة الأصلية:"
+  },
+  "Tax evasion violations": {
+    ar: "مخالفات التهرب الضريبي"
+  },
+  "Fines paid before the initiative's effective date": {
+    ar: "الغرامات المدفوعة قبل تاريخ سريان المبادرة"
+  },
+  "Late payment fines related to any tax installment due after November 30, 2022": {
+    ar: "غرامات السداد المتأخر المتعلقة بأي قسط ضريبي مستحق بعد 30 نوفمبر 2022"
+  },
+
+  // Contact ZATCA list
+  "If you have questions regarding any ZATCA initiatives, exemptions, or e-invoicing requirements, you can reach the authority via:": {
+    ar: "إذا كانت لديك أسئلة بخصوص أي مبادرات أو إعفاءات أو متطلبات فوترة إلكترونية من زاتكا، يمكنك التواصل مع الهيئة عبر:"
+  },
+  "Unified Call Center: 19993 (available 24/7)": {
+    ar: "المركز الموحد للاتصال: 19993 (متاح على مدار الساعة طوال أيام الأسبوع)"
+  },
+  "Twitter:": {
+    ar: "تويتر:"
+  },
+  "Email: info@zatca.gov.sa": {
+    ar: "البريد الإلكتروني: info@zatca.gov.sa"
+  },
+  "Instant Chat: ZATCA's official website": {
+    ar: "الدردشة الفورية: الموقع الرسمي لزاتكا"
+  },
+
+  // Phase I content
+  "Phase I of e-invoicing became mandatory on December 4, 2021, requiring businesses to generate and store invoices electronically. Despite the pandemic-related leniencies in fines, ZATCA has emphasized that compliance with e-invoicing is non-negotiable and critical for modernizing Saudi Arabia's tax ecosystem.": {
+    ar: "أصبحت المرحلة الأولى من الفوترة الإلكترونية إلزامية في 4 ديسمبر 2021، مما يتطلب من الشركات إنشاء وتخزين الفواتير إلكترونيًا. على الرغم من التساهل في الغرامات المتعلق بالجائحة، أكدت زاتكا أن الامتثال للفوترة الإلكترونية غير قابل للتفاوض وحاسم لتحديث النظام الضريبي في المملكة العربية السعودية."
+  },
+
+  // Phase II content
+  "Phase II (Integration Phase) began rolling out in January 2023, requiring additional technical integrations and real-time data sharing with ZATCA's systems. This roll-out is being implemented in waves throughout 2023 and beyond.": {
+    ar: "بدأ طرح المرحلة الثانية (مرحلة التكامل) في يناير 2023، مما يتطلب تكاملات فنية إضافية ومشاركة البيانات في الوقت الفعلي مع أنظمة زاتكا. يتم تنفيذ هذا الطرح على مراحل طوال عام 2023 وما بعده."
+  },
+
+  // Important updates list
+  "Important Updates for 2023 and 2024:": {
+    ar: "تحديثات مهمة لعامي 2023 و2024:"
+  },
+  "Businesses are being notified by ZATCA via email or SMS about their specific integration deadlines.": {
+    ar: "يتم إخطار الشركات من قبل زاتكا عبر البريد الإلكتروني أو الرسائل القصيرة بشأن مواعيد التكامل المحددة."
+  },
+  "ZATCA has released stricter requirements for cryptographic seals and QR codes on invoices.": {
+    ar: "أصدرت زاتكا متطلبات أكثر صرامة للأختام التشفيرية ورموز QR على الفواتير."
+  },
+  "Penalties for non-compliance can be substantial, including fines for missing or incorrect invoice details.": {
+    ar: "يمكن أن تكون العقوبات على عدم الامتثال كبيرة، بما في ذلك غرامات على تفاصيل الفواتير المفقودة أو غير الصحيحة."
+  },
+  "To avoid last-minute hassles and ensure smooth compliance, implement a robust e-invoicing solution that meets ZATCA's Phase II technical specifications.": {
+    ar: "لتجنب المتاعب في اللحظة الأخيرة وضمان الامتثال السلس، قم بتنفيذ حل فوترة إلكترونية قوي يلبي المواصفات الفنية للمرحلة الثانية من زاتكا."
+  },
+
+  // Conclusion content
+  "Although the broad fines and penalty exemption window introduced in mid-2022 has ended, ZATCA continues to facilitate compliance through targeted relief measures and ongoing e-invoicing initiatives. Whether you are a small business or a multinational enterprise, staying updated on ZATCA announcements and adhering to e-invoicing requirements is essential.": {
+    ar: "على الرغم من انتهاء نافذة الإعفاء الواسعة للغرامات والعقوبات التي تم تقديمها في منتصف عام 2022، تواصل زاتكا تسهيل الامتثال من خلال إجراءات الإغاثة المستهدحة ومبادرات الفوترة الإلكترونية المستمرة. سواء كنت شركة صغيرة أو مؤسسة متعددة الجنسيات، فإن البقاء على اطلاع بإعلانات زاتكا والالتزام بمتطلبات الفوترة الإلكترونية أمر ضروري."
+  },
+
+  // Final tip
+  "Final Tip: Regularly visit ZATCA's official website and subscribe to newsletters to remain informed about new exemptions, deadlines, and regulations.": {
+    ar: "نصيحة أخيرة: قم بزيارة الموقع الرسمي لزاتكا بانتظام واشترك في النشرات الإخبارية للبقاء على اطلاع بالإعفاءات الجديدة والمواعيد النهائية واللوائح."
+  },
+
+  // Stay proactive text
+  "Stay proactive, remain compliant, and leverage digital tools to thrive in Saudi Arabia's rapidly evolving economic environment.": {
+    ar: "كن استباقيًا، وابقَ متوافقًا، واستفد من الأدوات الرقمية للازدهار في البيئة الاقتصادية سريعة التطور في المملكة العربية السعودية."
+  },
+
+  // About Accqrate
+  "About Accqrate": {
+    ar: "عن أككوريت"
+  },
+  "Accqrate is a leading Saudi-based ERP and e-invoicing solution provider, offering comprehensive accounting, e-invoicing integrations, and POS systems. It ensures seamless integration with ZATCA's Fatoora portal for Phase 2 compliance and is powered by GenAI and GPT technologies to enhance productivity and inter-department collaboration.": {
+    ar: "أككوريت هو مزود حلول ERP والفوترة الإلكترونية الرائد مقره السعودية، حيث يقدم محاسبة شاملة وتكاملات فوترة إلكترونية وأنظمة نقاط بيع. يضمن التكامل السلس مع بوابة فاتورة زاتكا للامتثال للمرحلة الثانية ويعمل بتقنيات الذكاء الاصطناعي التوليدي وGPT لتعزيز الإنتاجية والتعاون بين الأقسام."
+  },
+  "Built with flexibility and scalability, Accqrate provides both cloud and on-premise solutions, supporting digital transformation for businesses across Saudi Arabia and beyond.": {
+    ar: "مبنيًا على المرونة وقابلية التوسع، يوفر أككوريت حلولاً سحابية ومحلية، داعمًا التحول الرقمي للشركات في جميع أنحاء المملكة العربية السعودية وما بعدها."
+  },
+
+  // Short texts and placeholders
+  "June 1, 2022": {
+    ar: "1 يونيو 2022"
+  },
+  "November 30, 2022": {
+    ar: "30 نوفمبر 2022"
+  },
+  "Note": {
+    ar: "ملاحظة"
+  },
+  "Updated": {
+    ar: "محدث"
+  },
+  "b": {
+    ar: "b"
+  },
+  "ZATCA": {
+    ar: "زاتكا"
+  },
+  "Accqrate": {
+    ar: "أككوريت"
+  },
+  "Phase I": {
+    ar: "المرحلة الأولى"
+  },
+  "Phase II": {
+    ar: "المرحلة الثانية"
+  },
+  "December 4, 2021": {
+    ar: "4 ديسمبر 2021"
+  },
+  "January 2023": {
+    ar: "يناير 2023"
+  },
+
+  // Alternative shorter versions (if your T component splits text)
+  "When selecting e-invoice software for your business in Saudi Arabia, ensure that it is flexible and easily integrates with your other business functions such as Sales, Purchase, Marketing, and HR.": {
+    ar: "عند اختيار برنامج الفواتير الإلكترونية لعملك في المملكة العربية السعودية، تأكد من مرونته وتكامله السهل مع وظائف عملك الأخرى مثل المبيعات والمشتريات والتسويق والموارد البشرية."
+  },
+  "This integration enables seamless transitions to any ERP process in the future, supporting growth without major cost implications.": {
+    ar: "يتيح هذا التكامل انتقالًا سلسًا إلى أي عملية ERP في المستقبل، مما يدعم النمو دون آثار تكلفة كبيرة."
+  },
+  "The e-invoice software should easily integrate with your current accounting software or any other systems handling accounting, VAT, inventory, payroll, etc., without much trouble.": {
+    ar: "يجب أن يتكامل برنامج الفواتير الإلكترونية بسهولة مع برنامج المحاسبة الحالي الخاص بك أو أي أنظمة أخرى تتعامل مع المحاسبة وضريبة القيمة المضافة والمخزون وكشوف المرتبات، وما إلى ذلك، دون مشكلة تذكر."
+  },
+  "This will lead to better collaboration across your business processes, especially as your accounts payable focuses on efficient invoice processing.": {
+    ar: "سيؤدي هذا إلى تعاون أفضل عبر عمليات عملك، خاصةً مع تركيز حساباتك الدائنة على معالجة الفواتير بكفاءة."
+  },
+  "Choose e-invoicing software that can be deployed in just 4–5 simple steps to get the final invoice output.": {
+    ar: "اختر برنامج الفوترة الإلكترونية الذي يمكن نشره في 4-5 خطوات بسيطة فقط للحصول على مخرجات الفاتورة النهائية."
+  },
+  "The provider should work closely with you on a detailed rollout plan and ensure comprehensive training is available for smooth adoption.": {
+    ar: "يجب أن يعمل المزود معك عن كثب على خطة نشر مفصلة ويضمن توفر تدريب شامل لاعتماد سلس."
+  },
+  "Pricing is a key factor that can make or break an agreement.": {
+    ar: "التسعير عامل رئيسي يمكن أن يجعل الاتفاقية ناجحة أو فاشلة."
+  },
+  "It's essential to carefully review the pricing structure of the e-invoicing solution to ensure it aligns with the scale of your business.": {
+    ar: "من الضروري مراجعة هيكل التسعير لحل الفوترة الإلكترونية بعناية لضمان توافقه مع حجم أعمالك."
+  },
+  "Small business owners generating five or fewer invoices per month might even consider free e-invoicing software providers.": {
+    ar: "قد يفكر أصحاب الأعمال الصغيرة الذين يولدون خمس فواتير أو أقل شهريًا حتى في مزودي برامج الفوترة الإلكترونية المجانية."
+  },
+   "Breaking Barriers: Attaining ZATCA E-Invoicing Compliance with ERP Systems Limited in External Integration": {
+    ar: "تخطي الحواجز: تحقيق الامتثال للفوترة الإلكترونية لزاتكا مع أنظمة ERP المحدودة في التكامل الخارجي"
+  },
+
+  // First paragraph
+  "The Zakat, Tax, and Customs Authority (ZATCA) of the Kingdom of Saudi Arabia (KSA) launched Phase 1 of its e-invoicing initiative on December 4, 2021. This phase mandated e-invoicing for all resident taxpayers and third-party invoice issuers acting on behalf of residents. However, non-resident businesses registered for VAT purposes were not included in this phase.": {
+    ar: "أطلقت هيئة الزكاة والضريبة والجمارك (زاتكا) في المملكة العربية السعودية المرحلة الأولى من مبادرتها للفوترة الإلكترونية في 4 ديسمبر 2021. فرضت هذه المرحلة الفوترة الإلكترونية على جميع دافعي الضرائب المقيمين وموفري الفواتير من الأطراف الثالثة الذين يتصرفون نيابة عن المقيمين. ومع ذلك، لم تكن الشركات غير المقيمة المسجلة لأغراض ضريبة القيمة المضافة مشمولة في هذه المرحلة."
+  },
+
+  // Second paragraph
+  "ZATCA is now progressively implementing Phase 2 of e-invoicing, which began on January 1, 2023. The first wave of Phase 2 targets taxpayers with an annual turnover exceeding SAR 3 billion in 2021. Subsequent waves are expected to cover smaller businesses, expanding the scope of e-invoicing compliance across the Kingdom.": {
+    ar: "تقوم زاتكا الآن بتنفيذ المرحلة الثانية من الفوترة الإلكترونية تدريجيًا، والتي بدأت في 1 يناير 2023. تستهدف الموجة الأولى من المرحلة الثانية دافعي الضرائب الذين تجاوز حجم أعمالهم السنوي 3 مليارات ريال سعودي في عام 2021. من المتوقع أن تغطي الموجات اللاحقة الشركات الأصغر حجمًا، مما يوسع نطاق الامتثال للفوترة الإلكترونية في جميع أنحاء المملكة."
+  },
+
+  // Headings
+  "Understanding ERP Integration Challenges with ZATCA's Fatoora Portal": {
+    ar: "فهم تحديات تكامل ERP مع بوابة فاتورة زاتكا"
+  },
+  "Phase 2 of KSA's e-invoicing regulations requires businesses to integrate their ERP systems with ZATCA's Fatoora portal for B2B invoice clearance and B2C invoice reporting. While this integration ensures compliance, certain businesses may face challenges in connecting their ERP systems to external platforms like ZATCA's.": {
+    ar: "تتطلب المرحلة الثانية من لوائح الفوترة الإلكترونية في المملكة العربية السعودية من الشركات تكامل أنظمة ERP الخاصة بها مع بوابة فاتورة زاتكا لتصفية الفواتير بين الشركات (B2B) والإبلاغ عن الفواتير بين الشركات والمستهلكين (B2C). بينما يضمن هذا التكامل الامتثال، قد تواجه بعض الشركات تحديات في ربط أنظمة ERP الخاصة بها بمنصات خارجية مثل منصة زاتكا."
+  },
+
+  // Why ERP systems can't connect section
+  "Why Can't Some ERP Systems Connect to External Systems?": {
+    ar: "لماذا لا يمكن لبعض أنظمة ERP الاتصال بالأنظمة الخارجية؟"
+  },
+  "Not all ERP systems are built to seamlessly interact with external platforms. Businesses may face difficulties due to:": {
+    ar: "ليست جميع أنظمة ERP مبنية للتفاعل بسلاسة مع المنصات الخارجية. قد تواجه الشركات صعوبات بسبب:"
+  },
+
+  // List items
+  "Legacy Systems: Older ERP systems often lack the necessary APIs or integration capabilities.": {
+    ar: "الأنظمة القديمة: غالبًا ما تفتقر أنظمة ERP القديمة إلى واجهات برمجة التطبيقات (APIs) اللازمة أو قدرات التكامل."
+  },
+  "Customization: Heavily customized ERP solutions tailored to specific business processes can make integration more complex.": {
+    ar: "التخصيص: يمكن أن تجعل حلول ERP المخصصة بشدة والمصممة لعمليات عمل محددة التكامل أكثر تعقيدًا."
+  },
+  "Security Policies: Organizations with strict data control policies may restrict integration.": {
+    ar: "سياسات الأمان: قد تقيد المنظمات ذات سياسات التحكم الصارمة في البيانات التكامل."
+  },
+
+  // Does ZATCA provide platform section
+  "Does ZATCA Provide an E-Invoicing Platform?": {
+    ar: "هل تقدم زاتكا منصة للفوترة الإلكترونية؟"
+  },
+  "As of now, ZATCA does not offer a dedicated platform for generating e-invoices. Instead, it provides APIs that businesses can use for integration. While there is no official platform yet, ZATCA may introduce one in the future to simplify compliance, especially for SMEs.": {
+    ar: "حتى الآن، لا تقدم زاتكا منصة مخصصة لتوليد الفواتير الإلكترونية. بدلاً من ذلك، تقدم واجهات برمجة التطبيقات (APIs) التي يمكن للشركات استخدامها للتكامل. بينما لا توجد منصة رسمية بعد، قد تقدم زاتكا واحدة في المستقبل لتبسيط الامتثال، خاصة للشركات الصغيرة والمتوسطة."
+  },
+
+  // Accqrate help section
+  "How Can Accqrate Help If Your ERP Cannot Integrate with ZATCA's Fatoora Portal?": {
+    ar: "كيف يمكن لأككوريت المساعدة إذا لم يتمكن نظام ERP الخاص بك من التكامل مع بوابة فاتورة زاتكا؟"
+  },
+  "Accqrate offers a specialized E-Invoicing Middleware Module designed to bridge the gap between your existing systems and ZATCA's Fatoora portal. This middleware ensures compliance through flexible integration options and data validation.": {
+    ar: "تقدم أككوريت وحدة وسيطة متخصصة للفوترة الإلكترونية مصممة لسد الفجوة بين أنظمتك الحالية وبوابة فاتورة زاتكا. تضمن هذه الوسيطة الامتثال من خلال خيارات تكامل مرنة والتحقق من البيانات."
+  },
+
+  // Key steps section
+  "Key Steps Performed by Accqrate's Middleware:": {
+    ar: "الخطوات الرئيسية التي تقوم بها وسيطة أككوريت:"
+  },
+  "Data Collection: The middleware collects invoice data from your ERP system.": {
+    ar: "جمع البيانات: تجمع الوسيطة بيانات الفاتورة من نظام ERP الخاص بك."
+  },
+  "Compliance Validation: It performs mandatory ZATCA checks on the invoices.": {
+    ar: "التحقق من الامتثال: تقوم بالتحقق الإلزامي من الفواتير وفقًا لمتطلبات زاتكا."
+  },
+  "XML Generation: The system generates ZATCA-compliant XML files.": {
+    ar: "توليد XML: يولد النظام ملفات XML متوافقة مع زاتكا."
+  },
+  "Communication with ZATCA Servers: Invoices are securely submitted for approval.": {
+    ar: "التواصل مع خوادم زاتكا: يتم تقديم الفواتير بأمان للموافقة."
+  },
+  "Approval and Retrieval: Approved invoices are retrieved and stored.": {
+    ar: "الموافقة والاسترجاع: يتم استرجاع الفواتير المعتمدة وتخزينها."
+  },
+  "Invoice Delivery: Final approved invoices are delivered in both PDF and XML formats.": {
+    ar: "تسليم الفاتورة: يتم تسليم الفواتير المعتمدة النهائية بتنسيقي PDF و XML."
+  },
+  "By leveraging Accqrate's middleware, businesses can achieve seamless compliance with KSA's e-invoicing regulations, regardless of their ERP system's limitations.": {
+    ar: "من خلال الاستفادة من وسيطة أككوريت، يمكن للشركات تحقيق الامتثال السلس للوائح الفوترة الإلكترونية في المملكة العربية السعودية، بغض النظر عن قيود نظام ERP الخاص بها."
+  },
+
+  // Conclusion section
+  "Conclusion": {
+    ar: "الخلاصة"
+  },
+  "As ZATCA continues to roll out its phased e-invoicing regulations, businesses must ensure compliance readiness. Whether your ERP integrates directly with the Fatoora portal or not, solutions like Accqrate's middleware can bridge the gap efficiently.": {
+    ar: "مع استمرار زاتكا في طرح لوائح الفوترة الإلكترونية المرحلية، يجب على الشركات ضمان جاهزية الامتثال. سواء كان نظام ERP الخاص بك يتكامل مباشرة مع بوابة فاتورة أم لا، يمكن لحلول مثل وسيطة أككوريت سد الفجوة بكفاءة."
+  },
+  "Stay ahead of regulatory changes by adopting flexible and scalable solutions that evolve with your business needs.": {
+    ar: "ابقَ متقدمًا على التغييرات التنظيمية من خلال تبني حلول مرنة وقابلة للتطوير تتطور مع احتياجات عملك."
+  },
+
+  // About Accqrate section
+  "About Accqrate": {
+    ar: "عن أككوريت"
+  },
+  "Accqrate is a Saudi-based ERP and e-invoicing provider offering accounting, POS, and full ERP suites. Recognized for cost-efficiency and seamless ZATCA integration, Accqrate's GenAI-powered platform enhances collaboration and automation.": {
+    ar: "أككوريت هو مزود حلول ERP والفوترة الإلكترونية مقره السعودية، حيث يقدم المحاسبة وأنظمة نقاط البيع ومجموعات ERP كاملة. معترف به من حيث الكفاءة التكلفة والتكامل السلس مع زاتكا، تعزز منصة أككوريت المدعومة بالذكاء الاصطناعي التوليدي التعاون والأتمتة."
+  },
+  "With scalability and flexibility at its core, Accqrate offers both cloud and on-premise deployments, serving clients across MENA, Europe, and ASEAN markets to achieve digital transformation and operational excellence.": {
+    ar: "مع قابلية التوسع والمرونة في جوهرها، تقدم أككوريت كل من النشرات السحابية والمحلية، مما يخدم العملاء في جميع أنحاء أسواق الشرق الأوسط وشمال أفريقيا وأوروبا ورابطة أمم جنوب شرق آسيا لتحقيق التحول الرقمي والتميز التشغيلي."
+  },
+
+  // Short texts and links
+  "Phase 1": {
+    ar: "المرحلة الأولى"
+  },
+  "Phase 2 of e-invoicing": {
+    ar: "المرحلة الثانية من الفوترة الإلكترونية"
+  },
+  "ZATCA's Fatoora portal": {
+    ar: "بوابة فاتورة زاتكا"
+  },
+  "E-Invoicing Middleware Module": {
+    ar: "وحدة الوسيطة للفوترة الإلكترونية"
+  },
+  "ZATCA": {
+    ar: "زاتكا"
+  },
+  "Accqrate": {
+    ar: "أككوريت"
+  },
+  "KSA": {
+    ar: "المملكة العربية السعودية"
+  },
+  "ERP": {
+    ar: "ERP"
+  },
+  "SMEs": {
+    ar: "الشركات الصغيرة والمتوسطة"
+  },
+  "B2B": {
+    ar: "من شركة لشركة"
+  },
+  "B2C": {
+    ar: "من شركة لمستهلك"
+  },
+  "API": {
+    ar: "واجهة برمجة التطبيقات"
+  },
+  "APIs": {
+    ar: "واجهات برمجة التطبيقات"
+  },
+  "XML": {
+    ar: "XML"
+  },
+  "PDF": {
+    ar: "PDF"
+  },
+  "GenAI": {
+    ar: "الذكاء الاصطناعي التوليدي"
+  },
+  "MENA": {
+    ar: "الشرق الأوسط وشمال أفريقيا"
+  },
+  "ASEAN": {
+    ar: "رابطة أمم جنوب شرق آسيا"
+  },
+  "of its e-invoicing initiative on December 4, 2021. This phase mandated e-invoicing for all resident taxpayers and third-party invoice issuers acting on behalf of residents. However, non-resident businesses registered for VAT purposes were not included in this phase.": {
+    ar: " لمبادرة الفوترة الإلكترونية الخاصة بها في 4 ديسمبر 2021. فرضت هذه المرحلة الفوترة الإلكترونية على جميع دافعي الضرائب المقيمين ومصدري الفواتير التابعين لجهات خارجية نيابة عن المقيمين. ومع ذلك، لم تشمل الشركات غير المقيمة المسجلة لأغراض ضريبة القيمة المضافة في هذه المرحلة."
+  },
+  ", which began on January 1, 2023. The first wave of Phase 2 targets taxpayers with an annual turnover exceeding SAR 3 billion in 2021. Subsequent waves are expected to cover smaller businesses, expanding the scope of e-invoicing compliance across the Kingdom.": {
+    ar: "، والتي بدأت في 1 يناير 2023. يستهدف الموجة الأولى من المرحلة 2 دافعي الضرائب ذوي الدوران السنوي الذي يتجاوز 3 مليارات ريال سعودي في 2021. من المتوقع أن تغطي الموجات اللاحقة الشركات الأصغر حجمًا، مما يوسع نطاق الامتثال للفوترة الإلكترونية عبر المملكة."
+  },
+  "By leveraging Accqrate’s middleware, businesses can achieve seamless compliance with KSA’s e-invoicing regulations, regardless of their ERP system’s limitations.": {
+    ar: "من خلال الاستفادة من وسيط Accqrate، يمكن للشركات تحقيق الامتثال السلس للوائح الفوترة الإلكترونية في المملكة العربية السعودية، بغض النظر عن قيود نظام ERP الخاص بها."
+  },
+  "As ZATCA continues to roll out its phased e-invoicing regulations, businesses must ensure compliance readiness. Whether your ERP integrates directly with the Fatoora portal or not, solutions like Accqrate’s middleware can bridge the gap efficiently.": {
+    ar: "مع استمرار زاتكا في طرح لوائح الفوترة الإلكترونية المرحلية، يجب على الشركات ضمان جاهزية الامتثال. سواء كان نظام ERP الخاص بك يتكامل مباشرة مع بوابة فاتورة أم لا، يمكن لحلول مثل وسيط Accqrate سد الفجوة بكفاءة."
+  },
+  "is a Saudi-based ERP and e-invoicing provider offering accounting, POS, and full ERP suites. Recognized for cost-efficiency and seamless ZATCA integration, Accqrate’s GenAI-powered platform enhances collaboration and automation.": {
+    ar: "هو مزود ERP وفوترة إلكترونية مقرها في السعودية يقدم محاسبة، نقاط البيع، وحزم ERP كاملة. معروف بكفاءة التكلفة والتكامل السلس مع زاتكا، تعزز منصة Accqrate المدعومة بـ GenAI التعاون والأتمتة."
+  },
+  "Accqrate offers a specialized": {
+    ar: "تقدم Accqrate متخصصة"
+  },
+  "designed to bridge the gap between your existing systems and ZATCA’s Fatoora portal. This middleware ensures compliance through flexible integration options and data validation.": {
+    ar: "مصممة لسد الفجوة بين أنظمتك الحالية وبوابة فاتورة زاتكا. يضمن هذا الوسيط الامتثال من خلال خيارات التكامل المرنة والتحقق من صحة البيانات."
+  },
+  "Phase 2 of KSA’s e-invoicing regulations requires businesses to integrate their ERP systems with ": {
+    ar: "تتطلب المرحلة 2 من لوائح الفوترة الإلكترونية في المملكة العربية السعودية من الشركات دمج أنظمة ERP الخاصة بها مع "
+  },
+  "ZATCA’s Fatoora portal": {
+    ar: "بوابة فاتورة زاتكا"
+  },
+  "for B2B invoice clearance and B2C invoice reporting. While this integration ensures compliance, certain businesses may face challenges in connecting their ERP systems to external platforms like ZATCA’s.": {
+    ar: "لتصفية الفواتير B2B والإبلاغ عن الفواتير B2C. بينما يضمن هذا التكامل الامتثال، قد تواجه بعض الشركات تحديات في ربط أنظمة ERP الخاصة بها بمنصات خارجية مثل زاتكا."
+  },
+  "Phase 2 of e-invoicing": {
+    ar: "المرحلة 2 من الفوترة الإلكترونية"
+  },
+  "The Zakat, Tax, and Customs Authority (ZATCA) of the Kingdom of Saudi Arabia (KSA) launched": {
+    ar: "أطلقت الهيئة العامة للزكاة والدخل والجمارك (ZATCA) في المملكة العربية السعودية (KSA)"
+  },
+  "ZATCA is now progressively implementing": {
+    ar: "تطبق ZATCA الآن تدريجياً"
+  },
+
+  "CSR": {
+    ar: "طلب توقيع الشهادة"
+  },
+  "CRs": {
+    ar: "سجلات تجارية"
+  },
+  "EGS": {
+    ar: "متاجر سلع انتقائية"
+  },
+  "One-Time Password": {
+    ar: "كلمة مرور لمرة واحدة"
+  },
+  "Certificate Signing Request": {
+    ar: "طلب توقيع الشهادة"
+  },
+  "Commercial Registrations": {
+    ar: "سجلات تجارية"
+  },
+  "Excise Goods Stores": {
+    ar: "متاجر سلع انتقائية"
+  },
+  "Point-of-Sale": {
+    ar: "نقاط البيع"
+  },
+  "Standard and Simplified Tax Invoice": {
+    ar: "الفاتورة الضريبية القياسية والمبسطة"
+  },
+  "The essence of the ZATCA’s notification, titled FATOORA - Device Onboarding Outreach, is to remind taxpayers of the criticality of accurately entering CSR details during device setup. This process is pivotal as it establishes a secure communication channel between taxpayers and ZATCA, enabling accurate and compliant e-invoicing.": {
+    ar: "جوهر إشعار زاتكا، بعنوان \"فاتورة - اتصال تسجيل الجهاز\"، هو تذكير دافعي الضرائب بأهمية إدخال تفاصيل CSR بدقة أثناء إعداد الجهاز. هذه العملية محورية لأنها تنشئ قناة اتصال آمنة بين دافعي الضرائب وزاتكا، مما يتيح فوترة إلكترونية دقيقة ومتوافقة."
+  },
+  "Don’t wait for reminders from ZATCA. Fix issues early to maintain compliance and efficiency.": {
+    ar: "لا تنتظر تذكيرات من زاتكا. أصلح المشكلات مبكراً للحفاظ على الامتثال والكفاءة."
+  },
+  "Accqrate’s E-Invoicing Solutions: Tailored for Compliance": {
+    ar: "حلول الفوترة الإلكترونية من Accqrate: مصممة للامتثال"
+  },
+  "Accqrate’s e-invoicing solutions are ZATCA-approved, fully compliant with Phase 2, and integrate with ERPs, POS systems, and custom applications.": {
+    ar: "حلول الفوترة الإلكترونية من Accqrate معتمدة من زاتكا، متوافقة بالكامل مع المرحلة 2، وتتكامل مع أنظمة ERP ونقاط البيع والتطبيقات المخصصة."
+  },
+  "Create a New Device:": {
+    ar: "إنشاء جهاز جديد:"
+  },
+  "Duplicate the existing device.": {
+    ar: "استنساخ الجهاز الموجود."
+  },
+  "Update the Serial Number:": {
+    ar: "تحديث رقم التسلسلي:"
+  },
+  "Ensure it follows the correct format.": {
+    ar: "تأكد من اتباع التنسيق الصحيح."
+  },
+  "Access FATOORA:": {
+    ar: "الوصول إلى فاتورة:"
+  },
+  "Log in to obtain a One-Time Password (OTP).": {
+    ar: "تسجيل الدخول للحصول على كلمة مرور لمرة واحدة (OTP)."
+  },
+  "Onboard the New Device:": {
+    ar: "تسجيل الجهاز الجديد:"
+  },
+  "Register it with ZATCA for compliance.": {
+    ar: "تسجيله مع زاتكا للامتثال."
+  },
+  "Switch Source Systems:": {
+    ar: "تبديل أنظمة المصدر:"
+  },
+  "Use the newly onboarded device.": {
+    ar: "استخدام الجهاز المسجل حديثاً."
+  },
+  "Deactivate the Old Device:": {
+    ar: "إلغاء تنشيط الجهاز القديم:"
+  },
+  "Remove it to prevent duplication.": {
+    ar: "إزالته لمنع التكرار."
+  },
+  "A ZATCA Compliant E-Invoicing Software in KSA": {
+    ar: "برنامج فواتير إلكترونية متوافق مع زاتكا في المملكة العربية السعودية"
+  },
+
+  // First paragraph
+  "E-invoicing is becoming a critical requirement for businesses in Saudi Arabia. With ZATCA (Zakat, Tax, and Customs Authority) regulations, it is essential for businesses to understand how e-invoicing works and why it necessary to stay compliant.": {
+    ar: "أصبحت الفوترة الإلكترونية متطلبًا حاسمًا للشركات في المملكة العربية السعودية. مع لوائح هيئة الزكاة والضريبة والجمارك (زاتكا)، من الضروري أن تفهم الشركات كيفية عمل الفوترة الإلكترونية ولماذا من الضروري البقاء متوافقًا."
+  },
+
+  // Second paragraph
+  "Accqrate provides a ZATCA-approved e-invoicing solution that enables businesses to easily generate, store, and transmit digital invoices to ZATCA. Let's dive into how e-invoicing works in Saudi Arabia and how Accqrate can simplify the process for your business.": {
+    ar: "يوفر أككوريت حلاً للفوترة الإلكترونية معتمدًا من زاتكا يمكن الشركات من إنشاء وتخزين وإرسال الفواتير الرقمية إلى زاتكا بسهولة. دعنا نتعمق في كيفية عمل الفوترة الإلكترونية في المملكة العربية السعودية وكيف يمكن لأككوريت تبسيط العملية لعملك."
+  },
+
+  // What is E-Invoicing section
+  "What is E-Invoicing in Saudi Arabia?": {
+    ar: "ما هي الفوترة الإلكترونية في المملكة العربية السعودية؟"
+  },
+  "E-invoicing, or Fatoora, refers to the process of issuing, storing, and transmitting invoices electronically in a ZATCA-compliant format. While many businesses already use digital invoices, most small and medium-sized enterprises still rely on Excel-based invoices, which may not meet the required compliance standards.": {
+    ar: "تشير الفوترة الإلكترونية، أو الفاتورة، إلى عملية إصدار وتخزين وإرسال الفواتير إلكترونيًا بتنسيق متوافق مع زاتكا. بينما تستخدم العديد من الشركات بالفعل فواتير رقمية، لا تزال معظم المؤسسات الصغيرة والمتوسطة تعتمد على الفواتير القائمة على إكسل، والتي قد لا تفي بمعايير الامتثال المطلوبة."
+  },
+  "There are two phases of e-invoicing compliance in Saudi Arabia:": {
+    ar: "هناك مرحلتان للامتثال للفوترة الإلكترونية في المملكة العربية السعودية:"
+  },
+  "Phase 1: Businesses must issue digital invoices with a QR code and unique invoice number.": {
+    ar: "المرحلة 1: يجب على الشركات إصدار فواتير رقمية مع رمز QR ورقم فاتورة فريد."
+  },
+  "Phase 2: Invoices must be transmitted to ZATCA in real-time, and approval from ZATCA is mandatory.": {
+    ar: "المرحلة 2: يجب إرسال الفواتير إلى زاتكا في الوقت الفعلي، وموافقة زاتكا إلزامية."
+  },
+  "Failing to comply with these regulations can result in significant penalties. Implementing a simple, compliant e-invoicing solution like Accqrate ensures your business stays on the right track.": {
+    ar: "قد يؤدي عدم الامتثال لهذه اللوائح إلى عقوبات كبيرة. يضمن تنفيذ حل فوترة إلكترونية بسيط ومتوافق مثل أككوريت بقاء عملك على المسار الصحيح."
+  },
+
+  // Why Do Businesses Need E-Invoicing section
+  "Why Do Businesses Need E-Invoicing?": {
+    ar: "لماذا تحتاج الشركات إلى الفوترة الإلكترونية؟"
+  },
+  "E-invoicing offers numerous advantages beyond compliance:": {
+    ar: "تقدم الفوترة الإلكترونية مزايا عديدة تتجاوز الامتثال:"
+  },
+  "✅ Create digital invoices in a few clicks": {
+    ar: "✅ إنشاء فواتير رقمية بنقرة واحدة فقط"
+  },
+  "✅ Embed QR codes for compliance": {
+    ar: "✅ تضمين رموز QR للامتثال"
+  },
+  "✅ Store and retrieve invoices anytime for audits": {
+    ar: "✅ تخزين واسترجاع الفواتير في أي وقت للمراجعة"
+  },
+  "✅ Avoid manual errors in calculations": {
+    ar: "✅ تجنب الأخطاء اليدوية في الحسابات"
+  },
+  "✅ Transmit invoices to ZATCA seamlessly": {
+    ar: "✅ إرسال الفواتير إلى زاتكا بسلاسة"
+  },
+  "To get a free demo: Contact Us": {
+    ar: "للحصول على عرض تجريبي مجاني: اتصل بنا"
+  },
+
+  // E-Invoicing Made Easy section
+  "E-Invoicing Made Easy with Accqrate": {
+    ar: "الفوترة الإلكترونية سهلة مع أككوريت"
+  },
+  "Accqrate's e-invoicing solution offers a fast and seamless process to generate ZATCA-compliant invoices.": {
+    ar: "يقدم حل الفوترة الإلكترونية من أككوريت عملية سريعة وسلسة لتوليد فواتير متوافقة مع زاتكا."
+  },
+  "Key Features of Accqrate's E-Invoicing Software:": {
+    ar: "الميزات الرئيسية لبرنامج الفوترة الإلكترونية من أككوريت:"
+  },
+  "📌 Automatic QR code embedding": {
+    ar: "📌 تضمين تلقائي لرمز QR"
+  },
+  "📌 Generate tax invoices or simplified invoices": {
+    ar: "📌 إنشاء فواتير ضريبية أو فواتير مبسطة"
+  },
+  "📌 Customize invoice templates with your logo and branding": {
+    ar: "📌 تخصيص قوالب الفواتير بشعارك وهوية علامتك التجارية"
+  },
+  "📌 One-click invoice sharing with customers": {
+    ar: "📌 مشاركة الفواتير مع العملاء بنقرة واحدة"
+  },
+  "📌 Built-in error detection and correction": {
+    ar: "📌 اكتشاف الأخطاء وتصحيحها المدمج"
+  },
+  "📌 Transmit invoices to ZATCA instantly": {
+    ar: "📌 إرسال الفواتير إلى زاتكا فورًا"
+  },
+  "📌 Automatic document archiving for future reference": {
+    ar: "📌 أرشفة تلقائية للمستندات للرجوع إليها في المستقبل"
+  },
+  "📌 User role and access management": {
+    ar: "📌 إدارة أدوار المستخدمين والوصول"
+  },
+
+  // How to Start section
+  "How to Start E-Invoicing with Accqrate": {
+    ar: "كيف تبدأ الفوترة الإلكترونية مع أككوريت"
+  },
+  "Getting started with Accqrate is simple, whether you're new to e-invoicing or switching from another software.": {
+    ar: "البدء مع أككوريت أمر بسيط، سواء كنت جديدًا في الفوترة الإلكترونية أو تنتقل من برنامج آخر."
+  },
+  "1. If You're Not Using Any Software:": {
+    ar: "1. إذا لم تكن تستخدم أي برنامج:"
+  },
+  "✅ Register your company on Accqrate": {
+    ar: "✅ تسجيل شركتك على أككوريت"
+  },
+  "✅ Create your customer list or upload it from Excel": {
+    ar: "✅ إنشاء قائمة عملائك أو تحميلها من إكسل"
+  },
+  "✅ Create your product list or upload it from Excel": {
+    ar: "✅ إنشاء قائمة منتجاتك أو تحميلها من إكسل"
+  },
+  "✅ Generate e-invoices": {
+    ar: "✅ إنشاء فواتير إلكترونية"
+  },
+  "✅ Transmit the invoices to ZATCA": {
+    ar: "✅ إرسال الفواتير إلى زاتكا"
+  },
+  "2. If You're Using Another Software:": {
+    ar: "2. إذا كنت تستخدم برنامجًا آخر:"
+  },
+  "✅ Upload your existing invoices from Excel": {
+    ar: "✅ تحميل فواتيرك الحالية من إكسل"
+  },
+  "✅ Generate e-invoices in Accqrate": {
+    ar: "✅ إنشاء فواتير إلكترونية في أككوريت"
+  },
+
+  // Process Flow section
+  "E-Invoicing Process Flow in Accqrate": {
+    ar: "سير عملية الفوترة الإلكترونية في أككوريت"
+  },
+  "Here's a step-by-step guide to how Accqrate's e-invoicing system works:": {
+    ar: "إليك دليل خطوة بخطوة لكيفية عمل نظام الفوترة الإلكترونية من أككوريت:"
+  },
+  "1️ Seller inputs invoice details in Accqrate": {
+    ar: "1️ يقوم البائع بإدخال تفاصيل الفاتورة في أككوريت"
+  },
+  "2️ Accqrate validates the data for ZATCA compliance": {
+    ar: "2️ يقوم أككوريت بالتحقق من صحة البيانات للامتثال لزاتكا"
+  },
+  "3️ Accqrate generates the e-invoice with a unique number and QR code": {
+    ar: "3️ يقوم أككوريت بإنشاء الفاتورة الإلكترونية برقم فريد ورمز QR"
+  },
+  "4️ Seller reviews and transmits the invoice to ZATCA": {
+    ar: "4️ يراجع البائع الفاتورة ويقوم بإرسالها إلى زاتكا"
+  },
+  "5️ Accqrate converts the invoice into ZATCA required machine-readable XML format": {
+    ar: "5️ يقوم أككوريت بتحويل الفاتورة إلى تنسيق XML المقروء آليًا المطلوب من زاتكا"
+  },
+  "6️ Invoice is sent to ZATCA through web services": {
+    ar: "6️ يتم إرسال الفاتورة إلى زاتكا من خلال خدمات الويب"
+  },
+  "7️ ZATCA records the invoice and sends a response back to Accqrate": {
+    ar: "7️ تسجل زاتكا الفاتورة وترسل ردًا إلى أككوريت"
+  },
+  "8️ Accqrate updates the invoice status as accepted or rejected": {
+    ar: "8️ يقوم أككوريت بتحديث حالة الفاتورة كمقبولة أو مرفوضة"
+  },
+  "9️ Seller reviews rejected invoices and corrects errors": {
+    ar: "9️ يراجع البائع الفواتير المرفوضة ويصحح الأخطاء"
+  },
+  "10 Seller sends accepted invoices to the buyer": {
+    ar: "10 يرسل البائع الفواتير المقبولة إلى المشتري"
+  },
+  "11 Buyer scans the QR code using ZATCA's mobile app": {
+    ar: "11 يقوم المشتري بمسح رمز QR باستخدام تطبيق زاتكا للهاتف المحمول"
+  },
+  "12 ZATCA authenticates the invoice and confirms receipt": {
+    ar: "12 تقوم زاتكا بمصادقة الفاتورة وتأكيد الاستلام"
+  },
+
+  // Benefits section
+  "Benefits of Using Accqrate for E-Invoicing": {
+    ar: "فوائد استخدام أككوريت للفوترة الإلكترونية"
+  },
+  "Phase 2 Compliance Made Simple: Stay compliant with ZATCA regulations without hassle.": {
+    ar: "الامتثال للمرحلة الثانية مبسط: ابق متوافقًا مع لوائح زاتكا دون عناء."
+  },
+  "Error Reduction: Eliminate manual errors in invoice generation and calculation.": {
+    ar: "تقليل الأخطاء: القضاء على الأخطاء اليدوية في إنشاء الفاتورة والحساب."
+  },
+  "Time-Saving Process: Generate and transmit invoices in just a few clicks.": {
+    ar: "عملية توفير الوقت: إنشاء وإرسال الفواتير بنقرة واحدة فقط."
+  },
+  "Automatic Archiving: All invoices are automatically archived for future reference": {
+    ar: "الأرشفة التلقائية: يتم أرشفة جميع الفواتير تلقائيًا للرجوع إليها في المستقبل"
+  },
+  "Secure and Cloud-Based: Access your invoices anytime, from anywhere.": {
+    ar: "آمن وقائم على السحابة: الوصول إلى فواتيرك في أي وقت ومن أي مكان."
+  },
+
+  // Get Demo section
+  "Get Your Free E-Invoicing Demo Today!": {
+    ar: "احصل على عرض الفوترة الإلكترونية المجاني اليوم!"
+  },
+  "Take the first step toward transforming your business with Accqrate's E-invoicing and ERP solutions. Experience the ease and power of our e-invoicing software by requesting a free demo.": {
+    ar: "اتخذ الخطوة الأولى نحو تحويل عملك مع حلول الفوترة الإلكترونية وERP من أككوريت. جرب سهولة وقوة برنامج الفوترة الإلكترونية الخاص بنا من خلال طلب عرض تجريبي مجاني."
+  },
+  "📞 Call us at +(966 13) 833200": {
+    ar: "📞 اتصل بنا على +(966 13) 833200"
+  },
+  "📧 Or email us at contact@accqrate-erp.com": {
+    ar: "📧 أو راسلنا على البريد الإلكتروني contact@accqrate-erp.com"
+  },
+
+  // About Accqrate section
+  "About Accqrate": {
+    ar: "عن أككوريت"
+  },
+  "Accqrate is a Saudi-based e-invoicing and ERP solution provider offering comprehensive accounting, e-invoicing integrators, and a full-suite ERP system, including POS solutions. Recognized as one of the most cost-effective platforms in KSA, Accqrate ensures seamless integration with ZATCA's Fatoora portal, making Phase 2 compliance straightforward. Powered by GenAI and GPT technologies, the platform enhances user experience with intelligent features that boost business efficiency and inter-department collaboration.": {
+    ar: "أككوريت هو مزود حلول الفوترة الإلكترونية وERP مقره السعودية، حيث يقدم محاسبة شاملة ومكاملات فوترة إلكترونية ونظام ERP كامل، بما في ذلك حلول نقاط البيع. معترف به كواحد من أكثر المنصات فعالية من حيث التكلفة في المملكة العربية السعودية، يضمن أككوريت التكامل السلس مع بوابة فاتورة زاتكا، مما يجعل الامتثال للمرحلة الثانية مباشرًا. مدعومًا بتقنيات الذكاء الاصطناعي التوليدي وGPT، تعزز المنصة تجربة المستخدم بميزات ذكية تعزز كفاءة الأعمال والتعاون بين الأقسام."
+  },
+  "With scalability and flexibility at its core, Accqrate offers both cloud and on-premise solutions, encouraging businesses in KSA to embrace digital transformation. Trusted across MENA, European, and ASEAN markets, Accqrate is a global solution helping organizations achieve operational excellence.": {
+    ar: "مع قابلية التوسع والمرونة في جوهرها، تقدم أككوريت حلولًا سحابية ومحلية، مما يشجع الشركات في المملكة العربية السعودية على تبني التحول الرقمي. موثوق به في جميع أنحاء أسواق الشرق الأوسط وشمال أفريقيا وأوروبا ورابطة أمم جنوب شرق آسيا، أككوريت هو حل عالمي يساعد المؤسسات على تحقيق التميز التشغيلي."
+  },
+
+  // Short texts and terms
+  "ZATCA": {
+    ar: "زاتكا"
+  },
+  "Accqrate": {
+    ar: "أككوريت"
+  },
+  "KSA": {
+    ar: "المملكة العربية السعودية"
+  },
+  "QR code": {
+    ar: "رمز QR"
+  },
+  "Excel": {
+    ar: "إكسل"
+  },
+  "XML": {
+    ar: "XML"
+  },
+  "GenAI": {
+    ar: "الذكاء الاصطناعي التوليدي"
+  },
+  "GPT": {
+    ar: "GPT"
+  },
+  "ERP": {
+    ar: "نظام تخطيط موارد المؤسسات"
+  },
+  "POS": {
+    ar: "نقاط البيع"
+  },
+  "MENA": {
+    ar: "الشرق الأوسط وشمال أفريقيا"
+  },
+  "ASEAN": {
+    ar: "رابطة أمم جنوب شرق آسيا"
+  },
+  "Contact Us": {
+    ar: "اتصل بنا"
+  },
+   // Complete paragraph without any HTML/bold tags
+  "Take the first step toward transforming your business with Accqrate's E-invoicing and ERP solutions. Experience the ease and power of our e-invoicing software by requesting a free demo.": {
+    ar: "اتخذ الخطوة الأولى نحو تحويل عملك مع حلول الفوترة الإلكترونية وERP من أككوريت. جرب سهولة وقوة برنامج الفوترة الإلكترونية الخاص بنا من خلال طلب عرض تجريبي مجاني."
+  },
+
+  // Split parts for when the T component processes them separately
+  "Take the first step toward ": {
+    ar: "اتخذ الخطوة الأولى نحو "
+  },
+  
+  "transforming your business with Accqrate's E-invoicing and ERP solutions.": {
+    ar: "تحويل عملك مع حلول الفوترة الإلكترونية وERP من أككوريت."
+  },
+  
+  "Experience the ease and power of our e-invoicing software by requesting a ": {
+    ar: "جرب سهولة وقوة برنامج الفوترة الإلكترونية الخاص بنا من خلال طلب "
+  },
+  
+  "free demo.": {
+    ar: "عرض تجريبي مجاني."
+  },
+
+  // If your T component preserves HTML, this version with bold tags
+  "Take the first step toward <b>transforming your business with Accqrate's E-invoicing and ERP solutions.</b> Experience the ease and power of our e-invoicing software by requesting a <b>free demo.</b>": {
+    ar: "اتخذ الخطوة الأولى نحو <b>تحويل عملك مع حلول الفوترة الإلكترونية وERP من أككوريت.</b> جرب سهولة وقوة برنامج الفوترة الإلكترونية الخاص بنا من خلال طلب <b>عرض تجريبي مجاني.</b>"
+  },
+
+  "Accelerating Digital Transformation: Tackling ZATCA E-invoicing Challenges in Saudi Arabia's Automotive Industry": {
+    ar: "تسريع التحول الرقمي: معالجة تحديات الفوترة الإلكترونية لزاتكا في صناعة السيارات السعودية"
+  },
+
+  // First paragraphs
+  "The automotive industry in Saudi Arabia is rapidly evolving. Manufacturers, auto-parts retailers, and custom vehicle workshops are increasingly adopting digital transformation initiatives, enabling greater efficiency, customer engagement, and streamlined compliance with regulatory mandates. Among the top priorities for these businesses today is compliance with Zakat, Tax and Customs Authority's (ZATCA) mandatory e-invoicing regulation.": {
+    ar: "تتطور صناعة السيارات في المملكة العربية السعودية بسرعة. تتبنى الشركات المصنعة وتجار قطع الغيار وورش السيارات المخصصة بشكل متزايد مبادرات التحول الرقمي، مما يتيح كفاءة أكبر ومشاركة العملاء والامتثال المبسط للتفويضات التنظيمية. من بين الأولويات الرئيسية لهذه الشركات اليوم الامتثال للفوترة الإلكترونية الإلزامية لهيئة الزكاة والضريبة والجمارك (زاتكا)."
+  },
+
+  "In this article, we explore how the automotive sector can efficiently address ZATCA's e-invoicing requirements, overcome compliance hurdles, and achieve comprehensive digital transformation with the right ERP and middleware solutions.": {
+    ar: "في هذه المقالة، نستكشف كيف يمكن لقطاع السيارات معالجة متطلبات الفوترة الإلكترونية لزاتكا بكفاءة، والتغلب على عقبات الامتثال، وتحقيق تحول رقمي شامل مع حلول ERP والوسيطة المناسبة."
+  },
+
+  // Section headers
+  "Navigating the Road to Mandatory E-invoicing": {
+    ar: "التنقل في طريق الفوترة الإلكترونية الإلزامية"
+  },
+  "Since its inception in 2021, ZATCA's e-invoicing (Fatoorah) initiative has been significantly reshaping invoicing practices across Saudi Arabia. Automotive businesses, from manufacturers and dealerships to specialized workshops, now face the urgent necessity to fully comply with ZATCA's guidelines to avoid regulatory penalties and stay competitive in an increasingly digitized market.": {
+    ar: "منذ بدايتها في عام 2021، أعادت مبادرة الفوترة الإلكترونية (فاتورة) لزاتكا تشكيل ممارسات الفوترة في جميع أنحاء المملكة العربية السعودية بشكل كبير. تواجه شركات السيارات، من الشركات المصنعة والوكلاء إلى الورش المتخصصة، الآن الضرورة الملحة للامتثال الكامل لإرشادات زاتكا لتجنب العقوبات التنظيمية والبقاء منافسة في سوق رقمي بشكل متزايد."
+  },
+
+  "Why is ZATCA Compliance Crucial for the Automotive Sector?": {
+    ar: "لماذا يعد الامتثال لزاتكا حاسماً لقطاع السيارات؟"
+  },
+  "The automotive industry operates in a uniquely complex environment. Businesses must manage large inventories, intricate production workflows, sales networks, after-sales services, and extensive supplier relationships. Amidst this complexity, adhering strictly to ZATCA's e-invoicing rules presents several distinct challenges:": {
+    ar: "تعمل صناعة السيارات في بيئة معقدة بشكل فريد. يجب على الشركات إدارة مخزونات كبيرة وسير عمل إنتاج معقدة وشبكات مبيعات وخدمات ما بعد البيع وعلاقات مع الموردين على نطاق واسع. وسط هذا التعقيد، يمثل الالتزام الصارم بقواعد الفوترة الإلكترونية لزاتكا عدة تحديات مميزة:"
+  },
+
+  // Challenge list items
+  "Complex Inventory Management: Automotive and auto-parts retailers handle extensive SKUs, making standardized e-invoicing challenging without effective integration between POS and ERP systems.": {
+    ar: "إدارة المخزون المعقدة: يتعامل تجار السيارات وقطع الغيار مع وحدات حفظ المخزون (SKUs) واسعة النطاق، مما يجعل الفوترة الإلكترونية الموحدة صعبة دون تكامل فعال بين أنظمة نقاط البيع وERP."
+  },
+  "Customization and Aftermarket Services: Custom vehicle workshops frequently generate tailored invoices that include diverse parts and services, complicating standard invoicing processes and compliance.": {
+    ar: "التخصيص وخدمات ما بعد البيع: تولد ورش السيارات المخصصة بشكل متكرر فواتير مصممة خصيصًا تتضمن أجزاء وخدمات متنوعة، مما يعقد عمليات الفوترة القياسية والامتثال."
+  },
+  "Integration Complexity: Businesses operating legacy ERP or custom-developed IT solutions often find integrating with ZATCA's platform costly, time-consuming, and technically demanding.": {
+    ar: "تعقيد التكامل: تجد الشركات التي تعمل بنظام ERP قديم أو حلول تكنولوجيا المعلومات المطورة خصيصًا أن التكامل مع منصة زاتكا مكلف ويستغرق وقتًا طويلاً ويتطلب تقنيًا."
+  },
+  "Real-Time Reporting and Archiving: Ensuring real-time transaction reporting and secured archival is a critical regulatory aspect that can overwhelm IT infrastructure if not properly managed.": {
+    ar: "الإبلاغ في الوقت الفعلي والأرشفة: يعد ضمان الإبلاغ عن المعاملات في الوقت الفعلي والأرشفة الآمنة جانبًا تنظيميًا حاسمًا يمكن أن يطغى على بنية تكنولوجيا المعلومات إذا لم تتم إدارتها بشكل صحيح."
+  },
+
+  // How Accqrate simplifies section
+  "How Accqrate Simplifies E-invoicing for Automotive Businesses": {
+    ar: "كيف يبسط أككوريت الفوترة الإلكترونية لشركات السيارات"
+  },
+  "At Accqrate, we recognize that the automotive industry requires specialized attention when addressing digital transformation and ZATCA compliance. That's why we've developed Accqrate, an advanced ERP and e-invoicing middleware solution capable of handling complex business scenarios unique to the automotive industry.": {
+    ar: "في أككوريت، ندرك أن صناعة السيارات تتطلب اهتمامًا متخصصًا عند معالجة التحول الرقمي والامتثال لزاتكا. لهذا السبب قمنا بتطوير أككوريت، وهو حل ERP ووسيطة للفوترة الإلكترونية متقدم قادر على التعامل مع سيناريوهات الأعمال المعقدة الفريدة لصناعة السيارات."
+  },
+
+  // Already using ERP section
+  "Already Using an ERP or POS? Accqrate Middleware Has You Covered": {
+    ar: "هل تستخدم بالفعل ERP أو نقطة بيع؟ تغطيك وسيطة أككوريت"
+  },
+  "If your automotive business already leverages existing ERP, POS, or other business systems, Accqrate seamlessly integrates your applications with ZATCA's e-invoicing portal. The middleware solution serves as a streamlined gateway between your existing ERP/POS solutions and ZATCA, handling compliance seamlessly and reducing implementation time dramatically.": {
+    ar: "إذا كان نشاطك التجاري للسيارات يستفيد بالفعل من نظام ERP أو نقطة بيع أو أنظمة أعمال أخرى موجودة، فإن أككوريت يدمج تطبيقاتك بسلاسة مع بوابة الفوترة الإلكترونية لزاتكا. يعمل حل الوسيطة كبوابة مبسطة بين حلول ERP/نقطة البيع الحالية وزاتكا، ويتعامل مع الامتثال بسلاسة ويقلل وقت التنفيذ بشكل كبير."
+  },
+  "Key benefits of Accqrate's Middleware include:": {
+    ar: "تشمل الفوائد الرئيسية لوسيطة أككوريت:"
+  },
+  "Flexible Integration: Easy compatibility with legacy systems and modern ERPs, minimizing disruptions to existing workflows.": {
+    ar: "التكامل المرن: توافق سهل مع الأنظمة القديمة وأنظمة ERP الحديثة، مما يقلل من تعطيل سير العمل الحالي."
+  },
+  "Real-time Compliance: Instant and accurate validation of e-invoices as per ZATCA's Phase 2 regulations, with simplified transaction reporting and archiving.": {
+    ar: "الامتثال في الوقت الفعلي: التحقق الفوري والدقيق من الفواتير الإلكترونية وفقًا للوائح المرحلة الثانية من زاتكا، مع تقارير معاملات مبسطة وأرشفة."
+  },
+  "Reduced Cost and Risk: Minimize regulatory risk and reduce compliance overhead by automating e-invoice submission, validation, and archival.": {
+    ar: "تقليل التكلفة والمخاطر: تقليل المخاطر التنظيمية وتقليل النفقات العامة للامتثال من خلال أتمتة تقديم الفواتير الإلكترونية والتحقق منها وأرشفتها."
+  },
+
+  // No ERP yet section
+  "No ERP Yet? Accqrate ERP Solutions Offer Comprehensive Digitalization": {
+    ar: "لا توجد ERP بعد؟ تقدم حلول ERP من أككوريت رقمنة شاملة"
+  },
+  "For automotive businesses yet to embark on their digital transformation journey, Accqrate offers a comprehensive ERP suite covering Sales, CRM, Purchase, Accounting, Inventory, Production, and HR & Payroll. Accqrate's fully digitalized environment doesn't just ensure compliance but also transforms your business processes, driving efficiency, transparency, and profitability.": {
+    ar: "بالنسبة لشركات السيارات التي لم تبدأ بعد رحلتها في التحول الرقمي، تقدم أككوريت مجموعة ERP شاملة تغطي المبيعات وإدارة علاقات العملاء والمشتريات والمحاسبة والمخزون والإنتاج والموارد البشرية وكشوف المرتبات. لا تضمن البيئة الرقمية بالكامل من أككوريت الامتثال فحسب، بل تحول أيضًا عمليات عملك، مما يدفع الكفاءة والشفافية والربحية."
+  },
+  "With Accqrate ERP, automotive businesses benefit from:": {
+    ar: "مع ERP أككوريت، تستفيد شركات السيارات من:"
+  },
+  "Unified Business Insights: Centralized management and real-time analytics across sales, inventory, procurement, and accounting.": {
+    ar: "رؤى الأعمال الموحدة: الإدارة المركزية والتحليلات في الوقت الفعلي عبر المبيعات والمخزون والمشتريات والمحاسبة."
+  },
+  "Industry-specific Modules: Customizable modules designed explicitly for manufacturers, parts retailers, and custom workshops, enhancing operational efficiency and adaptability.": {
+    ar: "وحدات خاصة بالصناعة: وحدات قابلة للتخصيص مصممة خصيصًا للشركات المصنعة وتجار الأجزاء والورش المخصصة، مما يعزز الكفاءة التشغيلية والقدرة على التكيف."
+  },
+  "Powered by GenAI and Automation: AI-driven analytics and intelligent process automation to streamline workflows, forecast demand, and optimize inventory management.": {
+    ar: "مدعوم بالذكاء الاصطناعي التوليدي والأتمتة: تحليلات مدفوعة بالذكاء الاصطناعي وأتمتة العمليات الذكية لتبسيط سير العمل والتنبؤ بالطلب وتحسين إدارة المخزون."
+  },
+  "Built-in ZATCA E-invoicing Compliance: Fully integrated e-invoicing modules, automatically aligned with ZATCA regulations to ensure ongoing compliance without manual intervention.": {
+    ar: "الامتثال المدمج للفوترة الإلكترونية لزاتكا: وحدات فوترة إلكترونية متكاملة بالكامل، ومحاذاة تلقائية مع لوائح زاتكا لضمان الامتثال المستمر دون تدخل يدوي."
+  },
+
+  // Accelerating toward digital future
+  "Accelerating Toward the Digital Future": {
+    ar: "التسريع نحو المستقبل الرقمي"
+  },
+  "Digital transformation is no longer optional; it's a necessity. Saudi Arabia's Vision 2030 emphasizes digitalization and regulatory compliance, pushing automotive businesses toward adopting advanced digital solutions. Accqrate stands as an ideal partner in this journey, equipped with robust ERP and Middleware solutions, specifically tailored to the needs of manufacturers, retailers, and customizers.": {
+    ar: "لم يعد التحول الرقمي اختياريًا؛ إنه ضرورة. تؤكد رؤية المملكة 2030 على الرقمنة والامتثال التنظيمي، مما يدفع شركات السيارات نحو تبني الحلول الرقمية المتقدمة. يقف أككوريت كشريك مثالي في هذه الرحلة، مجهز بحلول ERP ووسيطة قوية، مصممة خصيصًا لاحتياجات الشركات المصنعة والتجار والمخصصين."
+  },
+  "Embracing digitalization today with Accqrate doesn't only mean staying compliant. It also means unlocking significant growth opportunities and achieving lasting competitive advantage.": {
+    ar: "لا يعني تبني الرقمنة اليوم مع أككوريت البقاء متوافقًا فقط. وهذا يعني أيضًا إطلاق فرص نمو كبيرة وتحقيق ميزة تنافسية دائمة."
+  },
+
+  // Ready to drive forward
+  "Ready to Drive Your Business Forward?": {
+    ar: "هل أنت مستعد لدفع عملك للأمام؟"
+  },
+  "To learn more about Accqrate's ERP or Middleware solutions, visit our website or contact our specialists for a personalized consultation. Our team is committed to guiding your automotive business smoothly through ZATCA compliance and beyond.": {
+    ar: "لمعرفة المزيد عن حلول ERP أو الوسيطة من أككوريت، قم بزيارة موقعنا على الويب أو اتصل بأخصائيينا للحصول على استشارة مخصصة. يلتزم فريقنا بتوجيه نشاطك التجاري للسيارات بسلاسة من خلال الامتثال لزاتكا وأبعد من ذلك."
+  },
+
+  // Short texts
+  "visit our website": {
+    ar: "قم بزيارة موقعنا على الويب"
+  },
+  "ZATCA": {
+    ar: "زاتكا"
+  },
+  "Accqrate": {
+    ar: "أككوريت"
+  },
+  "ERP": {
+    ar: "نظام تخطيط موارد المؤسسات"
+  },
+  "POS": {
+    ar: "نقطة البيع"
+  },
+  "CRM": {
+    ar: "إدارة علاقات العملاء"
+  },
+  "HR": {
+    ar: "الموارد البشرية"
+  },
+  "GenAI": {
+    ar: "الذكاء الاصطناعي التوليدي"
+  },
+  "SKUs": {
+    ar: "وحدات حفظ المخزون"
+  },
+  "Fatoorah": {
+    ar: "فاتورة"
+  },
+  "Vision 2030": {
+    ar: "رؤية 2030"
+  },
+  "POS Billing Software Integration with ZATCA: Accqrate": {
+    ar: "تكامل برنامج فوترة نقاط البيع مع زاتكا: أككوريت"
+  },
+
+  // Section headers
+  "Introduction: The Changing Landscape of POS Systems in Saudi Arabia": {
+    ar: "المقدمة: المشهد المتغير لأنظمة نقاط البيع في المملكة العربية السعودية"
+  },
+  "Point of Sales (POS) systems are critical to improving customer satisfaction and ensuring seamless business operations. However, with the launch of E-invoicing Phase 2 by ZATCA (Zakat, Tax, and Customs Authority), businesses in Saudi Arabia face new challenges in integrating legacy POS systems with ZATCA's compliance requirements.": {
+    ar: "تعد أنظمة نقاط البيع (POS) حاسمة لتحسين رضا العملاء وضمان عمليات الأعمال السلسة. ومع ذلك، مع إطلاق المرحلة الثانية من الفوترة الإلكترونية من قبل زاتكا (هيئة الزكاة والضريبة والجمارك)، تواجه الشركات في المملكة العربية السعودية تحديات جديدة في تكامل أنظمة نقاط البيع القديمة مع متطلبات الامتثال لزاتكا."
+  },
+  "Our research reveals that 30–40% of businesses continue to use outdated, standalone POS machines that cannot communicate with external systems like ZATCA. Migrating to a modern POS system isn't always feasible, especially for businesses heavily reliant on their existing setup.": {
+    ar: "يكشف بحثنا أن 30-40٪ من الشركات تواصل استخدام آلات نقاط بيع قديمة وقائمة بذاتها لا يمكنها التواصل مع أنظمة خارجية مثل زاتكا. ليس الانتقال إلى نظام نقطة بيع حديث دائمًا ممكنًا، خاصة للشركات التي تعتمد بشدة على إعداداتها الحالية."
+  },
+
+  "The Challenge: Integrating Legacy POS Systems with ZATCA": {
+    ar: "التحدي: تكامل أنظمة نقاط البيع القديمة مع زاتكا"
+  },
+  "Many POS machines currently in use are built on obsolete technology and lack the capability to integrate with external systems like ZATCA. Below are the key challenges businesses face when trying to achieve compliance:": {
+    ar: "تستخدم العديد من آلات نقاط البيع حاليًا تقنية قديمة وتفتقر إلى القدرة على التكامل مع أنظمة خارجية مثل زاتكا. فيما يلي التحديات الرئيسية التي تواجهها الشركات عند محاولة تحقيق الامتثال:"
+  },
+
+  "Key Obstacles in POS–ZATCA Integration": {
+    ar: "العقبات الرئيسية في تكامل نقاط البيع مع زاتكا"
+  },
+  "Obsolete Technology: Legacy POS applications are outdated and lack the scalability to integrate with modern APIs.": {
+    ar: "التكنولوجيا القديمة: تطبيقات نقاط البيع القديمة عفا عليها الزمن وتفتقر إلى قابلية التوسع للتكامل مع واجهات برمجة التطبيقات الحديثة."
+  },
+  "Offline Functionality: Most POS systems operate offline, storing data locally and performing reconciliation at the end of the day.": {
+    ar: "وظيفة عدم الاتصال: تعمل معظم أنظمة نقاط البيع بدون اتصال، وتخزن البيانات محليًا وتقوم بالمصالحة في نهاية اليوم."
+  },
+  "Customer Experience: Any changes to POS systems must not increase customer waiting time, as this can impact satisfaction.": {
+    ar: "تجربة العملاء: يجب ألا تزيد أي تغييرات في أنظمة نقاط البيع من وقت انتظار العملاء، حيث يمكن أن يؤثر ذلك على الرضا."
+  },
+  "Inbuilt Print Formats: Many POS devices have fixed invoice formats that are not customizable to include QR codes or ZATCA-compliant details.": {
+    ar: "تنسيقات الطباعة المدمجة: تحتوي العديد من أجهزة نقاط البيع على تنسيقات فواتير ثابتة لا يمكن تخصيصها لتضمين رموز QR أو تفاصيل متوافقة مع زاتكا."
+  },
+
+  "The Solution: Accqrate POS ZATCA Integrator": {
+    ar: "الحل: مكامل نقاط البيع أككوريت مع زاتكا"
+  },
+  "To address these challenges, Accqrate developed a range of POS integrators that provide seamless ZATCA compliance for both offline and online POS systems.": {
+    ar: "لمعالجة هذه التحديات، طور أككوريت مجموعة من مكاملات نقاط البيع التي توفر امتثالًا سلسًا لزاتكا لكل من أنظمة نقاط البيع غير المتصلة والمتصلة بالإنترنت."
+  },
+  "With a proven track record of integrating widely used POS systems in Saudi Arabia — including SAGE, AX, Denali, and more — Accqrate has successfully helped businesses from retail, pharma, and education sectors achieve E-invoicing compliance.": {
+    ar: "مع سجل حافل مثبت في تكامل أنظمة نقاط البيع المستخدمة على نطاق واسع في المملكة العربية السعودية — بما في ذلك SAGE وAX وDenali وغيرها — ساعد أككوريت بنجاح الشركات في قطاعات البيع بالتجزئة والأدوية والتعليم على تحقيق امتثال الفوترة الإلكترونية."
+  },
+  "Here's how Accqrate's integrators solve the problem:": {
+    ar: "إليك كيف تحل مكاملات أككوريت المشكلة:"
+  },
+
+  "1. Offline POS Billing Software Integrator": {
+    ar: "1. مكامل برنامج فوترة نقاط البيع غير المتصل"
+  },
+  "This solution is ideal for offline POS systems that operate without a constant internet connection. Many retail shops use standalone POS devices that store data locally and reconcile with the server at the end of the business day.": {
+    ar: "هذا الحل مثالي لأنظمة نقاط البيع غير المتصلة التي تعمل بدون اتصال إنترنت مستمر. تستخدم العديد من المتاجر أجهزة نقاط بيع قائمة بذاتها تخزن البيانات محليًا وتصالح مع الخادم في نهاية يوم العمل."
+  },
+  "Here's how the Accqrate Offline POS ZATCA Integrator works:": {
+    ar: "إليك كيف يعمل مكامل نقاط البيع غير المتصل أككوريت مع زاتكا:"
+  },
+  "A lightweight .exe file is installed on the POS device.": {
+    ar: "يتم تثبيت ملف .exe خفيف الوزن على جهاز نقطة البيع."
+  },
+  "The POS system communicates with the .exe through a localhost call to generate a ZATCA-compliant QR code in real time.": {
+    ar: "يتواصل نظام نقطة البيع مع ملف .exe من خلال مكالمة المضيف المحلي لتوليد رمز QR متوافق مع زاتكا في الوقت الفعلي."
+  },
+  "The QR code is printed on the customer invoice.": {
+    ar: "يتم طباعة رمز QR على فاتورة العميل."
+  },
+  "At the end of the day, the integrator pushes approved XML files to ZATCA servers for compliance.": {
+    ar: "في نهاية اليوم، يدفع المكامل ملفات XML المعتمدة إلى خوادم زاتكا للامتثال."
+  },
+
+  "Alternative Solution:": {
+    ar: "حل بديل:"
+  },
+  "If your POS system cannot modify the PDF invoice to include a QR code, Accqrate offers an alternative:": {
+    ar: "إذا كان نظام نقاط البيع الخاص بك لا يمكنه تعديل فاتورة PDF لتضمين رمز QR، فإن أككوريت يقدم حلاً بديلاً:"
+  },
+  "Accqrate generates the compliant invoice on your behalf.": {
+    ar: "يولد أككوريت الفاتورة المتوافقة نيابة عنك."
+  },
+  "The compliant invoice can be sent to the customer via email or WhatsApp automatically.": {
+    ar: "يمكن إرسال الفاتورة المتوافقة إلى العميل عبر البريد الإلكتروني أو واتساب تلقائيًا."
+  },
+
+  "Online POS Billing Software Integrator": {
+    ar: "مكامل برنامج فوترة نقاط البيع المتصل"
+  },
+  "This solution is best suited for online POS systems that communicate in real time with their servers. Accqrate provides cloud-based APIs that interact directly with ZATCA's servers to ensure instant compliance.": {
+    ar: "هذا الحل الأنسب لأنظمة نقاط البيع المتصلة التي تتواصل في الوقت الفعلي مع خوادمها. يوفر أككوريت واجهات برمجة تطبيقات قائمة على السحابة تتفاعل مباشرة مع خوادم زاتكا لضمان الامتثال الفوري."
+  },
+  "Here's how the Accqrate Online POS Integrator works:": {
+    ar: "إليك كيف يعمل مكامل نقاط البيع المتصل أككوريت:"
+  },
+  "The POS system generates the customer invoice.": {
+    ar: "ينشئ نظام نقاط البيع فاتورة العميل."
+  },
+  "Accqrate's cloud API connects with ZATCA and gets the invoice approval in milliseconds.": {
+    ar: "يتصل واجهة برمجة التطبيقات السحابية لأككوريت مع زاتكا ويحصل على موافقة الفاتورة في أجزاء من الثانية."
+  },
+  "The cashier can immediately issue a fully compliant invoice to the customer.": {
+    ar: "يمكن للصراف إصدار فاتورة متوافقة بالكامل للعميل على الفور."
+  },
+  "If your POS system cannot update the PDF print format, Accqrate can generate and print the compliant invoice using the same template you currently use.": {
+    ar: "إذا كان نظام نقاط البيع الخاص بك لا يمكنه تحديث تنسيق طباعة PDF، يمكن لأككوريت إنشاء وطباعة الفاتورة المتوافقة باستخدام نفس القالب الذي تستخدمه حاليًا."
+  },
+
+  "POS Solution for Modern Businesses": {
+    ar: "حل نقاط البيع للشركات الحديثة"
+  },
+  "Accqrate is more than just an E-invoicing solution. It offers a full-fledged cloud-based ERP system with a robust POS module designed for modern businesses.": {
+    ar: "أككوريت هو أكثر من مجرد حل للفوترة الإلكترونية. فهو يقدم نظام ERP كامل القائمة على السحابة مع وحدة نقاط بيع قوية مصممة للشركات الحديثة."
+  },
+  "Key features of Accqrate POS include:": {
+    ar: "تشمل الميزات الرئيسية لنقاط البيع أككوريت:"
+  },
+  "Device Flexibility: Use the POS system on any device — laptop, desktop, tablet, or smartphone.": {
+    ar: "مرونة الجهاز: استخدم نظام نقاط البيع على أي جهاز — كمبيوتر محمول أو مكتبي أو لوحي أو هاتف ذكي."
+  },
+  "Printer Compatibility: Connect with any type of printer, including thermal and dot-matrix printers.": {
+    ar: "توافق الطابعة: الاتصال بأي نوع من الطابعات، بما في ذلك الطابعات الحرارية ونقطية المصفوفة."
+  },
+  "Fully Customizable Invoice Layouts: Tailor the invoice format to your business needs.": {
+    ar: "تخطيطات فواتير قابلة للتخصيص بالكامل: قم بتخصيص تنسيق الفاتورة لاحتياجات عملك."
+  },
+  "Functions Offered by Accqrate POS Module": {
+    ar: "الوظائف التي تقدمها وحدة نقاط البيع أككوريت"
+  },
+  "Product / Service Management": {
+    ar: "إدارة المنتجات / الخدمات"
+  },
+  "Category and Subcategory Setup": {
+    ar: "إعداد الفئات والفئات الفرعية"
+  },
+  "Multiple Payment Types (Cash, Card, Wallet)": {
+    ar: "أنواع دفع متعددة (نقدًا وبطاقة ومحفظة)"
+  },
+  "POS Ordering System": {
+    ar: "نظام طلبات نقاط البيع"
+  },
+  "One-Click Invoice Approval from ZATCA": {
+    ar: "موافقة الفاتورة بنقرة واحدة من زاتكا"
+  },
+  "Returns Management": {
+    ar: "إدارة المرتجعات"
+  },
+  "Stock History & Analysis": {
+    ar: "تاريخ المخزون والتحليل"
+  },
+  "Day-End Closure": {
+    ar: "إغلاق نهاية اليوم"
+  },
+
+  "Why Choose Accqrate for ZATCA Compliance?": {
+    ar: "لماذا تختار أككوريت للامتثال لزاتكا؟"
+  },
+  "Proven Experience: Accqrate has worked with over 5000+ businesses across multiple industries to ensure smooth ZATCA integration.": {
+    ar: "خبرة مثبتة: عمل أككوريت مع أكثر من 5000+ شركة عبر صناعات متعددة لضمان تكامل سلس مع زاتكا."
+  },
+  "Offline & Online Solutions: Flexible integrators for both offline and online POS systems.": {
+    ar: "حلول غير متصلة ومتصلة: مكاملات مرنة لكل من أنظمة نقاط البيع غير المتصلة والمتصلة."
+  },
+  "Quick Deployment: Solutions implemented within 2–3 weeks with minimal downtime.": {
+    ar: "نشر سريع: حلول تم تنفيذها خلال 2-3 أسابيع مع حد أدنى من التوقف."
+  },
+  "Technology Agnostic: Works with SAGE, AX, D365, SAP Business One, Netsuite, and more.": {
+    ar: "محايد تقنيًا: يعمل مع SAGE وAX وD365 وSAP Business One وNetsuite والمزيد."
+  },
+
+  "Summary": {
+    ar: "ملخص"
+  },
+  "The deployment of Accqrate e-invoicing solution for POS-based software in Saudi Arabia exemplifies a seamless blend of compliance, efficiency, and customer satisfaction. With the construction sector booming due to projects like Jeddah Central Project, King Salman Park and THE LINE, plus major events such as the World Expo 2030 and FIFA 2034 on the horizon, the estimated growth in the construction and building-materials sector is substantial. As Saudi Arabia progresses toward Vision 2030, embracing digital transformation in invoicing becomes imperative. Accqrate's integration solutions ensure businesses stay compliant while remaining innovative.": {
+    ar: "يمثل نشر حل الفوترة الإلكترونية من أككوريت للبرامج القائمة على نقاط البيع في المملكة العربية السعودية مزيجًا سلسًا من الامتثال والكفاءة ورضا العملاء. مع ازدهار قطاع البناء بسبب مشاريع مثل مشروع جدة المركزية وحديقة الملك سلمان وذا لاين، بالإضافة إلى أحداث كبرى مثل إكسبو العالمي 2030 وكأس العالم 2034 في الأفق، فإن النمو المتوقع في قطاع البناء ومواد البناء كبير. مع تقدم المملكة العربية السعودية نحو رؤية 2030، يصبح تبني التحول الرقمي في الفوترة أمرًا ضروريًا. تضمن حلول التكامل من أككوريت بقاء الشركات متوافقة مع الحفاظ على الابتكار."
+  },
+
+  "Embrace the Future of E-Invoicing with Accqrate": {
+    ar: "احتضن مستقبل الفوترة الإلكترونية مع أككوريت"
+  },
+  "With Accqrate, you can ensure ZATCA compliance without disrupting operations. Our integrators make POS invoicing seamless, compliant, and efficient.": {
+    ar: "مع أككوريت، يمكنك ضمان الامتثال لزاتكا دون تعطيل العمليات. تجعل مكاملاتنا فوترة نقاط البيع سلسة ومتوافقة وفعالة."
+  },
+  "Contact us today to schedule a demo and see how we can help your business embrace the future of e-invoicing.": {
+    ar: "اتصل بنا اليوم لجدولة عرض تجريبي وشاهد كيف يمكننا مساعدة عملك على احتضان مستقبل الفوترة الإلكترونية."
+  },
+
+  "About Accqrate": {
+    ar: "عن أككوريت"
+  },
+  "Accqrate is a Saudi-based e-invoicing and ERP solution provider offering accounting, integrators, and a full-suite ERP system including POS. Recognized as one of the most cost-effective platforms in KSA, Accqrate ensures seamless integration with ZATCA's Fatoora portal. Powered by GenAI and GPT technologies, it enhances user experience through intelligent automation and cross-department collaboration.": {
+    ar: "أككوريت هو مزود حلول الفوترة الإلكترونية وERP مقره السعودية، حيث يقدم المحاسبة والمكاملات ونظام ERP كامل بما في ذلك نقاط البيع. معترف به كواحد من أكثر المنصات فعالية من حيث التكلفة في المملكة العربية السعودية، يضمن أككوريت التكامل السلس مع بوابة فاتورة زاتكا. مدعومًا بتقنيات الذكاء الاصطناعي التوليدي وGPT، يعزز تجربة المستخدم من خلال الأتمتة الذكية والتعاون بين الأقسام."
+  },
+  "With scalability and flexibility at its core, Accqrate offers both cloud and on-premise solutions, encouraging KSA businesses to embrace digital transformation. Trusted across MENA, European, and ASEAN markets, Accqrate helps organizations achieve operational excellence globally.": {
+    ar: "مع قابلية التوسع والمرونة في جوهرها، تقدم أككوريت حلولًا سحابية ومحلية، مما يشجع شركات المملكة العربية السعودية على تبني التحول الرقمي. موثوق به في جميع أنحاء أسواق الشرق الأوسط وشمال أفريقيا وأوروبا ورابطة أمم جنوب شرق آسيا، يساعد أككوريت المؤسسات على تحقيق التميز التشغيلي عالميًا."
+  },
+
+  // Short texts and terms
+  "ZATCA": {
+    ar: "زاتكا"
+  },
+  "Accqrate": {
+    ar: "أككوريت"
+  },
+  "POS": {
+    ar: "نقاط البيع"
+  },
+  "E-invoicing": {
+    ar: "الفوترة الإلكترونية"
+  },
+  "QR code": {
+    ar: "رمز QR"
+  },
+  "PDF": {
+    ar: "PDF"
+  },
+  "XML": {
+    ar: "XML"
+  },
+  "API": {
+    ar: "واجهة برمجة التطبيقات"
+  },
+  "APIs": {
+    ar: "واجهات برمجة التطبيقات"
+  },
+  "ERP": {
+    ar: "نظام تخطيط موارد المؤسسات"
+  },
+  "GenAI": {
+    ar: "الذكاء الاصطناعي التوليدي"
+  },
+  "GPT": {
+    ar: "GPT"
+  },
+  "KSA": {
+    ar: "المملكة العربية السعودية"
+  },
+  "MENA": {
+    ar: "الشرق الأوسط وشمال أفريقيا"
+  },
+  "ASEAN": {
+    ar: "رابطة أمم جنوب شرق آسيا"
+  },
+  "SAGE": {
+    ar: "SAGE"
+  },
+  "AX": {
+    ar: "AX"
+  },
+  "Denali": {
+    ar: "Denali"
+  },
+  "D365": {
+    ar: "D365"
+  },
+  "SAP Business One": {
+    ar: "SAP Business One"
+  },
+  "Netsuite": {
+    ar: "Netsuite"
+  },
+  "WhatsApp": {
+    ar: "واتساب"
+  },
+  "Vision 2030": {
+    ar: "رؤية 2030"
+  },
+  "Jeddah Central Project": {
+    ar: "مشروع جدة المركزية"
+  },
+  "King Salman Park": {
+    ar: "حديقة الملك سلمان"
+  },
+  "THE LINE": {
+    ar: "ذا لاين"
+  },
+  "World Expo 2030": {
+    ar: "إكسبو العالمي 2030"
+  },
+  "FIFA 2034": {
+    ar: "كأس العالم 2034"
+  },
+  "Accqrate e-invoicing solution": {
+    ar: "حل الفوترة الإلكترونية أككوريت"
+  },
+  
+  // Individual parts if needed
+  "Proven Experience:": {
+    ar: "خبرة مثبتة:"
+  },
+  "Accqrate has worked with over": {
+    ar: "عمل أككوريت مع أكثر من"
+  },
+  "5000+ businesses": {
+    ar: "5000+ شركة"
+  },
+  "across": {
+    ar: "عبر"
+  },
+  "multiple industries": {
+    ar: "صناعات متعددة"
+  },
+  "to ensure smooth ZATCA integration.": {
+    ar: "لضمان تكامل سلس مع زاتكا."
+  },
+   // Individual parts if needed
+  "Accqrate is more than just an": {
+    ar: "أككوريت هو أكثر من مجرد"
+  },
+  "E-invoicing solution.": {
+    ar: "حل للفوترة الإلكترونية."
+  },
+  "It offers a": {
+    ar: "فهو يقدم"
+  },
+  "full-fledged cloud-based ERP system": {
+    ar: "نظام ERP كامل القائمة على السحابة"
+  },
+  "with a robust": {
+    ar: "مع وحدة"
+  },
+  "POS module": {
+    ar: "نقاط بيع قوية"
+  },
+  "designed for": {
+    ar: "مصممة لل"
+  },
+  "modern businesses.": {
+    ar: "الشركات الحديثة."
+  },
+  "E-Invoicing in the Middle East: A Strategic Shift Reshaping Tax Compliance, Digital Governance, and Enterprise Operations": {
+    ar: "الفوترة الإلكترونية في الشرق الأوسط: تحول استراتيجي يعيد تشكيل الامتثال الضريبي والحوكمة الرقمية وعمليات المؤسسات"
+  },
+
+  // First paragraph
+  "Across the Middle East, governments are moving decisively toward electronic invoicing as a foundation for modern tax administration and transparent commerce. What was once a scattered set of local reforms has now become a coordinated regional movement. Countries are deploying structured invoice formats, real-time reporting pipelines, and digitally authenticated documents to strengthen compliance, enhance economic visibility, and reduce the inefficiencies associated with legacy invoicing.": {
+    ar: "عبر الشرق الأوسط، تتحرك الحكومات بشكل حاسم نحو الفوترة الإلكترونية كأساس للإدارة الضريبية الحديثة والتجارة الشفافة. ما كان ذات يوم مجموعة متناثرة من الإصلاحات المحلية أصبح الآن حركة إقليمية منسقة. تطرح الدول تنسيقات فواتير منظمة، وخطوط إبلاغ في الوقت الفعلي، ومستندات مصادق عليها رقميًا لتعزيز الامتثال، وتحسين الرؤية الاقتصادية، وتقليل أوجه القصور المرتبطة بالفوترة القديمة."
+  },
+
+  // Second paragraph
+  "The adoption of electronic invoicing is not simply a technical upgrade. It is a national economic strategy that influences policymaking, fiscal stability, business efficiency, and overall competitiveness. The region is transitioning from paper dependent processes to highly automated digital ecosystems, enabling tax authorities to collect, analyze, and validate data with unprecedented precision.": {
+    ar: "إن اعتماد الفوترة الإلكترونية ليس مجرد ترقية تقنية. إنها استراتيجية اقتصادية وطنية تؤثر على صنع السياسات، والاستقرار المالي، وكفاءة الأعمال، والتنافسية العامة. ينتقل المنطقة من العمليات المعتمدة على الورق إلى النظم البيئية الرقمية المؤتمتة للغاية، مما يمكن السلطات الضريبية من جمع وتحليل والتحقق من البيانات بدقة غير مسبوقة."
+  },
+
+  // Alternative: Individual parts if needed
+  "Across the Middle East, governments are moving decisively toward electronic invoicing as a foundation for modern tax administration and transparent commerce.": {
+    ar: "عبر الشرق الأوسط، تتحرك الحكومات بشكل حاسم نحو الفوترة الإلكترونية كأساس للإدارة الضريبية الحديثة والتجارة الشفافة."
+  },
+  "What was once a scattered set of local reforms has now become a coordinated regional movement.": {
+    ar: "ما كان ذات يوم مجموعة متناثرة من الإصلاحات المحلية أصبح الآن حركة إقليمية منسقة."
+  },
+  "Countries are deploying structured invoice formats, real-time reporting pipelines, and digitally authenticated documents to strengthen compliance, enhance economic visibility, and reduce the inefficiencies associated with legacy invoicing.": {
+    ar: "تطرح الدول تنسيقات فواتير منظمة، وخطوط إبلاغ في الوقت الفعلي، ومستندات مصادق عليها رقميًا لتعزيز الامتثال، وتحسين الرؤية الاقتصادية، وتقليل أوجه القصور المرتبطة بالفوترة القديمة."
+  },
+  "The adoption of electronic invoicing is not simply a technical upgrade.": {
+    ar: "إن اعتماد الفوترة الإلكترونية ليس مجرد ترقية تقنية."
+  },
+  "It is a national economic strategy that influences policymaking, fiscal stability, business efficiency, and overall competitiveness.": {
+    ar: "إنها استراتيجية اقتصادية وطنية تؤثر على صنع السياسات، والاستقرار المالي، وكفاءة الأعمال، والتنافسية العامة."
+  },
+  "The region is transitioning from paper dependent processes to highly automated digital ecosystems, enabling tax authorities to collect, analyze, and validate data with unprecedented precision.": {
+    ar: "ينتقل المنطقة من العمليات المعتمدة على الورق إلى النظم البيئية الرقمية المؤتمتة للغاية، مما يمكن السلطات الضريبية من جمع وتحليل والتحقق من البيانات بدقة غير مسبوقة."
+  },
+
+  // Short texts and terms
+  "Middle East": {
+    ar: "الشرق الأوسط"
+  },
+  "E-Invoicing": {
+    ar: "الفوترة الإلكترونية"
+  },
+  "electronic invoicing": {
+    ar: "الفوترة الإلكترونية"
+  },
+  "tax compliance": {
+    ar: "الامتثال الضريبي"
+  },
+  "digital governance": {
+    ar: "الحوكمة الرقمية"
+  },
+  "enterprise operations": {
+    ar: "عمليات المؤسسات"
+  },
+   "SAP ECC End of Life: The Best Alternative for E-invoicing Compliance and ERP Modernization": {
+    "ar": "نهاية دعم SAP ECC: أفضل بديل للامتثال للفوترة الإلكترونية وتحديث أنظمة التخطيط المؤسسي"
+  },
+  "Jun 16th, 2025": {
+    "ar": "16 يونيو 2025"
+  },
+  "23": {
+    "ar": "23"
+  },
+  "Integrating Credit Notes with ZATCA: A Comprehensive Guide": {
+    "ar": "دمج إشعارات الدفع مع الهيئة العامة للزكاة والدخل: دليل شامل"
+  },
+
+  // Introduction section
+  "Introduction: The SAP ECC Challenge in 2025 and Beyond": {
+    "ar": "المقدمة: تحديات SAP ECC في 2025 وما بعده"
+  },
+  "If your organization relies on SAP ECC for core business processes, you're likely aware that the platform is nearing the end of its support lifecycle. SAP Business Suite 7, which includes SAP ECC, SAP CRM, SAP SRM, SAP SCM, and SAP PLM, will reach end of life on December 31, 2027. After this date, mainstream support and updates from SAP will cease, exposing companies to increasing operational risks and compliance challenges—especially with rapidly evolving mandates like E-invoicing.": {
+    "ar": "إذا كانت مؤسستك تعتمد على SAP ECC للعمليات التجارية الأساسية، فمن المحتمل أنك تعلم أن النظام يقترب من نهاية دورة دعمه. SAP Business Suite 7، الذي يتضمن SAP ECC وSAP CRM وSAP SRM وSAP SCM وSAP PLM، سينتهي دعمه في 31 ديسمبر 2027. بعد هذا التاريخ، سيتوقف الدعم الرئيسي والتحديثات من SAP، مما يعرض الشركات لمخاطر تشغيلية متزايدة وتحديات امتثال - خاصة مع المتطلبات سريعة التطور مثل الفوترة الإلكترونية."
+  },
+  "This looming deadline raises a critical question for medium and semi-large businesses: What's the best way forward to ensure business continuity, E-invoicing compliance, and digital growth?": {
+    "ar": "ينبثق هذا الموعد النهائي الوشيك سؤالاً حاسماً للشركات المتوسطة وشبه الكبيرة: ما أفضل طريقة للمضي قدمًا لضمان استمرارية الأعمال، والامتثال للفوترة الإلكترونية، والنمو الرقمي؟"
+  },
+  "In this article, we'll explore your key options and introduce Accqrate ONE, a future-ready ERP solution designed as an affordable, robust, and easily-adoptable alternative to SAP ECC.": {
+    "ar": "في هذه المقالة، سنستكشف خياراتك الرئيسية ونقدم Accqrate ONE، حل أنظمة التخطيط المؤسسي الجاهز للمستقبل والمصمم كبديل ميسور التكلفة وقوي وسهل التبني لـ SAP ECC."
+  },
+
+  // Option 1 section
+  "Option 1: Maintain SAP ECC (With Additional Costs and Risks)": {
+    "ar": "الخيار 1: الاستمرار في استخدام SAP ECC (بتكاليف ومخاطر إضافية)"
+  },
+  "Some organizations may consider extending their SAP ECC support contracts until 2030. While this approach buys you time to make strategic decisions, it comes with significant drawbacks:": {
+    "ar": "قد تفكر بعض المؤسسات في تمديد عقود دعم SAP ECC حتى عام 2030. بينما يمنحك هذا النهج وقتًا لاتخاذ قرارات استراتيجية، إلا أنه يأتي مع عيوب كبيرة:"
+  },
+  "Key Risks:": {
+    "ar": "المخاطر الرئيسية:"
+  },
+  "Rising support and maintenance fees for SAP ECC extended support": {
+    "ar": "ارتفاع رسوم الدعم والصيانة لدعم SAP ECC الممتد"
+  },
+  "No access to new customizations or integrations—especially for critical needs like direct E-invoicing compliance with tax authorities": {
+    "ar": "عدم الوصول إلى تخصيصات أو تكاملات جديدة - خاصة للاحتياجات الحرجة مثل الامتثال المباشر للفوترة الإلكترونية مع السلطات الضريبية"
+  },
+  "Expensive and complex third-party integrations": {
+    "ar": "تكاملات الطرف الثالث المكلفة والمعقدة"
+  },
+  "Vendor lock-in and increased dependency": {
+    "ar": "الارتباط بالمورد وزيادة الاعتماد"
+  },
+  "Limited access to modern features and analytics": {
+    "ar": "وصول محدود إلى الميزات الحديثة والتحليلات"
+  },
+  "Growing security and compliance risks as the technology becomes obsolete": {
+    "ar": "تزايد مخاطر الأمان والامتثال مع تقادم التكنولوجيا"
+  },
+
+  // Option 2 section
+  "Option 2: Modernize to SAP S/4HANA": {
+    "ar": "الخيار 2: التحديث إلى SAP S/4HANA"
+  },
+  "Migrating to SAP S/4HANA is the official upgrade path. This next-generation ERP runs on SAP's in-memory HANA database and promises new efficiencies. However, migration can be complex and costly. There are three main migration strategies:": {
+    "ar": "الترحيل إلى SAP S/4HANA هو مسار الترقية الرسمي. يعمل نظام التخطيط المؤسسي من الجيل التالي هذا على قاعدة بيانات HANA في الذاكرة من SAP ويعد بكفاءات جديدة. ومع ذلك، يمكن أن يكون الترحيل معقدًا ومكلفًا. هناك ثلاث استراتيجيات ترحيل رئيسية:"
+  },
+  "1. Greenfield: Fresh Implementation": {
+    "ar": "1. التطبيق الجديد: التنفيذ من الصفر"
+  },
+  "2. Brownfield: System Conversion": {
+    "ar": "2. التحويل المباشر: تحويل النظام"
+  },
+  "3. Selective Data Transition (Hybrid)": {
+    "ar": "3. الانتقال الانتقائي للبيانات (الهجين)"
+  },
+  "Re-implement your ERP system from scratch": {
+    "ar": "إعادة تنفيذ نظام التخطيط المؤسسي من الصفر"
+  },
+  "Opportunity to optimize processes and migrate to cloud (public or private)": {
+    "ar": "فرصة لتحسين العمليات والترحيل إلى السحابة (العامة أو الخاصة)"
+  },
+  "Suitable for organizations willing to completely redesign their ERP landscape": {
+    "ar": "مناسب للمؤسسات المستعدة لإعادة تصميم بيئة أنظمة التخطيط المؤسسي بالكامل"
+  },
+  "Upgrade your existing SAP ECC system to S/4HANA, preserving customizations and data": {
+    "ar": "ترقية نظام SAP ECC الحالي إلى S/4HANA مع الحفاظ على التخصيصات والبيانات"
+  },
+  "Less disruptive, but limited improvements to business processes": {
+    "ar": "أقل اضطرابًا، ولكن تحسينات محدودة للعمليات التجارية"
+  },
+  "Migrate select data and processes in an agile, phased approach": {
+    "ar": "ترحيل بيانات وعمليات محددة بطريقة رشيقة ومتدرجة"
+  },
+  "Offers a balance between fresh implementation and system conversion": {
+    "ar": "يوفر توازنًا بين التنفيذ الجديد وتحويل النظام"
+  },
+  "High implementation and licensing costs": {
+    "ar": "تكاليف تنفيذ وترخيص مرتفعة"
+  },
+  "Steep learning curve and resource training expenses": {
+    "ar": "منحنى تعليمي حاد وتكاليف تدريب الموارد"
+  },
+  "Knowledge transfer challenges": {
+    "ar": "تحديات نقل المعرفة"
+  },
+  "Potential for minimal process improvement (especially with Brownfield)": {
+    "ar": "إمكانية تحسين ضئيل للعمليات (خاصة مع التحويل المباشر)"
+  },
+  "Complex decisions around data migration and regulatory compliance": {
+    "ar": "قرارات معقدة حول ترحيل البيانات والامتثال التنظيمي"
+  },
+
+  // Option 3 section
+  "Option 3: Migrate to a Modern, SAP ECC Alternative ERP": {
+    "ar": "الخيار 3: الترحيل إلى نظام تخطيط مؤسسي بديل حديث لـ SAP ECC"
+  },
+  "For many medium and semi-large businesses, the full potential of SAP ECC is never realized. SAP may have been historically chosen due to vendor influence, but maintaining or upgrading it can be prohibitively expensive and complex—especially when E-invoicing compliance is non-negotiable.": {
+    "ar": "بالنسبة للعديد من الشركات المتوسطة وشبه الكبيرة، لم يتم تحقيق الإمكانات الكاملة لـ SAP ECC مطلقًا. ربما تم اختيار SAP تاريخيًا بسبب تأثير الموردين، ولكن الحفاظ عليه أو ترقيته يمكن أن يكون مكلفًا ومعقدًا بشكل مفرط - خاصة عندما يكون الامتثال للفوترة الإلكترونية غير قابل للتفاوض."
+  },
+  "Key Considerations:": {
+    "ar": "اعتبارات رئيسية:"
+  },
+  "The need to justify ERP migration to stakeholders": {
+    "ar": "الحاجة إلى تبرير ترحيل أنظمة التخطيط المؤسسي لأصحاب المصلحة"
+  },
+  "Ensuring seamless data migration and regulatory compliance": {
+    "ar": "ضمان ترحيل البيانات السلس والامتثال التنظيمي"
+  },
+  "Requirement for a flexible, customizable ERP": {
+    "ar": "متطلبات نظام تخطيط مؤسسي مرن وقابل للتخصيص"
+  },
+  "Desire for a modern user experience and faster innovation": {
+    "ar": "الرغبة في تجربة مستخدم حديثة وابتكار أسرع"
+  },
+
+  // Accqrate ONE section
+  "Why Accqrate ONE is the Best SAP ECC Alternative": {
+    "ar": "لماذا Accqrate ONE هو أفضل بديل لـ SAP ECC"
+  },
+  "Accqrate ONE is a next-generation, highly flexible, and comprehensive ERP platform designed to address all the challenges faced by SAP ECC users today, especially those who require seamless E-invoicing integration and compliance.": {
+    "ar": "Accqrate ONE هو منصة تخطيط مؤسسي شاملة ومرنة للغاية من الجيل التالي مصممة لمعالجة جميع التحديات التي يواجهها مستخدمو SAP ECC اليوم، خاصة أولئك الذين يحتاجون إلى تكامل وامتثال سلس للفوترة الإلكترونية."
+  },
+  "Key Features and Modules:": {
+    "ar": "الميزات والوحدات الرئيسية:"
+  },
+  "Unique Advantages for SAP ECC Migrators:": {
+    "ar": "المزايا الفريدة لمستخدمي SAP ECC الراغبين في الترحيل:"
+  },
+  "Finance and Accounting": {
+    "ar": "المالية والمحاسبة"
+  },
+  "Sales and Distribution": {
+    "ar": "المبيعات والتوزيع"
+  },
+  "Procurement and Inventory Management": {
+    "ar": "المشتريات وإدارة المخزون"
+  },
+  "HR & Payroll": {
+    "ar": "الموارد البشرية وكشوف المرتبات"
+  },
+  "Project Management": {
+    "ar": "إدارة المشاريع"
+  },
+  "CRM": {
+    "ar": "إدارة علاقات العملاء"
+  },
+  "Production & Manufacturing": {
+    "ar": "الإنتاج والتصنيع"
+  },
+  "Fixed Asset Management": {
+    "ar": "إدارة الأصول الثابتة"
+  },
+  "Document Management": {
+    "ar": "إدارة المستندات"
+  },
+  "Full E-invoicing compliance with integration to global and local tax authorities (ZATCA, GST, etc.)": {
+    "ar": "امتثال كامل للفوترة الإلكترونية مع التكامل مع السلطات الضريبية العالمية والمحلية (الهيئة العامة للزكاة والدخل، ضريبة السلع والخدمات، إلخ)"
+  },
+  "Business process automation leveraging modern technology stacks": {
+    "ar": "أتمتة العمليات التجارية باستخدام حزم التكنولوجيا الحديثة"
+  },
+  "AI-powered analytics and automation for smarter decision-making": {
+    "ar": "تحليلات وأتمتة مدعومة بالذكاء الاصطناعي لاتخاذ قرارات أكثر ذكاءً"
+  },
+  "Simple, intuitive user interface for fast adoption": {
+    "ar": "واجهة مستخدم بسيطة وبديهية للتبني السريع"
+  },
+  "Flexible deployment: On-premises or cloud (private/public/hybrid)": {
+    "ar": "نشر مرن: محلي أو سحابي (خاص/عام/هجين)"
+  },
+  "Rapid implementation: Go live in 1–3 months (vs. 12–24 months for SAP projects)": {
+    "ar": "تنفيذ سريع: التشغيل خلال 1-3 أشهر (مقارنة بـ 12-24 شهرًا لمشاريع SAP)"
+  },
+  "No vendor lock-in: You own your data and can export anytime": {
+    "ar": "لا يوجد ارتباط بالمورد: أنت تملك بياناتك ويمكنك تصديرها في أي وقت"
+  },
+  "Dramatic cost savings: Up to 50x lower total cost of ownership compared to SAP": {
+    "ar": "توفير كبير في التكاليف: تصل إلى 50 ضعفًا أقل في التكلفة الإجمالية للملكية مقارنة بـ SAP"
+  },
+  "Easily customizable: Tailor modules to your unique business needs": {
+    "ar": "قابل للتخصيص بسهولة: تخصيص الوحدات وفقًا لاحتياجات عملك الفريدة"
+  },
+  "Robust integration ecosystem: Connect with your legacy systems and modern apps": {
+    "ar": "نظام بيئي تكاملي قوي: الاتصال بأنظمتك القديمة والتطبيقات الحديثة"
+  },
+
+  // Conclusion section
+  "The Smart Choice for E-invoicing and ERP Transformation": {
+    "ar": "الاختيار الذكي للفوترة الإلكترونية وتحول أنظمة التخطيط المؤسسي"
+  },
+  "As E-invoicing mandates expand globally, and with SAP ECC's end of life approaching fast, there's never been a better time to future-proof your business with an agile, compliant, and scalable ERP solution.": {
+    "ar": "مع توسع متطلبات الفوترة الإلكترونية عالميًا، واقتراب نهاية دعم SAP ECC بسرعة، لم يكن هناك وقت أفضل أبدًا لتأمين مستقبل عملك بحل أنظمة تخطيط مؤسسي مرن ومتوافق وقابل للتوسع."
+  },
+  "Accqrate ONE empowers you to:": {
+    "ar": "يمكّنك Accqrate ONE من:"
+  },
+  "Ensure uninterrupted operations beyond SAP ECC's end of support": {
+    "ar": "ضمان عمليات دون انقطاع بعد نهاية دعم SAP ECC"
+  },
+  "Achieve global E-invoicing compliance with ease": {
+    "ar": "تحقيق الامتثال العالمي للفوترة الإلكترونية بسهولة"
+  },
+  "Unlock modern business process automation and analytics": {
+    "ar": "فتح آفاق أتمتة العمليات التجارية الحديثة والتحليلات"
+  },
+  "Save costs and accelerate your digital transformation": {
+    "ar": "توفير التكاليف وتسريع تحولك الرقمي"
+  },
+  "Ready to Migrate from SAP ECC?": {
+    "ar": "مستعد للترحيل من SAP ECC؟"
+  },
+  "Don't wait until 2027 to start your ERP transformation journey. Contact us today to book a demo of Accqrate ONE and discover why we are the preferred SAP ECC alternative for E-invoicing compliance and next-generation ERP.": {
+    "ar": "لا تنتظر حتى عام 2027 لبدء رحلة تحول أنظمة التخطيط المؤسسي الخاصة بك. اتصل بنا اليوم لحجز عرض تجريبي لـ Accqrate ONE واكتشف لماذا نحن البديل المفضل لـ SAP ECC للامتثال للفوترة الإلكترونية وأنظمة التخطيط المؤسسي من الجيل التالي."
+  },
+
+  // Common terms
+  "ERP": {
+    "ar": "نظام التخطيط المؤسسي"
+  },
+  "SAP ECC": {
+    "ar": "SAP ECC"
+  },
+  "SAP S/4HANA": {
+    "ar": "SAP S/4HANA"
+  },
+  "Accqrate ONE": {
+    "ar": "Accqrate ONE"
+  },
+  "E-invoicing": {
+    "ar": "الفوترة الإلكترونية"
+  },
+  "compliance": {
+    "ar": "الامتثال"
+  },
+  "migration": {
+    "ar": "الترحيل"
+  },
+  "digital transformation": {
+    "ar": "التحول الرقمي"
+  },
+  "cloud": {
+    "ar": "السحابة"
+  },
+  "on-premises": {
+    "ar": "محلي"
+  },
+  "integration": {
+    "ar": "التكامل"
+  },
+  "Saudi Arabia: The Region's Benchmark for Real Time Digital Tax Controls": {
+    "ar": "المملكة العربية السعودية: المعيار الإقليمي للضوابط الضريبية الرقمية الفورية"
+  },
+  "Feb 12th, 2025": {
+    "ar": "12 فبراير 2025"
+  },
+  "10": {
+    "ar": "10"
+  },
+  "Saudi Arabia E-Invoicing: FATOORA System - Regional Benchmark for Real-Time Digital Tax Controls": {
+    "ar": "الفوترة الإلكترونية في السعودية: نظام فاتورة - المعيار الإقليمي للضوابط الضريبية الرقمية الفورية"
+  },
+  "Saudi Arabia's FATOORA system remains the most advanced mandate in the region. The Zakat, Tax and Customs Authority requires structured XML invoices with cryptographic signatures, QR codes, and real time clearance for every transaction. The programme began in 2021 and continues to expand in waves, gradually integrating businesses with lower turnover thresholds.": {
+    "ar": "يظل نظام فاتورة السعودي أكثر الأنظمة تطوراً في المنطقة. تتطلب الهيئة العامة للزكاة والدخل فواتير XML منظمة مع تواقيع تشفيرية، ورموز QR، وموافقة فورية لكل معاملة. بدأ البرنامج في عام 2021 ويستمر في التوسع على مراحل، لدمج الشركات ذات عتبات المبيعات المنخفضة تدريجياً."
+  },
+  "Saudi Arabia's two-phase strategy improves the quality of economic data and reduces manual tax processing. Continuous transaction controls reduce fraud, enhance auditability, and streamline corporate accounting operations. The model has become a reference point for other Middle Eastern governments designing their own systems.": {
+    "ar": "تعمل استراتيجية السعودية المكونة من مرحلتين على تحسين جودة البيانات الاقتصادية وتقليل المعالجة الضريبية اليدوية. تقلل ضوابط المعاملات المستمرة من الاحتيال، وتعزز قابلية التدقيق، وتبسط عمليات المحاسبة المؤسسية. أصبح النموذج نقطة مرجعية للحكومات الشرق أوسطية الأخرى التي تصمم أنظمتها الخاصة."
+  },
+  
+  // Technical terms
+  "FATOORA system": {
+    "ar": "نظام فاتورة"
+  },
+  "Zakat, Tax and Customs Authority": {
+    "ar": "الهيئة العامة للزكاة والدخل"
+  },
+  "structured XML invoices": {
+    "ar": "فواتير XML منظمة"
+  },
+  "cryptographic signatures": {
+    "ar": "تواقيع تشفيرية"
+  },
+  "QR codes": {
+    "ar": "رموز QR"
+  },
+  "real time clearance": {
+    "ar": "موافقة فورية"
+  },
+  "two-phase strategy": {
+    "ar": "استراتيجية مكونة من مرحلتين"
+  },
+  "economic data": {
+    "ar": "البيانات الاقتصادية"
+  },
+  "manual tax processing": {
+    "ar": "المعالجة الضريبية اليدوية"
+  },
+  "continuous transaction controls": {
+    "ar": "ضوابط المعاملات المستمرة"
+  },
+  "auditability": {
+    "ar": "قابلية التدقيق"
+  },
+  "corporate accounting operations": {
+    "ar": "عمليات المحاسبة المؤسسية"
+  },
+  "Middle Eastern governments": {
+    "ar": "الحكومات الشرق أوسطية"
+  },
+  "turnover thresholds": {
+    "ar": "عتبات المبيعات"
+  },
+  "Example of Compliance Timelines": {
+    "ar": "مثال على الجداول الزمنية للامتثال"
+  },
+  // Individual parts if needed
+  "Example of": {
+    "ar": "مثال على"
+  },
+  "Compliance Timelines": {
+    "ar": "الجداول الزمنية للامتثال"
+  },
+  "If your wave's official deadline is January 31, 2025:": {
+    "ar": "إذا كان الموعد النهائي الرسمي لموجتك هو 31 يناير 2025:"
+  },
+  // Individual parts if needed
+  "If your wave's official deadline is": {
+    "ar": "إذا كان الموعد النهائي الرسمي لموجتك هو"
+  },
+  "January 31, 2025:": {
+    "ar": "31 يناير 2025:"
+  },
+  "January": {
+    "ar": "يناير"
+  },
+  "Before February 1, 2025: You operate under Phase 1 norms and file invoices manually.": {
+    "ar": "قبل 1 فبراير 2025: تعمل وفقًا لمعايير المرحلة الأولى وتقدم الفواتير يدويًا."
+  },
+  // Individual parts if needed
+  "Before February 1, 2025:": {
+    "ar": "قبل 1 فبراير 2025:"
+  },
+  "You operate under Phase 1 norms": {
+    "ar": "تعمل وفقًا لمعايير المرحلة الأولى"
+  },
+  "and file invoices manually.": {
+    "ar": "وتقدم الفواتير يدويًا."
+  },
+  "From February 1, 2025, onwards: You must comply with ZATCA's Phase 2 requirements, and all e-invoices must be automatically filed through a compliant system.": {
+    "ar": "من 1 فبراير 2025 فصاعدًا: يجب عليك الالتزام بمتطلبات المرحلة الثانية من الهيئة العامة للزكاة والدخل، ويجب تقديم جميع الفواتير الإلكترونية تلقائيًا من خلال نظام متوافق."
+  },
+  // Individual parts if needed
+  "From February 1, 2025, onwards:": {
+    "ar": "من 1 فبراير 2025 فصاعدًا:"
+  },
+  "You must comply with ZATCA's Phase 2 requirements": {
+    "ar": "يجب عليك الالتزام بمتطلبات المرحلة الثانية من الهيئة العامة للزكاة والدخل"
+  },
+  "and all e-invoices must be automatically filed through a compliant system.": {
+    "ar": "ويجب تقديم جميع الفواتير الإلكترونية تلقائيًا من خلال نظام متوافق."
+  },
+  "Missed Your Wave Deadline?": {
+    "ar": "فاتك الموعد النهائي لموجتك؟"
+  },
+  // Individual parts if needed
+  "Missed Your": {
+    "ar": "فاتك"
+  },
+  "Wave Deadline?": {
+    "ar": "الموعد النهائي لموجتك؟"
+  },
+  // Individual parts if needed
+  "Immediate Action:": {
+    "ar": "إجراء فوري:"
+  },
+  "If you've missed your wave's deadline": {
+    "ar": "إذا فاتك الموعد النهائي لموجتك"
+  },
+  "start the integration process right away.": {
+    "ar": "ابدأ عملية التكامل على الفور."
+  },
+  // Individual parts if needed
+  "One-Time Leniency:": {
+    "ar": "تساهل لمرة واحدة:"
+  },
+  "Though ZATCA showed leniency for initial waves": {
+    "ar": "على الرغم من أن الهيئة العامة للزكاة والدخل أظهرت تساهلاً تجاه الموجات الأولية"
+  },
+  "they have warned of stricter enforcement for later waves.": {
+    "ar": "فقد حذرت من فرض عقوبات أكثر صرامة للموجات اللاحقة."
+  },
+  "Past invoices may be submitted once you are integrated": {
+    "ar": "يمكن تقديم الفواتير السابقة بمجرد تكامل نظامك"
+  },
+  "but this is typically a one-time exception.": {
+    "ar": "ولكن هذا عادةً يكون استثناءً لمرة واحدة."
+  },
+  "<b>From February 1, 2025, onwards: </b> You must comply with ZATCA's Phase 2 requirements, and all e-invoices must be automatically filed through a compliant system.": {
+    "ar": "<b>من 1 فبراير 2025 فصاعدًا: </b> يجب عليك الالتزام بمتطلبات المرحلة الثانية من الهيئة العامة للزكاة والدخل، ويجب تقديم جميع الفواتير الإلكترونية تلقائيًا من خلال نظام متوافق."
+  },
+  "<b>One-Time Leniency: </b> Though ZATCA showed leniency for initial waves, they have warned of stricter enforcement for later waves. Past invoices may be submitted once you are integrated, but this is typically a one-time exception.": {
+    "ar": "<b>تساهل لمرة واحدة: </b> على الرغم من أن الهيئة العامة للزكاة والدخل أظهرت تساهلاً تجاه الموجات الأولية، فقد حذرت من فرض عقوبات أكثر صرامة للموجات اللاحقة. يمكن تقديم الفواتير السابقة بمجرد تكامل نظامك، ولكن هذا عادةً يكون استثناءً لمرة واحدة."
+  },
+  "<b>No Free Pass: </b> ZATCA reiterates in their 2024 press release that the grace period is not a time to delay implementation but rather to <b> test and stabilize.</b> Businesses still need to integrate as soon as possible.": {
+    "ar": "<b>لا يوجد ممر مجاني: </b> تؤكد الهيئة العامة للزكاة والدخل في بيانها الصحفي لعام 2024 أن فترة السماح ليست وقتًا لتأخير التنفيذ بل للاختبار والتثبيت. لا تزال الشركات بحاجة إلى التكامل في أقرب وقت ممكن."
+  },
+  "<b>Shorter Grace for New Waves: </b> Newer waves announced for 2025 have shorter grace periods, sometimes as little as <b>one month.</b>": {
+    "ar": "<b>فترات سماح أقصر للموجات الجديدة: </b> الموجات الأحدث المعلن عنها لعام 2025 لها فترات سماح أقصر، أحيانًا تصل إلى <b>شهر واحد فقط.</b>"
+  },
+  "Additional Waves Announced: As of 2025 , ZATCA has announced more waves that cover small and medium enterprises. For instance, companies with revenues above SAR 1.75 million are now entering new waves by 30th September 2025.": {
+    "ar": "تم الإعلان عن موجات إضافية: اعتبارًا من عام 2025، أعلنت الهيئة العامة للزكاة والدخل عن المزيد من الموجات التي تغطي المؤسسات الصغيرة والمتوسطة. على سبيل المثال، تدخل الشركات ذات الإيرادات التي تزيد عن 1.75 مليون ريال سعودي موجات جديدة بحلول 30 سبتمبر 2025."
+  },
+  "All the Taxpayers within these waves have to be integrated": {
+    "ar": "يجب دمج جميع المكلفين ضمن هذه الموجات"
+  },
+  "🔒 Unparalleled Security: Enjoy end-to-end encryption ensuring data safety and audit-compliant invoices.": {
+    "ar": "🔒 أمان لا مثيل له: استمتع بالتشفير من طرف إلى طرف الذي يضمن أمان البيانات والفواتير المتوافقة مع التدقيق."
+  },
+  "⏰ Swift Implementation: Get ZATCA integration live in under two weeks with minimal disruption.": {
+    "ar": "⏰ تنفيذ سريع: احصل على تكامل الهيئة العامة للزكاة والدخل في أقل من أسبوعين بأقل قدر من التعطيل."
+  },
+  "🔍 Trust Before Commitment: Experience Accqrate's capabilities with a complimentary ZATCA Sandbox test.": {
+    "ar": "🔍 ثقة قبل الالتزام: اختبر قدرات أككوريت مع اختبار مجاني لبيئة الاختبار التجريبية للهيئة العامة للزكاة والدخل."
+  },
+  "📞 Always Here for You: Let us navigate you through seamless integrations and unmatched security.": {
+    "ar": "📞 دائمًا هنا من أجلك: دعنا نرشدك خلال عمليات التكامل السلسة والأمان الذي لا يُضاهى."
+  }
 
 }
 export const setLanguage = (l: LanguageCode) => {
