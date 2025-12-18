@@ -71,7 +71,7 @@ function SapIntegration() {
         <T>3. At this stage, invoice printouts lack the QR code or ZATCA ID.</T>
 
         <Image src={AssetPath.integration.integration4} className="w-100 mb-2 mt-3" alt="integration4" />
-        <T>4. Accqrate’s E-invoicing tracker in SAP provides a complete view of all processed invoices.</T>
+        <T>4. Accqrate E-invoicing tracker in SAP provides a complete view of all processed invoices.</T>
 
         <Image src={AssetPath.integration.integration5} className="w-100 mb-2 mt-3" alt="integration5" />
         <T>5. A green process indicator signifies ZATCA approval of the invoice.</T>

@@ -15078,6 +15078,27 @@ const translations = {
   },
   "📞 Always Here for You: Let us navigate you through seamless integrations and unmatched security.": {
     "ar": "📞 دائمًا هنا من أجلك: دعنا نرشدك خلال عمليات التكامل السلسة والأمان الذي لا يُضاهى."
+  },
+  "A comprehensive guide to declare VAT on advance invoices and prepayment invoices to ZATCA without double VAT payments...": {
+    "ar": "دليل شامل لإعلان ضريبة القيمة المضافة على فواتير الدفعات المقدمة وفواتير السلف للهيئة العامة للزكاة والدخل دون دفع ضريبة القيمة المضافة مرتين..."
+  },
+  "4. Accqrate E-invoicing tracker in SAP provides a complete view of all processed invoices.": {
+    "ar": "4. يوفر متعقب الفوترة الإلكترونية من أككوريت في SAP عرضًا كاملاً لجميع الفواتير المعالجة."
+  },
+  "4. Accqrate's E-invoicing tracker in SAP": {
+    "ar": "4. متعقب الفوترة الإلكترونية من أككوريت في SAP"
+  },
+  "provides a complete view of all processed invoices.": {
+    "ar": "يوفر عرضًا كاملاً لجميع الفواتير المعالجة."
+  },
+  "E-invoicing tracker": {
+    "ar": "متعقب الفوترة الإلكترونية"
+  },
+  "complete view": {
+    "ar": "عرض كامل"
+  },
+  "processed invoices": {
+    "ar": "الفواتير المعالجة"
   }
 
 }

@@ -8,9 +8,9 @@ import Image from "next/image";
 const Pos: React.FC = () => {
   return (
     <BlogLayout
-      pageTitle="POS Billing Software Integration with ZATCA: Accqrate"
+      pageTitle={<T>POS Billing Software Integration with ZATCA: Accqrate</T>}
       updatedOn="Jan 13th, 2025"
-      minRead="23"
+      minRead={<T>23</T>}
     >
       <Image
         src={AssetPath.blogs.financialPenalties}
@@ -27,8 +27,7 @@ const Pos: React.FC = () => {
       <p className="text-fluid-small leading-relaxed mb-4">
         <T>
           Point of Sales (POS) systems are critical to improving customer satisfaction and ensuring seamless
-          business operations. However, with the launch of{" "}
-          <b>E-invoicing Phase 2 by ZATCA (Zakat, Tax, and Customs Authority),</b> businesses in Saudi Arabia
+          business operations. However, with the launch of <b>E-invoicing Phase 2 by ZATCA (Zakat, Tax, and Customs Authority),</b> businesses in Saudi Arabia
           face new challenges in integrating legacy POS systems with ZATCA's compliance requirements.
         </T>
       </p>
@@ -72,8 +71,7 @@ const Pos: React.FC = () => {
         </li>
         <li>
           <T>
-            <b>Customer Experience:</b> Any changes to POS systems must not increase{" "}
-            <b>customer waiting time</b>, as this can impact satisfaction.
+            <b>Customer Experience:</b> Any changes to POS systems must not increase <b>customer waiting time</b>, as this can impact satisfaction.
           </T>
         </li>
         <li>
@@ -97,9 +95,7 @@ const Pos: React.FC = () => {
 
       <p className="text-fluid-small leading-relaxed mb-4">
         <T>
-          With a proven track record of integrating widely used POS systems in Saudi Arabia — including{" "}
-          <b>SAGE, AX, Denali,</b> and more — Accqrate has successfully helped businesses from{" "}
-          <b>retail, pharma, and education sectors</b> achieve <b>E-invoicing compliance.</b>
+          With a proven track record of integrating widely used POS systems in Saudi Arabia — including <b>SAGE, AX, Denali,</b> and more — Accqrate has successfully helped businesses from <b>retail, pharma, and education sectors</b> achieve <b>E-invoicing compliance.</b>
         </T>
       </p>
 
@@ -140,8 +136,7 @@ const Pos: React.FC = () => {
         </li>
         <li>
           <T>
-            The POS system communicates with the .exe through a <b>localhost call</b> to generate a
-            <b>ZATCA-compliant QR code</b> in real time.
+            The POS system communicates with the .exe through a <b>localhost call</b> to generate a <b>ZATCA-compliant QR code</b> in real time.
           </T>
         </li>
         <li><T>The QR code is printed on the customer invoice.</T></li>
@@ -234,9 +229,7 @@ const Pos: React.FC = () => {
 
       <p className="text-fluid-small leading-relaxed mb-4">
         <T>
-          Accqrate is more than just an <b>E-invoicing solution.</b> It offers a
-          <b>full-fledged cloud-based ERP system</b> with a robust <b>POS module</b> designed for
-          <b>modern businesses.</b>
+          Accqrate is more than just an <b>E-invoicing solution.</b> It offers a <b>full-fledged cloud-based ERP system</b> with a robust <b>POS module</b> designed for <b>modern businesses.</b>
         </T>
       </p>
 
@@ -286,7 +279,6 @@ const Pos: React.FC = () => {
       </h3>
 
       <ul className="story pl-5 text-fluid-small leading-relaxed space-y-2 mb-6">
-
         <li>
           <T>
             <b>Proven Experience:</b> Accqrate has worked with over <b>5000+ businesses</b> across <b>multiple industries</b> to ensure smooth ZATCA integration.
@@ -315,38 +307,7 @@ const Pos: React.FC = () => {
 
       <p className="text-fluid-small leading-relaxed mb-4">
         <T>
-          The deployment of{" "}
-          <a
-            href="https://accqrate-erp.com/en/e-invoicing-plugin"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-600 underline"
-          >
-            <T>Accqrate e-invoicing solution</T>
-          </a>{" "}
-          for POS-based software in Saudi Arabia exemplifies a seamless blend of compliance, efficiency, and
-          customer satisfaction. With the construction sector booming due to projects like{" "}
-          <a
-            href="https://www.jeddahcentral.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-600 underline"
-          >
-            <T>Jeddah Central Project, King Salman Park</T>
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://www.neom.com/en-us/regions/theline"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-600 underline"
-          >
-            <T>THE LINE</T>
-          </a>
-          , plus major events such as the World Expo 2030 and FIFA 2034 on the horizon, the estimated growth in
-          the construction and building-materials sector is substantial. As Saudi Arabia progresses toward
-          Vision 2030, embracing digital transformation in invoicing becomes imperative. Accqrate's integration
-          solutions ensure businesses stay compliant while remaining innovative.
+          The deployment of <a href="https://accqrate-erp.com/en/e-invoicing-plugin" target="_blank" rel="noreferrer" className="text-blue-600 underline"><T>Accqrate e-invoicing solution</T></a> for POS-based software in Saudi Arabia exemplifies a seamless blend of compliance, efficiency, and customer satisfaction. With the construction sector booming due to projects like <a href="https://www.jeddahcentral.com/" target="_blank" rel="noreferrer" className="text-blue-600 underline"><T>Jeddah Central Project, King Salman Park</T></a> and <a href="https://www.neom.com/en-us/regions/theline" target="_blank" rel="noreferrer" className="text-blue-600 underline"><T>THE LINE</T></a>, plus major events such as the World Expo 2030 and FIFA 2034 on the horizon, the estimated growth in the construction and building-materials sector is substantial. As Saudi Arabia progresses toward Vision 2030, embracing digital transformation in invoicing becomes imperative. Accqrate's integration solutions ensure businesses stay compliant while remaining innovative.
         </T>
       </p>
 
@@ -363,8 +324,7 @@ const Pos: React.FC = () => {
 
       <p className="text-sm md:text-base leading-relaxed mb-4">
         <T>
-          <b>Contact us today</b> to schedule a <b>demo</b> and see how we can help your business{" "}
-          <b>embrace the future of e-invoicing.</b>
+          <b>Contact us today</b> to schedule a <b>demo</b> and see how we can help your business <b>embrace the future of e-invoicing.</b>
         </T>
       </p>
 
@@ -374,26 +334,13 @@ const Pos: React.FC = () => {
 
       <p className="text-fluid-small leading-relaxed mb-4">
         <T>
-          <a
-            href="https://accqrate-erp.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-600 underline"
-          >
-            <T>Accqrate</T>
-          </a>{" "}
-          is a Saudi-based e-invoicing and ERP solution provider offering accounting, integrators, and a
-          full-suite ERP system including POS. Recognized as one of the most cost-effective platforms in KSA,
-          Accqrate ensures seamless integration with ZATCA's Fatoora portal. Powered by GenAI and GPT technologies,
-          it enhances user experience through intelligent automation and cross-department collaboration.
+          <a href="https://accqrate-erp.com/" target="_blank" rel="noreferrer" className="text-blue-600 underline"><T>Accqrate</T></a> is a Saudi-based e-invoicing and ERP solution provider offering accounting, integrators, and a full-suite ERP system including POS. Recognized as one of the most cost-effective platforms in KSA, Accqrate ensures seamless integration with ZATCA's Fatoora portal. Powered by GenAI and GPT technologies, it enhances user experience through intelligent automation and cross-department collaboration.
         </T>
       </p>
 
       <p className="text-fluid-small leading-relaxed mb-10">
         <T>
-          With scalability and flexibility at its core, Accqrate offers both cloud and on-premise solutions,
-          encouraging KSA businesses to embrace digital transformation. Trusted across MENA, European, and ASEAN markets,
-          Accqrate helps organizations achieve operational excellence globally.
+          With scalability and flexibility at its core, Accqrate offers both cloud and on-premise solutions, encouraging KSA businesses to embrace digital transformation. Trusted across MENA, European, and ASEAN markets, Accqrate helps organizations achieve operational excellence globally.
         </T>
       </p>
     </BlogLayout>

@@ -1,4 +1,3 @@
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import Image from 'next/image'
@@ -10,9 +9,9 @@ import AssetPath from '@/AssetPath/AssetPath'
 function FinancialPenalties() {
   return (
     <BlogLayout
-      pageTitle="Fines and Financial Penalties Exemption by ZATCA, Saudi Arabia"
+      pageTitle={<T>Fines and Financial Penalties Exemption by ZATCA, Saudi Arabia</T>}
       updatedOn="Jan 22nd, 2025"
-      minRead="23"
+      minRead={<T>23</T>}
     >
       <Image
         src={AssetPath.blogs.financialPenalties}
@@ -53,7 +52,7 @@ function FinancialPenalties() {
           <li><T><b>Late submission of returns</b></T></li>
           <li><T><b>Corrections to VAT returns</b></T></li>
           <li><T><b>Violations of VAT field control</b> related to e-invoicing regulations</T></li>
-          <li><T><b>Other general regulations</b> under ZATCA’s purview</T></li>
+          <li><T><b>Other general regulations</b> under ZATCA's purview</T></li>
         </ol>
       </div>
 
@@ -93,7 +92,7 @@ function FinancialPenalties() {
         <T>The following were explicitly not included in the original initiative:</T>
         <ol>
           <li className="mt-3"><T><b>Tax evasion violations</b></T></li>
-          <li><T><b>Fines paid before the initiative’s effective date</b></T></li>
+          <li><T><b>Fines paid before the initiative's effective date</b></T></li>
           <li>
             <T><b>Late payment fines</b> related to any tax installment due <b>after November 30, 2022</b></T>
           </li>
@@ -115,9 +114,9 @@ function FinancialPenalties() {
           </li>
           <li><T><b>Email:</b> info@zatca.gov.sa</T></li>
           <li>
-            <T><b>Instant Chat:</b>{' '}</T>
+            <T><b>Instant Chat:</b> </T>
             <a href="https://zatca.gov.sa/" target="_blank" rel="noreferrer">
-              <T>ZATCA’s official website</T>
+              <T>ZATCA's official website</T>
             </a>
           </li>
         </ol>
@@ -129,32 +128,20 @@ function FinancialPenalties() {
       <h4 className="text-fluid-body font-semibold mt-3 mb-2"><T>Phase I: Core E-Invoicing Requirements</T></h4>
       <p className="story text-fluid-small leading-relaxed text-gray-800">
         <T>
-          <a
-            href="https://zatca.gov.sa/en/E-Invoicing/PreparingYourBusiness/Phase1/Pages/default.aspx"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Phase I
-          </a>{' '}
-          of e-invoicing became mandatory on <b>December 4, 2021</b>, requiring businesses to generate and
+          Phase I of e-invoicing became mandatory on <b>December 4, 2021</b>, requiring businesses to generate and
           store invoices electronically. Despite the pandemic-related leniencies in fines, ZATCA has emphasized
-          that compliance with e-invoicing is <b>non-negotiable</b> and critical for modernizing Saudi Arabia’s
+          that compliance with e-invoicing is <b>non-negotiable</b> and critical for modernizing Saudi Arabia's
           tax ecosystem.
         </T>
       </p>
 
       <h4 className="text-fluid-body font-semibold mt-3 mb-2"><T>Phase II: Integration Phase</T></h4>
       <div className="story text-base md:text-lg leading-relaxed text-gray-800">
-        <a
-          href="https://zatca.gov.sa/en/E-Invoicing/PreparingYourBusiness/Phase2/Pages/default.aspx"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <T>Phase II</T>
-        </a>{' '}
-        <T>(Integration Phase) began rolling out in <b>January 2023</b>, requiring additional technical
-          integrations and real-time data sharing with ZATCA’s systems. This roll-out is being implemented in
-          <b> waves</b> throughout 2023 and beyond.</T>
+        <T>
+          Phase II (Integration Phase) began rolling out in <b>January 2023</b>, requiring additional technical
+          integrations and real-time data sharing with ZATCA's systems. This roll-out is being implemented in
+          <b> waves</b> throughout 2023 and beyond.
+        </T>
         <br />
         <T><b>Important Updates for 2023 and 2024:</b></T>
         <ol>
@@ -171,8 +158,8 @@ function FinancialPenalties() {
           </li>
         </ol>
         <T>
-          <T>To avoid last-minute hassles and ensure smooth compliance, implement a robust e-invoicing solution
-            that meets ZATCA’s Phase II technical specifications.</T>
+          To avoid last-minute hassles and ensure smooth compliance, implement a robust e-invoicing solution
+          that meets ZATCA's Phase II technical specifications.
         </T>
       </div>
 
@@ -188,27 +175,26 @@ function FinancialPenalties() {
 
         <ul className="mt-3">
           <li>
-            <b>Final Tip:</b> Regularly visit{' '}
-            <a href="https://zatca.gov.sa/" target="_blank" rel="noreferrer">
-              ZATCA’s official website
-            </a>{' '}
-            and subscribe to newsletters to remain informed about new exemptions, deadlines, and regulations.
+            <T>
+              <b>Final Tip:</b> Regularly visit{' '}
+              <a href="https://zatca.gov.sa/" target="_blank" rel="noreferrer">
+                ZATCA's official website
+              </a>{' '}
+              and subscribe to newsletters to remain informed about new exemptions, deadlines, and regulations.
+            </T>
           </li>
         </ul>
 
         <T>
-          Stay proactive, remain compliant, and leverage digital tools to thrive in Saudi Arabia’s rapidly
+          Stay proactive, remain compliant, and leverage digital tools to thrive in Saudi Arabia's rapidly
           evolving economic environment.
         </T>
 
         <p className="mt-3 text-fluid-body font-medium"><T><b>About Accqrate</b></T></p>
 
         <T>
-          <a href="https://accqrate-erp.com/" target="_blank" rel="noreferrer">
-            Accqrate
-          </a>{' '}
-          is a leading Saudi-based ERP and e-invoicing solution provider, offering comprehensive accounting,
-          e-invoicing integrations, and POS systems. It ensures seamless integration with ZATCA’s Fatoora
+          Accqrate is a leading Saudi-based ERP and e-invoicing solution provider, offering comprehensive accounting,
+          e-invoicing integrations, and POS systems. It ensures seamless integration with ZATCA's Fatoora
           portal for Phase 2 compliance and is powered by GenAI and GPT technologies to enhance productivity
           and inter-department collaboration.
         </T>

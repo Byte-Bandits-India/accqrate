@@ -1,4 +1,3 @@
-
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 "use client";
@@ -12,12 +11,10 @@ export default function ZatcaInvoice() {
   return (
     <BlogLayout
       pageTitle={
-        <T>
-          Adapting Business Processes for ZATCA e-Invoicing Phase 2 Compliance
-        </T>
+        <T>Adapting Business Processes for ZATCA e-Invoicing Phase 2 Compliance</T>
       }
       updatedOn="Feb 08th, 2024"
-      minRead="23"
+      minRead={<T>23</T>}
     >
       <Image
         src={AssetPath.blogs.adaptingBusinessZATCA}
@@ -33,7 +30,7 @@ export default function ZatcaInvoice() {
           For Phase I, the e-invoicing software that you select should comply
           with ZATCA guidelines, including the generation of QR codes and
           automatic invoice archiving. For Phase II, the e-invoicing software
-          should seamlessly integrate with ZATCA’s system to send your invoices.
+          should seamlessly integrate with ZATCA's system to send your invoices.
           This means the software should be a cloud-based solution built on
           modern technology to adapt and scale for future needs.
         </T>
@@ -82,7 +79,7 @@ export default function ZatcaInvoice() {
       </p>
       <p className="story text-fluid-small mb-4">
         <T>
-          Pricing is a key factor that can make or break an agreement. It’s
+          Pricing is a key factor that can make or break an agreement. It's
           essential to carefully review the pricing structure of the
           e-invoicing solution to ensure it aligns with the scale of your
           business. Small business owners generating five or fewer invoices per
