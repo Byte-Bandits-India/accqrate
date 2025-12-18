@@ -15099,6 +15099,36 @@ const translations = {
   },
   "processed invoices": {
     "ar": "الفواتير المعالجة"
+  },
+  "Updated On :": {
+  ar: "تم التحديث في :"
+},
+"min read": {
+  ar: "دقيقة قراءة"
+},
+"Simplify transactions, manage invoices effortlessly": {
+    "ar": "بسّط المعاملات، وأدر الفواتير بسهولة"
+  },
+  "with our ZATCA approved e-invoicing software.": {
+    "ar": "مع برنامج الفوترة الإلكترونية المعتمد من الهيئة العامة للزكاة والدخل."
+  },
+  "Integrate your ERP and POS with ZATCA": {
+    "ar": "دمج نظام التخطيط المؤسسي ونقاط البيع الخاص بك مع الهيئة العامة للزكاة والدخل"
+  },
+  "with our seamless, adaptable e-invoicing API": {
+    "ar": "من خلال واجهة برمجة تطبيقات الفوترة الإلكترونية السلسة والقابلة للتكيف"
+  },
+  "or Offline integrators": {
+    "ar": "أو المتكاملات غير المتصلة بالإنترنت"
+  },
+  "Simplify transactions, manage invoices effortlessly with our ZATCA approved e-invoicing software.": {
+    "ar": "بسّط المعاملات، وأدر الفواتير بسهولة مع برنامج الفوترة الإلكترونية المعتمد من الهيئة العامة للزكاة والدخل."
+  },
+  "Integrate your ERP and POS with ZATCA with our seamless, adaptable e-invoicing API or Offline integrators": {
+    "ar": "دمج نظام التخطيط المؤسسي ونقاط البيع الخاص بك مع الهيئة العامة للزكاة والدخل من خلال واجهة برمجة تطبيقات الفوترة الإلكترونية السلسة والقابلة للتكيف أو المتكاملات غير المتصلة بالإنترنت"
+  },
+   "Calculate your tax obligations": {
+    "ar": "احسب التزاماتك الضريبية"
   }
 
 }
