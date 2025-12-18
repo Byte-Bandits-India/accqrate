@@ -15132,6 +15132,48 @@ const translations = {
   },
   "Subscribe for Updates": {
     "ar": "اشترك للحصول على التحديثات"
+  },
+  "Get 30 days free trial": {
+    "ar": "احصل على نسخة تجريبية مجانية لمدة 30 يومًا"
+  },
+  "Integration engineers and Consultants": {
+    "ar": "مهندسي تكامل ومستشارين"
+  },
+  "Completed integrations": {
+    "ar": "تكاملات مكتملة"
+  },
+  "M": {
+    "ar": "مليون"
+  },
+  "Go live in just 5 days with guaranteed ZATCA integration": {
+    "ar": "ابدأ التشغيل في 5 أيام فقط مع ضمان تكامل الهيئة العامة للزكاة والدخل"
+  },
+  "We deliver full support for your complete KSeF integration lifecycle from setup to continuous compliance": {
+    "ar": "نقدم دعمًا كاملاً لدورة حياة تكامل نظام الفواتير الإلكترونية (KSeF) الخاص بك من الإعداد إلى الامتثال المستمر"
+  },
+  "SAP": {
+    "ar": "SAP (نظام تخطيط موارد المؤسسة)"
+  },
+  "Oracle": {
+    "ar": "Oracle (أوراكل)"
+  },
+  "MSD": {
+    "ar": "MSD"
+  },
+  "Infor": {
+    "ar": "Infor"
+  },
+  "BAAN": {
+    "ar": "BAAN"
+  },
+  "SAGE": {
+    "ar": "SAGE (سايج)"
+  },
+  "Custom": {
+    "ar": "المخصصة"
+  },
+  "Inhouse ERP/POS": {
+    "ar": "أنظمة التخطيط المؤسسي/نقاط البيع الداخلية"
   }
 
 }
