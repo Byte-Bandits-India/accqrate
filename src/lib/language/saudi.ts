@@ -15129,6 +15129,9 @@ const translations = {
   },
    "Calculate your tax obligations": {
     "ar": "احسب التزاماتك الضريبية"
+  },
+  "Subscribe for Updates": {
+    "ar": "اشترك للحصول على التحديثات"
   }
 
 }
