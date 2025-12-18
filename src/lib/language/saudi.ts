@@ -15174,6 +15174,12 @@ const translations = {
   },
   "Inhouse ERP/POS": {
     "ar": "أنظمة التخطيط المؤسسي/نقاط البيع الداخلية"
+  },
+  "Direct Integration & People integration": {
+    "ar": "التكامل المباشر وتكامل الأشخاص"
+  },
+  "Get 100% compliant e-invoicing with Accqrate": {
+    "ar": "احصل على فوترة إلكترونية متوافقة بنسبة 100٪ مع أككوريت"
   }
 
 }
