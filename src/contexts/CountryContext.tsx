@@ -57,7 +57,7 @@ export const countries: Country[] = [
         currency: "SAR",
     },
 
-    {
+/*    {
         name: "Oman",
         code: "OM",
         flag: AssetPath.header.language.oman,
@@ -84,7 +84,14 @@ export const countries: Country[] = [
         flag: AssetPath.header.language.mauritius,
         language: "English",
         currency: "MUR",
-    },
+    }, 
+    {
+        name: "Jordan",
+        code: "JD",
+        flag: AssetPath.header.language.jordan,
+        language: "Arabic",
+        currency: "JOD",
+    },*/
     {
         name: "Belgium",
         code: "BE",
@@ -107,13 +114,7 @@ export const countries: Country[] = [
         language: "English",
         currency: "PLN",
     },
-    {
-        name: "Jordan",
-        code: "JD",
-        flag: AssetPath.header.language.jordan,
-        language: "Arabic",
-        currency: "JOD",
-    },
+  
 ];
 
 export const languages: Language[] = allLanguages;
