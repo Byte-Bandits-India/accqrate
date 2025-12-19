@@ -1,7 +1,8 @@
-'use client'
+ 'use client'
 
 import React, { use } from 'react'
 import ComingSoon from '@/Components/CommingSoon'
+import { notFound } from 'next/navigation'
 
 const comingSoonRoutes = [
     // E-invoicing Solution
@@ -79,5 +80,6 @@ export default function CatchAllPage({
         return <ComingSoon />
     }
 
-    return <div>Page not found</div>
+    // For any other unknown path under /[lang]/[country]/..., trigger the app-level not-found
+    notFound()
 }
