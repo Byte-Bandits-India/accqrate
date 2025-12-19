@@ -91,6 +91,13 @@ export const countries: Country[] = [
         flag: AssetPath.header.language.jordan,
         language: "Arabic",
         currency: "JOD",
+    },
+     {
+        name: "Poland",
+        code: "PL",
+        flag: AssetPath.header.language.poland,
+        language: "English",
+        currency: "PLN",
     },*/
     {
         name: "Belgium",
@@ -107,13 +114,7 @@ export const countries: Country[] = [
         currency: "AED",
     },
 
-    {
-        name: "Poland",
-        code: "PL",
-        flag: AssetPath.header.language.poland,
-        language: "English",
-        currency: "PLN",
-    },
+   
   
 ];
 
