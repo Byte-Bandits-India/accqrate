@@ -55,6 +55,9 @@ const translations = {
   'Testimonials': {
     ar: 'الشهادات'
   },
+  "Compliant": {
+  ar: "متوافق"
+},
   'Speak to a Reference Customer': {
     ar: 'تحدث إلى عميل مرجعي'
   },
