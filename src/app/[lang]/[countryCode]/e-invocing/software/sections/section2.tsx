@@ -162,16 +162,16 @@ const Section2 = () => {
                         <h3 className="text-[24px] font-normal text-[#000000] leading-tight">
                             <T>Flexible Deployment</T>
                         </h3>
-                        <p className='text-[#333333] text-[16px] mt-4 md:mt-6 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
+                        <p className='text-[#333333] text-[16px] mt-4 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
 
                         <div className="py-6 md:py-8 lg:py-10">
                             <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
                                 {/* Cloud Based Solutions */}
                                 <div className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
                                     <img
-                                        src={AssetPath.invoicing.cloudAcceleration.src}
+                                        src={AssetPath.icons.cloud.src}
                                         alt="cloud"
-                                        className="w-[64px] h-auto"
+                                        className="w-[40px] h-auto"
                                     />
                                     <h3 className="text-[18px] text-[#1C2041]">
                                         <T>Cloud Based Solutions</T>
@@ -200,9 +200,9 @@ const Section2 = () => {
                                 {/* On Premises Solutions */}
                                 <div className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
                                     <img
-                                        src={AssetPath.invoicing.serverPath.src}
+                                        src={AssetPath.icons.onPremises.src}
                                         alt="server"
-                                        className="w-[64px] h-auto"
+                                        className="w-[40px] h-auto"
                                     />
                                     <h3 className="text-[18px] text-[#1C2041]">
                                         <T>On Premises Solutions</T>
@@ -236,10 +236,12 @@ const Section2 = () => {
             {/* Footer Recent Blogs */}
             <section className="bg-[#eff3ff] py-10">
                 <div className="container mx-auto px-4 max-w-[1250px]">
-                    <h3 className="text-xl md:text-[28px] text-[#1c2041] font-semibold text-center">
+                    <h3 className="text-[24px] text-[#1c2041] font-semibold text-center">
                         <BelgiumT><span className='text-[#194BED]'>E-invoicing</span> Insights</BelgiumT>
                     </h3>
-                    <p className='mb-6 md:mb-10 mt-2 text-center'>In-depth analysis of electronic invoicing trends, benefits, and adoption.</p>
+                    <p className='mb-6 md:mb-10 mt-2 text-center text-[#5A6183]'>
+                        <T>In-depth analysis of electronic invoicing trends, benefits, and adoption.</T>
+                    </p>
                     <Row
                         justify="center"
                         gutter={[
@@ -250,21 +252,23 @@ const Section2 = () => {
                         {randomBlogs.map((data, i) => (
                             <Col xs={24} sm={12} md={6} lg={6} key={i}>
                                 <div
-                                    className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full"
+                                    className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full border border-gray-100"
                                     onClick={() => router.push(data.url)}
                                 >
-                                    <Image
-                                        src={data.image}
-                                        alt={data.heading}
-                                        width={400}
-                                        height={180}
-                                        className="rounded-lg mb-3 w-full h-[180px] object-cover"
-                                    />
-                                    <div className="flex flex-col flex-grow px-4 pb-4">
+                                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                                        <Image
+                                            src={data.image}
+                                            alt={data.heading}
+                                            fill
+                                            className="object-cover transition-transform duration-300 hover:scale-105"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                        />
+                                    </div>
+                                    <div className="flex flex-col flex-grow p-4">
                                         <h3 className="text-base leading-snug font-semibold text-gray-900 line-clamp-2 mb-2">
                                             <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.heading}</T>
                                         </h3>
-                                        <p className="text-gray-500 text-sm line-clamp-2 leading-tight">
+                                        <p className="text-gray-500 text-sm line-clamp-2 leading-tight mb-4">
                                             <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.value}</T>
                                         </p>
                                     </div>
@@ -273,11 +277,12 @@ const Section2 = () => {
                         ))}
                     </Row>
 
-                    <div className='flex items-center justify-center'>
+                    <div className='flex items-center justify-center mt-8 md:mt-12'>
                         <button
-                            className="inline-flex text-[14px] items-center justify-center gap-2 bg-[#F05A28] mt-6 md:mt-8 lg:mt-10 text-[#FFFFFF] px-6 py-4 rounded-full"
+                            className="inline-flex text-[14px] items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-6 py-4 rounded-full hover:bg-[#e04918] transition-colors duration-300"
+                            onClick={() => router.push(`/${lang}/${countryCode}/resources/blogs`)}
                         >
-                            <T>Learn More</T> <ArrowRight className="w-4 h-4 -rotate-45" />
+                            <T>Explore All Blogs</T> <ArrowRight className="w-4 h-4 -rotate-45" />
                         </button>
                     </div>
                 </div>

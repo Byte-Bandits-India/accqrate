@@ -598,7 +598,7 @@ const Header: React.FC = () => {
         ref={headerRef}
         className="xl:sticky xl:top-0 z-50 m-0 p-0 w-full bg-white xl:border-b border-gray-200 pb-4 xl:pb-0"
       >
-        <div className="max-w-[1280px] mx-auto">
+        <div className="xl:px-10 mx-auto">
           <div className="w-full px-6 pt-6 xl:pt-0 md:px-[32px] xl:px-0">
             <div className="flex items-center justify-between gap-2">
               {/* Logo */}

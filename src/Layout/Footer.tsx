@@ -142,13 +142,13 @@ export default function FooterUpdated() {
   ];
 
   return (
-    <footer className="bg-[#1F1F1F] text-white py-16 font-inter">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10 xl:px-16">
+    <footer className="bg-white text-[#000000d9] py-16 font-inter">
+      <div className="mx-auto px-6 md:px-10 xl:px-10">
         <div className="hidden lg:block">
           {/* Logo */}
           <Link href={createHref("/")}>
             <Image
-              src={AssetPath.common.white}
+              src={AssetPath.header.logo}
               alt="Accqrate"
               width={180}
               height={50}
@@ -166,7 +166,7 @@ export default function FooterUpdated() {
             {/* Description + E-invoicing */}
             <div className="flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-16 mb-10">
               {/* Description */}
-              <p className="text-[#E5E5E5] text-fluid-small leading-7 max-w-[573px]">
+              <p className="text-[#1c2041] text-fluid-small leading-7 max-w-[573px]">
                 <T>
                   One unified platform with zero silos integrated modules on a
                   single data model, global compliance built-in, AI-powered
@@ -181,12 +181,12 @@ export default function FooterUpdated() {
                 <h3 className="text-fluid-body font-semibold mb-4">
                   <T>E-invoicing Solution</T>
                 </h3>
-                <ul className="space-y-2 text-[#E5E5E5] text-fluid-small">
+                <ul className="space-y-2 text-[##1c2041] text-fluid-small">
                   {eInvoicingLinks.map((item, i) => (
                     <li key={i}>
                       <Link
                         href={resolveHref(item.href)}
-                        className="text-[#ffffff] hover:text-[#5980FF] underline underline-offset-2"
+                        className="text-[#1c2041] hover:text-[#5980FF] underline underline-offset-2"
                       >
                         <T>{item.label}</T>
                       </Link>
@@ -197,7 +197,7 @@ export default function FooterUpdated() {
             </div>
 
             {/* Divider */}
-            <div className="my-6 h-[1px] bg-[#F0F0F0]" />
+            <div className="my-6 h-[1px] bg-[#1c2041]" />
 
             {/* Middle Nav */}
             <div className="pt-4">
@@ -206,7 +206,7 @@ export default function FooterUpdated() {
                   <Link
                     key={i}
                     href={resolveHref(item.href)}
-                    className="hover:text-[#5980FF] text-[#FFFFFF] transition-colors"
+                    className="hover:text-[#5980FF] text-[#1c2041] transition-colors"
                   >
                     <T>{item.label}</T>
                   </Link>
@@ -216,7 +216,7 @@ export default function FooterUpdated() {
           </div>
 
           {/* FULL-HEIGHT VERTICAL LINE */}
-          <div className="hidden lg:block w-[1px] bg-[#F0F0F0] self-stretch"></div>
+          <div className="hidden lg:block w-[1px] bg-[#1c2041] self-stretch"></div>
 
           {/* RIGHT GRID */}
           <div className="flex-grow grid sm:grid-cols-2 gap-10">
@@ -226,7 +226,7 @@ export default function FooterUpdated() {
                   <T>{section.title}</T>
                 </h3>
 
-                <ul className="space-y-3 text-[#E5E5E5] text-fluid-small">
+                <ul className="space-y-3 text-[#1c2041] text-fluid-small">
                   {section.links.map((item, i) => (
                     <li key={i}>
                       {item.isText ? (
@@ -242,7 +242,7 @@ export default function FooterUpdated() {
                           return (
                             <Link
                               href={resolveHref(item.href ?? "")}
-                              className="text-[#ffffff] hover:text-[#5980FF] underline underline-offset-2 block"
+                              className="text-[#1c2041] hover:text-[#5980FF] underline underline-offset-2 block"
                             >
                               <T>{item.label}</T>
                             </Link>
@@ -271,7 +271,7 @@ export default function FooterUpdated() {
         </div>
 
         {/* Copyright */}
-        <p className="text-center text-[#C8C8C8] text-fluid-small">
+        <p className="text-center text-[#1c2041] text-fluid-small">
           <T>© Copyright 2021 - 2025</T>{" "}
           <span className="text-[#5980FF] font-medium">Accqrate</span>,{" "}
           <T>All rights reserved.</T>

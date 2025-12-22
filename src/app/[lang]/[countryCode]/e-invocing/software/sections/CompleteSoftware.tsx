@@ -137,7 +137,7 @@ const Section3 = () => {
 
                         {/* Decorative SVG aligned right to the h3 */}
                         <img
-                            src={AssetPath.invoicing.green.src}
+                            src={AssetPath.icons.greenStarIcon.src}
                             alt="decoration"
                             className="absolute -right-[10px] lg:-right-[80px] -top-[40px] lg:-top-[30px] -translate-y-1/2 w-[40px]"
                         />
