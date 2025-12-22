@@ -45,7 +45,7 @@ const Section2 = () => {
                 <div
                   key={i}
                   className={`bg-white rounded-[16px] border border-[#E6E9F5] px-8 w-[300px]
-                    ${isCenter ? "py-10 lg:scale-105 h-[450px]" : "py-12 h-[400px]"}
+                    ${isCenter ? "py-10 lg:scale-105 h-[440px]" : "py-12 h-[420px] w-[320px]"}
                   `}
                 >
                   <div className="w-12 h-12 rounded-[10px] bg-[#EEF2FF] flex items-center justify-center mb-6">
