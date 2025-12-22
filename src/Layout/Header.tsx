@@ -355,10 +355,10 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
       className="fixed left-0 right-0 top-0 w-[1100px] mx-auto border-t border-gray-200 bg-white rounded-b-xl z-50"
       style={{ top: headerHeight }}
     >
-      <div className="w-[900px] xl:w-[1100px] mx-auto px-8 py-10 bg-white rounded-b-xl flex flex-col">
-        <div className="grid grid-cols-3 gap-8 w-full max-w-7xl mx-auto">
+      <div className="w-[900px] xl:w-[1100px] mx-auto px-8 pb-10 bg-white rounded-b-xl flex flex-col">
+        <div className="grid w-full max-w-7xl mx-auto">
           {/* Left: category list */}
-          <div className="col-span-1 border-r pr-6 mb-2">
+          <div className="col-span-1 pr-6 mb-2">
             <ul className="mt-3 space-y-6">
               {menu.sections.map((section) => (
                 <li
@@ -384,16 +384,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                       />
                     )}
 
-                    {/* XL image - only show if it exists */}
-                    {section.xl && (
-                      <Image
-                        src={section.xl}
-                        alt={`${section.heading} large`}
-                        className="hidden xl:block w-[264px] h-[342px] object-contain"
-                        width={264}
-                        height={342}
-                      />
-                    )}
+                    {/* XL image removed for desktop to avoid large left-side artwork */}
                     <span className="xl:hidden">
                       <T>{section.heading}</T>
                     </span>
@@ -404,18 +395,18 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
           </div>
 
           {/* Right: subitems */}
-          <div className="col-span-2 mb-2">
+          <div className="col-span-2 mb-20">
             <h6 className="pl-2.5 font-semibold uppercase text-sm text-gray-500 mb-4">
               {activeSection}
             </h6>
-            <ul className="grid grid-cols-2 gap-4">
+            <ul className="grid grid-cols-2 gap-10">
               {menu.sections
                 .find((sec) => sec.heading === activeSection)
                 ?.subItems.map((item) => (
                   <li key={item.title} onClick={onItemClick}>
                     <Link
                       href={createHref(item.href)}
-                      className="flex items-start gap-3 p-2 rounded-md hover:bg-[#f0f3ff] transition-colors cursor-pointer"
+                      className="flex items-start gap-4 py-4 px-10 rounded-md hover:bg-[#f0f3ff] transition-colors cursor-pointer"
                     >
                       {item.img && (
                         <Image
@@ -428,10 +419,10 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
                       )}
 
                       <div>
-                        <h4 className="text-[16px] font-medium text-[#333333] leading-tight hover:text-[#534ED3]">
+                        <h4 className="text-[16px] font-medium text-[#333333] leading-tight hover:text-[#534ED3] ">
                           <T>{item.title}</T>
                         </h4>
-                        <p className="text-[12px] text-gray-500 leading-snug mt-[6px]">
+                        <p className="text-[12px] text-gray-500 leading-snug mt-[6px] ">
                           <T>{item.description}</T>
                         </p>
                       </div>
@@ -663,7 +654,7 @@ const Header: React.FC = () => {
                                       <T>{section.heading}</T>
                                     </h3>
                                     <p className="text-gray-500 mb-4"><T>{section.description}</T></p>
-                                    <ul className="flex flex-wrap gap-4 text-[#717171]">
+                                    <ul className="grid grid-cols-3 gap-4 text-[#717171]">
                                       {section.subItems.map((item, i) => (
                                         <ResourcesListItem
                                           key={i}
