@@ -9,7 +9,8 @@ import { useCountryContent } from "@/Hooks/useCountryContent";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
 import T from "@/Components/T";
-import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
+import belgiumInvoiceHero from "@/Assets/images/invoicing/BE_invoice_mandate.webp";
+import BE_invoice from "@/Assets/images/invoicing/BE_invoice.webp";
 import taxInvoiceMultiple from "@/Assets/images/invoicing/tax-invoice-multiple.webp";
 import magnifiedInvoice from "@/Assets/images/invoicing/magnified-invoice.webp";
 
@@ -31,25 +32,25 @@ interface Card {
 
 const features = [
     {
-        img: AssetPath.accqrateFeatures.feature1.src,
+        img: AssetPath.icons.columnLabels.src,
         title: "Change column labels",
         description: "Modify the text in any column to meet your specific requirements",
         sub: ""
     },
     {
-        img: AssetPath.accqrateFeatures.feature2.src,
+        img: AssetPath.icons.textColor.src,
         title: "Enterprise‑grade.",
         description: "Adapt the color palette to align with your brand's identity.",
         sub: ""
     },
     {
-        img: AssetPath.accqrateFeatures.feature3.src,
+        img: AssetPath.icons.invoiceTemplates.src,
         title: "Save invoice emplates",
         description: "Leverage your favorite template for efficiency and time savings.",
         sub: ""
     },
     {
-        img: AssetPath.accqrateFeatures.feature4.src,
+        img: AssetPath.icons.addCompany.src,
         title: "Add your company Logo",
         description: "Incorporate your company's seal on invoices, quotes, receipts, and other paperwork.",
         sub: ""
@@ -124,7 +125,7 @@ const Section1 = () => {
             case 'sa':
                 return taxInvoiceMultiple;
             case 'be':
-                return belgiumInvoiceHero;
+                return BE_invoice;
             case 'pl':
                 return AssetPath.invoicing.invoiceMultiplePng;
             case 'ae':
@@ -380,9 +381,9 @@ const Section1 = () => {
     return (
         <>
             <section className='overflow-x-hidden'>
-                <div className='bg-gradient-to-t from-[#EFF3FF] to-transparent'>
-                    <FadeUp className="mb-8 md:mb-[40px] pt-12 md:pt-[80px] lg:pt-[100px]">
-                        <h1 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto mt-6">
+                <div className='bg-[#eff3ff]'>
+                    <FadeUp className="mb-8 md:mb-[40px] pt-12">
+                        <h1 className="text-[24px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto mt-6">
                             <T>Trusted by</T>{" "}
                             <br className="md:hidden" />
                             <span className="text-[#194BED]"></span>
@@ -438,23 +439,23 @@ const Section1 = () => {
                     <div className="px-6 md:px-8 xl:px-0 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
                         {/* Left Text */}
                         <div className="flex-1">
-                            <h1 className="text-fluid-h2 lg:text-[38px] font-medium pt-[30px] md:pt-[37px] tracking-heading leading-tight">
+                            <h1 className="text-[24px] font-medium pt-[30px] md:pt-[37px] tracking-heading leading-tight">
                                 <T>Customize and send invoices easily</T>
                             </h1>
                             <div className='space-y-3 md:space-y-4 mt-4'>
-                                <p className="text-fluid-small max-w-[662px] tracking-para leading-tight">
+                                <p className="text-[16px] max-w-[662px] tracking-para leading-tight">
                                     <T>Sending an invoice should be easy - and we`ve made it so</T>
                                 </p>
-                                <p className="text-fluid-small max-w-[662px] tracking-para leading-tight">
+                                <p className="text-[16px] max-w-[662px] tracking-para leading-tight">
                                     <T>Perfectly aligned with your needs and brand</T>
                                 </p>
-                                <p className="text-fluid-small text-[#194BED] max-w-[662px] tracking-para leading-tight">
+                                <p className="text-[20px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
                                     <T>Invoices Custom-Made for Your Business</T>
                                 </p>
                                 <button
                                     onClick={() => setModalOpen(true)}
-                                    className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px]"
-                                    style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                                    className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 rounded-3xl text-white text-[14px]"
+                                    style={{ background: '#F05A28' }}
                                 >
                                     <T>See It in Action</T>
                                 </button>
@@ -468,7 +469,7 @@ const Section1 = () => {
 
                                 {/* LEFT COLUMN */}
                                 <div className="lg:col-span-2">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6 lg:mt-12">
                                         {features.map((feature, index) => (
                                             <div
                                                 key={index}
@@ -484,7 +485,7 @@ const Section1 = () => {
                                                         <img
                                                             src={feature.img}
                                                             alt={feature.title}
-                                                            className="w-full max-h-[120px] h-auto object-contain"
+                                                            className="w-full max-h-[70px] h-auto object-contain"
                                                         />
                                                     </div>
 
@@ -496,18 +497,18 @@ const Section1 = () => {
                                                 {/* Title + Description */}
                                                 <div className="mb-3 space-y-4 flex-grow">
                                                     <div>
-                                                        <h2 className="text-fluid-body font-medium text-black leading-tight mb-1">
+                                                        <h2 className="text-[18px] font-medium text-[#1c2041] leading-tight mb-1">
                                                             <T>{feature.title}</T>
                                                         </h2>
                                                         {feature.sub && (
-                                                            <h2 className="text-fluid-body font-medium text-black leading-tight">
+                                                            <h2 className="text-[18px] font-medium text-[#1c2041] leading-tight">
                                                                 <T>{feature.sub}</T>
                                                             </h2>
                                                         )}
                                                     </div>
 
                                                     <div>
-                                                        <p className="text-black text-fluid-small leading-relaxed">
+                                                        <p className="text-[#5a6183] text-[14px] leading-relaxed">
                                                             <T>{feature.description}</T>
                                                         </p>
                                                     </div>
@@ -518,8 +519,8 @@ const Section1 = () => {
                                 </div>
 
                                 {/* RIGHT COLUMN - IMAGE */}
-                                <div className="lg:col-span-2 flex justify-center">
-                                    <div className="sticky top-6 w-full flex justify-center">
+                                <div className="lg:col-span-2 flex justify-start items-start">
+                                    <div className="sticky top-6 w-full flex justify-start">
                                         <img
                                             src={getInvoiceMultipleImage().src}
                                             alt="Feature Demo"
@@ -553,21 +554,27 @@ const Section1 = () => {
                                         <div>
                                             {/* Dynamic compliance content from centralized countryContent */}
                                             <>
-                                                <h3 className='text-fluid-small font-medium text-[#508847] text-left leading-tight'>
+                                                <h3 className='text-[16px] text-[#194bed] text-left leading-tight'>
                                                     <T>{pageContent.whyAccqrateTitle}</T>
                                                 </h3>
 
-                                                <h3 className='text-fluid-body font-medium text-[#000000] mt-4 text-left leading-relaxed'>
+                                                <h3 className='text-[20px] font-medium text-[#000000] mt-4 text-left leading-relaxed'>
                                                     <T>{pageContent.whyAccqrateSubtitle}</T>
                                                 </h3>
 
 
-                                                <p className='text-fluid-small font-medium mt-10 text-[#000000] text-left leading-tight'>
+                                                <p className='text-[20px] font-medium mt-10 text-[#000000] text-left leading-tight'>
                                                     <T>{pageContent.headingDescription}</T>
                                                 </p>
-                                                <p className='text-fluid-small font-normal mt-2 text-[#000000] text-left leading-tight'>
+                                                <p className="text-[16px] font-normal mt-2 text-[#5a6183] text-left leading-tight">
+                                                    <img
+                                                        src={AssetPath.resources.greenTick.src}
+                                                        alt="icon"
+                                                        className="inline-block w-6 h-6 mr-1 align-text-top"
+                                                    />
                                                     <T>{pageContent.heroDescription}</T>
                                                 </p>
+
                                             </>
 
                                             {/* Conditional compliance card: Peppol for BE/PL/AE, ZATCA for others */}
@@ -586,7 +593,7 @@ const Section1 = () => {
                                                     <div className="w-full h-px bg-gray-300"></div>
 
                                                     <div className="flex items-center justify-between gap-4">
-                                                        <p className="text-sm leading-relaxed">
+                                                        <p className="text-sm text-[#5a6183] leading-relaxed">
                                                             <T>{pageContent.peppolCardText}</T>
                                                         </p>
 
@@ -599,7 +606,7 @@ const Section1 = () => {
                                                                 className="max-w-[30px] h-auto rounded"
                                                                 unoptimized
                                                             />
-                                                            <p><T>{currentCountry.code}</T></p>
+                                                            <p className='text-[#5a6183]'><T>{currentCountry.code}</T></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -702,16 +709,16 @@ const Section1 = () => {
                                         border border-[#508847] bg-[#F4FFF2]
                                         p-4 sm:p-5 md:p-6 rounded-xl
                                         flex flex-col
-                                        min-h-[280px] md:min-h-[300px] lg:min-h-[320px]
+                                        min-h-[280px] md:min-h-[300px] lg:min-h-[300px]
                                         overflow-hidden
                                     "
                                     >
                                         <div className="flex-shrink-0 mb-2 md:mb-3">
-                                            <h3 className="text-[#303030] font-semibold text-fluid-body leading-tight break-words">
+                                            <h3 className="text-[#303030] font-semibold text-[20px] leading-tight break-words">
                                                 <T>{card.title}</T>
                                             </h3>
                                             {card.subTitle && (
-                                                <h3 className="text-[#303030] font-semibold text-fluid-body mb-2 md:mb-3 leading-tight break-words">
+                                                <h3 className="text-[#303030] font-semibold text-[20px] mb-2 md:mb-3 leading-tight break-words">
                                                     <T>{card.subTitle}</T>
                                                 </h3>
                                             )}
@@ -719,7 +726,7 @@ const Section1 = () => {
 
                                         <div className="flex-grow overflow-hidden">
                                             {card.description && (
-                                                <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
+                                                <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
                                                     <T>{card.description}</T>
                                                 </p>
                                             )}
@@ -733,7 +740,7 @@ const Section1 = () => {
                                                 </ul>
                                             )}
                                             {card.para && (
-                                                <p className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] break-words mb-3">
+                                                <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
                                                     <T>{card.para}</T>
                                                 </p>
                                             )}

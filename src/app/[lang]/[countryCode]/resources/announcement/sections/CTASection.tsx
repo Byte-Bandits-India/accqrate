@@ -101,15 +101,15 @@ const CTASection = () => {
       <div className="md:flex gap-8 xl:max-h-[336px] relative z-10 max-w-[1440px] p-6 md:p-10 lg:pb-0 mx-auto">
         {/* LEFT CONTENT */}
         <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
-          <h2 className="text-fluid-h2 lg:text-[38px] font-medium mb-6">
+          <h2 className="text-[24px] font-medium mb-6">
             <T>{content.title}</T>
           </h2>
 
-          <p className="text-fluid-body lg:text-[24px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
+          <p className="text-[18px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
             <T>{content.description1}</T>
           </p>
 
-          <p className="text-fluid-small text-white/80 leading-tight xl:max-w-[773px] ">
+          <p className="text-[14px] text-white/80 leading-tight xl:max-w-[773px] ">
             <T>{content.description2}</T>
           </p>
 
@@ -169,14 +169,14 @@ const CTASection = () => {
             onClick={() => handleButtonClick(button.id)}
             className="
               relative
-              lg:w-[300px] w-[270px] md:w-[240px]
+              lg:w-[300px] w-[270px] md:w-[220px]
               min-h-[46px] md:min-h-[52px]
               flex items-center justify-center
               bg-[#F05A28]
               rounded-[50px]
               px-4 pr-10
               text-white
-              text-fluid-small md:text-[14px] lg:text-[16px]
+              text-[14px]
               text-center leading-tight
               mt-[32px]
               hover:bg-[#E04A18] transition-colors duration-200

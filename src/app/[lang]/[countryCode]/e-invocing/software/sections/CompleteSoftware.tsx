@@ -122,7 +122,7 @@ const Section3 = () => {
         <>
             <section className="py-8 md:py-10 lg:py-[80px] max-w-[1280px] mx-auto relative">
                 <div className="px-6 md:px-8 xl:px-0 text-center relative">
-                    <h1 className="text-fluid-h2 lg:text-[38px] font-medium text-[#000000] leading-tight">
+                    <h1 className="text-[24px] font-medium text-[#000000] leading-tight">
                         <T>A</T>{" "}
                         <span className="text-[#194BED]">
                             <T>complete software</T>
@@ -131,7 +131,7 @@ const Section3 = () => {
                     </h1>
 
                     <div className="relative mt-6 inline-block">
-                        <h3 className="text-fluid-body text-[#5A6183] mx-auto max-w-[850px]">
+                        <h3 className="text-[16px] text-[#5A6183] mx-auto max-w-[850px]">
                             <T>Whether you've just started or are already established, you'll find all the features you need at each stage of your business.</T>
                         </h3>
 
@@ -148,10 +148,8 @@ const Section3 = () => {
                             <div
                                 key={i}
                                 className="
-        flex flex-col justify-center md:items-start text-left
-        bg-white rounded-[20px] border-[#5A6183] border-[0.1px]
-        shadow-[0_4px_20px_rgba(0,0,0,0.06)]
-        hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+        flex flex-col items-center justify-center text-center
+        bg-white rounded-[20px]
         transition-all duration-300
         w-full max-w-[380px]
         p-5 sm:p-6 md:p-8
@@ -166,12 +164,12 @@ const Section3 = () => {
                                 />
 
                                 {/* Title */}
-                                <h3 className="text-fluid-body text-[#1C2041] font-semibold mb-2 leading-tight">
+                                <h3 className="text-[18px] text-[#1C2041] font-semibold mb-2 leading-tight">
                                     <T>{item.title}</T>
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-fluid-small text-[#5A6183] leading-[24px] sm:leading-[28px]">
+                                <p className="text-[16px] text-[#5A6183] leading-[24px] sm:leading-[28px]">
                                     <T>{item.desc}</T>
                                 </p>
                             </div>

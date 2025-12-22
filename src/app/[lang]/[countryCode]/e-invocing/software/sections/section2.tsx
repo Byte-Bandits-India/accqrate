@@ -25,7 +25,7 @@ const Section2 = () => {
 
                 {countryCode?.toUpperCase() === 'SA' && (
                     <div className="bg-[#29266E] text-white text-center py-8 md:py-10 lg:py-[80px] px-6 md:px-8 xl:px-0">
-                        <h3 className="text-fluid-h2 lg:text-[38px] font-normal leading-tight">
+                        <h3 className="text-[24px] font-normal leading-tight">
                             <T>Easy Onboarding Process</T>
                         </h3>
                         <p className="text-fluid-body mt-4 md:mt-6">
@@ -76,10 +76,10 @@ const Section2 = () => {
                 <div className='bg-[#F1F2FF]'>
                     <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-12'>
                         <div className='px-6 md:px-8 xl:px-0'>
-                            <h3 className="text-fluid-h2 lg:text-[38px] font-normal text-[#000000] leading-tight">
+                            <h3 className="text-[24px] font-normal text-[#000000] leading-tight">
                                 <T>Flexible Deployment</T>
                             </h3>
-                            <p className='text-[#333333] text-fluid-body mt-4 md:mt-6 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
+                            <p className='text-[#333333] text-[16px] mt-4 md:mt-6 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
 
                             <div className="py-6 md:py-8 lg:py-10">
                                 <div className="flex flex-col lg:flex-row justify-start items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
@@ -90,14 +90,14 @@ const Section2 = () => {
                                             alt="cloud"
                                             className="w-[64px] h-auto"
                                         />
-                                        <h3 className="text-fluid-body text-[#1C2041]">
+                                        <h3 className="text-[18px] text-[#1C2041]">
                                             <T>Cloud Based Solutions</T>
                                         </h3>
-                                        <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
+                                        <p className="text-[16px] text-[#5A6183] leading-[30px] max-w-[350px]">
                                             <T>Subscribe, Use On-Demand: Fast, Secure, and Flexible Cloud Solutions</T>
                                         </p>
 
-                                        <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
+                                        <ul className="text-[#5A6183] text-[16px] leading-[32px] space-y-1 mt-2 list-none">
                                             {[
                                                 "Subscribe and pay per use",
                                                 "Onboarding in 5 min",
@@ -121,14 +121,14 @@ const Section2 = () => {
                                             alt="server"
                                             className="w-[64px] h-auto"
                                         />
-                                        <h3 className="text-fluid-body text-[#1C2041]">
+                                        <h3 className="text-[18px] text-[#1C2041]">
                                             <T>On Premises Solutions</T>
                                         </h3>
-                                        <p className="text-fluid-small text-[#5A6183] leading-[30px] max-w-[350px]">
+                                        <p className="text-[16px] text-[#5A6183] leading-[30px] max-w-[350px]">
                                             <T>Customized, Secure On-Premises Solutions with Quick Implementation Support</T>
                                         </p>
 
-                                        <ul className="text-[#5A6183] text-fluid-small leading-[32px] space-y-1 mt-2 list-none">
+                                        <ul className="text-[#5A6183] text-[16px] leading-[32px] space-y-1 mt-2 list-none">
                                             {[
                                                 "Customer infrastructure",
                                                 "Get customized app",

@@ -151,6 +151,7 @@ import lockIcon from "@/Assets/images/resources/lock.png";
 import starYellow from "@/Assets/images/resources/star-yellow.svg";
 import taxResource from "@/Assets/images/resources/tax.png";
 import tickIcon from "@/Assets/images/resources/tick.png";
+import greenTick from "@/Assets/images/tick.png";
 import web1 from "@/Assets/images/resources/web1.jpg";
 import web2 from "@/Assets/images/resources/web2.jpg";
 import youngDeliver from "@/Assets/images/resources/young-deliver.png";
@@ -472,7 +473,7 @@ import compliantInvoicing from "@/Assets/images/a-compliant-e-invoicing-fatoorah
 import jonexImg from "@/Assets/images/jonex.png";
 import ssImg from "@/Assets/images/ss.png";
 import Zact from "@/Assets/images/integration/ZATCA-solution.png"
-import logoPeppol from "@/Assets/images/peppol.png"
+import logoPeppol from "@/Assets/images/peppol.webp"
 import middleEast from "@/Assets/images/blogs/midddleEast.png"
 
 // Home images
@@ -489,7 +490,46 @@ import bluestar from "@/Assets/images/about/bluestar.png";
 import stone from "@/Assets/images/about/stone.png";
 import hands from "@/Assets/images/about/hands.png";
 import ourteam from "@/Assets/images/about/ourteam.png";
-import aboutHero from "@/Assets/images/about/about-hero.webp";
+import aboutHero from "@/Assets/images/about/about-hero.webp"; 
+
+// ==================== ICONS IMPORTS ====================
+import addCompany from "@/Assets/images/icons/add_company.svg";
+import api from "@/Assets/images/icons/api.svg";
+import bag from "@/Assets/images/icons/bag.svg";
+import barChart from "@/Assets/images/icons/barchart.svg";
+import blueStarIcon from "@/Assets/images/icons/blue_satr.svg";
+import calendar from "@/Assets/images/icons/calender.svg";
+import certify from "@/Assets/images/icons/certify.svg";
+import cloud from "@/Assets/images/icons/cloud.svg";
+import columnLabels from "@/Assets/images/icons/column_labels.svg";
+import currency from "@/Assets/images/icons/currency.svg";
+import dataHostedSaudiCloud from "@/Assets/images/icons/data-hosted-saudi-cloud.00f42ae8.svg";
+import excel from "@/Assets/images/icons/excel.svg";
+import ftp from "@/Assets/images/icons/ftp.svg";
+import gear from "@/Assets/images/icons/gear.svg";
+import gears from "@/Assets/images/icons/gears.svg";
+import goldStarIcon from "@/Assets/images/icons/gold_star.svg";
+import greenStarIcon from "@/Assets/images/icons/green_star.svg";
+import invoiceTemplates from "@/Assets/images/icons/invoice_templates.svg";
+import link from "@/Assets/images/icons/link.svg";
+import onPremises335d33f4 from "@/Assets/images/icons/on-premises.335d33f4.svg";
+import onPremises from "@/Assets/images/icons/on-premises.svg";
+import orangeStarIcon from "@/Assets/images/icons/orange_star.svg";
+import packageIcon from "@/Assets/images/icons/package.svg";
+import pdfA0eecd3a from "@/Assets/images/icons/pdf.a0eecd3a.svg";
+import profile from "@/Assets/images/icons/profile.svg";
+import proofOfConcept from "@/Assets/images/icons/proof-of-concept.c4a10667.svg";
+import readyForZatca from "@/Assets/images/icons/ready-for-zatca.8499872e.svg";
+import shield from "@/Assets/images/icons/shield.svg";
+import tax from "@/Assets/images/icons/tax.svg";
+import textColor from "@/Assets/images/icons/text_color.svg";
+import websiteDesign11 from "@/Assets/images/icons/website-design 1-1.svg";
+import websiteDesign12 from "@/Assets/images/icons/website-design 1-2.svg";
+import websiteDesign13 from "@/Assets/images/icons/website-design 1-3.svg";
+import websiteDesign14 from "@/Assets/images/icons/website-design 1-4.svg";
+import websiteDesign15 from "@/Assets/images/icons/website-design 1-5.svg";
+import websiteDesign1 from "@/Assets/images/icons/website-design 1.svg";
+import whiteStarIcon from "@/Assets/images/icons/white_star.svg";
 
 const AssetPath = {
   // HEADER SECTION
@@ -664,6 +704,7 @@ const AssetPath = {
     starYellow,
     tax: taxResource,
     tick: tickIcon,
+    greenTick,
     web1,
     web2,
     youngDeliver,
@@ -1026,6 +1067,46 @@ const AssetPath = {
     hands: hands,
     hero: aboutHero,
     ourteam: ourteam,
+  },
+
+  icons: {
+    addCompany: addCompany,
+    api: api,
+    bag: bag,
+    barChart: barChart,
+    blueStarIcon: blueStarIcon,
+    calendar: calendar,
+    certify: certify,
+    cloud: cloud,
+    columnLabels: columnLabels,
+    currency: currency,
+    dataHostedSaudiCloud: dataHostedSaudiCloud,
+    excel: excel,
+    ftp: ftp,
+    gear: gear,
+    gears: gears,
+    goldStarIcon: goldStarIcon,
+    greenStarIcon: greenStarIcon,
+    invoiceTemplates: invoiceTemplates,
+    link: link,
+    onPremises335d33f4: onPremises335d33f4,
+    onPremises: onPremises,
+    orangeStarIcon: orangeStarIcon,
+    packageIcon: packageIcon,
+    pdfA0eecd3a: pdfA0eecd3a,
+    profile: profile,
+    proofOfConcept: proofOfConcept,
+    readyForZatca: readyForZatca,
+    shield: shield,
+    tax: tax,
+    textColor: textColor,
+    websiteDesign11: websiteDesign11,
+    websiteDesign12: websiteDesign12,
+    websiteDesign13: websiteDesign13,
+    websiteDesign14: websiteDesign14,
+    websiteDesign15: websiteDesign15,
+    websiteDesign1: websiteDesign1,
+    whiteStarIcon: whiteStarIcon,
   },
 };
 

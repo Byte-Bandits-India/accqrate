@@ -9,12 +9,19 @@ import peppolImg from "@/Assets/images/invoicing/peppol.png";
 import gdprImg from "@/Assets/images/invoicing/gdpr.png";
 import serverImg from "@/Assets/images/invoicing/server.png";
 import isoImg from "@/Assets/images/invoicing/iso.png";
-import eInvoiceHeroImg from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
+import eInvoiceHeroImg from "@/Assets/images/invoicing/BE_e-invoicing_standalone_hero.webp";
 import uaeImg from "@/Assets/images/invoicing/uae.webp";
 import saHeroImg from "@/Assets/images/invoicing/invoice-with-create-screen copy.webp";
 import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
 import { t, currentLang } from "@/lib/translations";
+
+// Feature item type with icon
+type FeatureItem = {
+    text: string;
+    iconSrc: string;
+    iconAlt: string;
+};
 
 // Country configuration item type
 type CountryConfigItem = {
@@ -56,7 +63,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
         authority: "FTA",
         badgeText: "PEPPOL Certified E-invoicing Software for UAE",
         title: "Integrate With PEPPOL Network.",
-        description1: "UAE Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.",
+        description1: "UAE Based <span class='text-[#194bed]'>E-invoicing</span> Solution For UAE Companies.",
         description2: "",
         ctaText: "Get 30 days free trial",
         countryName: "UAE",
@@ -74,7 +81,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Oman",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
+        description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Omani",
@@ -92,7 +99,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Bahrain",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
+        description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         marqueeItems: [
@@ -109,7 +116,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Malaysia",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
+        description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Malaysian",
@@ -127,7 +134,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Mauritius",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
+        description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Mauritian",
@@ -145,7 +152,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
         authority: "ZATCA",
         badgeText: "ZATCA Approved E-invoicing Software in Jordan",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
-        description1: "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>",
+        description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
         ctaText: "Get 30 days free trial",
         marqueeItems: [
@@ -163,7 +170,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
         authority: "KSeF",
         badgeText: "PEPPOL Certified  E-invoicing Software for Poland",
         title: "Integrate With PEPPOL Network ",
-        description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
+        description1: "European Based <span class='text-[#194bed]'>E-invoicing</span> Solution For European Companies.",
         description2: "",
         ctaText: "Connect with our Consultant",
         countryName: "Polish",
@@ -177,17 +184,25 @@ const countryConfig: Record<string, CountryConfigItem> = {
         ],
         imageAlt: "Accqrate newsletter illustration"
     },
-    // BELGIUM - Unique content
+    // BELGIUM - Fixed to include marqueeItems
     "BE": {
         name: "Belgium",
         authority: "KSeF",
         badgeText: "PEPPOL Certified  E-invoicing Software for Belgium",
         topTitle: "Enable Your Business With E-invoicing.",
         title: "Integrate With PEPPOL Network",
-        description1: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
+        description1: "European Based <span class='text-[#194bed]'>E-invoicing</span> Solution For European Companies.",
         description2: "",
         ctaText: "Connect with our Consultant",
         countryName: "Belgian",
+        marqueeItems: [
+            "Peppol Certified",
+            "GDPR Complaint",
+            "PDF/A3 with XML invoices",
+            "Data Hosted in Europe",
+            "ISO 27001 Certified",
+            "ISO 22301 Certified",
+        ],
         imageAlt: "Accqrate newsletter illustration"
     }
 };
@@ -271,7 +286,7 @@ const badgesConfig: Record<string, Array<{
             className: 'w-16 h-16',
         },
         {
-            img: serverImg.src,
+            img: AssetPath.icons.dataHostedSaudiCloud,
             alt: 'Data Hosted in Europe',
             text: 'Data Hosted in Europe',
             className: 'w-16 h-16',
@@ -339,6 +354,12 @@ const defaultBadges = [
     },
 ];
 
+// Import additional images for features (create these images or use existing ones)
+// Note: You might need to create these images or use appropriate ones
+const ftaBadgeImg = AssetPath.cards.fta || peppolImg; // Fallback to peppolImg if fta image doesn't exist
+const xmlBadgeImg = peppolImg; // Use peppol as fallback, create specific XML icon
+const zatcaBadgeImg = peppolImg; // Use peppol as fallback, create specific ZATCA icon
+
 const Software: React.FC = () => {
     const [isModalOpen, setModalOpen] = React.useState(false);
     const params = useParams();
@@ -404,12 +425,12 @@ const Software: React.FC = () => {
     return (
         <>
             <section>
-                <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
+                <div className="bg-[#eff3ff] pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
                     <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
                         {/* LEFT CONTENT */}
                         <div className="flex flex-col justify-center max-w-[600px] w-full">
                             <div className="flex items-center gap-2">
-                                <p className="text-[#F05A28] text-fluid-small leading-[30px] m-0 whitespace-nowrap">
+                                <p className="text-[#F05A28] text-[16px] uppercase leading-[30px] m-0 whitespace-nowrap">
                                     <T>{content.badgeText}</T>
                                 </p>
 
@@ -424,29 +445,29 @@ const Software: React.FC = () => {
                             </div>
 
 
-                            <p className="text-fluid-h3 lg:text-[38px] font-medium text-[#000000] mt-4 leading-tight mb-4">
+                            <p className="text-fluid-h3 lg:text-[24px] font-medium text-[#000000] mt-4 leading-tight mb-4">
                                 <T>Enable Your Business With E-invoicing.</T>
                             </p>
-                            <h1 className="text-fluid-h2 lg:text-[54px] font-semibold text-[#000000] leading-tight">
+                            <h1 className="text-fluid-h3 font-semibold text-[#000000] leading-tight">
                                 <T>{content.title}</T>
                             </h1>
 
-                            <div className="h-[2px] w-[80px] bg-blue-600 my-6 md:my-8 lg:my-10"></div>
+                            <div className="h-[2px] w-[80px] bg-blue-600 my-6"></div>
 
                             {/* Description 1 with green E-invoicing */}
                             <p
-                                className="text-[#000000] text-fluid-body lg:text-[18px] max-w-[560px] leading-[30px]"
+                                className="text-[#000000] text-fluid-small lg:text-[16px] max-w-[560px] leading-[30px]"
                                 dangerouslySetInnerHTML={{ __html: translatedDescription1 }}
                             />
 
                             {/* Description 2 */}
                             {content.description2 && (
-                                <p className="text-[#000000] text-fluid-body max-w-[560px] leading-[30px]">
+                                <p className="text-[#000000] text-[14px] max-w-[560px] leading-[30px]">
                                     <T>{content.description2}</T>
                                 </p>
                             )}
 
-                            <div className="flex justify-start py-6 md:py-8 lg:py-10">
+                            <div className="flex justify-start py-6">
                                 <Link
                                     href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
                                     onClick={(e) => {
@@ -456,13 +477,13 @@ const Software: React.FC = () => {
                                     className="
                       relative
                       flex items-center justify-center
-                      w-[270px] md:w-[240px] lg:w-[300px]
+                      w-[270px] md:w-[240px] lg:w-[270px]
                       min-h-[46px] md:min-h-[52px]
                       bg-[#F05A28]
                       rounded-[50px]
                       px-4 pr-10
                       text-white
-                      text-fluid-small md:text-[12px] lg:text-[16px]
+                      text-fluid-small md:text-[14px]
                       text-center leading-tight
                       transition-all duration-300 hover:bg-[#d94f22]
                     "
@@ -489,8 +510,57 @@ const Software: React.FC = () => {
                                 </Link>
                             </div>
 
-                            <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8">
-                                <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
+                            {/* FEATURES SECTION - Desktop/Tablet */}
+                            {badges.length > 0 && (
+                                <div className="hidden lg:block bg-white p-4 rounded-2xl max-w-[450px]">
+                                    <ul className="space-y-3">
+                                        {badges.slice(0, 5).map((badge, index) => (
+                                            <li key={index} className="flex items-start gap-3">
+                                                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-[#ccd8ff] rounded-full">
+                                                    <Image
+                                                        src={badge.img}
+                                                        alt={badge.alt}
+                                                        width={18}
+                                                        height={18}
+                                                        priority
+                                                    />
+                                                </div>
+
+                                                <span className="text-[#1C2041] text-[16px] mt-2 leading-[22px]">
+                                                    <T>{badge.text}</T>
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {/* FEATURES SECTION - Mobile */}
+                            {badges.length > 0 && (
+                                <div className="lg:hidden bg-white p-4 rounded-lg max-w-full border border-gray-200 shadow-sm mt-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        {badges.slice(0, 4).map((badge, index) => (
+                                            <div key={index} className="flex items-center gap-2">
+                                                <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                                                    <Image
+                                                        src={badge.img}
+                                                        alt={badge.alt}
+                                                        width={20}
+                                                        height={20}
+                                                        className="object-contain"
+                                                    />
+                                                </div>
+                                                <span className="text-[#1C2041] text-[14px] leading-[20px] font-medium">
+                                                    <T>{badge.text}</T>
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8 mt-6">
+                                <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
                                     <T>Simplified</T>
                                 </p>
                                 <img
@@ -498,7 +568,7 @@ const Software: React.FC = () => {
                                     alt="orange_star"
                                     className="w-5 h-5 md:w-auto md:h-auto"
                                 />
-                                <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
+                                <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
                                     <T>Smart</T>
                                 </p>
                                 <img
@@ -506,7 +576,7 @@ const Software: React.FC = () => {
                                     alt="orange_star"
                                     className="w-5 h-5 md:w-auto md:h-auto"
                                 />
-                                <p className="text-sm md:text-fluid-body text-[#1C2041] font-light">
+                                <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
                                     <T>Complaint</T>
                                 </p>
                             </div>
@@ -518,7 +588,7 @@ const Software: React.FC = () => {
                                     <Star className="w-3 h-3 fill-[#FEB04C]" />
                                     <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
                                 </div>
-                                <p className="text-sm font-medium">
+                                <p className="text-[16px] font-medium">
                                     <T>4.8 average rating from our customers</T>
                                 </p>
                             </div>
@@ -531,107 +601,11 @@ const Software: React.FC = () => {
                                 alt={content.imageAlt ?? ''}
                                 width={591}
                                 height={380}
-                                className="w-full max-w-[541px] rounded-2xl object-contain"
+                                className="w-full max-w-[641px] rounded-2xl object-contain"
                             />
                         </div>
                     </div>
                 </div>
-
-                {/* IMAGE + TEXT SECTION - hidden for Saudi Arabia (SA) */}
-                {countryCode !== 'SA' && (
-                    <div className="relative overflow-hidden py-6">
-                        {/* Background */}
-                        <div className="absolute inset-0" />
-
-                        <div className="relative z-10 max-w-[1280px] mx-auto px-6">
-                            <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-6 md:gap-8 lg:gap-10">
-
-                                {badges.map((item, index) => (
-                                    <div key={index} className="flex items-center gap-3 flex-shrink-0">
-                                        <img
-                                            src={item.img}
-                                            alt={item.alt}
-                                            className={`${item.className} object-contain`}
-                                        />
-                                        <p className="text-[#000000] font-medium text-fluid-small whitespace-nowrap">
-                                            <T>{item.text}</T>
-                                        </p>
-                                    </div>
-                                ))}
-
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {/* MARQUEE SECTION - render only for Saudi Arabia (SA) */}
-                {countryCode === 'SA' && content.marqueeItems && (
-                    <div className="marquee-wrapper relative overflow-hidden h-[74px]">
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#1C2041] to-[#194BED] shadow-[0_8px_30px_rgba(0,0,0,0.18)]" />
-
-                        <div className="relative z-10 flex items-center h-full">
-                            <div className="w-full max-w-[1280px] mx-auto relative overflow-hidden">
-                                <div
-                                    className="marquee-track flex items-center"
-                                    style={{ ['--marquee-duration' as any]: '22s' }}
-                                    aria-hidden="false"
-                                >
-                                    {/* First copy */}
-                                    <div className="marquee-copy flex-none">
-                                        <ul className="inline-flex items-center whitespace-nowrap gap-12 min-w-max px-6 text-fluid-small font-medium text-white pointer-events-none">
-                                            {content.marqueeItems.map((item, index) => (
-                                                <li key={`first-${index}`}><T>{item}</T></li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    {/* Second copy for seamless animation */}
-                                    <div className="marquee-copy flex-none" aria-hidden="true">
-                                        <ul className="inline-flex items-center whitespace-nowrap gap-12 min-w-max px-6 text-fluid-small font-medium text-white pointer-events-none">
-                                            {content.marqueeItems.map((item, index) => (
-                                                <li key={`second-${index}`}><T>{item}</T></li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <style jsx>{`
-            .marquee-track {
-                animation: marquee var(--marquee-duration) linear infinite;
-                will-change: transform;
-                user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-            }
-
-            @keyframes marquee {
-                from { transform: translateX(0); }
-                to   { transform: translateX(-50%); }
-            }
-
-            .marquee-wrapper:hover .marquee-track,
-            .marquee-wrapper:active .marquee-track {
-                animation-play-state: paused;
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                .marquee-track { 
-                    animation: none !important; 
-                    transform: none !important; 
-                }
-            }
-
-            .marquee-copy { 
-                flex: 0 0 auto; 
-                display: flex; 
-                align-items: center; 
-            }
-        `}</style>
-                    </div>
-                )}
-
             </section>
             {/* Contact Modal */}
             <ContactModal open={isModalOpen} onClose={handleCloseModal} />
