@@ -25,9 +25,10 @@ interface Feature {
 interface Card {
     title: string;
     subTitle?: string;
-    description: string;
+    description?: string;
     listItems?: string[];
     para?: string;
+    icon?: string;
 }
 
 const features = [
@@ -155,31 +156,31 @@ const Section1 = () => {
     // Default cards content
     const defaultCards: Card[] = [
         {
+            icon: AssetPath.icons.websiteDesign1.src, // Add icon path
             title: "Full Compliance with E-Invoicing Regulations",
             subTitle: "",
-            description:
-                "Accqrate delivers compliant structured e-invoices with seamless integration, ensuring secure exchange, standardized processing, and continuous alignment with evolving regulatory frameworks.",
+            description: "Accqrate delivers compliant structured e-invoices with seamless integration, ensuring secure exchange, standardized processing, and continuous alignment with evolving regulatory frameworks.",
         },
         {
+            icon: AssetPath.icons.websiteDesign11.src,
             title: "Future-Ready E-Invoicing Solution",
             subTitle: "",
-            description:
-                "Built for interoperability, Accqrate supports cross-border e-invoicing, digital reporting, and automated workflows, positioning enterprises for upcoming compliance requirements.",
+            description: "Built for interoperability, Accqrate supports cross-border e-invoicing, digital reporting, and automated workflows, positioning enterprises for upcoming compliance requirements.",
         },
         {
+            icon: AssetPath.icons.websiteDesign12.src,
             title: "Effortless E-Invoicing Automation",
-            description:
-                "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete compliance without manual intervention.",
+            description: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete compliance without manual intervention.",
         },
         {
+            icon: AssetPath.icons.websiteDesign13.src,
             title: "Specialized Support and Implementation Expertise",
-            description:
-                "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your e-invoicing journey.",
+            description: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your e-invoicing journey.",
         },
         {
+            icon: AssetPath.icons.websiteDesign14.src,
             title: "Unified Global E-Invoicing Platform",
-            description:
-                "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across multiple jurisdictions, all from a single, integrated platform.",
+            description: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across multiple jurisdictions, all from a single, integrated platform.",
         },
     ];
 
@@ -203,111 +204,111 @@ const Section1 = () => {
             zatcaCardText: "Accqrate is 100% ZATCA Approved E-invoicing solution in KSA",
             cards: [
                 {
-                    title: "Full Compliance with Belgium’s",
+                    icon: AssetPath.icons.websiteDesign1.src,
+                    title: "Full Compliance with Belgium's",
                     subTitle: "E-Invoicing Mandate",
-                    description:
-                        "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium’s evolving regulatory framework.",
+                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium's evolving regulatory framework.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign11.src,
                     title: "Future-Ready for ViDA",
                     subTitle: "(VAT in the Digital Age)",
-                    description:
-                        "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+                    description: "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign12.src,
                     title: "Effortless E-Invoicing Automation",
-                    description:
-                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
+                    description: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign13.src,
                     title: "Specialized Support and Implementation Expertise",
-                    description:
-                        "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.",
+                    description: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign14.src,
                     title: "Unified Global E-Invoicing Platform",
-                    description:
-                        "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.",
+                    description: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.",
                 },
             ]
         },
         be: {
-            whyAccqrateTitle: "Compliant with Belgium\'s Mandatory B2B E-Invoicing Regulation",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with Belgium\'s FPS Finance 2026 mandate",
+            whyAccqrateTitle: "Compliant with Belgium's Mandatory B2B E-Invoicing Regulation",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with Belgium's FPS Finance 2026 mandate",
             headingDescription: "EN 16931 and Peppol Requirements:",
             heroDescription: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
             peppolCardText: "Accqrate is a Peppol Certified AP Provider and SMP",
             cards: [
                 {
-                    title: "Full Compliance with Belgium’s",
+                    icon: AssetPath.icons.websiteDesign1.src,
+                    title: "Full Compliance with Belgium's",
                     subTitle: "E-Invoicing Mandate",
-                    description:
-                        "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium’s evolving regulatory framework.",
+                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Belgium's evolving regulatory framework.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign11.src,
                     title: "Future-Ready for ViDA",
                     subTitle: "(VAT in the Digital Age)",
-                    description:
-                        "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+                    description: "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign12.src,
                     title: "Effortless E-Invoicing Automation",
-                    description:
-                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
+                    description: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign13.src,
                     title: "Specialized Support and Implementation Expertise",
-                    description:
-                        "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.",
+                    description: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Belgium e-invoicing journey.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign14.src,
                     title: "Unified Global E-Invoicing Platform",
-                    description:
-                        "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.",
+                    description: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Belgium, the EU, and global jurisdictions, all from a single, integrated platform.",
                 },
             ]
         },
         pl: {
-            whyAccqrateTitle: "Compliant with Poland\'s Mandatory B2B E-Invoicing Regulation",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with Poland\'s KSeF system",
+            whyAccqrateTitle: "Compliant with Poland's Mandatory B2B E-Invoicing Regulation",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with Poland's KSeF system",
             headingDescription: "Phase 1 & 2 Requirements",
             heroDescription: "Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
             peppolCardText: "Accqrate is Peppol Certified Solution Provider",
             cards: [
                 {
-                    title: "Full Compliance with Poland’s",
+                    icon: AssetPath.icons.websiteDesign1.src,
+                    title: "Full Compliance with Poland's",
                     subTitle: "E-Invoicing Mandate",
-                    description:
-                        "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Poland’s evolving regulatory framework.",
+                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Poland's evolving regulatory framework.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign11.src,
                     title: "Future-Ready for ViDA",
                     subTitle: "(VAT in the Digital Age)",
-                    description:
-                        "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+                    description: "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign12.src,
                     title: "Effortless E-Invoicing Automation",
-                    description:
-                        "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Polish compliance without manual intervention.",
+                    description: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Polish compliance without manual intervention.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign13.src,
                     title: "Specialized Support and Implementation Expertise",
-                    description:
-                        "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Poland e-invoicing journey.",
+                    description: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Poland e-invoicing journey.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign14.src,
                     title: "Unified Global E-Invoicing Platform",
-                    description:
-                        "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Poland, the EU, and global jurisdictions, all from a single, integrated platform.",
+                    description: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Poland, the EU, and global jurisdictions, all from a single, integrated platform.",
                 },
             ]
         },
         ae: {
-            whyAccqrateTitle: 'Compliant with UAE’s Mandatory B2B E-Invoicing Regulation',
-            whyAccqrateSubtitle: 'Generate invoices fully compliant with UAE’s FTA 5 Corner Model (DCTCE)',
+            whyAccqrateTitle: 'Compliant with UAE\s Mandatory B2B E-Invoicing Regulation',
+            whyAccqrateSubtitle: 'Generate invoices fully compliant with UAE\'s FTA 5 Corner Model (DCTCE)',
             headingDescription: 'FTA and Peppol Requirements:',
             heroDescription: 'Accqrate generates fully FTA-compliant structured eInvoices aligned to the UAE PINT framework and supports exchange through the DCTCE / 5-corner (PEPPOL) model.',
             heroTitle: '5,000+ Across 30+ Industries',
@@ -315,37 +316,39 @@ const Section1 = () => {
             zatcaCardText: "Accqrate is a ZATCA Approved E-Invoicing Solution Provider",
             cards: [
                 {
+                    icon: AssetPath.icons.websiteDesign1.src,
                     title: "Full Compliance with UAE",
                     subTitle: "E-Invoicing (FTA DCTCE)",
-                    description:
-                        "Accqrate ensures complete compliance with the UAE’s Decentralized Continuous Transaction Control and Exchange (DCTCE) framework. We generate UAE PINT–compliant e-invoices, aligned with EN 16931 and fully integrated with the national Peppol network for secure, standardized exchange. Every invoice is validated, signed, transmitted, and archived according to the latest FTA e-invoicing regulations.",
+                    description: "Accqrate ensures complete compliance with the UAE's Decentralized Continuous Transaction Control and Exchange (DCTCE) framework. We generate UAE PINT-compliant e-invoices, aligned with EN 16931 and fully integrated with the national Peppol network for secure, standardized exchange. Every invoice is validated, signed, transmitted, and archived according to the latest FTA e-invoicing regulations.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign12.src,
                     title: "Effortless E-Invoicing",
                     subTitle: "Automation",
-                    description:
-                        "Accqrate automates the complete UAE e-invoicing cycle with:",
+                    description: "Accqrate automates the complete UAE e-invoicing cycle with:",
                     listItems: ['AI-driven invoice validation', 'Automated FTA compliance checks', 'Real-time error and anomaly detection', 'End-to-end creation, exchange, and archiving'],
                     para: "Designed to reduce manual work and eliminate compliance risks."
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign13.src,
                     title: "Expert UAE E-Invoicing Implementation Support",
-                    description:
-                        "Our team provides smooth onboarding with:",
+                    description: "Our team provides smooth onboarding with:",
                     listItems: ['Fast ERP/POS integrations', 'UAE PINT templates and APIs', 'Setup with certified Peppol Access Points', 'Dedicated UAE compliance guidance'],
                     para: 'Accqrate ensures a reliable and low-disruption rollout for businesses of all sizes.'
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign11.src,
                     title: "Future-Ready for UAE Digital Tax & VAT Compliance",
-                    description:
-                        "Accqrate is engineered for the UAE’s evolving digital taxation landscape. We support automated VAT validation, structured invoice exchange, and upcoming FTA digital reporting requirements, helping businesses stay compliant as the UAE expands its Peppol-based framework.",
+                    description: "Accqrate is engineered for the UAE's evolving digital taxation landscape. We support automated VAT validation, structured invoice exchange, and upcoming FTA digital reporting requirements, helping businesses stay compliant as the UAE expands its Peppol-based framework.",
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign12.src,
                     title: "Built for the UAE 5-Corner Peppol Model",
                     description: "",
                     listItems: ['Accqrate supports the full UAE 5-corner e-invoicing model, enabling seamless interaction across suppliers, buyers, Peppol Access Points, and the FTA.', 'Our UAE PINT engine ensures consistent interoperability, real-time exchange, and full traceability across the digital tax ecosystem.']
                 },
                 {
+                    icon: AssetPath.icons.websiteDesign14.src,
                     title: "One Platform for Global E-Invoicing",
                     description: "",
                     listItems: ['Accqrate enables businesses to manage e-invoicing across UAE, GCC, EU, and other regulated markets from one platform.', 'Generate, validate, transmit, and archive compliant e-invoices globally with a unified, scalable solution.']
@@ -383,7 +386,7 @@ const Section1 = () => {
             <section className='overflow-x-hidden'>
                 <div className='bg-[#eff3ff]'>
                     <FadeUp className="mb-8 md:mb-[40px] pt-12">
-                        <h1 className="text-[24px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto mt-6">
+                        <h1 className="text-[24px] tracking-heading leading-tight font-bold text-[#333333] text-center mx-auto mt-6">
                             <T>Trusted by</T>{" "}
                             <br className="md:hidden" />
                             <span className="text-[#194BED]"></span>
@@ -436,7 +439,7 @@ const Section1 = () => {
                         </div>
                     </div>
 
-                    <div className="px-6 md:px-8 xl:px-0 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
+                    <div className="px-6 md:px-8 xl:px-0 max-w-[1200px] mx-auto xl:flex items-end justify-between gap-20">
                         {/* Left Text */}
                         <div className="flex-1">
                             <h1 className="text-[24px] font-medium pt-[30px] md:pt-[37px] tracking-heading leading-tight">
@@ -473,25 +476,26 @@ const Section1 = () => {
                                         {features.map((feature, index) => (
                                             <div
                                                 key={index}
-                                                className="relative bg-white rounded-[16px] shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+                                                className="relative
                 w-full max-h-[372px] h-full
                 p-6 md:p-8 
-                flex flex-col gap-2
-                transition-all hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] hover:scale-[1.02] duration-300"
+                flex flex-col gap-2"
                                             >
-                                                {/* Image Left + Number Right */}
-                                                <div className="flex justify-between items-center mb-4">
-                                                    <div className="w-[70%]">
-                                                        <img
-                                                            src={feature.img}
-                                                            alt={feature.title}
-                                                            className="w-full max-h-[70px] h-auto object-contain"
-                                                        />
-                                                    </div>
+                                                <div className='flex'>
+                                                    {/* Image Left + Number Right */}
+                                                    <div className="flex justify-start items-center mb-4 gap-4">
+                                                        <div className="w-[70%]">
+                                                            <img
+                                                                src={feature.img}
+                                                                alt={feature.title}
+                                                                className="w-full max-h-[70px] h-auto object-contain"
+                                                            />
+                                                        </div>
 
-                                                    <span className="font-anonymous text-[38px] font-bold text-[#E6E6E6] leading-none select-none">
-                                                        <T>{String(index + 1).padStart(2, "0")}</T>
-                                                    </span>
+                                                        <span className="font-anonymous text-[38px] font-bold text-[#E6E6E6] leading-none select-none">
+                                                            <T>{String(index + 1).padStart(2, "0")}</T>
+                                                        </span>
+                                                    </div>
                                                 </div>
 
                                                 {/* Title + Description */}
@@ -694,64 +698,75 @@ const Section1 = () => {
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Cards section - hidden for Saudi Arabia (SA) */}
-                {countryCode !== 'sa' && (
-                    <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-[80px]'>
-                        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
-                            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                                {cards.map((card, index) => (
-                                    <div
-                                        key={index}
-                                        className="
-                                        w-full
-                                        border border-[#508847] bg-[#F4FFF2]
-                                        p-4 sm:p-5 md:p-6 rounded-xl
-                                        flex flex-col
-                                        min-h-[280px] md:min-h-[300px] lg:min-h-[300px]
-                                        overflow-hidden
-                                    "
-                                    >
-                                        <div className="flex-shrink-0 mb-2 md:mb-3">
-                                            <h3 className="text-[#303030] font-semibold text-[20px] leading-tight break-words">
-                                                <T>{card.title}</T>
-                                            </h3>
-                                            {card.subTitle && (
-                                                <h3 className="text-[#303030] font-semibold text-[20px] mb-2 md:mb-3 leading-tight break-words">
-                                                    <T>{card.subTitle}</T>
+                    {/* Cards section - hidden for Saudi Arabia (SA) */}
+                    {countryCode !== 'sa' && (
+                        <div className='max-w-[1200px] mx-auto py-8 md:py-10 lg:py-[80px]'>
+                            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
+                                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                                    {cards.map((card, index) => (
+                                        <div
+                                            key={index}
+                                            className="
+                            w-full bg-white
+                            p-4 sm:p-5 md:p-6 rounded-xl
+                            flex flex-col
+                            min-h-[280px] md:min-h-[300px] lg:min-h-[300px]
+                            overflow-hidden
+                        "
+                                        >
+                                            <div className="flex-shrink-0 mb-2 md:mb-3">
+                                                {/* Icon container - aligned to the left */}
+                                                {card.icon && (
+                                                    <div className="mb-3">
+                                                        <img
+                                                            src={card.icon}
+                                                            alt=""
+                                                            className="h-10 w-10 md:h-12 md:w-12"
+                                                        />
+                                                    </div>
+                                                )}
+
+                                                <h3 className="text-[#303030] font-semibold text-[20px] leading-tight break-words">
+                                                    <T>{card.title}</T>
                                                 </h3>
-                                            )}
-                                        </div>
+                                                {card.subTitle && (
+                                                    <h3 className="text-[#303030] font-semibold text-[20px] mb-2 md:mb-3 leading-tight break-words">
+                                                        <T>{card.subTitle}</T>
+                                                    </h3>
+                                                )}
+                                            </div>
 
-                                        <div className="flex-grow overflow-hidden">
-                                            {card.description && (
-                                                <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
-                                                    <T>{card.description}</T>
-                                                </p>
-                                            )}
-                                            {card.listItems && card.listItems.length > 0 && (
-                                                <ul className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] list-disc list-inside space-y-1.5 md:space-y-2 pl-2 md:pl-3 break-words">
-                                                    {card.listItems.map((item, itemIndex) => (
-                                                        <li key={itemIndex} className="break-words">
-                                                            <T>{item}</T>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            )}
-                                            {card.para && (
-                                                <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
-                                                    <T>{card.para}</T>
-                                                </p>
-                                            )}
+                                            <div className="flex-grow overflow-hidden">
+                                                {card.description && (
+                                                    <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
+                                                        <T>{card.description}</T>
+                                                    </p>
+                                                )}
+                                                {card.listItems && card.listItems.length > 0 && (
+                                                    <ul className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] list-disc list-inside space-y-1.5 md:space-y-2 pl-2 md:pl-3 break-words">
+                                                        {card.listItems.map((item, itemIndex) => (
+                                                            <li key={itemIndex} className="break-words">
+                                                                <T>{item}</T>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
+                                                {card.para && (
+                                                    <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
+                                                        <T>{card.para}</T>
+                                                    </p>
+                                                )}
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
+                    )}
+                </div>
 
-                    </div>
-                )}
+
 
             </section>
             <ContactModal open={isModalOpen} onClose={handleCloseModal} />

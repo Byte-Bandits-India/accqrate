@@ -350,7 +350,7 @@ import invoiceHome from "@/Assets/images/invoicing/invoice-home.webp";
 import invoiceStandalone from "@/Assets/images/invoicing/e-invoicing_standalone.webp";
 import invoice from "@/Assets/images/invoicing/invoice.webp";
 import magnifiedInvoice from "@/Assets/images/invoicing/magnified-invoice.webp";
-import manageTeam from "@/Assets/images/invoicing/manage-team.webp";
+import manageTeam from "@/Assets/images/invoicing/BE_manage_team.webp";
 import moneyStack from "@/Assets/images/invoicing/money-stack-svgrepo-com 1.png";
 import multipleTabsInvoices from "@/Assets/images/invoicing/multiple-tabs-invoices.webp";
 import onboardSvg from "@/Assets/images/invoicing/onboard.svg";

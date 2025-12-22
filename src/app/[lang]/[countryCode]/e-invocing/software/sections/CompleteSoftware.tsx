@@ -51,17 +51,17 @@ const Section3 = () => {
     const sectionOverrides: Record<string, Section[]> = {
         be: [
             {
-                img: AssetPath.invoicing.taxReceipt.src,
+                img: AssetPath.icons.tax.src,
                 title: "VAT Return",
                 desc: "No need for an accountant – let Accqrate automatically generate your VAT return for you",
             },
             {
-                img: AssetPath.invoicing.profile2user.src,
+                img: AssetPath.icons.profile.src,
                 title: "Customers & Suppliers",
                 desc: "Always know who you owe money to and who owes you money",
             },
             {
-                img: AssetPath.invoicing.chart2.src,
+                img: AssetPath.icons.barChart.src,
                 title: "Reports & Insights",
                 desc: "Generate single or consolidated reports for a holistic view of your finances.",
             },
@@ -120,7 +120,7 @@ const Section3 = () => {
     const sections = sectionOverrides[countryCode] || defaultSections;
     return (
         <>
-            <section className="py-8 md:py-10 lg:py-[80px] max-w-[1280px] mx-auto relative">
+            <section className="py-8 md:py-10 lg:py-[80px] max-w-[1200px] mx-auto relative">
                 <div className="px-6 md:px-8 xl:px-0 text-center relative">
                     <h1 className="text-[24px] font-medium text-[#000000] leading-tight">
                         <T>A</T>{" "}
@@ -160,7 +160,7 @@ const Section3 = () => {
                                 <img
                                     src={item.img}
                                     alt={item.title}
-                                    className="w-[60px] sm:w-[70px] h-auto mb-4 sm:mb-5"
+                                    className="w-[40px] h-auto mb-4 sm:mb-5"
                                 />
 
                                 {/* Title */}

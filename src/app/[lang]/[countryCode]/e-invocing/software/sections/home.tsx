@@ -5,10 +5,10 @@ import Link from "next/link";
 import { Star, StarHalf } from "lucide-react";
 import AssetPath from "@/AssetPath/AssetPath";
 import Image from "next/image";
-import peppolImg from "@/Assets/images/invoicing/peppol.png";
-import gdprImg from "@/Assets/images/invoicing/gdpr.png";
+import peppolImg from "@/Assets/images/invoicing/peppol.svg";
+import gdprImg from "@/Assets/images/invoicing/GDPR.svg";
 import serverImg from "@/Assets/images/invoicing/server.png";
-import isoImg from "@/Assets/images/invoicing/iso.png";
+import isoImg from "@/Assets/images/invoicing/ISO.svg";
 import eInvoiceHeroImg from "@/Assets/images/invoicing/BE_e-invoicing_standalone_hero.webp";
 import uaeImg from "@/Assets/images/invoicing/uae.webp";
 import saHeroImg from "@/Assets/images/invoicing/invoice-with-create-screen copy.webp";
@@ -425,12 +425,12 @@ const Software: React.FC = () => {
     return (
         <>
             <section>
-                <div className="bg-[#eff3ff] pt-16 px-6 md:px-8 pb-12 md:pb-[80px] lg:pb-[100px]">
-                    <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div className="bg-[#eff3ff] pt-16 px-6">
+                    <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between">
                         {/* LEFT CONTENT */}
-                        <div className="flex flex-col justify-center max-w-[600px] w-full">
+                        <div className="flex flex-col justify-center max-w-[450px] w-full">
                             <div className="flex items-center gap-2">
-                                <p className="text-[#F05A28] text-[16px] uppercase leading-[30px] m-0 whitespace-nowrap">
+                                <p className="text-[#F05A28] text-[16px] uppercase leading-normal m-0 lg:whitespace-nowrap">
                                     <T>{content.badgeText}</T>
                                 </p>
 
@@ -445,24 +445,24 @@ const Software: React.FC = () => {
                             </div>
 
 
-                            <p className="text-fluid-h3 lg:text-[24px] font-medium text-[#000000] mt-4 leading-tight mb-4">
+                            <p className="text-fluid-h3 lg:text-[24px] font-medium text-[#000000] mt-4 leading-[1.5] mb-2">
                                 <T>Enable Your Business With E-invoicing.</T>
                             </p>
                             <h1 className="text-fluid-h3 font-semibold text-[#000000] leading-tight">
                                 <T>{content.title}</T>
                             </h1>
 
-                            <div className="h-[2px] w-[80px] bg-blue-600 my-6"></div>
+                            <div className="h-[2px] w-[80px] bg-blue-600 my-4"></div>
 
                             {/* Description 1 with green E-invoicing */}
                             <p
-                                className="text-[#000000] text-fluid-small lg:text-[16px] max-w-[560px] leading-[30px]"
+                                className="text-[#000000] text-fluid-small lg:text-[16px] max-w-[560px] leading-normal"
                                 dangerouslySetInnerHTML={{ __html: translatedDescription1 }}
                             />
 
                             {/* Description 2 */}
                             {content.description2 && (
-                                <p className="text-[#000000] text-[14px] max-w-[560px] leading-[30px]">
+                                <p className="text-[#000000] text-[14px] max-w-[560px] leading-normal">
                                     <T>{content.description2}</T>
                                 </p>
                             )}
@@ -520,13 +520,13 @@ const Software: React.FC = () => {
                                                     <Image
                                                         src={badge.img}
                                                         alt={badge.alt}
-                                                        width={18}
-                                                        height={18}
+                                                        width={28}
+                                                        height={28}
                                                         priority
                                                     />
                                                 </div>
 
-                                                <span className="text-[#1C2041] text-[16px] mt-2 leading-[22px]">
+                                                <span className="text-[#1C2041] text-[16px] mt-2 leading-normal">
                                                     <T>{badge.text}</T>
                                                 </span>
                                             </li>
@@ -580,18 +580,6 @@ const Software: React.FC = () => {
                                     <T>Complaint</T>
                                 </p>
                             </div>
-                            <div className="flex items-center gap-2 text-[#333333] mt-6">
-                                <div className="flex items-center gap-1 text-[#FEB04C]">
-                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                    <Star className="w-3 h-3 fill-[#FEB04C]" />
-                                    <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
-                                </div>
-                                <p className="text-[16px] font-medium">
-                                    <T>4.8 average rating from our customers</T>
-                                </p>
-                            </div>
                         </div>
 
                         {/* RIGHT IMAGE */}
@@ -601,9 +589,22 @@ const Software: React.FC = () => {
                                 alt={content.imageAlt ?? ''}
                                 width={591}
                                 height={380}
-                                className="w-full max-w-[641px] rounded-2xl object-contain"
+                                className="w-full max-w-[750px] rounded-2xl object-contain"
                             />
                         </div>
+                    </div>
+
+                    <div className="flex items-center justify-center gap-2 text-[#333333] mt-6">
+                        <div className="flex items-center gap-1 text-[#FEB04C]">
+                            <Star className="w-3 h-3 fill-[#FEB04C]" />
+                            <Star className="w-3 h-3 fill-[#FEB04C]" />
+                            <Star className="w-3 h-3 fill-[#FEB04C]" />
+                            <Star className="w-3 h-3 fill-[#FEB04C]" />
+                            <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
+                        </div>
+                        <p className="text-[16px] font-medium">
+                            <T>4.8 average rating from our customers</T>
+                        </p>
                     </div>
                 </div>
             </section>

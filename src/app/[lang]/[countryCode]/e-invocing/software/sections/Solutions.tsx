@@ -110,7 +110,7 @@ export default function Solutions({ countryCode }: SolutionsProps) {
 
     return (
         <section className="bg-[#F8F7FF] py-20">
-            <div className="max-w-[1280px] mx-auto px-6 lg:px-0">
+            <div className="max-w-[1200px] mx-auto px-6 lg:px-0">
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h3 className="text-[24px] font-medium text-[#1C2041] leading-tight">
