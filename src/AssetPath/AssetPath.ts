@@ -405,6 +405,9 @@ import integrationCertify from "@/Assets/images/invoicing/integration/certify.sv
 import integrationThumbnail from "@/Assets/images/invoicing/integration/thumbnail.jpg";
 import integrationThumbnail1 from "@/Assets/images/invoicing/integration/thumbnail-1.jpg";
 import integrationThumbnail2 from "@/Assets/images/invoicing/integration/thumbnail-2.jpg";
+import integrationPin from "@/Assets/images/invoicing/integration/pin.png";
+import integrationSub from "@/Assets/images/invoicing/integration/sub.png";
+
 
 // Invoicing Integrators
 import anyErp from "@/Assets/images/invoicing/integrators/any-erp.png";
@@ -920,7 +923,7 @@ const AssetPath = {
     zatca2,
     zatcaLogo: zatca2,
     
-integrationAssets: {
+  integrationAssets: {
       darkBlue: integrationDarkBlue,
       lightBlue: integrationLightBlue,
       hero: integrationHero,
@@ -935,6 +938,8 @@ integrationAssets: {
       set: integrationSet,
       certify: integrationCertify,
       shield: integrationShield,
+      pin: integrationPin,
+      sub: integrationSub,
       thumbnail: integrationThumbnail,
       thumbnail1: integrationThumbnail1,
       thumbnail2: integrationThumbnail2,
