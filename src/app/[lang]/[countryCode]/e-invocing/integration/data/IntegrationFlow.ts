@@ -8,7 +8,7 @@ sa: {
 
   steps: [
     {
-      number: "01",
+      number: "Step 1",
       title: "Generate invoices and complete in your ERP/POS",
       description:
         "Efficiently generate and finalize invoices directly within your ERP/POS system for streamlined financial management.",
@@ -16,7 +16,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon1.src,
     },
     {
-      number: "02",
+      number: "Step 2",
       title: "Our Connectors in your ERP will take care of the rest",
       description:
         "Our connectors, seamlessly integrated into your ERP, will handle all subsequent processes efficiently.",
@@ -24,7 +24,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon2.src,
     },
     {
-      number: "03",
+      number: "Step 3",
       title:
         "Our E-invoicing solution transforms and transmits the data to ZATCA",
       description:
@@ -33,7 +33,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon3.src,
     },
     {
-      number: "04",
+      number: "Step 4",
       title: "ZATCA approved invoices are given back to your ERP/POS",
       description:
         "ZATCA clearances are processed instantly, ensuring swift compliance and operational efficiency.",
@@ -70,28 +70,32 @@ sa: {
 
   steps: [
     {
-      number: "01",
+      number: "Step 1",
       title: "Invoice Creation",
       description:
         "A structured e-invoice is generated using the Peppol BIS 3.0 standard.",
+        icon: AssetPath.invoicing.integrationAssets.ring.src,
     },
     {
-      number: "02",
+      number: "Step 2",
       title: "Peppol Submission",
       description:
         "The invoice is transmitted securely to the buyer’s system via the Peppol network.",
+        icon: AssetPath.invoicing.integrationAssets.sub.src,
     },
     {
-      number: "03",
+      number: "Step 3",
       title: "Automated Processing",
       description:
         "The recipient's system automatically processes the invoice, enabling efficient approval and payment cycles.",
+        icon: AssetPath.invoicing.integrationAssets.pin.src,
     },
     {
-      number: "04",
+      number: "Step 4",
       title: "Record-Keeping",
       description:
         "Invoices are archived in compliance with Belgian regulations, with Mercurius ensuring traceability and delivery confirmation.",
+        icon: AssetPath.invoicing.integrationAssets.shield.src,
     },
   ],
 },
