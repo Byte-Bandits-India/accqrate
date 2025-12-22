@@ -73,7 +73,7 @@ const Software = () => {
             <div className="py-10">
               <button
                 onClick={() => setModalOpen(true)}
-                className="relative flex  items-center mx-auto md:mx-0 justify-center w-[280px] h-[52px] bg-[#F05A28] rounded-full text-white hover:bg-[#E04A18] transition-colors duration-200"
+                className="relative flex  items-center mx-auto md:mx-0 justify-center w-[280px] h-[52px] bg-[#d63f10] rounded-full text-white hover:bg-[#E04A18] transition-colors duration-200"
               >
                 <T lang={lang} countryCode={countryCode}>Get a Free Proof of Concept</T>
                 <svg
@@ -105,7 +105,7 @@ const Software = () => {
               width={591}
               height={400}
               className="w-full max-w-[591px] h-auto rounded"
-              priority
+              unoptimized
             />
 
             <div className="flex gap-4 mt-8 text-center md:text-[20px]">
