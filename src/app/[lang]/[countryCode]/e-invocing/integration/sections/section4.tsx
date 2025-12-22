@@ -44,7 +44,7 @@ export default function Section4() {
   };
 
   return (
-    <section className="py-16 md:py-20 px-6 md:px-8 lg:px-0 bg-[#F7F9FF]">
+    <section className="py-16 md:py-20 px-6 md:px-8 lg:px-0 bg-[#f7f7ff]">
       <div className="max-w-[1200px] mx-auto">
 
         {/* ================= HEADER ================= */}
@@ -113,7 +113,7 @@ export default function Section4() {
         </div>
 
         {/* ================= BOTTOM GRID ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20 bg-[#ECEDFF] p-6 md:p-8 rounded-[30px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20 bg-[#eff3ff] p-6 md:p-8 rounded-[20px]">
 
           {/* LEFT – INVOICE IMAGE */}
           <div className="flex justify-center">
