@@ -122,7 +122,7 @@ const Section3 = () => {
         <>
             <section className="py-8 md:py-10 lg:py-[80px] max-w-[1200px] mx-auto relative">
                 <div className="px-6 md:px-8 xl:px-0 text-center relative">
-                    <h1 className="text-[24px] font-medium text-[#000000] leading-tight">
+                    <h1 className="text-[24px] font-bold text-[#000000] leading-tight">
                         <T>A</T>{" "}
                         <span className="text-[#194BED]">
                             <T>complete software</T>
@@ -143,7 +143,7 @@ const Section3 = () => {
                         />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-[60px] justify-items-center mt-8 md:mt-10 lg:mt-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center mt-8">
                         {sections.map((item, i) => (
                             <div
                                 key={i}

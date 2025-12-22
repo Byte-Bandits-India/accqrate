@@ -159,10 +159,10 @@ const Section2 = () => {
             <div className='bg-[#F1F2FF]'>
                 <div className='max-w-[1280px] mx-auto py-8 md:py-10 lg:py-20'>
                     <div className='px-6 md:px-8 xl:px-0'>
-                        <h3 className="text-[24px] font-normal text-[#000000] leading-tight">
+                        <h3 className="text-[24px] font-bold text-[#000000] text-center leading-tight">
                             <T>Flexible Deployment</T>
                         </h3>
-                        <p className='text-[#333333] text-[16px] mt-4 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
+                        <p className='text-[#333333] text-[16px] text-center mt-4 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
 
                         <div className="py-6 md:py-8 lg:py-10">
                             <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
@@ -234,9 +234,9 @@ const Section2 = () => {
             </div>
 
             {/* Footer Recent Blogs */}
-            <section className="bg-[#eff3ff] py-10">
+            <section className="bg-white py-10">
                 <div className="container mx-auto px-4 max-w-[1250px]">
-                    <h3 className="text-[24px] text-[#1c2041] font-semibold text-center">
+                    <h3 className="text-[24px] text-[#1c2041] font-bold text-center">
                         <BelgiumT><span className='text-[#194BED]'>E-invoicing</span> Insights</BelgiumT>
                     </h3>
                     <p className='mb-6 md:mb-10 mt-2 text-center text-[#5A6183]'>
@@ -252,7 +252,7 @@ const Section2 = () => {
                         {randomBlogs.map((data, i) => (
                             <Col xs={24} sm={12} md={6} lg={6} key={i}>
                                 <div
-                                    className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full border border-gray-100"
+                                    className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full border border-gray-200"
                                     onClick={() => router.push(data.url)}
                                 >
                                     <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">

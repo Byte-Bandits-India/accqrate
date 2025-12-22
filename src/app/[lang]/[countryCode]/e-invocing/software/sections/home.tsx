@@ -590,6 +590,7 @@ const Software: React.FC = () => {
                                 width={591}
                                 height={380}
                                 className="w-full max-w-[750px] rounded-2xl object-contain"
+                                unoptimized
                             />
                         </div>
                     </div>

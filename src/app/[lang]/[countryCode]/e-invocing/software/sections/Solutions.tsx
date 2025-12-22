@@ -113,7 +113,7 @@ export default function Solutions({ countryCode }: SolutionsProps) {
             <div className="max-w-[1200px] mx-auto px-6 lg:px-0">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h3 className="text-[24px] font-medium text-[#1C2041] leading-tight">
+                    <h3 className="text-[24px] font-bold text-[#1C2041] leading-tight">
                         <T>Accqrate E-Invoicing Solutions</T>
                     </h3>
                     <p className="text-[#5A6183] text-[16px] mt-3">

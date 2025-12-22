@@ -442,59 +442,47 @@ const Section1 = () => {
                     <div className="px-6 md:px-8 xl:px-0 max-w-[1200px] mx-auto xl:flex items-end justify-between gap-20">
                         {/* Left Text */}
                         <div className="flex-1">
-                            <h1 className="text-[24px] font-medium pt-[30px] md:pt-[37px] tracking-heading leading-tight">
+                            <h1 className="text-[24px] font-bold pt-[30px] md:pt-[37px] text-center tracking-heading leading-tight">
                                 <T>Customize and send invoices easily</T>
                             </h1>
-                            <div className='space-y-3 md:space-y-4 mt-4'>
-                                <p className="text-[16px] max-w-[662px] tracking-para leading-tight">
-                                    <T>Sending an invoice should be easy - and we`ve made it so</T>
-                                </p>
-                                <p className="text-[16px] max-w-[662px] tracking-para leading-tight">
-                                    <T>Perfectly aligned with your needs and brand</T>
-                                </p>
-                                <p className="text-[20px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
+                            <p className="text-[16px] tracking-para text-center mt-4 text-[#5A6183] leading-tight">
+                                <T>Sending an invoice should be easy - and we`ve made it so</T>
+                            </p>
+                            <div className='space-y-3 md:space-y-4 mt-10'>
+                                <p className="text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
                                     <T>Invoices Custom-Made for Your Business</T>
                                 </p>
-                                <button
-                                    onClick={() => setModalOpen(true)}
-                                    className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 rounded-3xl text-white text-[14px]"
-                                    style={{ background: '#D63F10' }}
-                                >
-                                    <T>See It in Action</T>
-                                </button>
+                                <p className="text-[20px] max-w-[662px] tracking-para leading-tight">
+                                    <T>Perfectly aligned with your needs and brand</T>
+                                </p>
                             </div>
                         </div>
                     </div>
 
                     <div className="relative mt-6 md:mt-8">
-                        <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
-                            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+                        <div className="max-w-[1200px] mx-auto">
+                            <div className="grid grid-cols-1 lg:grid-cols-4 items-start">
 
                                 {/* LEFT COLUMN */}
                                 <div className="lg:col-span-2">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6 lg:mt-12">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6">
                                         {features.map((feature, index) => (
                                             <div
                                                 key={index}
                                                 className="relative
-                w-full max-h-[372px] h-full
-                p-6 md:p-8 
+                w-full max-w-[260px] max-h-[350px] h-full
                 flex flex-col gap-2"
                                             >
                                                 <div className='flex'>
                                                     {/* Image Left + Number Right */}
                                                     <div className="flex justify-start items-center mb-4 gap-4">
-                                                        <div className="w-[70%]">
+                                                        <div className="w-[40px]">
                                                             <img
                                                                 src={feature.img}
                                                                 alt={feature.title}
-                                                                className="w-full max-h-[70px] h-auto object-contain"
+                                                                className="w-full max-h-[40px] h-auto object-contain"
                                                             />
                                                         </div>
-
-                                                        <span className="font-anonymous text-[38px] font-bold text-[#E6E6E6] leading-none select-none">
-                                                            <T>{String(index + 1).padStart(2, "0")}</T>
-                                                        </span>
                                                     </div>
                                                 </div>
 
@@ -520,6 +508,13 @@ const Section1 = () => {
                                             </div>
                                         ))}
                                     </div>
+                                    <button
+                                        onClick={() => setModalOpen(true)}
+                                        className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 rounded-3xl text-white text-[14px]"
+                                        style={{ background: '#D63F10' }}
+                                    >
+                                        <T>See It in Action</T>
+                                    </button>
                                 </div>
 
                                 {/* RIGHT COLUMN - IMAGE */}
@@ -528,7 +523,7 @@ const Section1 = () => {
                                         <img
                                             src={getInvoiceMultipleImage().src}
                                             alt="Feature Demo"
-                                            className="w-full h-auto object-contain mx-auto rounded-[12px]"
+                                            className="w-full h-auto max-h-[620px] object-contain mx-auto rounded-[12px]"
                                         />
                                     </div>
                                 </div>
@@ -537,7 +532,7 @@ const Section1 = () => {
                     </div>
 
 
-                    <div className="relative mt-6 md:mt-8 lg:mt-[100px] pb-10 md:pb-12">
+                    <div className="relative mt-6 md:mt-0 pb-10 md:pb-12">
                         <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
                             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
 
@@ -698,25 +693,55 @@ const Section1 = () => {
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    {/* Cards section - hidden for Saudi Arabia (SA) */}
-                    {countryCode !== 'sa' && (
-                        <div className='max-w-[1200px] mx-auto py-8 md:py-10 lg:py-[80px]'>
-                            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
-                                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                                    {cards.map((card, index) => (
+                {/* Cards section - hidden for Saudi Arabia (SA) */}
+                {countryCode !== 'sa' && (
+                    <div className='max-w-[1200px] mx-auto py-8'>
+                        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
+                            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+                                {cards.map((card, index) => (
+                                    <div
+                                        key={index}
+                                        className={`
+            relative group overflow-hidden
+            p-4 sm:p-5 md:p-6 rounded-xl
+            flex flex-col
+            min-h-[280px] md:min-h-[300px]
+            transition-shadow duration-300 max-w-[340px]
+            hover:shadow-lg
+
+            ${index % 2 === 0
+                                                ? 'bg-gradient-to-br from-[#ffffff] to-[#ededed]'
+                                                : 'bg-gradient-to-br from-[#ffffff] to-[#e9efff]'
+                                            }
+
+            ${index === 0
+                                                ? 'md:w-full md:max-w-[calc(33.333%*3-16px)] lg:w-[calc(33.333%-21.33px)]'
+                                                : index < 3
+                                                    ? 'w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-21.33px)]'
+                                                    : 'w-full sm:w-[calc(50%-12px)] md:w-[calc(50%-16px)] lg:w-[calc(33.333%-21.33px)]'
+                                            }
+        `}
+                                    >
+                                        {/*  Hover gradient overlay (animation only) */}
                                         <div
-                                            key={index}
-                                            className="
-                            w-full bg-white
-                            p-4 sm:p-5 md:p-6 rounded-xl
-                            flex flex-col
-                            min-h-[280px] md:min-h-[300px] lg:min-h-[300px]
-                            overflow-hidden
-                        "
-                                        >
+                                            className={`
+        absolute inset-0
+        transform scale-y-0
+        transition-transform duration-300 ease-out
+        group-hover:scale-y-100
+
+        ${index % 2 === 0
+                                                    ? 'bg-gradient-to-t from-[#e9efff] to-[#ededed] origin-bottom'
+                                                    : 'bg-gradient-to-b from-[#e9efff] to-[#ededed] origin-top'
+                                                }
+    `}
+                                        />
+
+                                        {/* CONTENT (unchanged) */}
+                                        <div className="relative z-10 flex flex-col h-full">
                                             <div className="flex-shrink-0 mb-2 md:mb-3">
-                                                {/* Icon container - aligned to the left */}
                                                 {card.icon && (
                                                     <div className="mb-3">
                                                         <img
@@ -727,11 +752,12 @@ const Section1 = () => {
                                                     </div>
                                                 )}
 
-                                                <h3 className="text-[#303030] font-semibold text-[20px] leading-tight break-words">
+                                                <h3 className="text-[#303030] font-semibold text-[18px] leading-tight break-words">
                                                     <T>{card.title}</T>
                                                 </h3>
+
                                                 {card.subTitle && (
-                                                    <h3 className="text-[#303030] font-semibold text-[20px] mb-2 md:mb-3 leading-tight break-words">
+                                                    <h3 className="text-[#303030] font-semibold text-[18px] mb-2 md:mb-3 leading-tight break-words">
                                                         <T>{card.subTitle}</T>
                                                     </h3>
                                                 )}
@@ -743,15 +769,7 @@ const Section1 = () => {
                                                         <T>{card.description}</T>
                                                     </p>
                                                 )}
-                                                {card.listItems && card.listItems.length > 0 && (
-                                                    <ul className="text-[#5A6183] text-fluid-small leading-relaxed md:leading-[28px] list-disc list-inside space-y-1.5 md:space-y-2 pl-2 md:pl-3 break-words">
-                                                        {card.listItems.map((item, itemIndex) => (
-                                                            <li key={itemIndex} className="break-words">
-                                                                <T>{item}</T>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                )}
+
                                                 {card.para && (
                                                     <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
                                                         <T>{card.para}</T>
@@ -759,12 +777,13 @@ const Section1 = () => {
                                                 )}
                                             </div>
                                         </div>
-                                    ))}
-                                </div>
+                                    </div>
+                                ))}
+
                             </div>
                         </div>
-                    )}
-                </div>
+                    </div>
+                )}
 
 
 
