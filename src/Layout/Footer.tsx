@@ -74,13 +74,11 @@ const getContactSalesSection = (countryCode: string) => {
       email: "Email: contact@accqrate-erp.com",
       whatsapp: "WhatsApp: +230 5795 1711"
     },
-
     jd: {
       call: "Call: +962 7 8800 3525",
       email: "Email: contact@accqrate-erp.com",
       whatsapp: "WhatsApp: +962 7 8800 3525"
     },
-
     ae: {
       call: "Call: +971505515388",
       email: "Email: contact@accqrate-erp.com",
@@ -144,7 +142,7 @@ export default function FooterUpdated() {
   return (
     <footer className="bg-white text-[#000000d9] py-16 font-inter">
       <div className="mx-auto px-6 md:px-10 xl:px-10">
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           {/* Logo */}
           <Link href={createHref("/")}>
             <Image
@@ -158,15 +156,15 @@ export default function FooterUpdated() {
         </div>
 
         {/* Main Grid with Full-Height Vertical Divider */}
-        <div className="hidden lg:flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
+        <div className="hidden xl:flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
 
           {/* LEFT GRID */}
-          <div className="lg:w-[856px]">
+          <div className="lg:w-[890px] 4xl:w-full">
 
             {/* Description + E-invoicing */}
             <div className="flex flex-col md:flex-row gap-6 md:gap-10 lg:gap-16 mb-10">
               {/* Description */}
-              <p className="text-[#1c2041] text-fluid-small leading-7 max-w-[573px]">
+              <p className="text-[#1c2041] text-fluid-small lg:text-[16px] leading-7 max-w-[573px]">
                 <T>
                   One unified platform with zero silos integrated modules on a
                   single data model, global compliance built-in, AI-powered
@@ -178,10 +176,10 @@ export default function FooterUpdated() {
 
               {/* E-invoicing Solution */}
               <div className="md:min-w-[200px]">
-                <h3 className="text-fluid-body font-semibold mb-4">
+                <h3 className="text-fluid-body lg:text-[18px] font-semibold mb-4">
                   <T>E-invoicing Solution</T>
                 </h3>
-                <ul className="space-y-2 text-[##1c2041] text-fluid-small">
+                <ul className="space-y-2 text-[##1c2041] text-fluid-small lg:text-[16px]">
                   {eInvoicingLinks.map((item, i) => (
                     <li key={i}>
                       <Link
@@ -201,7 +199,7 @@ export default function FooterUpdated() {
 
             {/* Middle Nav */}
             <div className="pt-4">
-              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-fluid-small text-white underline underline-offset-4">
+              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-fluid-small lg:text-[16px] text-white underline underline-offset-4">
                 {footerNav.map((item, i) => (
                   <Link
                     key={i}
@@ -218,42 +216,44 @@ export default function FooterUpdated() {
           {/* FULL-HEIGHT VERTICAL LINE */}
           <div className="hidden lg:block w-[1px] bg-[#1c2041] self-stretch"></div>
 
-          {/* RIGHT GRID */}
-          <div className="flex-grow grid sm:grid-cols-2 gap-10">
-            {dynamicFooterSections.map((section, index) => (
-              <div key={index}>
-                <h3 className="text-fluid-body font-semibold mb-6">
-                  <T>{section.title}</T>
-                </h3>
+          {/* RIGHT SECTION WITH FLEX LAYOUT */}
+          <div className="flex-grow 4xl:w-full">
+            <div className="flex flex-col lg:flex-row h-full">
+              {dynamicFooterSections.map((section, index) => (
+                <div key={index} className="lg:flex-1">
+                  <h3 className="text-fluid-body lg:text-[18px] font-semibold mb-6">
+                    <T>{section.title}</T>
+                  </h3>
 
-                <ul className="space-y-3 text-[#1c2041] text-fluid-small">
-                  {section.links.map((item, i) => (
-                    <li key={i}>
-                      {item.isText ? (
-                        <div className="block">
-                          {item.label.split('\n').map((line, lineIndex) => (
-                            <span key={lineIndex} className="block">
-                              <T>{line}</T>
-                            </span>
-                          ))}
-                        </div>
-                      ) : (
-                        (() => {
-                          return (
-                            <Link
-                              href={resolveHref(item.href ?? "")}
-                              className="text-[#1c2041] hover:text-[#5980FF] underline underline-offset-2 block"
-                            >
-                              <T>{item.label}</T>
-                            </Link>
-                          );
-                        })()
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                  <ul className="space-y-3 text-[#1c2041] text-fluid-small lg:text-[16px]">
+                    {section.links.map((item, i) => (
+                      <li key={i}>
+                        {item.isText ? (
+                          <div className="block">
+                            {item.label.split('\n').map((line, lineIndex) => (
+                              <span key={lineIndex} className="block">
+                                <T>{line}</T>
+                              </span>
+                            ))}
+                          </div>
+                        ) : (
+                          (() => {
+                            return (
+                              <Link
+                                href={resolveHref(item.href ?? "")}
+                                className="text-[#1c2041] hover:text-[#5980FF] underline underline-offset-2 block"
+                              >
+                                <T>{item.label}</T>
+                              </Link>
+                            );
+                          })()
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -271,7 +271,7 @@ export default function FooterUpdated() {
         </div>
 
         {/* Copyright */}
-        <p className="text-center text-[#1c2041] text-fluid-small">
+        <p className="text-center text-[#1c2041] text-fluid-small lg:text-[16px]">
           <T>© Copyright 2021 - 2025</T>{" "}
           <span className="text-[#5980FF] font-medium">Accqrate</span>,{" "}
           <T>All rights reserved.</T>

@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      screens: {
+        "4xl": "2560px", // or whatever pixel value you've set
+      },
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],
         anonymous: ['"Anonymous Pro"', "monospace"],
