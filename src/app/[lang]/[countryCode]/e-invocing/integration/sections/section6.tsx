@@ -200,7 +200,7 @@ const DemoVideoSection: React.FC = () => {
                                 <div className="flex justify-center md:justify-start">
                                     <button
                                         onClick={handleContactClick}
-                                        className="relative flex items-center justify-center w-[140px] h-[40px] md:w-[140px] md:h-[45px] bg-[#F05A28] rounded-[50px] px-2 text-white text-[12px] md:text-[14px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
+                                        className="relative flex items-center justify-center w-[140px] h-[40px] md:w-[140px] md:h-[45px] bg-[#d63f10] rounded-[50px] px-2 text-white text-[12px] md:text-[14px] whitespace-nowrap transition-all duration-300 hover:bg-[#d94f22]"
                                     >
                                         <span className={lang === 'ar' ? 'ml-4' : 'mr-4'}> <T lang={lang} countryCode={countryCode}>{content.buttonText}</T> </span>
                                         <svg
@@ -279,3 +279,4 @@ const DemoVideoSection: React.FC = () => {
 }
 
 export default DemoVideoSection
+
