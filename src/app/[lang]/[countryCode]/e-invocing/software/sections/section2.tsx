@@ -279,7 +279,7 @@ const Section2 = () => {
 
                     <div className='flex items-center justify-center mt-8 md:mt-12'>
                         <button
-                            className="inline-flex text-[14px] items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-6 py-4 rounded-full hover:bg-[#e04918] transition-colors duration-300"
+                            className="inline-flex text-[14px] items-center justify-center gap-2 bg-[#D63F10] text-[#FFFFFF] font-medium px-6 py-4 rounded-full hover:bg-[#e04918] transition-colors duration-300"
                             onClick={() => router.push(`/${lang}/${countryCode}/resources/blogs`)}
                         >
                             <T>Explore All Blogs</T> <ArrowRight className="w-4 h-4 -rotate-45" />

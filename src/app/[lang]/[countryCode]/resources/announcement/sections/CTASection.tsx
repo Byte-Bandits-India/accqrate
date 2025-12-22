@@ -172,7 +172,7 @@ const CTASection = () => {
               lg:w-[300px] w-[270px] md:w-[220px]
               min-h-[46px] md:min-h-[52px]
               flex items-center justify-center
-              bg-[#F05A28]
+              bg-[#D63F10]
               rounded-[50px]
               px-4 pr-10
               text-white

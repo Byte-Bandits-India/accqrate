@@ -458,7 +458,7 @@ const Section1 = () => {
                                 <button
                                     onClick={() => setModalOpen(true)}
                                     className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 rounded-3xl text-white text-[14px]"
-                                    style={{ background: '#F05A28' }}
+                                    style={{ background: '#D63F10' }}
                                 >
                                     <T>See It in Action</T>
                                 </button>

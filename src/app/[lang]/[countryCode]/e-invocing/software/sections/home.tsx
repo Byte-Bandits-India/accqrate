@@ -479,7 +479,7 @@ const Software: React.FC = () => {
                       flex items-center justify-center
                       w-[270px] md:w-[240px] lg:w-[270px]
                       min-h-[46px] md:min-h-[52px]
-                      bg-[#F05A28]
+                      bg-[#D63F10]
                       rounded-[50px]
                       px-4 pr-10
                       text-white
