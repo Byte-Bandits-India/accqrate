@@ -386,7 +386,7 @@ const Section1 = () => {
             <section className='overflow-x-hidden'>
                 <div className='bg-[#eff3ff]'>
                     <FadeUp className="mb-8 md:mb-[40px] pt-12">
-                        <h1 className="text-[24px] tracking-heading leading-tight font-bold text-[#333333] text-center mx-auto mt-6">
+                        <h1 className="text-[24px] tracking-heading leading-tight font-bold text-[#1c2041] text-center mx-auto mt-6">
                             <T>Trusted by</T>{" "}
                             <br className="md:hidden" />
                             <span className="text-[#194BED]"></span>
@@ -442,7 +442,7 @@ const Section1 = () => {
                     <div className="px-6 md:px-8 xl:px-0 max-w-[1200px] mx-auto xl:flex items-end justify-between gap-20">
                         {/* Left Text */}
                         <div className="flex-1">
-                            <h1 className="text-[24px] font-bold pt-[30px] md:pt-[37px] text-center tracking-heading leading-tight">
+                            <h1 className="text-[24px] font-bold pt-[30px] md:pt-[37px] text-[#1c2041] text-center tracking-heading leading-tight">
                                 <T>Customize and send invoices easily</T>
                             </h1>
                             <p className="text-[16px] tracking-para text-center mt-4 text-[#5A6183] leading-tight">
@@ -452,7 +452,7 @@ const Section1 = () => {
                                 <p className="text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
                                     <T>Invoices Custom-Made for Your Business</T>
                                 </p>
-                                <p className="text-[20px] max-w-[662px] tracking-para leading-tight">
+                                <p className="text-[20px] max-w-[662px] text-[#1c2041] tracking-para leading-tight">
                                     <T>Perfectly aligned with your needs and brand</T>
                                 </p>
                             </div>
@@ -557,12 +557,12 @@ const Section1 = () => {
                                                     <T>{pageContent.whyAccqrateTitle}</T>
                                                 </h3>
 
-                                                <h3 className='text-[20px] font-medium text-[#000000] mt-4 text-left leading-relaxed'>
+                                                <h3 className='text-[20px] font-medium text-[#1c2041] mt-4 text-left leading-relaxed'>
                                                     <T>{pageContent.whyAccqrateSubtitle}</T>
                                                 </h3>
 
 
-                                                <p className='text-[20px] font-medium mt-10 text-[#000000] text-left leading-tight'>
+                                                <p className='text-[20px] font-medium mt-10 text-[#1c2041] text-left leading-tight'>
                                                     <T>{pageContent.headingDescription}</T>
                                                 </p>
                                                 <p className="text-[16px] font-normal mt-2 text-[#5a6183] text-left leading-tight">
@@ -708,12 +708,12 @@ const Section1 = () => {
             p-4 sm:p-5 md:p-6 rounded-xl
             flex flex-col
             min-h-[280px] md:min-h-[300px]
-            transition-shadow duration-300 max-w-[340px]
-            hover:shadow-lg
+            transition-shadow duration-300 max-w-[360px]
+            hover:shadow-lg border border-[#C8C8C8]
 
             ${index % 2 === 0
-                                                ? 'bg-gradient-to-br from-[#ffffff] to-[#ededed]'
-                                                : 'bg-gradient-to-br from-[#ffffff] to-[#e9efff]'
+                                                ? 'bg-[#E8EEFF]'
+                                                : 'bg-[#F7F7F7]'
                                             }
 
             ${index === 0
@@ -747,7 +747,7 @@ const Section1 = () => {
                                                         <img
                                                             src={card.icon}
                                                             alt=""
-                                                            className="h-10 w-10 md:h-12 md:w-12"
+                                                            className="h-10 w-10"
                                                         />
                                                     </div>
                                                 )}

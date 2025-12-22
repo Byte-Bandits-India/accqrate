@@ -445,10 +445,10 @@ const Software: React.FC = () => {
                             </div>
 
 
-                            <p className="text-fluid-h3 lg:text-[24px] font-medium text-[#000000] mt-4 leading-[1.5] mb-2">
+                            <p className="text-fluid-h3 lg:text-[24px] font-medium text-[#1c2041] mt-4 leading-[1.5] mb-2">
                                 <T>Enable Your Business With E-invoicing.</T>
                             </p>
-                            <h1 className="text-fluid-h3 font-semibold text-[#000000] leading-tight">
+                            <h1 className="text-fluid-h3 font-semibold text-[#1c2041] leading-tight">
                                 <T>{content.title}</T>
                             </h1>
 
@@ -462,7 +462,7 @@ const Software: React.FC = () => {
 
                             {/* Description 2 */}
                             {content.description2 && (
-                                <p className="text-[#000000] text-[14px] max-w-[560px] leading-normal">
+                                <p className="text-[#5a6183] text-[14px] max-w-[560px] leading-normal">
                                     <T>{content.description2}</T>
                                 </p>
                             )}
@@ -526,7 +526,7 @@ const Software: React.FC = () => {
                                                     />
                                                 </div>
 
-                                                <span className="text-[#1C2041] text-[16px] mt-2 leading-normal">
+                                                <span className="text-[#5a6183] text-[16px] mt-2 leading-normal">
                                                     <T>{badge.text}</T>
                                                 </span>
                                             </li>
@@ -603,7 +603,7 @@ const Software: React.FC = () => {
                             <Star className="w-3 h-3 fill-[#FEB04C]" />
                             <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
                         </div>
-                        <p className="text-[16px] font-medium">
+                        <p className="text-[16px] text-[#1c2041] font-medium">
                             <T>4.8 average rating from our customers</T>
                         </p>
                     </div>

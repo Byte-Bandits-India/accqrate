@@ -93,17 +93,18 @@ const Section2 = () => {
             </T>
           </p>
 
-          
+
           <div className="mt-14 bg-[#eff3ff] max-w-4xl mx-auto rounded-[32px] px-10 py-14 ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
               {content.features.map((feature, index) => (
                 <div key={index} className="flex gap-5 items-start">
-                  <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center flex-shrink-0">
+                  <div className="w-[68px] h-[68px] rounded-full bg-white flex items-center justify-center flex-shrink-0">
                     <Image
                       src={feature.img}
                       alt={feature.title}
-                      width={44}
-                      height={26}
+                      width={40}
+                      height={30}
+                      className="w-10 h-10"
                     />
                   </div>
 
