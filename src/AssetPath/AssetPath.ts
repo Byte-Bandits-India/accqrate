@@ -392,14 +392,16 @@ import integrationDarkBlue from "@/Assets/images/invoicing/integration/darkblue.
 import integrationLightBlue from "@/Assets/images/invoicing/integration/lightblue.png";
 import integrationHero from "@/Assets/images/invoicing/integration/hero.png";
 import integrationZatca from "@/Assets/images/invoicing/integration/ZATCA.png";
-import integrationIntegration1 from "@/Assets/images/invoicing/integration/1.png";
-import integrationIntegration2 from "@/Assets/images/invoicing/integration/2.png";
-import integrationIntegration3 from "@/Assets/images/invoicing/integration/3.png";
-import integrationCal from "@/Assets/images/invoicing/integration/cal.png";
-import integrationCloud from "@/Assets/images/invoicing/integration/cloud.png";
+import integrationIntegration1 from "@/Assets/images/invoicing/integration/1.svg";
+import integrationIntegration2 from "@/Assets/images/invoicing/integration/2.svg";
+import integrationIntegration3 from "@/Assets/images/invoicing/integration/3.svg";
+import integrationCal from "@/Assets/images/invoicing/integration/cal.svg";
+import integrationCloud from "@/Assets/images/invoicing/integration/cloud.svg";
 import integrationGreenstar from "@/Assets/images/invoicing/integration/greenstar.png";
-import integrationRing from "@/Assets/images/invoicing/integration/ring.png";
-import integrationSet from "@/Assets/images/invoicing/integration/set.png";
+import integrationRing from "@/Assets/images/invoicing/integration/ring.svg";
+import integrationSet from "@/Assets/images/invoicing/integration/set.svg";
+import integrationShield from "@/Assets/images/invoicing/integration/shield.svg";
+import integrationCertify from "@/Assets/images/invoicing/integration/certify.svg";
 import integrationThumbnail from "@/Assets/images/invoicing/integration/thumbnail.jpg";
 import integrationThumbnail1 from "@/Assets/images/invoicing/integration/thumbnail-1.jpg";
 import integrationThumbnail2 from "@/Assets/images/invoicing/integration/thumbnail-2.jpg";
@@ -917,8 +919,8 @@ const AssetPath = {
     zatcaIntegratedDashboard,
     zatca2,
     zatcaLogo: zatca2,
-
-    integrationAssets: {
+    
+integrationAssets: {
       darkBlue: integrationDarkBlue,
       lightBlue: integrationLightBlue,
       hero: integrationHero,
@@ -931,6 +933,8 @@ const AssetPath = {
       greenstar: integrationGreenstar,
       ring: integrationRing,
       set: integrationSet,
+      certify: integrationCertify,
+      shield: integrationShield,
       thumbnail: integrationThumbnail,
       thumbnail1: integrationThumbnail1,
       thumbnail2: integrationThumbnail2,
