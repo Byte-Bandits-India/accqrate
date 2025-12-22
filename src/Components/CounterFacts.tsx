@@ -34,7 +34,7 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
                 {/* Heading */}
                 {MainTitle && (
                     <div className="text-center mb-8">
-                        <h3 className="text-[28px] md:text-[32px] lg:text-[36px] font-semibold text-[#1C2041] mb-3">
+                        <h3 className="text-[28px] md:text-[32px] lg:text-[39px] font-semibold text-[#1C2041] mb-3">
                             <T>{MainTitle}</T>
                         </h3>
                         <p className="text-[#5A6183] text-base md:text-lg">
@@ -51,17 +51,17 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
                             <div className="text-[18px] md:text-[38px] font-bold text-[#1C2041] flex items-baseline justify-center">
                                 <CountUp start={0} end={item.value} duration={4} />
                                 {item.additionalText && (
-                                    <span className="ml-1 text-fluid-h2 md:text-[38px] text-[#1C2041]">
+                                    <span className="ml-1 md:text-[39px] text-[#1C2041]">
                                         {item.additionalText}
                                     </span>
                                 )}
-                                <span className="ml-1 text-[#194BED] text-fluid-h2 md:text-[38px] font-bold">
+                                <span className="ml-1 text-[#194BED] text-fluid-h2 md:text-[39px] font-bold">
                                     +
                                 </span>
                             </div>
 
                             {/* name — responsive font size */}
-                            <p className="text-[#5A6183] md:text-[18px] mt-2 h-[40px] leading-tight">
+                            <p className="text-[#5A6183] text-[14px] md:text-[16px] mt-2 h-[40px] leading-tight">
                                 <T>{item.name}</T>
                             </p>
                         </div>
