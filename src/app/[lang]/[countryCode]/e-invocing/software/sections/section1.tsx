@@ -448,14 +448,6 @@ const Section1 = () => {
                             <p className="text-[16px] tracking-para text-center mt-4 text-[#5A6183] leading-tight">
                                 <T>Sending an invoice should be easy - and we`ve made it so</T>
                             </p>
-                            <div className='space-y-3 md:space-y-4 mt-10'>
-                                <p className="text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
-                                    <T>Invoices Custom-Made for Your Business</T>
-                                </p>
-                                <p className="text-[20px] max-w-[662px] text-[#1c2041] tracking-para leading-tight">
-                                    <T>Perfectly aligned with your needs and brand</T>
-                                </p>
-                            </div>
                         </div>
                     </div>
 
@@ -465,13 +457,21 @@ const Section1 = () => {
 
                                 {/* LEFT COLUMN */}
                                 <div className="lg:col-span-2">
+                                    <div className='space-y-3 md:space-y-4 px-6'>
+                                        <p className="text-[16px] text-[#194BED] max-w-[662px] tracking-para leading-tight">
+                                            <T>Invoices Custom-Made for Your Business</T>
+                                        </p>
+                                        <p className="text-[20px] max-w-[662px] text-[#1c2041] tracking-para leading-tight">
+                                            <T>Perfectly aligned with your needs and brand</T>
+                                        </p>
+                                    </div>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6">
                                         {features.map((feature, index) => (
                                             <div
                                                 key={index}
                                                 className="relative
                 w-full max-w-[260px] max-h-[350px] h-full
-                flex flex-col gap-2"
+                flex flex-col gap-2 px-6"
                                             >
                                                 <div className='flex'>
                                                     {/* Image Left + Number Right */}
@@ -510,7 +510,7 @@ const Section1 = () => {
                                     </div>
                                     <button
                                         onClick={() => setModalOpen(true)}
-                                        className="h-[40px] md:h-[46px] w-[170px] xl:w-auto max-w-[399px] flex items-center justify-between px-4 rounded-3xl text-white text-[14px]"
+                                        className="h-[40px] md:h-[42px] w-[170px] mx-6 xl:w-auto max-w-[399px] flex items-center justify-between px-4 rounded-3xl text-white text-[14px]"
                                         style={{ background: '#D63F10' }}
                                     >
                                         <T>See It in Action</T>
@@ -523,7 +523,7 @@ const Section1 = () => {
                                         <img
                                             src={getInvoiceMultipleImage().src}
                                             alt="Feature Demo"
-                                            className="w-full h-auto max-h-[620px] object-contain mx-auto rounded-[12px]"
+                                            className="w-full h-auto max-h-[550px] object-contain mx-auto rounded-[12px]"
                                         />
                                     </div>
                                 </div>
@@ -542,7 +542,7 @@ const Section1 = () => {
                                         <img
                                             src={getInvoiceStandaloneImage().src}
                                             alt="Feature Demo"
-                                            className="w-full h-auto object-contain mx-auto rounded-[12px]"
+                                            className="w-full h-auto max-h-[550px] object-contain mx-auto rounded-[12px]"
                                         />
                                     </div>
                                 </div>

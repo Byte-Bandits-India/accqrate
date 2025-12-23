@@ -15,7 +15,7 @@ export default function InfoCard({ icon, title, description, color }: InfoCardPr
   return (
 
     <div
-      className="cursor-pointer flex items-center justify-between w-full h-auto lg:h-[100px] max-w-[413px] mx-auto overflow-hidden rounded-2xl shadow-[0_0_2px_rgba(0,0,0,0.25)] transition-all hover:shadow-md p-4 sm:p-4"
+      className="cursor-pointer flex items-center justify-between w-full h-auto lg:h-[100px] max-w-[370px] mx-auto overflow-hidden rounded-xl shadow-[0_0_2px_rgba(0,0,0,0.25)] transition-all hover:shadow-md p-4 sm:p-4"
       style={{ background: color }}
     >
       {/* LEFT SECTION */}

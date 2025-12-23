@@ -425,7 +425,7 @@ const Software: React.FC = () => {
     return (
         <>
             <section>
-                <div className="bg-[#eff3ff] pt-16 px-6">
+                <div className="bg-[#eff3ff] pt-10 px-6">
                     <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between">
                         {/* LEFT CONTENT */}
                         <div className="flex flex-col justify-center max-w-[450px] w-full">
@@ -477,8 +477,8 @@ const Software: React.FC = () => {
                                     className="
                       relative
                       flex items-center justify-center
-                      w-[270px] md:w-[240px] lg:w-[270px]
-                      min-h-[46px] md:min-h-[52px]
+                      w-[270px] md:w-[240px] lg:w-[250px]
+                      min-h-[46px]
                       bg-[#D63F10]
                       rounded-[50px]
                       px-4 pr-10
@@ -589,7 +589,7 @@ const Software: React.FC = () => {
                                 alt={content.imageAlt ?? ''}
                                 width={591}
                                 height={380}
-                                className="w-full max-w-[750px] rounded-2xl object-contain"
+                                className="w-full max-w-[650px] rounded-2xl object-contain"
                                 unoptimized
                             />
                         </div>

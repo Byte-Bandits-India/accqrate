@@ -220,37 +220,37 @@ const belgiumContent: CountryContent = {
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
   whyAccqrateFeatures: [
     {
-      img: AssetPath.home.feature1,
+      img: AssetPath.icons.websiteDesign1,
       title: "One Platform.",
       description: "Connect Multiple ERP or POS into one unified platform for E-invoicing.",
       sub: " Harmonised Data."
     },
     {
-      img: AssetPath.home.feature2,
+      img: AssetPath.icons.websiteDesign1,
       title: "Enterprise‑grade.",
       description: "Security, scalability and performance proven across 30+ industries.",
       sub: ""
     },
     {
-      img: AssetPath.home.feature3,
+      img: AssetPath.icons.websiteDesign1,
       title: "Deploy your way.",
       description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
       sub: ""
     },
     {
-      img: AssetPath.home.feature4,
+      img: AssetPath.icons.websiteDesign1,
       title: "AI, everywhere.",
       description: "Accelera, our AI copilot , accelerates routine work, insights and decisions.",
       sub: ""
     },
     {
-      img: AssetPath.home.feature5,
+      img: AssetPath.icons.websiteDesign1,
       title: "Fast time‑to‑value.",
       description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
       sub: ""
     },
     {
-      img: AssetPath.home.feature6,
+      img: AssetPath.icons.websiteDesign1,
       title: "Built‑in Global compliance:",
       description: "Connect ERP/POS to tax authorities; from Direct to PEPPOL based Integration.",
       sub: ""
@@ -262,21 +262,21 @@ const belgiumContent: CountryContent = {
       icon: AssetPath.cards.peppol,
       title: "PEPPOL Member",
       description: "Certified AP Provider & SMP",
-      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      color: "linear-gradient(to right, #FFFFFF, #D3D1FF)",
       link: "SA/business/crm",
     },
     {
       icon: AssetPath.cards.gdpr,
       title: "GDPR Complaint",
       description: "Secure, Transparent, Responsible",
-      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      color: "linear-gradient(to right, #FFFFFF, #D3D1FF)",
       link: "SA/business/books",
     },
     {
       icon: AssetPath.cards.iso,
       title: "ISO 27001 Certified",
       description: "Robust Security. Reliable Governance",
-      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
+      color: "linear-gradient(to right, #FFFFFF, #D3D1FF)",
       link: "SA/business/people",
     },
   ],

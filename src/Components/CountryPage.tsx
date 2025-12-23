@@ -31,6 +31,7 @@ const ContactModal = dynamic(
 );
 
 import uaeInvoiceImg from "@/Assets/images/home/UAE_invoice.png";
+import CounterFacts from "./CounterFacts";
 
 
 // ---------------- CarouselCard ----------------
@@ -651,8 +652,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     }}
                 //hero section
                 >
-                    <div className="max-w-[1177px] lg:h-[100dvh] mx-auto px-6 overflow-hidden">
-                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-fluid-body lg:text-[24px] text-[#FFFFFF] pt-[3rem] lg:pt-[3rem] 2xl:pt-[4rem] tracking-para">
+                    <div className="max-w-[1177px] lg:h-[100dvh] mx-auto px-6 overflow-hidden lg:pt-[70px]">
+                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-[18px] text-[#FFFFFF] pt-[3rem] lg:pt-[3rem] 2xl:pt-[4rem] tracking-para">
                             <T>{countryContent.heroSubtitle}</T>
                             <Image
                                 src={flagImage}
@@ -663,27 +664,27 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 unoptimized
                             />
                         </div>
-                        <h1 className="text-[1.5rem] md:text-[1.75rem] lg:text-[54px]  mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem]  text-[#FFFFFF] max-w-full lg:max-w-[900px] font-normal leading-tight">
-                            <T>{countryContent.heroTitle}</T>
-                        </h1>
-                        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_520px] gap-6 lg:gap-8">
+                        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_520px] gap-6 lg:gap-4">
                             {/* LEFT COLUMN */}
                             <div className="flex flex-col justify-start">
+                                <h1 className="text-fluid-body lg:text-[38px]  mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] text-[#FFFFFF] max-w-full lg:max-w-[900px] font-semibold leading-tight">
+                                    <T>{countryContent.heroTitle}</T>
+                                </h1>
                                 <p className="border-t-2 border-[#FFFFFF] w-full max-w-[110px] mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem]"></p>
 
-                                <p className="text-[#FFFFFF] max-w-[586px] text-fluid-body mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] tracking-para leading-[1.875rem] text-left font-normal">
+                                <p className="text-[#FFFFFF] max-w-[586px] text-fluid-small mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] tracking-para leading-[1.875rem] text-left font-normal">
                                     <T>{countryContent.heroDescription}</T>
                                 </p>
 
                                 <button
                                     onClick={() => setModalOpen(true)}
-                                    className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3.563rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem] 2xl:my-[3rem] font-normal lg:w-[14.813rem] leading-tight rounded-[5rem] text-fluid-body bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
+                                    className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3.563rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem] 2xl:my-[3rem] font-normal lg:w-[182px] leading-tight rounded-[5rem] text-[14px] bg-[#F05A28]"
                                 >
                                     <T>Meet an Expert</T>
                                     <Arrow45 />
                                 </button>
 
-                                <h2 className=" text-fluid-body font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4">
+                                <h2 className=" text-fluid-small font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4">
                                     {countryContent.heroTagline.split(".").filter(Boolean).map((part, index, arr) => (
                                         <React.Fragment key={index}>
                                             <T>{part.trim()}</T>
@@ -734,6 +735,55 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     </div>
                 </div>
 
+                <CounterFacts />
+
+                {/* Trusted */}
+                <FadeUp className="my-8 md:my-[40px]">
+                    <h3 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#1c2041] text-center mx-auto">
+                        <T>Trusted by</T> <br className="md:hidden" /><span className="text-[#194BED]"> <T>5,000+ Global companies</T></span>
+                    </h3>
+                </FadeUp>
+
+                {/* Logo Marquee */}
+                <div className="relative">
+                    <div className="max-w-5xl overflow-hidden py-6 mx-auto">
+                        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
+                        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
+
+                        <div className="flex flex-col gap-6">
+                            <div className="flex animate-scrollLeft w-max flex-shrink-0">
+                                {[...topRow, ...topRow].map((logo, i) => (
+                                    <div key={`top-${i}`} className="flex flex-col items-center mx-4">
+                                        <Image
+                                            src={logo.src}
+                                            alt={logo.name}
+                                            width={135}
+                                            height={48}
+                                            className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                        />
+                                        <p className=" text-xs md:text-sm text-[#737373] font-medium"> <T>{logo.name}</T> </p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="flex animate-scrollRight w-max flex-shrink-0">
+                                {[...bottomRow, ...bottomRow].map((logo, i) => (
+                                    <div key={`bottom-${i}`} className="flex flex-col items-center mx-4">
+                                        <Image
+                                            src={logo.src}
+                                            alt={logo.name}
+                                            width={135}
+                                            height={48}
+                                            className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                        />
+                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* /Why Accqrate? */}
                 <div>
                     <div className="px-6 md:px-8 xl:px-8 mt-[48px]">
@@ -741,7 +791,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                             {/* Left Column */}
                             <div className="max-w-[500px]">
-                                <h2 className="font-medium text-fluid-small tracking-heading uppercase">
+                                <h2 className="font-medium text-[14px] tracking-heading uppercase text-[#1c2041] ">
                                     <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
 
@@ -753,7 +803,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     className="w-auto h-[28px] lg:hidden"
                                 />
 
-                                <h3 className="text-[24px] md:text-[28px] lg:text-[36px] font-medium mt-6 md:mt-8 lg:mt-[40px] leading-tight">
+                                <h3 className="text-[24px] text-[#1c2041] font-bold mt-6 md:mt-8 lg:mt-[40px] leading-tight">
                                     {highlightWhySubtitle(
                                         countryContent.whyAccqrateSubtitle ||
                                         "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."
@@ -763,7 +813,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                             {/* Right Column */}
                             <div className="max-w-[500px] flex flex-col justify-around">
-                                <p className="text-fluid-small font-normal leading-[24px]">
+                                <p className="text-fluid-small text-[#1c2041] font-normal leading-[24px]">
                                     <T>
                                         From compliance to automation, Accqrate ensures a seamless PEPPOL
                                         e-invoicing experience.
@@ -772,173 +822,75 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                 <button
                                     onClick={() => setModalOpen(true)}
-                                    className="self-start h-[40px] w-auto text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-6 lg:mt-0"
-                                    style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                                    className="inline-flex items-center justify-center gap-2 self-start h-[40px] w-full max-w-[182px] text-white text-[14px] rounded-[50px] tracking-para leading-tight mt-6 lg:mt-0"
+                                    style={{ background: '#D63F10' }}
                                 >
                                     <T>See It in Action</T>
+                                    <Arrow45 />
                                 </button>
                             </div>
                         </div>
 
 
-                        <div className="relative">
-                            {/* 🔹 Top Section (Buttons) */}
-                            <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0 flex justify-end mb-6 gap-3">
-                                <button
-                                    onClick={() => scroll("left")}
-                                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow hover:bg-gray-100 transition"
-                                    aria-label="Scroll left"
-                                >
-                                    <IconWithFallback
-                                        render={() => <ArrowLeft className="w-5 h-5 text-gray-700" />}
-                                        fallback={<ChevronLeftIcon className="w-5 h-5 text-gray-700" />}
-                                    />
-                                </button>
-                                <button
-                                    onClick={() => scroll("right")}
-                                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow hover:bg-gray-100 transition"
-                                    aria-label="Scroll right"
-                                >
-                                    <IconWithFallback
-                                        render={() => <ArrowRight className="w-5 h-5 text-gray-700" />}
-                                        fallback={<ChevronRightIcon className="w-5 h-5 text-gray-700" />}
-                                    />
-                                </button>
-                            </div>
+                        <div className="max-w-[1200px] mx-auto py-8">
+                            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
+                                <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+                                    {(countryContent.whyAccqrateFeatures || features).map((feature, index) => (
+                                        <div
+                                            key={index}
+                                            className={`
+            relative group overflow-hidden
+            p-6 md:p-8 rounded-[15px]
+            flex flex-col max-h-[221px] 
+            transition-shadow duration-300 max-w-[360px]
+            shadow-[0_8px_24px_rgba(0,0,0,0.08)]
+            bg-white
+          `}>
 
-                            {/* 🔹 Scrollable Row */}
-                            <div className="overflow-x-auto scrollbar-hide" ref={scrollRef}>
-                                <div className="max-w-[1177px] mx-auto px-6 md:px-8 xl:px-0">
-                                    <div
-                                        className="flex gap-4 sm:gap-6 md:gap-8 pr-[calc(50vw-640px)]"
-                                        style={{ scrollSnapType: "x mandatory" }}
-                                    >
-                                        {(countryContent.whyAccqrateFeatures || features).map((feature, index) => (
-                                            <div
-                                                key={index}
-                                                className="relative flex-shrink-0 bg-white rounded-[16px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] scroll-snap-align-start 
-              w-[260px] sm:w-[300px] md:w-[340px] lg:w-[380px] 
-              min-h-[360px] sm:min-h-[400px] lg:h-[500px] 
-              p-8 flex flex-col justify-between overflow-hidden 
-              transition-all hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
-                                            >
-                                                {/* Image + Number */}
-                                                <div className="relative flex justify-between items-end">
-                                                    <Image
-                                                        src={feature.img}
-                                                        alt={feature.title}
-                                                        width={180}
-                                                        height={180}
-                                                        className="w-[140px] sm:w-[160px] md:w-[180px] h-auto object-contain z-10"
-                                                    />
-                                                    <span
-                                                        className="font-anonymous text-[60px] sm:text-[70px] md:text-[90px] lg:text-[100px] pb-2 font-bold text-[#E6E6E6] leading-none select-none"
-                                                    >
-                                                        {String(index + 1).padStart(2, "0")}
-                                                    </span>
+                                            {/* Content */}
+                                            <div className="relative z-10 flex flex-col h-full justify-between">
+                                                {/* Top section: Image + Number */}
+                                                <div className="relative flex justify-between items-start mb-4">
+                                                    <div className="bg-[#F3F3FF] p-1 rounded-[5px]">
+                                                        <Image
+                                                            src={feature.img}
+                                                            alt={feature.title}
+                                                            width={160}
+                                                            height={160}
+                                                            className="w-[40px] h-[40px] object-contain z-10"
+                                                        />
+                                                    </div>
                                                 </div>
 
-                                                {/* Title */}
-                                                <div className="mt-4 z-10">
-                                                    <h2 className="text-fluid-h3 font-medium text-[#000000] leading-tight mb-1">
+                                                {/* Middle section: Title */}
+                                                <div className="mb-3 z-10">
+                                                    <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight mb-1">
                                                         <T>{feature.title}</T>
                                                     </h2>
                                                     {feature.sub && (
-                                                        <h2 className="text-fluid-h3  font-medium text-[#000000] leading-tight">
+                                                        <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight">
                                                             <T>{feature.sub}</T>
                                                         </h2>
                                                     )}
                                                 </div>
 
-                                                {/* Description */}
-                                                <p className="mt-3 text-[#000000] text-fluid-body leading-snug tracking-para line-clamp-5">
-                                                    <T>{feature.description}</T>
-                                                </p>
+                                                {/* Bottom section: Description */}
+                                                <div className="flex-grow">
+                                                    <p className="text-[#5a6183] text-[14px] leading-snug tracking-para line-clamp-4 md:line-clamp-5">
+                                                        <T>{feature.description}</T>
+                                                    </p>
+                                                </div>
                                             </div>
-                                        ))}
-                                    </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
-
                         </div>
-
-                        <div className="lg:px-6 max-w-[1177px] mx-auto w-full">
-                            <button
-                                onClick={() => setModalOpen(true)}
-                                className="h-[40px] w-auto text-white text-fluid-small tracking-para leading-tight md:text-[18px] mt-[20px] md:mt-[30px]"
-                                style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
-                            >
-                                <T>See It in Action</T>
-                            </button>
-                        </div>
-
                     </div>
                 </div>
 
                 {/* Trusted text */}
-                <div className="mt-[80px] rounded-[30px] bg-[linear-gradient(180deg,#FFFFFF_0%,#E9E8FF_50%,#4F52FF_100%)] py-6 md:py-8  max-w-[1177px] mx-auto">
-
-                    <FadeUp className="mb-8 md:mb-[40px]">
-                        <h3 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#333333] text-center mx-auto">
-                            <T>Trusted by</T> <br className="md:hidden" /><span className="text-[#194BED]"> <T>5,000+ Global companies</T></span>
-                        </h3>
-                    </FadeUp>
-
-                    {/* Logo Marquee */}
-                    <div className="relative">
-                        <div className="max-w-5xl overflow-hidden py-6 mx-auto">
-                            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
-                            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
-
-                            <div className="flex flex-col gap-6">
-                                <div className="flex animate-scrollLeft w-max flex-shrink-0">
-                                    {[...topRow, ...topRow].map((logo, i) => (
-                                        <div key={`top-${i}`} className="flex flex-col items-center mx-4">
-                                            <Image
-                                                src={logo.src}
-                                                alt={logo.name}
-                                                width={135}
-                                                height={48}
-                                                className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
-                                            />
-                                            <p className=" text-xs md:text-sm text-[#737373] font-medium"> <T>{logo.name}</T> </p>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div className="flex animate-scrollRight w-max flex-shrink-0">
-                                    {[...bottomRow, ...bottomRow].map((logo, i) => (
-                                        <div key={`bottom-${i}`} className="flex flex-col items-center mx-4">
-                                            <Image
-                                                src={logo.src}
-                                                alt={logo.name}
-                                                width={135}
-                                                height={48}
-                                                className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
-                                            />
-                                            <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="px-6 border-b border-gray-100 flex flex-col mt-[34px] items-center">
-                        <div className="flex items-center space-x-2 text-[#194BED]">
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <i className="fas fa-star"></i>
-                            <span className="text-[#333333] text-fluid-small lg:text-[16px] tracking-para ml-2"><T>Based on reviews</T></span>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center justify-end md:pr-20">
-                        <Image src={AssetPath.home.orangeStar} className="h-[64px]" width={64} height={64} alt="orstar" />
-                    </div>
-
+                <div className="mt-6 rounded-[30px] py-6 md:py-8  max-w-[1177px] mx-auto">
                     <div className="max-w-[1440px] mx-auto px-6 md:px-8 mt-[32px] grid xl:grid-cols-2 gap-6">
                         {/* Left Side: Full-Suite ERP */}
                         <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
@@ -946,12 +898,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <div>
                                     <div className="flex items-center space-x-4">
                                         <Image src={AssetPath.home.greenAccq} alt="one" width={50} height={50} className="h-[40px] md:h-[50px] w-auto" />
-                                        <span className="text-[#000000] tracking-heading leading-tight text-fluid-body whitespace-nowrap">
+                                        <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small whitespace-nowrap">
                                             <T>Accqrate E-invoicing</T>
-                                            <span className="text-sm"> <br /><T>{countryContent.heroSubtitle}</T></span>
+                                            <span className="text-sm text-[#5a6183]"> <br /><T>{countryContent.heroSubtitle}</T></span>
                                         </span>
                                     </div>
-                                    <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#333333] text-fluid-body mt-[30px]">
+                                    <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-fluid-small mt-[30px]">
                                         <T>Peppol Member and certified Access Point Provider and Service Metadata Publisher.</T>
                                     </p>
                                 </div>
@@ -975,20 +927,20 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <div className="flex flex-col gap-6 xl:h-full">
                             {countryContent.complianceSection && (
                                 <>
-                                    <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                        <h2 className="text-fluid-body font-medium tracking-heading"><T>{countryContent.complianceSection?.complianceTitle}</T></h2>
-                                        <h2 className="text-fluid-small mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.complianceDescription}</T></h2>
-                                        <ul className="gap-y-2 mt-8 text-fluid-small tracking-para leading leading-[26px] list-disc pl-5">
+                                    <FadeUp className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                        <h2 className="text-[24px] text-[#1c2041] font-bold tracking-heading"><T>{countryContent.complianceSection?.complianceTitle}</T></h2>
+                                        <h2 className="text-[14px] mt-4 text-[#1c2041] font-normal tracking-heading"><T>{countryContent.complianceSection?.complianceDescription}</T></h2>
+                                        <ul className="gap-y-2 mt-8 text-[14px] text-[#1c2041] tracking-para leading leading-[26px] list-disc pl-5">
                                             {countryContent.complianceSection?.complianceItems.map((item, index) => (
                                                 <li key={index}><T>{item}</T></li>
                                             ))}
                                         </ul>
                                     </FadeUp>
 
-                                    <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                        <h2 className="text-fluid-body font-medium tracking-heading"><T>{countryContent.complianceSection?.automationTitle}</T></h2>
-                                        <h2 className="text-fluid-small mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.automationDescription}</T></h2>
-                                        <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-fluid-small leading-tight tracking-para">
+                                    <FadeUp className="bg-[#E8EEFF] border bordder-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                        <h2 className="text-[24px] font-bold tracking-heading"><T>{countryContent.complianceSection?.automationTitle}</T></h2>
+                                        <h2 className="text-[14px] mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.automationDescription}</T></h2>
+                                        <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-[14px] leading-tight tracking-para">
                                             {countryContent.complianceSection?.automationItems.map((item, index) => (
                                                 <li key={index}><T>{item}</T></li>
                                             ))}
@@ -996,7 +948,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                         <button
                                             onClick={() => setModalOpen(true)}
-                                            className="h-[46px] md:h-[55px] max-w-[350px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] md:text-[18px] mt-[32px] bg-gradient-to-r from-[#B4441E] via-[#F05A28] to-[#F48B69]"
+                                            className="h-[46px] max-w-[220px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] mt-[32px] bg-[#D63F10]"
                                         >
                                             <T>{countryContent.complianceSection?.buttonText}</T>
                                             <svg
@@ -1042,9 +994,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="max-w-[1177px] mx-auto w-full grid lg:grid-cols-2 gap-4 md:gap-6">
 
                                 {/* Left Part */}
-                                <FadeUp className="font-inter rounded-2xl flex flex-col justify-between p-4 md:p-6 lg:p-8 bg-transparent flex-shrink-0 order-2 lg:order-1">
+                                <FadeUp className="font-inter rounded-2xl flex flex-col justify-between h-full max-h-[387px] p-4 md:p-6 lg:p-8 bg-transparent flex-shrink-0 order-2 lg:order-1">
                                     <div>
-                                        <h2 className="text-black text-[20px] md:text-[24px] lg:text-[38px] font-medium leading-tight">
+                                        <h2 className="text-[#1c2041] text-[24px] font-bold leading-tight">
                                             <span className="text-[#194BED]">Accelera</span> <T>Your AI Copilot</T>
                                         </h2>
 
@@ -1052,7 +1004,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             <T>Work faster and decide smarter with AI embedded across the suite.</T>
                                         </p>
 
-                                        <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-fluid-small">
+                                        <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[14px]">
                                             <li><b><T>Natural-language actions:</T></b> <T>Ask, “Show last month’s receivables by region” and get the answer, fast.</T></li>
                                             <li><b><T>Automations:</T></b> <T>Generate e‑invoices, match POs, trigger approvals and alerts.</T></li>
                                             <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand, and recommend next steps.</T></li>
@@ -1061,8 +1013,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </div>
 
                                     <button
-                                        className="h-[40px] w-full md:max-w-[399px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
-                                        style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                                        className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
+                                        style={{ background: '#D63F10' }}
                                         onClick={() => setModalOpen(true)}
                                     >
                                         <span className="truncate mr-2"><T>See Accelera in a 5-Minute Demo</T></span>
@@ -1096,9 +1048,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] grid lg:grid-cols-2 gap-4 md:gap-6 pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
                                 {/* Left Side: Image (Desktop) */}
                                 <div className="hidden lg:flex flex-col items-start justify-between p-6 md:p-8">
-                                    <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight whitespace-nowrap mb-6">
-                                        <T>Future-Ready for</T> <span className="text-[#194BED]">ViDA</span>
-                                    </h2>
                                     <Image
                                         src={AssetPath.home.vida}
                                         alt="VIDA Compliance"
@@ -1111,12 +1060,15 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 {/* Right Side: Text + List + Button */}
                                 <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8 order-2 lg:order-1">
                                     {/* Heading (mobile only) */}
+                                    <h2 className="text-[#1c2041] tracking-para text-[24px] font-bold leading-tight whitespace-nowrap mb-6">
+                                        <T>Future-Ready for</T> <span className="text-[#194BED]">ViDA</span>
+                                    </h2>
                                     <h2 className="text-fluid-small text-left pl-4 md:pl-5 leading-[22px] md:leading-[24px] tracking-para mb-4">
                                         <T>Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:</T>
                                     </h2>
 
                                     <div>
-                                        <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-fluid-small text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
+                                        <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-[14px] text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
                                             <li>
                                                 <T>Cross-border interoperability within the EU</T>
                                             </li>
@@ -1129,21 +1081,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                     <button
                                         onClick={() => setModalOpen(true)}
-                                        className="h-[44px] md:h-[50px] w-full md:max-w-[350px] flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] lg:text-[18px] lg:mt-16 mt-6 md:mt-[32px] rounded-lg"
-                                        style={{ background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)" }}
+                                        className="h-[40px] w-full md:max-w-[217px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
+                                        style={{ background: '#D63F10' }}
                                     >
                                         <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
-                                        <svg
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 24 24"
-                                            className="text-white inline-block fill-current flex-shrink-0"
-                                            style={{ color: 'var(--icon-color, #ffffff)' }}
-                                            role="img"
-                                            aria-hidden="true"
-                                            focusable="false"
-                                        >
-                                            <path d="M9 6l6 6-6 6" />
+                                        <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
+                                            <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </button>
                                 </FadeUp>
@@ -1181,7 +1124,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     />
                                     <button
                                         className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
-                                        style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                                        style={{ background: '#D63F10' }}
                                         onClick={() => setModalOpen(true)}
                                     >
                                         <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
@@ -1231,24 +1174,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </svg>
                         </button>
                     </div>
-                </div>
-            </div >
-
-            {/* Testimonials Section */}
-            <div className="max-w-[1177px] mx-auto px-0 md:px-8 mt-8 md:mt-10" >
-                <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left mb-8 px-6"><T lang={lang} countryCode={countryCode}>Testimonials</T></h2>
-                <Carousel items={testimonialCards} autoplay autoplayDelay={4000} lang={lang} />
-                <div className="flex items-center justify-center">
-                    <button
-                        onClick={() => setModalOpen(true)}
-                        className="h-[40px] md:h-[46px] max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
-                        style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
-                    >
-                        <T>Speak to a Reference Customer</T>
-                        <svg width="20" height="20" viewBox="0 0 24 24" className="text-white inline-block fill-current" style={{ color: 'var(--icon-color, #ffffff)' }} role="img" aria-hidden="true" focusable="false">
-                            <path d="M9 6l6 6-6 6" />
-                        </svg>
-                    </button>
                 </div>
             </div >
 

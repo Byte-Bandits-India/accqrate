@@ -169,8 +169,8 @@ const CTASection = () => {
             onClick={() => handleButtonClick(button.id)}
             className="
               relative
-              lg:w-[300px] w-[270px] md:w-[220px]
-              min-h-[46px] md:min-h-[52px]
+              lg:w-[280px] w-[270px] md:w-[220px]
+              min-h-[42px]
               flex items-center justify-center
               bg-[#D63F10]
               rounded-[50px]
