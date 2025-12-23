@@ -10,12 +10,12 @@ export default function HeroResourceSection() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
         {/* Heading */}
         <FadeUp className="text-left mb-10">
-          <h1 className="text-fluid-h1 lg:text-[38px] leading-tight font-semibold text-gray-900">
+          <h1 className="text-[20px] lg:text-[24px] leading-tight font-bold text-gray-900">
             <T>Browse Our Resources</T>
           </h1>
 
           {/* Blue underline */}
-          <div className="w-[126px] h-[2px] bg-[#194BED] mt-3 lg:mt-[24px] mb-4 rounded-full" />
+          <div className="w-[126px] h-[2px] bg-[#194BED] mt-3 lg:mt-[10px] rounded-full" />
         </FadeUp>
 
         {/* Featured Image Section */}
