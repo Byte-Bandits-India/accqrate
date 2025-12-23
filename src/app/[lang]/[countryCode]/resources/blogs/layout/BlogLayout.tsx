@@ -221,7 +221,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
                         height={200}
                         className="w-full mb-2 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
-                      <h3 className="text-fluid-small font-semibold text-[#1c2041] line-clamp-2 group-hover:text-blue-600">
+                      <h3 className="text-sm font-semibold text-[#1c2041] line-clamp-2 group-hover:text-blue-600">
                         <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.heading}</T>
                       </h3>
                     </div>
@@ -239,7 +239,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
       {/* Footer Recent Blogs */}
       <section className="bg-[#eff3ff] py-10">
         <div className="container mx-auto px-4 max-w-[1250px]">
-          <h3 className="text-xl md:text-[28px] text-[#1c2041] font-semibold mb-6 md:mb-10">
+          <h3 className="text-[18px] md:text-[24px] text-[#1c2041] font-bold mb-6 md:mb-10">
             <BelgiumT>Recent Blog Posts from Accqrate</BelgiumT>
           </h3>
           <Row
@@ -263,7 +263,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
                     className="rounded-lg mb-3 w-full h-[180px] object-cover"
                   />
                   <div className="flex flex-col flex-grow px-4 pb-4">
-                    <h3 className="text-base leading-snug font-semibold text-gray-900 line-clamp-2 mb-2">
+                    <h3 className="text-fluid-small leading-snug font-semibold text-gray-900 line-clamp-2 mb-2">
                       <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.heading}</T>
                     </h3>
                     <p className="text-gray-500 text-sm line-clamp-2 leading-tight">
