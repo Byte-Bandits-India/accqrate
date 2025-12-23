@@ -125,11 +125,11 @@ export default function RecentBlogPosts() {
         </FadeUp>
 
         <div className="p-5 border-t border-gray-100 flex-1 flex flex-col">
-          <FadeUp className="font-semibold text-fluid-body text-gray-900 line-clamp-2 leading-snug mb-3">
+          <FadeUp className="font-semibold text-[16px] md:text-[18px] text-[#1c2041] line-clamp-2 leading-snug mb-3">
             <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.title}</T>
           </FadeUp>
 
-          <FadeUp className="text-gray-600 text-fluid-small line-clamp-3 leading-relaxed flex-1">
+          <FadeUp className="text-[#5a6183] text-[14px]  line-clamp-3 leading-relaxed tracking-wide flex-1">
             <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.desc}</T>
           </FadeUp>
         </div>
@@ -184,7 +184,7 @@ export default function RecentBlogPosts() {
   return (
     <section className="mb-10 ">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0">
-        <FadeUp className="text-[16px] md:text-[20px] font-semibold mb-10 text-gray-900">
+        <FadeUp className="text-[16px] md:text-[18px] font-bold mb-10 text-gray-900">
           <T>Recent Blog Posts from Accqrate</T>
         </FadeUp>
 
