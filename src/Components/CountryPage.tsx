@@ -1061,7 +1061,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             <div className="block py-6 lg:pt-8 bg-[#E8EEFF]">
 
                 {/* HERO SECTION */}
-                <div className="relative min-h-[400px] md:min-h-[450px] my-6">
+                <div className="relative pb-6 md:pb-8">
 
                     {/* Content */}
                     <div className="relative z-10 flex items-center min-h-[400px] md:min-h-[387px] max-w-[1200px] mx-auto rounded-[20px] px-4 md:px-6 lg:px-8 bg-white">
@@ -1263,11 +1263,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             </div >
 
             {/* Our ValuesDrive Everything We Do */}
-            <div className="bg-[#F8F6FF] py-[50px] mt-8 md:mt-10 " >
+            <div className="bg-[#F8F6FF] py-[50px] mt-6 md:mt-8 " >
                 <div className="px-6 md:px-8 xl:px-0 max-w-[1177px] mx-auto xl:flex items-end justify-between gap-20">
                     {/* Left Text */}
                     <div className="flex-1">
-                        <h1 className="text-[24px] font-bold py-[30px] text-[#1c2041] md:py-[37px] tracking-heading leading-tight">
+                        <h1 className="text-[24px] font-bold py-6 text-[#1c2041] md:py-8 tracking-heading leading-tight">
                             <T>Our <span className="text-[#194BED]">Values</span> </T> <br /><T>Drive Everything We Do</T>
                         </h1>
                         <p className="text-fluid-small text-[#1c2041] max-w-[662px] tracking-para leading-tight">
@@ -1299,7 +1299,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
 
                 {/* CarouselCard */}
-                <div className="solutions-carousel relative max-w-[1177px] mx-auto pl-6 md:pl-8 xl:pl-0 mt-[40px] md:mt-[38px] lg:mt-[70px]">
+                <div className="solutions-carousel relative max-w-[1177px] mx-auto pl-6 md:pl-8 xl:pl-0 mt-6 md:mt-8">
                     <div ref={carouselRef} className="carousel-wrapper overflow-x-auto scrollbar-hide">
                         <div
                             className="carousel-track flex transition-transform duration-500 ease-in-out gap-4 md:gap-6 lg:gap-8"
@@ -1378,7 +1378,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 {/* Frequently Answered Questions */}
                 <div>
-                    <div className="px-0 md:px-8 max-w-[1177px] mx-auto py-6 xl:px-0 mt-8 md:mt-12 lg:mt-[100px]">
+                    <div className="px-0 md:px-8 max-w-[1177px] mx-auto py-6 xl:px-0 mt-6 md:mt-8">
                         <div className="bg-white rounded-[20px] p-6 md:p-8 lg:p-12 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 relative">
 
                             {/* Left Section */}
@@ -1433,7 +1433,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left py-[20px] md:py-[37px] tracking-heading leading-tight"><T lang={lang} countryCode={countryCode}>Final Conversion Band</T></h2>
                         <p className="text-fluid-body max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight"> <T>Run compliant, AI-powered operations with Accqrate.</T></p>
                     </div>
-                    <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6 md:py-8 lg:py-10">
+                    <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6">
                         {[
                             "Get a Free Proof of Concept",
                             "Subscribe for Updates",

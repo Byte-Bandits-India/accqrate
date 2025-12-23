@@ -172,7 +172,7 @@ const SuccessStories: React.FC = () => {
     };
 
     return (
-        <section className="success-stories py-12 md:py-20 relative overflow-hidden">
+        <section className="success-stories py-6 md:py-8 relative overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     {/* Left Content Column */}
