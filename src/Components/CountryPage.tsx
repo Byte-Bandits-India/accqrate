@@ -1621,7 +1621,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             text-[#5a6183]
             tracking-para
             leading-relaxed
-            mt-2
+            mt-2 pl-4
             text-left
           "
                                                 >
