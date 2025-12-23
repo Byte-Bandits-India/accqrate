@@ -140,13 +140,13 @@ module.exports = {
           fontSize: "16px",
           lineHeight: "1.5", // ~24px
           "@screen md": { fontSize: "18px", lineHeight: "1.5" }, // ~27px
-          "@screen lg": { fontSize: "20px", lineHeight: "1.5" }, // ~30px
+          "@screen lg": { fontSize: "18px", lineHeight: "1.5" }, // ~30px
         },
         ".text-fluid-small": {
           fontSize: "14px",
           lineHeight: "1.5", // ~21px
           "@screen md": { fontSize: "16px", lineHeight: "1.5" }, // ~24px
-          "@screen lg": { fontSize: "18px", lineHeight: "1.5" }, // ~27px
+          "@screen lg": { fontSize: "16px", lineHeight: "1.5" }, // ~27px
         },
       });
     });
