@@ -7,7 +7,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 import React, { useEffect, useState, useRef } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { useCountryContent } from "@/Hooks/useCountryContent";
-import T from "@/Components/T"
+import T from "@/Components/T";
 import { useCountry } from "@/contexts/CountryContext";
 import { t } from "@/lib/translations";
 import SuccessStories from "./SuccessStories";
@@ -33,7 +33,6 @@ const ContactModal = dynamic(
 
 import uaeInvoiceImg from "@/Assets/images/home/UAE_invoice.png";
 import CounterFacts from "./CounterFacts";
-
 
 // ---------------- CarouselCard ----------------
 interface CarouselCardProps {
@@ -65,7 +64,7 @@ const CarouselCardComponent: React.FC<CarouselCardProps> = ({
     avatar,
     style,
     onClick,
-    lang
+    lang,
 }) => {
     return (
         <div
@@ -91,7 +90,10 @@ const CarouselCardComponent: React.FC<CarouselCardProps> = ({
                         alt={name}
                         width={60}
                         height={60}
-                        className={`absolute top-1/2 ${lang === 'ar' ? 'right-[75px] md:right-[70px]' : 'left-[75px] md:left-[70px]'} transform -translate-y-1/2 w-12 h-12 md:h-[60px] md:w-[60px] rounded-full object-cover border-2 border-white z-20`}
+                        className={`absolute top-1/2 ${lang === "ar"
+                            ? "right-[75px] md:right-[70px]"
+                            : "left-[75px] md:left-[70px]"
+                            } transform -translate-y-1/2 w-12 h-12 md:h-[60px] md:w-[60px] rounded-full object-cover border-2 border-white z-20`}
                     />
                 </div>
             </div>
@@ -124,19 +126,37 @@ const Arrow45: React.FC = () => (
         stroke="currentColor"
         strokeWidth={2}
     >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+        <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 12h14M12 5l7 7-7 7"
+        />
     </svg>
 );
 
 // Local Chevron icons (inline SVG) — used when lucide icons don't render
 const ChevronLeftIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+    >
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
     </svg>
 );
 
 const ChevronRightIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+    >
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
     </svg>
 );
@@ -154,7 +174,7 @@ const IconWithFallback: React.FC<{
         const el = containerRef.current;
         if (!el) return;
 
-        const svg = el.querySelector('svg');
+        const svg = el.querySelector("svg");
         if (!svg) {
             setUseFallback(true);
             return;
@@ -165,8 +185,8 @@ const IconWithFallback: React.FC<{
         if (
             rect.width === 0 ||
             rect.height === 0 ||
-            style.display === 'none' ||
-            style.visibility === 'hidden'
+            style.display === "none" ||
+            style.visibility === "hidden"
         ) {
             setUseFallback(true);
         }
@@ -179,7 +199,6 @@ const IconWithFallback: React.FC<{
     );
 };
 
-
 // ---------------- CarouselDots ----------------
 interface CarouselDotsProps {
     total: number;
@@ -187,13 +206,20 @@ interface CarouselDotsProps {
     onDotClick: (index: number) => void;
 }
 
-const CarouselDots: React.FC<CarouselDotsProps> = ({ total, currentIndex, onDotClick }) => {
+const CarouselDots: React.FC<CarouselDotsProps> = ({
+    total,
+    currentIndex,
+    onDotClick,
+}) => {
     return (
         <div className="flex justify-center mt-2 relative z-10 cursor-pointer mb-2">
             {Array.from({ length: total }).map((_, index) => (
                 <motion.div
                     key={index}
-                    className={`h-2 w-2 rounded-full mx-2 ${index === currentIndex ? "bg-white sm:bg-black" : "bg-gray-400 sm:bg-gray-400"}`}
+                    className={`h-2 w-2 rounded-full mx-2 ${index === currentIndex
+                        ? "bg-white sm:bg-black"
+                        : "bg-gray-400 sm:bg-gray-400"
+                        }`}
                     animate={{ scale: index === currentIndex ? 1.5 : 1 }}
                     onClick={() => onDotClick(index)}
                     transition={{ duration: 0.3 }}
@@ -219,14 +245,14 @@ const Carousel: React.FC<CarouselProps> = ({
     autoplayDelay = 3000,
     pauseOnHover = true,
     loop = true,
-    lang
+    lang,
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
     const nextSlide = () => {
-        setCurrentIndex(prev => {
+        setCurrentIndex((prev) => {
             if (prev === items.length - 1) {
                 return loop ? 0 : prev;
             }
@@ -235,7 +261,7 @@ const Carousel: React.FC<CarouselProps> = ({
     };
 
     const prevSlide = () => {
-        setCurrentIndex(prev => {
+        setCurrentIndex((prev) => {
             if (prev === 0) {
                 return loop ? items.length - 1 : prev;
             }
@@ -243,7 +269,10 @@ const Carousel: React.FC<CarouselProps> = ({
         });
     };
 
-    const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    const handleDragEnd = (
+        _: MouseEvent | TouchEvent | PointerEvent,
+        info: PanInfo
+    ) => {
         const offset = info.offset.x;
         const velocity = info.velocity.x;
 
@@ -330,7 +359,7 @@ const Carousel: React.FC<CarouselProps> = ({
                                 transform: `${transform} scale(${scale})`,
                                 opacity,
                                 filter: blur,
-                                zIndex
+                                zIndex,
                             }}
                             onClick={() => setCurrentIndex(index)}
                             lang={lang}
@@ -347,7 +376,6 @@ const Carousel: React.FC<CarouselProps> = ({
         </div>
     );
 };
-
 
 interface CountryPageProps {
     countryCode: string;
@@ -372,10 +400,10 @@ const useDynamicRouting = () => {
     const pathname = usePathname();
 
     const createHref = (path: string): string => {
-        const segments = pathname.split('/').filter(segment => segment);
-        const lang = segments[0] || 'en';
-        const countryCode = segments[1] || 'sa';
-        const cleanPath = path.startsWith('/') ? path : `/${path}`;
+        const segments = pathname.split("/").filter((segment) => segment);
+        const lang = segments[0] || "en";
+        const countryCode = segments[1] || "sa";
+        const cleanPath = path.startsWith("/") ? path : `/${path}`;
         return `/${lang}/${countryCode}${cleanPath}`;
     };
 
@@ -383,7 +411,9 @@ const useDynamicRouting = () => {
 };
 
 const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
-    const { countryContent, selectedCountry } = useCountryContent({ countryCode });
+    const { countryContent, selectedCountry } = useCountryContent({
+        countryCode,
+    });
     const { createHref } = useDynamicRouting();
     const params = useParams();
     const lang = (params?.lang as string) || "en";
@@ -395,37 +425,38 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     // Resolve flag image from AssetPath.header.language using country code
     const getFlagForCountry = (code: string) => {
         switch (code.toUpperCase()) {
-            case 'SA':
+            case "SA":
                 return AssetPath.header.language.saudiArabia;
-            case 'AE':
+            case "AE":
                 return AssetPath.header.language.uae;
-            case 'OM':
+            case "OM":
                 return AssetPath.header.language.oman;
-            case 'BH':
+            case "BH":
                 return AssetPath.header.language.bahrain;
-            case 'MA':
+            case "MA":
                 return AssetPath.header.language.malaysia;
-            case 'MU':
+            case "MU":
                 return AssetPath.header.language.mauritius;
-            case 'JD':
+            case "JD":
                 return AssetPath.header.language.jordan;
-            case 'PL':
+            case "PL":
                 return AssetPath.header.language.poland;
-            case 'BE':
+            case "BE":
                 return AssetPath.header.language.belgium;
             default:
                 return AssetPath.header.language.saudiArabia;
         }
     };
     const flagImage = getFlagForCountry(countryCode);
-    const bgImage = typeof countryContent.backgroundImage === 'string'
-        ? countryContent.backgroundImage
-        : countryContent.backgroundImage.src;
+    const bgImage =
+        typeof countryContent.backgroundImage === "string"
+            ? countryContent.backgroundImage
+            : countryContent.backgroundImage.src;
     const scrollRef = useRef<HTMLDivElement | null>(null);
 
     const getInvoiceHomeImage = () => {
         switch (countryCode.toUpperCase()) {
-            case 'AE':
+            case "AE":
                 return uaeInvoiceImg;
             default:
                 return AssetPath.invoicing.invoiceHome;
@@ -450,55 +481,60 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             img: AssetPath.home.feature1,
             title: "One platform.",
             description: "All modules run on a single, integrated data model.",
-            sub: " Zero silos."
+            sub: " Zero silos.",
         },
         {
             img: AssetPath.home.feature2,
             title: "Enterprise‑grade.",
-            description: "Security, scalability and performance proven across 30+ industries.",
-            sub: ""
+            description:
+                "Security, scalability and performance proven across 30+ industries.",
+            sub: "",
         },
         {
             img: AssetPath.home.feature3,
             title: "AI, everywhere.",
-            description: "Accelera, our AI copilot, accelerates routine work, insights and decisions.",
-            sub: ""
+            description:
+                "Accelera, our AI copilot, accelerates routine work, insights and decisions.",
+            sub: "",
         },
         {
             img: AssetPath.home.feature4,
             title: "Fast time‑to‑value.",
-            description: "Lightning-fast UI, one-click installs, and low-disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
-            sub: ""
+            description:
+                "Lightning-fast UI, one-click installs, and low-disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
+            sub: "",
         },
         {
             img: AssetPath.home.feature5,
             title: "Built‑in Global compliance:",
-            description: "Connect ERP/POS to tax authorities; from ZATCA Phase II to PEPPOL standards.",
-            sub: ""
+            description:
+                "Connect ERP/POS to tax authorities; from ZATCA Phase II to PEPPOL standards.",
+            sub: "",
         },
         {
             img: AssetPath.home.feature6,
             title: "Deploy your way.",
-            description: "Cloud (managed, subscription) or On-Prem (full control over infra & data).",
-            sub: ""
-        }
+            description:
+                "Cloud (managed, subscription) or On-Prem (full control over infra & data).",
+            sub: "",
+        },
     ];
 
     const icon = [
         {
             img: AssetPath.landingpage.icon1,
             title: "5,000+",
-            description: "Companies rely on Accqrate."
+            description: "Companies rely on Accqrate.",
         },
         {
             img: AssetPath.landingpage.icon2,
             title: "30M+",
-            description: "invoices processed every month."
+            description: "invoices processed every month.",
         },
         {
             img: AssetPath.landingpage.icon3,
             title: "25+ ",
-            description: "business sectors served."
+            description: "business sectors served.",
         },
     ];
 
@@ -524,7 +560,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         { src: AssetPath.business.books.book16, name: "Oil & Gas" },
         { src: AssetPath.business.books.book17, name: "Home Appliances" },
         { src: AssetPath.business.books.book18, name: "Manufacturing" },
-        { src: AssetPath.business.books.book19, name: "Construction & Engineering" },
+        {
+            src: AssetPath.business.books.book19,
+            name: "Construction & Engineering",
+        },
         { src: AssetPath.business.books.book20, name: "Education" },
         { src: AssetPath.business.books.book21, name: "Conglomerate" },
         { src: AssetPath.business.books.book22, name: "Electrical Industries Co." },
@@ -534,114 +573,125 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         { src: AssetPath.business.books.book26, name: "Fashion" },
     ];
 
-    const testimonialCards: CarouselCardProps[] = countryContent.testimonials && countryContent.testimonials.length > 0
-        ? countryContent.testimonials.map(testimonial => ({
-            quote: testimonial.quote,
-            name: testimonial.name,
-            avatar: typeof testimonial.avatar === 'string' ? testimonial.avatar : testimonial.avatar.src,
-            bg: typeof testimonial.bg === 'string' ? testimonial.bg : testimonial.bg.src
-        }))
-        : [
-            {
-                quote: "Ali - Construction Company",
-                name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
-                avatar: AssetPath.landingpage.ali.src,
-                bg: AssetPath.landingpage.blue.src
-            },
-            {
-                quote: "Al Laith, UAE Global Health & Beauty Co.",
-                name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
-                avatar: AssetPath.landingpage.uae.src,
-                bg: AssetPath.landingpage.blue.src
-            },
-            {
-                quote: "Wail - Jonex",
-                name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
-                avatar: AssetPath.landingpage.wail.src,
-                bg: AssetPath.landingpage.blue.src
-            },
-        ];
+    const testimonialCards: CarouselCardProps[] =
+        countryContent.testimonials && countryContent.testimonials.length > 0
+            ? countryContent.testimonials.map((testimonial) => ({
+                quote: testimonial.quote,
+                name: testimonial.name,
+                avatar:
+                    typeof testimonial.avatar === "string"
+                        ? testimonial.avatar
+                        : testimonial.avatar.src,
+                bg:
+                    typeof testimonial.bg === "string"
+                        ? testimonial.bg
+                        : testimonial.bg.src,
+            }))
+            : [
+                {
+                    quote: "Ali - Construction Company",
+                    name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+                    avatar: AssetPath.landingpage.ali.src,
+                    bg: AssetPath.landingpage.blue.src,
+                },
+                {
+                    quote: "Al Laith, UAE Global Health & Beauty Co.",
+                    name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+                    avatar: AssetPath.landingpage.uae.src,
+                    bg: AssetPath.landingpage.blue.src,
+                },
+                {
+                    quote: "Wail - Jonex",
+                    name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+                    avatar: AssetPath.landingpage.wail.src,
+                    bg: AssetPath.landingpage.blue.src,
+                },
+            ];
 
-    const highlightWhySubtitle = React.useCallback((text: string) => {
-        // Prefer full-sentence translation first
-        const cc = (selectedCountry || 'SA') as string;
-        const full = t(text, cc);
-        if (full && full !== text) {
-            // Apply highlighting even on translated text
-            const parts = full.split(/(PEPPOL|compliance)/gi);
+    const highlightWhySubtitle = React.useCallback(
+        (text: string) => {
+            // Prefer full-sentence translation first
+            const cc = (selectedCountry || "SA") as string;
+            const full = t(text, cc);
+            if (full && full !== text) {
+                // Apply highlighting even on translated text
+                const parts = full.split(/(PEPPOL|compliance)/gi);
+                return (
+                    <span>
+                        {parts.map((part, index) => {
+                            const lowerPart = part.toLowerCase();
+                            if (lowerPart === "peppol" || lowerPart === "compliance") {
+                                return (
+                                    <span key={index} className="text-[#194BED] font-semibold">
+                                        {part}
+                                    </span>
+                                );
+                            }
+                            return part;
+                        })}
+                    </span>
+                );
+            }
+
+            // Apply highlighting to original text
+            const parts = text.split(/(PEPPOL|compliance)/gi);
             return (
                 <span>
                     {parts.map((part, index) => {
                         const lowerPart = part.toLowerCase();
-                        if (lowerPart === 'peppol' || lowerPart === 'compliance') {
+                        if (lowerPart === "peppol" || lowerPart === "compliance") {
                             return (
                                 <span key={index} className="text-[#194BED] font-semibold">
-                                    {part}
+                                    <T>{part}</T>
                                 </span>
                             );
                         }
-                        return part;
+                        return <T key={index}>{part}</T>;
                     })}
                 </span>
             );
-        }
-
-        // Apply highlighting to original text
-        const parts = text.split(/(PEPPOL|compliance)/gi);
-        return (
-            <span>
-                {parts.map((part, index) => {
-                    const lowerPart = part.toLowerCase();
-                    if (lowerPart === 'peppol' || lowerPart === 'compliance') {
-                        return (
-                            <span key={index} className="text-[#194BED] font-semibold">
-                                <T>{part}</T>
-                            </span>
-                        );
-                    }
-                    return <T key={index}>{part}</T>;
-                })}
-            </span>
-        );
-    }, [selectedCountry]);
+        },
+        [selectedCountry]
+    );
 
     const CarouselCardItems: ServiceCard[] = [
         {
             title: "Compliance without compromise",
             desc: "Regulations met by design.",
             bg: "#C2CDEC",
-            icon: AssetPath.home.f1.src
+            icon: AssetPath.home.f1.src,
         },
         {
             title: "Security first.",
             desc: "Data protection and governance across cloud and on-prem.",
             bg: "#BDECC8",
-            icon: AssetPath.home.f2.src
+            icon: AssetPath.home.f2.src,
         },
         {
             title: "Customer obsessed delivery",
             desc: "On time. In scope. With measurable outcomes.",
             bg: "#FFE9D1",
-            icon: AssetPath.home.f3.src
+            icon: AssetPath.home.f3.src,
         },
         {
             title: "Performance at scale",
             desc: "Built for enterprise workloads and real-time operations.",
             bg: "#F5D5FF",
-            icon: AssetPath.home.f4.src
+            icon: AssetPath.home.f4.src,
         },
         {
             title: "Usability that drives adoption",
             desc: "Clean, fast, role-based UX.",
             bg: "#C4E0FF",
-            icon: AssetPath.home.f5.src
+            icon: AssetPath.home.f5.src,
         },
     ];
 
     const faqs = [
         {
             question: "How long is the free trial?",
-            answer: "30 days. Plus an optional 14-day practice account for a total of 44 days.",
+            answer:
+                "30 days. Plus an optional 14-day practice account for a total of 44 days.",
         },
         {
             question: "Can I terminate during the trial?",
@@ -653,18 +703,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         },
         {
             question: "Where is Accqrate Cloud hosted?",
-            answer: "Regional hosting options with data-residency choices; on-prem available for full control.",
+            answer:
+                "Regional hosting options with data-residency choices; on-prem available for full control.",
         },
         {
             question: "How do I pay the subscription?",
-            answer: "Monthly or annual plans; invoicing and payment options vary by region.",
+            answer:
+                "Monthly or annual plans; invoicing and payment options vary by region.",
         },
         {
             question: "What plans are available?",
             answer: "Tiered by module mix and users; bundle pricing for suites.",
         },
     ];
-
 
     // Show the real set of solution cards once (no duplication, no looping)
     const duplicatedCards = CarouselCardItems;
@@ -683,7 +734,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 //hero section
                 >
                     <div className="max-w-[1177px] mx-auto px-6 overflow-hidden lg:pt-[70px]">
-                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-[18px] text-[#FFFFFF] pt-[3rem] lg:pt-[1.5rem] tracking-para">
+                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-[18px] text-[#FFFFFF] pt-[3rem] lg:pt-[2.5rem] tracking-para">
                             <T>{countryContent.heroSubtitle}</T>
                             <Image
                                 src={flagImage}
@@ -714,21 +765,24 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <Arrow45 />
                                 </button>
 
-                                <h2 className=" text-fluid-small font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4">
-                                    {countryContent.heroTagline.split(".").filter(Boolean).map((part, index, arr) => (
-                                        <React.Fragment key={index}>
-                                            <T>{part.trim()}</T>
-                                            {index < arr.length - 1 && (
-                                                <Image
-                                                    src={AssetPath.home.starWhite}
-                                                    alt="star"
-                                                    width={16}
-                                                    height={16}
-                                                    className="inline-block w-4 h-4 mx-1"
-                                                />
-                                            )}
-                                        </React.Fragment>
-                                    ))}
+                                <h2 className=" text-fluid-small font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4 mb-8">
+                                    {countryContent.heroTagline
+                                        .split(".")
+                                        .filter(Boolean)
+                                        .map((part, index, arr) => (
+                                            <React.Fragment key={index}>
+                                                <T>{part.trim()}</T>
+                                                {index < arr.length - 1 && (
+                                                    <Image
+                                                        src={AssetPath.home.starWhite}
+                                                        alt="star"
+                                                        width={16}
+                                                        height={16}
+                                                        className="inline-block w-4 h-4 mx-1"
+                                                    />
+                                                )}
+                                            </React.Fragment>
+                                        ))}
                                 </h2>
                                 <div className="p-4 md:p-5 text-left max-w-full md:max-w-[700px] mx-auto md:mx-0">
                                     {/* Additional content can go here */}
@@ -748,7 +802,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 {/* Mobile & Tablet Featured Solutions */}
                 <div className="lg:hidden px-6 md:px-8">
                     <div className="max-w-[1177px] mx-auto py-6">
-                        <h1 className="text-fluid-body font-medium mb-3"><T>Products to power every team</T></h1>
+                        <h1 className="text-fluid-body font-medium mb-3">
+                            <T>Products to power every team</T>
+                        </h1>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             {cards.map((card) => (
@@ -756,10 +812,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             ))}
 
                             {/* "Explore All Products" card */}
-                            <div
-                                className="cursor-pointer flex items-center justify-between w-full h-[3.125rem] mx-auto overflow-hidden shadow-[0_0_2px_rgba(0,0,0,0.25)] transition-all hover:shadow-md p-3 sm:p-4 bg-[#D6E0FF]"
-                            >
-                                <h3 className="text-[0.875rem] font-medium"><T>Explore All Products...</T></h3>
+                            <div className="cursor-pointer flex items-center justify-between w-full h-[3.125rem] mx-auto overflow-hidden shadow-[0_0_2px_rgba(0,0,0,0.25)] transition-all hover:shadow-md p-3 sm:p-4 bg-[#D6E0FF]">
+                                <h3 className="text-[0.875rem] font-medium">
+                                    <T>Explore All Products...</T>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -770,7 +826,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 {/* Trusted */}
                 <FadeUp className="my-8 md:my-[20px]">
                     <h3 className="text-[24px] tracking-heading leading-tight font-bold text-[#1c2041] text-center mx-auto">
-                        <T>Trusted by</T> <br className="md:hidden" /><span className="text-[#194BED]"> <T>5,000+ Global companies</T></span>
+                        <T>Trusted by</T> <br className="md:hidden" />
+                        <span className="text-[#194BED]">
+                            {" "}
+                            <T>5,000+ Global companies</T>
+                        </span>
                     </h3>
                 </FadeUp>
 
@@ -783,7 +843,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <div className="flex flex-col gap-6">
                             <div className="flex animate-scrollLeft w-max flex-shrink-0">
                                 {[...topRow, ...topRow].map((logo, i) => (
-                                    <div key={`top-${i}`} className="flex flex-col items-center mx-4">
+                                    <div
+                                        key={`top-${i}`}
+                                        className="flex flex-col items-center mx-4"
+                                    >
                                         <Image
                                             src={logo.src}
                                             alt={logo.name}
@@ -791,14 +854,20 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             height={48}
                                             className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                         />
-                                        <p className=" text-xs md:text-sm text-[#737373] font-medium"> <T>{logo.name}</T> </p>
+                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">
+                                            {" "}
+                                            <T>{logo.name}</T>{" "}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
 
                             <div className="flex animate-scrollRight w-max flex-shrink-0">
                                 {[...bottomRow, ...bottomRow].map((logo, i) => (
-                                    <div key={`bottom-${i}`} className="flex flex-col items-center mx-4">
+                                    <div
+                                        key={`bottom-${i}`}
+                                        className="flex flex-col items-center mx-4"
+                                    >
                                         <Image
                                             src={logo.src}
                                             alt={logo.name}
@@ -806,7 +875,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             height={48}
                                             className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                         />
-                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">{logo.name}</p>
+                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">
+                                            {logo.name}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
@@ -828,7 +899,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 <div className="bg-gradient-to-b from-[#fffff] to-[#F1F1FF]">
                     <div className="px-6 md:px-8 xl:px-8 pt-10 lg:pt-[100px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 lg:px-6 max-w-[1177px] mx-auto w-full">
-
                             {/* Left Column */}
                             <div className="max-w-[500px]">
                                 <h2 className="font-medium text-[14px] tracking-heading uppercase text-[#1c2041] ">
@@ -847,15 +917,15 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="max-w-[500px] flex flex-col justify-around">
                                 <p className="text-fluid-small text-[#1c2041] font-normal leading-[24px]">
                                     <T>
-                                        From compliance to automation, Accqrate ensures a seamless PEPPOL
-                                        e-invoicing experience.
+                                        From compliance to automation, Accqrate ensures a seamless
+                                        PEPPOL e-invoicing experience.
                                     </T>
                                 </p>
 
                                 <button
                                     onClick={() => setModalOpen(true)}
                                     className="inline-flex items-center justify-center gap-2 self-start h-[40px] w-full max-w-[182px] text-white text-[14px] rounded-[50px] tracking-para leading-tight mt-6 lg:mt-0"
-                                    style={{ background: '#D63F10' }}
+                                    style={{ background: "#D63F10" }}
                                 >
                                     <T>See It in Action</T>
                                     <Arrow45 />
@@ -863,58 +933,57 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </div>
                         </div>
 
-
                         <div className="max-w-[1200px] mx-auto">
                             <div className="max-w-[1280px] mx-auto sm:px-6 py-6">
                                 <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-                                    {(countryContent.whyAccqrateFeatures || features).map((feature, index) => (
-                                        <div
-                                            key={index}
-                                            className={`
+                                    {(countryContent.whyAccqrateFeatures || features).map(
+                                        (feature, index) => (
+                                            <div
+                                                key={index}
+                                                className={`
             relative group overflow-hidden
             p-6 md:p-8 rounded-[15px]
-            flex flex-col max-h-[221px] 
-            transition-shadow duration-300 max-w-[360px]
-            shadow-[0_8px_24px_rgba(0,0,0,0.08)]
+            flex flex-col max-h-[221px] max-w-[360px]
             bg-white
-          `}>
+          `}
+                                            >
+                                                {/* Content */}
+                                                <div className="relative z-10 flex flex-col h-full justify-between">
+                                                    {/* Top section: Image + Number */}
+                                                    <div className="relative flex justify-between items-start mb-4">
+                                                        <div className="bg-[#F3F3FF] p-1 rounded-[5px]">
+                                                            <Image
+                                                                src={feature.img}
+                                                                alt={feature.title}
+                                                                width={160}
+                                                                height={160}
+                                                                className="w-[40px] h-[40px] object-contain z-10"
+                                                            />
+                                                        </div>
+                                                    </div>
 
-                                            {/* Content */}
-                                            <div className="relative z-10 flex flex-col h-full justify-between">
-                                                {/* Top section: Image + Number */}
-                                                <div className="relative flex justify-between items-start mb-4">
-                                                    <div className="bg-[#F3F3FF] p-1 rounded-[5px]">
-                                                        <Image
-                                                            src={feature.img}
-                                                            alt={feature.title}
-                                                            width={160}
-                                                            height={160}
-                                                            className="w-[40px] h-[40px] object-contain z-10"
-                                                        />
+                                                    {/* Middle section: Title */}
+                                                    <div className="mb-3 z-10">
+                                                        <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight mb-1">
+                                                            <T>{feature.title}</T>
+                                                        </h2>
+                                                        {feature.sub && (
+                                                            <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight">
+                                                                <T>{feature.sub}</T>
+                                                            </h2>
+                                                        )}
+                                                    </div>
+
+                                                    {/* Bottom section: Description */}
+                                                    <div className="flex-grow">
+                                                        <p className="text-[#5a6183] text-[14px] leading-snug tracking-para line-clamp-4 md:line-clamp-5">
+                                                            <T>{feature.description}</T>
+                                                        </p>
                                                     </div>
                                                 </div>
-
-                                                {/* Middle section: Title */}
-                                                <div className="mb-3 z-10">
-                                                    <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight mb-1">
-                                                        <T>{feature.title}</T>
-                                                    </h2>
-                                                    {feature.sub && (
-                                                        <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight">
-                                                            <T>{feature.sub}</T>
-                                                        </h2>
-                                                    )}
-                                                </div>
-
-                                                {/* Bottom section: Description */}
-                                                <div className="flex-grow">
-                                                    <p className="text-[#5a6183] text-[14px] leading-snug tracking-para line-clamp-4 md:line-clamp-5">
-                                                        <T>{feature.description}</T>
-                                                    </p>
-                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
+                                        )
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -922,17 +991,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 </div>
 
                 <div>
-                    <img src={AssetPath.home.invoiceList.src} alt="invoiceList" className="max-w-[1240px] w-full h-auto mx-auto" />
+                    <img
+                        src={AssetPath.home.invoiceList.src}
+                        alt="invoiceList"
+                        className="max-w-[1240px] w-full h-auto mx-auto"
+                    />
                 </div>
 
                 {/* Trusted text */}
-                <div className="rounded-[30px] py-6 max-w-[1177px] mx-auto">
-                    <div className="max-w-[1240px] mx-auto px-6 md:px-8 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
-
+                <div className="rounded-[30px] py-6 max-w-[1280px] mx-auto">
+                    <div className="max-w-[1240px] mx-auto px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
                         {/* Left Side: Accqrate E-invoicing */}
                         <FadeUp className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
                             <div className="flex flex-col flex-1">
-
                                 <div>
                                     <div className="flex items-center space-x-4">
                                         <Image
@@ -955,8 +1026,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                     <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-fluid-small mt-[30px]">
                                         <T>
-                                            Peppol Member and certified Access Point Provider and Service
-                                            Metadata Publisher.
+                                            Peppol Member and certified Access Point Provider and
+                                            Service Metadata Publisher.
                                         </T>
                                     </p>
                                 </div>
@@ -973,7 +1044,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         />
                                     </div>
                                 </div>
-
                             </div>
                         </FadeUp>
 
@@ -984,13 +1054,22 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     {/* Compliance Card */}
                                     <FadeUp className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[24px] text-[#1c2041] font-bold tracking-heading">
-                                            Full Compliance with <span className="text-[#194BED] font-semibold">Belgium's E-Invoicing</span> Mandate
+                                            Full Compliance with{" "}
+                                            <span className="text-[#194BED] font-semibold">
+                                                Belgium's E-Invoicing
+                                            </span>{" "}
+                                            Mandate
                                         </h2>
 
                                         {countryContent.complianceSection && (
                                             <>
                                                 <h2 className="text-[14px] mt-4 text-[#1c2041] font-normal tracking-heading">
-                                                    <T>{countryContent.complianceSection.complianceDescription}</T>
+                                                    <T>
+                                                        {
+                                                            countryContent.complianceSection
+                                                                .complianceDescription
+                                                        }
+                                                    </T>
                                                 </h2>
 
                                                 <ul className="gap-y-2 mt-8 text-[14px] text-[#1c2041] tracking-para leading-[26px] list-disc pl-5">
@@ -1009,11 +1088,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     {/* Automation Card */}
                                     <FadeUp className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[24px] font-bold tracking-heading text-[#1c2041]">
-                                            <span className="text-[#194BED] font-semibold"><T>Hassle-Free</T></span> <T>E-Invoicing Automation</T>
+                                            <span className="text-[#194BED] font-semibold">
+                                                <T>Hassle-Free</T>
+                                            </span>{" "}
+                                            <T>E-Invoicing Automation</T>
                                         </h2>
 
                                         <h2 className="text-[14px] mt-4 font-normal tracking-heading">
-                                            <T>{countryContent.complianceSection.automationDescription}</T>
+                                            <T>
+                                                {countryContent.complianceSection.automationDescription}
+                                            </T>
                                         </h2>
 
                                         <ul className="list-disc pl-5 space-y-1 mt-[15px] text-[14px] leading-tight tracking-para">
@@ -1051,51 +1135,93 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </>
                             )}
                         </div>
-
                     </div>
                 </div>
-
             </div>
 
             {/* Your AI Copilot */}
             <div className="block py-6 lg:pt-8 bg-[#E8EEFF]">
-
                 {/* HERO SECTION */}
                 <div className="relative pb-6 md:pb-8">
-
                     {/* Content */}
                     <div className="relative z-10 flex items-center min-h-[400px] md:min-h-[387px] max-w-[1200px] mx-auto rounded-[20px] px-4 md:px-6 lg:px-8 bg-white">
-
                         {/* GRID */}
                         <div className="max-w-[1177px] mx-auto w-full grid lg:grid-cols-[1fr_337px] gap-4 md:gap-6">
-
                             {/* Left Part (Flexible) */}
                             <FadeUp className="font-inter rounded-2xl flex flex-col justify-between h-full md:max-h-[387px] p-4 bg-transparent order-2 lg:order-1">
                                 <div>
                                     <h2 className="text-[#1c2041] text-[24px] font-bold leading-tight">
-                                        <span className="text-[#194BED]">Accelera</span> <T>Your AI Copilot</T>
+                                        <span className="text-[#194BED]">Accelera</span>{" "}
+                                        <T>Your AI Copilot</T>
                                     </h2>
 
                                     <p className="text-[#333333] text-fluid-small mt-6 md:mt-[40px] mb-4 md:mb-6">
-                                        <T>Work faster and decide smarter with AI embedded across the suite.</T>
+                                        <T>
+                                            Work faster and decide smarter with AI embedded across the
+                                            suite.
+                                        </T>
                                     </p>
 
                                     <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[14px]">
-                                        <li><b><T>Natural-language actions:</T></b> <T>Ask, “Show last month’s receivables by region” and get the answer, fast.</T></li>
-                                        <li><b><T>Automations:</T></b> <T>Generate e-invoices, match POs, trigger approvals and alerts.</T></li>
-                                        <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand, and recommend next steps.</T></li>
-                                        <li><b><T>Assistive UX:</T></b> <T>Contextual help, data enrichment and guided workflows.</T></li>
+                                        <li>
+                                            <b>
+                                                <T>Natural-language actions:</T>
+                                            </b>{" "}
+                                            <T>
+                                                Ask, “Show last month’s receivables by region” and get
+                                                the answer, fast.
+                                            </T>
+                                        </li>
+                                        <li>
+                                            <b>
+                                                <T>Automations:</T>
+                                            </b>{" "}
+                                            <T>
+                                                Generate e-invoices, match POs, trigger approvals and
+                                                alerts.
+                                            </T>
+                                        </li>
+                                        <li>
+                                            <b>
+                                                <T>Insight to action:</T>
+                                            </b>{" "}
+                                            <T>
+                                                Spot anomalies, forecast demand, and recommend next
+                                                steps.
+                                            </T>
+                                        </li>
+                                        <li>
+                                            <b>
+                                                <T>Assistive UX:</T>
+                                            </b>{" "}
+                                            <T>
+                                                Contextual help, data enrichment and guided workflows.
+                                            </T>
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <button
                                     className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
-                                    style={{ background: '#D63F10' }}
+                                    style={{ background: "#D63F10" }}
                                     onClick={() => setModalOpen(true)}
                                 >
-                                    <span className="truncate mr-2"><T>See Accelera in a 5-Minute Demo</T></span>
-                                    <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
-                                        <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <span className="truncate mr-2">
+                                        <T>See Accelera in a 5-Minute Demo</T>
+                                    </span>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        className="flex-shrink-0"
+                                    >
+                                        <path
+                                            d="M9 6l6 6-6 6"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
                                     </svg>
                                 </button>
                             </FadeUp>
@@ -1113,24 +1239,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     />
                                 </div>
                             </FadeUp>
-
                         </div>
                     </div>
                 </div>
 
-
-
                 <div>
                     {/* COMPLIANCE SECTION - ViDA (Hidden for UAE) */}
-                    {countryCode !== 'AE' && (
+                    {countryCode !== "AE" && (
                         <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 pb-6 md:mb-10 rounded-xl md:rounded-2xl bg-white">
-
                             {/* GRID */}
                             <div className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
-
                                 {/* LEFT: Image (Desktop) */}
                                 <div className="hidden lg:flex items-center justify-start pl-6">
-                                    <div className="w-full max-w-[337px]">
+                                    <div className="w-full max-w-[370px]">
                                         <Image
                                             src={AssetPath.home.vida}
                                             alt="VIDA Compliance"
@@ -1144,27 +1265,50 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 {/* RIGHT: Text Content */}
                                 <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8">
                                     <h2 className="text-[#1c2041] tracking-para text-[24px] font-bold leading-tight whitespace-nowrap mb-6">
-                                        <T>Future-Ready for</T> <span className="text-[#194BED]">ViDA</span>
+                                        <T>Future-Ready for</T>{" "}
+                                        <span className="text-[#194BED]">ViDA</span>
                                     </h2>
 
                                     <h2 className="text-fluid-small text-left pl-4 md:pl-5 leading-[22px] md:leading-[24px] tracking-para mb-4">
-                                        <T>Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:</T>
+                                        <T>
+                                            Accqrate equips enterprises to be compliant across the
+                                            upcoming ViDA landscape:
+                                        </T>
                                     </h2>
 
                                     <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-[14px] text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
-                                        <li><T>Cross-border interoperability within the EU</T></li>
-                                        <li><T>Configurable digital reporting aligned with ViDA</T></li>
-                                        <li><T>Multi-entity, multi-VAT number management for MNCs</T></li>
+                                        <li>
+                                            <T>Cross-border interoperability within the EU</T>
+                                        </li>
+                                        <li>
+                                            <T>Configurable digital reporting aligned with ViDA</T>
+                                        </li>
+                                        <li>
+                                            <T>Multi-entity, multi-VAT number management for MNCs</T>
+                                        </li>
                                     </ul>
 
                                     <button
                                         onClick={() => setModalOpen(true)}
                                         className="h-[40px] w-full md:max-w-[217px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
-                                        style={{ background: '#D63F10' }}
+                                        style={{ background: "#D63F10" }}
                                     >
-                                        <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
-                                            <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <span className="truncate mr-2">
+                                            <T>Talk to our Consultant</T>
+                                        </span>
+                                        <svg
+                                            width="20"
+                                            height="20"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            className="flex-shrink-0"
+                                        >
+                                            <path
+                                                d="M9 6l6 6-6 6"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
                                         </svg>
                                     </button>
                                 </FadeUp>
@@ -1179,21 +1323,25 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         className="w-full h-auto object-contain max-w-full"
                                     />
                                 </div>
-
                             </div>
                         </div>
                     )}
 
-
                     {/* DCTCE SECTION ONLY FOR UAE */}
-                    {countryCode === 'AE' && (
+                    {countryCode === "AE" && (
                         <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
                             <div className="p-6 md:p-8">
                                 <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight mb-6">
-                                    <T>Future-Ready for</T> <span className="text-[#194BED]"><T>DCTCE / 5 Corner:</T></span>
+                                    <T>Future-Ready for</T>{" "}
+                                    <span className="text-[#194BED]">
+                                        <T>DCTCE / 5 Corner:</T>
+                                    </span>
                                 </h2>
                                 <h2 className="text-fluid-small text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
-                                    <T>Accqrate equips enterprises to be compliant across the upcoming UAE E-invoicing model DCTCE / 5 corner :</T>
+                                    <T>
+                                        Accqrate equips enterprises to be compliant across the
+                                        upcoming UAE E-invoicing model DCTCE / 5 corner :
+                                    </T>
                                 </h2>
                                 <Image
                                     src={AssetPath.home.dctce}
@@ -1205,12 +1353,25 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 />
                                 <button
                                     className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
-                                    style={{ background: '#D63F10' }}
+                                    style={{ background: "#D63F10" }}
                                     onClick={() => setModalOpen(true)}
                                 >
-                                    <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
-                                    <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
-                                        <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <span className="truncate mr-2">
+                                        <T>Talk to our Consultant</T>
+                                    </span>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        className="flex-shrink-0"
+                                    >
+                                        <path
+                                            d="M9 6l6 6-6 6"
+                                            strokeWidth="2"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
                                     </svg>
                                 </button>
                             </div>
@@ -1219,16 +1380,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 </div>
             </div>
 
-
             <div>
                 <SuccessStories />
             </div>
 
             {/* Outcomes and The Impact */}
-            <div className="md:mx-8 hidden"  >
+            <div className="md:mx-8 hidden">
                 <div className="relative md:-top-[150px] lg:-top-[200px] max-w-[1151px] pb-8 mx-auto md:border md:rounded-[40px] bg-white min-h-[400px]">
                     <div>
-                        <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium text-center mt-8 tracking-heading leading-tight"><T lang={lang} countryCode={countryCode}>Outcomes and The Impact</T></h2>
+                        <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium text-center mt-8 tracking-heading leading-tight">
+                            <T lang={lang} countryCode={countryCode}>
+                                Outcomes and The Impact
+                            </T>
+                        </h2>
                     </div>
                     <div className="mt-[73px] grid grid-cols-1 md:grid-cols-3 gap-10">
                         {icon.map((icon, index) => (
@@ -1237,41 +1401,66 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 className="flex flex-col items-center text-center max-w-[174px] mx-auto md:max-w-[207px]"
                             >
                                 <Image className="mb-4" src={icon.img} alt={icon.title} />
-                                <h2 className="text-fluid-h2 xl:text-[23px] text-[#194BED] font-medium mb-2 tracking-heading leading-tight"><T>{icon.title}</T></h2>
-                                <p className="text-fluid-body tracking-para leading-tight"><T>{icon.description}</T></p>
+                                <h2 className="text-fluid-h2 xl:text-[23px] text-[#194BED] font-medium mb-2 tracking-heading leading-tight">
+                                    <T>{icon.title}</T>
+                                </h2>
+                                <p className="text-fluid-body tracking-para leading-tight">
+                                    <T>{icon.description}</T>
+                                </p>
                             </div>
                         ))}
                     </div>
                     <div className="border-t-2 text-[#D9D9D9] mt-[40px] max-w-[354px] mx-auto md:max-w-[676px] lg:max-w-[1051px] ">
                         <h2 className="text-[#000000] text-fluid-body text-center max-w-[273px] md:max-w-[677px] mx-auto mt-[28px] leading-tight tracking-heading">
-                            <T>Operating across MENA & ASEAN, backed by Iteron AG (Switzerland).</T>
+                            <T>
+                                Operating across MENA & ASEAN, backed by Iteron AG
+                                (Switzerland).
+                            </T>
                         </h2>
                     </div>
                     <div className="flex items-center justify-center">
                         <button
                             onClick={() => setModalOpen(true)}
                             className="h-[40px] max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px] mt-[32px]"
-                            style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                            style={{
+                                background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)",
+                            }}
                         >
                             <T>Read Customer Stories</T>
-                            <svg width="20" height="20" viewBox="0 0 24 24" className="text-white inline-block leading-tight fill-current" style={{ color: 'var(--icon-color, #ffffff)' }} role="img" aria-hidden="true" focusable="false">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                className="text-white inline-block leading-tight fill-current"
+                                style={{ color: "var(--icon-color, #ffffff)" }}
+                                role="img"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
                                 <path d="M9 6l6 6-6 6" />
                             </svg>
                         </button>
                     </div>
                 </div>
-            </div >
+            </div>
 
             {/* Our ValuesDrive Everything We Do */}
-            <div className="bg-[#F8F6FF] py-[50px] mt-6 md:mt-8 " >
-                <div className="px-6 md:px-8 xl:px-0 max-w-[1177px] mx-auto xl:flex items-end justify-between gap-20">
+            <div className=" pb-[50px]">
+                <div className="px-6 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
                     {/* Left Text */}
                     <div className="flex-1">
                         <h1 className="text-[24px] font-bold py-6 text-[#1c2041] md:py-8 tracking-heading leading-tight">
-                            <T>Our <span className="text-[#194BED]">Values</span> </T> <br /><T>Drive Everything We Do</T>
+                            <T>
+                                Our <span className="text-[#194BED]">Values</span>{" "}
+                            </T>{" "}
+                            <br />
+                            <T>Drive Everything We Do</T>
                         </h1>
                         <p className="text-fluid-small text-[#1c2041] max-w-[662px] tracking-para leading-tight">
-                            <T>Built on trust, innovation and excellence, we deliver measurable results that transform business and create lasting impact.</T>
+                            <T>
+                                Built on trust, innovation and excellence, we deliver measurable
+                                results that transform business and create lasting impact.
+                            </T>
                         </p>
                     </div>
 
@@ -1280,7 +1469,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <button
                             onClick={() => setModalOpen(true)}
                             className="h-[40px] md:h-[46px] w-full xl:w-auto max-w-[399px] flex items-center rounded-[50px] justify-between px-4 text-white text-[14px]"
-                            style={{ background: '#D63F10' }}
+                            style={{ background: "#D63F10" }}
                         >
                             <T>Book a Personalized Walkthrough</T>
                             <svg
@@ -1291,119 +1480,151 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 stroke="currentColor"
                                 className="text-white"
                             >
-                                <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path
+                                    d="M9 6l6 6-6 6"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
                             </svg>
                         </button>
                     </div>
                 </div>
 
-
-                {/* CarouselCard */}
-                <div className="solutions-carousel relative max-w-[1177px] mx-auto pl-6 md:pl-8 xl:pl-0 mt-6 md:mt-8">
-                    <div ref={carouselRef} className="carousel-wrapper overflow-x-auto scrollbar-hide">
-                        <div
-                            className="carousel-track flex transition-transform duration-500 ease-in-out gap-4 md:gap-6 lg:gap-8"
-                            style={{ scrollSnapType: "x mandatory" }}
-                        >
-                            {duplicatedCards.map((item, i) => (
+                {/* Cards Grid */}
+                <div className="solutions-grid relative max-w-[1280px] mx-auto mt-6 md:mt-8 px-4">
+                    <div
+                        className="
+      grid
+      grid-cols-1
+      sm:grid-cols-2
+      md:grid-cols-3
+      lg:grid-cols-5
+      gap-[1rem]
+    "
+                    >
+                        {duplicatedCards.map((item, i) => (
+                            <div
+                                key={i}
+                                className={`
+          relative group overflow-hidden
+          p-6 rounded-xl
+          flex flex-col
+          min-h-[321px]
+          transition-all duration-300
+          hover:shadow-lg border border-[#C8C8C8]
+          
+          ${i % 2 === 0 ? "bg-[#E8EEFF]" : "bg-[#F7F7F7]"}
+        `}
+                            >
+                                {/* Hover gradient overlay */}
                                 <div
-                                    key={i}
                                     className={`
-                        relative group overflow-hidden
-                        p-6 rounded-xl
-                        flex flex-col
-                        min-h-[321px]
-                        transition-all duration-300
-                        hover:shadow-lg border border-[#C8C8C8]
-                        flex-shrink-0
-                        w-full max-w-[232px]
-                        
-                        ${i % 2 === 0
-                                            ? 'bg-[#E8EEFF]'
-                                            : 'bg-[#F7F7F7]'
+            absolute inset-0
+            transform scale-y-0
+            transition-transform duration-300 ease-out
+            group-hover:scale-y-100
+            
+            ${i % 2 === 0
+                                            ? "bg-gradient-to-t from-[#e9efff] to-[#ededed] origin-bottom"
+                                            : "bg-gradient-to-b from-[#e9efff] to-[#ededed] origin-top"
                                         }
-                    `}
-                                    style={{ scrollSnapAlign: "start" }}
-                                >
-                                    {/* Hover gradient overlay */}
-                                    <div
-                                        className={`
-                            absolute inset-0
-                            transform scale-y-0
-                            transition-transform duration-300 ease-out
-                            group-hover:scale-y-100
-                            
-                            ${i % 2 === 0
-                                                ? 'bg-gradient-to-t from-[#e9efff] to-[#ededed] origin-bottom'
-                                                : 'bg-gradient-to-b from-[#e9efff] to-[#ededed] origin-top'
-                                            }
-                        `}
-                                    />
+          `}
+                                />
 
-                                    {/* CONTENT */}
-                                    <div className="relative z-10 flex flex-col h-full">
-                                        {/* Icon/Image at the TOP */}
-                                        <div className="flex-shrink-0 mb-4">
-                                            {item.icon && (
-                                                <div className="mb-4 flex items-center justify-center">
-                                                    <Image
-                                                        src={item.icon}
-                                                        width={140}
-                                                        height={140}
-                                                        alt=""
-                                                        className="h-[150px] w-[150px]"
-                                                    />
-                                                </div>
-                                            )}
-
-                                            {/* Title */}
-                                            <h3 className="text-[#303030] font-semibold text-[18px] leading-tight break-words mb-3">
-                                                {item.title}
-                                            </h3>
+                                {/* CONTENT */}
+                                <div className="relative z-10 flex flex-col h-full">
+                                    {/* Icon/Image */}
+                                    {item.icon && (
+                                        <div className="mb-4 flex items-center justify-center">
+                                            <Image
+                                                src={item.icon}
+                                                width={140}
+                                                height={140}
+                                                alt=""
+                                                className="h-[150px] w-[150px]"
+                                            />
                                         </div>
+                                    )}
 
-                                        {/* Description */}
-                                        <div className="flex-grow overflow-hidden">
-                                            <p className="text-[#5A6183] text-[14px] leading-relaxed break-words">
-                                                {item.desc}
-                                            </p>
-                                        </div>
+                                    {/* Title */}
+                                    <h3 className="text-[#303030] font-semibold text-[18px] leading-tight break-words mb-3">
+                                        {item.title}
+                                    </h3>
+
+                                    {/* Description */}
+                                    <div className="flex-grow">
+                                        <p className="text-[#5A6183] text-[14px] leading-relaxed break-words">
+                                            {item.desc}
+                                        </p>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
-
                 {/* Frequently Answered Questions */}
-                <div>
+                <div className="bg-[#EFF4FF]">
                     <div className="px-0 md:px-8 max-w-[1177px] mx-auto py-6 xl:px-0 mt-6 md:mt-8">
-                        <div className="bg-white rounded-[20px] p-6 md:p-8 lg:p-12 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 relative">
-
+                        <div className="rounded-[20px] p-6 md:p-8 lg:p-12">
                             {/* Left Section */}
-                            <div className="flex flex-col w-full lg:max-w-[505px]">
+                            <div className="flex flex-col w-full">
                                 {/* Heading */}
-                                <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left mb-6 tracking-heading leading-tight">
+                                <h2 className="text-[24px] font-bold text-center mb-4 tracking-heading leading-tight">
                                     <T>Frequently Answered Questions</T>
                                 </h2>
+                                <p className="text-[14px] text-[#5a6183] text-center mb-6 ">
+                                    Have a question about our solutions and services?
+                                </p>
                             </div>
 
                             {/* Accordion Section */}
-                            <div className="mt-[20px] lg:mt-0 flex flex-col gap-8 w-full max-w-[800px]">
+                            <div className="mt-[20px] lg:mt-0 flex flex-col gap-8 w-full">
                                 <FadeUp>
-                                    <Accordion type="single" collapsible className="w-full text-left">
+                                    <Accordion
+                                        type="single"
+                                        collapsible
+                                        className="w-full text-left space-y-4"
+                                    >
                                         {faqs.map((item, index) => (
                                             <AccordionItem
                                                 key={index}
                                                 value={`faq-${index}`}
-                                                className="border-b border-[#BDBDBD] py-4"
+                                                className="
+          bg-white
+          border border-[#E2E4EC]
+          rounded-xl
+          px-6
+          py-4
+          shadow-sm
+        "
                                             >
-                                                <AccordionTrigger className="text-[16px] md:text-[18px] lg:text-[20px] font-medium text-gray-800 hover:no-underline tracking-heading leading-tight text-left">
+                                                <AccordionTrigger
+                                                    className="
+            text-[18px]
+            font-bold
+            text-[#1c2041]
+            hover:no-underline
+            tracking-heading
+            leading-tight
+            text-left
+          "
+                                                >
                                                     <T>{item.question}</T>
                                                 </AccordionTrigger>
 
-                                                <AccordionContent className="text-[14px] md:text-[16px] lg:text-[20px] font-light text-gray-600 tracking-para leading-relaxed mt-2 text-left">
+                                                <AccordionContent
+                                                    className="
+            text-[14px]
+            font-light
+            text-[#5a6183]
+            tracking-para
+            leading-relaxed
+            mt-2
+            text-left
+          "
+                                                >
                                                     <T>{item.answer}</T>
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -1411,38 +1632,42 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </Accordion>
                                 </FadeUp>
                             </div>
-
-                            {/* Image fixed at the bottom inside the white card */}
-                            <div className={`hidden lg:block absolute bottom-0 ${selectedLanguage.code === 'ar' ? 'hidden' : ''}`}>
-                                <Image
-                                    src={AssetPath.home.clip}
-                                    alt="faq"
-                                    width={181}
-                                    height={181}
-                                    className="h-full lg:max-h-[181px] object-contain"
-                                />
+                            <div className="flex justify-center mt-6 md:mt-8">
+                                <button
+                                    onClick={() => setModalOpen(true)}
+                                    className="inline-flex items-center justify-center gap-2 self-start h-[40px] w-full max-w-[182px] text-white text-[14px] rounded-[50px] tracking-para leading-tight mt-6 lg:mt-0"
+                                    style={{ background: "#D63F10" }}
+                                >
+                                    <T>See It in Action</T>
+                                    <Arrow45 />
+                                </button>
                             </div>
-
                         </div>
                     </div>
-                </div>
 
-                {/* Final Conversion Band */}
-                <div className="max-w-[1440px] mx-auto pb-6 md:pb-8 px-6 font-inter">
-                    <div className="flex flex-col items-center">
-                        <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left py-[20px] md:py-[37px] tracking-heading leading-tight"><T lang={lang} countryCode={countryCode}>Final Conversion Band</T></h2>
-                        <p className="text-fluid-body max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight"> <T>Run compliant, AI-powered operations with Accqrate.</T></p>
-                    </div>
-                    <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6">
-                        {[
-                            "Get a Free Proof of Concept",
-                            "Subscribe for Updates",
-                            "Talk to Sales",
-                        ].map((text, i) => (
-                            <button
-                                key={i}
-                                onClick={() => setModalOpen(true)}
-                                className="
+                    {/* Final Conversion Band */}
+                    <div className="max-w-[1440px] mx-auto pb-6 md:pb-8 px-6 font-inter">
+                        <div className="flex flex-col items-center">
+                            <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left py-[20px] md:py-[37px] tracking-heading leading-tight">
+                                <T lang={lang} countryCode={countryCode}>
+                                    Final Conversion Band
+                                </T>
+                            </h2>
+                            <p className="text-fluid-body max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight">
+                                {" "}
+                                <T>Run compliant, AI-powered operations with Accqrate.</T>
+                            </p>
+                        </div>
+                        <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6">
+                            {[
+                                "Get a Free Proof of Concept",
+                                "Subscribe for Updates",
+                                "Talk to Sales",
+                            ].map((text, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setModalOpen(true)}
+                                    className="
         relative
         lg:w-auto w-[270px]
         h-[46px]
@@ -1453,26 +1678,24 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         text-[14px] whitespace-nowrap
         mt-[32px]
       "
-                                style={{
-                                    background: "#D63F10",
-                                }}
-                            >
-                                {/* Centered text */}
-                                <span className="mx-auto "><T>{text}</T></span>
-
-
-                            </button>
-                        ))}
+                                    style={{
+                                        background: "#D63F10",
+                                    }}
+                                >
+                                    {/* Centered text */}
+                                    <span className="mx-auto ">
+                                        <T>{text}</T>
+                                    </span>
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div >
+            </div>
             {isModalOpen && (
-                <ContactModal
-                    open={isModalOpen}
-                    onClose={handleCloseModal}
-                />
+                <ContactModal open={isModalOpen} onClose={handleCloseModal} />
             )}
-        </main >
+        </main>
     );
 };
 
