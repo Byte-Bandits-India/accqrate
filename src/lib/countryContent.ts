@@ -226,31 +226,31 @@ const belgiumContent: CountryContent = {
       sub: " Harmonised Data."
     },
     {
-      img: AssetPath.icons.websiteDesign1,
+      img: AssetPath.icons.websiteDesign11,
       title: "Enterprise‑grade.",
       description: "Security, scalability and performance proven across 30+ industries.",
       sub: ""
     },
     {
-      img: AssetPath.icons.websiteDesign1,
+      img: AssetPath.icons.websiteDesign12,
       title: "Deploy your way.",
       description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
       sub: ""
     },
     {
-      img: AssetPath.icons.websiteDesign1,
+      img: AssetPath.icons.websiteDesign13,
       title: "AI, everywhere.",
       description: "Accelera, our AI copilot , accelerates routine work, insights and decisions.",
       sub: ""
     },
     {
-      img: AssetPath.icons.websiteDesign1,
+      img: AssetPath.icons.websiteDesign14,
       title: "Fast time‑to‑value.",
       description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
       sub: ""
     },
     {
-      img: AssetPath.icons.websiteDesign1,
+      img: AssetPath.icons.websiteDesign15,
       title: "Built‑in Global compliance:",
       description: "Connect ERP/POS to tax authorities; from Direct to PEPPOL based Integration.",
       sub: ""

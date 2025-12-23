@@ -10,6 +10,7 @@ import { useCountryContent } from "@/Hooks/useCountryContent";
 import T from "@/Components/T"
 import { useCountry } from "@/contexts/CountryContext";
 import { t } from "@/lib/translations";
+import SuccessStories from "./SuccessStories";
 import {
     Accordion,
     AccordionContent,
@@ -54,6 +55,7 @@ interface ServiceCard {
     title: string;
     desc: string;
     bg: string;
+    icon?: string;
 }
 
 const CarouselCardComponent: React.FC<CarouselCardProps> = ({
@@ -560,31 +562,79 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             },
         ];
 
+    const highlightWhySubtitle = React.useCallback((text: string) => {
+        // Prefer full-sentence translation first
+        const cc = (selectedCountry || 'SA') as string;
+        const full = t(text, cc);
+        if (full && full !== text) {
+            // Apply highlighting even on translated text
+            const parts = full.split(/(PEPPOL|compliance)/gi);
+            return (
+                <span>
+                    {parts.map((part, index) => {
+                        const lowerPart = part.toLowerCase();
+                        if (lowerPart === 'peppol' || lowerPart === 'compliance') {
+                            return (
+                                <span key={index} className="text-[#194BED] font-semibold">
+                                    {part}
+                                </span>
+                            );
+                        }
+                        return part;
+                    })}
+                </span>
+            );
+        }
+
+        // Apply highlighting to original text
+        const parts = text.split(/(PEPPOL|compliance)/gi);
+        return (
+            <span>
+                {parts.map((part, index) => {
+                    const lowerPart = part.toLowerCase();
+                    if (lowerPart === 'peppol' || lowerPart === 'compliance') {
+                        return (
+                            <span key={index} className="text-[#194BED] font-semibold">
+                                <T>{part}</T>
+                            </span>
+                        );
+                    }
+                    return <T key={index}>{part}</T>;
+                })}
+            </span>
+        );
+    }, [selectedCountry]);
+
     const CarouselCardItems: ServiceCard[] = [
         {
             title: "Compliance without compromise",
             desc: "Regulations met by design.",
-            bg: "#C2CDEC"
+            bg: "#C2CDEC",
+            icon: AssetPath.home.f1.src
         },
         {
             title: "Security first.",
             desc: "Data protection and governance across cloud and on-prem.",
-            bg: "#BDECC8"
+            bg: "#BDECC8",
+            icon: AssetPath.home.f2.src
         },
         {
             title: "Customer obsessed delivery",
             desc: "On time. In scope. With measurable outcomes.",
-            bg: "#FFE9D1"
+            bg: "#FFE9D1",
+            icon: AssetPath.home.f3.src
         },
         {
             title: "Performance at scale",
             desc: "Built for enterprise workloads and real-time operations.",
-            bg: "#F5D5FF"
+            bg: "#F5D5FF",
+            icon: AssetPath.home.f4.src
         },
         {
             title: "Usability that drives adoption",
             desc: "Clean, fast, role-based UX.",
-            bg: "#C4E0FF"
+            bg: "#C4E0FF",
+            icon: AssetPath.home.f5.src
         },
     ];
 
@@ -615,36 +665,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         },
     ];
 
+
     // Show the real set of solution cards once (no duplication, no looping)
     const duplicatedCards = CarouselCardItems;
-
-    // Highlight specific words in subtitle (e.g., "specialize", "reliable")
-    const highlightWhySubtitle = React.useCallback((text: string) => {
-        // Prefer full-sentence translation first to avoid lost matches when
-        // components split the string into parts (which breaks exact-key lookup).
-        const cc = (selectedCountry || 'SA') as string;
-        const full = t(text, cc);
-        if (full && full !== text) return <>{full}</>;
-
-        const parts = text.split(/(specialize|reliable)/gi);
-        return parts.map((part, index) => {
-            const isHighlight = /^specialize$/i.test(part) || /^reliable$/i.test(part);
-            return isHighlight ? (
-                <span key={index} className="text-[#194BED]">
-                    <T>{part}</T>
-                </span>
-            ) : (
-                <T key={index}>{part}</T>
-            );
-        });
-    }, [selectedCountry]);
 
     // No looping behavior for the solutions carousel — user can scroll through the
     // cards but we won't programmatically wrap or reposition the scroll.
 
     return (
         <main className="overflow-x-hidden font-inter">
-            <div className="bg-[#F8F6FF]">
+            <div className="mb-10">
                 <div
                     className="h-fit max-h-[1440px] bg-cover bg-no-repeat bg-center lg:bg-local"
                     style={{
@@ -652,8 +682,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     }}
                 //hero section
                 >
-                    <div className="max-w-[1177px] lg:h-[100dvh] mx-auto px-6 overflow-hidden lg:pt-[70px]">
-                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-[18px] text-[#FFFFFF] pt-[3rem] lg:pt-[3rem] 2xl:pt-[4rem] tracking-para">
+                    <div className="max-w-[1177px] mx-auto px-6 overflow-hidden lg:pt-[70px]">
+                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-[18px] text-[#FFFFFF] pt-[3rem] lg:pt-[1.5rem] tracking-para">
                             <T>{countryContent.heroSubtitle}</T>
                             <Image
                                 src={flagImage}
@@ -738,15 +768,15 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 <CounterFacts />
 
                 {/* Trusted */}
-                <FadeUp className="my-8 md:my-[40px]">
-                    <h3 className="text-[24px] md:text-[28px] lg:text-[38px] tracking-heading leading-tight font-medium text-[#1c2041] text-center mx-auto">
+                <FadeUp className="my-8 md:my-[20px]">
+                    <h3 className="text-[24px] tracking-heading leading-tight font-bold text-[#1c2041] text-center mx-auto">
                         <T>Trusted by</T> <br className="md:hidden" /><span className="text-[#194BED]"> <T>5,000+ Global companies</T></span>
                     </h3>
                 </FadeUp>
 
                 {/* Logo Marquee */}
                 <div className="relative">
-                    <div className="max-w-5xl overflow-hidden py-6 mx-auto">
+                    <div className="max-w-5xl overflow-hidden mx-auto">
                         <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
                         <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
 
@@ -783,10 +813,20 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <Image
+                src={AssetPath.home.dashboardHome}
+                alt="dashboardHome"
+                width={100}
+                height={100}
+                className="relative top-8 lg:top-[78px] w-full h-full"
+                unoptimized
+            />
+            <div className="bg-gradient-to-b from-[#F1F1FF] to-[#ffffff]">
                 {/* /Why Accqrate? */}
-                <div>
-                    <div className="px-6 md:px-8 xl:px-8 mt-[48px]">
+                <div className="bg-gradient-to-b from-[#fffff] to-[#F1F1FF]">
+                    <div className="px-6 md:px-8 xl:px-8 pt-10 lg:pt-[100px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 lg:px-6 max-w-[1177px] mx-auto w-full">
 
                             {/* Left Column */}
@@ -795,15 +835,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
 
-                                <Image
-                                    src={AssetPath.home.blueStar}
-                                    alt="groupstar"
-                                    width={28}
-                                    height={28}
-                                    className="w-auto h-[28px] lg:hidden"
-                                />
-
-                                <h3 className="text-[24px] text-[#1c2041] font-bold mt-6 md:mt-8 lg:mt-[40px] leading-tight">
+                                <h3 className="text-[24px] text-[#1c2041] font-bold mt-4 leading-[45px]">
                                     {highlightWhySubtitle(
                                         countryContent.whyAccqrateSubtitle ||
                                         "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."
@@ -832,8 +864,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         </div>
 
 
-                        <div className="max-w-[1200px] mx-auto py-8">
-                            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
+                        <div className="max-w-[1200px] mx-auto">
+                            <div className="max-w-[1280px] mx-auto sm:px-6 py-6">
                                 <div className="flex flex-wrap justify-center gap-6 md:gap-8">
                                     {(countryContent.whyAccqrateFeatures || features).map((feature, index) => (
                                         <div
@@ -889,22 +921,43 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     </div>
                 </div>
 
+                <div>
+                    <img src={AssetPath.home.invoiceList.src} alt="invoiceList" className="max-w-[1240px] w-full h-auto mx-auto" />
+                </div>
+
                 {/* Trusted text */}
-                <div className="mt-6 rounded-[30px] py-6 md:py-8  max-w-[1177px] mx-auto">
-                    <div className="max-w-[1440px] mx-auto px-6 md:px-8 mt-[32px] grid xl:grid-cols-2 gap-6">
-                        {/* Left Side: Full-Suite ERP */}
-                        <FadeUp className="bg-[#FFFFFF] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
+                <div className="rounded-[30px] py-6 max-w-[1177px] mx-auto">
+                    <div className="max-w-[1240px] mx-auto px-6 md:px-8 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
+
+                        {/* Left Side: Accqrate E-invoicing */}
+                        <FadeUp className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
                             <div className="flex flex-col flex-1">
+
                                 <div>
                                     <div className="flex items-center space-x-4">
-                                        <Image src={AssetPath.home.greenAccq} alt="one" width={50} height={50} className="h-[40px] md:h-[50px] w-auto" />
+                                        <Image
+                                            src={AssetPath.home.orangeA}
+                                            alt="one"
+                                            width={50}
+                                            height={50}
+                                            className="h-[40px] md:h-[50px] w-auto"
+                                            unoptimized
+                                        />
+
                                         <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small whitespace-nowrap">
                                             <T>Accqrate E-invoicing</T>
-                                            <span className="text-sm text-[#5a6183]"> <br /><T>{countryContent.heroSubtitle}</T></span>
+                                            <span className="text-sm text-[#5a6183]">
+                                                <br />
+                                                <T>{countryContent.heroSubtitle}</T>
+                                            </span>
                                         </span>
                                     </div>
+
                                     <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-fluid-small mt-[30px]">
-                                        <T>Peppol Member and certified Access Point Provider and Service Metadata Publisher.</T>
+                                        <T>
+                                            Peppol Member and certified Access Point Provider and Service
+                                            Metadata Publisher.
+                                        </T>
                                     </p>
                                 </div>
 
@@ -920,37 +973,64 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         />
                                     </div>
                                 </div>
+
                             </div>
                         </FadeUp>
 
-                        {/* Right Side: Modules + What you'll achieve */}
-                        <div className="flex flex-col gap-6 xl:h-full">
+                        {/* Right Side: Compliance + Automation */}
+                        <div className="flex flex-col gap-6 xl:h-full w-full">
                             {countryContent.complianceSection && (
                                 <>
+                                    {/* Compliance Card */}
                                     <FadeUp className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                        <h2 className="text-[24px] text-[#1c2041] font-bold tracking-heading"><T>{countryContent.complianceSection?.complianceTitle}</T></h2>
-                                        <h2 className="text-[14px] mt-4 text-[#1c2041] font-normal tracking-heading"><T>{countryContent.complianceSection?.complianceDescription}</T></h2>
-                                        <ul className="gap-y-2 mt-8 text-[14px] text-[#1c2041] tracking-para leading leading-[26px] list-disc pl-5">
-                                            {countryContent.complianceSection?.complianceItems.map((item, index) => (
-                                                <li key={index}><T>{item}</T></li>
-                                            ))}
-                                        </ul>
+                                        <h2 className="text-[24px] text-[#1c2041] font-bold tracking-heading">
+                                            Full Compliance with <span className="text-[#194BED] font-semibold">Belgium's E-Invoicing</span> Mandate
+                                        </h2>
+
+                                        {countryContent.complianceSection && (
+                                            <>
+                                                <h2 className="text-[14px] mt-4 text-[#1c2041] font-normal tracking-heading">
+                                                    <T>{countryContent.complianceSection.complianceDescription}</T>
+                                                </h2>
+
+                                                <ul className="gap-y-2 mt-8 text-[14px] text-[#1c2041] tracking-para leading-[26px] list-disc pl-5">
+                                                    {countryContent.complianceSection.complianceItems.map(
+                                                        (item, index) => (
+                                                            <li key={index}>
+                                                                <T>{item}</T>
+                                                            </li>
+                                                        )
+                                                    )}
+                                                </ul>
+                                            </>
+                                        )}
                                     </FadeUp>
 
-                                    <FadeUp className="bg-[#E8EEFF] border bordder-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                        <h2 className="text-[24px] font-bold tracking-heading"><T>{countryContent.complianceSection?.automationTitle}</T></h2>
-                                        <h2 className="text-[14px] mt-4 font-normal tracking-heading"><T>{countryContent.complianceSection?.automationDescription}</T></h2>
-                                        <ul className="text-left list-disc pl-5 space-y-1 mt-[15px] text-[14px] leading-tight tracking-para">
-                                            {countryContent.complianceSection?.automationItems.map((item, index) => (
-                                                <li key={index}><T>{item}</T></li>
-                                            ))}
+                                    {/* Automation Card */}
+                                    <FadeUp className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                        <h2 className="text-[24px] font-bold tracking-heading text-[#1c2041]">
+                                            <span className="text-[#194BED] font-semibold"><T>Hassle-Free</T></span> <T>E-Invoicing Automation</T>
+                                        </h2>
+
+                                        <h2 className="text-[14px] mt-4 font-normal tracking-heading">
+                                            <T>{countryContent.complianceSection.automationDescription}</T>
+                                        </h2>
+
+                                        <ul className="list-disc pl-5 space-y-1 mt-[15px] text-[14px] leading-tight tracking-para">
+                                            {countryContent.complianceSection.automationItems.map(
+                                                (item, index) => (
+                                                    <li key={index}>
+                                                        <T>{item}</T>
+                                                    </li>
+                                                )
+                                            )}
                                         </ul>
 
                                         <button
                                             onClick={() => setModalOpen(true)}
-                                            className="h-[46px] max-w-[220px] w-full text-center flex items-center gap-4 justify-center px-4 rounded-[100px] text-white text-[14px] mt-[32px] bg-[#D63F10]"
+                                            className="h-[46px] max-w-[220px] w-full mt-[32px] flex items-center justify-center gap-4 px-4 rounded-[100px] bg-[#D63F10] text-white text-[14px]"
                                         >
-                                            <T>{countryContent.complianceSection?.buttonText}</T>
+                                            <T>{countryContent.complianceSection.buttonText}</T>
                                             <svg
                                                 width="20"
                                                 height="20"
@@ -971,113 +1051,111 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </>
                             )}
                         </div>
+
                     </div>
                 </div>
 
-                {/* Your AI Copilot */}
-                <div className="block pb-10">
+            </div>
 
-                    {/* HERO SECTION */}
-                    <div className="relative min-h-[400px] md:min-h-[450px] mt-10 md:mt-20">
-                        {/* Background Image - Positioned at bottom */}
-                        <Image
-                            src={AssetPath.home.waveVector}
-                            alt="Wave Vector"
-                            width={1440}
-                            height={350}
-                            className="absolute bottom-0 left-0 w-full h-[250px] md:h-[300px] lg:h-[350px] rounded-xl z-0"
-                        />
+            {/* Your AI Copilot */}
+            <div className="block py-6 lg:pt-8 bg-[#E8EEFF]">
 
+                {/* HERO SECTION */}
+                <div className="relative min-h-[400px] md:min-h-[450px] my-6">
 
-                        {/* Content */}
-                        <div className="relative z-10 flex items-center min-h-[400px] md:min-h-[450px] max-w-[1200px] mx-auto rounded-[20px] px-4 md:px-6 lg:px-8 bg-white">
-                            <div className="max-w-[1177px] mx-auto w-full grid lg:grid-cols-2 gap-4 md:gap-6">
+                    {/* Content */}
+                    <div className="relative z-10 flex items-center min-h-[400px] md:min-h-[387px] max-w-[1200px] mx-auto rounded-[20px] px-4 md:px-6 lg:px-8 bg-white">
 
-                                {/* Left Part */}
-                                <FadeUp className="font-inter rounded-2xl flex flex-col justify-between h-full max-h-[387px] p-4 md:p-6 lg:p-8 bg-transparent flex-shrink-0 order-2 lg:order-1">
-                                    <div>
-                                        <h2 className="text-[#1c2041] text-[24px] font-bold leading-tight">
-                                            <span className="text-[#194BED]">Accelera</span> <T>Your AI Copilot</T>
-                                        </h2>
+                        {/* GRID */}
+                        <div className="max-w-[1177px] mx-auto w-full grid lg:grid-cols-[1fr_337px] gap-4 md:gap-6">
 
-                                        <p className="text-[#333333] text-fluid-small mt-6 md:mt-[40px] mb-4 md:mb-6">
-                                            <T>Work faster and decide smarter with AI embedded across the suite.</T>
-                                        </p>
+                            {/* Left Part (Flexible) */}
+                            <FadeUp className="font-inter rounded-2xl flex flex-col justify-between h-full md:max-h-[387px] p-4 bg-transparent order-2 lg:order-1">
+                                <div>
+                                    <h2 className="text-[#1c2041] text-[24px] font-bold leading-tight">
+                                        <span className="text-[#194BED]">Accelera</span> <T>Your AI Copilot</T>
+                                    </h2>
 
-                                        <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[14px]">
-                                            <li><b><T>Natural-language actions:</T></b> <T>Ask, “Show last month’s receivables by region” and get the answer, fast.</T></li>
-                                            <li><b><T>Automations:</T></b> <T>Generate e‑invoices, match POs, trigger approvals and alerts.</T></li>
-                                            <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand, and recommend next steps.</T></li>
-                                            <li><b><T>Assistive UX:</T></b> <T>Contextual help, data enrichment and guided workflows.</T></li>
-                                        </ul>
-                                    </div>
+                                    <p className="text-[#333333] text-fluid-small mt-6 md:mt-[40px] mb-4 md:mb-6">
+                                        <T>Work faster and decide smarter with AI embedded across the suite.</T>
+                                    </p>
 
-                                    <button
-                                        className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
-                                        style={{ background: '#D63F10' }}
-                                        onClick={() => setModalOpen(true)}
-                                    >
-                                        <span className="truncate mr-2"><T>See Accelera in a 5-Minute Demo</T></span>
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
-                                            <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </button>
-                                </FadeUp>
-
-                                {/* Right Part */}
-                                <FadeUp className="flex items-center justify-center p-4 md:p-6 lg:p-8 order-1 lg:order-2">
-                                    <div className="relative w-full max-w-[520px]">
-                                        <Image
-                                            src={AssetPath.home.ai}
-                                            alt="AI Copilot"
-                                            width={520}
-                                            height={420}
-                                            className="w-full h-auto object-contain rounded-lg"
-                                            priority
-                                        />
-                                    </div>
-                                </FadeUp>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div>
-                        {/* COMPLIANCE SECTION - ViDA (Hidden for UAE) */}
-                        {countryCode !== 'AE' && (
-                            <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] grid lg:grid-cols-2 gap-4 md:gap-6 pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
-                                {/* Left Side: Image (Desktop) */}
-                                <div className="hidden lg:flex flex-col items-start justify-between p-6 md:p-8">
-                                    <Image
-                                        src={AssetPath.home.vida}
-                                        alt="VIDA Compliance"
-                                        width={520}
-                                        height={420}
-                                        className="w-full h-auto object-contain"
-                                    />
+                                    <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[14px]">
+                                        <li><b><T>Natural-language actions:</T></b> <T>Ask, “Show last month’s receivables by region” and get the answer, fast.</T></li>
+                                        <li><b><T>Automations:</T></b> <T>Generate e-invoices, match POs, trigger approvals and alerts.</T></li>
+                                        <li><b><T>Insight to action:</T></b> <T>Spot anomalies, forecast demand, and recommend next steps.</T></li>
+                                        <li><b><T>Assistive UX:</T></b> <T>Contextual help, data enrichment and guided workflows.</T></li>
+                                    </ul>
                                 </div>
 
-                                {/* Right Side: Text + List + Button */}
-                                <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8 order-2 lg:order-1">
-                                    {/* Heading (mobile only) */}
+                                <button
+                                    className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
+                                    style={{ background: '#D63F10' }}
+                                    onClick={() => setModalOpen(true)}
+                                >
+                                    <span className="truncate mr-2"><T>See Accelera in a 5-Minute Demo</T></span>
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
+                                        <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </button>
+                            </FadeUp>
+
+                            {/* Right Part (337px max, image aligned to end) */}
+                            <FadeUp className="flex items-center justify-end p-4 order-1 lg:order-2">
+                                <div className="relative w-full max-w-[337px] ml-auto">
+                                    <Image
+                                        src={AssetPath.home.ai}
+                                        alt="AI Copilot"
+                                        width={337}
+                                        height={420}
+                                        className="w-full h-auto object-contain rounded-lg"
+                                        priority
+                                    />
+                                </div>
+                            </FadeUp>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    {/* COMPLIANCE SECTION - ViDA (Hidden for UAE) */}
+                    {countryCode !== 'AE' && (
+                        <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 pb-6 md:mb-10 rounded-xl md:rounded-2xl bg-white">
+
+                            {/* GRID */}
+                            <div className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
+
+                                {/* LEFT: Image (Desktop) */}
+                                <div className="hidden lg:flex items-center justify-start pl-6">
+                                    <div className="w-full max-w-[337px]">
+                                        <Image
+                                            src={AssetPath.home.vida}
+                                            alt="VIDA Compliance"
+                                            width={337}
+                                            height={420}
+                                            className="w-full h-auto object-contain"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* RIGHT: Text Content */}
+                                <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8">
                                     <h2 className="text-[#1c2041] tracking-para text-[24px] font-bold leading-tight whitespace-nowrap mb-6">
                                         <T>Future-Ready for</T> <span className="text-[#194BED]">ViDA</span>
                                     </h2>
+
                                     <h2 className="text-fluid-small text-left pl-4 md:pl-5 leading-[22px] md:leading-[24px] tracking-para mb-4">
                                         <T>Accqrate equips enterprises to be compliant across the upcoming ViDA landscape:</T>
                                     </h2>
 
-                                    <div>
-                                        <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-[14px] text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
-                                            <li>
-                                                <T>Cross-border interoperability within the EU</T>
-                                            </li>
-                                            <li><T>Configurable digital reporting aligned with ViDA</T></li>
-                                            <li>
-                                                <T>Multi-entity, multi-VAT number management for MNCs</T>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-[14px] text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
+                                        <li><T>Cross-border interoperability within the EU</T></li>
+                                        <li><T>Configurable digital reporting aligned with ViDA</T></li>
+                                        <li><T>Multi-entity, multi-VAT number management for MNCs</T></li>
+                                    </ul>
 
                                     <button
                                         onClick={() => setModalOpen(true)}
@@ -1092,7 +1170,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </FadeUp>
 
                                 {/* Image (Mobile) */}
-                                <div className="lg:hidden flex items-center justify-center p-4 md:p-6 order-1 lg:order-2">
+                                <div className="lg:hidden flex items-center justify-center p-4 md:p-6">
                                     <Image
                                         src={AssetPath.home.vida}
                                         alt="VIDA Compliance"
@@ -1101,42 +1179,49 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         className="w-full h-auto object-contain max-w-full"
                                     />
                                 </div>
-                            </div>
-                        )}
 
-                        {/* DCTCE SECTION ONLY FOR UAE */}
-                        {countryCode === 'AE' && (
-                            <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
-                                <div className="p-6 md:p-8">
-                                    <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight mb-6">
-                                        <T>Future-Ready for</T> <span className="text-[#194BED]"><T>DCTCE / 5 Corner:</T></span>
-                                    </h2>
-                                    <h2 className="text-fluid-small text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
-                                        <T>Accqrate equips enterprises to be compliant across the upcoming UAE E-invoicing model DCTCE / 5 corner :</T>
-                                    </h2>
-                                    <Image
-                                        src={AssetPath.home.dctce}
-                                        alt="VIDA Compliance"
-                                        width={520}
-                                        height={420}
-                                        className="w-full h-auto object-contain"
-                                        unoptimized
-                                    />
-                                    <button
-                                        className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
-                                        style={{ background: '#D63F10' }}
-                                        onClick={() => setModalOpen(true)}
-                                    >
-                                        <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
-                                            <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
                             </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
+
+
+                    {/* DCTCE SECTION ONLY FOR UAE */}
+                    {countryCode === 'AE' && (
+                        <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
+                            <div className="p-6 md:p-8">
+                                <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight mb-6">
+                                    <T>Future-Ready for</T> <span className="text-[#194BED]"><T>DCTCE / 5 Corner:</T></span>
+                                </h2>
+                                <h2 className="text-fluid-small text-left leading-[22px] md:leading-[24px] tracking-para mb-4">
+                                    <T>Accqrate equips enterprises to be compliant across the upcoming UAE E-invoicing model DCTCE / 5 corner :</T>
+                                </h2>
+                                <Image
+                                    src={AssetPath.home.dctce}
+                                    alt="VIDA Compliance"
+                                    width={520}
+                                    height={420}
+                                    className="w-full h-auto object-contain"
+                                    unoptimized
+                                />
+                                <button
+                                    className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
+                                    style={{ background: '#D63F10' }}
+                                    onClick={() => setModalOpen(true)}
+                                >
+                                    <span className="truncate mr-2"><T>Talk to our Consultant</T></span>
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" className="flex-shrink-0">
+                                        <path d="M9 6l6 6-6 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    )}
                 </div>
+            </div>
+
+
+            <div>
+                <SuccessStories />
             </div>
 
             {/* Outcomes and The Impact */}
@@ -1182,10 +1267,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 <div className="px-6 md:px-8 xl:px-0 max-w-[1177px] mx-auto xl:flex items-end justify-between gap-20">
                     {/* Left Text */}
                     <div className="flex-1">
-                        <h1 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium py-[30px] md:py-[37px] tracking-heading leading-tight">
-                            <T>Our Values</T> <br /><T>Drive Everything We Do</T>
+                        <h1 className="text-[24px] font-bold py-[30px] text-[#1c2041] md:py-[37px] tracking-heading leading-tight">
+                            <T>Our <span className="text-[#194BED]">Values</span> </T> <br /><T>Drive Everything We Do</T>
                         </h1>
-                        <p className="text-fluid-small max-w-[662px] tracking-para leading-tight">
+                        <p className="text-fluid-small text-[#1c2041] max-w-[662px] tracking-para leading-tight">
                             <T>Built on trust, innovation and excellence, we deliver measurable results that transform business and create lasting impact.</T>
                         </p>
                     </div>
@@ -1194,8 +1279,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     <div className="mt-[32px] xl:mt-0 flex justify-start xl:justify-end">
                         <button
                             onClick={() => setModalOpen(true)}
-                            className="h-[40px] md:h-[46px] w-full xl:w-auto max-w-[399px] flex items-center justify-between px-4 text-white text-fluid-small md:text-[18px]"
-                            style={{ background: 'linear-gradient(90deg, #194BED 0%, #29266E 100%)' }}
+                            className="h-[40px] md:h-[46px] w-full xl:w-auto max-w-[399px] flex items-center rounded-[50px] justify-between px-4 text-white text-[14px]"
+                            style={{ background: '#D63F10' }}
                         >
                             <T>Book a Personalized Walkthrough</T>
                             <svg
@@ -1217,22 +1302,72 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 <div className="solutions-carousel relative max-w-[1177px] mx-auto pl-6 md:pl-8 xl:pl-0 mt-[40px] md:mt-[38px] lg:mt-[70px]">
                     <div ref={carouselRef} className="carousel-wrapper overflow-x-auto scrollbar-hide">
                         <div
-                            className="carousel-track flex transition-transform duration-500 ease-in-out gap-8"
+                            className="carousel-track flex transition-transform duration-500 ease-in-out gap-4 md:gap-6 lg:gap-8"
                             style={{ scrollSnapType: "x mandatory" }}
                         >
                             {duplicatedCards.map((item, i) => (
                                 <div
                                     key={i}
-                                    className="solution-card box px-6 py-5 rounded-lg w-[250px] h-[156px] md:h-[200px] flex-shrink-0 flex flex-col justify-between shadow-xl"
-                                    style={{ scrollSnapAlign: "start", background: item.bg }}
+                                    className={`
+                        relative group overflow-hidden
+                        p-6 rounded-xl
+                        flex flex-col
+                        min-h-[321px]
+                        transition-all duration-300
+                        hover:shadow-lg border border-[#C8C8C8]
+                        flex-shrink-0
+                        w-full max-w-[232px]
+                        
+                        ${i % 2 === 0
+                                            ? 'bg-[#E8EEFF]'
+                                            : 'bg-[#F7F7F7]'
+                                        }
+                    `}
+                                    style={{ scrollSnapAlign: "start" }}
                                 >
-                                    <div className="flex flex-col justify-start items-start gap-6">
-                                        <h3 className="font-medium leading-tight tracking-heading text-fluid-body text-black">
-                                            <T>{item.title}</T>
-                                        </h3>
-                                        <p className="text-fluid-small mt-2 md:mt-3 tracking-para leading-tight text-black">
-                                            <T>{item.desc}</T>
-                                        </p>
+                                    {/* Hover gradient overlay */}
+                                    <div
+                                        className={`
+                            absolute inset-0
+                            transform scale-y-0
+                            transition-transform duration-300 ease-out
+                            group-hover:scale-y-100
+                            
+                            ${i % 2 === 0
+                                                ? 'bg-gradient-to-t from-[#e9efff] to-[#ededed] origin-bottom'
+                                                : 'bg-gradient-to-b from-[#e9efff] to-[#ededed] origin-top'
+                                            }
+                        `}
+                                    />
+
+                                    {/* CONTENT */}
+                                    <div className="relative z-10 flex flex-col h-full">
+                                        {/* Icon/Image at the TOP */}
+                                        <div className="flex-shrink-0 mb-4">
+                                            {item.icon && (
+                                                <div className="mb-4 flex items-center justify-center">
+                                                    <Image
+                                                        src={item.icon}
+                                                        width={140}
+                                                        height={140}
+                                                        alt=""
+                                                        className="h-[150px] w-[150px]"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* Title */}
+                                            <h3 className="text-[#303030] font-semibold text-[18px] leading-tight break-words mb-3">
+                                                {item.title}
+                                            </h3>
+                                        </div>
+
+                                        {/* Description */}
+                                        <div className="flex-grow overflow-hidden">
+                                            <p className="text-[#5A6183] text-[14px] leading-relaxed break-words">
+                                                {item.desc}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -1278,7 +1413,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </div>
 
                             {/* Image fixed at the bottom inside the white card */}
-                            <div className={`absolute bottom-0 hidden lg:${selectedLanguage.code === 'ar' ? 'right-0' : '-left-[200px]'} xl:${selectedLanguage.code === 'ar' ? 'right-0' : '-left-[400px]'} w-full lg:flex justify-center ${selectedLanguage.code === 'ar' ? 'lg:hidden' : ''}`}>
+                            <div className={`hidden lg:block absolute bottom-0 ${selectedLanguage.code === 'ar' ? 'hidden' : ''}`}>
                                 <Image
                                     src={AssetPath.home.clip}
                                     alt="faq"
@@ -1312,14 +1447,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         lg:w-auto w-[270px]
         h-[46px]
         flex items-center justify-center
-        rounded-[5px]
+        rounded-[50px]
         px-6
         text-white
-        text-fluid-small md:text-[14px] lg:text-[18px] whitespace-nowrap
+        text-[14px] whitespace-nowrap
         mt-[32px]
       "
                                 style={{
-                                    background: "linear-gradient(90deg, #194BED 0%, #29266E 100%)",
+                                    background: "#D63F10",
                                 }}
                             >
                                 {/* Centered text */}

@@ -125,7 +125,7 @@ import gdrpHome from "@/Assets/images/home/gdrp.png";
 import isoHome from "@/Assets/images/home/iso.png";
 import greenAccq from "@/Assets/images/home/green-accq.png";
 import aiImage from "@/Assets/images/home/ai.png";
-import acceleraWebp from "@/Assets/images/home/accelera.webp";
+import acceleraWebp from "@/Assets/images/home/accelera.png";
 import vidaHome from "@/Assets/images/home/VIDA_home.png";
 import dctceHome from "@/Assets/images/home/UAE_Peppol.webp";
 
@@ -484,6 +484,14 @@ import middleEast from "@/Assets/images/blogs/midddleEast.png"
 // Home images
 import starOr from "@/Assets/images/home/Star-or.svg";
 import belgiumFlagHome from "@/Assets/images/home/belgium.png";
+import dashboardHome from "@/Assets/images/home/dashboard.webp"
+import invoiceList from "@/Assets/images/home/invoice-list.webp"
+import orangeA from "@/Assets/images/home/orange-A.png"
+import f1 from "@/Assets/images/home/feature1.png"
+import f2 from "@/Assets/images/home/feature2.png"
+import f3 from "@/Assets/images/home/feature3.png"
+import f4 from "@/Assets/images/home/feature4.png"
+import f5 from "@/Assets/images/home/feature5.png"
 
 // ==================== PATTERN IMPORTS ====================
 import logoPattern from "@/Assets/images/pattern/logo-pattern.svg";
@@ -535,6 +543,7 @@ import websiteDesign14 from "@/Assets/images/icons/website-design 1-4.svg";
 import websiteDesign15 from "@/Assets/images/icons/website-design 1-5.svg";
 import websiteDesign1 from "@/Assets/images/icons/website-design 1.svg";
 import whiteStarIcon from "@/Assets/images/icons/white_star.svg";
+import curveyLine from "@/Assets/images/icons/curvey-line.svg";
 
 const AssetPath = {
   // HEADER SECTION
@@ -683,6 +692,14 @@ const AssetPath = {
     ai: acceleraWebp,
     vida: vidaHome,
     dctce: dctceHome,
+    dashboardHome,
+    invoiceList,
+    orangeA,
+    f1,
+    f2,
+    f3,
+    f4,
+    f5,
   },
 
   // LANDINGPAGE
@@ -1116,6 +1133,7 @@ const AssetPath = {
     websiteDesign15: websiteDesign15,
     websiteDesign1: websiteDesign1,
     whiteStarIcon: whiteStarIcon,
+    curveyLine: curveyLine,
   },
 };
 

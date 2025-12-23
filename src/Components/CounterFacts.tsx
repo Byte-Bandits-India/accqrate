@@ -29,7 +29,7 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
     desc,
 }) => {
     return (
-        <section className={`pt-12 md:pt-16 ${className}`}>
+        <section className={`pt-10 ${className}`}>
             <div className="max-w-[1200px] mx-auto px-6 md:px-8">
                 {/* Heading */}
                 {MainTitle && (
@@ -48,7 +48,7 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
                     {countSet.map((item, i) => (
                         <div key={i} className="flex flex-col items-center justify-center">
                             {/* count — responsive font size */}
-                            <div className="text-[18px] md:text-[38px] font-bold text-[#1C2041] flex items-baseline justify-center">
+                            <div className="text-[18px] md:text-[36px] font-bold text-[#1C2041] flex items-baseline justify-center">
                                 <CountUp start={0} end={item.value} duration={4} />
                                 {item.additionalText && (
                                     <span className="ml-1 md:text-[39px] text-[#1C2041]">
@@ -61,7 +61,7 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
                             </div>
 
                             {/* name — responsive font size */}
-                            <p className="text-[#5A6183] text-[14px] md:text-[16px] mt-2 h-[40px] leading-tight">
+                            <p className="text-[#5A6183] text-[14px] md:text-[16px] mt-2 h-[40px] lg:text-nowrap leading-tight">
                                 <T>{item.name}</T>
                             </p>
                         </div>
