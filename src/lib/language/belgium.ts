@@ -27,6 +27,26 @@ const translations = {
   nl: "Volledige naleving van de Belgische verplichting voor elektronische facturatie",
   de: "Vollständige Konformität mit der belgischen Verpflichtung zur elektronischen Rechnungsstellung"
 },
+"Full Compliance with": {
+  fr: "Conformité totale avec",
+  nl: "Volledige naleving van",
+  de: "Vollständige Konformität mit"
+},
+"Belgium's E-Invoicing": {
+  fr: "la facturation électronique belge",
+  nl: "de Belgische elektronische facturatie",
+  de: "die belgische elektronische Rechnungsstellung"
+},
+"Hassle-Free": {
+  fr: "Sans tracas",
+  nl: "Zonder gedoe",
+  de: "Problemlos"
+},
+"E-Invoicing Automation": {
+  fr: "Automatisation de la facturation électronique",
+  nl: "Automatisering van elektronische facturatie",
+  de: "Automatisierung der elektronischen Rechnungsstellung"
+},
 
   "A credit note is a commercial document issued by a seller to a buyer, reducing the amount owed on a previously issued invoice...": {
     fr: "Une note de crédit est un document commercial émis par un vendeur à un acheteur, réduisant le montant dû sur une facture précédemment émise...",
@@ -7637,12 +7657,21 @@ fr: "Intégration Peppol / EN 16931"
     de: "Europa-basierte E-Rechnungsstellungslösung für europäische Unternehmen.",
     fr: "Solution européenne de facturation électronique pour les entreprises européennes.",
    },
-   "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.": {
-    en: "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.",
-    nl: "Europese <span class='text-[#508847]'>e-facturatie</span> oplossing voor Europese bedrijven.",
-    de: "Europäische <span class='text-[#508847]'>E-Rechnungsstellung</span> Lösung für europäische Unternehmen.",
-    fr: "Solution européenne de <span class='text-[#508847]'>facturation électronique</span> pour les entreprises européennes.",
+   "European Based <span class='text-[#194bed]'>E-invoicing</span> Solution For European Companies.": {
+    en: "European Based <span class='text-[#194bed]'>E-invoicing</span> Solution For European Companies.",
+    nl: "Europese <span class='text-[#5194bed08847]'>e-facturatie</span> oplossing voor Europese bedrijven.",
+    de: "Europäische <span class='text-[#194bed]'>E-Rechnungsstellung</span> Lösung für europäische Unternehmen.",
+    fr: "Solution européenne de <span class='text-[#194bed]'>facturation électronique</span> pour les entreprises européennes.",
    },
+   "Get in touch with us for more information.": {
+  fr: "Contactez-nous pour plus d’informations.",
+  nl: "Neem contact met ons op voor meer informatie.",
+  de: "Kontaktieren Sie uns für weitere Informationen."
+},"Connect with us": {
+  fr: "Contactez-nous",
+  nl: "Neem contact met ons op",
+  de: "Kontaktieren Sie uns"
+},
   
   'Connect with our Consultant': {
     en: "Connect with our Consultant",
@@ -9274,7 +9303,85 @@ fr: "Intégration Peppol / EN 16931"
   nl: "Eén uniform platform zonder silo’s, met geïntegreerde modules op één datamodel, ingebouwde wereldwijde naleving, AI-gestuurde automatisering, flexibele cloud- of on-premise-implementatie, snelle ingebruikname en beveiliging en schaalbaarheid op ondernemingsniveau.",
   de: "Eine einheitliche Plattform ohne Silos mit integrierten Modulen auf einem einzigen Datenmodell, integrierter globaler Compliance, KI-gestützter Automatisierung, flexiblen Cloud- oder On-Premise-Bereitstellungen, schneller Implementierung sowie Sicherheit und Skalierbarkeit auf Unternehmensniveau.",
   fr: "Une plateforme unifiée sans silos, avec des modules intégrés sur un modèle de données unique, une conformité mondiale intégrée, une automatisation alimentée par l’IA, un déploiement flexible en cloud ou sur site, une mise en œuvre rapide et une sécurité et une évolutivité de niveau entreprise."
-}
+},
+"See how our customers drive impact": {
+  fr: "Découvrez comment nos clients créent de l'impact",
+  nl: "Bekijk hoe onze klanten impact maken",
+  de: "Sehen Sie, wie unsere Kunden Wirkung erzielen"
+},
+"Read more success stories": {
+  fr: "Lire d'autres histoires à succès",
+  nl: "Lees meer succesverhalen",
+  de: "Weitere Erfolgsgeschichten lesen"
+},
+"Customer Success Stories": {
+  fr: "Témoignages de réussite de nos clients",
+  nl: "Succesverhalen van onze klanten",
+  de: "Erfolgsgeschichten unserer Kunden"
+},
+"E-Invoice Revolution": {
+  fr: "Révolution de la facturation électronique",
+  nl: "E-facturatie-revolutie",
+  de: "Revolution der elektronischen Rechnungsstellung"
+},
+"Client-Centric Innovation": {
+  fr: "Innovation centrée sur le client",
+  nl: "Klantgerichte innovatie",
+  de: "Kundenzentrierte Innovation"
+},
+"Outstanding IT Solutions": {
+  fr: "Solutions informatiques exceptionnelles",
+  nl: "Uitstekende IT-oplossingen",
+  de: "Herausragende IT-Lösungen"
+},
+"E-Invoice Revolution Description": {
+  fr: "Découvrez comment Accqrate a transformé les opérations de facturation grâce à une intégration transparente, une conformité totale et une efficacité accrue.",
+  nl: "Ontdek hoe Accqrate facturatieprocessen heeft getransformeerd met naadloze integratie, volledige naleving en verbeterde efficiëntie.",
+  de: "Erfahren Sie, wie Accqrate Rechnungsprozesse durch nahtlose Integration, vollständige Compliance und höhere Effizienz transformiert hat."
+},
+"Client-Centric Innovation Description": {
+  fr: "Découvrez comment l’approche centrée sur le client d’Accqrate stimule l’innovation, la flexibilité et l’excellence opérationnelle.",
+  nl: "Ontdek hoe de klantgerichte aanpak van Accqrate innovatie, flexibiliteit en operationele excellentie stimuleert.",
+  de: "Erfahren Sie, wie der kundenzentrierte Ansatz von Accqrate Innovation, Flexibilität und operative Exzellenz vorantreibt."
+},
+"Outstanding IT Solutions Description": {
+  fr: "Découvrez comment les solutions informatiques sur mesure d’Accqrate améliorent l’efficacité opérationnelle et répondent aux défis régionaux uniques.",
+  nl: "Ontdek hoe de op maat gemaakte IT-oplossingen van Accqrate de operationele efficiëntie verbeteren en regionale uitdagingen aanpakken.",
+  de: "Erfahren Sie, wie die maßgeschneiderten IT-Lösungen von Accqrate die operative Effizienz steigern und regionale Herausforderungen meistern."
+},
+"Read Full Story": {
+  fr: "Lire l’histoire complète",
+  nl: "Lees het volledige verhaal",
+  de: "Vollständige Geschichte lesen"
+},
+"View Case Study": {
+  fr: "Voir l’étude de cas",
+  nl: "Bekijk de casestudy",
+  de: "Fallstudie ansehen"
+},
+"Explore Customer Story": {
+  fr: "Découvrir le témoignage client",
+  nl: "Ontdek het klantverhaal",
+  de: "Kundengeschichte entdecken"
+},
+"Accqrate\'s e-invoice solution has truly revolutionized our business operations. With their expertise and deep understanding of ZATCA requirements, they seamlessly integrated our invoicing system with the tax authority, ensuring compliance and accuracy at every step. This integration has not only saved us valuable time but also significantly reduced the risk of errors and non-compliance.": {
+  fr: "La solution de facturation électronique d’Accqrate a véritablement révolutionné nos opérations commerciales. Grâce à leur expertise et à leur compréhension approfondie des exigences de la ZATCA, ils ont intégré notre système de facturation de manière transparente avec l’autorité fiscale, garantissant la conformité et la précision à chaque étape. Cette intégration nous a non seulement permis de gagner un temps précieux, mais a également considérablement réduit le risque d’erreurs et de non-conformité.",
+  nl: "De e-factuuroplossing van Accqrate heeft onze bedrijfsactiviteiten echt revolutionair veranderd. Dankzij hun expertise en diepgaande kennis van de ZATCA-vereisten hebben zij ons facturatiesysteem naadloos geïntegreerd met de belastingautoriteit, waarbij naleving en nauwkeurigheid in elke stap werden gewaarborgd. Deze integratie heeft ons niet alleen waardevolle tijd bespaard, maar ook het risico op fouten en niet-naleving aanzienlijk verminderd.",
+  de: "Die E-Rechnungslösung von Accqrate hat unsere Geschäftsabläufe wirklich revolutioniert. Dank ihrer Expertise und ihres tiefgehenden Verständnisses der ZATCA-Anforderungen integrierten sie unser Rechnungssystem nahtlos mit der Steuerbehörde und stellten dabei in jedem Schritt Compliance und Genauigkeit sicher. Diese Integration sparte nicht nur wertvolle Zeit, sondern reduzierte auch erheblich das Risiko von Fehlern und Nichteinhaltung."
+},
+"An ERP team must excel in understanding requirements, delivering on time, and most importantly, addressing business needs without compromising functionality.With Accqrate, we\'ve discovered a solution that embodies these qualities seamlessly.Accqrate Solutions stands out as a robust product, offering exceptional flexibility, scalability, and performance.Its intuitive interface significantly reduces the need for extensive training, saving both time and effort. Moreover, the team\'s strong communication skills and unwavering dedication have transformed how we manage our business processes. Their exceptional teamwork and support are truly commendable.": {
+  fr: "Une équipe ERP doit exceller dans la compréhension des exigences, le respect des délais et, surtout, la prise en compte des besoins métiers sans compromettre la fonctionnalité. Avec Accqrate, nous avons découvert une solution qui incarne parfaitement ces qualités. Accqrate Solutions se distingue comme un produit robuste, offrant une flexibilité, une évolutivité et des performances exceptionnelles. Son interface intuitive réduit considérablement le besoin de formations approfondies, permettant ainsi de gagner du temps et de l’efficacité. De plus, les solides compétences en communication de l’équipe et son engagement constant ont transformé notre manière de gérer les processus métiers. Leur travail d’équipe et leur support exceptionnels sont véritablement remarquables.",
+  nl: "Een ERP-team moet uitblinken in het begrijpen van vereisten, het tijdig opleveren en vooral in het ondersteunen van bedrijfsbehoeften zonder concessies te doen aan functionaliteit. Met Accqrate hebben we een oplossing ontdekt die deze kwaliteiten naadloos belichaamt. Accqrate Solutions onderscheidt zich als een robuust product met uitzonderlijke flexibiliteit, schaalbaarheid en prestaties. De intuïtieve interface vermindert aanzienlijk de noodzaak van uitgebreide training, wat zowel tijd als moeite bespaart. Bovendien hebben de sterke communicatieve vaardigheden en de niet-aflatende toewijding van het team de manier waarop wij onze bedrijfsprocessen beheren volledig getransformeerd. Hun uitzonderlijke teamwork en ondersteuning zijn werkelijk bewonderenswaardig.",
+  de: "Ein ERP-Team muss sich durch ein tiefes Verständnis der Anforderungen, termingerechte Lieferung und vor allem durch die Berücksichtigung geschäftlicher Bedürfnisse auszeichnen, ohne dabei die Funktionalität zu beeinträchtigen. Mit Accqrate haben wir eine Lösung gefunden, die diese Eigenschaften nahtlos verkörpert. Accqrate Solutions hebt sich als robustes Produkt hervor und bietet außergewöhnliche Flexibilität, Skalierbarkeit und Leistung. Die intuitive Benutzeroberfläche reduziert den Bedarf an umfangreichen Schulungen erheblich und spart dadurch sowohl Zeit als auch Aufwand. Darüber hinaus haben die ausgeprägten Kommunikationsfähigkeiten und das unermüdliche Engagement des Teams unsere Art der Geschäftsprozessverwaltung grundlegend verändert. Ihr außergewöhnlicher Teamgeist und Support sind wirklich bemerkenswert."
+},
+"Your ability to tailor IT solutions that address the unique challenges of our region has greatly improved our operational efficiency. Your proactive approach and commitment to client satisfaction have been truly impressive.": {
+  fr: "Votre capacité à concevoir des solutions informatiques sur mesure répondant aux défis uniques de notre région a considérablement amélioré notre efficacité opérationnelle. Votre approche proactive et votre engagement envers la satisfaction client ont été véritablement impressionnants.",
+  nl: "Uw vermogen om IT-oplossingen op maat te ontwikkelen die inspelen op de unieke uitdagingen van onze regio heeft onze operationele efficiëntie aanzienlijk verbeterd. Uw proactieve aanpak en toewijding aan klanttevredenheid waren werkelijk indrukwekkend.",
+  de: "Ihre Fähigkeit, maßgeschneiderte IT-Lösungen zu entwickeln, die den einzigartigen Herausforderungen unserer Region gerecht werden, hat unsere operative Effizienz erheblich verbessert. Ihr proaktiver Ansatz und Ihr Engagement für die Kundenzufriedenheit waren wirklich beeindruckend."
+},
+
+
+
 
   
 };

@@ -331,37 +331,37 @@ const uaeContent: CountryContent = {
   whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
   whyAccqrateFeatures: [
     {
-      img: AssetPath.home.feature1,
+      img: AssetPath.icons.websiteDesign1,
       title: "One Platform.",
       description: "Connect Multiple ERP or POS into one unified platform for FTA-invoicing.",
       sub: "Harmonised Data."
     },
     {
-      img: AssetPath.home.feature2,
+      img: AssetPath.icons.websiteDesign11,
       title: "Built‑in FTA ",
       description: "Connect ERP/POS to FTA from Direct to PEPPOL based Integration..",
       sub: "e-invoicing compliance:"
     },
     {
-      img: AssetPath.home.feature3,
+      img: AssetPath.icons.websiteDesign12,
       title: "Deploy your",
       description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
       sub: "way."
     },
     {
-      img: AssetPath.home.feature4,
+      img: AssetPath.icons.websiteDesign13,
       title: "AI,",
       description: "Accelera, our AI copilot , accelerates routine work, insights and decisions.",
       sub: "everywhere."
     },
     {
-      img: AssetPath.home.feature5,
+      img: AssetPath.icons.websiteDesign14,
       title: "Fast",
       description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
       sub: "time‑to‑value."
     },
     {
-      img: AssetPath.home.feature6,
+      img: AssetPath.icons.websiteDesign15,
       title: "Enterprise‑grade.",
       description: "Security, scalability and performance proven across 30+ industries.",
       sub: ""

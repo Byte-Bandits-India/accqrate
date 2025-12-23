@@ -8699,7 +8699,90 @@ const blogTranslations: TranslationsMap = {
 },
 "As companies rework their invoicing infrastructure, many are turning to modern platforms that simplify these compliance requirements. Solutions such as Accqrate can play a supportive role by enabling structured e-invoicing, automating data validation, and offering seamless integration capabilities that help businesses transition smoothly into the new regulatory environment.": {
     "ar": "بينما تعمل الشركات على إعادة هيكلة بنيتها التحتية للفوترة، يتجه الكثير منها إلى منصات حديثة تبسط متطلبات الامتثال هذه. يمكن للحلول مثل Accqrate أن تلعب دورًا داعمًا من خلال تمكين الفوترة الإلكترونية المهيكلة، وأتمتة التحقق من البيانات، وتقديم قدرات تكامل سلسة تساعد الشركات على الانتقال بسلاسة إلى البيئة التنظيمية الجديدة."
-  }
+  },
+  "Full Compliance with Belgium's E-Invoicing Mandate": {
+  ar: "الامتثال الكامل لتفويض الفوترة الإلكترونية في بلجيكا"
+},
+"Full Compliance with": {
+  ar: "الامتثال الكامل لـ"
+},
+"Belgium's E-Invoicing": {
+  ar: "الفوترة الإلكترونية في بلجيكا"
+},
+"Hassle-Free": {
+  ar: "دون تعقيدات"
+},
+"E-Invoicing Automation": {
+  ar: "أتمتة الفوترة الإلكترونية"
+},
+"See how our customers drive impact": {
+  ar: "اكتشف كيف يُحدث عملاؤنا تأثيرًا حقيقيًا"
+},
+"Read more success stories": {
+  ar: "اقرأ المزيد من قصص النجاح"
+},
+"Customer Success Stories": {
+  ar: "قصص نجاح عملائنا"
+},
+"E-Invoice Revolution": {
+  ar: "ثورة الفوترة الإلكترونية"
+},
+"Client-Centric Innovation": {
+  ar: "الابتكار المرتكز على العميل"
+},
+"Outstanding IT Solutions": {
+  ar: "حلول تقنية معلومات متميزة"
+},
+"E-Invoice Revolution Description": {
+  ar: "اكتشف كيف ساهمت Accqrate في تحويل عمليات الفوترة من خلال تكامل سلس وامتثال كامل وكفاءة محسّنة."
+},
+"Client-Centric Innovation Description": {
+  ar: "اكتشف كيف يعزز نهج Accqrate المرتكز على العميل الابتكار والمرونة والتميّز التشغيلي."
+},
+"Outstanding IT Solutions Description": {
+  ar: "اكتشف كيف تعمل حلول تقنية المعلومات المصممة خصيصًا من Accqrate على تحسين الكفاءة التشغيلية ومواجهة التحديات الإقليمية الفريدة."
+},
+"Read Full Story": {
+  ar: "اقرأ القصة كاملة"
+},
+"View Case Study": {
+  ar: "عرض دراسة الحالة"
+},
+"Explore Customer Story": {
+  ar: "استكشف قصة العميل"
+},
+"Accqrate's e-invoice solution has truly revolutionized our business operations. With their expertise and deep understanding of ZATCA requirements, they seamlessly integrated our invoicing system with the tax authority, ensuring compliance and accuracy at every step. This integration has not only saved us valuable time but also significantly reduced the risk of errors and non-compliance.": {
+  ar: "لقد أحدث حل الفوترة الإلكترونية من Accqrate تحولًا حقيقيًا في عملياتنا التجارية. وبفضل خبرتهم وفهمهم العميق لمتطلبات هيئة الزكاة والضريبة والجمارك (ZATCA)، قاموا بدمج نظام الفوترة لدينا بسلاسة مع الجهة الضريبية، مما ضمن الامتثال والدقة في كل خطوة. ولم يوفر هذا التكامل وقتًا ثمينًا فحسب، بل قلل أيضًا بشكل كبير من مخاطر الأخطاء وعدم الامتثال."
+},
+"An ERP team must excel in understanding requirements, delivering on time, and most importantly, addressing business needs without compromising functionality.With Accqrate, we've discovered a solution that embodies these qualities seamlessly.Accqrate Solutions stands out as a robust product, offering exceptional flexibility, scalability, and performance.Its intuitive interface significantly reduces the need for extensive training, saving both time and effort. Moreover, the team's strong communication skills and unwavering dedication have transformed how we manage our business processes. Their exceptional teamwork and support are truly commendable.": {
+  ar: "يجب أن يتميز فريق أنظمة تخطيط موارد المؤسسات (ERP) بفهم المتطلبات، والالتزام بمواعيد التسليم، والأهم من ذلك تلبية احتياجات الأعمال دون التأثير على الوظائف. ومع Accqrate، اكتشفنا حلاً يجسد هذه الصفات بسلاسة. تتميز Accqrate Solutions كمنتج قوي يوفر مرونة عالية وقابلية للتوسع وأداءً متميزًا. كما أن واجهته سهلة الاستخدام تقلل بشكل كبير من الحاجة إلى تدريب مكثف، مما يوفر الوقت والجهد. بالإضافة إلى ذلك، ساهمت مهارات التواصل القوية لدى الفريق والتزامهم المستمر في إحداث تحول حقيقي في طريقة إدارتنا لعمليات الأعمال. إن روح العمل الجماعي والدعم الاستثنائي الذي يقدمونه جديران بالإشادة."
+},
+"Your ability to tailor IT solutions that address the unique challenges of our region has greatly improved our operational efficiency. Your proactive approach and commitment to client satisfaction have been truly impressive.": {
+  ar: "إن قدرتكم على تصميم حلول تقنية معلومات مخصصة تعالج التحديات الفريدة في منطقتنا قد ساهمت بشكل كبير في تحسين كفاءتنا التشغيلية. لقد كان نهجكم الاستباقي والتزامكم برضا العملاء مثيرين للإعجاب حقًا."
+},
+"Connect with us": {
+  ar: "تواصل معنا"
+},
+"Have a question about our solutions and services?": {
+  ar: "هل لديك سؤال حول حلولنا وخدماتنا؟"
+},
+"Compliant with UAE\s Mandatory B2B E-Invoicing Regulation": {
+  ar: "قم بإنشاء فواتير متوافقة بالكامل مع نموذج الزوايا الخمس لهيئة الضرائب الإماراتية (DCTCE)"
+},
+"Generate invoices fully compliant with UAE's FTA 5 Corner Model (DCTCE)": {
+  ar: "قم بإنشاء فواتير متوافقة بالكامل مع نموذج الزوايا الخمس لهيئة الضرائب الإماراتية (DCTCE)"
+},
+"Accqrate ensures complete compliance with the UAE's Decentralized Continuous Transaction Control and Exchange (DCTCE) framework. We generate UAE PINT-compliant e-invoices, aligned with EN 16931 and fully integrated with the national Peppol network for secure, standardized exchange. Every invoice is validated, signed, transmitted, and archived according to the latest FTA e-invoicing regulations.": {
+  ar: "تضمن Accqrate الامتثال الكامل لإطار العمل الإماراتي للتحكم والتبادل المستمر واللامركزي للمعاملات (DCTCE). نحن نقوم بإنشاء فواتير إلكترونية متوافقة مع نظام PINT الإماراتي، متوافقة مع معيار EN 16931 ومتكاملة بالكامل مع شبكة Peppol الوطنية للتبادل الآمن والمعيار. يتم التحقق من كل فاتورة وتوقيعها وإرسالها وأرشفتها وفقًا لأحدث لوائح الفوترة الإلكترونية لهيئة الضرائب الفيدرالية (FTA)."
+},
+"Accqrate is engineered for the UAE's evolving digital taxation landscape. We support automated VAT validation, structured invoice exchange, and upcoming FTA digital reporting requirements, helping businesses stay compliant as the UAE expands its Peppol-based framework.": {
+  ar: "تم تصميم Accqrate لمواكبة التطورات في البيئة الرقمية للضرائب في الإمارات. نحن ندعم التحقق التلقائي من ضريبة القيمة المضافة، وتبادل الفواتير بشكل منظم، ومتطلبات التقارير الرقمية المستقبلية لهيئة الضرائب الفيدرالية (FTA)، مما يساعد الشركات على البقاء ملتزمة بالقوانين مع توسع الإمارات في إطار Peppol."
+}
+
+
+
+
+
 
 
 

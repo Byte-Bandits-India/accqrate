@@ -4,6 +4,7 @@ import AssetPath from '@/AssetPath/AssetPath';
 import curveyLine from "@/Assets/images/icons/curvey-line.svg";
 import profile1 from "@/Assets/images/home/profile1.png";
 import profile2 from "@/Assets/images/home/profile2.png";
+import T from '@/Components/T';
 
 // Define the interface for testimonial data
 export interface TestimonialData {
@@ -179,13 +180,13 @@ const SuccessStories: React.FC = () => {
                     <div className="space-y-6">
                         <div>
                             <h2 className="text-[24px] font-bold text-[#1c2041] max-w-[295px] mb-4">
-                                See how our customers drive impact
+                                <T>See how our customers drive impact</T>
                             </h2>
                             <Link
                                 href="/success-story"
                                 className="inline-flex items-center text-[#F05A28] text-[18px] transition-colors duration-300 hover:text-[#d94a1f]"
                             >
-                                Read more success stories
+                                <T>Read more success stories</T>
                                 <ArrowRightIcon />
                             </Link>
                         </div>
@@ -213,7 +214,7 @@ const SuccessStories: React.FC = () => {
                                             <div className="text-white pb-4">
                                                 {/* Title */}
                                                 <h3 className="text-[18px] font-bold mb-3">
-                                                    {data.title}
+                                                    <T>{data.title}</T>
                                                 </h3>
 
                                                 {/* Curvy Line */}
@@ -223,17 +224,17 @@ const SuccessStories: React.FC = () => {
 
                                                 {/* Description */}
                                                 <p className="text-[14px] opacity-90 leading-relaxed mb-4">
-                                                    {data.description}
+                                                    <T>{data.description}</T>
                                                 </p>
 
                                                 {/* Company Info */}
                                                 <div className="flex items-center justify-between gap-4 pt-4">
                                                     <div>
                                                         <div className="font-semibold text-[16px]">
-                                                            {data.namePosition}
+                                                            <T>{data.namePosition}</T>
                                                         </div>
                                                         <div className="text-blue-200 text-sm">
-                                                            {data.company}
+                                                            <T>{data.company}</T>
                                                         </div>
                                                     </div>
                                                     <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">

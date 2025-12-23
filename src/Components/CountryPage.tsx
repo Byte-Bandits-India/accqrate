@@ -1054,11 +1054,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     {/* Compliance Card */}
                                     <FadeUp className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[24px] text-[#1c2041] font-bold tracking-heading">
-                                            Full Compliance with{" "}
+                                            <T>Full Compliance with{" "}</T>
                                             <span className="text-[#194BED] font-semibold">
                                                 Belgium's E-Invoicing
                                             </span>{" "}
-                                            Mandate
+                                            <T>Mandate</T>
                                         </h2>
 
                                         {countryContent.complianceSection && (
@@ -1549,13 +1549,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                     {/* Title */}
                                     <h3 className="text-[#303030] font-semibold text-[18px] leading-tight break-words mb-3">
-                                        {item.title}
+                                        <T>{item.title}</T>
                                     </h3>
 
                                     {/* Description */}
                                     <div className="flex-grow">
                                         <p className="text-[#5A6183] text-[14px] leading-relaxed break-words">
-                                            {item.desc}
+                                            <T>{item.desc}</T>
                                         </p>
                                     </div>
                                 </div>
