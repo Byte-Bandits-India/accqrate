@@ -99,7 +99,7 @@ export default function ZatcaSection() {
 
   return (
     <section
-      className="w-full bg-gradient-to-r from-[#242087] to-[#1A0C48] text-white relative py-6 md:py-8"
+      className="w-full bg-gradient-to-r from-[#242087] to-[#1A0C48] text-white relative py-6 "
       data-aos="fade-up"
     >
       <div
@@ -117,7 +117,7 @@ export default function ZatcaSection() {
       >
         {/* COLUMN 1 — LEFT CONTENT */}
         <div className="z-20 text-left order-2 md:order-1">
-          <h2 className="text-[20px] md:text-[30px] font-medium mb-6 leading-tight">
+          <h2 className="text-[18px] md:text-[24px] font-bold mb-6 leading-tight">
             <T lang={lang} countryCode={countryCode}>{content.title}</T>
           </h2>
 
@@ -134,7 +134,7 @@ export default function ZatcaSection() {
                   height={20}
                   className="mt-1 flex-shrink-0"
                 />
-                <span className="text-[15px] md:text-[20px]">
+                <span className="text-[14px] md:text-[16px]">
                   <T lang={lang} countryCode={countryCode}>{text}</T>
                 </span>
               </li>
@@ -143,7 +143,7 @@ export default function ZatcaSection() {
 
           <button
             onClick={() => setModalOpen(true)}
-            className="inline-flex text-[14px] md:text-[18px] items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-6 py-4 rounded-full"
+            className="inline-flex text-[12px] md:text-[14px] items-center justify-center gap-2 bg-[#d63f10] text-[#FFFFFF] font-medium px-4 py-3 rounded-full"
           >
             <T lang={lang} countryCode={countryCode}>Book a Demo</T> <ArrowRight className="w-4 h-4" />
           </button>
