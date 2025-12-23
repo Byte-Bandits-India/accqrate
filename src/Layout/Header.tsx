@@ -395,7 +395,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({
           </div>
 
           {/* Right: subitems */}
-          <div className="col-span-2 mb-20">
+          <div className="col-span-2 mb-10">
             <h6 className="pl-2.5 font-semibold uppercase text-sm text-gray-500 mb-4">
               {activeSection}
             </h6>
