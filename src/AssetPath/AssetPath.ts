@@ -504,6 +504,8 @@ import stone from "@/Assets/images/about/stone.png";
 import hands from "@/Assets/images/about/hands.png";
 import ourteam from "@/Assets/images/about/ourteam.png";
 import aboutHero from "@/Assets/images/about/about-hero.webp"; 
+import beabout from "@/Assets/images/about/BE_about.webp";
+import bemission from "@/Assets/images/about/BE_mission.webp";
 
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
@@ -1087,13 +1089,16 @@ const AssetPath = {
   },
 
   // ABOUT US IMAGES
-  aboutus: {
+ aboutus: {
     bluestar: bluestar,
     stone: stone,
     hands: hands,
     hero: aboutHero,
     ourteam: ourteam,
+    beabout: beabout,
+    bemission: bemission,
   },
+
 
   icons: {
     addCompany: addCompany,
