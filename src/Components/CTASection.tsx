@@ -98,14 +98,14 @@ const CTASection = () => {
 
   return (
     <div className="w-full bg-gradient-to-l from-[#242087] to-[#1A0C48] relative shadow-xl">
-      <div className="md:flex gap-8 xl:max-h-[306px] relative z-10 max-w-[1440px] p-6 md:p-10 lg:pb-0 mx-auto">
+      <div className="md:flex gap-8 xl:max-h-[306px] relative z-10 max-w-[1280px] p-6 md:p-10 lg:pb-0 mx-auto">
         {/* LEFT CONTENT */}
         <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
           <h2 className="text-[20px] lg:text-[24px] font-bold mb-4">
             <T>{content.title}</T>
           </h2>
 
-          <p className="text-fluid-small lg:text-[18px] mb-6 text-white/90 leading-tight xl:max-w-[848px] ">
+          <p className="text-fluid-small lg:text-[18px] mb-6 text-white/90 leading-tight xl:max-w-[650px] ">
             <T>{content.description1}</T>
           </p>
 
@@ -169,8 +169,8 @@ const CTASection = () => {
             onClick={() => handleButtonClick(button.id)}
             className="
               relative
-              lg:w-[300px] w-[270px] md:w-[240px]
-              min-h-[46px] md:min-h-[52px]
+              lg:w-auto w-[270px] md:w-[240px]
+              min-h-[46px] md:min-h-[45px]
               flex items-center justify-center
               bg-[#d63f10]
               rounded-[50px]
