@@ -4,26 +4,19 @@ import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
 import Link from "next/link";
-import { PhoneCall } from "lucide-react";
-import {
-  Facebook,
-  Linkedin,
-  Twitter,
-  Instagram,
-  Youtube
-} from "lucide-react";
-import ContactFormModal from "@/Components/ContactFormModal"; // Import the modal
+import { PhoneCall, Facebook, Linkedin, Twitter, Instagram, Youtube } from "lucide-react";
+import ContactFormModal from "@/Components/ContactFormModal";
 import T from "@/Components/T";
 
 const ContactFormPage = () => {
   const params = useParams();
   const countryCode = (params?.countryCode as string)?.toUpperCase();
   const lang = (params?.lang as string) || "en";
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedModule, setSelectedModule] = useState("");
 
-  // Country-specific card content only
-  const countryCardContent: Record<string, {
+   const countryCardContent: Record<string, {
     title: string;
     description: string;
     cards: {
@@ -172,18 +165,7 @@ const ContactFormPage = () => {
     }
   };
 
-  const cardContent = getCountryCardContent();
-
-  // Handle button click
-  const handleCardButtonClick = (module: string = "") => {
-    setSelectedModule(module);
-    setIsModalOpen(true);
-  };
-
-  // Support multiple offices per country. Each country maps to an object
-  // with an `offices` array. Each office can optionally include a `city` field
-  // which will be rendered as a heading above its address lines.
-  const countryOfficeDetails: Record<
+  const cardContent = getCountryCardContent();                                                                                                            const countryOfficeDetails: Record< 
     string,
     {
       offices: {
@@ -321,237 +303,167 @@ const ContactFormPage = () => {
       ],
     },
   };
+  /* ---------------- BUTTON HANDLER ---------------- */
+  const handleCardButtonClick = (module: string = "") => {
+    setSelectedModule(module);
+    setIsModalOpen(true);
+  };
 
 
   const officeDetails = countryOfficeDetails[countryCode] || countryOfficeDetails.DEFAULT;
-  const primaryPhone = officeDetails.offices?.[0]?.phone || officeDetails.offices?.[0]?.addressLines?.[0] || '';
+  const primaryPhone = officeDetails.offices?.[0]?.phone || "";
 
   return (
-    <div className="min-h-screen bg-[#F8F6FF] px-4 pb-12 pt-10 md:pt-[60px] lg:pt-[80px]">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-6">
-        {/* Left Section - Info (UNCHANGED) */}
-        <div className="w-full max-w-[475px] text-left">
-          <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium"><T lang={lang} countryCode={countryCode}>{cardContent.title}</T></h2>
-          <div className="w-[100px] md:w-[156px] h-[2px] bg-[#194BED] my-[20px]"></div>
-          <h2 className="text-fluid-body lg:text-[16px] font-medium text-[#000000] mb-2">
-            <T lang={lang} countryCode={countryCode}>Our team is here to help</T>
+    <div className="bg-white px-6 py-14">
+      <div className="max-w-[1177px] mx-auto">
+
+        {/* ================= TOP HEADER ROW ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-6">
+          <h2 className="text-[18px] lg:text-[24px] font-bold text-[#1C2041]">
+            <T lang={lang} countryCode={countryCode}>{cardContent.title}</T>
           </h2>
-          <p className="text-[#FF6E3E] text-fluid-small font-medium mb-2">
-            Contact@accqrate-erp.com
+
+          <p className="text-[#5A6183] text-[14px] leading-relaxed">
+            <T lang={lang} countryCode={countryCode}>{cardContent.description}</T>
           </p>
+        </div>
 
-          {/* Office Locations Section */}
-          <div className="bg-[#EFF3FF] p-6 mt-6 rounded-2xl max-w-[420px]">
-            <div className="">
-              {/* Call Us Label */}
-              <p className="text-fluid-small font-bold text-[#000000] pb-2 leading-relaxed">
-                <T>Call Us</T>
-              </p>
+        {/* ================= MAIN GRID ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10">
 
-              {/* Phone Timing */}
-              <p className="text-[12px] md:text-[16px] pb-2 text-[#000000] font-normal leading-relaxed">
-                <T>Call our team Monday - Friday from 9:00 AM to 5:00 PM</T>
-              </p>
+          {/* ================= LEFT: 3 CARDS (STRUCTURED AS IMAGE) ================= */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-              {/* Phone Section with Icon */}
-              <div className="pb-2 text-[#1F3FBF]">
-                {primaryPhone.split('\n').map((line, index) => (
-                  <div key={index} className="flex items-center gap-2 mb-1">
-                    <PhoneCall className="w-4 h-4 flex-shrink-0" />
-                    <span className="text-[18px] md:text-[22px] font-semibold leading-relaxed">
-                      {line}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            {/* CARD 1 */}
+            <div className="bg-white border border-[#E6E9FF] rounded-xl p-6">
+              <span className="text-xs font-bold text-[#194bed] bg-[#EEF1FF] px-3 py-2 rounded-md">
+                <T>{cardContent.cards.card1.badge}</T>
+              </span>
 
-              {/* Office Locations Title */}
-              <h3 className="text-[#1F3FBF] font-semibold text-[20px] md:text-[24px] leading-relaxed mb-4">
-                <span className="text-black">
-                  <T>Our</T>
-                </span>{" "}
-                <T>Office</T>{" "}
-                <span className="text-black">
-                  <T>Locations</T>
-                </span>
+              <h3 className="font-bold md:text-[18px] mt-4 text-[#1C2041]">
+                <T>{cardContent.cards.card1.title}</T>
               </h3>
 
+              <p className="text-[#5A6183] md:text-[14px] mt-2 text-sm">
+                <T>{cardContent.cards.card1.description}</T>
+              </p>
+
+              <button
+                onClick={() => handleCardButtonClick(cardContent.cards.card1.module)}
+                className="mt-4 bg-[#D63F10] text-white px-5 py-1.7 rounded-full text-sm"
+              >
+                <T>{cardContent.cards.card1.buttonText}</T> ↗
+              </button>
             </div>
 
+            {/* CARD 2 */}
+            <div className="bg-white border border-[#E6E9FF] rounded-xl p-6">
+              <span className="text-xs font-bold text-[#194bed] bg-[#EEF1FF] px-3 py-2 rounded-md">
+                <T>{cardContent.cards.card2.badge}</T>
+              </span>
 
-            <div className="bg-white rounded-xl p-4 space-y-6  shadow-sm">
-              {/* Offices: left column images, right column addresses */}
-              <div className="space-y-6">
-                {officeDetails.offices?.map((office, officeIdx) => (
-                  <div key={officeIdx} className="flex items-start gap-4">
-                    {/* Image */}
-                    <img
-                      src={office.image || AssetPath.pattern.dammamCircle.src}
-                      alt={office.city || `Office ${officeIdx + 1}`}
-                      className="w-[120px] h-[70px] object-contain flex-shrink-0"
-                    />
+              <h3 className="font-bold md:text-[18px] mt-4 text-[#1C2041]">
+                <T>{cardContent.cards.card2.title}</T>
+              </h3>
 
-                    {/* Address */}
-                    <div>
-                      {office.city && (
-                        <p className="text-sm font-semibold text-gray-800 mb-1">
-                          {office.city}
-                        </p>
-                      )}
+              <p className="text-[#5A6183] mt-2 text-sm">
+                <T>{cardContent.cards.card2.description}</T>
+              </p>
 
-                      {office.addressLines.map((line, idx) => (
-                        <p
-                          key={idx}
-                          className="text-[15px] text-[#9a8e9e] underline leading-relaxed"
-                        >
-                          <T lang={lang} countryCode={countryCode}>{line}</T>
-                        </p>
-                      ))}
-                    </div>
+              <button
+                onClick={() => handleCardButtonClick(cardContent.cards.card2.module)}
+                className="mt-4 bg-[#D63F10] text-white px-5 py-1.7 rounded-full text-sm"
+              >
+                <T>{cardContent.cards.card2.buttonText}</T> ↗
+              </button>
+            </div>
+
+            {/* CARD 3 */}
+            <div className="bg-white border border-[#E6E9FF] rounded-xl p-6 ">
+              <span className="text-xs font-bold text-[#194bed] bg-[#EEF1FF] px-3 py-2 rounded-md">
+                <T>{cardContent.cards.card3.badge}</T>
+              </span>
+
+              <h3 className="font-bold md:text-[18px] mt-4 text-[#1C2041]">
+                <T>{cardContent.cards.card3.title}</T>
+              </h3>
+
+              <p className="text-[#5A6183] mt-2 text-sm max-w-[520px]">
+                <T>{cardContent.cards.card3.description}</T>
+              </p>
+
+              <button
+                onClick={() => handleCardButtonClick(cardContent.cards.card3.module)}
+                className="mt-4 bg-[#D63F10] text-white px-5 py-1.7 rounded-full text-sm"
+              >
+                <T>{cardContent.cards.card3.buttonText}</T> ↗
+              </button>
+            </div>
+
+          </div>
+
+          {/* ================= RIGHT: CALL US PANEL ================= */}
+          <div className="bg-[#eff3ff] rounded-2xl p-6 h-fit">
+
+            <h3 className="font-bold md:text-[16px] text-[#1C2041] mb-4">
+              <T>Call us</T>
+            </h3>
+
+            <p className="text-sm  mb-4">
+              <T>Call our team Sun - Thu from 9am to 5pm</T>
+            </p>
+
+            <div className="flex items-center gap-2 text-[#194bed] font-bold text-[18px] underline md:text-[20px] mb-6">
+              <PhoneCall size={18} />
+              {primaryPhone}
+            </div>
+
+            <h4 className="font-bold text-[16px] mb-4">
+              <T>Our <span className="text-[#194bed]">Office</span> Locations</T>
+            </h4>
+
+            <div className="bg-white rounded-xl p-4 space-y-5">
+              {officeDetails.offices.map((office, idx) => (
+                <div key={idx} className="flex gap-4">
+                  <img
+                    src={office.image}
+                    className="w-[50px] h-[50px] rounded-full object-cover"
+                  />
+
+                  <div>
+                    {office.city && (
+                      <p className="font-semibold text-sm">{office.city}</p>
+                    )}
+                    {office.addressLines.map((line, i) => (
+                      <p key={i} className="text-[13px] underline text-[#6B7280]">
+                        <T>{line}</T>
+                      </p>
+                    ))}
                   </div>
-                ))}
-              </div>
-
+                </div>
+              ))}
             </div>
 
-            {/* Social Media */}
-            <div className="mt-8">
-              <p className="text-orange-600 font-semibold text-sm mb-3">
-                <T lang={lang} countryCode={countryCode}>SOCIAL MEDIA</T>
+            {/* SOCIAL */}
+            <div className="mt-6">
+              <p className="text-[#d63f10] uppercase font-semibold text-sm mb-3">
+                <T>SOCIAL MEDIA</T>
               </p>
 
               <div className="flex gap-4 text-gray-500">
-
-                <Link
-                  href="https://www.facebook.com/people/Accqrate/100077291530631/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Facebook className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
-                </Link>
-
-                <Link
-                  href="https://www.linkedin.com/showcase/accqrate-belgium/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
-                </Link>
-
-                <Link
-                  href="https://x.com/accqrate_erp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Twitter className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
-                </Link>
-
-                <Link
-                  href="https://www.instagram.com/accqrateerp/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Instagram className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
-                </Link>
-
-                <Link
-                  href="https://www.youtube.com/channel/UCAzO34h3KxRrObyRor70D9A"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Youtube className="w-5 h-5 text-gray-500 hover:text-[#194BED] cursor-pointer" />
-                </Link>
-
+                <Link href="https://www.facebook.com" target="_blank"><Facebook size={18} /></Link>
+                <Link href="https://www.linkedin.com" target="_blank"><Linkedin size={18} /></Link>
+                <Link href="https://x.com" target="_blank"><Twitter size={18} /></Link>
+                <Link href="https://www.instagram.com" target="_blank"><Instagram size={18} /></Link>
+                <Link href="https://www.youtube.com" target="_blank"><Youtube size={18} /></Link>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Right Section - Cards with Modal Triggers */}
-        <div className="mt-12">
-          <h2 className="max-w-[785px] text-fluid-body"><T lang={lang} countryCode={countryCode}>{cardContent.description}</T></h2>
-          <div className="bg-[#F6F7FF] py-12">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Card 1 */}
-              <div className="bg-white border border-[#E6E9FF] rounded-2xl px-6 pb-6 shadow-sm">
-                <span className="text-xs font-semibold text-[#4A67FF] bg-[#EEF1FF] px-3 py-2 rounded-b-lg">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.badge}</T>
-                </span>
-
-                <h3 className="font-bold mt-4 text-fluid-body text-gray-900">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.title}</T>
-                </h3>
-
-                <p className="text-gray-500 text-fluid-small mt-2">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.description}</T>
-                </p>
-
-                <button
-                  onClick={() => handleCardButtonClick(cardContent.cards.card1.module)}
-                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
-                >
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card1.buttonText}</T> <span>↗</span>
-                </button>
-              </div>
-
-              {/* Card 2 */}
-              <div className="bg-white border border-[#E6E9FF] rounded-2xl px-6 pb-6 shadow-sm">
-                <span className="text-xs font-semibold text-[#4A67FF] bg-[#EEF1FF] px-3 py-2 rounded-b-lg">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.badge}</T>
-                </span>
-
-                <h3 className="font-bold mt-4 text-fluid-body text-gray-900">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.title}</T>
-                </h3>
-
-                <p className="text-gray-500 text-fluid-small mt-2">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.description}</T>
-                </p>
-
-                <button
-                  onClick={() => handleCardButtonClick(cardContent.cards.card2.module)}
-                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
-                >
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card2.buttonText}</T> <span>↗</span>
-                </button>
-              </div>
-
-              {/* Illustration Card */}
-              <div className="flex items-center justify-center order-last md:order-none">
-                <img
-                  src={typeof AssetPath.common.contactUs === 'string' ? AssetPath.common.contactUs : AssetPath.common.contactUs.src}
-                  alt="Support Illustration"
-                  className="max-w-sm w-full"
-                />
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-white border border-[#E6E9FF] rounded-2xl px-6 pb-6 shadow-sm">
-                <span className="text-xs font-semibold text-[#4A67FF] bg-[#EEF1FF] px-3 py-2 rounded-b-lg">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.badge}</T>
-                </span>
-
-                <h3 className="text-fluid-body font-bold mt-4 text-gray-900">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.title}</T>
-                </h3>
-
-                <p className="text-gray-500 text-fluid-small mt-2">
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.description}</T>
-                </p>
-
-                <button
-                  onClick={() => handleCardButtonClick(cardContent.cards.card3.module)}
-                  className="mt-5 bg-[#C9381C] text-white px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#a62d17] transition"
-                >
-                  <T lang={lang} countryCode={countryCode}>{cardContent.cards.card3.buttonText}</T> <span>↗</span>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Contact Form Modal */}
+      {/* ================= MODAL ================= */}
       <ContactFormModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -563,7 +475,3 @@ const ContactFormPage = () => {
 };
 
 export default ContactFormPage;
-
-
-
-
