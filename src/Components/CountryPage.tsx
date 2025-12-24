@@ -759,7 +759,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                 <button
                                     onClick={() => setModalOpen(true)}
-                                    className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3.563rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem] 2xl:my-[3rem] font-normal lg:w-[182px] leading-tight rounded-[5rem] text-[14px] bg-[#F05A28]"
+                                    className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem]  font-normal lg:w-[182px] leading-tight rounded-[5rem] text-[14px] bg-[#F05A28]"
                                 >
                                     <T>Meet an Expert</T>
                                     <Arrow45 />
@@ -905,7 +905,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
 
-                                <h3 className="text-[24px] text-[#1c2041] font-bold mt-4 leading-[45px]">
+                                <h3 className="text-[24px] text-[#1c2041] font-bold mt-4 mb-4">
                                     {highlightWhySubtitle(
                                         countryContent.whyAccqrateSubtitle ||
                                         "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."
@@ -915,7 +915,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                             {/* Right Column */}
                             <div className="max-w-[500px] flex flex-col justify-around">
-                                <p className="text-fluid-small text-[#1c2041] font-normal leading-[24px]">
+                                <p className="text-fluid-small md:text-[18px] text-[#1c2041] font-normal leading-tight">
                                     <T>
                                         From compliance to automation, Accqrate ensures a seamless
                                         PEPPOL e-invoicing experience.
@@ -935,14 +935,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                         <div className="max-w-[1200px] mx-auto">
                             <div className="max-w-[1280px] mx-auto sm:px-6 py-6">
-                                <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+                                <div className="flex flex-wrap justify-center gap-6">
                                     {(countryContent.whyAccqrateFeatures || features).map(
                                         (feature, index) => (
                                             <div
                                                 key={index}
                                                 className={`
             relative group overflow-hidden
-            p-6 md:p-8 rounded-[15px]
+            p-6  rounded-[15px]
             flex flex-col max-h-[221px] max-w-[360px]
             bg-white
           `}
@@ -1015,16 +1015,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             unoptimized
                                         />
 
-                                        <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small whitespace-nowrap">
+                                        <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small md:text-[18px] whitespace-nowrap">
                                             <T>Accqrate E-invoicing</T>
-                                            <span className="text-sm text-[#5a6183]">
+                                            <span className="text-sm md:text-[16px] text-[#5a6183]">
                                                 <br />
                                                 <T>{countryContent.heroSubtitle}</T>
                                             </span>
                                         </span>
                                     </div>
 
-                                    <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-fluid-small mt-[30px]">
+                                    <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-[14px] mt-[30px]">
                                         <T>
                                             Peppol Member and certified Access Point Provider and
                                             Service Metadata Publisher.
@@ -1155,7 +1155,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         <T>Your AI Copilot</T>
                                     </h2>
 
-                                    <p className="text-[#333333] text-fluid-small mt-6 md:mt-[40px] mb-4 md:mb-6">
+                                    <p className="text-[#333333] text-fluid-small mt-6 md:mt-[20px] mb-4 md:mb-6">
                                         <T>
                                             Work faster and decide smarter with AI embedded across the
                                             suite.
@@ -1269,7 +1269,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         <span className="text-[#194BED]">ViDA</span>
                                     </h2>
 
-                                    <h2 className="text-fluid-small text-left pl-4 md:pl-5 leading-[22px] md:leading-[24px] tracking-para mb-4">
+                                    <h2 className="text-fluid-small text-left  leading-[22px] md:leading-[20px] tracking-para mb-2">
                                         <T>
                                             Accqrate equips enterprises to be compliant across the
                                             upcoming ViDA landscape:
@@ -1574,7 +1574,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <h2 className="text-[24px] font-bold text-center mb-4 tracking-heading leading-tight">
                                     <T>Frequently Answered Questions</T>
                                 </h2>
-                                <p className="text-[14px] text-[#5a6183] text-center mb-6 ">
+                                <p className="text-[16px] text-[#5a6183] text-center mb-6 ">
                                     Have a question about our solutions and services?
                                 </p>
                             </div>
@@ -1596,7 +1596,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
           border border-[#E2E4EC]
           rounded-xl
           px-6
-          py-4
+          py-2
           shadow-sm
         "
                                             >
@@ -1621,7 +1621,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             text-[#5a6183]
             tracking-para
             leading-relaxed
-            mt-2 pl-4
+             pl-4
             text-left
           "
                                                 >
@@ -1648,12 +1648,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     {/* Final Conversion Band */}
                     <div className="max-w-[1440px] mx-auto pb-6 md:pb-8 px-6 font-inter">
                         <div className="flex flex-col items-center">
-                            <h2 className="text-[24px] md:text-[28px] lg:text-[38px] text-left py-[20px] md:py-[37px] tracking-heading leading-tight">
+                            <h2 className="text-[18px] lg:text-[24px] font-semibold text-left py-[20px] md:py-[10px] tracking-heading leading-tight">
                                 <T lang={lang} countryCode={countryCode}>
                                     Final Conversion Band
                                 </T>
                             </h2>
-                            <p className="text-fluid-body max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight">
+                            <p className="text-fluid-small max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight">
                                 {" "}
                                 <T>Run compliant, AI-powered operations with Accqrate.</T>
                             </p>
@@ -1676,7 +1676,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         px-6
         text-white
         text-[14px] whitespace-nowrap
-        mt-[32px]
+        mt-[20px]
       "
                                     style={{
                                         background: "#D63F10",
