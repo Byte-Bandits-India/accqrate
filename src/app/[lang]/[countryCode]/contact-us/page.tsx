@@ -4,7 +4,7 @@ import ContactForm from "@/Components/ContactForm"; // adjust path
 
 const ContactFormPage = () => {
   return (
-    <div className="min-h-screen w-full">
+    <div className="h-[80vh] w-full mb-10">
       <ContactForm />
     </div>
   );
