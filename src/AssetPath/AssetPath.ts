@@ -78,7 +78,8 @@ import knowledgeOutline from "@/Assets/images/header/navbar/outline/knowledge.pn
 import newsOutline from "@/Assets/images/header/navbar/outline/news.png";
 import productOutline from "@/Assets/images/header/navbar/outline/product.png";
 import taxOutline from "@/Assets/images/header/navbar/outline/tax.png";
-
+import invoiceOutline from "@/Assets/images/header/navbar/outline/invoice.svg";
+import integrationOutline from "@/Assets/images/header/navbar/outline/integration.svg";
 // Header Language Flags
 import belgiumFlag from "@/Assets/images/header/language/Belgium.webp";
 import bahrainFlag from "@/Assets/images/header/language/flag-bahrain.svg";
@@ -503,7 +504,7 @@ import bluestar from "@/Assets/images/about/bluestar.png";
 import stone from "@/Assets/images/about/stone.png";
 import hands from "@/Assets/images/about/hands.png";
 import ourteam from "@/Assets/images/about/ourteam.png";
-import aboutHero from "@/Assets/images/about/about-hero.webp"; 
+import aboutHero from "@/Assets/images/about/about-hero.png"; 
 import beabout from "@/Assets/images/about/BE_about.webp";
 import bemission from "@/Assets/images/about/BE_mission.webp";
 
@@ -546,6 +547,7 @@ import websiteDesign15 from "@/Assets/images/icons/website-design 1-5.svg";
 import websiteDesign1 from "@/Assets/images/icons/website-design 1.svg";
 import whiteStarIcon from "@/Assets/images/icons/white_star.svg";
 import curveyLine from "@/Assets/images/icons/curvey-line.svg";
+import pagenotfound from "@/Assets/images/pagenot-found.svg";
 
 const AssetPath = {
   // HEADER SECTION
@@ -635,6 +637,8 @@ const AssetPath = {
         news: newsOutline,
         product: productOutline,
         tax: taxOutline,
+        integration: integrationOutline,
+        invoice: invoiceOutline, 
       },
     },
 
@@ -1099,6 +1103,9 @@ const AssetPath = {
     bemission: bemission,
   },
 
+  404: {
+    pagenotfound: pagenotfound,
+  },
 
   icons: {
     addCompany: addCompany,
