@@ -1,5 +1,6 @@
 'use client';
-import React, { useMemo } from 'react';
+
+import React from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useCountry, countries as allCountries } from '@/contexts/CountryContext';
 
@@ -8,7 +9,6 @@ export default function NotFoundButton() {
   const router = useRouter();
   const { selectedCountry, selectedLanguage } = useCountry();
 
-  // Find language and country from the path (more tolerant)
   const segments = pathname.split('/').filter(Boolean);
 
   const langFromPath = segments.find((s) => /^[a-z]{2}$/i.test(s)) || undefined;
@@ -16,11 +16,14 @@ export default function NotFoundButton() {
   const countryFromPath = segments.find((s) => {
     if (!s) return false;
     const lowered = s.toLowerCase();
-    return allCountries.some((c) => c.code.toLowerCase() === lowered || c.code === s.toUpperCase());
+    return allCountries.some(
+      (c) => c.code.toLowerCase() === lowered || c.code === s.toUpperCase()
+    );
   });
 
   const langCode = langFromPath || selectedLanguage?.code || 'en';
-  const countryCode = (countryFromPath || selectedCountry?.code?.toLowerCase() || 'sa').toLowerCase();
+  const countryCode =
+    (countryFromPath || selectedCountry?.code?.toLowerCase() || 'be').toLowerCase();
 
   const href = `/${langCode}/${countryCode}`;
 
@@ -32,9 +35,10 @@ export default function NotFoundButton() {
   return (
     <button
       onClick={handleClick}
-      className="inline-flex items-center px-6 py-3 bg-[#194BED] text-white rounded-md hover:bg-[#0f3fbf] transition"
+      className="inline-flex items-center gap-2 px-6 py-2 bg-[#194BED] text-white rounded-full font-medium hover:bg-[#0f3fbf] transition"
     >
-      Back to Homepage
+      Go To Home Page
+      <span className="text-lg">↗</span>
     </button>
   );
 }
