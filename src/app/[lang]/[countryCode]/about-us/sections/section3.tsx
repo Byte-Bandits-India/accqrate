@@ -14,7 +14,7 @@ function highlightTitle(text: string) {
 
   return parts.map((part, i) =>
     HIGHLIGHT_PHRASES.test(part) ? (
-      <span key={i} className="text-[#1A4CED] font-semibold">
+      <span key={i} className="text-[#1A4CED] font-bold">
         {part}
       </span>
     ) : (
