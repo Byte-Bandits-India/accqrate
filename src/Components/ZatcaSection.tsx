@@ -104,7 +104,7 @@ export default function ZatcaSection() {
     >
       <div
         className="
-          max-w-[1280px]
+          max-w-[1180px]
           mx-auto
           grid
           grid-cols-1
