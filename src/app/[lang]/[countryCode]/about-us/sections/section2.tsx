@@ -23,12 +23,12 @@ export default function Section2() {
     content.section2?.image || AssetPath.aboutus.bemission;
 
   return (
-    <section className="w-full overflow-x-hidden bg-white py-20 ">
+    <section className="w-full overflow-x-hidden  bg-white py-20 ">
       <div className="max-w-[1177px] mx-auto w-full">
         <FadeUp>
 
         {/* ================= SECTION 1 ================= */}
-        <h2 className="text-[20px] md:text-[24px] text-center font-bold mb-12">
+        <h2 className="text-[20px] md:text-[24px]  text-center font-bold mb-12">
           <span className="text-[#1A4CED]">Accqrate</span>{" "}
           <span className="text-[#1C2041]">
             <T lang={lang} countryCode={countryCode.toUpperCase()}>
@@ -52,7 +52,7 @@ export default function Section2() {
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col text-[14px] md:text-[16px] leading-relaxed">
+          <div className="flex flex-col text-[14px] md:text-[16px] px-4 leading-relaxed">
 
             <div>
               <h3 className="font-bold text-[16px] md:text-[18px] mb-2">
@@ -92,7 +92,7 @@ export default function Section2() {
           <FadeUp>
 
           {/* Left Text */}
-          <div className="text-white">
+          <div className="text-white px-4">
             <h2 className="text-[20px] md:text-[24px] font-bold mb-6">
               <T>{content.section2Title}</T>
             </h2>
