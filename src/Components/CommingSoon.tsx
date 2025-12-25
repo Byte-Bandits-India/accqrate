@@ -32,9 +32,9 @@ export default function ComingSoon({
     return (
         <>
             <div
-                className={`min-h-[60vh] flex flex-col items-center justify-center bg-[#F8F6FF] text-center px-6 ${className}`}
+                className={`min-h-[50vh] flex flex-col items-center justify-center bg-[#F8F6FF] text-center px-6 ${className}`}
             >
-                <h1 className="text-3xl md:text-[50px] font-semibold text-gray-900 mb-10 mt-20  ">
+                <h1 className="text-2xl md:text-[30px] font-bold text-gray-900 mb-10 mt-10  ">
                     <T>{title}</T>
                 </h1>
 
