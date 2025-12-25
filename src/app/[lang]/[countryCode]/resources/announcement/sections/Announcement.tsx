@@ -51,19 +51,19 @@ const Index = () => {
       <main className="pt-12 md:pt-20">
         {/* Hero Section */}
         <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent">
-          <section className="max-w-[1280px] px-6 md:px-8 xl:px-0 mx-auto mb-6 md:mb-8 lg:mb-[60px]">
-            <h1 className="text-fluid-h3 lg:text-[38px] text-black font-semibold leading-tight">
+          <section className="max-w-[1170px] px-6 md:px-8 xl:px-0 mx-auto mb-6">
+            <h1 className="text-[24px] lg:text-[30px] text-black font-bold leading-tight">
               <T lang={lang} countryCode={countryCode}>{heroContent.title}</T>
             </h1>
-            <div className="w-[126px] h-[2px] bg-[#194BED] my-6 md:my-8 lg:my-[45px]" />
-            <p className="text-fluid-body max-w-[1100px] font-medium  mb-8 md:mb-[43px] leading-tight">
+            <div className="w-[126px] h-[2px] bg-[#194BED] my-6 md:my-8 " />
+            <p className="text-fluid-small max-w-[1100px] font-medium  mb-8 md:mb-[43px] leading-tight">
               <T lang={lang} countryCode={countryCode}>{heroContent.description}</T>
             </p>
 
             {/* ✅ Dynamic route link */}
             <Link
               href={`/${lang}/${countryCode}/contact-us`}
-              className="inline-flex items-center text-white border font-medium px-6 py-3 rounded-full bg-gradient-to-r from-[#29266E] to-[#194BED] mb-6 md:mb-8 lg:mb-[60px]"
+              className="inline-flex text-[14px] items-center text-white border font-medium px-5 py-2.5 rounded-full bg-gradient-to-r from-[#29266E] to-[#194BED] mb-6 md:mb-8 lg:mb-[60px]"
             >
               <T lang={lang} countryCode={countryCode}>Subscribe Now</T> <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
