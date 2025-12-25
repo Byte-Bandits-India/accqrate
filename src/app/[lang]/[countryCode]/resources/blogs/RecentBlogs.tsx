@@ -152,7 +152,7 @@ export default function RecentBlogPosts() {
   if (!currentCountry) {
     return (
       <section className="py-10 md:py-12  text-center">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0">
+        <div className="max-w-[1180px] mx-auto px-4 md:px-8 xl:px-0">
           <FadeUp className="text-fluid-h3 font-semibold mb-8 text-gray-900">
             <T>Country Not Found</T>
           </FadeUp>
@@ -168,7 +168,7 @@ export default function RecentBlogPosts() {
   if (filteredBlogPosts.length === 0) {
     return (
       <section className="py-10 md:py-12 lg:py-[90px]">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0 text-center">
+        <div className="max-w-[1180px] mx-auto px-4 md:px-8 xl:px-0 text-center">
           <div className="py-12">
             <h3 className="text-2xl font-semibold mb-4"><T>Coming Soon!</T></h3>
             <p className="text-gray-600 text-lg max-w-xl mx-auto">
@@ -183,7 +183,7 @@ export default function RecentBlogPosts() {
   // Final return UI
   return (
     <section className="mb-10 ">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-8 xl:px-0">
+      <div className="max-w-[1180px] mx-auto px-4 md:px-8 xl:px-0">
         <FadeUp className="text-[16px] md:text-[18px] font-bold mb-10 text-gray-900">
           <T>Recent Blog Posts from Accqrate</T>
         </FadeUp>
