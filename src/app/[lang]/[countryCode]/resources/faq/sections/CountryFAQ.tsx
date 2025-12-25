@@ -28,7 +28,7 @@ export const CountryFAQ = () => {
   if (!isMounted) {
     return (
       <div className="min-h-screen bg-[#F8F6FF] py-12 font-inter">
-        <div className="max-w-[1280px] px-6 md:px-8 mx-auto flex flex-col relative">
+        <div className="max-w-[1170px] px-6 md:px-8 mx-auto flex flex-col relative">
           {/* Loading skeleton */}
           <div className="h-20 bg-gray-200 rounded mb-6 animate-pulse"></div>
           <div className="w-20 h-[2px] bg-gray-300 mb-6"></div>
@@ -58,21 +58,21 @@ export const CountryFAQ = () => {
     <div>
       <div className="font-inter">
         <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent max-h-[290px] py-12">
-          <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
+          <div className="max-w-[1180px] mx-auto px-6 md:px-8 xl:px-0">
             {/* Heading Section */}
-            <h2 className="text-fluid-h2 lg:text-[38px] font-semibold text-foreground leading-tight">
+            <h2 className="text-[24px] lg:text-[30px] font-semibold text-foreground leading-tight">
               <T>Frequently Asked Questions</T>
             </h2>
-            <div className="w-20 h-[2px] bg-[#194BED] my-6 md:my-8 lg:my-[45px]"></div>
+            <div className="w-20 h-[2px] bg-[#194BED] my-6 "></div>
 
-            <p className=" text-fluid-body font-medium mb-6 md:mb-8 lg:mb-[60px]">
+            <p className=" text-fluid-small font-medium mb-6 md:mb-8 lg:mb-[60px]">
               <T>Ask Everything You Need To Know About Our Solutions And Services</T>
             </p>
           </div>
         </div>
 
 
-        <div className="max-w-[1280px] px-6 md:px-8 xl:px-0 mx-auto flex flex-col mt-6 md:mt-8 lg:mt-[60px]">
+        <div className="max-w-[1180px] px-6 md:px-8 xl:px-0 mx-auto flex flex-col mt-6 md:mt-8 lg:mt-[60px]">
           {/* FAQ Section Container */}
           <div>
             <div className="flex flex-col lg:flex-row gap-12 w-full">
@@ -86,10 +86,10 @@ export const CountryFAQ = () => {
                         value={`faq-${index}`}
                         className="border-b border-border py-4"
                       >
-                        <AccordionTrigger className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold hover:no-underline leading-tight text-left">
+                        <AccordionTrigger className="text-[16px] md:text-[18px]  font-bold hover:no-underline leading-tight text-left">
                           <T>{faq.question}</T>
                         </AccordionTrigger>
-                        <AccordionContent className="text-[14px] md:text-[16px] lg:text-[18px] font-normal text-[#262626] leading-tight mt-2">
+                        <AccordionContent className="text-[14px] font-normal text-[#262626] leading-tight mt-2">
                           <T>{faq.answer}</T>
                         </AccordionContent>
                       </AccordionItem>
@@ -97,7 +97,7 @@ export const CountryFAQ = () => {
                   </Accordion>
                 ) : (
                   <div className="text-center py-12">
-                    <p className="text-lg text-muted-foreground">
+                    <p className="text-[18px] text-muted-foreground">
                       <T>No FAQs available for this country yet.</T>
                     </p>
                     <p className="text-sm text-muted-foreground mt-2">
