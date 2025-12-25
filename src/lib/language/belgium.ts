@@ -9380,7 +9380,152 @@ fr: "Intégration Peppol / EN 16931"
   de: "Ihre Fähigkeit, maßgeschneiderte IT-Lösungen zu entwickeln, die den einzigartigen Herausforderungen unserer Region gerecht werden, hat unsere operative Effizienz erheblich verbessert. Ihr proaktiver Ansatz und Ihr Engagement für die Kundenzufriedenheit waren wirklich beeindruckend."
 },
 
+"Future-Ready Compliance": {
+  fr: "Conformité prête pour l’avenir",
+  nl: "Toekomstbestendige naleving",
+  de: "Zukunftssichere Konformität"
+},
+"With Belgium moving firmly toward structured e-invoicing, we wanted a platform that was not only compliant, but future ready. Accqrate delivers exactly that. It harmonizes data across our business units, supports seamless PEPPOL exchange, and scales effortlessly as volumes grow.": {
+  fr: "Alors que la Belgique progresse résolument vers la facturation électronique structurée, nous voulions une plateforme non seulement conforme, mais aussi prête pour l’avenir. Accqrate répond parfaitement à ces attentes. Elle harmonise les données entre nos unités commerciales, prend en charge les échanges PEPPOL sans friction et s’adapte facilement à la hausse des volumes.",
+  nl: "Nu België resoluut richting gestructureerde e-facturatie gaat, wilden we een platform dat niet alleen voldoet, maar ook toekomstbestendig is. Accqrate levert precies dat. Het harmoniseert gegevens tussen onze business units, ondersteunt naadloze PEPPOL-uitwisseling en schaalt moeiteloos mee wanneer de volumes toenemen.",
+  de: "Da sich Belgien klar in Richtung strukturierter elektronischer Rechnungsstellung bewegt, wollten wir eine Plattform, die nicht nur konform, sondern auch zukunftsorientiert ist. Accqrate liefert genau das. Die Lösung harmonisiert Daten in unseren Geschäftsbereichen, unterstützt nahtlosen PEPPOL-Austausch und skaliert mühelos bei steigendem Volumen."
+},
+"Enterprise Controller": {
+  fr: "Contrôleur d'entreprise",
+  nl: "Bedrijfscontroller",
+  de: "Unternehmenscontroller"
+},
+"Belgium": {
+  fr: "Belgique",
+  nl: "België",
+  de: "Belgien"
+},
 
+
+"Strategic E-Invoicing Choice": {
+  fr: "Choix stratégique pour la facturation électronique",
+  nl: "Strategische keuze voor e-facturatie",
+  de: "Strategische Wahl für die E-Rechnungsstellung"
+},
+"Accqrate E-invoicing proved to be the right strategic choice for Belgium. It integrates flawlessly with our existing systems while ensuring PEPPOL-ready compliance across B2G and future B2B requirements.": {
+  fr: "Accqrate E-invoicing s’est avéré être le bon choix stratégique pour la Belgique. Il s’intègre parfaitement à nos systèmes existants tout en garantissant une conformité prête pour PEPPOL, tant pour les exigences B2G actuelles que pour les futures obligations B2B.",
+  nl: "Accqrate E-invoicing bleek de juiste strategische keuze voor België te zijn. Het integreert naadloos met onze bestaande systemen en zorgt voor PEPPOL-klare naleving voor B2G en toekomstige B2B-vereisten.",
+  de: "Accqrate E-invoicing erwies sich als die richtige strategische Wahl für Belgien. Es integriert sich reibungslos in unsere bestehenden Systeme und stellt PEPPOL-konforme Compliance für B2G sowie zukünftige B2B-Anforderungen sicher."
+},
+"Digital Transformation Lead": {
+  fr: "Responsable de la transformation numérique",
+  nl: "Leidinggevende digitale transformatie",
+  de: "Leiter digitale Transformation"
+},
+
+
+"Precision & Control": {
+  fr: "Précision et contrôle",
+  nl: "Precisie en controle",
+  de: "Präzision und Kontrolle"
+},
+"We needed a reliable solution to support Belgium’s mandatory e-invoicing direction, and Accqrate exceeded expectations. Its precision in data handling and strong validation framework made our transition straightforward.": {
+  fr: "Nous avions besoin d’une solution fiable pour soutenir la direction obligatoire de la facturation électronique en Belgique, et Accqrate a dépassé nos attentes. Sa précision dans le traitement des données et son solide cadre de validation ont rendu notre transition fluide.",
+  nl: "We hadden een betrouwbare oplossing nodig om de verplichte e-factureringsrichtlijn in België te ondersteunen, en Accqrate overtrof onze verwachtingen. De precisie in gegevensverwerking en het sterke validatiekader maakten onze overgang eenvoudig.",
+  de: "Wir benötigten eine zuverlässige Lösung zur Unterstützung der verpflichtenden E-Rechnungsstellung in Belgien, und Accqrate übertraf die Erwartungen. Die Präzision bei der Datenverarbeitung und das starke Validierungsframework machten unseren Übergang unkompliziert."
+},
+"Head of Finance": {
+  fr: "Directeur financier",
+  nl: "Hoofd financiën",
+  de: "Leiter Finanzen"
+},
+
+
+"PEPPOL-Ready Confidence": {
+  fr: "Confiance prête pour PEPPOL",
+  nl: "PEPPOL-klare zekerheid",
+  de: "PEPPOL-bereite Sicherheit"
+},
+"Accqrate E-invoicing stood out for its strong compliance foundation and PEPPOL readiness. It integrates effortlessly with our in-house ERP and ensures every invoice meets international standards.": {
+  fr: "Accqrate E-invoicing s’est démarqué par sa solide base de conformité et sa préparation PEPPOL. Il s’intègre aisément à notre ERP interne et garantit que chaque facture respecte les normes internationales.",
+  nl: "Accqrate E-invoicing viel op door zijn sterke nalevingsbasis en PEPPOL-gereedheid. Het integreert moeiteloos met onze interne ERP en zorgt ervoor dat elke factuur aan internationale normen voldoet.",
+  de: "Accqrate E-invoicing überzeugte durch seine starke Compliance-Grundlage und PEPPOL-Bereitschaft. Es integriert sich mühelos in unser internes ERP und stellt sicher, dass jede Rechnung internationalen Standards entspricht."
+},
+"CXO": {
+  fr: "Cadre dirigeant (CXO)",
+  nl: "Bestuurder (CXO)",
+  de: "Führungskraft (CXO)"
+},
+"Switzerland": {
+  fr: "Suisse",
+  nl: "Zwitserland",
+  de: "Schweiz"
+},
+ "Our innovative solutions are designed to fit your business's unique needs, offering both cloud-based and on-premises deployment. Experience the seamless integration of our application on your servers in under 3 hours, ensuring your data's privacy without compromising on functionality.": {
+    "fr": "Nos solutions innovantes sont conçues pour s’adapter aux besoins uniques de votre entreprise, en offrant un déploiement à la fois sur le cloud et sur site. Profitez d’une intégration transparente de notre application sur vos serveurs en moins de 3 heures, garantissant la confidentialité de vos données sans compromettre les fonctionnalités.",
+    "nl": "Onze innovatieve oplossingen zijn ontworpen om aan de unieke behoeften van uw bedrijf te voldoen, met zowel cloud- als on-premises implementatie. Ervaar de naadloze integratie van onze applicatie op uw servers in minder dan 3 uur, waarbij de privacy van uw gegevens wordt gewaarborgd zonder in te leveren op functionaliteit.",
+    "de": "Unsere innovativen Lösungen sind darauf ausgelegt, die individuellen Anforderungen Ihres Unternehmens zu erfüllen und bieten sowohl Cloud- als auch On-Premises-Bereitstellung. Erleben Sie die nahtlose Integration unserer Anwendung auf Ihren Servern in weniger als 3 Stunden und stellen Sie so den Datenschutz sicher, ohne Kompromisse bei der Funktionalität einzugehen."
+  },
+
+  "Forget the worries of per-invoice charges. Our competitive pricing plans offer astonishing slab variations, allowing you to plan your budget with confidence and avoid unexpected costs.": {
+    "fr": "Oubliez les préoccupations liées aux frais par facture. Nos formules tarifaires compétitives offrent des variations impressionnantes, vous permettant de planifier votre budget en toute confiance et d’éviter les coûts imprévus.",
+    "nl": "Vergeet de zorgen over kosten per factuur. Onze concurrerende prijsplannen bieden indrukwekkende variaties, zodat u uw budget met vertrouwen kunt plannen en onverwachte kosten kunt vermijden.",
+    "de": "Vergessen Sie die Sorgen über Gebühren pro Rechnung. Unsere wettbewerbsfähigen Preispläne bieten beeindruckende Staffelungen, sodass Sie Ihr Budget sicher planen und unerwartete Kosten vermeiden können."
+  },
+
+  "Remove formatting and compliance errors with Accqrate's automated mapping of all mandatory EN 16931 fields, ensuring every Belgian e-invoice meets the structured Peppol and UBL standards, no manual intervention required.": {
+    "fr": "Éliminez les erreurs de formatage et de conformité grâce au mapping automatisé par Accqrate de tous les champs obligatoires de la norme EN 16931, garantissant que chaque facture belge respecte les standards structurés Peppol et UBL, sans intervention manuelle.",
+    "nl": "Verwijder opmaak- en conformiteitsfouten met Accqrates automatische mapping van alle verplichte EN 16931-velden, zodat elke Belgische e-factuur voldoet aan de gestructureerde Peppol- en UBL-standaarden, zonder handmatige tussenkomst.",
+    "de": "Beseitigen Sie Formatierungs- und Konformitätsfehler durch Accqrates automatische Zuordnung aller verpflichtenden EN-16931-Felder, sodass jede belgische E-Rechnung den strukturierten Peppol- und UBL-Standards entspricht – ganz ohne manuellen Aufwand."
+  },
+
+  "Maintain consistency with precise replication of your existing invoice templates, allowing for seamless printing, downloading, and archiving within the middleware.": {
+    "fr": "Maintenez la cohérence grâce à une réplication précise de vos modèles de facture existants, permettant une impression, un téléchargement et une archivage fluides au sein du middleware.",
+    "nl": "Behoud consistentie met nauwkeurige replicatie van uw bestaande factuursjablonen, wat zorgt voor naadloos afdrukken, downloaden en archiveren binnen de middleware.",
+    "de": "Bewahren Sie die Konsistenz durch eine präzise Replikation Ihrer bestehenden Rechnungsvorlagen und ermöglichen Sie ein nahtloses Drucken, Herunterladen und Archivieren innerhalb der Middleware."
+  },
+
+  "Securely archive your PDFs and XMLs in our middleware for a decade, with no additional costs, ensuring long-term compliance and peace of mind.": {
+    "fr": "Archivez vos PDF et XML en toute sécurité dans notre middleware pendant dix ans, sans frais supplémentaires, garantissant une conformité à long terme et une tranquillité d’esprit.",
+    "nl": "Archiveer uw PDF- en XML-bestanden veilig gedurende tien jaar in onze middleware, zonder extra kosten, voor langdurige naleving en gemoedsrust.",
+    "de": "Archivieren Sie Ihre PDFs und XMLs sicher zehn Jahre lang in unserer Middleware – ohne zusätzliche Kosten – und gewährleisten Sie langfristige Compliance und Sicherheit."
+  },
+
+  "Stay informed with automated success and failure notifications sent directly to your designated finance email, keeping you updated on every transaction.": {
+    "fr": "Restez informé grâce aux notifications automatiques de succès ou d’échec envoyées directement à votre adresse e-mail dédiée, vous tenant au courant de chaque transaction.",
+    "nl": "Blijf op de hoogte met automatische meldingen van geslaagde en mislukte transacties die rechtstreeks naar uw aangewezen financiële e-mail worden verzonden.",
+    "de": "Bleiben Sie informiert mit automatischen Erfolgs- und Fehlermeldungen, die direkt an Ihre dedizierte Finanz-E-Mail gesendet werden und Sie über jede Transaktion auf dem Laufenden halten."
+  },
+
+  "Effortlessly reconcile invoices exchanged through Peppol with your internal systems using Accqrate's unified dashboards, detailed compliance reports, and exportable Excel summaries.": {
+    "fr": "Rapprochez facilement les factures échangées via Peppol avec vos systèmes internes grâce aux tableaux de bord unifiés d’Accqrate, aux rapports de conformité détaillés et aux exports Excel.",
+    "nl": "Stem eenvoudig facturen die via Peppol zijn uitgewisseld af met uw interne systemen met behulp van Accqrates uniforme dashboards, gedetailleerde nalevingsrapporten en exporteerbare Excel-overzichten.",
+    "de": "Stimmen Sie über Peppol ausgetauschte Rechnungen mühelos mit Ihren internen Systemen ab – mit Accqrates einheitlichen Dashboards, detaillierten Compliance-Berichten und exportierbaren Excel-Übersichten."
+  },
+
+  "Our advanced analytics detect frequent errors and provide actionable insights to prevent them, optimizing your invoicing process with the power of artificial intelligence.": {
+    "fr": "Nos analyses avancées détectent les erreurs fréquentes et fournissent des informations exploitables pour les prévenir, optimisant ainsi votre processus de facturation grâce à l’intelligence artificielle.",
+    "nl": "Onze geavanceerde analyses detecteren veelvoorkomende fouten en bieden bruikbare inzichten om deze te voorkomen, waardoor uw facturatieproces wordt geoptimaliseerd met de kracht van kunstmatige intelligentie.",
+    "de": "Unsere fortschrittlichen Analysen erkennen häufige Fehler und liefern umsetzbare Erkenntnisse zu deren Vermeidung – und optimieren so Ihren Rechnungsprozess mithilfe künstlicher Intelligenz."
+  },
+
+  "When your business outgrows its current systems, our scalable ERP modules ensure compliance and growth without the need to overhaul your technology stack.": {
+    "fr": "Lorsque votre entreprise dépasse ses systèmes actuels, nos modules ERP évolutifs garantissent conformité et croissance sans devoir rénover complètement votre infrastructure.",
+    "nl": "Wanneer uw bedrijf zijn huidige systemen ontgroeit, zorgen onze schaalbare ERP-modules voor naleving en groei zonder dat u uw technologie volledig hoeft te vervangen.",
+    "de": "Wenn Ihr Unternehmen seine aktuellen Systeme übertrifft, gewährleisten unsere skalierbaren ERP-Modules Compliance und Wachstum, ohne dass Sie Ihre Technologieumgebung grundlegend erneuern müssen."
+  },
+
+  "Our platform stands tested and trusted, flawlessly handling over half a million invoices daily per customer, empowering your business to perform at its best.": {
+    "fr": "Notre plateforme fait ses preuves : elle traite sans faille plus d’un demi-million de factures par client et par jour, permettant à votre entreprise de donner le meilleur d’elle-même.",
+    "nl": "Ons platform is beproefd en bewezen: het verwerkt moeiteloos meer dan een half miljoen facturen per klant per dag, waardoor uw bedrijf optimaal kan presteren.",
+    "de": "Unsere Plattform ist erprobt und bewährt: Sie verarbeitet täglich mehr als eine halbe Million Rechnungen pro Kunde und ermöglicht es Ihrem Unternehmen, auf höchstem Niveau zu arbeiten."
+  },
+"Explore All Blogs": {
+  fr: "Explorer tous les blogs",
+  nl: "Alle blogs verkennen",
+  de: "Alle Blogs entdecken"
+},
+
+  "Compliant": {
+    fr: "Conforme",
+    nl: "Conform",
+    de: "Konform"
+  },
 
 
   
