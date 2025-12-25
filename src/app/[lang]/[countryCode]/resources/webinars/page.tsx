@@ -31,16 +31,16 @@ export default function WebinarSection() {
   return (
     <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent overflow-hidden">
       <section className="bg-gradient-to-t from-[#EFF3FF] to-transparent pt-16 md:pt-24">
-        <div className="mx-auto px-6 md:px-8 xl:px-0 max-w-[1280px]">
+        <div className="mx-auto px-6 md:px-8 xl:px-0 max-w-[1180px]">
           {/* Heading */}
           <div>
-            <h2 className="text-fluid-h1 lg:text-[38px] font-semibold leading-tight  text-left">
+            <h2 className="text-[24px] lg:text-[30px] font-bold leading-tight  text-left">
               <T>Unlocking Insights Of Webinar</T>
             </h2>
 
-            <div className="w-20 h-[2px] bg-[#194BED] my-6 md:my-8 " />
+            <div className="w-20 h-[2px] bg-[#194BED] my-6 " />
 
-            <p className="text-[16px] md:text-[18px] text-left max-w-[900px]">
+            <p className="text-[16px] text-left max-w-[900px]">
               <T>This Webinar Is Essential For Professionals Who Handle Invoicing And Compliance In Their Organizations</T>
             </p>
           </div>
