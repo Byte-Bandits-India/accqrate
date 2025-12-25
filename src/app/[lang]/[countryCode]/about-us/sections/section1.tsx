@@ -69,7 +69,7 @@ export default function Section1() {
     section1Content.default;
 
   return (
-    <section className="w-full bg-[#F6F7FF] py-16 px-6 md:px-0">
+    <section className="w-full bg-[#F6F7FF] py-16 px-6 lg:px-0">
       <div className="max-w-[1110px] mx-auto">
         <FadeUp>
 
