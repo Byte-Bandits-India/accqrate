@@ -74,7 +74,7 @@ export default function ZatcaSection() {
     >
       <div
         className="
-          max-w-[1280px]
+          max-w-[1170px]
           mx-auto
           lg:h-[370px]
           grid
@@ -88,11 +88,11 @@ export default function ZatcaSection() {
       >
         {/* COLUMN 1 — LEFT CONTENT */}
         <div className="z-20 text-left order-2 md:order-1">
-          <h2 className="text-fluid-h2 xl:text-[38px] font-medium mb-6 leading-tight max-w-xl">
+          <h2 className="text-fluid-body xl:text-[24px] font-bold mb-6 leading-tight max-w-xl">
             <T>If you have any other questions not addressed here</T>
           </h2>
 
-          <p className="text-fluid-body text-[#FFFFFF] my-6 md:my-8">
+          <p className="text-fluid-small text-[#FFFFFF] my-6 md:my-8">
             <T>Please feel free to contact us at</T>{" "}
             <a
               href="mailto:Contact@accqrate-erp.com"
@@ -104,7 +104,7 @@ export default function ZatcaSection() {
 
           <button
             onClick={() => setModalOpen(true)}
-            className="inline-flex text-fluid-body items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-6 py-3 rounded-full"
+            className="inline-flex text-[14px] items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-5 py-2.5 rounded-full"
           >
             <T>Contact Your Consultant</T> <ArrowRight className="w-4 h-4" />
           </button>
