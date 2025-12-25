@@ -7,7 +7,7 @@ import T from "@/Components/T";
 export default function HeroResourceSection() {
   return (
     <section className="pt-16 md:pt-20">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-8 xl:px-0">
         {/* Heading */}
         <FadeUp className="text-left mb-10">
           <h1 className="text-[20px] lg:text-[24px] leading-tight font-bold text-gray-900">
