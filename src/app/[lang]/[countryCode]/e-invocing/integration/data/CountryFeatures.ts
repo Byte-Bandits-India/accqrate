@@ -93,12 +93,7 @@ ctaDescription:
     description:
       "Capable of processing millions of invoices daily.",
   },
-  {
-    img: AssetPath.invoicing.integrationAssets.set.src,
-    title: "End-to-End Support",
-    description:
-      "We deliver full support for your complete KSeF integration lifecycle from setup to continuous compliance",
-  },
+
     ],
   },
 
@@ -339,3 +334,4 @@ features: [
 },
 
 };
+
