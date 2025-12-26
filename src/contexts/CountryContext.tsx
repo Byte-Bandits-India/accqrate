@@ -49,56 +49,56 @@ const getLanguagesForCountry = (countryCode: string): Language[] => {
 
 // ===================== Data =====================
 export const countries: Country[] = [
-    {
-        name: "Saudi Arabia",
-        code: "SA",
-        flag: AssetPath.header.language.saudiArabia,
-        language: "Arabic",
-        currency: "SAR",
-    },
+    // {
+    //     name: "Saudi Arabia",
+    //     code: "SA",
+    //     flag: AssetPath.header.language.saudiArabia,
+    //     language: "Arabic",
+    //     currency: "SAR",
+    // },
 
-    {
-        name: "Oman",
-        code: "OM",
-        flag: AssetPath.header.language.oman,
-        language: "Arabic",
-        currency: "OMR",
-    },
-    {
-        name: "Bahrain",
-        code: "BH",
-        flag: AssetPath.header.language.bahrain,
-        language: "Arabic",
-        currency: "BHD",
-    },
-    {
-        name: "Malaysia",
-        code: "MA",
-        flag: AssetPath.header.language.malaysia,
-        language: "Malay",
-        currency: "MYR",
-    },
-    {
-        name: "Mauritius",
-        code: "MU",
-        flag: AssetPath.header.language.mauritius,
-        language: "English",
-        currency: "MUR",
-    },
-    {
-        name: "Jordan",
-        code: "JD",
-        flag: AssetPath.header.language.jordan,
-        language: "Arabic",
-        currency: "JOD",
-    },
-    {
-        name: "Poland",
-        code: "PL",
-        flag: AssetPath.header.language.poland,
-        language: "English",
-        currency: "PLN",
-    },
+    // {
+    //     name: "Oman",
+    //     code: "OM",
+    //     flag: AssetPath.header.language.oman,
+    //     language: "Arabic",
+    //     currency: "OMR",
+    // },
+    // {
+    //     name: "Bahrain",
+    //     code: "BH",
+    //     flag: AssetPath.header.language.bahrain,
+    //     language: "Arabic",
+    //     currency: "BHD",
+    // },
+    // {
+    //     name: "Malaysia",
+    //     code: "MA",
+    //     flag: AssetPath.header.language.malaysia,
+    //     language: "Malay",
+    //     currency: "MYR",
+    // },
+    // {
+    //     name: "Mauritius",
+    //     code: "MU",
+    //     flag: AssetPath.header.language.mauritius,
+    //     language: "English",
+    //     currency: "MUR",
+    // },
+    // {
+    //     name: "Jordan",
+    //     code: "JD",
+    //     flag: AssetPath.header.language.jordan,
+    //     language: "Arabic",
+    //     currency: "JOD",
+    // },
+    // {
+    //     name: "Poland",
+    //     code: "PL",
+    //     flag: AssetPath.header.language.poland,
+    //     language: "English",
+    //     currency: "PLN",
+    // },
 
     {
         name: "UAE",
