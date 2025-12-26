@@ -507,7 +507,7 @@ import ourteam from "@/Assets/images/about/ourteam.png";
 import aboutHero from "@/Assets/images/about/about-hero.png"; 
 import beabout from "@/Assets/images/about/BE_about.webp";
 import bemission from "@/Assets/images/about/BE_mission.webp";
-
+import uaeabout from "@/Assets/images/about/uae_about.png";
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
 import api from "@/Assets/images/icons/api.svg";
@@ -1101,6 +1101,7 @@ const AssetPath = {
     ourteam: ourteam,
     beabout: beabout,
     bemission: bemission,
+    uaeabout: uaeabout,
   },
 
   404: {
