@@ -508,6 +508,7 @@ import aboutHero from "@/Assets/images/about/about-hero.png";
 import beabout from "@/Assets/images/about/BE_about.webp";
 import bemission from "@/Assets/images/about/BE_mission.webp";
 import uaeabout from "@/Assets/images/about/uae_about.png";
+import defaultmission from "@/Assets/images/about/defaultmission.webp";
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
 import api from "@/Assets/images/icons/api.svg";
@@ -1102,6 +1103,7 @@ const AssetPath = {
     beabout: beabout,
     bemission: bemission,
     uaeabout: uaeabout,
+    defaultmission: defaultmission,
   },
 
   404: {
