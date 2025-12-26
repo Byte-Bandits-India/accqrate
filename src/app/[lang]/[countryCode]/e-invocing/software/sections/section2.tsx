@@ -241,7 +241,7 @@ const Section2 = () => {
             </div>
 
             {/* Footer Recent Blogs */}
-            <section className="bg-white py-10">
+            <section className="bg-white pt-[40px] pb-[100px]">
                 <div className="container mx-auto px-4 max-w-[1250px]">
                     <h3 className="text-[24px] text-[#1c2041] font-bold text-center">
                         <BelgiumT><span className='text-[#194BED]'>E-invoicing</span> Insights</BelgiumT>

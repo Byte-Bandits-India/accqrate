@@ -233,8 +233,10 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection />
+      <div className="pt-10">
+        {/* CTA Section */}
+        <CTASection />
+      </div>
 
       {/* Footer Recent Blogs */}
       <section className="bg-[#eff3ff] py-10">

@@ -6,7 +6,9 @@ export default function ResourcesPage() {
     <main className="bg-[#F8F6FF] overflow-hidden">
       <HeroResourceSection />
       <RecentBlogPosts />
-      <ZatcaSection />
+      <div className="pt-10">
+        <ZatcaSection />
+      </div>
     </main>
   );
 }

@@ -1054,11 +1054,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     {/* Compliance Card */}
                                     <FadeUp className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[24px] text-[#1c2041] font-bold tracking-heading">
-                                            <T>Full Compliance with{" "}</T>
-                                            <span className="text-[#194BED] font-semibold">
-                                                Belgium's E-Invoicing
-                                            </span>{" "}
-                                            <T>Mandate</T>
+                                            <T>{countryContent.complianceSection.complianceTitle}</T>
                                         </h2>
 
                                         {countryContent.complianceSection && (

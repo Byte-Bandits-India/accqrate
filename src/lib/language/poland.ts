@@ -1207,9 +1207,9 @@ const translationsRaw = {
   "Integrate With PEPPOL Network ": { pl: "" },
  
 
-  "European Based <span class='text-[#508847]'>E-invoicing</span> Solution For European Companies.": { pl: "" },
-  "UAE Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.": { pl: "" },
-  "Enable Your Business With <span class='text-[#508847]'>E-invoicing</span>": { pl: "" },
+  "European Based <span class='text-[#194bed]'>E-invoicing</span> Solution For European Companies.": { pl: "" },
+  "UAE Based <span class='text-[#194bed]'>E-invoicing</span> Solution For UAE Companies.": { pl: "" },
+  "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>": { pl: "" },
 
   "Get 30 days free trial": { pl: "" },
   "Connect with our Consultant": { pl: "" },

@@ -6921,8 +6921,8 @@ const blogTranslations: TranslationsMap = {
 
 "Flexible Deployment": { ar: "مرونة في النشر" },
 
-"UAE Based <span class='text-[#508847]'>E-invoicing</span> Solution For UAE Companies.": {
-  ar: "حل <span class='text-[#508847]'>الفوترة الإلكترونية</span> القائم في دولة الإمارات والمخصص للشركات الإماراتية."
+"UAE Based <span class='text-[#194bed]'>E-invoicing</span> Solution For UAE Companies.": {
+  ar: "حل <span class='text-[#194bed]'>الفوترة الإلكترونية</span> القائم في دولة الإمارات والمخصص للشركات الإماراتية."
 },
 "Accqrate E-Invoicing Solutions": {
   ar: "حلول الفوترة الإلكترونية من أككريت"
@@ -7836,8 +7836,13 @@ const blogTranslations: TranslationsMap = {
   ar: "تكامل بيبول / UAE PINT"
 },
 
-"Free proof of concept for": {
-  ar: "نسخة تجريبية مجانية لـ"
+  "Free proof of concept for": {
+  ar: "إثبات مفهوم مجاني ل"
+},
+
+// To match what's in your data object:
+"Free Proof of Concept for": {
+  ar: "إثبات مفهوم مجاني ل"
 },
 
 "Tailored, innovative solutions enhancing efficiency and accuracy for your business.": {
@@ -8777,7 +8782,47 @@ const blogTranslations: TranslationsMap = {
 },
 "Accqrate is engineered for the UAE's evolving digital taxation landscape. We support automated VAT validation, structured invoice exchange, and upcoming FTA digital reporting requirements, helping businesses stay compliant as the UAE expands its Peppol-based framework.": {
   ar: "تم تصميم Accqrate لمواكبة التطورات في البيئة الرقمية للضرائب في الإمارات. نحن ندعم التحقق التلقائي من ضريبة القيمة المضافة، وتبادل الفواتير بشكل منظم، ومتطلبات التقارير الرقمية المستقبلية لهيئة الضرائب الفيدرالية (FTA)، مما يساعد الشركات على البقاء ملتزمة بالقوانين مع توسع الإمارات في إطار Peppol."
+},
+'In-depth analysis of electronic invoicing trends, benefits, and adoption.': {
+    ar: 'تحليل متعمق لاتجاهات الفوترة الإلكترونية، وفوائدها، وتبنيها.'
+  },
+"E-invoicing Insights": {
+  ar: "رؤى الفوترة الإلكترونية"
+},
+"Zero Rated versus Exempt Supplies in the UAE VAT System: Complete Guide to Classification and Compliance": {
+  ar: "التوريدات الخاضعة لنسبة الصفر مقابل التوريدات المعفاة في نظام ضريبة القيمة المضافة في الإمارات: دليل شامل للتصنيف والامتثال"
+},
+"United Arab Emirates: Preparing for a PEPPOL Driven E-Billing System": {
+  ar: "دولة الإمارات العربية المتحدة: الاستعداد لنظام فوترة إلكترونية مدفوع بشبكة PEPPOL"
+},
+"Single Source of Truth": {
+  ar: "مصدر واحد موثوق للبيانات"
+},
+"Accqrate E-invoicing has been instrumental in harmonising financial data from multiple systems across our UAE operations. What once existed as fragmented information is now consolidated into a single source of truth.": {
+  ar: "لعبت الفوترة الإلكترونية من Accqrate دورًا محوريًا في توحيد البيانات المالية القادمة من أنظمة متعددة عبر عملياتنا في دولة الإمارات. ما كان سابقًا بيانات مجزأة أصبح الآن مجمعًا في مصدر واحد موثوق للبيانات."
+},
+
+"Phase 0 Readiness": {
+  ar: "الجاهزية للمرحلة صفر"
+},
+"With the UAE progressing toward structured e-invoicing, our biggest priority was Phase 0 readiness without disrupting business continuity. Accqrate ensured exactly that.": {
+  ar: "مع تقدم دولة الإمارات نحو الفوترة الإلكترونية المنظمة، كانت أولويتنا الكبرى هي الجاهزية للمرحلة صفر دون التأثير على استمرارية الأعمال. وقد ضمنت Accqrate تحقيق ذلك بشكل كامل."
+},
+
+"Unified Financial Framework": {
+  ar: "إطار مالي موحّد"
+},
+"Accqrate E-invoicing helped us streamline invoice data from multiple business units into one unified, trusted financial framework.": {
+  ar: "ساعدتنا الفوترة الإلكترونية من Accqrate على توحيد بيانات الفواتير القادمة من وحدات أعمال متعددة ضمن إطار مالي موحد وموثوق."
+},
+
+"Strategic ASP Partner": {
+  ar: "شريك ASP استراتيجي"
+},
+"We officially appointed Iteron, the holding company of Accqrate, as our ASP partner for UAE e-invoicing, driven by their proven capability in data harmonisation and enterprise integration.": {
+  ar: "قمنا بتعيين شركة Iteron، الشركة القابضة لـ Accqrate، رسميًا كشريك ASP لنا للفوترة الإلكترونية في دولة الإمارات، وذلك بناءً على قدراتهم المثبتة في توحيد البيانات والتكامل على مستوى المؤسسات."
 }
+
 
 
 
