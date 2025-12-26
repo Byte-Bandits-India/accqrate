@@ -8831,6 +8831,10 @@ const blogTranslations: TranslationsMap = {
   "Next": {
     "ar": "التالي"
   },
+    
+  "PEPPOL Compliant": {
+    "ar": "متوافق مع PEPPOL"
+  }
 
 
 
