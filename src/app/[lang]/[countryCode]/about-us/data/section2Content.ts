@@ -24,6 +24,7 @@ export const section2Content = {
     pl: {
         section1Title: "Accqrate In Poland",
         section1: {
+             image: AssetPath.aboutus.polabout,
             title1: "Built for Poland's PEPPOL & FPS Finance Mandate",
             desc1: "Accqrate brings a Poland-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.",
             title2: "European Precision, Global Scalability",
