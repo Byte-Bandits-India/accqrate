@@ -512,6 +512,8 @@ import bemission from "@/Assets/images/about/BE_mission.webp";
 import uaeabout from "@/Assets/images/about/uae_about.png";
 import defaultmission from "@/Assets/images/about/defaultmission.webp";
 import saAbout from "@/Assets/images/about/accqratein-saidi-arabia.webp"
+import polabout from "@/Assets/images/about/pol_about.png"
+
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
 import api from "@/Assets/images/icons/api.svg";
@@ -1110,6 +1112,7 @@ const AssetPath = {
     uaeabout: uaeabout,
     defaultmission: defaultmission,
     saAbout,
+   polabout,
   },
 
   404: {
