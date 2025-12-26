@@ -42,7 +42,7 @@ export const section2Content = {
     ae: {
         section1Title: "Accqrate In UAE",
         section1: {
-            image: AssetPath.aboutus.stone,
+            image: AssetPath.aboutus.uaeabout,
             title1: "Built for UAE VAT & FTA Compliance",
             desc1: "Accqrate delivers a UAE-ready e-invoicing and reporting engine aligned with FTA VAT regulations, audit requirements, and data retention mandates. The platform is designed to support structured invoice data, automated validations, and seamless reporting while remaining future-proof for upcoming real-time or continuous transaction control models.",
             title2: "Enterprise-Grade Architecture for the GCC",
