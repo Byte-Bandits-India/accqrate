@@ -48,7 +48,7 @@ const getHeroImage = (countryCode: string) => {
     case "be":
       return AssetPath.aboutus.hero; 
     case "pl":
-      return AssetPath.aboutus.stone;
+      return AssetPath.aboutus.hero;
     case "ae":
       return AssetPath.aboutus.hero;
     case "sa":
