@@ -15190,7 +15190,17 @@ const translations = {
   },
   "Get 100% compliant e-invoicing with Accqrate": {
     "ar": "احصل على فوترة إلكترونية متوافقة بنسبة 100٪ مع أككوريت"
-  }
+  },
+  "Free Proof of Concept PDF/A3 with XML invoices": {
+  ar: "إثبات مفهوم مجاني بصيغة PDF/A3 مع فواتير XML"
+},
+"Search the order and select the “Fulfillment View”": {
+  ar: "ابحث عن الطلب وحدد خيار «عرض التنفيذ»"
+},
+"E-invoicing Insights": {
+  ar: "رؤى الفوترة الإلكترونية"
+},
+
 
 }
 export const setLanguage = (l: LanguageCode) => {

@@ -217,27 +217,27 @@ const badgesConfig: Record<string, Array<{
 }>> = {
     SA: [
         {
-            img: peppolImg.src,
-            alt: 'Peppol Certified',
-            text: 'Peppol Certified',
+            img: AssetPath.icons.proofOfConcept,
+            alt: 'Free Proof of Concept PDF/A3 with XML invoices',
+            text: 'Free Proof of Concept PDF/A3 with XML invoices',
             className: 'w-16 h-16',
         },
         {
-            img: gdprImg.src,
-            alt: 'GDPR Compliant',
-            text: 'GDPR Compliant',
+            img: AssetPath.icons.readyForZatca,
+            alt: 'Ready for all Waves of ZATCA Phase 2',
+            text: 'Ready for all Waves of ZATCA Phase 2',
             className: 'w-16 h-16',
         },
         {
             img: serverImg.src,
-            alt: 'Data Hosted in Europe',
-            text: 'Data Hosted in Europe',
+            alt: 'Data Hosted in Saudi Cloud',
+            text: 'Data Hosted in Saudi Cloud',
             className: 'w-16 h-16',
         },
         {
-            img: isoImg.src,
-            alt: 'ISO 27001 Certified',
-            text: 'ISO 27001 Certified',
+            img: AssetPath.icons.onPremises,
+            alt: 'Flexible Solution: Cloud or On-Premises',
+            text: 'Flexible Solution: Cloud or On-Premises',
             className: 'w-16 h-16',
         },
     ],
@@ -432,52 +432,52 @@ const Software: React.FC = () => {
                         <FadeUp className="flex flex-col justify-center max-w-[450px] w-full">
                             {/* content animated, background stays in parent */}
                             <div>
-                            <div className="flex items-center gap-2">
-                                <p className="text-[#F05A28] text-[16px] uppercase leading-normal m-0 lg:whitespace-nowrap">
-                                    <T>{content.badgeText}</T>
-                                </p>
+                                <div className="flex items-center gap-2">
+                                    <p className="text-[#F05A28] text-[16px] uppercase leading-normal m-0 lg:whitespace-nowrap">
+                                        <T>{content.badgeText}</T>
+                                    </p>
 
-                                <Image
-                                    src={flagImage}
-                                    alt={`${content.name || countryCode}-flag`}
-                                    width={30}
-                                    height={20}
-                                    className="w-[30px] h-auto rounded object-contain"
-                                    unoptimized
+                                    <Image
+                                        src={flagImage}
+                                        alt={`${content.name || countryCode}-flag`}
+                                        width={30}
+                                        height={20}
+                                        className="w-[30px] h-auto rounded object-contain"
+                                        unoptimized
+                                    />
+                                </div>
+
+
+                                <p className="text-fluid-h3 lg:text-[24px] font-medium text-[#1c2041] mt-4 leading-[1.5] mb-2">
+                                    <T>Enable Your Business With E-invoicing.</T>
+                                </p>
+                                <h1 className="text-fluid-h3 font-semibold text-[#1c2041] leading-tight">
+                                    <T>{content.title}</T>
+                                </h1>
+
+                                <div className="h-[2px] w-[80px] bg-blue-600 my-4"></div>
+
+                                {/* Description 1 with green E-invoicing */}
+                                <p
+                                    className="text-[#000000] text-fluid-small lg:text-[16px] max-w-[560px] leading-normal"
+                                    dangerouslySetInnerHTML={{ __html: translatedDescription1 }}
                                 />
-                            </div>
 
+                                {/* Description 2 */}
+                                {content.description2 && (
+                                    <p className="text-[#5a6183] text-[14px] max-w-[560px] leading-normal">
+                                        <T>{content.description2}</T>
+                                    </p>
+                                )}
 
-                            <p className="text-fluid-h3 lg:text-[24px] font-medium text-[#1c2041] mt-4 leading-[1.5] mb-2">
-                                <T>Enable Your Business With E-invoicing.</T>
-                            </p>
-                            <h1 className="text-fluid-h3 font-semibold text-[#1c2041] leading-tight">
-                                <T>{content.title}</T>
-                            </h1>
-
-                            <div className="h-[2px] w-[80px] bg-blue-600 my-4"></div>
-
-                            {/* Description 1 with green E-invoicing */}
-                            <p
-                                className="text-[#000000] text-fluid-small lg:text-[16px] max-w-[560px] leading-normal"
-                                dangerouslySetInnerHTML={{ __html: translatedDescription1 }}
-                            />
-
-                            {/* Description 2 */}
-                            {content.description2 && (
-                                <p className="text-[#5a6183] text-[14px] max-w-[560px] leading-normal">
-                                    <T>{content.description2}</T>
-                                </p>
-                            )}
-
-                            <div className="flex justify-start py-6">
-                                <Link
-                                    href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setModalOpen(true);
-                                    }}
-                                    className="
+                                <div className="flex justify-start py-6">
+                                    <Link
+                                        href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            setModalOpen(true);
+                                        }}
+                                        className="
                       relative
                       flex items-center justify-center
                       w-[270px] md:w-[240px] lg:w-[250px]
@@ -490,99 +490,99 @@ const Software: React.FC = () => {
                       text-center leading-tight
                       transition-all duration-300 hover:bg-[#d94f22]
                     "
-                                >
-                                    <span className="mx-auto">
-                                        <T>{content.ctaText}</T>
-                                    </span>
-
-                                    <svg
-                                        width="14"
-                                        height="14"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        className="absolute right-4 text-white"
                                     >
-                                        <path
-                                            d="M9 6l6 6-6 6"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </Link>
-                            </div>
+                                        <span className="mx-auto">
+                                            <T>{content.ctaText}</T>
+                                        </span>
 
-                            {/* FEATURES SECTION - Desktop/Tablet */}
-                            {badges.length > 0 && (
-                                <div className="hidden lg:block bg-white p-4 rounded-2xl max-w-[450px]">
-                                    <ul className="space-y-3">
-                                        {badges.slice(0, 5).map((badge, index) => (
-                                            <li key={index} className="flex items-start gap-3">
-                                                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-[#ccd8ff] rounded-full">
-                                                    <Image
-                                                        src={badge.img}
-                                                        alt={badge.alt}
-                                                        width={28}
-                                                        height={28}
-                                                        priority
-                                                    />
-                                                </div>
-
-                                                <span className="text-[#5a6183] text-[16px] mt-2 leading-normal">
-                                                    <T>{badge.text}</T>
-                                                </span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                        <svg
+                                            width="14"
+                                            height="14"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            className="absolute right-4 text-white"
+                                        >
+                                            <path
+                                                d="M9 6l6 6-6 6"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </Link>
                                 </div>
-                            )}
 
-                            {/* FEATURES SECTION - Mobile */}
-                            {badges.length > 0 && (
-                                <div className="lg:hidden bg-white p-4 rounded-lg max-w-full border border-gray-200 shadow-sm mt-4">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        {badges.slice(0, 4).map((badge, index) => (
-                                            <div key={index} className="flex items-center gap-2">
-                                                <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
-                                                    <Image
-                                                        src={badge.img}
-                                                        alt={badge.alt}
-                                                        width={20}
-                                                        height={20}
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-                                                <span className="text-[#1C2041] text-[14px] leading-[20px] font-medium">
-                                                    <T>{badge.text}</T>
-                                                </span>
-                                            </div>
-                                        ))}
+                                {/* FEATURES SECTION - Desktop/Tablet */}
+                                {badges.length > 0 && (
+                                    <div className="hidden lg:block bg-white p-4 rounded-2xl max-w-[450px]">
+                                        <ul className="space-y-3">
+                                            {badges.slice(0, 5).map((badge, index) => (
+                                                <li key={index} className="flex items-start gap-3">
+                                                    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-[#ccd8ff] rounded-full">
+                                                        <Image
+                                                            src={badge.img}
+                                                            alt={badge.alt}
+                                                            width={28}
+                                                            height={28}
+                                                            priority
+                                                        />
+                                                    </div>
+
+                                                    <span className="text-[#5a6183] text-[16px] mt-2 leading-normal">
+                                                        <T>{badge.text}</T>
+                                                    </span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
-                                </div>
-                            )}
+                                )}
 
-                            <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8 mt-6">
-                                <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
-                                    <T>Simplified</T>
-                                </p>
-                                <img
-                                    src={AssetPath.home.starOr.src}
-                                    alt="orange_star"
-                                    className="w-5 h-5 md:w-auto md:h-auto"
-                                />
-                                <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
-                                    <T>Smart</T>
-                                </p>
-                                <img
-                                    src={AssetPath.home.starOr.src}
-                                    alt="orange_star"
-                                    className="w-5 h-5 md:w-auto md:h-auto"
-                                />
-                                <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
-                                    <T>Complaint</T>
-                                </p>
-                            </div>
+                                {/* FEATURES SECTION - Mobile */}
+                                {badges.length > 0 && (
+                                    <div className="lg:hidden bg-white p-4 rounded-lg max-w-full border border-gray-200 shadow-sm mt-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                            {badges.slice(0, 4).map((badge, index) => (
+                                                <div key={index} className="flex items-center gap-2">
+                                                    <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                                                        <Image
+                                                            src={badge.img}
+                                                            alt={badge.alt}
+                                                            width={20}
+                                                            height={20}
+                                                            className="object-contain"
+                                                        />
+                                                    </div>
+                                                    <span className="text-[#1C2041] text-[14px] leading-[20px] font-medium">
+                                                        <T>{badge.text}</T>
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8 mt-6">
+                                    <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
+                                        <T>Simplified</T>
+                                    </p>
+                                    <img
+                                        src={AssetPath.home.starOr.src}
+                                        alt="orange_star"
+                                        className="w-5 h-5 md:w-auto md:h-auto"
+                                    />
+                                    <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
+                                        <T>Smart</T>
+                                    </p>
+                                    <img
+                                        src={AssetPath.home.starOr.src}
+                                        alt="orange_star"
+                                        className="w-5 h-5 md:w-auto md:h-auto"
+                                    />
+                                    <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
+                                        <T>Complaint</T>
+                                    </p>
+                                </div>
                             </div>
                         </FadeUp>
 
