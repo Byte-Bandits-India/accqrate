@@ -15200,6 +15200,15 @@ const translations = {
 "E-invoicing Insights": {
   ar: "رؤى الفوترة الإلكترونية"
 },
+  "Explore All Blogs": {
+    "ar": "استكشف جميع المدونات"
+  },
+   "Previous": {
+    "ar": "السابق"
+  },
+  "Next": {
+    "ar": "التالي"
+  },
 
 
 }
