@@ -83,7 +83,7 @@ export const section4Content = {
             {
                 img: AssetPath.home.feature3,
                 title: "Flexible Integration Capabilities",
-                description: "• API push & pull \n• ERP adapters \n• POS integrations\n• Flat-file / Excel upload\n• Custom integration executables\n• Designed for legacy systems, hybrid environments, and complex multi-ERP landscapes"
+                description: "• API push & pull \n• ERP adapters & POS integrations\n• Flat-file / Excel upload\n• Custom integration executables\n• Designed for legacy systems, hybrid environments, and complex multi-ERP landscapes"
             },
             {
                 img: AssetPath.home.feature4,
