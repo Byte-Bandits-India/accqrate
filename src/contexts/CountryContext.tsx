@@ -49,13 +49,7 @@ const getLanguagesForCountry = (countryCode: string): Language[] => {
 
 // ===================== Data =====================
 export const countries: Country[] = [
-    // {
-    //     name: "Saudi Arabia",
-    //     code: "SA",
-    //     flag: AssetPath.header.language.saudiArabia,
-    //     language: "Arabic",
-    //     currency: "SAR",
-    // },
+    
 
     // {
     //     name: "Oman",
@@ -114,7 +108,13 @@ export const countries: Country[] = [
         language: "English",
         currency: "MUR",
     },
-
+   {
+        name: "Saudi Arabia",
+         code: "SA",
+         flag: AssetPath.header.language.saudiArabia,
+         language: "Arabic",
+         currency: "SAR",
+     },
 
 
 
