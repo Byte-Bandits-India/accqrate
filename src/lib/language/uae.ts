@@ -8768,9 +8768,9 @@ const blogTranslations: TranslationsMap = {
 "Connect with us": {
   ar: "تواصل معنا"
 },
-"Have a question about our solutions and services?": {
-  ar: "هل لديك سؤال حول حلولنا وخدماتنا؟"
-},
+'Have a question about our solutions and services?': {
+    ar: 'هل لديك أي أسئلة حولنا وخدماتنا؟'
+  },
 "Compliant with UAE\s Mandatory B2B E-Invoicing Regulation": {
   ar: "قم بإنشاء فواتير متوافقة بالكامل مع نموذج الزوايا الخمس لهيئة الضرائب الإماراتية (DCTCE)"
 },

@@ -1571,7 +1571,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <T>Frequently Answered Questions</T>
                                 </h2>
                                 <p className="text-[16px] text-[#5a6183] text-center mb-6 ">
-                                    Have a question about our solutions and services?
+                                    <T>Have a question about our solutions and services?</T>
                                 </p>
                             </div>
 
