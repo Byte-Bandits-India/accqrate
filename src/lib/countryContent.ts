@@ -209,6 +209,465 @@ const defaultContent: CountryContent = {
   }
 };
 
+const jordanContent: CountryContent = {
+  backgroundImage: AssetPath.homeBackgrounds.saudi,
+  heroTitle: "Accqrate E-Invoicing: ISTD-Ready. VAT-Compliant. Built for Enterprises.",
+  heroSubtitle: "E-invoicing Solution for Jordan",
+  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, ISTD-certified platform tailored for Jordan businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
+  heroTagline: "Complaint . Seamless . Secure",
+  whyAccqrateTitle: "Why Accqrate?",
+  whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless ISTD e-invoicing experience.",
+  whyAccqrateFeatures: [
+    {
+      img: AssetPath.icons.websiteDesign1,
+      title: "One platform.",
+      description: "All modules run on a single, integrated data model.",
+      sub: " Zero silos."
+    },
+    {
+      img: AssetPath.icons.websiteDesign11,
+      title: "Enterprise‑grade.",
+      description: "Security, scalability and performance proven across 30+ industries.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign12,
+      title: "AI, everywhere.",
+      description: "Accelera, our AI copilot ,accelerates routine work, insights and decisions.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign13,
+      title: "Fast time‑to‑value.",
+      description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign14,
+      title: "Built‑in Global compliance:",
+      description: "Connect ERP/POS to tax authorities; from ISTD Phase II to PEPPOL standards.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign15,
+      title: "Deploy your way.",
+      description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
+      sub: ""
+    }
+  ],
+  contactInfo: { phone: "+966 123 456 789", salesText: "Contact Sales KSA" },
+  aiCopilotTitle: "Accelerate Your AI Copilot",
+  aiCopilotSubtitle: "Work faster and decide smarter with AI embedded across the suite.",
+  aiCopilotDescription: "Accelera, our AI copilot, transforms routine work into strategic insights.",
+  aiCopilotFeatures: [
+    {
+      title: "Natural-language actions",
+      description: "Ask, \"Show last month's receivables by region\""
+    },
+    {
+      title: "Automations",
+      description: "Generate e-invoices, trigger approvals"
+    },
+    {
+      title: "Insight to action",
+      description: "Spot anomalies, forecast demand"
+    },
+    {
+      title: "Assistive UX",
+      description: "Contextual help & guided workflows"
+    }
+  ],
+  cards: [
+    {
+      icon: AssetPath.cards.crm,
+      title: "CRM",
+      description: "Automate leads. Boost conversions.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/crm",
+    },
+    {
+      icon: AssetPath.cards.books,
+      title: "Books",
+      description: "Smart accounting made simple.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/books",
+    },
+    {
+      icon: AssetPath.cards.people,
+      title: "People",
+      description: "Complete HR & payroll solution",
+      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
+      link: "SA/business/people",
+    },
+    {
+      icon: AssetPath.cards.retail,
+      title: "Retail",
+      description: "All-in-one smart retail POS.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/retail",
+    },
+    {
+      icon: AssetPath.cards.factory,
+      title: "Factory",
+      description: "Optimize full manufacturing process.",
+      color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
+      link: "SA/business/factory",
+    },
+    {
+      icon: AssetPath.cards.einvoicing,
+      title: "E‑Invoicing",
+      description: "Seamless, compliant tax integration.",
+      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
+      link: "SA/business/e-invoicing-standalone",
+    }
+  ],
+  testimonials: [
+    {
+      quote: "Ali - Construction Company",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.ali.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Al Laith, UAE Global Health & Beauty Co.",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.uae.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Wail - Jonex",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.wail.src,
+      bg: AssetPath.landingpage.blue.src
+    }
+  ],
+  complianceSection: {
+    complianceTitle: "Full Compliance with Jordan's E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with Jordan's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
+    complianceItems: [
+      "Structured formats fully aligned with Jordanian and EU specifications",
+      "Secure, standardized exchange over PEPPOL",
+      "Automated updates for evolving tax and technical regulations",
+      "Seamless integration with Mercurius and tax authority systems"
+    ],
+    automationTitle: "Hassle-Free E-Invoicing Automation",
+    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationItems: [
+      "AI-powered validation to reduce rejections",
+      "Real-time error detection and correction suggestions",
+      "Zero-cost regulatory upgrades",
+      "Automated generation → validation → PEPPOL submission → archiving"
+    ],
+    buttonText: "Book an Appointment"
+  }
+};
+
+const mauritiusContent: CountryContent = {
+  backgroundImage: AssetPath.homeBackgrounds.saudi,
+  heroTitle: "Accqrate E-Invoicing: MRA-Ready. VAT-Compliant. Built for Enterprises.",
+  heroSubtitle: "E-invoicing Solution for Mauritius",
+  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, MRA-certified platform tailored for Mauritian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
+  heroTagline: "Complaint . Seamless . Secure",
+  whyAccqrateTitle: "Why Accqrate?",
+  whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless Mauritius e-invoicing experience.",
+  whyAccqrateFeatures: [
+    {
+      img: AssetPath.icons.websiteDesign1,
+      title: "One platform.",
+      description: "All modules run on a single, integrated data model.",
+      sub: " Zero silos."
+    },
+    {
+      img: AssetPath.icons.websiteDesign11,
+      title: "Enterprise‑grade.",
+      description: "Security, scalability and performance proven across 30+ industries.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign12,
+      title: "AI, everywhere.",
+      description: "Accelera, our AI copilot ,accelerates routine work, insights and decisions.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign13,
+      title: "Fast time‑to‑value.",
+      description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign14,
+      title: "Built‑in Global compliance:",
+      description: "Connect ERP/POS to tax authorities; from MRA Phase II to PEPPOL standards.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign15,
+      title: "Deploy your way.",
+      description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
+      sub: ""
+    }
+  ],
+  contactInfo: { phone: "+966 123 456 789", salesText: "Contact Sales KSA" },
+  aiCopilotTitle: "Accelerate Your AI Copilot",
+  aiCopilotSubtitle: "Work faster and decide smarter with AI embedded across the suite.",
+  aiCopilotDescription: "Accelera, our AI copilot, transforms routine work into strategic insights.",
+  aiCopilotFeatures: [
+    {
+      title: "Natural-language actions",
+      description: "Ask, \"Show last month's receivables by region\""
+    },
+    {
+      title: "Automations",
+      description: "Generate e-invoices, trigger approvals"
+    },
+    {
+      title: "Insight to action",
+      description: "Spot anomalies, forecast demand"
+    },
+    {
+      title: "Assistive UX",
+      description: "Contextual help & guided workflows"
+    }
+  ],
+  cards: [
+    {
+      icon: AssetPath.cards.crm,
+      title: "CRM",
+      description: "Automate leads. Boost conversions.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/crm",
+    },
+    {
+      icon: AssetPath.cards.books,
+      title: "Books",
+      description: "Smart accounting made simple.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/books",
+    },
+    {
+      icon: AssetPath.cards.people,
+      title: "People",
+      description: "Complete HR & payroll solution",
+      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
+      link: "SA/business/people",
+    },
+    {
+      icon: AssetPath.cards.retail,
+      title: "Retail",
+      description: "All-in-one smart retail POS.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/retail",
+    },
+    {
+      icon: AssetPath.cards.factory,
+      title: "Factory",
+      description: "Optimize full manufacturing process.",
+      color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
+      link: "SA/business/factory",
+    },
+    {
+      icon: AssetPath.cards.einvoicing,
+      title: "E‑Invoicing",
+      description: "Seamless, compliant tax integration.",
+      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
+      link: "SA/business/e-invoicing-standalone",
+    }
+  ],
+  testimonials: [
+    {
+      quote: "Ali - Construction Company",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.ali.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Al Laith, UAE Global Health & Beauty Co.",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.uae.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Wail - Jonex",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.wail.src,
+      bg: AssetPath.landingpage.blue.src
+    }
+  ],
+  complianceSection: {
+    complianceTitle: "Full Compliance with Mauritius's E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with Mauritius's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
+    complianceItems: [
+      "Structured formats fully aligned with Mauritian and EU specifications",
+      "Secure, standardized exchange over PEPPOL",
+      "Automated updates for evolving tax and technical regulations",
+      "Seamless integration with Mercurius and tax authority systems"
+    ],
+    automationTitle: "Hassle-Free E-Invoicing Automation",
+    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationItems: [
+      "AI-powered validation to reduce rejections",
+      "Real-time error detection and correction suggestions",
+      "Zero-cost regulatory upgrades",
+      "Automated generation → validation → PEPPOL submission → archiving"
+    ],
+    buttonText: "Book an Appointment"
+  }
+};
+
+const malaysiaContent: CountryContent = {
+  backgroundImage: AssetPath.homeBackgrounds.malaysia,
+  heroTitle: "Accqrate E-Invoicing: LHDN-Ready. VAT-Compliant. Built for Enterprises.",
+  heroSubtitle: "E-invoicing Solution for Malaysia",
+  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, LHDN-certified platform tailored for Malaysian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
+  heroTagline: "Complaint . Seamless . Secure",
+  whyAccqrateTitle: "Why Accqrate?",
+  whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless LHDN e-invoicing experience.",
+  whyAccqrateFeatures: [
+    {
+      img: AssetPath.icons.websiteDesign1,
+      title: "One platform.",
+      description: "All modules run on a single, integrated data model.",
+      sub: " Zero silos."
+    },
+    {
+      img: AssetPath.icons.websiteDesign11,
+      title: "Enterprise‑grade.",
+      description: "Security, scalability and performance proven across 30+ industries.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign12,
+      title: "AI, everywhere.",
+      description: "Accelera, our AI copilot ,accelerates routine work, insights and decisions.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign13,
+      title: "Fast time‑to‑value.",
+      description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign14,
+      title: "Built‑in Global compliance:",
+      description: "Connect ERP/POS to tax authorities; from  LHDN Phase II to PEPPOL standards.",
+      sub: ""
+    },
+    {
+      img: AssetPath.icons.websiteDesign15,
+      title: "Deploy your way.",
+      description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
+      sub: ""
+    }
+  ],
+  contactInfo: { phone: "+966 123 456 789", salesText: "Contact Sales KSA" },
+  aiCopilotTitle: "Accelerate Your AI Copilot",
+  aiCopilotSubtitle: "Work faster and decide smarter with AI embedded across the suite.",
+  aiCopilotDescription: "Accelera, our AI copilot, transforms routine work into strategic insights.",
+  aiCopilotFeatures: [
+    {
+      title: "Natural-language actions",
+      description: "Ask, \"Show last month's receivables by region\""
+    },
+    {
+      title: "Automations",
+      description: "Generate e-invoices, trigger approvals"
+    },
+    {
+      title: "Insight to action",
+      description: "Spot anomalies, forecast demand"
+    },
+    {
+      title: "Assistive UX",
+      description: "Contextual help & guided workflows"
+    }
+  ],
+  cards: [
+    {
+      icon: AssetPath.cards.crm,
+      title: "CRM",
+      description: "Automate leads. Boost conversions.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/crm",
+    },
+    {
+      icon: AssetPath.cards.books,
+      title: "Books",
+      description: "Smart accounting made simple.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/books",
+    },
+    {
+      icon: AssetPath.cards.people,
+      title: "People",
+      description: "Complete HR & payroll solution",
+      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
+      link: "SA/business/people",
+    },
+    {
+      icon: AssetPath.cards.retail,
+      title: "Retail",
+      description: "All-in-one smart retail POS.",
+      color: "linear-gradient(to right, #FFFFFF, #FCF1FF)",
+      link: "SA/business/retail",
+    },
+    {
+      icon: AssetPath.cards.factory,
+      title: "Factory",
+      description: "Optimize full manufacturing process.",
+      color: "linear-gradient(to right, #FFFFFF, #FFF3E6)",
+      link: "SA/business/factory",
+    },
+    {
+      icon: AssetPath.cards.einvoicing,
+      title: "E‑Invoicing",
+      description: "Seamless, compliant tax integration.",
+      color: "linear-gradient(to right, #FFFFFF, #E7FFE8)",
+      link: "SA/business/e-invoicing-standalone",
+    }
+  ],
+  testimonials: [
+    {
+      quote: "Ali - Construction Company",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.ali.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Al Laith, UAE Global Health & Beauty Co.",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.uae.src,
+      bg: AssetPath.landingpage.blue.src
+    },
+    {
+      quote: "Wail - Jonex",
+      name: "Accqrate's e‑invoice solution integrated seamlessly with ZATCA. We saved time and cut compliance risk.",
+      avatar: AssetPath.landingpage.wail.src,
+      bg: AssetPath.landingpage.blue.src
+    }
+  ],
+  complianceSection: {
+    complianceTitle: "Full Compliance with Malaysia's E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures end-to-end compliance with Malaysia's B2B e-invoicing mandate and the LHDN requirements. Our platform supports:",
+    complianceItems: [
+      "Structured formats fully aligned with Malaysia and EU specifications",
+      "Secure, standardized exchange over PEPPOL",
+      "Automated updates for evolving tax and technical regulations",
+      "Seamless integration with Mercurius and tax authority systems"
+    ],
+    automationTitle: "Hassle-Free E-Invoicing Automation",
+    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationItems: [
+      "AI-powered validation to reduce rejections",
+      "Real-time error detection and correction suggestions",
+      "Zero-cost regulatory upgrades",
+      "Automated generation → validation → PEPPOL submission → archiving"
+    ],
+    buttonText: "Book an Appointment"
+  }
+};
+
 // Special content for Belgium
 const belgiumContent: CountryContent = {
   backgroundImage: AssetPath.homeBackgrounds.jordan,
@@ -556,14 +1015,14 @@ export const countryContentMap: Record<string, CountryContent> = {
   SA: defaultContent,
   OM: defaultContent,
   BH: defaultContent,
-  MA: defaultContent,
-  MU: defaultContent,
-  JD: defaultContent,
   
   // Special cases with different content
   BE: belgiumContent,
   PL: polandContent,
-  AE: uaeContent
+  AE: uaeContent,
+  MA: malaysiaContent,
+  MU: mauritiusContent,
+  JD: jordanContent,
 };
 
 export const getCountryContent = (countryCode: string): CountryContent => {

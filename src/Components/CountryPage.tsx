@@ -997,11 +997,17 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
                                 : countryCode.toUpperCase() === "SA"
                                     ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
-                                    : countryCode.toUpperCase() === "OM"
-                                        ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
-                                        : countryCode.toUpperCase() === "BH"
-                                            ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
-                                            : AssetPath.home.invoiceList.src
+                                    : countryCode.toUpperCase() === "JD"
+                                        ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                        : countryCode.toUpperCase() === "MU"
+                                            ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                            : countryCode.toUpperCase() === "MA"
+                                                ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                                : countryCode.toUpperCase() === "OM"
+                                                    ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
+                                                    : countryCode.toUpperCase() === "BH"
+                                                        ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
+                                                        : AssetPath.home.invoiceList.src
                         }
                         alt="invoiceList"
                         className="max-w-[1240px] w-full h-auto mx-auto"
