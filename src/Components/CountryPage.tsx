@@ -992,11 +992,22 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 <div>
                     <img
-                        src={AssetPath.home.invoiceList.src}
+                        src={
+                            countryCode.toUpperCase() === "AE"
+                                ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                : countryCode.toUpperCase() === "SA"
+                                    ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                    : countryCode.toUpperCase() === "OM"
+                                        ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
+                                        : countryCode.toUpperCase() === "BH"
+                                            ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
+                                            : AssetPath.home.invoiceList.src
+                        }
                         alt="invoiceList"
                         className="max-w-[1240px] w-full h-auto mx-auto"
                     />
                 </div>
+
 
                 {/* Trusted text */}
                 <div className="rounded-[30px] py-6 max-w-[1280px] mx-auto">

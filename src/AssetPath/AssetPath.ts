@@ -129,6 +129,7 @@ import aiImage from "@/Assets/images/home/ai.png";
 import acceleraWebp from "@/Assets/images/home/accelera.png";
 import vidaHome from "@/Assets/images/home/VIDA_home.png";
 import dctceHome from "@/Assets/images/home/UAE_Peppol.webp";
+import uaee from "@/Assets/images/home/uae-e.webp"
 
 // ==================== LANDINGPAGE IMAGES ====================
 
@@ -387,6 +388,7 @@ import iso from "@/Assets/images/invoicing/iso.png";
 import peppol from "@/Assets/images/invoicing/peppol.png";
 import datahosted from "@/Assets/images/invoicing/server.png";
 import gdpr from "@/Assets/images/invoicing/gdpr.png";
+import manageteam from "@/Assets/images/invoicing/manage-team.webp";
 
 // Invoicing Integration
 import integrationDarkBlue from "@/Assets/images/invoicing/integration/darkblue.png";
@@ -509,6 +511,7 @@ import beabout from "@/Assets/images/about/BE_about.webp";
 import bemission from "@/Assets/images/about/BE_mission.webp";
 import uaeabout from "@/Assets/images/about/uae_about.png";
 import defaultmission from "@/Assets/images/about/defaultmission.webp";
+import saAbout from "@/Assets/images/about/accqratein-saidi-arabia.webp"
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
 import api from "@/Assets/images/icons/api.svg";
@@ -707,6 +710,7 @@ const AssetPath = {
     f3,
     f4,
     f5,
+    uaee
   },
 
   // LANDINGPAGE
@@ -893,6 +897,7 @@ const AssetPath = {
     integrationFlowIcon2,
     integrationFlowIcon3,
     integration: integrationImg,
+    manageteam,
     invocingCta,
     invoiceMalaysia,
     invoiceMy,
@@ -1104,6 +1109,7 @@ const AssetPath = {
     bemission: bemission,
     uaeabout: uaeabout,
     defaultmission: defaultmission,
+    saAbout,
   },
 
   404: {

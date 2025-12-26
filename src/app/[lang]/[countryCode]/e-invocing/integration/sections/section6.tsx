@@ -42,11 +42,11 @@ const DemoVideoSection: React.FC = () => {
   const getInvoiceMultipleImage = () => {
     switch (countryCode) {
       case 'be':
-        return AssetPath.integration.footer;
-      case 'pl':
-        return AssetPath.integration.footer;
-      default:
         return AssetPath.invoicing.manageTeam;
+      case 'pl':
+        return AssetPath.invoicing.manageTeam;
+      default:
+        return AssetPath.invoicing.manageteam;
     }
   };
 
@@ -93,107 +93,107 @@ const DemoVideoSection: React.FC = () => {
         {isSaudi && (
           <div className=" relative max-w-[1200px] mx-auto px-6 md:px-8 xl:px-0 overflow-x-hidden">
             <FadeUp>
-            <button
-              onClick={() => scroll('left')}
-              className="absolute left-6 top-1/2 -translate-y-1/2 bg-white shadow-md hover:shadow-lg rounded-full p-2 z-10 -ml-4"
-            >
-              <ChevronLeft className="w-6 h-6 text-[#FF8D67]" />
-            </button>
+              <button
+                onClick={() => scroll('left')}
+                className="absolute left-6 top-1/2 -translate-y-1/2 bg-white shadow-md hover:shadow-lg rounded-full p-2 z-10 -ml-4"
+              >
+                <ChevronLeft className="w-6 h-6 text-[#FF8D67]" />
+              </button>
 
-            <button
-              onClick={() => scroll('right')}
-              className="absolute right-6 top-1/2 -translate-y-1/2 bg-white shadow-md hover:shadow-lg rounded-full p-2 z-10 -mr-4"
-            >
-              <ChevronRight className="w-6 h-6 text-[#FF8D67]" />
-            </button>
+              <button
+                onClick={() => scroll('right')}
+                className="absolute right-6 top-1/2 -translate-y-1/2 bg-white shadow-md hover:shadow-lg rounded-full p-2 z-10 -mr-4"
+              >
+                <ChevronRight className="w-6 h-6 text-[#FF8D67]" />
+              </button>
 
-            <div
-              ref={scrollContainerRef}
-              className="flex gap-6 overflow-x-auto scroll-smooth px-2 scrollbar-hide"
-            >
-              {demoVideos.map((video, index) => (
-                <div
-                  key={index}
-                  onClick={() => {
-                    setSelectedVideo(video)
-                    setIsVideoModalOpen(true)
-                  }}
-                  className="bg-white min-w-[320px] sm:min-w-[360px] md:min-w-[380px] cursor-pointer overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-[#E5E8FF] hover:-translate-y-1 rounded-lg"
-                >
-                  <Image
-                    src={video.thumbnail}
-                    alt={video.title}
-                    width={380}
-                    height={215}
-                    className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </FadeUp>
+              <div
+                ref={scrollContainerRef}
+                className="flex gap-6 overflow-x-auto scroll-smooth px-2 scrollbar-hide"
+              >
+                {demoVideos.map((video, index) => (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      setSelectedVideo(video)
+                      setIsVideoModalOpen(true)
+                    }}
+                    className="bg-white min-w-[320px] sm:min-w-[360px] md:min-w-[380px] cursor-pointer overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-[#E5E8FF] hover:-translate-y-1 rounded-lg"
+                  >
+                    <Image
+                      src={video.thumbnail}
+                      alt={video.title}
+                      width={380}
+                      height={215}
+                      className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+            </FadeUp>
           </div>
         )}
 
-  
+
         <div className="relative mt-8 md:mt-10 lg:mt-12 h-auto  overflow-hidden">
           <FadeUp>
-          <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-[#1A0C48] to-[#242087]" />
-          <div className={`hidden md:block absolute top-0 h-full w-[50%] bg-[#F3F3FF] ${lang === 'ar' ? 'left-0 rounded-r-[30px]' : 'right-0 rounded-l-[30px]'}`} />
+            <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-[#1A0C48] to-[#242087]" />
+            <div className={`hidden md:block absolute top-0 h-full w-[50%] bg-[#F3F3FF] ${lang === 'ar' ? 'left-0 rounded-r-[30px]' : 'right-0 rounded-l-[30px]'}`} />
 
-          <div className="relative flex flex-col md:flex-row items-center justify-between max-w-[1200px] mx-auto w-full h-full md:px-8 px-0">
-            <div className="relative flex flex-col justify-center items-center md:items-start text-center md:text-left w-full bg-gradient-to-br from-[#1A0C48] to-[#242087] md:bg-none md:w-1/2 z-20 rounded-t-[30px] md:rounded-none px-6 py-20">
-              <div className="max-w-[520px] md:pl-4 lg:pl-8 w-full">
-                <p className="text-[#d63f10] uppercase text-[14px] md:text-[16px] leading-[30px] mb-4">
-                  <T lang={lang} countryCode={countryCode}>{content.expertText}</T>
-                </p>
+            <div className="relative flex flex-col md:flex-row items-center justify-between max-w-[1200px] mx-auto w-full h-full md:px-8 px-0">
+              <div className="relative flex flex-col justify-center items-center md:items-start text-center md:text-left w-full bg-gradient-to-br from-[#1A0C48] to-[#242087] md:bg-none md:w-1/2 z-20 rounded-t-[30px] md:rounded-none px-6 py-20">
+                <div className="max-w-[520px] md:pl-4 lg:pl-8 w-full">
+                  <p className="text-[#d63f10] uppercase text-[14px] md:text-[16px] leading-[30px] mb-4">
+                    <T lang={lang} countryCode={countryCode}>{content.expertText}</T>
+                  </p>
 
-                <h1 className="text-white text-fluid-small md:text-[24px] font-bold leading-tight mb-3">
-                  <T lang={lang} countryCode={countryCode}>{content.title}</T>
-                </h1>
+                  <h1 className="text-white text-fluid-small md:text-[24px] font-bold leading-tight mb-3">
+                    <T lang={lang} countryCode={countryCode}>{content.title}</T>
+                  </h1>
 
-                <p className="text-white text-[14px] md:text-[16px] leading-[30px] font-light mb-6">
-                  <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
-                </p>
+                  <p className="text-white text-[14px] md:text-[16px] leading-[30px] font-light mb-6">
+                    <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
+                  </p>
 
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 mb-8">
-                  {content.features.map((feature, index) => (
-                    <React.Fragment key={index}>
-                      <p className="text-[12px] md:text-[14px] text-white font-light">
-                        <T lang={lang} countryCode={countryCode}>{feature}</T>
-                      </p>
-                      {index < content.features.length - 1 && (
-                        <Image
-                          src={AssetPath.home.starOr}
-                          alt="star"
-                          width={20}
-                          height={20}
-                        />
-                      )}
-                    </React.Fragment>
-                  ))}
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 mb-8">
+                    {content.features.map((feature, index) => (
+                      <React.Fragment key={index}>
+                        <p className="text-[12px] md:text-[14px] text-white font-light">
+                          <T lang={lang} countryCode={countryCode}>{feature}</T>
+                        </p>
+                        {index < content.features.length - 1 && (
+                          <Image
+                            src={AssetPath.home.starOr}
+                            alt="star"
+                            width={20}
+                            height={20}
+                          />
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => setIsContactModalOpen(true)}
+                    className="bg-[#d63f10] px-6 py-2 rounded-full text-white"
+                  >
+                    <T lang={lang} countryCode={countryCode}>{content.buttonText}</T>
+                  </button>
                 </div>
+              </div>
 
-                <button
-                  onClick={() => setIsContactModalOpen(true)}
-                  className="bg-[#d63f10] px-6 py-2 rounded-full text-white"
-                >
-                  <T lang={lang} countryCode={countryCode}>{content.buttonText}</T>
-                </button>
+              <div className="relative flex justify-center items-center w-full md:w-1/2 z-10 bg-[#F3F3FF] md:bg-transparent py-10 md:py-0">
+                <Image
+                  src={getInvoiceMultipleImage().src}
+                  alt="Accqrate software illustration"
+                  width={591}
+                  height={400}
+                  className="rounded-2xl object-contain"
+                />
               </div>
             </div>
-
-            <div className="relative flex justify-center items-center w-full md:w-1/2 z-10 bg-[#F3F3FF] md:bg-transparent py-10 md:py-0">
-              <Image
-                src={getInvoiceMultipleImage().src}
-                alt="Accqrate software illustration"
-                width={591}
-                height={400}
-                className="rounded-2xl object-contain"
-              />
-            </div>
-            </div>
           </FadeUp>
-          </div>
+        </div>
       </section>
 
       {/* VIDEO MODAL */}

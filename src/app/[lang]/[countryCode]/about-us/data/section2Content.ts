@@ -62,6 +62,7 @@ export const section2Content = {
     default: {
         section1Title: "Accqrate In Belgium",
         section1: {
+            image: AssetPath.aboutus.saAbout,
             title1: "Built for Belgium's PEPPOL & FPS Finance Mandate",
             desc1: "Accqrate brings a Belgium-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.",
             title2: "European Precision, Global Scalability",
