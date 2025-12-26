@@ -52,6 +52,7 @@ export const section2Content = {
         },
         section2Title: "Our Mission",
         section2: {
+              image: AssetPath.aboutus.defaultmission,
             title1: "Modernizing the UAE’s Digital Tax Ecosystem",
             desc1: "We empower businesses with technology that simplifies VAT compliance, invoice governance, audit readiness, and cross-entity financial reporting while aligning with the UAE’s national digital transformation vision.",
             title2: "Accelerating Digital Adoption",
