@@ -400,45 +400,45 @@ const Section1 = () => {
 
                     {/* Logo Marquee */}
                     <FadeUp>
-                    <div className="relative">
-                        <div className="max-w-5xl overflow-hidden py-6 mx-auto">
-                            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
-                            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
+                        <div className="relative">
+                            <div className="max-w-5xl overflow-hidden py-6 mx-auto">
+                                <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
+                                <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
 
-                            <div className="flex flex-col gap-6">
-                                <div className="flex animate-scrollLeft w-max flex-shrink-0">
-                                    {[...topRow, ...topRow].map((logo, i) => (
-                                        <div key={`top-${i}`} className="flex flex-col items-center mx-4">
-                                            <Image
-                                                src={logo.src}
-                                                alt={logo.name}
-                                                width={135}
-                                                height={48}
-                                                className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
-                                            />
-                                            <p className=" text-xs md:text-sm text-[#737373] font-medium"><T>{logo.name}</T></p>
-                                        </div>
-                                    ))}
-                                </div>
+                                <div className="flex flex-col gap-6">
+                                    <div className="flex animate-scrollLeft w-max flex-shrink-0">
+                                        {[...topRow, ...topRow].map((logo, i) => (
+                                            <div key={`top-${i}`} className="flex flex-col items-center mx-4">
+                                                <Image
+                                                    src={logo.src}
+                                                    alt={logo.name}
+                                                    width={135}
+                                                    height={48}
+                                                    className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                                />
+                                                <p className=" text-xs md:text-sm text-[#737373] font-medium"><T>{logo.name}</T></p>
+                                            </div>
+                                        ))}
+                                    </div>
 
-                                <div className="flex animate-scrollRight w-max flex-shrink-0">
-                                    {[...bottomRow, ...bottomRow].map((logo, i) => (
-                                        <div key={`bottom-${i}`} className="flex flex-col items-center mx-4">
-                                            <img
-                                                src={logo.src.src}
-                                                alt={logo.name}
-                                                width={135}
-                                                height={48}
-                                                className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
-                                            />
-                                            <p className=" text-xs md:text-sm text-[#737373] font-medium">
-                                                <T>{logo.name}</T></p>
-                                        </div>
-                                    ))}
+                                    <div className="flex animate-scrollRight w-max flex-shrink-0">
+                                        {[...bottomRow, ...bottomRow].map((logo, i) => (
+                                            <div key={`bottom-${i}`} className="flex flex-col items-center mx-4">
+                                                <img
+                                                    src={logo.src.src}
+                                                    alt={logo.name}
+                                                    width={135}
+                                                    height={48}
+                                                    className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                                />
+                                                <p className=" text-xs md:text-sm text-[#737373] font-medium">
+                                                    <T>{logo.name}</T></p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </FadeUp>
 
                     <div className="px-6 md:px-8 xl:px-0 max-w-[1200px] mx-auto xl:flex items-end justify-between gap-20">
@@ -452,7 +452,7 @@ const Section1 = () => {
                             </p>
                         </FadeUp>
                     </div>
-                    
+
                     <div className="relative mt-6 md:mt-8">
                         <div className="max-w-[1200px] mx-auto">
                             <div className="grid grid-cols-1 lg:grid-cols-4 items-start">
@@ -518,9 +518,9 @@ const Section1 = () => {
                                         <T>See It in Action</T>
                                     </button>
                                 </div>
-                               
+
                                 {/* RIGHT COLUMN - IMAGE */}
-                                
+
                                 <div className="lg:col-span-2 flex justify-start items-start">
                                     <div className="sticky top-6 w-full flex justify-start">
                                         <img
@@ -533,7 +533,7 @@ const Section1 = () => {
                             </div>
                         </div>
                     </div>
-                       
+
 
                     <div className="relative mt-6 md:mt-0 pb-10 md:pb-12">
                         <div className="max-w-[1280px] mx-auto px-6 md:px-8 xl:px-0">
@@ -551,7 +551,7 @@ const Section1 = () => {
                                 </div>
 
                                 {/*  RIGHT COLUMN */}
-                                <div className="lg:col-span-2  max-w-[560px]">
+                                <div className="lg:col-span-2 max-w-[560px]">
                                     <div className="">
                                         <div>
                                             {/* Dynamic compliance content from centralized countryContent */}
@@ -576,116 +576,125 @@ const Section1 = () => {
                                                     />
                                                     <T>{pageContent.heroDescription}</T>
                                                 </p>
-
                                             </>
 
                                             {/* Conditional compliance card: Peppol for BE/PL/AE, ZATCA for others */}
                                             {countryCode === 'be' || countryCode === 'pl' ? (
-                                                <div className="bg-white max-h-[194px] w-[410px] rounded-2xl shadow p-4 flex flex-col gap-3 mt-6 md:mt-10">
-                                                    {/* Peppol Logo */}
-                                                    <Image
-                                                        src={AssetPath.integration.peppol}
-                                                        alt="peppol-logo"
-                                                        width={100}
-                                                        height={80}
-                                                        className="max-w-[191px] h-auto rounded-md"
-                                                        unoptimized
-                                                    />
-
-                                                    <div className="w-full h-px bg-gray-300"></div>
-
-                                                    <div className="flex items-center justify-between gap-4">
-                                                        <p className="text-sm text-[#5a6183] leading-relaxed">
-                                                            <T>{pageContent.peppolCardText}</T>
-                                                        </p>
-
-                                                        <div className="flex items-center justify-center gap-2">
+                                                <div className="bg-white rounded-2xl shadow p-6 mt-6 md:mt-10 w-full max-w-[410px]">
+                                                    <div className="flex flex-col h-full">
+                                                        {/* Peppol Logo */}
+                                                        <div className="mb-4">
                                                             <Image
-                                                                src={currentCountry.flag}
-                                                                alt={`${currentCountry.name}-flag`}
-                                                                width={40}
-                                                                height={30}
-                                                                className="max-w-[30px] h-auto rounded"
+                                                                src={AssetPath.integration.peppol}
+                                                                alt="peppol-logo"
+                                                                width={100}
+                                                                height={80}
+                                                                className="max-w-[191px] h-auto rounded-md"
                                                                 unoptimized
                                                             />
-                                                            <p className='text-[#5a6183]'><T>{currentCountry.code}</T></p>
+                                                        </div>
+
+                                                        <div className="w-full h-px bg-gray-300 mb-4"></div>
+
+                                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-1 min-h-0">
+                                                            <p className="text-sm text-[#5a6183] leading-relaxed flex-1 overflow-hidden line-clamp-3">
+                                                                <T>{pageContent.peppolCardText}</T>
+                                                            </p>
+
+                                                            <div className="flex items-center justify-center gap-2 shrink-0">
+                                                                <Image
+                                                                    src={currentCountry.flag}
+                                                                    alt={`${currentCountry.name}-flag`}
+                                                                    width={40}
+                                                                    height={30}
+                                                                    className="max-w-[30px] h-auto rounded"
+                                                                    unoptimized
+                                                                />
+                                                                <p className='text-[#5a6183] text-sm font-medium'><T>{currentCountry.code}</T></p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             ) : countryCode === 'ae' ? (
-                                                <div className="bg-white max-h-[194px] w-[410px] rounded-2xl shadow p-4 flex flex-col gap-3 mt-6 md:mt-10">
-                                                    <div className="flex items-center gap-6">
-                                                        <Image
-                                                            src={AssetPath.cards.fta}
-                                                            alt="peppol-logo"
-                                                            width={70}
-                                                            height={80}
-                                                            className="max-w-[191px] h-auto rounded-md"
-                                                            unoptimized
-                                                        />
-
-                                                        {/* Vertical Divider */}
-                                                        <span className="w-px h-12 bg-gray-300" />
-
-                                                        <Image
-                                                            src={AssetPath.header.logoPeppol}
-                                                            alt="peppol-logo"
-                                                            width={140}
-                                                            height={100}
-                                                            className="max-w-[191px] h-auto rounded-md"
-                                                            unoptimized
-                                                        />
-                                                    </div>
-
-                                                    <div className="w-full h-px bg-gray-300"></div>
-
-                                                    <div className="flex items-center justify-between gap-4">
-                                                        <p className="text-fluid-small leading-relaxed">
-                                                            <T>{pageContent.peppolCardText}</T>
-                                                        </p>
-
-                                                        <div className="flex items-center justify-center gap-2">
+                                                <div className="bg-white rounded-2xl shadow p-6 mt-6 md:mt-10 w-full max-w-[410px]">
+                                                    <div className="flex flex-col h-full">
+                                                        <div className="flex items-center gap-6 mb-4">
                                                             <Image
-                                                                src={currentCountry.flag}
-                                                                alt={`${currentCountry.name}-flag`}
-                                                                width={40}
-                                                                height={30}
-                                                                className="max-w-[30px] h-auto rounded"
+                                                                src={AssetPath.cards.fta}
+                                                                alt="fta-logo"
+                                                                width={70}
+                                                                height={80}
+                                                                className="max-w-[70px] h-auto rounded-md"
                                                                 unoptimized
                                                             />
-                                                            <p><T>{currentCountry.code}</T></p>
+
+                                                            {/* Vertical Divider */}
+                                                            <span className="w-px h-12 bg-gray-300" />
+
+                                                            <Image
+                                                                src={AssetPath.header.logoPeppol}
+                                                                alt="peppol-logo"
+                                                                width={140}
+                                                                height={100}
+                                                                className="max-w-[100px] h-auto rounded-md"
+                                                                unoptimized
+                                                            />
+                                                        </div>
+
+                                                        <div className="w-full h-px bg-gray-300 mb-4"></div>
+
+                                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-1 min-h-0">
+                                                            <p className="text-fluid-small leading-relaxed flex-1 overflow-hidden line-clamp-3">
+                                                                <T>{pageContent.peppolCardText}</T>
+                                                            </p>
+
+                                                            <div className="flex items-center justify-center gap-2 shrink-0">
+                                                                <Image
+                                                                    src={currentCountry.flag}
+                                                                    alt={`${currentCountry.name}-flag`}
+                                                                    width={40}
+                                                                    height={30}
+                                                                    className="max-w-[30px] h-auto rounded"
+                                                                    unoptimized
+                                                                />
+                                                                <p className='text-[#5a6183] text-sm font-medium'><T>{currentCountry.code}</T></p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             ) : (
-                                                <div className="bg-white max-h-[194px] w-[410px] rounded-2xl shadow p-4 flex flex-col gap-3 mt-6 md:mt-10">
-                                                    {/* ZATCA Logo */}
-                                                    <Image
-                                                        src={AssetPath.resources.Zact}
-                                                        alt="zatca-logo"
-                                                        width={310}
-                                                        height={73}
-                                                        className="max-w-[310px] h-auto rounded-md"
-                                                        unoptimized
-                                                    />
-
-                                                    <div className="w-full h-px bg-gray-300"></div>
-
-                                                    <div className="flex items-center justify-between gap-4">
-                                                        <p className="text-fluid-small leading-tight">
-                                                            <T>{pageContent.zatcaCardText}</T>
-                                                        </p>
-
-                                                        <div className="flex items-center justify-center gap-2">
+                                                <div className="bg-white rounded-2xl shadow p-6 mt-6 md:mt-10 w-full max-w-[410px]">
+                                                    <div className="flex flex-col h-full">
+                                                        {/* ZATCA Logo */}
+                                                        <div className="mb-4">
                                                             <Image
-                                                                src={currentCountry.flag}
-                                                                alt={`${currentCountry.name}-flag`}
-                                                                width={40}
-                                                                height={30}
-                                                                className="max-w-[30px] h-auto rounded"
+                                                                src={AssetPath.resources.Zact}
+                                                                alt="zatca-logo"
+                                                                width={310}
+                                                                height={73}
+                                                                className="max-w-[310px] h-auto rounded-md"
                                                                 unoptimized
                                                             />
-                                                            <p><T>{currentCountry.code}</T></p>
+                                                        </div>
+
+                                                        <div className="w-full h-px bg-gray-300 mb-4"></div>
+
+                                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-1 min-h-0">
+                                                            <p className="text-fluid-small leading-relaxed flex-1 overflow-hidden line-clamp-3">
+                                                                <T>{pageContent.zatcaCardText}</T>
+                                                            </p>
+
+                                                            <div className="flex items-center justify-center gap-2 shrink-0">
+                                                                <Image
+                                                                    src={currentCountry.flag}
+                                                                    alt={`${currentCountry.name}-flag`}
+                                                                    width={40}
+                                                                    height={30}
+                                                                    className="max-w-[30px] h-auto rounded"
+                                                                    unoptimized
+                                                                />
+                                                                <p className='text-[#5a6183] text-sm font-medium'><T>{currentCountry.code}</T></p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -730,19 +739,19 @@ const Section1 = () => {
                                         {/*  Hover gradient overlay (animation only) */}
                                         <div
                                             className={`
-        absolute inset-0
-        transform scale-y-0
-        transition-transform duration-300 ease-out
-        group-hover:scale-y-100
+                absolute inset-0
+                transform scale-y-0
+                transition-transform duration-300 ease-out
+                group-hover:scale-y-100
 
-        ${index % 2 === 0
+                ${index % 2 === 0
                                                     ? 'bg-gradient-to-t from-[#e9efff] to-[#ededed] origin-bottom'
                                                     : 'bg-gradient-to-b from-[#e9efff] to-[#ededed] origin-top'
                                                 }
-    `}
+            `}
                                         />
 
-                                        {/* CONTENT (unchanged) */}
+                                        {/* CONTENT (FIXED VERSION) */}
                                         <div className="relative z-10 flex flex-col h-full">
                                             <div className="flex-shrink-0 mb-2 md:mb-3">
                                                 {card.icon && (
@@ -773,8 +782,24 @@ const Section1 = () => {
                                                     </p>
                                                 )}
 
+                                                {/* FIX: Add listItems rendering */}
+                                                {card.listItems && card.listItems.length > 0 && (
+                                                    <ul className="mb-3">
+                                                        {card.listItems.map((item, itemIndex) => (
+                                                            <li
+                                                                key={itemIndex}
+                                                                className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-1 flex items-start"
+                                                            >
+                                                                <span className="mr-2 mt-1.5">•</span>
+                                                                <T>{item}</T>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
+
+                                                {/* FIX: Add para rendering */}
                                                 {card.para && (
-                                                    <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words mb-3">
+                                                    <p className="text-[#5A6183] text-[14px] leading-relaxed md:leading-[28px] break-words">
                                                         <T>{card.para}</T>
                                                     </p>
                                                 )}
