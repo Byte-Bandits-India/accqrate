@@ -183,49 +183,49 @@ ae: {
       title: "Validation Acknowledgment (Corner 3 → Corner 2)",
       description:
         "The buyer’s ASP validates the invoice and sends a Message Level Status (MLS) back to Corner 2 confirming validation success or failure.",
-        icon: AssetPath.invoicing.integrationAssets.ring.src,
+        icon: AssetPath.invoicing.integrationAssets.certify.src,
     },
     {
       number: "Step 6",
       title: "Delivery to Buyer (Corner 3 → Corner 4)",
       description:
         "Upon successful validation, Corner 3 delivers the invoice to the buyer’s business system in the format agreed with their ASP.",
-         icon: AssetPath.invoicing.integrationAssets.sub.src,
+         icon: AssetPath.invoicing.integrationAssets.set.src,
     },
     {
       number: "Step 7",
       title: "Buyer ASP Reporting to FTA (Corner 3 → Corner 5)",
       description:
         "Corner 3 also reports the TDD to Corner 5. If validation fails, Corner 3 sends a negative MLS to both Corner 2 and Corner 5, and no TDD is submitted.",
-        icon: AssetPath.invoicing.integrationAssets.pin.src,
+        icon: AssetPath.invoicing.integrationAssets.cloud.src,
     },
     {
       number: "Step 8",
       title: "FTA Status to Supplier ASP (Corner 5 → Corner 2)",
       description:
         "The FTA (Corner 5) sends an MLS to Corner 2 after processing the TDD successfully.",
-        icon: AssetPath.invoicing.integrationAssets.shield.src,
+        icon: AssetPath.invoicing.integrationAssets.cal.src,
     },
     {
       number: "Step 9",
       title: "FTA Status to Buyer ASP (Corner 5 → Corner 3)",
       description:
         "Corner 5 sends another MLS to Corner 3 confirming successful TDD processing.",
-        icon: AssetPath.invoicing.integrationAssets.ring.src,
+        icon: AssetPath.icons.currency.src,
     },
     {
       number: "Step 10",
       title: "Supplier ASP Updates Supplier (Corner 2 → Corner 1)",
       description:
         "Corner 2 forwards the MLS updates from Corner 3 and Corner 5 to the supplier.",
-         icon: AssetPath.invoicing.integrationAssets.sub.src,
+         icon: AssetPath.icons.packageIcon.src,
     },
     {
       number: "Step 11",
       title: "Buyer ASP Updates Buyer (Corner 3 → Corner 4)",
       description:
         "Corner 3 forwards Corner 5’s reporting MLS to the buyer for full transparency and audit tracking.",
-                icon: AssetPath.invoicing.integrationAssets.shield.src,
+                icon: AssetPath.icons.tax.src,
     },
   ],
 },
