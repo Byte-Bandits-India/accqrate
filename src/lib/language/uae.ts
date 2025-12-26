@@ -8822,7 +8822,15 @@ const blogTranslations: TranslationsMap = {
 "We officially appointed Iteron, the holding company of Accqrate, as our ASP partner for UAE e-invoicing, driven by their proven capability in data harmonisation and enterprise integration.": {
   ar: "قمنا بتعيين شركة Iteron، الشركة القابضة لـ Accqrate، رسميًا كشريك ASP لنا للفوترة الإلكترونية في دولة الإمارات، وذلك بناءً على قدراتهم المثبتة في توحيد البيانات والتكامل على مستوى المؤسسات."
 },
-
+"Explore All Blogs": {
+    "ar": "استكشف جميع المدونات"
+  },
+   "Previous": {
+    "ar": "السابق"
+  },
+  "Next": {
+    "ar": "التالي"
+  },
 
 
 
