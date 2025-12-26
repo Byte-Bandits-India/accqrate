@@ -10,7 +10,7 @@ export const section6Content = {
         expertText: "Talk to our expert",
         title: "Do You Want To Know More?",
         subtitle: "Kick start your free proof of concept",
-        features: ["Seamless", "ZATCA Compliant", "Secure"],
+        features: ["Seamless", "PEPPOL Compliant", "Secure"],
         buttonText: "Get Started"
     },
     default: {
