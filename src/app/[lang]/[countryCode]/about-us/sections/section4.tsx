@@ -22,17 +22,17 @@ const Section4: React.FC = () => {
       {/* Heading */}
       <div className="text-left max-w-[1100px] mx-auto">
         <FadeUp>
-        <h2 className="text-[18px] md:text-[24px] font-bold">
-          <T lang={lang} countryCode={countryCode?.toUpperCase()}>
-            {content.header}
-          </T>
-        </h2>
+          <h2 className="text-[18px] md:text-[24px] font-bold">
+            <T lang={lang} countryCode={countryCode?.toUpperCase()}>
+              {content.header}
+            </T>
+          </h2>
 
-        <p className="text-[14px] md:text-[16px] text-gray-600 mt-3 leading-relaxed max-w-[900px]">
-          <T lang={lang} countryCode={countryCode?.toUpperCase()}>
-            {content.subtitle}
-          </T>
-        </p>
+          <p className="text-[14px] md:text-[16px] text-gray-600 mt-3 leading-relaxed max-w-[900px]">
+            <T lang={lang} countryCode={countryCode?.toUpperCase()}>
+              {content.subtitle}
+            </T>
+          </p>
         </FadeUp>
       </div>
 
@@ -40,99 +40,97 @@ const Section4: React.FC = () => {
       <div className="max-w-[1100px] mx-auto mt-14">
         <FadeUp>
 
-  {/* TOP ROW — 3 CARDS */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    {content.features.slice(0, 3).map((feature, index) => (
-      <div key={index}>
-        
-        <div
-          className="relative flex-shrink-0 bg-white 
+          {/* TOP ROW — 3 CARDS */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {content.features.slice(0, 3).map((feature, index) => (
+              <div key={index}>
+
+                <div
+                  className="relative flex-shrink-0 bg-white 
             rounded-[16px]
             shadow-[0_4px_20px_rgba(0,0,0,0.05)]
-            w-full h-[400px] p-8 flex flex-col"
-        >
-          {/* Image + Number */}
-          <div className="relative flex justify-between items-start mb-6">
-            <Image
-              src={feature.img}
-              alt={feature.title}
-              width={180}
-              height={180}
-              className="w-[140px] sm:w-[160px] md:w-[150px] object-contain"
-            />
+            w-full h-[450px] p-8 flex flex-col"
+                >
+                  {/* Image + Number */}
+                  <div className="relative flex justify-between items-start mb-6">
+                    <Image
+                      src={feature.img}
+                      alt={feature.title}
+                      width={180}
+                      height={180}
+                      className="w-[140px] sm:w-[160px] md:w-[150px] object-contain"
+                    />
 
-            <span
-              className={`absolute ${
-                lang === "ar" ? "left-1" : "right-1"
-              } bottom-0 
+                    <span
+                      className={`absolute ${lang === "ar" ? "left-1" : "right-1"
+                        } bottom-0 
               text-[70px] md:text-[70px]
               font-bold text-[#E6E6E6] select-none leading-none`}
-            >
-              {String(index + 1).padStart(2, "0")}
-            </span>
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-tight text-black">
+                    <T>{feature.title}</T>
+                  </h3>
+
+                  <p className="text-[12px] md:text-[14px] text-gray-700 leading-relaxed whitespace-pre-line">
+                    <T>{feature.description}</T>
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-tight text-black">
-            <T>{feature.title}</T>
-          </h3>
+          {/* BOTTOM ROW — 2 CENTERED CARDS */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto">
+            {content.features.slice(3, 5).map((feature, index) => {
+              const actualIndex = index + 3;
 
-          <p className="text-[12px] md:text-[14px] text-gray-700 leading-relaxed whitespace-pre-line">
-            <T>{feature.description}</T>
-          </p>
-        </div>
-      </div>
-    ))}
-  </div>
+              return (
+                <div key={actualIndex}>
 
-  {/* BOTTOM ROW — 2 CENTERED CARDS */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto">
-    {content.features.slice(3, 5).map((feature, index) => {
-      const actualIndex = index + 3;
-
-      return (
-        <div key={actualIndex}>
-         
-          <div
-            className="relative flex-shrink-0 bg-white 
+                  <div
+                    className="relative flex-shrink-0 bg-white 
               rounded-[16px]
               shadow-[0_4px_20px_rgba(0,0,0,0.05)]
               w-full h-[450px] p-8 flex flex-col"
-          >
-            <div className="relative flex justify-between items-start mb-6">
-              <Image
-                src={feature.img}
-                alt={feature.title}
-                width={180}
-                height={180}
-                className="w-[140px] sm:w-[160px] md:w-[150px] object-contain"
-              />
+                  >
+                    <div className="relative flex justify-between items-start mb-6">
+                      <Image
+                        src={feature.img}
+                        alt={feature.title}
+                        width={180}
+                        height={180}
+                        className="w-[140px] sm:w-[160px] md:w-[150px] object-contain"
+                      />
 
-              <span
-                className={`absolute ${
-                  lang === "ar" ? "left-1" : "right-1"
-                } bottom-0 
+                      <span
+                        className={`absolute ${lang === "ar" ? "left-1" : "right-1"
+                          } bottom-0 
                 text-[70px] 
                 font-bold text-[#E6E6E6] select-none leading-none`}
-              >
-                {String(actualIndex + 1).padStart(2, "0")}
-              </span>
-            </div>
+                      >
+                        {String(actualIndex + 1).padStart(2, "0")}
+                      </span>
+                    </div>
 
-            <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-tight text-black">
-              <T>{feature.title}</T>
-            </h3>
+                    <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-tight text-black">
+                      <T>{feature.title}</T>
+                    </h3>
 
-            <p className="text-[12px] md:text-[14px] text-gray-700 leading-relaxed whitespace-pre-line">
-              <T>{feature.description}</T>
-            </p>
+                    <p className="text-[12px] md:text-[14px] text-gray-700 leading-relaxed whitespace-pre-line">
+                      <T>{feature.description}</T>
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
-      );
-    })}
-  </div>
 
-  </FadeUp>
-</div>
+        </FadeUp>
+      </div>
 
     </section>
   );
