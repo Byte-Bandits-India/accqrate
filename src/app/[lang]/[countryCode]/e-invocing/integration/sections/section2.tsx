@@ -88,7 +88,7 @@ const Section2 = () => {
                 {content.featureHighlight}
               </T>
             </span>{" "}
-            Solutions
+           <T>Solutions</T>
           </h2>
 
           <p className="mt-4 text-[#5A6183] max-w-2xl text-[14px] md:text-[16px] text-center mx-auto">
