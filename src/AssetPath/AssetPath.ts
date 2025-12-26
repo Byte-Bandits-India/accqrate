@@ -315,6 +315,7 @@ import integration12 from "@/Assets/images/integration/integration12.webp";
 import integrationDashboard from "@/Assets/images/integration/dashboard.webp";
 import integrationFooter from "@/Assets/images/integration/footer.webp";
 import peppolIntegration from "@/Assets/images/integration/peppol.png";
+import saZATCA from "@/Assets/images/integration/ZATCA.png"
 
 // ==================== INVOICING IMPORTS ====================
 import invoicing1 from "@/Assets/images/invoicing/1.png";
@@ -874,6 +875,7 @@ const AssetPath = {
     integration11,
     integration12,
     peppol: peppolIntegration,
+    saZATCA
   },
 
   // INVOICING SECTION
