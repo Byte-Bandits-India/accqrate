@@ -9476,7 +9476,8 @@ const translations = {
   'Manual or Excel Uploads': {
     ar: 'التحميلات اليدوية أو عبر Excel'
   },
-  'For systems not directly integrated, Accqrate simplifies your process. Just download and upload your Excel files—format mappings are already taken care of.':
+
+  'For systems not directly integrated, Accqrate simplifies your process. Just download and upload your Excel files format mappings are already taken care of.':
     {
       ar: 'للأنظمة التي لا تتكامل مباشرة، تبسط Accqrate عملية التحميل. فقط قم بتنزيل ورفع ملفات Excel الخاصة بك - تم التعامل مع تعيينات الصيغة مسبقًا'
     },
