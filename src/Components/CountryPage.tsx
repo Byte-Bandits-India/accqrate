@@ -734,8 +734,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     }}
                 //hero section
                 >
-                    <div className="max-w-[1177px] mx-auto px-6 overflow-hidden lg:pt-[70px]">
-                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-[18px] text-[#FFFFFF] pt-[3rem] lg:pt-[2.5rem] tracking-para">
+                    <div className="max-w-[1177px] mx-auto px-4 md:px-6 overflow-hidden lg:pt-[70px]">
+                        <div className="max-w-[1177px] mx-auto flex items-center gap-2 font-medium text-[16px] md:text-[18px] text-[#FFFFFF] pt-[3rem] lg:pt-[2.5rem] tracking-para">
                             <T>{countryContent.heroSubtitle}</T>
                             <Image
                                 src={flagImage}
@@ -749,21 +749,21 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_520px] gap-6 lg:gap-4">
                             {/* LEFT COLUMN */}
                             <div className="flex flex-col justify-start">
-                                <h1 className="text-fluid-body lg:text-[38px]  mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] text-[#FFFFFF] max-w-full lg:max-w-[900px] font-semibold leading-tight">
+                                <h1 className="text-[23px] md:text-[38px]  mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] text-[#FFFFFF] max-w-full lg:max-w-[900px] font-semibold leading-[36px] md:leading-[43px]">
                                     <T>{countryContent.heroTitle}</T>
                                 </h1>
                                 <p className="border-t-2 border-[#FFFFFF] w-full max-w-[110px] mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem]"></p>
 
-                                <p className="text-[#FFFFFF] max-w-[586px] text-fluid-small mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] tracking-para leading-[1.875rem] text-left font-normal">
+                                <p className="text-[#FFFFFF] max-w-[586px] text-[16px] mt-4 md:mt-5 lg:mt-[1.5rem] xl:mt-[2rem] 2xl:mt-[2rem] leading-[28px] text-left font-normal">
                                     <T>{countryContent.heroDescription}</T>
                                 </p>
 
-                                <div className="my-8">
-                                    <CTAButton
-                                        text={<T>Meet an Expert</T>}
-                                        onClick={() => setModalOpen(true)}
-                                    />
-                                </div>
+                               <div className="my-8">
+                               <CTAButton
+                                             text={<T>Meet an Expert</T>}
+                               onClick={() => setModalOpen(true)}
+                                 />
+                             </div>
 
                                 <h2 className=" text-fluid-small font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4 mb-8">
                                     {countryContent.heroTagline
@@ -800,7 +800,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 </div>
 
                 {/* Mobile & Tablet Featured Solutions */}
-                <div className="lg:hidden px-6 md:px-8">
+                <div className="lg:hidden px-4 md:px-8">
                     <div className="max-w-[1177px] mx-auto py-6">
                         <h1 className="text-fluid-body font-medium mb-3">
                             <T>Products to power every team</T>
@@ -811,7 +811,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <InfoCard key={card.title} {...card} />
                             ))}
 
-
+                           
                         </div>
                     </div>
                 </div>
@@ -820,7 +820,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 {/* Trusted */}
                 <FadeUp className="my-8 md:my-[20px]">
-                    <h3 className="text-[23px] md:text-[24px] tracking-heading leading-tight font-bold text-[#1c2041] text-center mx-auto">
+                    <h3 className="text-[23px] md:text-[24px]  leading-[36px] font-bold text-[#1c2041] text-center mx-auto">
                         <T>Trusted by</T> <br className="md:hidden" />
                         <span className="text-[#194BED]">
                             {" "}
@@ -832,10 +832,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 {/* Logo Marquee */}
                 <div className="relative">
                     <div className="max-w-5xl overflow-hidden mx-auto">
-                        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-14 md:w-20" />
-                        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-14 md:w-20" />
+                        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 md:w-20" />
+                        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 md:w-20" />
 
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-4 md:gap-6 px-4">
                             <div className="flex animate-scrollLeft w-max flex-shrink-0">
                                 {[...topRow, ...topRow].map((logo, i) => (
                                     <div
@@ -847,7 +847,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             alt={logo.name}
                                             width={135}
                                             height={48}
-                                            className="h-10 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                            className="h-8 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                         />
                                         <p className=" text-[12px] md:text-sm text-[#737373] font-medium">
                                             {" "}
@@ -868,7 +868,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             alt={logo.name}
                                             width={135}
                                             height={48}
-                                            className="h-10 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                            className="h-8 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                         />
                                         <p className=" text-[12px] md:text-sm text-[#737373] font-medium">
                                             {logo.name}
@@ -892,11 +892,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             <div className="bg-gradient-to-b from-[#F1F1FF] to-[#ffffff]">
                 {/* /Why Accqrate? */}
                 <div className="bg-gradient-to-b from-[#fffff] to-[#F1F1FF]">
-                    <div className="px-6 md:px-8 xl:px-8 pt-10 lg:pt-[100px]">
+                    <div className="px-4 md:px-8 xl:px-8 pt-10 lg:pt-[100px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 lg:px-6 max-w-[1177px] mx-auto w-full">
                             {/* Left Column */}
                             <div className="max-w-[500px]">
-                                <h2 className="font-medium text-[12px] md:text-[14px] tracking-heading uppercase text-[#1c2041] ">
+                                <h2 className="font-medium text-[14px] tracking-heading uppercase text-[#1c2041] ">
                                     <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
 
@@ -910,25 +910,25 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                             {/* Right Column */}
                             <div className="max-w-[500px] flex flex-col justify-around">
-                                <p className="text-fluid-small md:text-[18px] text-[#1c2041] font-normal leading-tight">
+                                <p className="text-[16px] md:text-[18px] text-[#1c2041] font-normal leading-[28px]">
                                     <T>
                                         From compliance to automation, Accqrate ensures a seamless
                                         PEPPOL e-invoicing experience.
                                     </T>
                                 </p>
 
-                                <div className="mt-6 lg:mt-0">
-                                    <CTAButton
-                                        text={<T>See It in Action</T>}
-                                        onClick={() => setModalOpen(true)}
-                                    />
-                                </div>
+                          <div className="mt-6 lg:mt-0">
+                                                             <CTAButton
+                                                                 text={<T>See It in Action</T>}
+                                                                 onClick={() => setModalOpen(true)}
+                                                             />
+                                                         </div>  
                             </div>
                         </div>
 
                         <div className="max-w-[1200px] mx-auto">
                             <div className="max-w-[1280px] mx-auto sm:px-6 py-6">
-                                <div className="flex flex-wrap justify-center gap-6">
+                                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                                     {(countryContent.whyAccqrateFeatures || features).map(
                                         (feature, index) => (
                                             <div
@@ -936,7 +936,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 className={`
             relative group overflow-hidden
             p-6  rounded-[15px]
-            flex flex-col max-h-[221px] max-w-[310px] lg:max-w-[360px]
+            flex flex-col max-h-[221px] max-w-full lg:max-w-[360px]
             bg-white
           `}
                                             >
@@ -957,11 +957,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                                     {/* Middle section: Title */}
                                                     <div className="mb-3 z-10">
-                                                        <h2 className="text-[16px] md:text-fluid-small font-bold text-[#1c2041] leading-tight md:mb-1">
+                                                        <h2 className="text-[16px] font-bold text-[#1c2041] md:mb-1">
                                                             <T>{feature.title}</T>
                                                         </h2>
                                                         {feature.sub && (
-                                                            <h2 className="text-[16px] md:text-fluid-small font-bold text-[#1c2041] leading-tight">
+                                                            <h2 className="text-[16px] font-bold text-[#1c2041]">
                                                                 <T>{feature.sub}</T>
                                                             </h2>
                                                         )}
@@ -969,7 +969,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                                     {/* Bottom section: Description */}
                                                     <div className="flex-grow">
-                                                        <p className="text-[#5a6183] text-[14px] leading-snug tracking-para line-clamp-4 md:line-clamp-5">
+                                                        <p className="text-[#5a6183] text-[16px] leading-[28px] line-clamp-4 md:line-clamp-5">
                                                             <T>{feature.description}</T>
                                                         </p>
                                                     </div>
@@ -1010,7 +1010,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 {/* Trusted text */}
                 <div className="rounded-[30px] py-6 max-w-[1280px] mx-auto">
-                    <div className="max-w-[1240px] mx-auto px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
+                    <div className="max-w-[1240px] mx-auto px-4 md:px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
                         {/* Left Side: Accqrate E-invoicing */}
                         <FadeUp className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
                             <div className="flex flex-col flex-1">
@@ -1063,13 +1063,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <>
                                     {/* Compliance Card */}
                                     <FadeUp className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                        <h2 className="text-[24px] text-[#1c2041] font-bold tracking-heading">
+                                        <h2 className="text-[23px] md:text-[24px] text-[#1c2041] font-bold leading-[30px]">
                                             <T>{countryContent.complianceSection.complianceTitle}</T>
                                         </h2>
 
                                         {countryContent.complianceSection && (
                                             <>
-                                                <h2 className="text-[14px] mt-4 text-[#1c2041] font-normal tracking-heading">
+                                                <h2 className="text-[14px] mt-4 text-[#1c2041] leading-[28px] font-normal">
                                                     <T>
                                                         {
                                                             countryContent.complianceSection
@@ -1078,7 +1078,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                     </T>
                                                 </h2>
 
-                                                <ul className="gap-y-2 mt-8 text-[14px] text-[#1c2041] tracking-para leading-[26px] list-disc pl-5">
+                                                <ul className="gap-y-2 mt-4 text-[14px] text-[#1c2041] tracking-para leading-[28px] list-disc pl-5">
                                                     {countryContent.complianceSection.complianceItems.map(
                                                         (item, index) => (
                                                             <li key={index}>
@@ -1093,20 +1093,20 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                     {/* Automation Card */}
                                     <FadeUp className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
-                                        <h2 className="text-[24px] font-bold tracking-heading text-[#1c2041]">
-                                            <span className="text-[#194BED] font-semibold">
+                                        <h2 className="text-[23px] md:text-[24px] font-bold text-[#1c2041]">
+                                            <span className="text-[#194BED] font-bold">
                                                 <T>Hassle-Free</T>
                                             </span>{" "}
                                             <T>E-Invoicing Automation</T>
                                         </h2>
 
-                                        <h2 className="text-[14px] mt-4 font-normal tracking-heading">
+                                        <h2 className="text-[14px] mt-4 font-normal leading-[28px] text-[#1c2041]">
                                             <T>
                                                 {countryContent.complianceSection.automationDescription}
                                             </T>
                                         </h2>
 
-                                        <ul className="list-disc pl-5 space-y-1 mt-[15px] text-[14px] leading-tight tracking-para">
+                                        <ul className="list-disc pl-5 space-y-1 mt-4 text-[14px] leading-[28px]">
                                             {countryContent.complianceSection.automationItems.map(
                                                 (item, index) => (
                                                     <li key={index}>
@@ -1117,11 +1117,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </ul>
 
                                         <div className="mt-6">
-                                            <CTAButton
-                                                text={<T>{countryContent.complianceSection.buttonText}</T>}
-                                                onClick={() => setModalOpen(true)}
-                                            />
-                                        </div>
+                                                                                   <CTAButton
+                                                                                       text={<T>{countryContent.complianceSection.buttonText}</T>}
+                                                                                       onClick={() => setModalOpen(true)}
+                                                                                   />
+                                                                               </div>
                                     </FadeUp>
                                 </>
                             )}
@@ -1131,7 +1131,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             </div>
 
             {/* Your AI Copilot */}
-            <div className="block py-6 lg:pt-8 bg-[#E8EEFF]">
+            <div className="block py-6 lg:pt-8 md:bg-[#E8EEFF]">
                 {/* HERO SECTION */}
                 <div className="relative pb-6 md:pb-8">
                     {/* Content */}
@@ -1141,19 +1141,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             {/* Left Part (Flexible) */}
                             <FadeUp className="font-inter rounded-2xl flex flex-col justify-between h-full md:max-h-[387px] p-4 bg-transparent order-2 lg:order-1">
                                 <div>
-                                    <h2 className="text-[#1c2041] text-[24px] font-bold leading-tight">
+                                    <h2 className="text-[#1c2041] text-[23px] md:text-[24px] font-bold">
                                         <span className="text-[#194BED]">Accelera</span>{" "}
                                         <T>Your AI Copilot</T>
                                     </h2>
 
-                                    <p className="text-[#333333] text-fluid-small mt-6 md:mt-[20px] mb-4 md:mb-6">
+                                    <p className="text-[#333333] text-fluid-small mt-4 leading-[28px] md:mt-[20px] mb-4 md:mb-6">
                                         <T>
                                             Work faster and decide smarter with AI embedded across the
                                             suite.
                                         </T>
                                     </p>
 
-                                    <ul className="list-disc pl-4 md:pl-5 space-y-3 md:space-y-4 text-[14px]">
+                                    <ul className="list-disc pl-4 md:pl-5 space-y-2 leading-[28px] md:space-y-4 text-[14px]">
                                         <li>
                                             <b>
                                                 <T>Natural-language actions:</T>
@@ -1192,12 +1192,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </ul>
                                 </div>
 
-                                <div className="mt-6">
-                                    <CTAButton
-                                        text={<T>See Accelera in a 5-Minute Demo</T>}
-                                        onClick={() => setModalOpen(true)}
-                                    />
-                                </div>
+                               <div className="mt-6">
+                                                                 <CTAButton
+                                                                     text={<T>See Accelera in a 5-Minute Demo</T>}
+                                                                     onClick={() => setModalOpen(true)}
+                                                                 />
+                                                             </div>
                             </FadeUp>
 
                             {/* Right Part (337px max, image aligned to end) */}
@@ -1238,19 +1238,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                 {/* RIGHT: Text Content */}
                                 <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8">
-                                    <h2 className="text-[#1c2041] tracking-para text-[24px] font-bold leading-tight whitespace-nowrap mb-6">
+                                    <h2 className="text-[#1c2041]  text-[23px] md:text-[24px] font-bold whitespace-nowrap mb-4 md:mb-6">
                                         <T>Future-Ready for</T>{" "}
                                         <span className="text-[#194BED]">ViDA</span>
                                     </h2>
 
-                                    <h2 className="text-fluid-small text-left  leading-[22px] md:leading-[20px] tracking-para mb-2">
+                                    <h2 className="text-fluid-small text-left  leading-[28px] mb-4 md:mb-6">
                                         <T>
                                             Accqrate equips enterprises to be compliant across the
                                             upcoming ViDA landscape:
                                         </T>
                                     </h2>
 
-                                    <ul className="list-disc space-y-3 md:space-y-4 mt-3 md:mt-[15px] text-[14px] text-left pl-4 md:pl-5 leading-[20px] md:leading-[24px] tracking-para">
+                                    <ul className="list-disc space-y-2 md:space-y-4  md:mt-[15px] text-[14px] text-left pl-4 md:pl-5 leading-[28px]">
                                         <li>
                                             <T>Cross-border interoperability within the EU</T>
                                         </li>
@@ -1262,12 +1262,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </li>
                                     </ul>
 
-                                    <div className="mt-6">
-                                        <CTAButton
-                                            text={<T>Talk to our Consultant</T>}
-                                            onClick={() => setModalOpen(true)}
-                                        />
-                                    </div>
+                                   <div className="mt-6">
+                                                                           <CTAButton
+                                                                               text={<T>Talk to our Consultant</T>}
+                                                                               onClick={() => setModalOpen(true)}
+                                                                           />
+                                                                       </div>
                                 </FadeUp>
 
                                 {/* Image (Mobile) */}
@@ -1309,11 +1309,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     unoptimized
                                 />
                                 <div className="mt-6">
-                                    <CTAButton
-                                        text={<T>Talk to our Consultant</T>}
-                                        onClick={() => setModalOpen(true)}
-                                    />
-                                </div>
+                                                                   <CTAButton
+                                                                       text={<T>Talk to our Consultant</T>}
+                                                                       onClick={() => setModalOpen(true)}
+                                                                   />
+                                                               </div>
                             </div>
                         </div>
                     )}
@@ -1386,17 +1386,17 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
             {/* Our ValuesDrive Everything We Do */}
             <div className=" pb-[50px]">
-                <div className="px-6 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
+                <div className="px-4 md:px-6 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
                     {/* Left Text */}
                     <div className="flex-1">
-                        <h1 className="text-[23px] md:text-[24px] font-bold py-6 text-[#1c2041] md:py-8 tracking-heading leading-tight">
+                        <h1 className="text-[23px] md:text-[24px] font-bold py-6 text-[#1c2041] md:py-8 leading-[30px]">
                             <T>
                                 Our <span className="text-[#194BED]">Values</span>{" "}
                             </T>{" "}
                             <br />
                             <T>Drive Everything We Do</T>
                         </h1>
-                        <p className="text-fluid-small text-[#1c2041] max-w-[662px] tracking-para leading-tight">
+                        <p className="text-fluid-small text-[#1c2041] max-w-[662px] leading-[28px]">
                             <T>
                                 Built on trust, innovation and excellence, we deliver measurable
                                 results that transform business and create lasting impact.
@@ -1406,13 +1406,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                     {/* Right Button */}
                     <div className="mt-[32px] xl:mt-0 flex justify-start xl:justify-end">
-                        <div className="mt-6">
-                            <CTAButton
-                                text={<T>Book a Personalized Walkthrough</T>}
-                                onClick={() => setModalOpen(true)}
-                            />
-                        </div>
-
+                      <div className="mt-6">
+                                                <CTAButton
+                                                    text={<T>Book a Personalized Walkthrough</T>}
+                                                    onClick={() => setModalOpen(true)}
+                                                />
+                                            </div>
                     </div>
                 </div>
 
@@ -1473,13 +1472,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     )}
 
                                     {/* Title */}
-                                    <h3 className="text-[#303030]  font-bold text-[16px] md:text-[18px] leading-tight break-words mb-3">
+                                    <h3 className="text-[#303030]  font-bold text-[16px] md:text-[18px]  break-words mb-3">
                                         <T>{item.title}</T>
                                     </h3>
 
                                     {/* Description */}
                                     <div className="flex-grow">
-                                        <p className="text-[#5A6183] text-[16px] md:text-[14px] leading-relaxed break-words">
+                                        <p className="text-[#5A6183] text-[16px]  leading-[28px] break-words">
                                             <T>{item.desc}</T>
                                         </p>
                                     </div>
@@ -1492,14 +1491,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 {/* Frequently Answered Questions */}
                 <div className="bg-[#EFF4FF]">
                     <div className="px-0 md:px-8 max-w-[1177px] mx-auto py-6 xl:px-0 mt-6 md:mt-8">
-                        <div className="rounded-[20px] p-6 md:p-8 lg:p-12">
+                        <div className="rounded-[20px] p-4 md:p-8 lg:p-12">
                             {/* Left Section */}
                             <div className="flex flex-col w-full">
                                 {/* Heading */}
-                                <h2 className="text-[24px] font-bold text-center mb-4 tracking-heading leading-tight">
+                                <h2 className="text-[23px] md:text-[24px] font-bold text-center mb-4 tracking-heading leading-tight">
                                     <T>Frequently Answered Questions</T>
                                 </h2>
-                                <p className="text-[16px] text-[#5a6183] text-center mb-6 ">
+                                <p className="text-[14px] md:text-[16px] text-[#5a6183] text-center mb-6 ">
                                     <T>Have a question about our solutions and services?</T>
                                 </p>
                             </div>
@@ -1520,19 +1519,21 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
           bg-white
           border border-[#E2E4EC]
           rounded-xl
-          px-6
+          px-4
+          md:px-6
           py-2
           shadow-sm
         "
                                             >
                                                 <AccordionTrigger
                                                     className="
-            text-[18px]
+                                                    text-[16px]
+            md:text-[18px]
             font-bold
             text-[#1c2041]
             hover:no-underline
             tracking-heading
-            leading-tight
+            leading-[28px]
             text-left
           "
                                                 >
@@ -1545,7 +1546,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             font-light
             text-[#5a6183]
             tracking-para
-            leading-relaxed
+            leading-[25px]
              pl-4
             text-left
           "
@@ -1560,47 +1561,39 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="flex justify-center mt-6 md:mt-8">
                                 <CTAButton
                                     text={<T>See It in Action</T>}
-                                    onClick={() => setModalOpen(true)}
-                                />
+                                                                   onClick={() => setModalOpen(true)}
+                                                               />
                             </div>
                         </div>
                     </div>
 
                     {/* Final Conversion Band */}
-                    <div className="max-w-[1440px] mx-auto pb-6 md:pb-8 px-6 font-inter">
+                    <div className="max-w-[1440px] mx-auto pb-6 md:pb-8 px-4 md:px-6 font-inter">
                         <div className="flex flex-col items-center">
-                            <h2 className="text-[18px] lg:text-[24px] font-semibold text-left py-[20px] md:py-[10px] tracking-heading leading-tight">
+                            <h2 className="text-[23px] lg:text-[24px] font-bold text-left  py-[10px] ">
                                 <T lang={lang} countryCode={countryCode}>
                                     Final Conversion Band
                                 </T>
                             </h2>
-                            <p className="text-fluid-small max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-tight">
+                            <p className="text-fluid-small max-w-[315px] md:max-w-[1440px] tracking-para text-center leading-[22px]">
                                 {" "}
                                 <T>Run compliant, AI-powered operations with Accqrate.</T>
                             </p>
                         </div>
-                        <div className="
-  flex flex-col items-center
-  md:flex-row md:justify-center
-  md:gap-4 lg:gap-8
-  py-6
-  space-y-4 md:space-y-0
-">
+                        <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6 space-y-4 md:space-y-0">
                             {[
                                 "Get a Free Proof of Concept",
                                 "Subscribe for Updates",
                                 "Talk to Sales",
                             ].map((text, i) => (
-                                <CTAButton
-                                    key={i}
-                                    text={<T>{text}</T>}
-                                    onClick={() => setModalOpen(true)}
-                                    widthClass="w-fit"
-                                />
+                               <CTAButton
+                                                                   key={i}
+                                                                   text={<T>{text}</T>}
+                                                                   onClick={() => setModalOpen(true)}
+                                                                   widthClass="w-fit"
+                                                               />
                             ))}
                         </div>
-
-
                     </div>
                 </div>
             </div>
