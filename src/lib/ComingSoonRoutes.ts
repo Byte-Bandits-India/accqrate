@@ -62,8 +62,6 @@ export const comingSoonRoutes = [
   'book-demo',
 
   '/business/services',
-  'e-invocing',
-  'e-invocing/integration',
   'join-our-team',
   'company',
   'newsletter',
