@@ -44,14 +44,14 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
                 )}
 
                 {/* Counter Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 text-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 text-center">
                     {countSet.map((item, i) => (
                         <div key={i} className="flex flex-col items-center justify-center">
                             {/* count — responsive font size */}
-                            <div className="text-[18px] md:text-[36px] font-bold text-[#1C2041] flex items-baseline justify-center">
+                            <div className="text-[25px] md:text-[36px] font-bold text-[#1C2041] flex items-baseline justify-center">
                                 <CountUp start={0} end={item.value} duration={4} />
                                 {item.additionalText && (
-                                    <span className="ml-1 text-[18px] md:text-[36px] text-[#1C2041]">
+                                    <span className="ml-1 text-[25px] md:text-[36px] text-[#1C2041]">
                                         {item.additionalText}
                                     </span>
                                 )}
@@ -61,7 +61,7 @@ const CounterFacts: React.FC<CounterFactsProps> = ({
                             </div>
 
                             {/* name — responsive font size */}
-                            <p className="text-[#5A6183] text-[14px] md:text-[16px] mt-2 h-[40px] lg:text-nowrap leading-tight">
+                            <p className="text-[#5A6183] text-[13px] md:text-[16px] md:mt-2 h-[40px] lg:text-nowrap leading-tight">
                                 <T>{item.name}</T>
                             </p>
                         </div>
