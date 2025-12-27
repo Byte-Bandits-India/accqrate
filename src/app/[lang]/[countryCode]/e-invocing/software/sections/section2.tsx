@@ -169,7 +169,7 @@ const Section2 = () => {
                             <h3 className="text-[24px] font-bold text-[#000000] text-center leading-tight">
                                 <T>Flexible Deployment</T>
                             </h3>
-                            <p className='text-[#333333] text-[16px] text-center mt-4 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
+                            <p className='text-[#333333] text-[16px] text-center mt-2 '><T>Cloud (managed, subscription) or On‑Prem (full control over infra & data).</T></p>
 
                             <div className="py-6 md:py-8 lg:py-10">
                                 <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">

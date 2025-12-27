@@ -391,7 +391,6 @@ const Section1 = () => {
                             <T>Trusted by</T>{" "}
                             <br className="md:hidden" />
                             <span className="text-[#194BED]"></span>
-                            <br className="md:hidden" />
                             <span className="text-[#194BED]">
                                 <T>{pageContent.heroTitle}</T>
                             </span>
@@ -448,7 +447,7 @@ const Section1 = () => {
                             <h1 className="text-[24px] font-bold pt-[30px] md:pt-[37px] text-[#1c2041] text-center tracking-heading leading-tight">
                                 <T>Customize and send invoices easily</T>
                             </h1>
-                            <p className="text-[16px] tracking-para text-center mt-4 text-[#5A6183] leading-tight">
+                            <p className="text-[16px] tracking-para text-center mt-2 text-[#5A6183] leading-tight">
                                 <T>Sending an invoice should be easy - and we`ve made it so</T>
                             </p>
                         </FadeUp>
@@ -722,7 +721,7 @@ const Section1 = () => {
             p-4 sm:p-5 md:p-6 rounded-xl
             flex flex-col
             min-h-[280px] md:min-h-[300px]
-            transition-shadow duration-300 max-w-[360px]
+            transition-shadow duration-300 w-full md:max-w-[360px]
             hover:shadow-lg border border-[#C8C8C8]
 
             ${index % 2 === 0

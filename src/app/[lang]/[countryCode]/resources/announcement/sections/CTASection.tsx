@@ -163,7 +163,7 @@ const CTASection = () => {
       </div>
 
       {/* Bottom Buttons */}
-      <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 space-y-4 lg:gap-8 pb-6 md:pb-8 lg:pb-10">
+      <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 space-y-4 md:space-y-0 lg:gap-8 pb-6 md:pb-8 lg:pb-10">
         {buttonData.map((button) => (
           <CTAButton
             key={button.id}

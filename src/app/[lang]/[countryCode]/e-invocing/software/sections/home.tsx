@@ -528,27 +528,40 @@ const Software: React.FC = () => {
                                     </div>
                                 )}
 
-                                <div className="flex flex-col items-start justify-start gap-2 text-center md:flex-row md:gap-8 mt-6">
+                                <div className="
+  flex flex-row
+  items-center
+  justify-start
+  gap-2
+  md:gap-8
+  my-6
+  whitespace-nowrap
+">
                                     <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
                                         <T>Simplified</T>
                                     </p>
+
                                     <img
                                         src={AssetPath.home.starOr.src}
                                         alt="orange_star"
-                                        className="w-5 h-5 md:w-auto md:h-auto"
+                                        className="w-4 h-4 md:w-auto md:h-auto"
                                     />
+
                                     <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
                                         <T>Smart</T>
                                     </p>
+
                                     <img
                                         src={AssetPath.home.starOr.src}
                                         alt="orange_star"
-                                        className="w-5 h-5 md:w-auto md:h-auto"
+                                        className="w-4 h-4 md:w-auto md:h-auto"
                                     />
+
                                     <p className="text-sm md:text-[16px] text-[#1C2041] font-light">
-                                        <T>Complaint</T>
+                                        <T>Compliant</T>
                                     </p>
                                 </div>
+
                             </div>
                         </FadeUp>
 
@@ -565,7 +578,14 @@ const Software: React.FC = () => {
                         </FadeUp>
                     </div>
 
-                    <div className="flex items-center justify-center gap-2 text-[#333333] mt-6">
+                    <div className="
+  flex flex-row
+  items-center
+  justify-center
+  gap-2
+  mt-6
+  whitespace-nowrap
+">
                         <div className="flex items-center gap-1 text-[#FEB04C]">
                             <Star className="w-3 h-3 fill-[#FEB04C]" />
                             <Star className="w-3 h-3 fill-[#FEB04C]" />
@@ -573,10 +593,12 @@ const Software: React.FC = () => {
                             <Star className="w-3 h-3 fill-[#FEB04C]" />
                             <StarHalf className="w-3 h-3 fill-[#FEB04C]" />
                         </div>
-                        <p className="text-[16px] text-[#1c2041] font-medium">
+
+                        <p className="text-[14px] md:text-[16px] text-[#1c2041] font-medium">
                             <T>4.8 average rating from our customers</T>
                         </p>
                     </div>
+
                 </div>
             </section>
             {/* Contact Modal */}
