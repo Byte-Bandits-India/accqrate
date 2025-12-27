@@ -11,6 +11,7 @@ import T from "@/Components/T";
 import { useCountry } from "@/contexts/CountryContext";
 import { t } from "@/lib/translations";
 import SuccessStories from "./SuccessStories";
+import CTAButton from "./CTAButton";
 import {
     Accordion,
     AccordionContent,
@@ -757,13 +758,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <T>{countryContent.heroDescription}</T>
                                 </p>
 
-                                <button
-                                    onClick={() => setModalOpen(true)}
-                                    className="inline-flex items-center justify-center gap-2 text-white h-[2.625rem] lg:h-[3rem] w-[11.875rem] my-4 md:my-6 lg:my-[2.25rem] xl:mt-[2rem]  font-normal lg:w-[182px] leading-tight rounded-[5rem] text-[14px] bg-[#F05A28]"
-                                >
-                                    <T>Meet an Expert</T>
-                                    <Arrow45 />
-                                </button>
+                                <div className="my-8">
+                                    <CTAButton
+                                        text={<T>Meet an Expert</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
 
                                 <h2 className=" text-fluid-small font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4 mb-8">
                                     {countryContent.heroTagline
@@ -811,7 +811,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <InfoCard key={card.title} {...card} />
                             ))}
 
-                           
+
                         </div>
                     </div>
                 </div>
@@ -917,14 +917,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </T>
                                 </p>
 
-                                <button
-                                    onClick={() => setModalOpen(true)}
-                                    className="inline-flex items-center justify-center gap-2 self-start h-[40px] w-full max-w-[182px] text-white text-[14px] rounded-[50px] tracking-para leading-tight mt-6 lg:mt-0"
-                                    style={{ background: "#D63F10" }}
-                                >
-                                    <T>See It in Action</T>
-                                    <Arrow45 />
-                                </button>
+                                <div className="mt-6 lg:mt-0">
+                                    <CTAButton
+                                        text={<T>See It in Action</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
                             </div>
                         </div>
 
@@ -1118,27 +1116,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             )}
                                         </ul>
 
-                                        <button
-                                            onClick={() => setModalOpen(true)}
-                                            className="h-[46px] max-w-[220px] w-full mt-[32px] flex items-center justify-center gap-4 px-4 rounded-[100px] bg-[#D63F10] text-white text-[14px]"
-                                        >
-                                            <T>{countryContent.complianceSection.buttonText}</T>
-                                            <svg
-                                                width="20"
-                                                height="20"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                className="text-white"
-                                            >
-                                                <path
-                                                    d="M9 6l6 6-6 6"
-                                                    strokeWidth="2"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                />
-                                            </svg>
-                                        </button>
+                                        <div className="mt-6">
+                                            <CTAButton
+                                                text={<T>{countryContent.complianceSection.buttonText}</T>}
+                                                onClick={() => setModalOpen(true)}
+                                            />
+                                        </div>
                                     </FadeUp>
                                 </>
                             )}
@@ -1209,29 +1192,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </ul>
                                 </div>
 
-                                <button
-                                    className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
-                                    style={{ background: "#D63F10" }}
-                                    onClick={() => setModalOpen(true)}
-                                >
-                                    <span className="truncate mr-2">
-                                        <T>See Accelera in a 5-Minute Demo</T>
-                                    </span>
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        className="flex-shrink-0"
-                                    >
-                                        <path
-                                            d="M9 6l6 6-6 6"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </button>
+                                <div className="mt-6">
+                                    <CTAButton
+                                        text={<T>See Accelera in a 5-Minute Demo</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
                             </FadeUp>
 
                             {/* Right Part (337px max, image aligned to end) */}
@@ -1296,29 +1262,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </li>
                                     </ul>
 
-                                    <button
-                                        onClick={() => setModalOpen(true)}
-                                        className="h-[40px] w-full md:max-w-[217px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] rounded-[50px]"
-                                        style={{ background: "#D63F10" }}
-                                    >
-                                        <span className="truncate mr-2">
-                                            <T>Talk to our Consultant</T>
-                                        </span>
-                                        <svg
-                                            width="20"
-                                            height="20"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            className="flex-shrink-0"
-                                        >
-                                            <path
-                                                d="M9 6l6 6-6 6"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    </button>
+                                    <div className="mt-6">
+                                        <CTAButton
+                                            text={<T>Talk to our Consultant</T>}
+                                            onClick={() => setModalOpen(true)}
+                                        />
+                                    </div>
                                 </FadeUp>
 
                                 {/* Image (Mobile) */}
@@ -1359,29 +1308,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     className="w-full h-auto object-contain"
                                     unoptimized
                                 />
-                                <button
-                                    className="h-[40px] w-full md:max-w-[288px] mt-6 md:mt-10 flex items-center justify-between px-4 text-white text-[14px] md:text-[16px] rounded-lg"
-                                    style={{ background: "#D63F10" }}
-                                    onClick={() => setModalOpen(true)}
-                                >
-                                    <span className="truncate mr-2">
-                                        <T>Talk to our Consultant</T>
-                                    </span>
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        className="flex-shrink-0"
-                                    >
-                                        <path
-                                            d="M9 6l6 6-6 6"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </button>
+                                <div className="mt-6">
+                                    <CTAButton
+                                        text={<T>Talk to our Consultant</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
                             </div>
                         </div>
                     )}
@@ -1474,28 +1406,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                     {/* Right Button */}
                     <div className="mt-[32px] xl:mt-0 flex justify-start xl:justify-end">
-                        <button
-                            onClick={() => setModalOpen(true)}
-                            className="h-[40px] md:h-[46px] w-full xl:w-auto max-w-[399px] flex items-center rounded-[50px] justify-between px-4 text-white text-[14px]"
-                            style={{ background: "#D63F10" }}
-                        >
-                            <T>Book a Personalized Walkthrough</T>
-                            <svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                className="text-white"
-                            >
-                                <path
-                                    d="M9 6l6 6-6 6"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                />
-                            </svg>
-                        </button>
+                        <div className="mt-6">
+                            <CTAButton
+                                text={<T>Book a Personalized Walkthrough</T>}
+                                onClick={() => setModalOpen(true)}
+                            />
+                        </div>
+
                     </div>
                 </div>
 
@@ -1641,14 +1558,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </FadeUp>
                             </div>
                             <div className="flex justify-center mt-6 md:mt-8">
-                                <button
+                                <CTAButton
+                                    text={<T>See It in Action</T>}
                                     onClick={() => setModalOpen(true)}
-                                    className="inline-flex items-center justify-center gap-2 self-start h-[40px] w-full max-w-[182px] text-white text-[14px] rounded-[50px] tracking-para leading-tight mt-6 lg:mt-0"
-                                    style={{ background: "#D63F10" }}
-                                >
-                                    <T>See It in Action</T>
-                                    <Arrow45 />
-                                </button>
+                                />
                             </div>
                         </div>
                     </div>
@@ -1666,37 +1579,28 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <T>Run compliant, AI-powered operations with Accqrate.</T>
                             </p>
                         </div>
-                        <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6">
+                        <div className="
+  flex flex-col items-center
+  md:flex-row md:justify-center
+  md:gap-4 lg:gap-8
+  py-6
+  space-y-4 md:space-y-0
+">
                             {[
                                 "Get a Free Proof of Concept",
                                 "Subscribe for Updates",
                                 "Talk to Sales",
                             ].map((text, i) => (
-                                <button
+                                <CTAButton
                                     key={i}
+                                    text={<T>{text}</T>}
                                     onClick={() => setModalOpen(true)}
-                                    className="
-        relative
-        lg:w-auto w-[270px]
-        h-[46px]
-        flex items-center justify-center
-        rounded-[50px]
-        px-6
-        text-white
-        text-[14px] whitespace-nowrap
-        mt-[20px]
-      "
-                                    style={{
-                                        background: "#D63F10",
-                                    }}
-                                >
-                                    {/* Centered text */}
-                                    <span className="mx-auto ">
-                                        <T>{text}</T>
-                                    </span>
-                                </button>
+                                    widthClass="w-fit"
+                                />
                             ))}
                         </div>
+
+
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import AssetPath from "@/AssetPath/AssetPath";
 import T from "@/Components/T";
-
+import CTAButton from "@/Components/CTAButton";
 // ✅ Dynamically import ContactModal — prevents RSC static flag errors
 const ContactModal = dynamic(() => import("@/Components/ContactModal").then(mod => mod.ContactModal), {
   ssr: false, // Ensures it renders only on the client
@@ -102,12 +102,10 @@ export default function ZatcaSection() {
             </a>
           </p>
 
-          <button
+          <CTAButton
+            text={<T>Contact Your Consultant</T>}
             onClick={() => setModalOpen(true)}
-            className="inline-flex text-[14px] items-center justify-center gap-2 bg-[#F05A28] text-[#FFFFFF] font-medium px-5 py-2.5 rounded-full"
-          >
-            <T>Contact Your Consultant</T> <ArrowRight className="w-4 h-4" />
-          </button>
+          />
         </div>
 
         {/* COLUMN 3 — LOCK ICON */}

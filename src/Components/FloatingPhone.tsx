@@ -22,6 +22,7 @@ const FloatingPhone: React.FC<FloatingPhoneProps> = ({ phoneNumber }) => {
         hover:scale-105
         active:scale-95
         transition-transform
+        lg:hidden
       "
         >
             {/* Phone Icon */}

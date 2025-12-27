@@ -7,6 +7,7 @@ import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
 import dynamic from "next/dynamic";
 import T from "@/Components/T";
+import CTAButton from "@/Components/CTAButton";
 
 // Import ContactModal with dynamic loading to avoid server-client issues
 const ContactModal = dynamic(
@@ -162,49 +163,17 @@ const CTASection = () => {
       </div>
 
       {/* Bottom Buttons */}
-      <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 pb-6 md:pb-8 lg:pb-10">
+      <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 space-y-4 lg:gap-8 pb-6 md:pb-8 lg:pb-10">
         {buttonData.map((button) => (
-          <button
+          <CTAButton
             key={button.id}
+            text={<T>{button.text}</T>}
             onClick={() => handleButtonClick(button.id)}
-            className="
-              relative
-              lg:w-[280px] w-[270px] md:w-[220px]
-              min-h-[42px]
-              flex items-center justify-center
-              bg-[#D63F10]
-              rounded-[50px]
-              px-4 pr-10
-              text-white
-              text-[14px]
-              text-center leading-tight
-              mt-[32px]
-              hover:bg-[#E04A18] transition-colors duration-200
-              cursor-pointer
-            "
-          >
-            {/* Centered Text */}
-            <span className="mx-auto block"><T>{button.text}</T></span>
-
-            {/* Arrow aligned to the right */}
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              className="absolute right-4 text-white"
-            >
-              <path
-                d="M9 6l6 6-6 6"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+            widthClass="w-[270px] md:w-[220px] lg:w-[280px]"
+          />
         ))}
       </div>
+
 
       {/* Decorative Circles */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48" />

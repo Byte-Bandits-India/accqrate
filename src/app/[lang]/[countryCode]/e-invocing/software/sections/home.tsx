@@ -16,6 +16,7 @@ import saHeroImg from "@/Assets/images/invoicing/invoice-with-create-screen copy
 import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
 import { t, currentLang } from "@/lib/translations";
+import CTAButton from "@/Components/CTAButton";
 
 // Feature item type with icon
 type FeatureItem = {
@@ -471,46 +472,11 @@ const Software: React.FC = () => {
                                 )}
 
                                 <div className="flex justify-start py-6">
-                                    <Link
+                                    <CTAButton
+                                        text={content.ctaText ?? ''}
                                         href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            setModalOpen(true);
-                                        }}
-                                        className="
-                      relative
-                      flex items-center justify-center
-                      w-[270px] md:w-[240px] lg:w-[250px]
-                      min-h-[46px]
-                      bg-[#D63F10]
-                      rounded-[50px]
-                      px-4 pr-10
-                      text-white
-                      text-fluid-small md:text-[14px]
-                      text-center leading-tight
-                      transition-all duration-300 hover:bg-[#d94f22]
-                    "
-                                    >
-                                        <span className="mx-auto">
-                                            <T>{content.ctaText}</T>
-                                        </span>
-
-                                        <svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            className="absolute right-4 text-white"
-                                        >
-                                            <path
-                                                d="M9 6l6 6-6 6"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    </Link>
+                                        onClick={() => setModalOpen(true)}
+                                    />
                                 </div>
 
                                 {/* FEATURES SECTION - Desktop/Tablet */}

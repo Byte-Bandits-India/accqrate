@@ -11,6 +11,7 @@ import FadeUp from '@/Components/ui/FadeUp'
 import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
 import uaeImg from "@/Assets/images/invoicing/uae.webp";
 import { section6Content } from "../data/section6Content";
+import CTAButton from '@/Components/CTAButton';
 
 const ContactModal = dynamic(
   () => import('@/Components/ContactModal').then((mod) => mod.ContactModal),
@@ -173,12 +174,10 @@ const DemoVideoSection: React.FC = () => {
                     ))}
                   </div>
 
-                  <button
+                  <CTAButton
                     onClick={() => setIsContactModalOpen(true)}
-                    className="bg-[#d63f10] px-6 py-2 rounded-full text-white"
-                  >
-                    <T lang={lang} countryCode={countryCode}>{content.buttonText}</T>
-                  </button>
+                    text={<T lang={lang} countryCode={countryCode}>{content.buttonText}</T>}
+                  />
                 </div>
               </div>
 

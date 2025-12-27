@@ -13,6 +13,7 @@ import belgiumInvoiceHero from "@/Assets/images/invoicing/BE_invoice_mandate.web
 import BE_invoice from "@/Assets/images/invoicing/BE_invoice.webp";
 import taxInvoiceMultiple from "@/Assets/images/invoicing/tax-invoice-multiple.webp";
 import magnifiedInvoice from "@/Assets/images/invoicing/magnified-invoice.webp";
+import CTAButton from "@/Components/CTAButton";
 
 
 interface Feature {
@@ -510,13 +511,14 @@ const Section1 = () => {
                                             </div>
                                         ))}
                                     </div>
-                                    <button
-                                        onClick={() => setModalOpen(true)}
-                                        className="h-[40px] md:h-[42px] w-[170px] mx-6 xl:w-auto max-w-[399px] flex items-center justify-between px-4 rounded-3xl text-white text-[14px]"
-                                        style={{ background: '#D63F10' }}
-                                    >
-                                        <T>See It in Action</T>
-                                    </button>
+                                    <div className='px-[16px]'>
+                                        <CTAButton
+                                            text='See It in Action'
+                                            href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
+                                            onClick={() => setModalOpen(true)}
+                                        />
+                                    </div>
+
                                 </div>
 
                                 {/* RIGHT COLUMN - IMAGE */}

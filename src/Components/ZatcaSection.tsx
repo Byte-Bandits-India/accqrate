@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 import AssetPath from "@/AssetPath/AssetPath";
 import T from "@/Components/T";
+import CTAButton from "@/Components/CTAButton";
 
 //  Dynamically import ContactModal — prevents RSC static flag errors
 const ContactModal = dynamic(() => import("@/Components/ContactModal").then(mod => mod.ContactModal), {
@@ -141,12 +142,10 @@ export default function ZatcaSection() {
             ))}
           </ul>
 
-          <button
+          <CTAButton
+            text={<T lang={lang} countryCode={countryCode}>Book a Demo</T>}
             onClick={() => setModalOpen(true)}
-            className="inline-flex text-[12px] md:text-[14px] items-center justify-center gap-2 bg-[#d63f10] text-[#FFFFFF] font-medium px-4 py-3 rounded-full"
-          >
-            <T lang={lang} countryCode={countryCode}>Book a Demo</T> <ArrowRight className="w-4 h-4" />
-          </button>
+          />
         </div>
 
         {/* COLUMN 2 — COMPLIANCE BOX + INVOICE */}

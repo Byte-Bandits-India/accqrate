@@ -12,7 +12,8 @@ import { Row, Col } from "antd";
 import BelgiumT from "@/Components/T";
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
-import blogPosts from '@/app/[lang]/[countryCode]/resources/blogs/data/blogspost'; // Make sure this path is correct
+import blogPosts from '@/app/[lang]/[countryCode]/resources/blogs/data/blogspost';
+import CTAButton from '@/Components/CTAButton';
 
 const Section2 = () => {
     const params = useParams()
@@ -285,12 +286,10 @@ const Section2 = () => {
                     </Row>
 
                     <div className='flex items-center justify-center mt-8 md:mt-12'>
-                        <button
-                            className="inline-flex text-[14px] items-center justify-center gap-2 bg-[#D63F10] text-[#FFFFFF] font-medium px-5 py-2 rounded-full hover:bg-[#e04918] transition-colors duration-300"
+                        <CTAButton
+                            text={<T>Explore All Blogs</T>}
                             onClick={() => router.push(`/${lang}/${countryCode}/resources/blogs`)}
-                        >
-                            <T>Explore All Blogs</T> <ArrowRight className="w-4 h-4 -rotate-45" />
-                        </button>
+                        />
                     </div>
                 </div>
             </section>
