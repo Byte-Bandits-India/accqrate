@@ -12,12 +12,19 @@ import {
   Twitter,
   Instagram,
   Youtube,
-  MessageCircle,
-  Send
+  ChevronRight
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoLogoReddit } from "react-icons/io5";
 import { FaSnapchat } from "react-icons/fa6";
+
+// ShadCN Components
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/Components/ui/accordion";
 
 // ---------------- Dynamic Routing ----------------
 const useDynamicRouting = () => {
@@ -66,7 +73,7 @@ const socialLinks = [
   { icon: Youtube, href: "#" },
   { icon: IoLogoReddit, href: "#" },
   { icon: FaSnapchat, href: "#" },
-  { icon: FaWhatsapp, href: "#" }, // WhatsApp
+  { icon: FaWhatsapp, href: "#" },
 ];
 
 // Function to get country-specific contact sales section
@@ -156,17 +163,163 @@ export default function FooterUpdated() {
     return createHref(target);
   };
 
-  // Dynamic footer sections based on country
-  const dynamicFooterSections = [
-    ...footerSections,
-    getContactSalesSection(countryCode)
-  ];
-
   return (
-    <footer className="bg-white text-[#000000d9] pt-12 pb-6 font-inter">
+    <footer className="bg-white text-[#000000d9] pt-8 pb-6 font-inter">
       <div className="mx-auto px-6 md:px-10 xl:px-10">
+        {/* Mobile View (accordion) */}
+        <div className="xl:hidden">
+          {/* Accordion for Sections */}
+          <Accordion type="multiple" className="w-full">
+            {/* Footer Navigation Links Accordion */}
+            <AccordionItem value="navigation" className="border-b border-[#e5e7eb]">
+              <AccordionTrigger className="text-[#2b283f] px-0 text-[16px] font-semibold hover:no-underline">
+                <div className="flex items-center justify-between w-full">
+                  <T>Accqrate-erp.com</T>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <div className="grid grid-cols-2 gap-3">
+                  {footerNav.map((item, i) => (
+                    <Link
+                      key={i}
+                      href={resolveHref(item.href)}
+                      className="text-[#2b283f] hover:text-[#5980FF] transition-colors text-[14px] block py-1"
+                    >
+                      <T>{item.label}</T>
+                    </Link>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Resources Accordion */}
+            <AccordionItem value="resources" className="border-b border-[#e5e7eb]">
+              <AccordionTrigger className="text-[#2b283f] px-0 text-[16px] font-semibold hover:no-underline">
+                <div className="flex items-center justify-between w-full">
+                  <T>{footerSections[0].title}</T>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <ul className="space-y-3">
+                  {footerSections[0].links.map((item, i) => (
+                    <li key={i} className="text-[14px]">
+                      <Link
+                        href={resolveHref(item.href ?? "")}
+                        className="text-[#5a6183] hover:text-[#5980FF] block py-1"
+                      >
+                        <T>{item.label}</T>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* E-invoicing Solution Accordion */}
+            <AccordionItem value="e-invoicing" className="border-b border-[#e5e7eb]">
+              <AccordionTrigger className="text-[#2b283f] px-0 text-[16px] font-semibold hover:no-underline">
+                <div className="flex items-center justify-between w-full">
+                  <T>E-invoicing Solution</T>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <ul className="space-y-3">
+                  {eInvoicingLinks.map((item, i) => (
+                    <li key={i}>
+                      <Link
+                        href={resolveHref(item.href)}
+                        className="text-[#5a6183] hover:text-[#5980FF] text-[14px] block py-1"
+                      >
+                        <T>{item.label}</T>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Contact Sales Accordion */}
+            <AccordionItem value="contact-sales" className="border-b border-[#e5e7eb]">
+              <AccordionTrigger className="text-[#2b283f] px-0 text-[16px] font-semibold hover:no-underline">
+                <div className="flex items-center justify-between w-full">
+                  <T>Contact Sales</T>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-4">
+                <ul className="space-y-3 text-[14px]">
+                  {getContactSalesSection(countryCode).links.map((item, i) => (
+                    <li key={i}>
+                      {item.isText ? (
+                        <div className="text-[#5a6183] py-1">
+                          {(() => {
+                            const text = item.label;
+                            const colonIndex = text.indexOf(":");
+                            if (colonIndex === -1) {
+                              return <T>{text}</T>;
+                            }
+
+                            const label = text.substring(0, colonIndex + 1);
+                            const value = text.substring(colonIndex + 1).trim();
+
+                            return (
+                              <div className="flex flex-col">
+                                <div className="flex items-start">
+                                  <span className="text-[#2b283f] font-medium whitespace-nowrap shrink-0">
+                                    <T>{label}</T>
+                                  </span>
+                                  <span className="text-[#5a6183] ml-1 break-words">
+                                    {value.includes('\n') ? (
+                                      <T>{value.split('\n')[0]}</T>
+                                    ) : (
+                                      <T>{value}</T>
+                                    )}
+                                  </span>
+                                </div>
+                                {value.includes('\n') && (
+                                  <div className="text-[#5a6183] ml-[calc(theme(fontSize.medium)_+_0.25rem)] mt-1">
+                                    {value.split('\n').slice(1).map((line, lineIndex) => (
+                                      <div key={lineIndex}>
+                                        <T>{line}</T>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })()}
+                        </div>
+                      ) : (
+                        <Link
+                          href={resolveHref(item.href ?? "")}
+                          className="text-[#2b283f] hover:text-[#5980FF] block py-1"
+                        >
+                          <T>{item.label}</T>
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          {/* Social Icons */}
+          <div className="flex items-center justify-center gap-4 pt-10">
+            {socialLinks.map(({ icon: Icon, href }, index) => (
+              <Link
+                key={index}
+                href={href}
+                target="_blank"
+                className="text-[#2b283f] hover:text-[#5980FF] transition-colors"
+              >
+                <Icon className="w-5 h-5" />
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop View (unchanged) */}
         <div className="hidden xl:block">
-          {/* Logo */}
           <Link href={createHref("/")}>
             <Image
               src={AssetPath.header.logo}
@@ -178,25 +331,20 @@ export default function FooterUpdated() {
           </Link>
         </div>
 
-        {/* Main Grid */}
         <div className="hidden xl:flex justify-between gap-12">
-
           {/* LEFT SECTION */}
           <div className="flex-1 max-w-[850px]">
-            {/* Description */}
             <div className="mb-6">
               <p className="text-[#5a6183] text-[14px] leading-6">
                 <T>
                   One unified platform with zero silos integrated modules on a
                   single data model, global compliance built-in, AI-powered
                   automation, flexible cloud or on-prem deployment, fast
-                  implementation, and enterprise-grade security and
-                  scalability.
+                  implementation, and enterprise-grade security and scalability.
                 </T>
               </p>
             </div>
 
-            {/* Footer Navigation Links */}
             <div className="mb-4">
               <div className="flex flex-wrap items-center gap-3 md:gap-5 text-[14px]">
                 {footerNav.map((item, i) => (
@@ -211,7 +359,6 @@ export default function FooterUpdated() {
               </div>
             </div>
 
-            {/* Social Icons */}
             <div className="flex items-center gap-3 pt-4">
               {socialLinks.map(({ icon: Icon, href }, index) => (
                 <Link
@@ -228,7 +375,6 @@ export default function FooterUpdated() {
 
           {/* RIGHT SECTION - Columns */}
           <div className="flex gap-12">
-            {/* Resources Section */}
             <div className="min-w-[200px]">
               <h3 className="text-[#2b283f] text-[16px] font-semibold mb-3">
                 <T>{footerSections[0].title}</T>
@@ -246,7 +392,6 @@ export default function FooterUpdated() {
                 ))}
               </ul>
             </div>
-            {/* E-invoicing Solution */}
             <div className="min-w-[200px]">
               <h3 className="text-[#2b283f] text-[16px] font-semibold mb-3">
                 <T>E-invoicing Solution</T>
@@ -265,7 +410,6 @@ export default function FooterUpdated() {
               </ul>
             </div>
 
-            {/* Contact Sales Section */}
             <div className="min-w-[300px]">
               <h3 className="text-[#2b283f] text-[16px] font-semibold mb-3">
                 <T>Contact Sales</T>
@@ -282,7 +426,7 @@ export default function FooterUpdated() {
                             return <T>{text}</T>;
                           }
 
-                          const label = text.substring(0, colonIndex + 1); // Include the colon
+                          const label = text.substring(0, colonIndex + 1);
                           const value = text.substring(colonIndex + 1).trim();
 
                           return (
@@ -328,13 +472,13 @@ export default function FooterUpdated() {
         </div>
 
         {/* Bottom Logo Divider */}
-        <div className="flex items-center mt-12 mb-4">
+        <div className="flex items-center mt-8 xl:mt-12 mb-4">
           <div className="flex-grow h-[1px] bg-[#bebebe]" />
           <Image
             src={AssetPath.common.footerLogo}
             alt="Accqrate"
-            width={100}
-            height={35}
+            width={80}
+            height={28}
             className="mx-4 opacity-90"
           />
           <div className="flex-grow h-[1px] bg-[#bebebe]" />

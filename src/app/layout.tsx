@@ -6,6 +6,8 @@ import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import { LoadingProvider } from "@/Util/LoadingContext";
 import { CountryProvider } from "../contexts/CountryContext";
+import FloatingPhone from "@/Components/FloatingPhone";
+import BackToTop from "@/Components/BackToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,6 +32,8 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <FloatingPhone phoneNumber="+919876543210" />
+            <BackToTop />
           </LoadingProvider>
         </CountryProvider>
       </body>

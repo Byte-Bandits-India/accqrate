@@ -276,8 +276,8 @@ const LangCountryDropdown: React.FC<
 
             <div className="mb-2 font-semibold text-black"><T>Select Country</T></div>
 
-            {/* FULL height, NO scrolling */}
-            <div className="space-y-2">
+            {/* Country list with scrolling only on mobile */}
+            <div className="space-y-2 max-h-[200px] xl:max-h-none overflow-y-auto xl:overflow-visible">
               {countries.map((country) => (
                 <div
                   key={country.code}
@@ -789,7 +789,7 @@ const Header: React.FC = () => {
               <hr />
               {menus.map(({ id, title, sections }) => (
                 <AccordionItem key={id} value={id}>
-                  <AccordionTrigger className="text-[#333333] font-normal py-4 text-[17px] hover:text-[#534ED3]">
+                  <AccordionTrigger className="text-[#333333] font-normal py-4 px-0 text-[17px] hover:text-[#534ED3]">
                     {title}
                   </AccordionTrigger>
 
@@ -834,10 +834,10 @@ const Header: React.FC = () => {
 
               <Link
                 href={createHref("/about-us")}
-                className={`flex items-center gap-1 px-2 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] text-gray-700 hover:text-[#534ED3]`}
+                className={`flex items-center gap-1 py-2 font-normal rounded-md transition-colors hover:bg-[#f0f3ff] text-gray-700 hover:text-[#534ED3]`}
                 onClick={handleMenuItemClick}
               >
-                <span className="whitespace-nowrap text-[14px] text-[#333333]">
+                <span className="whitespace-nowrap text-[17px] text-[#333333]">
                   <T>About us</T>
                 </span>
               </Link>
