@@ -544,16 +544,16 @@ const Software: React.FC = () => {
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                             {badges.slice(0, 4).map((badge, index) => (
                                                 <div key={index} className="flex items-center gap-2">
-                                                    <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                                                    <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
                                                         <Image
                                                             src={badge.img}
                                                             alt={badge.alt}
-                                                            width={20}
-                                                            height={20}
+                                                            width={50}
+                                                            height={50}
                                                             className="object-contain"
                                                         />
                                                     </div>
-                                                    <span className="text-[#1C2041] text-[14px] leading-[20px] font-medium">
+                                                    <span className="text-[#1C2041] text-[16px] leading-[20px] font-medium">
                                                         <T>{badge.text}</T>
                                                     </span>
                                                 </div>

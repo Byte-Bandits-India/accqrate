@@ -472,7 +472,7 @@ const Section1 = () => {
                                             <div
                                                 key={index}
                                                 className="relative
-                w-full max-w-[260px] max-h-[350px] h-full
+                w-full lg:max-w-[260px] max-h-[350px] h-full
                 flex flex-col gap-2 px-6"
                                             >
                                                 <div className='flex'>
