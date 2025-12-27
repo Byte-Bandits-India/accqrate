@@ -811,12 +811,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <InfoCard key={card.title} {...card} />
                             ))}
 
-                            {/* "Explore All Products" card */}
-                            <div className="cursor-pointer flex items-center justify-between w-full h-[3.125rem] mx-auto overflow-hidden shadow-[0_0_2px_rgba(0,0,0,0.25)] transition-all hover:shadow-md p-3 sm:p-4 bg-[#D6E0FF]">
-                                <h3 className="text-[0.875rem] font-medium">
-                                    <T>Explore All Products...</T>
-                                </h3>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -825,7 +820,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 {/* Trusted */}
                 <FadeUp className="my-8 md:my-[20px]">
-                    <h3 className="text-[24px] tracking-heading leading-tight font-bold text-[#1c2041] text-center mx-auto">
+                    <h3 className="text-[23px] md:text-[24px] tracking-heading leading-tight font-bold text-[#1c2041] text-center mx-auto">
                         <T>Trusted by</T> <br className="md:hidden" />
                         <span className="text-[#194BED]">
                             {" "}
@@ -852,9 +847,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             alt={logo.name}
                                             width={135}
                                             height={48}
-                                            className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                            className="h-10 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                         />
-                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">
+                                        <p className=" text-[12px] md:text-sm text-[#737373] font-medium">
                                             {" "}
                                             <T>{logo.name}</T>{" "}
                                         </p>
@@ -873,9 +868,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             alt={logo.name}
                                             width={135}
                                             height={48}
-                                            className="h-12 md:h-16 w-40 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                            className="h-10 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                         />
-                                        <p className=" text-xs md:text-sm text-[#737373] font-medium">
+                                        <p className=" text-[12px] md:text-sm text-[#737373] font-medium">
                                             {logo.name}
                                         </p>
                                     </div>
@@ -901,11 +896,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 lg:px-6 max-w-[1177px] mx-auto w-full">
                             {/* Left Column */}
                             <div className="max-w-[500px]">
-                                <h2 className="font-medium text-[14px] tracking-heading uppercase text-[#1c2041] ">
+                                <h2 className="font-medium text-[12px] md:text-[14px] tracking-heading uppercase text-[#1c2041] ">
                                     <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
 
-                                <h3 className="text-[24px] text-[#1c2041] font-bold mt-4 mb-4">
+                                <h3 className="text-[23px] md:text-[24px] leading-[36px] text-[#1c2041] font-bold mt-4 mb-4">
                                     {highlightWhySubtitle(
                                         countryContent.whyAccqrateSubtitle ||
                                         "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."
@@ -943,14 +938,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 className={`
             relative group overflow-hidden
             p-6  rounded-[15px]
-            flex flex-col max-h-[221px] max-w-[360px]
+            flex flex-col max-h-[221px] max-w-[310px] lg:max-w-[360px]
             bg-white
           `}
                                             >
                                                 {/* Content */}
                                                 <div className="relative z-10 flex flex-col h-full justify-between">
                                                     {/* Top section: Image + Number */}
-                                                    <div className="relative flex justify-between items-start mb-4">
+                                                    <div className="relative sm:flex justify-between hidden items-start mb-4">
                                                         <div className="bg-[#F3F3FF] p-1 rounded-[5px]">
                                                             <Image
                                                                 src={feature.img}
@@ -964,11 +959,11 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                                     {/* Middle section: Title */}
                                                     <div className="mb-3 z-10">
-                                                        <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight mb-1">
+                                                        <h2 className="text-[16px] md:text-fluid-small font-bold text-[#1c2041] leading-tight md:mb-1">
                                                             <T>{feature.title}</T>
                                                         </h2>
                                                         {feature.sub && (
-                                                            <h2 className="text-fluid-small font-bold text-[#1c2041] leading-tight">
+                                                            <h2 className="text-[16px] md:text-fluid-small font-bold text-[#1c2041] leading-tight">
                                                                 <T>{feature.sub}</T>
                                                             </h2>
                                                         )}
@@ -1050,13 +1045,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 </div>
 
                                 <div className="w-full mt-auto">
-                                    <div className="h-[480px] md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
+                                    <div className="h-auto md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
                                         <Image
                                             src={getInvoiceHomeImage()}
                                             alt="Invoice preview"
                                             width={620}
                                             height={420}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-contain md:object-cover"
                                             unoptimized
                                         />
                                     </div>
@@ -1462,7 +1457,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 <div className="px-6 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
                     {/* Left Text */}
                     <div className="flex-1">
-                        <h1 className="text-[24px] font-bold py-6 text-[#1c2041] md:py-8 tracking-heading leading-tight">
+                        <h1 className="text-[23px] md:text-[24px] font-bold py-6 text-[#1c2041] md:py-8 tracking-heading leading-tight">
                             <T>
                                 Our <span className="text-[#194BED]">Values</span>{" "}
                             </T>{" "}
@@ -1523,7 +1518,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
           relative group overflow-hidden
           p-6 rounded-xl
           flex flex-col
-          min-h-[321px]
+          md:min-h-[321px]
           transition-all duration-300
           hover:shadow-lg border border-[#C8C8C8]
           
@@ -1546,10 +1541,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 />
 
                                 {/* CONTENT */}
-                                <div className="relative z-10 flex flex-col h-full">
+                                <div className="relative z-10 flex flex-col h-auto md:h-full">
                                     {/* Icon/Image */}
                                     {item.icon && (
-                                        <div className="mb-4 flex items-center justify-center">
+                                        <div className="mb-4 hidden md:flex items-center justify-center">
                                             <Image
                                                 src={item.icon}
                                                 width={140}
@@ -1561,13 +1556,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     )}
 
                                     {/* Title */}
-                                    <h3 className="text-[#303030] font-semibold text-[18px] leading-tight break-words mb-3">
+                                    <h3 className="text-[#303030]  font-bold text-[16px] md:text-[18px] leading-tight break-words mb-3">
                                         <T>{item.title}</T>
                                     </h3>
 
                                     {/* Description */}
                                     <div className="flex-grow">
-                                        <p className="text-[#5A6183] text-[14px] leading-relaxed break-words">
+                                        <p className="text-[#5A6183] text-[16px] md:text-[14px] leading-relaxed break-words">
                                             <T>{item.desc}</T>
                                         </p>
                                     </div>
