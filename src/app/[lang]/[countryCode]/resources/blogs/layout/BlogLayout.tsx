@@ -193,7 +193,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({
 
             {/* Blog main content */}
             <Col xs={24} md={12}>
-              <h1 className="text-2xl md:text-[30px] leading-tight font-semibold mb-3 text-[#1c2041] max-w-[700px]">
+              <h1 className="text-[24px] leading-tight font-bold mb-3 text-[#1c2041] max-w-[700px]">
                 <T lang={lang} countryCode={countryCode?.toUpperCase()}>{pageTitle}</T>
               </h1>
               {updatedOn && (

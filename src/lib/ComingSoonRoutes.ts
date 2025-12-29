@@ -10,13 +10,10 @@ export const comingSoonRoutes = [
   'e-invoicing/multi-country',
 
   // Resources
-  'resources/events',
-  'resources/webinars',
   'resources/case-studies',
   'resources/product-updates',
   'resources/alternate-product',
   'resources/knowledge-center',
-  'resources/vat',
 
   // Community
   'community/affiliates',

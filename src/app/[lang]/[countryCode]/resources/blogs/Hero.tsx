@@ -7,15 +7,15 @@ import T from "@/Components/T";
 export default function HeroResourceSection() {
   return (
     <section className="pt-16 md:pt-20">
-      <div className="max-w-[1180px] mx-auto px-6 md:px-8 xl:px-0">
+      <div className="max-w-[1180px] mx-auto px-[16px] md:px-8 xl:px-0">
         {/* Heading */}
-        <FadeUp className="text-left mb-10">
-          <h1 className="text-[20px] lg:text-[24px] leading-tight font-bold text-gray-900">
+        <FadeUp className="text-left">
+          <h1 className="text-[24px] leading-tight font-bold text-gray-900">
             <T>Browse Our Resources</T>
           </h1>
 
           {/* Blue underline */}
-          <div className="w-[126px] h-[2px] bg-[#194BED] mt-3 lg:mt-[10px] rounded-full" />
+          <div className="w-[126px] h-[2px] bg-[#194BED] my-6 rounded-full" />
         </FadeUp>
 
         {/* Featured Image Section */}

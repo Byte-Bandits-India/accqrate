@@ -146,7 +146,7 @@ export default function VATCalculator() {
       <div className="bg-[#F8F6FF]">
         <div className="max-w-[1180px] mx-auto px-6 md:px-8 xl:px-0 pt-[80px] pb-[40px]">
           <h1
-            className="text-[24px] md:text-[30px]  font-bold pb-[30px]  text-[#000000] tracking-heading leading-tight"
+            className="text-[24px] text-[#1c2041] font-bold leading-tight pb-2"
             data-aos="fade-up"
           >
             <T>{getVatCalculatorTitle()}</T>
@@ -321,39 +321,39 @@ export default function VATCalculator() {
       <div>
         <div className="max-w-[1180px] mx-auto mt-[40px] px-6 md:px-8 xl:px-0 pb-8 md:pb-10 lg:pb-12" data-aos="fade-up">
           <div>
-            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.title}</T></h2>
-            <p className="text-[14px] leading-[26px] lg:leading-[40px] mt-[25px]">
+            <h2 className="text-[18px] font-bold"><T lang={lang} countryCode={countryCode}>{content.title}</T></h2>
+            <p className="text-[16px] leading-[26px] lg:leading-[36px] mt-[8px]">
               <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>What Is VAT?</T></h2>
-            <p className="text-[14px] mt-[25px] leading-[26px] lg:leading-[40px]">
+            <h2 className="text-[18px] font-bold"><T lang={lang} countryCode={countryCode}>What Is VAT?</T></h2>
+            <p className="text-[16px] mt-[8px] leading-[26px] lg:leading-[36px]">
               <T lang={lang} countryCode={countryCode}>{content.whatIsVAT}</T> {countrySpecificDetails}
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.howToCalculateTitle}</T></h2>
-            <p className="text-[14px] mt-[25px] leading-[26px] lg:leading-[40px]">
+            <h2 className="text-[18px] font-bold"><T lang={lang} countryCode={countryCode}>{content.howToCalculateTitle}</T></h2>
+            <p className="text-[16px] mt-[8px] leading-[26px] lg:leading-[36px]">
               <T lang={lang} countryCode={countryCode}>{content.howToCalculateDesc}</T>
             </p>
-            <ul className="list-disc pl-6 space-y-1 text-[14px] text-[#555555] leading-[26px] lg:leading-[40px] mt-2">
+            <ul className="list-disc pl-6 space-y-1 text-[14px] text-[#555555] leading-[26px] lg:leading-[36px]">
               <li><T lang={lang} countryCode={countryCode}>Adding VAT: Perfect for when sales are exclusive of VAT.</T></li>
               <li><T lang={lang} countryCode={countryCode}>Excluding VAT: Ideal for sales prices that already include VAT.</T></li>
             </ul>
           </div>
 
           <div className="mt-[30px] lg:mb-[60px]" data-aos="fade-up">
-            <h2 className="text-fluid-body font-semibold"><T lang={lang} countryCode={countryCode}>{content.calculationBenefitsTitle}</T></h2>
-            <p className="text-[14px] mt-[25px] leading-[26px] lg:leading-[40px]"><T lang={lang} countryCode={countryCode}>With our</T> {getCountryName(countryCode)} <T lang={lang} countryCode={countryCode}>VAT Calculator, enjoy:</T></p>
-            <ul className="list-disc pl-6 space-y-1 text-[14px] leading-[26px] lg:leading-[40px] text-[#555555] mt-2">
+            <h2 className="text-[18px] font-bold"><T lang={lang} countryCode={countryCode}>{content.calculationBenefitsTitle}</T></h2>
+            <p className="text-[16px] mt-[8px] leading-[26px] lg:leading-[36px]"><T lang={lang} countryCode={countryCode}>With our</T> {getCountryName(countryCode)} <T lang={lang} countryCode={countryCode}>VAT Calculator, enjoy:</T></p>
+            <ul className="list-disc pl-6 space-y-1 text-[16px] leading-[26px] lg:leading-[36px] text-[#555555]">
               {content.benefits.map((benefit, index) => (
                 <li key={index}><T lang={lang} countryCode={countryCode}>{benefit}</T></li>
               ))}
             </ul>
-            <p className="text-[14px] mt-[25px] leading-[26px] lg:leading-[40px]">
+            <p className="text-[16px] mt-[8px] leading-[26px] lg:leading-[36px]">
               <T lang={lang} countryCode={countryCode}>{content.calculationBenefitsDesc}</T>
             </p>
           </div>

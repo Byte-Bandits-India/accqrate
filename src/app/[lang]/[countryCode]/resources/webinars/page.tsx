@@ -34,7 +34,7 @@ export default function WebinarSection() {
         <div className="mx-auto px-6 md:px-8 xl:px-0 max-w-[1180px]">
           {/* Heading */}
           <div>
-            <h2 className="text-[24px] lg:text-[30px] font-bold leading-tight  text-left">
+            <h2 className="text-[24px] font-bold leading-tight text-[#1c2041] text-left">
               <T>Unlocking Insights Of Webinar</T>
             </h2>
 

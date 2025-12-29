@@ -184,7 +184,7 @@ export default function RecentBlogPosts() {
   return (
     <section className="mb-10 ">
       <div className="max-w-[1180px] mx-auto px-4 md:px-8 xl:px-0">
-        <FadeUp className="text-[16px] md:text-[18px] font-bold mb-10 text-gray-900">
+        <FadeUp className="text-[16px] mb-10 text-gray-900">
           <T>Recent Blog Posts from Accqrate</T>
         </FadeUp>
 
