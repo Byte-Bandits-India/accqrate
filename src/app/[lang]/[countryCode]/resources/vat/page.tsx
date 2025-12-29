@@ -226,7 +226,7 @@ export default function VATCalculator() {
                   <div className="lg:col-span-2">
                     <div className="flex flex-row lg:items-center lg:justify-between gap-4 mt-6">
                       <div className="flex-1">
-                        <p className="text-fluid-small text-[#333333] font-medium mb-3">
+                        <p className="text-fluid-small text-[#1c2041] font-medium mb-3">
                           <T lang={lang} countryCode={countryCode}>Is Sale Inclusive of VAT?</T>
                         </p>
                         <RadioGroup
@@ -238,11 +238,11 @@ export default function VATCalculator() {
                         >
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="yes" id="yes" />
-                            <Label htmlFor="yes" className="text-[#333333] text-fluid-small cursor-pointer"><T lang={lang} countryCode={countryCode}>Yes</T></Label>
+                            <Label htmlFor="yes" className="text-[#1c2041] text-fluid-small cursor-pointer"><T lang={lang} countryCode={countryCode}>Yes</T></Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="no" id="no" />
-                            <Label htmlFor="no" className="text-[#333333] text-fluid-small cursor-pointer"><T lang={lang} countryCode={countryCode}>No</T></Label>
+                            <Label htmlFor="no" className="text-[#1c2041] text-fluid-small cursor-pointer"><T lang={lang} countryCode={countryCode}>No</T></Label>
                           </div>
                         </RadioGroup>
                       </div>
@@ -273,14 +273,14 @@ export default function VATCalculator() {
                       {/* Sale Value Row */}
                       <div className="flex items-center justify-between py-2">
                         <div>
-                          <p className="text-fluid-body text-[#333333] font-semibold">
+                          <p className="text-fluid-body text-[#1c2041] font-semibold">
                             <T>Sale Value</T>:
                           </p>
                           <p className="text-fluid-small text-[#717171] mt-2">
                             <T>{isVATInclusive === "yes" ? "Inclusive of VAT" : "Exclusive of VAT"}</T>
                           </p>
                         </div>
-                        <p className="text-fluid-body text-[#333333] font-bold mt-10">
+                        <p className="text-fluid-body text-[#1c2041] font-bold mt-10">
                           <T>{currency} {hydrated ? saleValueNum.toLocaleString() : saleValueNum}</T>
                         </p>
                       </div>
@@ -289,10 +289,10 @@ export default function VATCalculator() {
 
                       {/* VAT Amount Row */}
                       <div className="flex items-center justify-between py-2">
-                        <p className="text-fluid-body text-[#333333] font-medium">
+                        <p className="text-fluid-body text-[#1c2041] font-medium">
                           <T>VAT Amount</T>:
                         </p>
-                        <p className="text-fluid-body text-[#333333] font-bold">
+                        <p className="text-fluid-body text-[#1c2041] font-bold">
                           {currency} {hydrated ? vatAmount.toFixed(2) : vatAmount.toFixed(2)}
                         </p>
                       </div>
@@ -301,10 +301,10 @@ export default function VATCalculator() {
 
                       {/* Total Value Row */}
                       <div className="flex items-center justify-between py-2">
-                        <p className="text-fluid-body text-[#333333] font-semibold">
+                        <p className="text-fluid-body text-[#1c2041] font-semibold">
                           <T>Total Value</T>:
                         </p>
-                        <p className="text-fluid-body text-[#333333] font-bold">
+                        <p className="text-fluid-body text-[#1c2041] font-bold">
                           {currency} {hydrated ? totalAmount.toFixed(2) : totalAmount.toFixed(2)}
                         </p>
                       </div>
@@ -321,39 +321,39 @@ export default function VATCalculator() {
       <div>
         <div className="max-w-[1180px] mx-auto mt-[40px] px-6 md:px-8 xl:px-0 pb-8 md:pb-10 lg:pb-12" data-aos="fade-up">
           <div>
-            <h2 className="text-[18px] leading-[28px] font-bold"><T lang={lang} countryCode={countryCode}>{content.title}</T></h2>
-            <p className="text-[16px] leading-[25px] mt-[8px]">
+            <h2 className="text-[18px] leading-[28px] text-[#1c2041] font-bold"><T lang={lang} countryCode={countryCode}>{content.title}</T></h2>
+            <p className="text-[16px] leading-[25px] mt-[8px] text-[#5a6183]">
               <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
-            <h2 className="text-[18px] leading-[28px] font-bold"><T lang={lang} countryCode={countryCode}>What Is VAT?</T></h2>
-            <p className="text-[16px] mt-[8px] leading-[25px]">
+            <h2 className="text-[18px] leading-[28px] text-[#1c2041] font-bold"><T lang={lang} countryCode={countryCode}>What Is VAT?</T></h2>
+            <p className="text-[16px] mt-[8px] leading-[25px] text-[#5a6183]">
               <T lang={lang} countryCode={countryCode}>{content.whatIsVAT}</T> {countrySpecificDetails}
             </p>
           </div>
 
           <div className="mt-[30px]" data-aos="fade-up">
-            <h2 className="text-[18px] leading-[28px] font-bold"><T lang={lang} countryCode={countryCode}>{content.howToCalculateTitle}</T></h2>
-            <p className="text-[16px] mt-[8px] leading-[25px]">
+            <h2 className="text-[18px] leading-[28px] text-[#1c2041] font-bold"><T lang={lang} countryCode={countryCode}>{content.howToCalculateTitle}</T></h2>
+            <p className="text-[16px] mt-[8px] leading-[25px] text-[#5a6183]">
               <T lang={lang} countryCode={countryCode}>{content.howToCalculateDesc}</T>
             </p>
-            <ul className="list-disc pl-6 space-y-1 text-[16px] text-[#555555] leading-[26px]">
+            <ul className="list-disc pl-6 space-y-1 text-[16px] text-[#5a6183] leading-[26px]">
               <li><T lang={lang} countryCode={countryCode}>Adding VAT: Perfect for when sales are exclusive of VAT.</T></li>
               <li><T lang={lang} countryCode={countryCode}>Excluding VAT: Ideal for sales prices that already include VAT.</T></li>
             </ul>
           </div>
 
           <div className="mt-[30px] lg:mb-[60px]" data-aos="fade-up">
-            <h2 className="text-[18px] leading-[28px] font-bold"><T lang={lang} countryCode={countryCode}>{content.calculationBenefitsTitle}</T></h2>
-            <p className="text-[16px] mt-[8px] leading-[26px] "><T lang={lang} countryCode={countryCode}>With our</T> {getCountryName(countryCode)} <T lang={lang} countryCode={countryCode}>VAT Calculator, enjoy:</T></p>
-            <ul className="list-disc pl-6 space-y-1 text-[16px] leading-[26px] text-[#555555]">
+            <h2 className="text-[18px] leading-[28px] text-[#1c2041] font-bold"><T lang={lang} countryCode={countryCode}>{content.calculationBenefitsTitle}</T></h2>
+            <p className="text-[16px] mt-[8px] leading-[26px] text-[#5a6183]"><T lang={lang} countryCode={countryCode}>With our</T> {getCountryName(countryCode)} <T lang={lang} countryCode={countryCode}>VAT Calculator, enjoy:</T></p>
+            <ul className="list-disc pl-6 space-y-1 text-[16px] leading-[26px] text-[#5a6183]">
               {content.benefits.map((benefit, index) => (
                 <li key={index}><T lang={lang} countryCode={countryCode}>{benefit}</T></li>
               ))}
             </ul>
-            <p className="text-[16px] mt-[8px] leading-[26px] lg:leading-[36px]">
+            <p className="text-[16px] mt-[8px] leading-[26px] lg:leading-[36px] text-[#5a6183]">
               <T lang={lang} countryCode={countryCode}>{content.calculationBenefitsDesc}</T>
             </p>
           </div>
