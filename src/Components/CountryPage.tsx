@@ -1069,7 +1069,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                         {countryContent.complianceSection && (
                                             <>
-                                                <h2 className="text-[14px] mt-4 text-[#1c2041] leading-[28px] font-normal">
+                                                <h2 className="text-[14px] md:text-[16px] mt-4 text-[#1c2041] leading-[28px] font-normal">
                                                     <T>
                                                         {
                                                             countryContent.complianceSection
@@ -1078,7 +1078,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                     </T>
                                                 </h2>
 
-                                                <ul className="gap-y-2 mt-4 text-[14px] text-[#1c2041] tracking-para leading-[28px] list-disc pl-5">
+                                                <ul className="space-y-2  mt-4 text-[14px] text-[#1c2041]  leading-[28px] list-disc pl-5">
                                                     {countryContent.complianceSection.complianceItems.map(
                                                         (item, index) => (
                                                             <li key={index}>
@@ -1100,13 +1100,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             <T>E-Invoicing Automation</T>
                                         </h2>
 
-                                        <h2 className="text-[14px] mt-4 font-normal leading-[28px] text-[#1c2041]">
+                                        <h2 className="text-[14px] md:text-[16px] mt-4 font-normal leading-[28px] text-[#1c2041]">
                                             <T>
                                                 {countryContent.complianceSection.automationDescription}
                                             </T>
                                         </h2>
 
-                                        <ul className="list-disc pl-5 space-y-1 mt-4 text-[14px] leading-[28px]">
+                                        <ul className="list-disc pl-5 space-y-2 mt-4 text-[14px] leading-[28px]">
                                             {countryContent.complianceSection.automationItems.map(
                                                 (item, index) => (
                                                     <li key={index}>
@@ -1146,14 +1146,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         <T>Your AI Copilot</T>
                                     </h2>
 
-                                    <p className="text-[#333333] text-fluid-small mt-4 leading-[28px] md:mt-[20px] mb-4 md:mb-6">
+                                    <p className="text-[#333333] text-fluid-small mt-4 leading-[28px] md:mt-[20px] mb-4">
                                         <T>
                                             Work faster and decide smarter with AI embedded across the
                                             suite.
                                         </T>
                                     </p>
 
-                                    <ul className="list-disc pl-4 md:pl-5 space-y-2 leading-[28px] md:space-y-4 text-[14px]">
+                                    <ul className="list-disc pl-4 md:pl-5 space-y-2 leading-[28px]  text-[14px]">
                                         <li>
                                             <b>
                                                 <T>Natural-language actions:</T>
@@ -1243,14 +1243,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         <span className="text-[#194BED]">ViDA</span>
                                     </h2>
 
-                                    <h2 className="text-fluid-small text-left  leading-[28px] mb-4 md:mb-6">
+                                    <h2 className="text-[14px] md:text-[16px] text-left  leading-[28px] mb-4">
                                         <T>
                                             Accqrate equips enterprises to be compliant across the
                                             upcoming ViDA landscape:
                                         </T>
                                     </h2>
 
-                                    <ul className="list-disc space-y-2 md:space-y-4  md:mt-[15px] text-[14px] text-left pl-4 md:pl-5 leading-[28px]">
+                                    <ul className="list-disc space-y-2  text-[14px] text-left pl-4 md:pl-5 leading-[28px]">
                                         <li>
                                             <T>Cross-border interoperability within the EU</T>
                                         </li>
