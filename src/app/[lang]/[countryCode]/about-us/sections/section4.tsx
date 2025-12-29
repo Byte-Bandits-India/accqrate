@@ -20,12 +20,10 @@ const Section4: React.FC = () => {
   const features = content.features;
   const featureCount = features.length;
 
-  // Render card component with optional height reduction - UPDATED to match original
-  const renderCard = (feature: any, index: number, isBottomRow = false, isReducedHeight = false) => {
-    const cardIndex = isBottomRow ? index + (featureCount > 4 ? 3 : 2) : index;
-
+  // Render card component - SIMPLIFIED to avoid index confusion
+  const renderCard = (feature: any, index: number, isReducedHeight = false) => {
     return (
-      <div key={cardIndex}>
+      <div key={index}>
         <div
           className={`relative flex-shrink-0 bg-white 
             rounded-[16px]
@@ -48,7 +46,7 @@ const Section4: React.FC = () => {
                 text-[70px] md:text-[70px]
                 font-bold text-[#E6E6E6] select-none leading-none`}
             >
-              {String(cardIndex + 1).padStart(2, "0")}
+              {String(index + 1).padStart(2, "0")}
             </span>
           </div>
 
@@ -98,7 +96,7 @@ const Section4: React.FC = () => {
 
                 {/* Bottom Row - 2 cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index, true))}
+                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
                 </div>
               </div>
 
@@ -111,7 +109,7 @@ const Section4: React.FC = () => {
 
                 {/* Bottom Row - 2 cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
-                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index, true))}
+                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
                 </div>
               </div>
             </>
@@ -125,17 +123,17 @@ const Section4: React.FC = () => {
                 <div className="space-y-10">
                   {/* First row - 2 cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(0, 2).map((feature, index) => renderCard(feature, index, false, true))}
+                    {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
                   </div>
 
                   {/* Second row - 2 cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2, false, true))}
+                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
                   </div>
 
                   {/* Third row - 1 card (on LEFT side) */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {renderCard(features[4], 0, false, false)}
+                    {renderCard(features[4], 4)}
                     <div></div> {/* Empty div for second column */}
                   </div>
                 </div>
@@ -145,12 +143,12 @@ const Section4: React.FC = () => {
               <div className="hidden lg:block">
                 {/* Top Row - 3 cards (reduced height) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {features.slice(0, 3).map((feature, index) => renderCard(feature, index, false, true))}
+                  {features.slice(0, 3).map((feature, index) => renderCard(feature, index))}
                 </div>
 
                 {/* Bottom Row - 2 cards (centered) - ORIGINAL EXACT LAYOUT */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto">
-                  {features.slice(3, 5).map((feature, index) => renderCard(feature, index, true, false))}
+                  {features.slice(3, 5).map((feature, index) => renderCard(feature, index + 3))}
                 </div>
               </div>
             </>
@@ -169,12 +167,12 @@ const Section4: React.FC = () => {
 
                   {/* Second row - 2 cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2, false))}
+                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
                   </div>
 
                   {/* Third row - 2 cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(4, 6).map((feature, index) => renderCard(feature, index + 4, false))}
+                    {features.slice(4, 6).map((feature, index) => renderCard(feature, index + 4))}
                   </div>
                 </div>
               </div>
@@ -188,7 +186,7 @@ const Section4: React.FC = () => {
 
                 {/* Bottom Row - 3 cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                  {features.slice(3, 6).map((feature, index) => renderCard(feature, index, true))}
+                  {features.slice(3, 6).map((feature, index) => renderCard(feature, index + 3))}
                 </div>
               </div>
             </>
