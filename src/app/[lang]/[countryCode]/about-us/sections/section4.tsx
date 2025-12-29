@@ -20,7 +20,7 @@ const Section4: React.FC = () => {
   const features = content.features;
   const featureCount = features.length;
 
-  // Render card component with optional height reduction
+  // Render card component with optional height reduction - UPDATED to match original
   const renderCard = (feature: any, index: number, isBottomRow = false, isReducedHeight = false) => {
     const cardIndex = isBottomRow ? index + (featureCount > 4 ? 3 : 2) : index;
 
@@ -30,7 +30,7 @@ const Section4: React.FC = () => {
           className={`relative flex-shrink-0 bg-white 
             rounded-[16px]
             shadow-[0_4px_20px_rgba(0,0,0,0.05)]
-            w-full ${isReducedHeight ? 'h-auto md:h-[398px]' : 'h-auto md:h-[450px]'} p-8 flex flex-col`}
+            w-full ${isReducedHeight ? 'h-auto md:h-[458px]' : 'h-auto md:h-[450px]'} p-8 flex flex-col`}
         >
           {/* Image + Number */}
           <div className="relative flex justify-between items-start mb-6">
@@ -64,19 +64,6 @@ const Section4: React.FC = () => {
     );
   };
 
-  // Get grid class based on feature count
-  const getGridClass = (count: number) => {
-    if (count === 2) {
-      return 'md:grid-cols-2'; // 2 columns for md and up
-    } else if (count === 3) {
-      return 'md:grid-cols-2 lg:grid-cols-3'; // 2 cols for md, 3 for lg+
-    } else if (count === 1) {
-      return 'md:grid-cols-1'; // Single column
-    }
-    // For 4+ cards: 1 col mobile, 2 cols md, 3 cols lg, 4 cols xl
-    return 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
-  };
-
   return (
     <section className="bg-[#f0f4ff] w-full mt-[80px] px-6 md:px-8 xl:px-0 py-20">
       {/* Heading */}
@@ -99,52 +86,117 @@ const Section4: React.FC = () => {
       {/* ================= DYNAMIC CARD LAYOUT ================= */}
       <div className="max-w-[1100px] mx-auto mt-14">
         <FadeUp>
-          {/* Handle 4, 5, or 6 cards with specific layouts */}
+          {/* Handle 4 cards - same for all screens */}
           {featureCount === 4 && (
             <>
-              {/* Top Row - 2 cards */}
-              <div className={`grid grid-cols-1 ${getGridClass(2)} gap-8`}>
-                {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
+              {/* For md screens: 2x2 layout */}
+              <div className="md:block lg:hidden">
+                {/* Top Row - 2 cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
+                </div>
+
+                {/* Bottom Row - 2 cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index, true))}
+                </div>
               </div>
 
-              {/* Bottom Row - 2 cards */}
-              <div className={`grid grid-cols-1 ${getGridClass(2)} gap-8 mt-10`}>
-                {features.slice(2, 4).map((feature, index) => renderCard(feature, index, true))}
+              {/* For lg+ screens: 2x2 layout (same as original) */}
+              <div className="hidden lg:block">
+                {/* Top Row - 2 cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
+                </div>
+
+                {/* Bottom Row - 2 cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
+                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index, true))}
+                </div>
               </div>
             </>
           )}
 
+          {/* Handle 5 cards */}
           {featureCount === 5 && (
             <>
-              {/* Top Row - 3 cards (reduced height) */}
-              <div className={`grid grid-cols-1 ${getGridClass(3)} gap-8`}>
-                {features.slice(0, 3).map((feature, index) => renderCard(feature, index, false, true))}
+              {/* For md screens: 2x2 layout with last card on left */}
+              <div className="md:block lg:hidden">
+                <div className="space-y-10">
+                  {/* First row - 2 cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {features.slice(0, 2).map((feature, index) => renderCard(feature, index, false, true))}
+                  </div>
+
+                  {/* Second row - 2 cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2, false, true))}
+                  </div>
+
+                  {/* Third row - 1 card (on LEFT side) */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {renderCard(features[4], 0, false, false)}
+                    <div></div> {/* Empty div for second column */}
+                  </div>
+                </div>
               </div>
 
-              {/* Bottom Row - 2 cards (centered) */}
-              <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto`}>
-                {features.slice(3, 5).map((feature, index) => renderCard(feature, index, true, false))}
+              {/* For lg+ screens: ORIGINAL 3+2 layout */}
+              <div className="hidden lg:block">
+                {/* Top Row - 3 cards (reduced height) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {features.slice(0, 3).map((feature, index) => renderCard(feature, index, false, true))}
+                </div>
+
+                {/* Bottom Row - 2 cards (centered) - ORIGINAL EXACT LAYOUT */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto">
+                  {features.slice(3, 5).map((feature, index) => renderCard(feature, index, true, false))}
+                </div>
               </div>
             </>
           )}
 
+          {/* Handle 6 cards */}
           {featureCount === 6 && (
             <>
-              {/* Top Row - 3 cards */}
-              <div className={`grid grid-cols-1 ${getGridClass(3)} gap-8`}>
-                {features.slice(0, 3).map((feature, index) => renderCard(feature, index))}
+              {/* For md screens: 2x2x2 layout */}
+              <div className="md:block lg:hidden">
+                <div className="space-y-10">
+                  {/* First row - 2 cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
+                  </div>
+
+                  {/* Second row - 2 cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2, false))}
+                  </div>
+
+                  {/* Third row - 2 cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {features.slice(4, 6).map((feature, index) => renderCard(feature, index + 4, false))}
+                  </div>
+                </div>
               </div>
 
-              {/* Bottom Row - 3 cards */}
-              <div className={`grid grid-cols-1 ${getGridClass(3)} gap-8 mt-10`}>
-                {features.slice(3, 6).map((feature, index) => renderCard(feature, index, true))}
+              {/* For lg+ screens: ORIGINAL 3+3 layout */}
+              <div className="hidden lg:block">
+                {/* Top Row - 3 cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {features.slice(0, 3).map((feature, index) => renderCard(feature, index))}
+                </div>
+
+                {/* Bottom Row - 3 cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                  {features.slice(3, 6).map((feature, index) => renderCard(feature, index, true))}
+                </div>
               </div>
             </>
           )}
 
-          {/* Handle other counts (1-3, 7+) in a single grid */}
+          {/* Handle other counts (1-3, 7+) - ORIGINAL RESPONSIVE GRID */}
           {![4, 5, 6].includes(featureCount) && (
-            <div className={`grid grid-cols-1 ${getGridClass(featureCount)} gap-8`}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {features.map((feature, index) => renderCard(feature, index))}
             </div>
           )}
