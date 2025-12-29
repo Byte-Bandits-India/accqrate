@@ -124,9 +124,9 @@ const countryConfig: Record<string, CountryConfigItem> = {
         countryName: "Malaysian",
         marqueeItems: [
             "Free Proof of Concept",
-            "LHDN MyInvois Ready",
+            "NBR VAT Compliance",
             "Data Hosted Locally",
-            "Malaysian SST Compliance",
+            "Ready for Bahraini Regulations",
             "Flexible Solution: Cloud or On-Premises"
         ],
         imageAlt: "Accqrate newsletter illustration"
@@ -323,6 +323,90 @@ const badgesConfig: Record<string, Array<{
             img: isoImg.src,
             alt: 'ISO 27001 Certified',
             text: 'ISO 27001 Certified',
+            className: 'w-16 h-16',
+        },
+    ],
+    MA: [
+        {
+            img: AssetPath.icons.proofOfConcept,
+            alt: 'Free Proof of Concept',
+            text: 'Free Proof of Concept',
+            className: 'w-16 h-16',
+        },
+        {
+            img: serverImg.src,
+            alt: 'Data Hosted in Malaysian Cloud',
+            text: 'Data Hosted in Malaysian Cloud',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.icons.onPremises,
+            alt: 'Flexible Solution: Cloud or On-Premises',
+            text: 'Flexible Solution: Cloud or On-Premises',
+            className: 'w-16 h-16',
+        },
+    ],
+    MU: [
+        {
+            img: AssetPath.icons.proofOfConcept,
+            alt: 'Free Proof of Concept',
+            text: 'Free Proof of Concept',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.icons.pdfA0eecd3a,
+            alt: 'PDF/A3 with XML invoices',
+            text: 'PDF/A3 with XML invoices',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.icons.readyForZatca,
+            alt: 'Ready for all Waves of MRA',
+            text: 'Ready for all Waves of MRA',
+            className: 'w-16 h-16',
+        },
+        {
+            img: serverImg.src,
+            alt: 'Data Hosted in Mauritian Cloud',
+            text: 'Data Hosted in Mauritian Cloud',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.icons.onPremises,
+            alt: 'Flexible Solution: Cloud or On-Premises',
+            text: 'Flexible Solution: Cloud or On-Premises',
+            className: 'w-16 h-16',
+        },
+    ],
+    JD: [
+        {
+            img: AssetPath.icons.proofOfConcept,
+            alt: 'Free Proof of Concept',
+            text: 'Free Proof of Concept',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.icons.pdfA0eecd3a,
+            alt: 'PDF/A3 with XML invoices',
+            text: 'PDF/A3 with XML invoices',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.icons.readyForZatca,
+            alt: 'Ready for all Waves of ISTD',
+            text: 'Ready for all Waves of ISTD',
+            className: 'w-16 h-16',
+        },
+        {
+            img: serverImg.src,
+            alt: 'Data Hosted in Jordan Cloud',
+            text: 'Data Hosted in Jordan Cloud',
+            className: 'w-16 h-16',
+        },
+        {
+            img: AssetPath.icons.onPremises,
+            alt: 'Flexible Solution: Cloud or On-Premises',
+            text: 'Flexible Solution: Cloud or On-Premises',
             className: 'w-16 h-16',
         },
     ],
