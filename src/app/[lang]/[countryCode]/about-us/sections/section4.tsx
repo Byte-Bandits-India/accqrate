@@ -28,7 +28,7 @@ const Section4: React.FC = () => {
           className={`relative flex-shrink-0 bg-white 
             rounded-[16px]
             shadow-[0_4px_20px_rgba(0,0,0,0.05)]
-            w-full ${isReducedHeight ? 'h-auto md:h-[458px]' : 'h-auto md:h-[450px]'} p-8 flex flex-col`}
+            w-full ${isReducedHeight ? 'h-auto md:h-[470px]' : 'h-auto md:h-[470px]'} p-6 md:p-4 lg:p-8 flex flex-col`}
         >
           {/* Image + Number */}
           <div className="relative flex justify-between items-start mb-6">

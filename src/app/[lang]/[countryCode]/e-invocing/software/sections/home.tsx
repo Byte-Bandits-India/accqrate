@@ -114,12 +114,12 @@ const countryConfig: Record<string, CountryConfigItem> = {
         imageAlt: "Accqrate newsletter illustration"
     },
     "MA": {
-        name: "Saudi Arabia",
-        authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Malaysia",
-        title: "Integrate With ZATCA In Less Than 1 Hour.",
+        name: "Malaysia",
+        authority: "LHDN",
+        badgeText: "LHDN Approved E-invoicing Software in Malaysia",
+        title: "Integrate With LHDN In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
-        description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
+        description2: "Saudi Based E-invoicing Solution For Malaysia Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Malaysian",
         marqueeItems: [
