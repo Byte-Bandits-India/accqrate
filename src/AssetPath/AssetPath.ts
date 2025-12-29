@@ -129,7 +129,7 @@ import aiImage from "@/Assets/images/home/ai.png";
 import acceleraWebp from "@/Assets/images/home/accelera.png";
 import vidaHome from "@/Assets/images/home/VIDA_home.png";
 import dctceHome from "@/Assets/images/home/UAE_Peppol.webp";
-import uaee from "@/Assets/images/home/uae-e.webp"
+import uaee from "@/Assets/images/home/uae.webp"
 
 // ==================== LANDINGPAGE IMAGES ====================
 
