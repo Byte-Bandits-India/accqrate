@@ -141,7 +141,7 @@ const getContactSalesSection = (countryCode: string) => {
       { label: `WhatsApp: ${data.whatsapp}`, isText: true },
       {
         label: "Connect with us",
-        href: "/connect-with-concierge",
+        href: "/contact-us",
         isText: false,
       },
     ],
