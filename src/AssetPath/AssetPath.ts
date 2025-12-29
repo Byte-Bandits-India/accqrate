@@ -316,6 +316,12 @@ import integrationDashboard from "@/Assets/images/integration/dashboard.webp";
 import integrationFooter from "@/Assets/images/integration/footer.webp";
 import peppolIntegration from "@/Assets/images/integration/peppol.png";
 import saZATCA from "@/Assets/images/integration/ZATCA.png"
+import maLHDN from "@/Assets/images/integration/lhdn.png"
+import joISTD from "@/Assets/images/integration/istd.jpeg"
+import muMRA from "@/Assets/images/integration/mra.jpeg"
+import maint from "@/Assets/images/integration/my_int.webp"
+import matax from "@/Assets/images/integration/matax.webp"
+
 
 // ==================== INVOICING IMPORTS ====================
 import invoicing1 from "@/Assets/images/invoicing/1.png";
@@ -390,6 +396,7 @@ import peppol from "@/Assets/images/invoicing/peppol.png";
 import datahosted from "@/Assets/images/invoicing/server.png";
 import gdpr from "@/Assets/images/invoicing/gdpr.png";
 import manageteam from "@/Assets/images/invoicing/manage-team.webp";
+import saHero from "@/Assets/images/invoicing/create-invoice.webp";
 
 // Invoicing Integration
 import integrationDarkBlue from "@/Assets/images/invoicing/integration/darkblue.png";
@@ -875,7 +882,13 @@ const AssetPath = {
     integration11,
     integration12,
     peppol: peppolIntegration,
-    saZATCA
+    saZATCA,
+     maLHDN,
+    joISTD,
+    muMRA,   
+    uaeHero,
+    maint,
+    matax
   },
 
   // INVOICING SECTION
@@ -924,6 +937,7 @@ const AssetPath = {
       peppol,
       datahosted,
       gdpr,
+    saHero,
     oracle: {
       oracle1,
       oracle2,
