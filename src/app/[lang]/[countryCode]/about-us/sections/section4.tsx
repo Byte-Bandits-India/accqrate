@@ -30,7 +30,7 @@ const Section4: React.FC = () => {
           className={`relative flex-shrink-0 bg-white 
             rounded-[16px]
             shadow-[0_4px_20px_rgba(0,0,0,0.05)]
-            w-full ${isReducedHeight ? 'h-[398px]' : 'h-[450px]'} p-8 flex flex-col`}
+            w-full ${isReducedHeight ? 'h-auto md:h-[398px]' : 'h-auto md:h-[450px]'} p-8 flex flex-col`}
         >
           {/* Image + Number */}
           <div className="relative flex justify-between items-start mb-6">
@@ -64,15 +64,17 @@ const Section4: React.FC = () => {
     );
   };
 
-  // Get grid class based on feature count and whether it's bottom row
-  const getGridClass = (count: number, isBottomRow = false) => {
+  // Get grid class based on feature count
+  const getGridClass = (count: number) => {
     if (count === 2) {
-      return 'sm:grid-cols-2 w-full]'; // Full width for 2x2 layout
+      return 'md:grid-cols-2'; // 2 columns for md and up
     } else if (count === 3) {
-      return 'sm:grid-cols-2 lg:grid-cols-3';
+      return 'md:grid-cols-2 lg:grid-cols-3'; // 2 cols for md, 3 for lg+
+    } else if (count === 1) {
+      return 'md:grid-cols-1'; // Single column
     }
-    // For 1 or 4+ cards, use responsive grid
-    return 'sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
+    // For 4+ cards: 1 col mobile, 2 cols md, 3 cols lg, 4 cols xl
+    return 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
   };
 
   return (
@@ -100,13 +102,13 @@ const Section4: React.FC = () => {
           {/* Handle 4, 5, or 6 cards with specific layouts */}
           {featureCount === 4 && (
             <>
-              {/* Top Row - 2x2 layout */}
-              <div className={`grid grid-cols-1 ${getGridClass(2)} gap-`}>
+              {/* Top Row - 2 cards */}
+              <div className={`grid grid-cols-1 ${getGridClass(2)} gap-8`}>
                 {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
               </div>
 
-              {/* Bottom Row - 2x2 layout */}
-              <div className={`grid grid-cols-1 ${getGridClass(2, true)} gap-8 mt-10`}>
+              {/* Bottom Row - 2 cards */}
+              <div className={`grid grid-cols-1 ${getGridClass(2)} gap-8 mt-10`}>
                 {features.slice(2, 4).map((feature, index) => renderCard(feature, index, true))}
               </div>
             </>
@@ -119,8 +121,8 @@ const Section4: React.FC = () => {
                 {features.slice(0, 3).map((feature, index) => renderCard(feature, index, false, true))}
               </div>
 
-              {/* Bottom Row - 2 cards (centered, full height) */}
-              <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto`}>
+              {/* Bottom Row - 2 cards (centered) */}
+              <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto`}>
                 {features.slice(3, 5).map((feature, index) => renderCard(feature, index, true, false))}
               </div>
             </>
