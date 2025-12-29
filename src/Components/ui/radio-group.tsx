@@ -28,20 +28,22 @@ const RadioGroupItem = React.forwardRef<
         <RadioGroupPrimitive.Item
             ref={ref}
             className={cn(
-                "relative flex items-center justify-center",
-                "h-auto w-[16px] rounded-full border-[1px] border-[#29266E] text-[#29266E]",
-                "ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                "disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200",
-                "data-[state=checked]:border-[#194BED]",
+                "group relative flex h-6 w-6 items-center justify-center rounded-full border-2 border-[#29266E]",
+                "flex-shrink-0", // This is likely the missing piece
+                "outline outline-1 outline-red-500", // DEBUG: Shows the actual shape
+                "hover:border-[#194BED] transition-colors duration-200",
+                "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#194BED] focus-visible:ring-offset-2",
+                "disabled:cursor-not-allowed disabled:opacity-50",
+                "data-[state=checked]:border-[#194BED] data-[state=checked]:bg-white",
                 className
             )}
             {...props}
         >
-            <RadioGroupPrimitive.Indicator className="absolute inset-0 flex items-center justify-center">
-                {/* Inner circle - slightly larger */}
-                <span className="block h-[10px] w-[10px] rounded-full bg-[#194BED]" />
+            <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+                <span className="h-3 w-3 rounded-full bg-[#194BED] transition-transform duration-200 group-data-[state=checked]:scale-100 scale-0" />
             </RadioGroupPrimitive.Indicator>
         </RadioGroupPrimitive.Item>
+
 
     )
 })

@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import { section1Content } from "../data/section1Content";
 import React from "react";
 import FadeUp from "@/Components/ui/FadeUp";
+import type { JSX } from 'react';
 
 /* ---------- Highlight helper (unchanged logic) ---------- */
 function highlightMatches(text: string | undefined) {
@@ -46,7 +47,7 @@ function highlightMatches(text: string | undefined) {
 const getHeroImage = (countryCode: string) => {
   switch (countryCode) {
     case "be":
-      return AssetPath.aboutus.hero; 
+      return AssetPath.aboutus.hero;
     case "pl":
       return AssetPath.aboutus.hero;
     case "ae":
@@ -73,37 +74,37 @@ export default function Section1() {
       <div className="max-w-[1110px] mx-auto">
         <FadeUp>
 
-        {/* ================= TWO COLUMN LAYOUT ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* ================= TWO COLUMN LAYOUT ================= */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
-          {/* ---------- LEFT: TEXT ---------- */}
-          <div>
-            <h1 className="text-[24px] md:text-[30px] font-bold leading-tight text-[#0B0F2F] tracking-wide max-w-[532px]">
-              <T>{highlightMatches(content.heading)}</T>
-            </h1>
+            {/* ---------- LEFT: TEXT ---------- */}
+            <div>
+              <h1 className="text-[24px] font-bold leading-[38px] text-[#1c2041] tracking-wide max-w-[532px]">
+                <T>{highlightMatches(content.heading)}</T>
+              </h1>
 
-            <div className="mt-6 max-w-[600px] space-y-3 text-[14px]  text-[#1C2041]">
-              <p>
-                <T>{content.description.split("\n\n")[0]}</T>
-              </p>
-              <p>
-                <T>{content.description.split("\n\n")[1]}</T>
-              </p>
+              <div className="mt-6 max-w-[600px] space-y-3 text-[14px] leading-[28px]  text-[#1C2041]">
+                <p>
+                  <T>{content.description.split("\n\n")[0]}</T>
+                </p>
+                <p>
+                  <T>{content.description.split("\n\n")[1]}</T>
+                </p>
+              </div>
             </div>
-          </div>
 
-          {/* ---------- RIGHT: IMAGE ---------- */}
-          <div className="relative w-full md:w-[460px] h-[270px]  rounded-2xl overflow-hidden">
-            <Image
-              src={getHeroImage(countryCode)}
-              alt="Country hero"
-              fill
-              priority
-              className="object-cover"
-            />
-          </div>
+            {/* ---------- RIGHT: IMAGE ---------- */}
+            <div className="relative w-full md:w-[460px] h-[270px]  rounded-2xl overflow-hidden">
+              <Image
+                src={getHeroImage(countryCode)}
+                alt="Country hero"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
 
-        </div>
+          </div>
         </FadeUp>
       </div>
     </section>

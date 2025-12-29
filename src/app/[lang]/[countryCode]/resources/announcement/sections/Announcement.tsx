@@ -52,11 +52,11 @@ const Index = () => {
         {/* Hero Section */}
         <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent">
           <section className="max-w-[1170px] px-6 md:px-8 xl:px-0 mx-auto mb-6">
-            <h1 className="text-[24px] text-[#1c2041] font-bold leading-tight">
+            <h1 className="text-[24px] text-[#1c2041] font-bold leading-[38px]">
               <T lang={lang} countryCode={countryCode}>{heroContent.title}</T>
             </h1>
             <div className="w-[126px] h-[2px] bg-[#194BED] my-6" />
-            <p className="text-[16px] max-w-[1100px] font-medium  mb-6 leading-tight">
+            <p className="text-[16px] max-w-[1100px] font-medium  mb-6 leading-[28px]">
               <T lang={lang} countryCode={countryCode}>{heroContent.description}</T>
             </p>
 

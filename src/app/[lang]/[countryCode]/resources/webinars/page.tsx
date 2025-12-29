@@ -34,13 +34,13 @@ export default function WebinarSection() {
         <div className="mx-auto px-6 md:px-8 xl:px-0 max-w-[1180px]">
           {/* Heading */}
           <div>
-            <h2 className="text-[24px] font-bold leading-tight text-[#1c2041] text-left">
+            <h2 className="text-[24px] font-bold leading-[38px] text-[#1c2041] text-left">
               <T>Unlocking Insights Of Webinar</T>
             </h2>
 
             <div className="w-20 h-[2px] bg-[#194BED] my-6 " />
 
-            <p className="text-[16px] text-left max-w-[900px]">
+            <p className="text-[16px] text-left leading-[28px] max-w-[900px]">
               <T>This Webinar Is Essential For Professionals Who Handle Invoicing And Compliance In Their Organizations</T>
             </p>
           </div>

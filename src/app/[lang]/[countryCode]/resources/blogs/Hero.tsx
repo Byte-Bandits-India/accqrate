@@ -10,7 +10,7 @@ export default function HeroResourceSection() {
       <div className="max-w-[1180px] mx-auto px-[16px] md:px-8 xl:px-0">
         {/* Heading */}
         <FadeUp className="text-left">
-          <h1 className="text-[24px] leading-tight font-bold text-gray-900">
+          <h1 className="text-[24px] leading-[38px] font-bold text-gray-900">
             <T>Browse Our Resources</T>
           </h1>
 

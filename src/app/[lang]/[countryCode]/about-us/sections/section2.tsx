@@ -16,11 +16,12 @@ export default function Section2() {
     section2Content[countryCode as keyof typeof section2Content] ||
     section2Content.default;
 
+  // Safely check if image property exists
   const leftImage =
-    content.section1?.image || AssetPath.aboutus.beabout;
+    (content.section1 as any)?.image || AssetPath.aboutus.beabout;
 
   const rightImage =
-    content.section2?.image || AssetPath.aboutus.bemission;
+    (content.section2 as any)?.image || AssetPath.aboutus.bemission;
 
   return (
     <section className="w-full overflow-x-hidden  bg-white py-20 ">
@@ -28,9 +29,9 @@ export default function Section2() {
         <FadeUp>
 
           {/* ================= SECTION 1 ================= */}
-          <h2 className="text-[20px] md:text-[24px]  text-center font-bold mb-12">
+          <h2 className="text-[24px] text-center leading-[38px] font-bold mb-12">
             <span className="text-[#1A4CED]">Accqrate</span>{" "}
-            <span className="text-[#1C2041]">
+            <span className="text-[#1c2041]">
               <T lang={lang} countryCode={countryCode.toUpperCase()}>
                 {content.section1Title.replace("Accqrate", "")}
               </T>
@@ -55,29 +56,29 @@ export default function Section2() {
             <div className="flex flex-col text-[14px] md:text-[16px] px-4 leading-relaxed">
 
               <div>
-                <h3 className="font-bold text-[16px] md:text-[18px] mb-2">
-                  <T>{content.section1.title1}</T>
+                <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] mb-2">
+                  <T>{(content.section1 as any).title1}</T>
                 </h3>
-                <p className="text-[#5A6183]">
-                  <T>{content.section1.desc1}</T>
+                <p className="text-[#5A6183] leading-[25px]">
+                  <T>{(content.section1 as any).desc1}</T>
                 </p>
               </div>
 
               <div className="mt-6">
-                <h3 className="font-bold text-[16px] md:text-[18px] mb-2">
-                  <T>{content.section1.title2}</T>
+                <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] mb-2">
+                  <T>{(content.section1 as any).title2}</T>
                 </h3>
-                <p className="text-[#5A6183]">
-                  <T>{content.section1.desc2}</T>
+                <p className="text-[#5A6183] leading-[25px]">
+                  <T>{(content.section1 as any).desc2}</T>
                 </p>
               </div>
 
               <div className="mt-6">
-                <h3 className="font-bold text-[16px] md:text-[18px] mb-2">
-                  <T>{content.section1.title3}</T>
+                <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] mb-2">
+                  <T>{(content.section1 as any).title3}</T>
                 </h3>
-                <p className="text-[#5A6183]">
-                  <T>{content.section1.desc3}</T>
+                <p className="text-[#5A6183] leading-[25px]">
+                  <T>{(content.section1 as any).desc3}</T>
                 </p>
               </div>
 
@@ -93,25 +94,25 @@ export default function Section2() {
 
             {/* Left Text */}
             <div className="text-white px-4">
-              <h2 className="text-[20px] md:text-[24px] font-bold mb-6">
+              <h2 className="text-[24px] font-bold mb-6 leading-[38px]">
                 <T>{content.section2Title}</T>
               </h2>
 
               <div className="mb-8">
-                <h3 className="font-semibold text-[#9894FF] text-[16px] md:text-[18px] mb-4">
-                  <T>{content.section2.title1}</T>
+                <h3 className="font-semibold text-[#9894FF] text-[16px] leading-[28px] md:text-[18px] mb-[8px]">
+                  <T>{(content.section2 as any).title1}</T>
                 </h3>
-                <p className=" text-[14px] leading-relaxed">
-                  <T>{content.section2.desc1}</T>
+                <p className=" text-[14px] leading-[25px]">
+                  <T>{(content.section2 as any).desc1}</T>
                 </p>
               </div>
 
               <div>
-                <h3 className="font-semibold text-[#9894FF] text-[16px] md:text-[18px] mb-4">
-                  <T>{content.section2.title2}</T>
+                <h3 className="font-semibold text-[#9894FF] leading-[28px] text-[16px] md:text-[18px] mb-[8px]">
+                  <T>{(content.section2 as any).title2}</T>
                 </h3>
-                <p className="text-[14px] leading-relaxed">
-                  <T>{content.section2.desc2}</T>
+                <p className="text-[14px] leading-[25px]">
+                  <T>{(content.section2 as any).desc2}</T>
                 </p>
               </div>
             </div>

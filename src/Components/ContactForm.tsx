@@ -16,7 +16,7 @@ const ContactFormPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedModule, setSelectedModule] = useState("");
 
-   const countryCardContent: Record<string, {
+  const countryCardContent: Record<string, {
     title: string;
     description: string;
     cards: {
@@ -165,7 +165,7 @@ const ContactFormPage = () => {
     }
   };
 
-  const cardContent = getCountryCardContent();                                                                                                            const countryOfficeDetails: Record< 
+  const cardContent = getCountryCardContent(); const countryOfficeDetails: Record<
     string,
     {
       offices: {
@@ -314,16 +314,16 @@ const ContactFormPage = () => {
   const primaryPhone = officeDetails.offices?.[0]?.phone || "";
 
   return (
-    <div className="bg-white px-6 py-14">
+    <div className="bg-white px-4 py-14">
       <div className="max-w-[1177px] mx-auto">
 
         {/* ================= TOP HEADER ROW ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-6">
-          <h2 className="text-[18px] lg:text-[24px] font-bold text-[#1C2041]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 mb-6">
+          <h2 className="text-[24px] font-bold text-[#1C2041] leading-[36px]">
             <T lang={lang} countryCode={countryCode}>{cardContent.title}</T>
           </h2>
 
-          <p className="text-[#5A6183] text-[14px] leading-relaxed">
+          <p className="text-[#5A6183] text-[14px] leading-[28px]">
             <T lang={lang} countryCode={countryCode}>{cardContent.description}</T>
           </p>
         </div>
@@ -335,41 +335,73 @@ const ContactFormPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             {/* CARD 1 */}
-            <div className="bg-white border border-[#E6E9FF] rounded-xl p-6">
-              <span className="text-xs font-bold text-[#194bed] bg-[#EEF1FF] px-3 py-2 rounded-md">
+            <div className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
+
+              {/* Badge */}
+              <span className="
+    absolute
+    top-0
+    left-0
+    text-xs
+    font-bold
+    text-[#194bed]
+    bg-[#EEF1FF]
+    px-3
+    py-2
+    ml-3
+    rounded-b-md
+  ">
                 <T>{cardContent.cards.card1.badge}</T>
               </span>
 
-              <h3 className="font-bold md:text-[18px] mt-4 text-[#1C2041]">
+              <h3 className="font-bold text-[18px]  leading-[28px] mt-4 text-[#1C2041]">
                 <T>{cardContent.cards.card1.title}</T>
               </h3>
 
-              <p className="text-[#5A6183] md:text-[14px] mt-2 text-sm">
+              <p className="text-[#5A6183] md:text-[14px leading-[25px]] mt-2 text-sm">
                 <T>{cardContent.cards.card1.description}</T>
               </p>
 
               <button
-                onClick={() => handleCardButtonClick(cardContent.cards.card1.module)}
+                onClick={() => handleCardButtonClick(cardContent.cards.card2.module)}
                 className="mt-4 bg-[#D63F10] text-white px-5 py-1.7 rounded-full text-sm"
               >
                 <T>{cardContent.cards.card1.buttonText}</T> ↗
               </button>
             </div>
 
+
             {/* CARD 2 */}
-            <div className="bg-white border border-[#E6E9FF] rounded-xl p-6">
-              <span className="text-xs font-bold text-[#194bed] bg-[#EEF1FF] px-3 py-2 rounded-md">
+            <div className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
+
+              {/* Badge */}
+              <span
+                className="
+      absolute
+      top-0
+      left-0
+      text-xs
+      font-bold
+      text-[#194bed]
+      bg-[#EEF1FF]
+      px-3
+      py-2
+      ml-3
+      rounded-b-md
+    "
+              >
                 <T>{cardContent.cards.card2.badge}</T>
               </span>
 
-              <h3 className="font-bold md:text-[18px] mt-4 text-[#1C2041]">
+              <h3 className="font-bold text-[18px] leading-[28px] mt-4 text-[#1C2041]">
                 <T>{cardContent.cards.card2.title}</T>
               </h3>
 
-              <p className="text-[#5A6183] mt-2 text-sm">
+              <p className="text-[#5A6183] mt-2  leading-[25px]text-sm">
                 <T>{cardContent.cards.card2.description}</T>
               </p>
 
+              {/* Button stays EXACTLY the same */}
               <button
                 onClick={() => handleCardButtonClick(cardContent.cards.card2.module)}
                 className="mt-4 bg-[#D63F10] text-white px-5 py-1.7 rounded-full text-sm"
@@ -378,20 +410,38 @@ const ContactFormPage = () => {
               </button>
             </div>
 
+
             {/* CARD 3 */}
-            <div className="bg-white border border-[#E6E9FF] rounded-xl p-6 ">
-              <span className="text-xs font-bold text-[#194bed] bg-[#EEF1FF] px-3 py-2 rounded-md">
+            <div className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
+
+              {/* Badge */}
+              <span
+                className="
+      absolute
+      top-0
+      left-0
+      text-xs
+      font-bold
+      text-[#194bed]
+      bg-[#EEF1FF]
+      px-3
+      py-2
+      ml-3
+      rounded-b-md
+    "
+              >
                 <T>{cardContent.cards.card3.badge}</T>
               </span>
 
-              <h3 className="font-bold md:text-[18px] mt-4 text-[#1C2041]">
+              <h3 className="font-bold text-[18px] leading-[28px] mt-4 text-[#1C2041]">
                 <T>{cardContent.cards.card3.title}</T>
               </h3>
 
-              <p className="text-[#5A6183] mt-2 text-sm max-w-[520px]">
+              <p className="text-[#5A6183] mt-2 text-sm leading-[25px] max-w-[520px]">
                 <T>{cardContent.cards.card3.description}</T>
               </p>
 
+              {/* Button unchanged */}
               <button
                 onClick={() => handleCardButtonClick(cardContent.cards.card3.module)}
                 className="mt-4 bg-[#D63F10] text-white px-5 py-1.7 rounded-full text-sm"
@@ -399,6 +449,7 @@ const ContactFormPage = () => {
                 <T>{cardContent.cards.card3.buttonText}</T> ↗
               </button>
             </div>
+
 
           </div>
 

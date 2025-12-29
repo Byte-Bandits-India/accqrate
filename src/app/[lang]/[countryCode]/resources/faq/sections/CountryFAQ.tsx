@@ -60,12 +60,12 @@ export const CountryFAQ = () => {
         <div className="bg-gradient-to-t from-[#EFF3FF] to-transparent max-h-[290px] py-12">
           <div className="max-w-[1180px] mx-auto px-6 md:px-8 xl:px-0">
             {/* Heading Section */}
-            <h2 className="text-[24px] font-bold text-[#1c2041] leading-tight">
+            <h2 className="text-[24px] font-bold text-[#1c2041] leading-[38px]">
               <T>Frequently Asked Questions</T>
             </h2>
             <div className="w-20 h-[2px] bg-[#194BED] my-6 "></div>
 
-            <p className=" text-[16px] mb-6 md:mb-8 lg:mb-[60px]">
+            <p className=" text-[16px] mb-6 md:mb-8 lg:mb-[60px] leading-[28px] ">
               <T>Ask Everything You Need To Know About Our Solutions And Services</T>
             </p>
           </div>

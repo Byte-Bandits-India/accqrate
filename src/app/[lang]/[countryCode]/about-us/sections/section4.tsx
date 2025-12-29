@@ -30,7 +30,7 @@ const Section4: React.FC = () => {
           className={`relative flex-shrink-0 bg-white 
             rounded-[16px]
             shadow-[0_4px_20px_rgba(0,0,0,0.05)]
-            w-full ${isTwoByTwo ? 'h-[420px]' : 'h-[450px]'} p-8 flex flex-col`}
+            w-full ${isTwoByTwo ? 'h-[420px]' : 'h-[460px]'} p-8 flex flex-col`}
         >
           {/* Image + Number */}
           <div className="relative flex justify-between items-start mb-6">
@@ -52,11 +52,11 @@ const Section4: React.FC = () => {
             </span>
           </div>
 
-          <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-tight text-black">
+          <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-[28px] text-black">
             <T>{feature.title}</T>
           </h3>
 
-          <p className="text-[12px] md:text-[14px] text-gray-700 leading-relaxed whitespace-pre-line">
+          <p className="text-[12px] md:text-[14px] text-gray-700 leading-[25px] whitespace-pre-line">
             <T>{feature.description}</T>
           </p>
         </div>
@@ -80,13 +80,13 @@ const Section4: React.FC = () => {
       {/* Heading */}
       <div className="text-left max-w-[1280px] mx-auto">
         <FadeUp>
-          <h2 className="text-[18px] md:text-[24px] font-bold">
+          <h2 className="text-[24px] text-[#1c2041] leading-[38px] font-bold">
             <T lang={lang} countryCode={countryCode?.toUpperCase()}>
               {content.header}
             </T>
           </h2>
 
-          <p className="text-[14px] md:text-[16px] text-gray-600 mt-3 leading-relaxed max-w-[900px]">
+          <p className="text-[14px] md:text-[16px] text-gray-600 mt-[8px] leading-[28px] max-w-[900px]">
             <T lang={lang} countryCode={countryCode?.toUpperCase()}>
               {content.subtitle}
             </T>

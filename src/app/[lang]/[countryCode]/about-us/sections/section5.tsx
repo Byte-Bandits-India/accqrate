@@ -17,12 +17,12 @@ const Section5 = () => {
             <div className="max-w-[1100px] mx-auto">
                 <FadeUp>
 
-                {/* ---------------------- ROW 1: Heading Alone ---------------------- */}
-                <div className="">
-                    <h2 className="text-[18px] md:text-[24px] font-bold tracking-tight">
-                        <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.header}</T>
-                    </h2>
-                </div>
+                    {/* ---------------------- ROW 1: Heading Alone ---------------------- */}
+                    <div className="">
+                        <h2 className="text-[24px] font-bold leading-[38px] tracking-tight">
+                            <T lang={lang} countryCode={countryCode?.toUpperCase()}>{content.header}</T>
+                        </h2>
+                    </div>
                 </FadeUp>
 
                 {/* ---------------------- ROW 2: Image + Description ---------------------- */}
@@ -41,7 +41,7 @@ const Section5 = () => {
 
                     {/* Right: Description */}
                     <div className="flex justify-center lg:justify-start">
-                        <p className="text-fluid-small  leading-relaxed max-w-[750px]">
+                        <p className="text-fluid-small  leading-[28px] max-w-[750px]">
                             <T lang={lang} countryCode={countryCode?.toUpperCase()}>
                                 {content.description}
                             </T>
