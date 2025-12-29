@@ -339,7 +339,7 @@ export default function VATCalculator() {
             <p className="text-[16px] mt-[8px] leading-[25px]">
               <T lang={lang} countryCode={countryCode}>{content.howToCalculateDesc}</T>
             </p>
-            <ul className="list-disc pl-6 space-y-1 text-[14px] text-[#555555] leading-[26px]">
+            <ul className="list-disc pl-6 space-y-1 text-[16px] text-[#555555] leading-[26px]">
               <li><T lang={lang} countryCode={countryCode}>Adding VAT: Perfect for when sales are exclusive of VAT.</T></li>
               <li><T lang={lang} countryCode={countryCode}>Excluding VAT: Ideal for sales prices that already include VAT.</T></li>
             </ul>
