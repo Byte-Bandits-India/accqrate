@@ -800,7 +800,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 </div>
 
                 {/* Mobile & Tablet Featured Solutions */}
-                <div className="lg:hidden px-4 md:px-8">
+                <div className="hidden px-4 md:px-8">
                     <div className="max-w-[1177px] mx-auto py-6">
                         <h1 className="text-fluid-body font-medium mb-3">
                             <T>Products to power every team</T>
