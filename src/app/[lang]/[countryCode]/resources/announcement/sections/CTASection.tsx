@@ -63,6 +63,31 @@ const CTASection = () => {
       button2: "Subscribe for Updates",
       button3: "Talk to Sales"
     },
+
+    ma: {
+      title: "Save time, save money",
+      description1: "Want the latest on Malaysia e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
+      description2: "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.",
+      button1: "Get Peppol Compliance Demo",
+      button2: "Subscribe for Updates",
+      button3: "Talk to Sales"
+    },
+    mu: {
+      title: "Save time, save money",
+      description1: "Want the latest on Mauritius e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
+      description2: "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.",
+      button1: "Get Peppol Compliance Demo",
+      button2: "Subscribe for Updates",
+      button3: "Talk to Sales"
+    },
+    jd: {
+      title: "Save time, save money",
+      description1: "Want the latest on Jordan e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?",
+      description2: "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.",
+      button1: "Get Peppol Compliance Demo",
+      button2: "Subscribe for Updates",
+      button3: "Talk to Sales"
+    },
   };
 
   // Get content based on country code
@@ -76,7 +101,13 @@ const CTASection = () => {
       case 'pl':
         return countryContent.pl;
       case 'ae':
-        return countryContent.ae
+        return countryContent.ae;
+      case 'ma':
+        return countryContent.ma;
+      case 'mu':
+        return countryContent.ae;
+      case 'jd':
+        return countryContent.ma;
       default:
         return countryContent.default;
     }

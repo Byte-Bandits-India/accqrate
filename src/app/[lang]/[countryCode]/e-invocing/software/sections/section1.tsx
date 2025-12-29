@@ -14,6 +14,9 @@ import BE_invoice from "@/Assets/images/invoicing/BE_invoice.webp";
 import taxInvoiceMultiple from "@/Assets/images/invoicing/tax-invoice-multiple.webp";
 import magnifiedInvoice from "@/Assets/images/invoicing/magnified-invoice.webp";
 import CTAButton from "@/Components/CTAButton";
+import maImg from "@/Assets/images/invoicing/ma.png"
+import muImg from "@/Assets/images/invoicing/mu.png"
+import jdImg from "@/Assets/images/invoicing/jd.png"
 
 
 interface Feature {
@@ -131,6 +134,8 @@ const Section1 = () => {
             case 'pl':
                 return AssetPath.invoicing.invoiceMultiplePng;
             case 'ae':
+                return AssetPath.invoicing.UAE_invoice_1;
+            case 'mu':
                 return AssetPath.invoicing.UAE_invoice_1;
             default:
                 return AssetPath.invoicing.invoiceMultiplePng;
@@ -355,7 +360,118 @@ const Section1 = () => {
                     listItems: ['Accqrate enables businesses to manage e-invoicing across UAE, GCC, EU, and other regulated markets from one platform.', 'Generate, validate, transmit, and archive compliant e-invoices globally with a unified, scalable solution.']
                 },
             ]
-        }
+        },
+        ma: {
+            whyAccqrateTitle: "Compliant with LHDN, Tax and Customs Authority",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with LHDN",
+            headingDescription: "Phase 2 requirements",
+            heroDescription: "Accqrate seamlessly generates LHDN approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with LHDN Phase 2 for every invoice sent to your customers.",
+            heroTitle: "5,000+ Malaysia companies across all industries",
+            zatcaCardText: "Accqrate is 100% LHDN Approved E-invoicing solution in Malaysia",
+            cards: [
+                {
+                    icon: AssetPath.icons.websiteDesign1.src,
+                    title: "Full Compliance with Malaysia's",
+                    subTitle: "E-Invoicing Mandate",
+                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Malaysia's evolving regulatory framework.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign11.src,
+                    title: "Future-Ready for ViDA",
+                    subTitle: "(VAT in the Digital Age)",
+                    description: "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign12.src,
+                    title: "Effortless E-Invoicing Automation",
+                    description: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Malaysian compliance without manual intervention.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign13.src,
+                    title: "Specialized Support and Implementation Expertise",
+                    description: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Malaysia e-invoicing journey.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign14.src,
+                    title: "Unified Global E-Invoicing Platform",
+                    description: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Malaysia, the EU, and global jurisdictions, all from a single, integrated platform.",
+                },
+            ]
+        },
+        mu: {
+            whyAccqrateTitle: "Compliant with MRA, Tax and Customs Authority",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with MRA",
+            headingDescription: "Phase 2 requirements",
+            heroDescription: "Accqrate seamlessly generates MRA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with MRA Phase 2 for every invoice sent to your customers.",
+            heroTitle: "5,000+ Mauritius companies across all industries",
+            zatcaCardText: "Accqrate is 100% MRA Approved E-invoicing solution in Mauritius",
+            cards: [
+                {
+                    icon: AssetPath.icons.websiteDesign1.src,
+                    title: "Full Compliance with Mauritius's",
+                    subTitle: "E-Invoicing Mandate",
+                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Mauritius's evolving regulatory framework.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign11.src,
+                    title: "Future-Ready for ViDA",
+                    subTitle: "(VAT in the Digital Age)",
+                    description: "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign12.src,
+                    title: "Effortless E-Invoicing Automation",
+                    description: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Mauritian compliance without manual intervention.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign13.src,
+                    title: "Specialized Support and Implementation Expertise",
+                    description: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Mauritius e-invoicing journey.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign14.src,
+                    title: "Unified Global E-Invoicing Platform",
+                    description: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Mauritius, the EU, and global jurisdictions, all from a single, integrated platform.",
+                },
+            ]
+        },
+        jd: {
+            whyAccqrateTitle: "Compliant with ISTD, Tax and Customs Authority",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with ISTD",
+            headingDescription: "Phase 2 requirements",
+            heroDescription: "Accqrate seamlessly generates ISTD approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ISTD Phase 2 for every invoice sent to your customers.",
+            heroTitle: "5,000+ Jordan companies across all industries",
+            zatcaCardText: "Accqrate is 100% ISTD Approved E-invoicing solution in Jordan",
+            cards: [
+                {
+                    icon: AssetPath.icons.websiteDesign1.src,
+                    title: "Full Compliance with Belgium's",
+                    subTitle: "E-Invoicing Mandate",
+                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Jordan's evolving regulatory framework.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign11.src,
+                    title: "Future-Ready for ViDA",
+                    subTitle: "(VAT in the Digital Age)",
+                    description: "Built for EU-wide interoperability, Accqrate supports cross-border e-invoicing, ViDA-aligned digital reporting, and automated VAT workflows, positioning enterprises for upcoming European compliance requirements.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign12.src,
+                    title: "Effortless E-Invoicing Automation",
+                    description: "Accqrate provides AI-driven validation, automated compliance checks, real-time error detection, and end-to-end invoice automation from creation to transmission, ensuring complete Belgian compliance without manual intervention.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign13.src,
+                    title: "Specialized Support and Implementation Expertise",
+                    description: "Our experts deliver smooth onboarding, continuous guidance, and reliable assistance for every stage of your Jordan e-invoicing journey.",
+                },
+                {
+                    icon: AssetPath.icons.websiteDesign14.src,
+                    title: "Unified Global E-Invoicing Platform",
+                    description: "Multinational organizations can rely on Accqrate to generate, validate, and transmit compliant e-invoices across Jordan, the EU, and global jurisdictions, all from a single, integrated platform.",
+                },
+            ]
+        },
     };
 
     const defaultPageContent = {
@@ -621,6 +737,126 @@ const Section1 = () => {
                                                         <div className="flex items-center gap-6 mb-4">
                                                             <Image
                                                                 src={AssetPath.cards.fta}
+                                                                alt="fta-logo"
+                                                                width={70}
+                                                                height={80}
+                                                                className="max-w-[70px] h-auto rounded-md"
+                                                                unoptimized
+                                                            />
+
+                                                            {/* Vertical Divider */}
+                                                            <span className="w-px h-12 bg-gray-300" />
+
+                                                            <Image
+                                                                src={AssetPath.header.logoPeppol}
+                                                                alt="peppol-logo"
+                                                                width={140}
+                                                                height={100}
+                                                                className="max-w-[100px] h-auto rounded-md"
+                                                                unoptimized
+                                                            />
+                                                        </div>
+
+                                                        <div className="w-full h-px bg-gray-300 mb-4"></div>
+
+                                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-1 min-h-0">
+                                                            <p className="text-[14px] leading-[28px] flex-1 overflow-hidden line-clamp-3">
+                                                                <T>{pageContent.peppolCardText}</T>
+                                                            </p>
+
+                                                            <div className="flex items-center justify-center gap-2 shrink-0">
+                                                                <Image
+                                                                    src={currentCountry.flag}
+                                                                    alt={`${currentCountry.name}-flag`}
+                                                                    width={40}
+                                                                    height={30}
+                                                                    className="max-w-[30px] h-auto rounded"
+                                                                    unoptimized
+                                                                />
+                                                                <p className='text-[#5a6183] text-sm font-medium'><T>{currentCountry.code}</T></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            ) : countryCode === 'mu' ? (
+                                                <div className="bg-white rounded-2xl shadow p-6 mt-6 md:mt-10 w-full max-w-[410px]">
+                                                    <div className="flex flex-col h-full">
+                                                        <div className="flex items-center gap-6 mb-4">
+                                                            <Image
+                                                                src={muImg}
+                                                                alt="fta-logo"
+                                                                width={100}
+                                                                height={80}
+                                                                className="max-w-[100px] h-auto rounded-md"
+                                                                unoptimized
+                                                            />
+                                                        </div>
+
+                                                        <div className="w-full h-px bg-gray-300 mb-4"></div>
+
+                                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-1 min-h-0">
+                                                            <p className="text-[14px] leading-[28px] flex-1 overflow-hidden line-clamp-3">
+                                                                <T>{pageContent.peppolCardText}</T>
+                                                            </p>
+
+                                                            <div className="flex items-center justify-center gap-2 shrink-0">
+                                                                <Image
+                                                                    src={currentCountry.flag}
+                                                                    alt={`${currentCountry.name}-flag`}
+                                                                    width={40}
+                                                                    height={30}
+                                                                    className="max-w-[30px] h-auto rounded"
+                                                                    unoptimized
+                                                                />
+                                                                <p className='text-[#5a6183] text-sm font-medium'><T>{currentCountry.code}</T></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            ) : countryCode === 'jd' ? (
+                                                <div className="bg-white rounded-2xl shadow p-6 mt-6 md:mt-10 w-full max-w-[410px]">
+                                                    <div className="flex flex-col h-full">
+                                                        <div className="flex items-center gap-6 mb-4">
+                                                            <Image
+                                                                src={jdImg}
+                                                                alt="fta-logo"
+                                                                width={150}
+                                                                height={80}
+                                                                className="max-w-[120px] h-auto rounded-md"
+                                                                unoptimized
+                                                            />
+                                                        </div>
+
+                                                        <div className="w-full h-px bg-gray-300 mb-4"></div>
+
+                                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 flex-1 min-h-0">
+                                                            <p className="text-[14px] leading-[28px] flex-1 overflow-hidden line-clamp-3">
+                                                                <T>{pageContent.peppolCardText}</T>
+                                                            </p>
+
+                                                            <div className="flex items-center justify-center gap-2 shrink-0">
+                                                                <Image
+                                                                    src={currentCountry.flag}
+                                                                    alt={`${currentCountry.name}-flag`}
+                                                                    width={40}
+                                                                    height={30}
+                                                                    className="max-w-[30px] h-auto rounded"
+                                                                    unoptimized
+                                                                />
+                                                                <p className='text-[#5a6183] text-sm font-medium'><T>{currentCountry.code}</T></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            ) : countryCode === 'ma' ? (
+                                                <div className="bg-white rounded-2xl shadow p-6 mt-6 md:mt-10 w-full max-w-[410px]">
+                                                    <div className="flex flex-col h-full">
+                                                        <div className="flex items-center gap-6 mb-4">
+                                                            <Image
+                                                                src={maImg}
                                                                 alt="fta-logo"
                                                                 width={70}
                                                                 height={80}

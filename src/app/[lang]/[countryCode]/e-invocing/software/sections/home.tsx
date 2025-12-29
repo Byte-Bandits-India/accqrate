@@ -132,12 +132,12 @@ const countryConfig: Record<string, CountryConfigItem> = {
         imageAlt: "Accqrate newsletter illustration"
     },
     "MU": {
-        name: "Saudi Arabia",
-        authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Mauritius",
-        title: "Integrate With ZATCA In Less Than 1 Hour.",
+        name: "Mauritius",
+        authority: "MRA",
+        badgeText: "MRA Approved E-invoicing Software in Mauritius",
+        title: "Integrate With MRA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
-        description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
+        description2: "Mauritius Based E-invoicing Solution For Mauritius Companies.",
         ctaText: "Get 30 days free trial",
         countryName: "Mauritian",
         marqueeItems: [
@@ -150,12 +150,12 @@ const countryConfig: Record<string, CountryConfigItem> = {
         imageAlt: "Accqrate newsletter illustration"
     },
     "JD": {
-        name: "Saudi Arabia",
-        authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Jordan",
-        title: "Integrate With ZATCA In Less Than 1 Hour.",
+        name: "Jordan",
+        authority: "ISTD",
+        badgeText: "ISTD Approved E-invoicing Software in Jordan",
+        title: "Integrate With ISTD In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
-        description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
+        description2: "Jordan Based E-invoicing Solution For Jordan Companies.",
         ctaText: "Get 30 days free trial",
         marqueeItems: [
             "Free Proof of Concept",
