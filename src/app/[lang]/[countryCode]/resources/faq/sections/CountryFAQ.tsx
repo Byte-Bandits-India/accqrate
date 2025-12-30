@@ -79,7 +79,7 @@ export const CountryFAQ = () => {
               {/* Right (Scrollable FAQs) */}
               <div className="overflow-y-auto pr-2">
                 {faqs.length > 0 ? (
-                  <Accordion type="single" collapsible className="max-w-[1280px] xl:w-[1280px] text-left">
+                  <Accordion type="single" collapsible className="max-w-[1180px] xl:w-[1180px] text-left">
                     {faqs.map((faq, index) => (
                       <AccordionItem
                         key={index}
@@ -121,3 +121,4 @@ export const CountryFAQ = () => {
     </div>
   );
 };
+
