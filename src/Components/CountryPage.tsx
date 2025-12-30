@@ -22,6 +22,7 @@ import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
+import Reveal from "./Reveal"
 
 // Add this dynamic import for ContactModal
 const ContactModal = dynamic(
@@ -758,12 +759,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     <T>{countryContent.heroDescription}</T>
                                 </p>
 
-                               <div className="my-8">
-                               <CTAButton
-                                             text={<T>Meet an Expert</T>}
-                               onClick={() => setModalOpen(true)}
-                                 />
-                             </div>
+                                <div className="my-8">
+                                    <CTAButton
+                                        text={<T>Meet an Expert</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
 
                                 <h2 className=" text-fluid-small font-medium text-[#ffffff] hidden tracking-heading lg:flex lg:items-center lg:flex-wrap gap-4 mb-8">
                                     {countryContent.heroTagline
@@ -811,7 +812,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <InfoCard key={card.title} {...card} />
                             ))}
 
-                           
+
                         </div>
                     </div>
                 </div>
@@ -895,7 +896,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     <div className="px-4 md:px-8 xl:px-8 pt-10 lg:pt-[100px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 lg:px-6 max-w-[1177px] mx-auto w-full">
                             {/* Left Column */}
-                            <div className="max-w-[500px]">
+                            <Reveal direction="left" className="max-w-[500px]">
                                 <h2 className="font-medium text-[14px] tracking-heading uppercase text-[#1c2041] ">
                                     <T>{countryContent.whyAccqrateTitle || "Why Accqrate?"}</T>
                                 </h2>
@@ -906,10 +907,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."
                                     )}
                                 </h3>
-                            </div>
+                            </Reveal>
 
                             {/* Right Column */}
-                            <div className="max-w-[500px] flex flex-col justify-around">
+                            <Reveal direction='right' className="max-w-[500px] flex flex-col justify-around">
                                 <p className="text-[16px] md:text-[18px] text-[#1c2041] font-normal leading-[28px]">
                                     <T>
                                         From compliance to automation, Accqrate ensures a seamless
@@ -917,18 +918,18 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </T>
                                 </p>
 
-                          <div className="mt-6 lg:mt-0">
-                                                             <CTAButton
-                                                                 text={<T>See It in Action</T>}
-                                                                 onClick={() => setModalOpen(true)}
-                                                             />
-                                                         </div>  
-                            </div>
+                                <div className="mt-6 lg:mt-0">
+                                    <CTAButton
+                                        text={<T>See It in Action</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
+                            </Reveal>
                         </div>
 
                         <div className="max-w-[1200px] mx-auto">
                             <div className="max-w-[1280px] mx-auto sm:px-6 py-6">
-                                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                                <Reveal direction='bottom' className="flex flex-wrap justify-center gap-4 md:gap-6">
                                     {(countryContent.whyAccqrateFeatures || features).map(
                                         (feature, index) => (
                                             <div
@@ -977,13 +978,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                             </div>
                                         )
                                     )}
-                                </div>
+                                </Reveal>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div>
+                <Reveal direction="right">
                     <img
                         src={
                             countryCode.toUpperCase() === "AE"
@@ -1005,14 +1006,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         alt="invoiceList"
                         className="max-w-[1240px] w-full h-auto mx-auto"
                     />
-                </div>
+                </Reveal>
 
 
                 {/* Trusted text */}
                 <div className="rounded-[30px] py-6 max-w-[1280px] mx-auto">
                     <div className="max-w-[1240px] mx-auto px-4 md:px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
                         {/* Left Side: Accqrate E-invoicing */}
-                        <FadeUp className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
+                        <Reveal direction='left' className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
                             <div className="flex flex-col flex-1">
                                 <div>
                                     <div className="flex items-center space-x-4">
@@ -1055,14 +1056,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </div>
                                 </div>
                             </div>
-                        </FadeUp>
+                        </Reveal>
 
                         {/* Right Side: Compliance + Automation */}
                         <div className="flex flex-col gap-6 xl:h-full w-full">
                             {countryContent.complianceSection && (
                                 <>
                                     {/* Compliance Card */}
-                                    <FadeUp className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                    <Reveal direction="right" className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[23px] md:text-[24px] text-[#1c2041] font-bold leading-[30px]">
                                             <T>{countryContent.complianceSection.complianceTitle}</T>
                                         </h2>
@@ -1089,10 +1090,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 </ul>
                                             </>
                                         )}
-                                    </FadeUp>
+                                    </Reveal>
 
                                     {/* Automation Card */}
-                                    <FadeUp className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                    <Reveal direction="right" className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[23px] md:text-[24px] font-bold text-[#1c2041]">
                                             <span className="text-[#194BED] font-bold">
                                                 <T>Hassle-Free</T>
@@ -1117,12 +1118,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </ul>
 
                                         <div className="mt-6">
-                                                                                   <CTAButton
-                                                                                       text={<T>{countryContent.complianceSection.buttonText}</T>}
-                                                                                       onClick={() => setModalOpen(true)}
-                                                                                   />
-                                                                               </div>
-                                    </FadeUp>
+                                            <CTAButton
+                                                text={<T>{countryContent.complianceSection.buttonText}</T>}
+                                                onClick={() => setModalOpen(true)}
+                                            />
+                                        </div>
+                                    </Reveal>
                                 </>
                             )}
                         </div>
@@ -1139,7 +1140,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                         {/* GRID */}
                         <div className="max-w-[1177px] mx-auto w-full grid lg:grid-cols-[1fr_337px] gap-4 md:gap-6">
                             {/* Left Part (Flexible) */}
-                            <FadeUp className="font-inter rounded-2xl flex flex-col justify-between h-full md:max-h-[387px] p-4 bg-transparent order-2 lg:order-1">
+                            <Reveal direction="left" className="font-inter rounded-2xl flex flex-col justify-between h-full md:max-h-[387px] p-4 bg-transparent order-2 lg:order-1">
                                 <div>
                                     <h2 className="text-[#1c2041] text-[23px] md:text-[24px] font-bold">
                                         <span className="text-[#194BED]">Accelera</span>{" "}
@@ -1192,13 +1193,13 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     </ul>
                                 </div>
 
-                               <div className="mt-6">
-                                                                 <CTAButton
-                                                                     text={<T>See Accelera in a 5-Minute Demo</T>}
-                                                                     onClick={() => setModalOpen(true)}
-                                                                 />
-                                                             </div>
-                            </FadeUp>
+                                <div className="mt-6">
+                                    <CTAButton
+                                        text={<T>See Accelera in a 5-Minute Demo</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
+                            </Reveal>
 
                             {/* Right Part (337px max, image aligned to end) */}
                             <FadeUp className="flex items-center justify-end p-4 order-1 lg:order-2">
@@ -1222,7 +1223,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     {countryCode !== "AE" && (
                         <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 pb-6 md:mb-10 rounded-xl md:rounded-2xl bg-white">
                             {/* GRID */}
-                            <div className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
+                            <Reveal direction="left" className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
                                 {/* LEFT: Image (Desktop) */}
                                 <div className="hidden lg:flex items-center justify-start pl-6">
                                     <div className="w-full max-w-[370px]">
@@ -1262,12 +1263,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </li>
                                     </ul>
 
-                                   <div className="mt-6">
-                                                                           <CTAButton
-                                                                               text={<T>Talk to our Consultant</T>}
-                                                                               onClick={() => setModalOpen(true)}
-                                                                           />
-                                                                       </div>
+                                    <div className="mt-6">
+                                        <CTAButton
+                                            text={<T>Talk to our Consultant</T>}
+                                            onClick={() => setModalOpen(true)}
+                                        />
+                                    </div>
                                 </FadeUp>
 
                                 {/* Image (Mobile) */}
@@ -1280,14 +1281,14 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         className="w-full h-auto object-contain max-w-full"
                                     />
                                 </div>
-                            </div>
+                            </Reveal>
                         </div>
                     )}
 
                     {/* DCTCE SECTION ONLY FOR UAE */}
                     {countryCode === "AE" && (
                         <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 mt-8 md:mt-[48px] lg:mt-[72px] pb-6 md:pb-[36px] rounded-xl md:rounded-2xl bg-white">
-                            <div className="p-6 md:p-8">
+                            <Reveal direction="left" className="p-6 md:p-8">
                                 <h2 className="text-black tracking-para text-[24px] md:text-[28px] lg:text-[38px] font-medium leading-tight mb-6">
                                     <T>Future-Ready for</T>{" "}
                                     <span className="text-[#194BED]">
@@ -1309,12 +1310,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                     unoptimized
                                 />
                                 <div className="mt-6">
-                                                                   <CTAButton
-                                                                       text={<T>Talk to our Consultant</T>}
-                                                                       onClick={() => setModalOpen(true)}
-                                                                   />
-                                                               </div>
-                            </div>
+                                    <CTAButton
+                                        text={<T>Talk to our Consultant</T>}
+                                        onClick={() => setModalOpen(true)}
+                                    />
+                                </div>
+                            </Reveal>
                         </div>
                     )}
                 </div>
@@ -1327,16 +1328,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             {/* Outcomes and The Impact */}
             <div className="md:mx-8 hidden">
                 <div className="relative md:-top-[150px] lg:-top-[200px] max-w-[1151px] pb-8 mx-auto md:border md:rounded-[40px] bg-white min-h-[400px]">
-                    <div>
+                    <FadeUp>
                         <h2 className="text-[24px] md:text-[28px] lg:text-[38px] font-medium text-center mt-8 tracking-heading leading-tight">
                             <T lang={lang} countryCode={countryCode}>
                                 Outcomes and The Impact
                             </T>
                         </h2>
-                    </div>
+                    </FadeUp>
                     <div className="mt-[73px] grid grid-cols-1 md:grid-cols-3 gap-10">
                         {icon.map((icon, index) => (
-                            <div
+                            <Reveal direction="left"
                                 key={index}
                                 className="flex flex-col items-center text-center max-w-[174px] mx-auto md:max-w-[207px]"
                             >
@@ -1347,7 +1348,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <p className="text-fluid-body tracking-para leading-tight">
                                     <T>{icon.description}</T>
                                 </p>
-                            </div>
+                            </Reveal>
                         ))}
                     </div>
                     <div className="border-t-2 text-[#D9D9D9] mt-[40px] max-w-[354px] mx-auto md:max-w-[676px] lg:max-w-[1051px] ">
@@ -1388,7 +1389,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             <div className=" pb-[50px]">
                 <div className="px-4 md:px-6 max-w-[1280px] mx-auto xl:flex items-end justify-between gap-20">
                     {/* Left Text */}
-                    <div className="flex-1">
+                    <FadeUp className="flex-1">
                         <h1 className="text-[23px] md:text-[24px] font-bold py-6 text-[#1c2041] md:py-8 leading-[30px]">
                             <T>
                                 Our <span className="text-[#194BED]">Values</span>{" "}
@@ -1402,16 +1403,16 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 results that transform business and create lasting impact.
                             </T>
                         </p>
-                    </div>
+                    </FadeUp>
 
                     {/* Right Button */}
                     <div className="mt-[32px] xl:mt-0 flex justify-start xl:justify-end">
-                      <div className="mt-6">
-                                                <CTAButton
-                                                    text={<T>Book a Personalized Walkthrough</T>}
-                                                    onClick={() => setModalOpen(true)}
-                                                />
-                                            </div>
+                        <div className="mt-6">
+                            <CTAButton
+                                text={<T>Book a Personalized Walkthrough</T>}
+                                onClick={() => setModalOpen(true)}
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -1428,7 +1429,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
     "
                     >
                         {duplicatedCards.map((item, i) => (
-                            <div
+                            <Reveal direction="top"
                                 key={i}
                                 className={`
           relative group overflow-hidden
@@ -1483,7 +1484,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </Reveal>
                         ))}
                     </div>
                 </div>
@@ -1561,15 +1562,15 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <div className="flex justify-center mt-6 md:mt-8">
                                 <CTAButton
                                     text={<T>See It in Action</T>}
-                                                                   onClick={() => setModalOpen(true)}
-                                                               />
+                                    onClick={() => setModalOpen(true)}
+                                />
                             </div>
                         </div>
                     </div>
 
                     {/* Final Conversion Band */}
                     <div className="max-w-[1440px] mx-auto pb-6 md:pb-8 px-4 md:px-6 font-inter">
-                        <div className="flex flex-col items-center">
+                        <Reveal direction="left" className="flex flex-col items-center">
                             <h2 className="text-[23px] lg:text-[24px] font-bold text-left  py-[10px] ">
                                 <T lang={lang} countryCode={countryCode}>
                                     Final Conversion Band
@@ -1579,21 +1580,21 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 {" "}
                                 <T>Run compliant, AI-powered operations with Accqrate.</T>
                             </p>
-                        </div>
-                        <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6 space-y-4 md:space-y-0">
+                        </Reveal>
+                        <Reveal direction="right" className="flex flex-col items-center md:flex-row md:justify-center md:gap-4 lg:gap-8 py-6 space-y-4 md:space-y-0">
                             {[
                                 "Get a Free Proof of Concept",
                                 "Subscribe for Updates",
                                 "Talk to Sales",
                             ].map((text, i) => (
-                               <CTAButton
-                                                                   key={i}
-                                                                   text={<T>{text}</T>}
-                                                                   onClick={() => setModalOpen(true)}
-                                                                   widthClass="w-fit"
-                                                               />
+                                <CTAButton
+                                    key={i}
+                                    text={<T>{text}</T>}
+                                    onClick={() => setModalOpen(true)}
+                                    widthClass="w-fit"
+                                />
                             ))}
-                        </div>
+                        </Reveal>
                     </div>
                 </div>
             </div>

@@ -2,12 +2,15 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 import { Inter } from "next/font/google";
+
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
-import { LoadingProvider } from "@/Util/LoadingContext";
-import { CountryProvider } from "../contexts/CountryContext";
 import FloatingPhone from "@/Components/FloatingPhone";
 import BackToTop from "@/Components/BackToTop";
+
+import { LoadingProvider } from "@/Util/LoadingContext";
+import { CountryProvider } from "../contexts/CountryContext";
+import LayoutContent from "./LayoutContentClient";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,6 +22,7 @@ export const metadata = {
   description: "Business and Retail Solutions",
 };
 
+// Create a wrapper component that uses the loading context
 export default function RootLayout({
   children,
 }: {
@@ -26,14 +30,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body className={`${inter.variable} antialiased`}>
         <CountryProvider>
           <LoadingProvider>
-            <Header />
-            {children}
-            <Footer />
-            <FloatingPhone phoneNumber="+919876543210" />
-            <BackToTop />
+            <LayoutContent>{children}</LayoutContent>
           </LoadingProvider>
         </CountryProvider>
       </body>

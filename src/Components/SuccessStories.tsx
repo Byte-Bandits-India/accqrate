@@ -9,6 +9,7 @@ import profile1 from "@/Assets/images/home/profile1.png";
 import profile2 from "@/Assets/images/home/profile2.png";
 import T from '@/Components/T';
 import Image from 'next/image';
+import Reveal from './Reveal';
 
 // ================= TYPES =================
 export interface TestimonialData {
@@ -196,7 +197,7 @@ const SuccessStories: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 
           {/* LEFT */}
-          <div className="space-y-6">
+          <Reveal direction='left' className="space-y-6">
             <h2 className="text-[24px] leading-tight font-bold text-[#1c2041] max-w-[295px]">
               <T>See how our customers drive impact</T>
             </h2>
@@ -211,18 +212,17 @@ const SuccessStories: React.FC = () => {
             <div className="hidden md:flex justify-center h-[300px]">
               <img src={AssetPath.home.orangeStar.src} alt="star" className="h-[62px]" />
             </div>
-          </div>
+          </Reveal>
 
           {/* RIGHT */}
           <div className="relative">
-            <div className="rounded-2xl bg-[#1A4BED] shadow-xl p-6 md:p-8 h-auto">
+            <Reveal direction='right' className="rounded-2xl bg-[#1A4BED] shadow-xl p-6 md:p-8 h-auto">
 
               {testimonialsData.map((data, index) => (
                 <div
                   key={data.id}
-                  className={`transition-opacity duration-500 ${
-                    currentSlide === index ? 'block opacity-100' : 'hidden opacity-0'
-                  }`}
+                  className={`transition-opacity duration-500 ${currentSlide === index ? 'block opacity-100' : 'hidden opacity-0'
+                    }`}
                 >
                   <div className="text-white">
 
@@ -261,7 +261,7 @@ const SuccessStories: React.FC = () => {
                 </div>
               ))}
 
-            </div>
+            </Reveal>
           </div>
 
         </div>
