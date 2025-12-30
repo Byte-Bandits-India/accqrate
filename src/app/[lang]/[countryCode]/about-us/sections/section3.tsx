@@ -4,6 +4,7 @@ import T from "@/Components/T";
 import { useParams } from "next/navigation";
 import { section3Content } from "../data/section3Contet";
 import FadeUp from "@/Components/ui/FadeUp";
+import Reveal from "@/Components/Reveal";
 
 
 
@@ -40,15 +41,17 @@ export default function Section3() {
         <FadeUp>
 
 
-          <h2 className="text-center text-[18px] text-[#1c2041] md:text-[24px] leading-[38px] font-bold mb-2">
-            <span className="text-[#1A4CED]">Our</span> Journey
-          </h2>
+          <Reveal direction="bottom">
+            <h2 className="text-center text-[18px] text-[#1c2041] md:text-[24px] leading-[38px] font-bold mb-2">
+              <span className="text-[#1A4CED]">Our</span> Journey
+            </h2>
 
-          <p className="text-center text-sm md:text-[16px] text-gray-600 max-w-3xl mx-auto leading-[28px]">
-            <T lang={lang} countryCode={countryCode?.toUpperCase()}>
-              {content.subtitle}
-            </T>
-          </p>
+            <p className="text-center text-sm md:text-[16px] text-gray-600 max-w-3xl mx-auto leading-[28px]">
+              <T lang={lang} countryCode={countryCode?.toUpperCase()}>
+                {content.subtitle}
+              </T>
+            </p>
+          </Reveal>
 
 
           <div className="relative mt-16 md:mt-20">
@@ -81,9 +84,11 @@ export default function Section3() {
                         : "justify-end md:order-1"
                         }`}
                     >
-                      <span className="text-[32px] md:text-[54px] text-[#1c2041] font-bold">
-                        {item.year}
-                      </span>
+                      <Reveal direction={isLeft ? 'left' : 'right'}>
+                        <span className="text-[32px] md:text-[54px] text-[#1c2041] font-bold">
+                          {item.year}
+                        </span>
+                      </Reveal>
                     </div>
 
                     {/* CONTENT */}
@@ -94,25 +99,27 @@ export default function Section3() {
                         }`}
                     >
 
-                      <div className="md:hidden mb-2">
-                        <span className="text-[32px] text-[#1c2041] font-bold">
-                          {item.year}
-                        </span>
-                      </div>
+                      <Reveal direction={isLeft ? 'left' : 'right'}>
+                        <div className="md:hidden mb-2">
+                          <span className="text-[32px] text-[#1c2041] font-bold">
+                            {item.year}
+                          </span>
+                        </div>
 
 
-                      <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] xl:w-[300px]">
-                        <T lang={lang} countryCode={countryCode?.toUpperCase()}>
-                          {highlightTitle(item.title)}
-                        </T>
-                      </h3>
+                        <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] xl:w-[300px]">
+                          <T lang={lang} countryCode={countryCode?.toUpperCase()}>
+                            {highlightTitle(item.title)}
+                          </T>
+                        </h3>
 
 
-                      <p className="text-[#1c2041] text-[14px] mt-2 leading-[25px] xl:w-[380px]">
-                        <T lang={lang} countryCode={countryCode?.toUpperCase()}>
-                          {item.description}
-                        </T>
-                      </p>
+                        <p className="text-[#1c2041] text-[14px] mt-2 leading-[25px] xl:w-[380px]">
+                          <T lang={lang} countryCode={countryCode?.toUpperCase()}>
+                            {item.description}
+                          </T>
+                        </p>
+                      </Reveal>
                     </div>
                   </div>
                 );

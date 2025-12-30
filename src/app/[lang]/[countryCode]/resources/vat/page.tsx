@@ -17,6 +17,8 @@ import { useParams } from "next/navigation";
 import T from "@/Components/T";
 import { t } from "@/lib/translations";
 import { getVATCalculatorContent, getCountrySpecificVATDetails } from "./data/vat-calculator-content";
+import FadeUp from "@/Components/ui/FadeUp";
+import Reveal from "@/Components/Reveal";
 
 export default function VATCalculator() {
   const [hydrated, setHydrated] = useState(false);
@@ -145,16 +147,16 @@ export default function VATCalculator() {
     <div>
       <div className="bg-[#F8F6FF]">
         <div className="max-w-[1180px] mx-auto px-6 md:px-8 xl:px-0 pt-[80px] pb-[40px]">
-          <h1
+          <FadeUp
             className="text-[24px] text-[#1c2041] font-bold leading-tight pb-2"
             data-aos="fade-up"
           >
             <T>{getVatCalculatorTitle()}</T>
-          </h1>
+          </FadeUp>
 
           <div className="lg:flex items-stretch justify-evenly font-inter space-y-6 lg:space-y-0 lg:gap-[35px]">
             {/* Donut Chart Card */}
-            <div
+            <Reveal direction="left"
               className="lg:max-w-[310px] xl:max-w-[450px] w-full"
               data-aos="fade-up"
             >
@@ -164,10 +166,10 @@ export default function VATCalculator() {
                 footerIcon={TrendingUp}
                 footerDescription={t("Showing VAT breakdown for the current month", countryCode)}
               />
-            </div>
+            </Reveal>
 
             {/* VAT Calculator Form */}
-            <div className="max-w-[1000px] w-full" data-aos="fade-up">
+            <Reveal direction="right" className="max-w-[1000px] w-full" data-aos="fade-up">
               <Card className="p-4 lg:p-6 h-full">
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                   {/* Sale Value */}
@@ -312,7 +314,7 @@ export default function VATCalculator() {
                   </div>
                 </div>
               </Card>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>

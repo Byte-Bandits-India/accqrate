@@ -14,6 +14,7 @@ import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import blogPosts from '@/app/[lang]/[countryCode]/resources/blogs/data/blogspost';
 import CTAButton from '@/Components/CTAButton';
+import Reveal from '@/Components/Reveal';
 
 const Section2 = () => {
     const params = useParams()
@@ -174,7 +175,7 @@ const Section2 = () => {
                             <div className="py-6 md:py-8 lg:py-10">
                                 <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 md:gap-10 lg:gap-[60px] md:pl-10">
                                     {/* Cloud Based Solutions */}
-                                    <div className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
+                                    <Reveal direction='left' className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
                                         <img
                                             src={AssetPath.icons.cloud.src}
                                             alt="cloud"
@@ -188,7 +189,7 @@ const Section2 = () => {
                                         </p>
 
                                         <ul className="text-[#5A6183] text-[16px] leading-[32px] space-y-2  list-none">
-                                        {[
+                                            {[
                                                 "Subscribe and pay per use",
                                                 "Onboarding in 5 min",
                                                 "High Performance",
@@ -202,10 +203,10 @@ const Section2 = () => {
                                                 </li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </Reveal>
 
                                     {/* On Premises Solutions */}
-                                    <div className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
+                                    <Reveal direction='right' className="rounded-[27px] bg-white border max-w-[400px] w-full p-6 shadow-md md:px-10 space-y-4 flex flex-col">
                                         <img
                                             src={AssetPath.icons.onPremises.src}
                                             alt="server"
@@ -233,7 +234,7 @@ const Section2 = () => {
                                                 </li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </Reveal>
                                 </div>
                             </div>
                         </FadeUp>
@@ -244,12 +245,14 @@ const Section2 = () => {
             {/* Footer Recent Blogs */}
             <section className="bg-white pt-[40px] pb-[100px]">
                 <div className="container mx-auto px-4 max-w-[1250px]">
-                    <h3 className=" text-[23px] md:text-[24px] text-[#1c2041] font-bold text-center leading-[36px]">
-                        <BelgiumT><span className='text-[#194BED]'>E-invoicing</span> Insights</BelgiumT>
-                    </h3>
-                    <p className='mb-6 md:mb-10 mt-2 text-[16px] leading-[28px] text-center text-[#5A6183]'>
-                        <T>In-depth analysis of electronic invoicing trends, benefits, and adoption.</T>
-                    </p>
+                    <FadeUp>
+                        <h3 className=" text-[23px] md:text-[24px] text-[#1c2041] font-bold text-center leading-[36px]">
+                            <BelgiumT><span className='text-[#194BED]'>E-invoicing</span> Insights</BelgiumT>
+                        </h3>
+                        <p className='mb-6 md:mb-10 mt-2 text-[16px] leading-[28px] text-center text-[#5A6183]'>
+                            <T>In-depth analysis of electronic invoicing trends, benefits, and adoption.</T>
+                        </p>
+                    </FadeUp>
                     <Row
                         justify="center"
                         gutter={[
@@ -259,7 +262,7 @@ const Section2 = () => {
                     >
                         {randomBlogs.map((data, i) => (
                             <Col xs={24} sm={12} md={6} lg={6} key={i}>
-                                <div
+                                <Reveal direction='bottom'
                                     className="bg-white rounded-xl cursor-pointer hover:shadow-lg transition flex flex-col h-full border border-gray-200"
                                     onClick={() => router.push(data.url)}
                                 >
@@ -280,7 +283,7 @@ const Section2 = () => {
                                             <T lang={lang} countryCode={countryCode?.toUpperCase()}>{data.value}</T>
                                         </p>
                                     </div>
-                                </div>
+                                </Reveal>
                             </Col>
                         ))}
                     </Row>

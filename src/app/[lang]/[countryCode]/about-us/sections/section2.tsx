@@ -6,6 +6,7 @@ import T from "@/Components/T";
 import { useParams } from "next/navigation";
 import { section2Content } from "../data/section2Content";
 import FadeUp from "@/Components/ui/FadeUp";
+import Reveal from "@/Components/Reveal";
 
 export default function Section2() {
   const params = useParams();
@@ -29,19 +30,21 @@ export default function Section2() {
         <FadeUp>
 
           {/* ================= SECTION 1 ================= */}
-          <h2 className="text-[24px] text-center leading-[38px] font-bold mb-12">
-            <span className="text-[#1A4CED]">Accqrate</span>{" "}
-            <span className="text-[#1c2041]">
-              <T lang={lang} countryCode={countryCode.toUpperCase()}>
-                {content.section1Title.replace("Accqrate", "")}
-              </T>
-            </span>
-          </h2>
+          <Reveal direction="bottom">
+            <h2 className="text-[24px] text-center leading-[38px] font-bold mb-12">
+              <span className="text-[#1A4CED]">Accqrate</span>{" "}
+              <span className="text-[#1c2041]">
+                <T lang={lang} countryCode={countryCode.toUpperCase()}>
+                  {content.section1Title.replace("Accqrate", "")}
+                </T>
+              </span>
+            </h2>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 gap-10 mb-28 items-center">
 
             {/* Left Image */}
-            <div className="w-full flex justify-center">
+            <Reveal direction="left" className="w-full flex justify-center">
               <Image
                 src={leftImage}
                 alt="Country visual"
@@ -50,10 +53,10 @@ export default function Section2() {
                 unoptimized
                 className="rounded-2xl object-cover w-full max-w-[480px]"
               />
-            </div>
+            </Reveal>
 
             {/* Right Content */}
-            <div className="flex flex-col text-[14px] md:text-[16px] px-4 leading-relaxed">
+            <Reveal direction="right" className="flex flex-col text-[14px] md:text-[16px] px-4 leading-relaxed">
 
               <div>
                 <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] mb-2">
@@ -82,7 +85,7 @@ export default function Section2() {
                 </p>
               </div>
 
-            </div>
+            </Reveal>
           </div>
         </FadeUp>
       </div>
@@ -93,7 +96,7 @@ export default function Section2() {
           <FadeUp>
 
             {/* Left Text */}
-            <div className="text-white px-4">
+            <Reveal direction="left" className="text-white px-4">
               <h2 className="text-[24px] font-bold mb-6 leading-[38px]">
                 <T>{content.section2Title}</T>
               </h2>
@@ -115,10 +118,10 @@ export default function Section2() {
                   <T>{(content.section2 as any).desc2}</T>
                 </p>
               </div>
-            </div>
+            </Reveal>
           </FadeUp>
           {/* Right Image */}
-          <div className="flex justify-center">
+          <Reveal direction="right" className="flex justify-center">
             <Image
               src={rightImage}
               alt="Mission"
@@ -127,7 +130,7 @@ export default function Section2() {
               unoptimized
               className=" object-cover w-full max-w-[320px]"
             />
-          </div>
+          </Reveal>
 
 
         </div>

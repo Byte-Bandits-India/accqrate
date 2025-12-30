@@ -7,6 +7,8 @@ import Link from "next/link";
 import { PhoneCall, Facebook, Linkedin, Twitter, Instagram, Youtube } from "lucide-react";
 import ContactFormModal from "@/Components/ContactFormModal";
 import T from "@/Components/T";
+import FadeUp from "./ui/FadeUp";
+import Reveal from "./Reveal";
 
 const ContactFormPage = () => {
   const params = useParams();
@@ -318,7 +320,7 @@ const ContactFormPage = () => {
       <div className="max-w-[1177px] mx-auto">
 
         {/* ================= TOP HEADER ROW ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 mb-6">
+        <FadeUp className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 mb-6">
           <h2 className="text-[24px] font-bold text-[#1C2041] leading-[36px]">
             <T lang={lang} countryCode={countryCode}>{cardContent.title}</T>
           </h2>
@@ -326,7 +328,7 @@ const ContactFormPage = () => {
           <p className="text-[#5A6183] text-[14px] leading-[28px]">
             <T lang={lang} countryCode={countryCode}>{cardContent.description}</T>
           </p>
-        </div>
+        </FadeUp>
 
         {/* ================= MAIN GRID ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10">
@@ -335,7 +337,7 @@ const ContactFormPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             {/* CARD 1 */}
-            <div className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
+            <Reveal direction="left" className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
 
               {/* Badge */}
               <span className="
@@ -368,11 +370,11 @@ const ContactFormPage = () => {
               >
                 <T>{cardContent.cards.card1.buttonText}</T> ↗
               </button>
-            </div>
+            </Reveal>
 
 
             {/* CARD 2 */}
-            <div className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
+            <Reveal direction="left" className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
 
               {/* Badge */}
               <span
@@ -408,11 +410,11 @@ const ContactFormPage = () => {
               >
                 <T>{cardContent.cards.card2.buttonText}</T> ↗
               </button>
-            </div>
+            </Reveal>
 
 
             {/* CARD 3 */}
-            <div className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
+            <Reveal direction="right" className="relative bg-white border border-[#E6E9FF] rounded-xl p-6 hover:bg-[#EFF3FF]">
 
               {/* Badge */}
               <span
@@ -448,13 +450,13 @@ const ContactFormPage = () => {
               >
                 <T>{cardContent.cards.card3.buttonText}</T> ↗
               </button>
-            </div>
+            </Reveal>
 
 
           </div>
 
           {/* ================= RIGHT: CALL US PANEL ================= */}
-          <div className="bg-[#eff3ff] rounded-2xl p-6 h-fit">
+          <Reveal direction="right" className="bg-[#eff3ff] rounded-2xl p-6 h-fit">
 
             <h3 className="font-bold md:text-[16px] text-[#1C2041] mb-4">
               <T>Call us</T>
@@ -510,7 +512,7 @@ const ContactFormPage = () => {
               </div>
             </div>
 
-          </div>
+          </Reveal>
         </div>
       </div>
 

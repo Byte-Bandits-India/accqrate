@@ -18,6 +18,7 @@ import { ContactModal } from "@/Components/ContactModal";
 import T from "@/Components/T";
 import { t, currentLang } from "@/lib/translations";
 import CTAButton from "@/Components/CTAButton";
+import Reveal from "@/Components/Reveal";
 
 // Feature item type with icon
 type FeatureItem = {
@@ -504,9 +505,9 @@ const Software: React.FC = () => {
                 return uaeImg;
             case 'BE':
                 return eInvoiceHeroImg;
-                case 'PL':
+            case 'PL':
                 return eInvoiceHeroImg;
-                case 'MA':
+            case 'MA':
                 return maHero;
             default:
                 return saHeroImg;
@@ -522,7 +523,7 @@ const Software: React.FC = () => {
                         <FadeUp className="flex flex-col justify-center max-w-[450px] w-full">
                             {/* content animated, background stays in parent */}
                             <div>
-                                <div className="flex items-center gap-2">
+                                <Reveal direction="left" className="flex items-center gap-2">
                                     <p className="text-[#d63f10] text-[16px] uppercase leading-[28px] m-0 lg:whitespace-nowrap">
                                         <T>{content.badgeText}</T>
                                     </p>
@@ -535,7 +536,7 @@ const Software: React.FC = () => {
                                         className="w-[30px] h-auto rounded object-contain"
                                         unoptimized
                                     />
-                                </div>
+                                </Reveal>
 
 
 
@@ -657,7 +658,7 @@ const Software: React.FC = () => {
                         </FadeUp>
 
                         {/* RIGHT IMAGE */}
-                        <FadeUp className="flex-1 flex justify-center w-full" delay={80}>
+                        <Reveal direction="right" className="flex-1 flex justify-center w-full" delay={80}>
                             <Image
                                 src={getHeroImage()}
                                 alt={content.imageAlt ?? ''}
@@ -666,7 +667,7 @@ const Software: React.FC = () => {
                                 className="w-full max-w-[650px] rounded-2xl object-contain"
                                 unoptimized
                             />
-                        </FadeUp>
+                        </Reveal>
                     </div>
 
                     <div className="

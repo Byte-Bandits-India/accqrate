@@ -7,6 +7,7 @@ import Image from "next/image";
 import AssetPath from "@/AssetPath/AssetPath";
 import dynamic from "next/dynamic";
 import T from "@/Components/T";
+import Reveal from "./Reveal";
 
 // Import ContactModal with dynamic loading to avoid server-client issues
 const ContactModal = dynamic(
@@ -100,7 +101,7 @@ const CTASection = () => {
     <div className="w-full bg-gradient-to-l from-[#242087] to-[#1A0C48] relative shadow-xl">
       <div className="md:flex gap-8 xl:max-h-[306px] relative z-10 max-w-[1280px] p-6 md:p-10 lg:pb-0 mx-auto">
         {/* LEFT CONTENT */}
-        <div className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
+        <Reveal direction="left" className="text-white md:max-w-[300px] lg:max-w-[500px] xl:max-w-full ">
           <h2 className="text-[20px] lg:text-[24px] font-bold mb-4">
             <T>{content.title}</T>
           </h2>
@@ -146,10 +147,10 @@ const CTASection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* RIGHT IMAGE */}
-        <div className="hidden md:flex justify-end relative -top-[150px] ">
+        <Reveal direction="right" className="hidden md:flex justify-end relative -top-[150px] ">
           <Image
             src={AssetPath.common.chartView?.src || AssetPath.common.chartView}
             alt="Dashboard Preview"
@@ -158,7 +159,7 @@ const CTASection = () => {
             className="xl:max-w-[499px] w-full md:h-[300px] lg:h-[350px] transform hover:scale-105 transition-transform duration-300"
             priority={false}
           />
-        </div>
+        </Reveal>
       </div>
 
       {/* Bottom Buttons */}

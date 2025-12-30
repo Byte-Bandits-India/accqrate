@@ -6,6 +6,7 @@ import AssetPath from "@/AssetPath/AssetPath";
 import { useParams } from "next/navigation";
 import { section5Content } from "../data/section5Content";
 import FadeUp from "@/Components/ui/FadeUp";
+import Reveal from "@/Components/Reveal";
 
 const Section5 = () => {
     const params = useParams();
@@ -29,7 +30,7 @@ const Section5 = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 items-center ">
 
                     {/* Left: Illustration */}
-                    <div className="flex justify-center ">
+                    <Reveal direction="left" className="flex justify-center ">
                         <Image
                             src={AssetPath.home.feature1}
                             alt="team"
@@ -37,16 +38,16 @@ const Section5 = () => {
                             height={400}
                             className="w-[260px] md:w-[320px] lg:w-[360px] h-auto object-contain"
                         />
-                    </div>
+                    </Reveal>
 
                     {/* Right: Description */}
-                    <div className="flex justify-center lg:justify-start">
+                    <Reveal direction="right" className="flex justify-center lg:justify-start">
                         <p className="text-fluid-small  leading-[28px] max-w-[750px]">
                             <T lang={lang} countryCode={countryCode?.toUpperCase()}>
                                 {content.description}
                             </T>
                         </p>
-                    </div>
+                    </Reveal>
 
                 </div>
 

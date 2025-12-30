@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { getSolutionsContent, ContentItem } from './data/solutions-content'
 import T from '@/Components/T';
 import FadeUp from '@/Components/ui/FadeUp'
+import Reveal from '@/Components/Reveal'
 
 interface SolutionsProps {
     countryCode?: string // Add countryCode prop
@@ -112,99 +113,99 @@ export default function Solutions({ countryCode }: SolutionsProps) {
     return (
         <section className="bg-[#F8F7FF] py-20">
             <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-                <FadeUp>
-                {/* Header */}
-                <div className="text-center mb-12">
-                    <h3 className="text-[23px] md:text-[24px] font-bold text-[#1C2041] leading-[36px]">
-                        <T>Accqrate E-Invoicing Solutions</T>
-                    </h3>
-                    <p className="text-[#5A6183] text-[16px] mt-3 leading-[28px]">
-                        <T>Streamline Operations and Accelerate Business Growth</T>
-                    </p>
-                </div>
+                <div>
+                    {/* Header */}
+                    <FadeUp className="text-center mb-12">
+                        <h3 className="text-[23px] md:text-[24px] font-bold text-[#1C2041] leading-[36px]">
+                            <T>Accqrate E-Invoicing Solutions</T>
+                        </h3>
+                        <p className="text-[#5A6183] text-[16px] mt-3 leading-[28px]">
+                            <T>Streamline Operations and Accelerate Business Growth</T>
+                        </p>
+                    </FadeUp>
 
-                <div className="flex flex-col lg:flex-row gap-14 lg:gap-20 items-start">
-                    {/* Left Stepper */}
-                    <div className="w-full lg:w-[45%] relative">
-                        <div className="relative">
-                            {/* Previous Button */}
-                            <button
-                                className="absolute -top-10 flex items-start gap-1 text-[#FF8D67] text-sm font-medium bg-[#F8F7FF] px-4 py-2 rounded-lg z-10 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
-                                onClick={handlePrevious}
-                                disabled={selectedIndex === 0}
-                            >
-                                <ChevronUp size={16} />
-                                <T>Previous</T>
-                            </button>
-
-                            <div
-                                ref={containerRef}
-                                className="h-[400px] overflow-hidden rounded-xl"
-                            >
-                                <div className="flex flex-col gap-4 overflow-y-auto h-full pr-2 scrollbar-hide">
-                        {contents.map((item) => {
-                            const isActive = item.index === selectedIndex;
-                            return (
-                                <div
-                                    key={item.index}
-                                    onClick={() => handleItemClick(item.index)}
-                                    className={`flex items-center justify-between rounded-xl px-2 py-3 cursor-pointer transition-all duration-300 ${isActive ? 'bg-white border border-[#FFE1D8] shadow-sm' : 'hover:bg-white/40'}`}
+                    <div className="flex flex-col lg:flex-row gap-14 lg:gap-20 items-start">
+                        {/* Left Stepper */}
+                        <Reveal direction='left' className="w-full lg:w-[45%] relative">
+                            <div className="relative">
+                                {/* Previous Button */}
+                                <button
+                                    className="absolute -top-10 flex items-start gap-1 text-[#FF8D67] text-sm font-medium bg-[#F8F7FF] px-4 py-2 rounded-lg z-10 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
+                                    onClick={handlePrevious}
+                                    disabled={selectedIndex === 0}
                                 >
-                                    <div className="flex items-start gap-4">
-                                        <div
-                                            className={`w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center border text-sm font-medium ${isActive ? 'bg-[#ffffff] text-[#FF8A65] border-[#FFD2C2]' : 'border-[#91ABFF] text-[#91ABFF]'}`}
-                                        >
-                                            <T>{item.sno}</T>
-                                        </div>
-                                        <span className={`text-[16px] md:text-fluid-body mt-1 uppercase ${isActive ? 'text-[#1C2041] font-normal' : 'text-[#6C70A1]'}`}>
-                                            <T>{item.content}</T>
-                                        </span>
+                                    <ChevronUp size={16} />
+                                    <T>Previous</T>
+                                </button>
+
+                                <div
+                                    ref={containerRef}
+                                    className="h-[400px] overflow-hidden rounded-xl"
+                                >
+                                    <div className="flex flex-col gap-4 overflow-y-auto h-full pr-2 scrollbar-hide">
+                                        {contents.map((item) => {
+                                            const isActive = item.index === selectedIndex;
+                                            return (
+                                                <div
+                                                    key={item.index}
+                                                    onClick={() => handleItemClick(item.index)}
+                                                    className={`flex items-center justify-between rounded-xl px-2 py-3 cursor-pointer transition-all duration-300 ${isActive ? 'bg-white border border-[#FFE1D8] shadow-sm' : 'hover:bg-white/40'}`}
+                                                >
+                                                    <div className="flex items-start gap-4">
+                                                        <div
+                                                            className={`w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center border text-sm font-medium ${isActive ? 'bg-[#ffffff] text-[#FF8A65] border-[#FFD2C2]' : 'border-[#91ABFF] text-[#91ABFF]'}`}
+                                                        >
+                                                            <T>{item.sno}</T>
+                                                        </div>
+                                                        <span className={`text-[16px] md:text-fluid-body mt-1 uppercase ${isActive ? 'text-[#1C2041] font-normal' : 'text-[#6C70A1]'}`}>
+                                                            <T>{item.content}</T>
+                                                        </span>
+                                                    </div>
+                                                    <ChevronRight
+                                                        size={18}
+                                                        className={`${isActive ? 'text-[#FF8A65]' : 'text-[#C5CBF9]'}`}
+                                                    />
+                                                </div>
+                                            )
+                                        })}
                                     </div>
-                                    <ChevronRight
-                                        size={18}
-                                        className={`${isActive ? 'text-[#FF8A65]' : 'text-[#C5CBF9]'}`}
+                                </div>
+
+                                {/* Next Button */}
+                                <button
+                                    className="absolute -bottom-6 flex items-center gap-1 text-[#FF8D67] text-sm font-medium bg-[#F8F7FF] px-4 py-2 rounded-lg z-10 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
+                                    onClick={handleNext}
+                                    disabled={selectedIndex === contents.length - 1}
+                                >
+                                    <T>Next</T>
+                                    <ChevronDown size={16} />
+                                </button>
+                            </div>
+                        </Reveal>
+
+                        {/* Right Content */}
+                        <Reveal direction='right' className="w-full lg:w-[50%]">
+                            <h4 className="text-[16px] md:text-[18px] font-bold text-[#1C2041] leading-[40px]">
+                                <T>{selectedContent.content}</T>
+                            </h4>
+                            <p className="text-[#5A6183] text-[16px] leading-[35px] mt-2 md:mt-6 mb-8 max-w-[580px]">
+                                <T>{selectedContent.desc}</T>
+                            </p>
+
+                            <div className="relative flex flex-col md:flex-row gap-6">
+                                <div className="relative">
+                                    <Image
+                                        src={selectedContent.image}
+                                        alt={`${getCountryTitle()} - Accqrate Accounting software`}
+                                        width={600}
+                                        height={400}
+                                        className="md:w-full md:h-auto rounded-lg object-cover"
                                     />
                                 </div>
-                            )
-                        })}
-                                </div>
                             </div>
-
-                            {/* Next Button */}
-                            <button
-                                className="absolute -bottom-6 flex items-center gap-1 text-[#FF8D67] text-sm font-medium bg-[#F8F7FF] px-4 py-2 rounded-lg z-10 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm"
-                                onClick={handleNext}
-                                disabled={selectedIndex === contents.length - 1}
-                            >
-                                <T>Next</T>
-                                <ChevronDown size={16} />
-                            </button>
-                        </div>
+                        </Reveal>
                     </div>
-
-                    {/* Right Content */}
-                    <div className="w-full lg:w-[50%]">
-                        <h4 className="text-[16px] md:text-[18px] font-bold text-[#1C2041] leading-[40px]">
-                            <T>{selectedContent.content}</T>
-                        </h4>
-                        <p className="text-[#5A6183] text-[16px] leading-[35px] mt-2 md:mt-6 mb-8 max-w-[580px]">
-                            <T>{selectedContent.desc}</T>
-                        </p>
-
-                        <div className="relative flex flex-col md:flex-row gap-6">
-                            <div className="relative">
-                                <Image
-                                    src={selectedContent.image}
-                                    alt={`${getCountryTitle()} - Accqrate Accounting software`}
-                                    width={600}
-                                    height={400}
-                                    className="md:w-full md:h-auto rounded-lg object-cover"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </FadeUp>
+                </div>
             </div>
         </section>
     )

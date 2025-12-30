@@ -4,6 +4,7 @@ import { ProofData } from "../data/Proofdata";
 import { useParams } from "next/navigation";
 import T from "@/Components/T";
 import FadeUp from '@/Components/ui/FadeUp'
+import Reveal from "@/Components/Reveal";
 
 export default function ProofSection() {
   const params = useParams();
@@ -21,24 +22,24 @@ export default function ProofSection() {
           ? "Peppol / UAE PINT Integration"
           : countryCode === "ma"
             ? "LHDN Integration"
-           :countryCode === "jd"
-            ? "ISTD Integration"
-            :countryCode === "mu"
-            ? "MRA Integration"
-          : "ZATCA Integration";
+            : countryCode === "jd"
+              ? "ISTD Integration"
+              : countryCode === "mu"
+                ? "MRA Integration"
+                : "ZATCA Integration";
 
   return (
     <section className="px-6 md:px-8 py-12">
       <div className="max-w-[1100px] mx-auto text-center mb-12">
         <FadeUp>
-        <h2 className="text-[23px] md:text-[24px] leading-[36px] font-bold text-[#1C2041] mb-3">
-          <T lang={lang} countryCode={countryCode}>{data.title}</T>{" "}
-          <span className="text-[#194BED]"><T lang={lang} countryCode={countryCode}>{integrationLabel}</T></span>
-        </h2>
+          <h2 className="text-[23px] md:text-[24px] leading-[36px] font-bold text-[#1C2041] mb-3">
+            <T lang={lang} countryCode={countryCode}>{data.title}</T>{" "}
+            <span className="text-[#194BED]"><T lang={lang} countryCode={countryCode}>{integrationLabel}</T></span>
+          </h2>
 
-        <p className="text-[#5A6183] leading-[28px] text-[16px]">
-          <T lang={lang} countryCode={countryCode}>{data.subtitle}</T>
-        </p>
+          <p className="text-[#5A6183] leading-[28px] text-[16px]">
+            <T lang={lang} countryCode={countryCode}>{data.subtitle}</T>
+          </p>
         </FadeUp>
       </div>
 
@@ -46,7 +47,7 @@ export default function ProofSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-y-16 md:gap-x-10 max-w-[1100px] mx-auto">
 
         {/* LEFT COLUMN */}
-        <div className="space-y-10">
+        <Reveal direction="left" className="space-y-10">
           {data.leftItems.map((item, i) => (
             <div key={i}>
               <h3 className="text-[#1C2041] font-bold text-[16px] md:text-[18px] mb-1">
@@ -57,10 +58,10 @@ export default function ProofSection() {
               </p>
             </div>
           ))}
-        </div>
+        </Reveal>
 
         {/* RIGHT COLUMN */}
-        <div className="space-y-10">
+        <Reveal direction="right" className="space-y-10">
           {data.rightItems.map((item, i) => (
             <div key={i}>
               <h3 className="text-[#1C2041] font-bold text-[16px] md:text-[18px] mb-1">
@@ -71,7 +72,7 @@ export default function ProofSection() {
               </p>
             </div>
           ))}
-        </div>
+        </Reveal>
 
       </div>
     </section>

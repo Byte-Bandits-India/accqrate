@@ -4,6 +4,7 @@ import FadeUp from '@/Components/ui/FadeUp'
 import AssetPath from "@/AssetPath/AssetPath";
 import T from '@/Components/T';
 import { useParams } from "next/navigation";
+import Reveal from '@/Components/Reveal';
 
 interface Section {
     img: string;
@@ -125,32 +126,32 @@ const Section3 = () => {
             <section className="py-8 md:py-10 lg:py-[80px] max-w-[1200px] mx-auto relative">
                 <div className="px-6 md:px-8 xl:px-0 text-center relative">
                     <FadeUp>
-                    <h1 className="text-[23px] md:text-[24px] font-bold text-[#1c2041] leading-[36px] mx-auto max-w-[800px]">
-                        <T>A</T>{" "}
-                        <span className="text-[#194BED]">
-                            <T>complete software</T>
-                        </span>{" "}
-                        <T>to run your business better</T>
-                    </h1>
+                        <h1 className="text-[23px] md:text-[24px] font-bold text-[#1c2041] leading-[36px] mx-auto max-w-[800px]">
+                            <T>A</T>{" "}
+                            <span className="text-[#194BED]">
+                                <T>complete software</T>
+                            </span>{" "}
+                            <T>to run your business better</T>
+                        </h1>
 
-                    <div className="relative mt-6 inline-block">
-                        <h3 className="text-[16px] text-[#5A6183] leading-[28px] mx-auto max-w-[850px]">
-                            <T>Whether you've just started or are already established, you'll find all the features you need at each stage of your business.</T>
-                        </h3>
+                        <div className="relative mt-6 inline-block">
+                            <h3 className="text-[16px] text-[#5A6183] leading-[28px] mx-auto max-w-[850px]">
+                                <T>Whether you've just started or are already established, you'll find all the features you need at each stage of your business.</T>
+                            </h3>
 
-                        {/* Decorative SVG aligned right to the h3 */}
-                        <img
-                            src={AssetPath.icons.greenStarIcon.src}
-                            alt="decoration"
-                            className="absolute -right-[10px] lg:-right-[80px] -top-[40px] lg:-top-[30px] -translate-y-1/2 w-[40px]"
-                        />
-                    </div>
+                            {/* Decorative SVG aligned right to the h3 */}
+                            <img
+                                src={AssetPath.icons.greenStarIcon.src}
+                                alt="decoration"
+                                className="absolute -right-[10px] lg:-right-[80px] -top-[40px] lg:-top-[30px] -translate-y-1/2 w-[40px]"
+                            />
+                        </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center mt-8">
-                        {sections.map((item, i) => (
-                            <div
-                                key={i}
-                                className="
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center mt-8">
+                            {sections.map((item, i) => (
+                                <Reveal direction='left'
+                                    key={i}
+                                    className="
         flex flex-col items-center justify-center text-center
         bg-white rounded-[20px]
         transition-all duration-300
@@ -158,26 +159,26 @@ const Section3 = () => {
         p-5 sm:p-6 md:p-8
         h-auto min-h-[200px]
       "
-                            >
-                                {/* Image */}
-                                <img
-                                    src={item.img}
-                                    alt={item.title}
-                                    className="w-[40px] h-auto mb-4 sm:mb-5"
-                                />
+                                >
+                                    {/* Image */}
+                                    <img
+                                        src={item.img}
+                                        alt={item.title}
+                                        className="w-[40px] h-auto mb-4 sm:mb-5"
+                                    />
 
-                                {/* Title */}
-                                <h3 className="text-[16px] md:text-[18px] text-[#1C2041] font-bold mb-2 leading-[28px]">
-                                    <T>{item.title}</T>
-                                </h3>
+                                    {/* Title */}
+                                    <h3 className="text-[16px] md:text-[18px] text-[#1C2041] font-bold mb-2 leading-[28px]">
+                                        <T>{item.title}</T>
+                                    </h3>
 
-                                {/* Description */}
-                                <p className="text-[16px] text-[#5A6183] leading-[28px]">
-                                    <T>{item.desc}</T>
-                                </p>
-                            </div>
-                        ))}
-                    </div>
+                                    {/* Description */}
+                                    <p className="text-[16px] text-[#5A6183] leading-[28px]">
+                                        <T>{item.desc}</T>
+                                    </p>
+                                </Reveal>
+                            ))}
+                        </div>
 
                     </FadeUp>
 

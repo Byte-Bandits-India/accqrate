@@ -19,6 +19,7 @@ import muImg from "@/Assets/images/invoicing/mu.png"
 import jdImg from "@/Assets/images/invoicing/jd.png"
 import ma_invoicemultiple from "@/Assets/images/invoicing/mae-tax1.webp"
 import ma_invoicesingle from "@/Assets/images/invoicing/mae-tax2.webp"
+import Reveal from '@/Components/Reveal';
 
 interface Feature {
     img: string;
@@ -138,8 +139,8 @@ const Section1 = () => {
                 return AssetPath.invoicing.UAE_invoice_1;
             case 'mu':
                 return taxInvoiceMultiple;
-                case 'ma':
-                    return ma_invoicemultiple;
+            case 'ma':
+                return ma_invoicemultiple;
             default:
                 return taxInvoiceMultiple;
         }
@@ -155,8 +156,8 @@ const Section1 = () => {
                 return belgiumInvoiceHero;
             case 'ae':
                 return AssetPath.invoicing.UAE_invoice;
-                case 'ma':
-                    return ma_invoicesingle;
+            case 'ma':
+                return ma_invoicesingle;
             default:
                 return magnifiedInvoice;
         }
@@ -580,15 +581,15 @@ const Section1 = () => {
 
                                 {/* LEFT COLUMN */}
                                 <div className="lg:col-span-2">
-                                    <div className='space-y-3 md:space-y-4 px-6'>
+                                    <Reveal direction="left" className='space-y-3 md:space-y-4 px-6'>
                                         <p className="text-[16px] text-[#194BED] max-w-[662px]  leading-[28px]">
                                             <T>Invoices Custom-Made for Your Business</T>
                                         </p>
                                         <p className="text-[20px] max-w-[662px] text-[#1c2041] leading-[32px]">
                                             <T>Perfectly aligned with your needs and brand</T>
                                         </p>
-                                    </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6">
+                                    </Reveal>
+                                    <Reveal direction='left' className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-6">
                                         {features.map((feature, index) => (
                                             <div
                                                 key={index}
@@ -633,20 +634,20 @@ const Section1 = () => {
                                                 </div>
                                             </div>
                                         ))}
-                                    </div>
-                                    <div className='px-[16px]'>
+                                    </Reveal>
+                                    <Reveal direction='left' className='px-[16px]'>
                                         <CTAButton
                                             text='See It in Action'
                                             href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
                                             onClick={() => setModalOpen(true)}
                                         />
-                                    </div>
+                                    </Reveal>
 
                                 </div>
 
                                 {/* RIGHT COLUMN - IMAGE */}
 
-                                <div className="lg:col-span-2 flex justify-start items-start">
+                                <Reveal direction='right' className="lg:col-span-2 flex justify-start items-start">
                                     <div className="sticky top-6 w-full flex justify-start">
                                         <Image
                                             src={getInvoiceMultipleImage().src}
@@ -657,7 +658,7 @@ const Section1 = () => {
                                             height={400}
                                         />
                                     </div>
-                                </div>
+                                </Reveal>
                             </div>
                         </div>
                     </div>
@@ -668,7 +669,7 @@ const Section1 = () => {
                             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
 
                                 {/*LEFT COLUMN - IMAGE */}
-                                <div className="lg:col-span-2 flex justify-center">
+                                <Reveal direction='left' className="lg:col-span-2 flex justify-center">
                                     <div className="sticky top-6 w-full flex justify-center">
                                         <Image
                                             src={getInvoiceStandaloneImage().src}
@@ -679,12 +680,12 @@ const Section1 = () => {
                                             height={400}
                                         />
                                     </div>
-                                </div>
+                                </Reveal>
 
                                 {/*  RIGHT COLUMN */}
                                 <div className="lg:col-span-2 max-w-[560px]">
                                     <div className="">
-                                        <div>
+                                        <Reveal direction='right'>
                                             {/* Dynamic compliance content from centralized countryContent */}
                                             <>
                                                 <h3 className='text-[16px] text-[#194bed] text-left leading-[28px]'>
@@ -882,7 +883,7 @@ const Section1 = () => {
                                                                 unoptimized
                                                             />
 
-                                                         
+
                                                         </div>
 
                                                         <div className="w-full h-px bg-gray-300 mb-4"></div>
@@ -943,7 +944,7 @@ const Section1 = () => {
                                                     </div>
                                                 </div>
                                             )}
-                                        </div>
+                                        </Reveal>
                                     </div>
                                 </div>
                             </div>
@@ -957,7 +958,7 @@ const Section1 = () => {
                         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 md:py-12 lg:py-16">
                             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
                                 {cards.map((card, index) => (
-                                    <div
+                                    <Reveal direction='bottom'
                                         key={index}
                                         className={`
             relative group overflow-hidden
@@ -1049,7 +1050,7 @@ const Section1 = () => {
                                                 )}
                                             </div>
                                         </div>
-                                    </div>
+                                    </Reveal>
                                 ))}
 
                             </div>

@@ -8,6 +8,7 @@ import { section1Content } from "../data/section1Content";
 import React from "react";
 import FadeUp from "@/Components/ui/FadeUp";
 import type { JSX } from 'react';
+import Reveal from "@/Components/Reveal";
 
 /* ---------- Highlight helper (unchanged logic) ---------- */
 function highlightMatches(text: string | undefined) {
@@ -78,7 +79,7 @@ export default function Section1() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
             {/* ---------- LEFT: TEXT ---------- */}
-            <div>
+            <Reveal direction="left">
               <h1 className="text-[24px] font-bold leading-[38px] text-[#1c2041] tracking-wide max-w-[532px]">
                 <T>{highlightMatches(content.heading)}</T>
               </h1>
@@ -91,10 +92,10 @@ export default function Section1() {
                   <T>{content.description.split("\n\n")[1]}</T>
                 </p>
               </div>
-            </div>
+            </Reveal>
 
             {/* ---------- RIGHT: IMAGE ---------- */}
-            <div className="relative w-full md:w-[460px] h-[270px]  rounded-2xl overflow-hidden">
+            <Reveal direction="right" className="relative w-full md:w-[460px] h-[270px]  rounded-2xl overflow-hidden">
               <Image
                 src={getHeroImage(countryCode)}
                 alt="Country hero"
@@ -102,7 +103,7 @@ export default function Section1() {
                 priority
                 className="object-cover"
               />
-            </div>
+            </Reveal>
 
           </div>
         </FadeUp>

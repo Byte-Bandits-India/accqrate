@@ -13,6 +13,7 @@ interface RevealProps {
     duration?: number;
     distance?: number;
     repeat?: boolean;
+    onClick?: () => void;
 }
 
 const Reveal: React.FC<RevealProps> = ({
@@ -24,6 +25,7 @@ const Reveal: React.FC<RevealProps> = ({
     duration = 600,
     distance = 30,
     repeat = true,
+    onClick,
 }) => {
     const [isVisible, setIsVisible] = useState(false);
     const elementRef = useRef<HTMLDivElement>(null);
@@ -76,6 +78,7 @@ const Reveal: React.FC<RevealProps> = ({
         <div
             ref={elementRef}
             className={className}
+            onClick={onClick}
             style={{
                 opacity: isVisible ? 1 : 0,
                 transform: getTransform(),

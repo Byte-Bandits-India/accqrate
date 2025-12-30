@@ -12,6 +12,7 @@ import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.w
 import uaeImg from "@/Assets/images/invoicing/uae.webp";
 import { section6Content } from "../data/section6Content";
 import CTAButton from '@/Components/CTAButton';
+import Reveal from '@/Components/Reveal'
 
 const ContactModal = dynamic(
   () => import('@/Components/ContactModal').then((mod) => mod.ContactModal),
@@ -144,19 +145,21 @@ const DemoVideoSection: React.FC = () => {
             <div className="relative flex flex-col md:flex-row items-center justify-between max-w-[1200px] mx-auto w-full h-full md:px-8 px-0">
               <div className="relative flex flex-col justify-center items-center md:items-start text-center md:text-left w-full bg-gradient-to-br from-[#1A0C48] to-[#242087] md:bg-none md:w-1/2 z-20 rounded-t-[30px] md:rounded-none px-6 py-20">
                 <div className="max-w-[520px] md:pl-4 lg:pl-8 w-full">
-                  <p className="text-[#d63f10] uppercase text-[16px] leading-[30px] mb-4">
-                    <T lang={lang} countryCode={countryCode}>{content.expertText}</T>
-                  </p>
+                  <Reveal direction='left'>
+                    <p className="text-[#d63f10] uppercase text-[16px] leading-[30px] mb-4">
+                      <T lang={lang} countryCode={countryCode}>{content.expertText}</T>
+                    </p>
 
-                  <h1 className="text-white text-[23px] md:text-[24px] font-bold leading-[36px] mb-3">
-                    <T lang={lang} countryCode={countryCode}>{content.title}</T>
-                  </h1>
+                    <h1 className="text-white text-[23px] md:text-[24px] font-bold leading-[36px] mb-3">
+                      <T lang={lang} countryCode={countryCode}>{content.title}</T>
+                    </h1>
 
-                  <p className="text-white text-[16px] leading-[30px] font-light mb-6">
-                    <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
-                  </p>
+                    <p className="text-white text-[16px] leading-[30px] font-light mb-6">
+                      <T lang={lang} countryCode={countryCode}>{content.subtitle}</T>
+                    </p>
+                  </Reveal>
 
-                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 mb-8">
+                  <Reveal direction='left' className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 mb-8">
                     {content.features.map((feature, index) => (
                       <React.Fragment key={index}>
                         <p className="text-[14px] text-white font-light">
@@ -172,7 +175,7 @@ const DemoVideoSection: React.FC = () => {
                         )}
                       </React.Fragment>
                     ))}
-                  </div>
+                  </Reveal>
 
                   <CTAButton
                     onClick={() => setIsContactModalOpen(true)}
@@ -181,7 +184,7 @@ const DemoVideoSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative flex justify-center items-center w-full md:w-1/2 z-10 bg-[#F3F3FF] md:bg-transparent py-10 md:py-0">
+              <Reveal direction='right' className="relative flex justify-center items-center w-full md:w-1/2 z-10 bg-[#F3F3FF] md:bg-transparent py-10 md:py-0">
                 <Image
                   src={getInvoiceMultipleImage().src}
                   alt="Accqrate software illustration"
@@ -189,7 +192,7 @@ const DemoVideoSection: React.FC = () => {
                   height={400}
                   className="rounded-2xl object-contain"
                 />
-              </div>
+              </Reveal>
             </div>
           </FadeUp>
         </div>
