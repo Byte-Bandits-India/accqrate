@@ -86,6 +86,7 @@ export default function VATCalculator() {
       JD: "Jordan",
       PL: "Poland",
       BE: "Belgium",
+      OM: "Oman"
     };
     return countryNames[code] || "KSA";
   };

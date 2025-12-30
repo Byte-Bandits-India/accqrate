@@ -62,12 +62,92 @@ export const polandVATContent: VATCalculatorContent = {
   ]
 };
 
+export const omanVATContent: VATCalculatorContent = {
+  title: "Simplify VAT Calculations with Our Oman VAT Calculator",
+  subtitle: "Navigating VAT calculations has never been easier. Our Oman VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
+  whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in Oman in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.",
+  howToCalculateTitle: "How to Calculate VAT in Oman",
+  howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
+  calculationBenefitsTitle: "VAT Calculation Made Simple",
+  calculationBenefitsDesc: "Excluding VAT: Ideal for sales prices that already include VAT.",
+  benefits: [
+    "Instant Calculations: Quick and straightforward VAT computations.",
+    "Accuracy: Precise invoicing every time.",
+    "Error Reduction: Minimize manual calculation mistakes.",
+    "Time Savings: Spend less time on math and more on your business."
+  ]
+};
+
 // Belgium-specific content
 export const uaeVATContent: VATCalculatorContent = {
   title: "Simplify VAT Calculations with Our UAE VAT Calculator",
   subtitle: "Navigating VAT calculations has never been easier. Our UAE VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
   whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in UAE in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts. Implemented in UAE in 2018 at a standard rate of 5% on most goods and services.",
   howToCalculateTitle: "How to Calculate VAT in UAE",
+  howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
+  calculationBenefitsTitle: "VAT Calculation Made Simple",
+  calculationBenefitsDesc: "Excluding VAT: Ideal for sales prices that already include VAT.",
+  benefits: [
+    "Instant Calculations: Quick and straightforward VAT computations.",
+    "Accuracy: Precise invoicing every time.",
+    "Error Reduction: Minimize manual calculation mistakes.",
+    "Time Savings: Spend less time on math and more on your business."
+  ]
+};
+
+export const bahrainVATContent: VATCalculatorContent = {
+  title: "Simplify VAT Calculations with Our Bahrain VAT Calculator",
+  subtitle: "Navigating VAT calculations has never been easier. Our Bahrain VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
+  whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in Bahrain in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.",
+  howToCalculateTitle: "How to Calculate VAT in Bahrain",
+  howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
+  calculationBenefitsTitle: "VAT Calculation Made Simple",
+  calculationBenefitsDesc: "Excluding VAT: Ideal for sales prices that already include VAT.",
+  benefits: [
+    "Instant Calculations: Quick and straightforward VAT computations.",
+    "Accuracy: Precise invoicing every time.",
+    "Error Reduction: Minimize manual calculation mistakes.",
+    "Time Savings: Spend less time on math and more on your business."
+  ]
+};
+
+export const malaysiaVATContent: VATCalculatorContent = {
+  title: "Simplify VAT Calculations with Our Malaysia VAT Calculator",
+  subtitle: "Navigating VAT calculations has never been easier. Our Malaysia VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
+  whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in Malaysia in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.",
+  howToCalculateTitle: "How to Calculate VAT in Malaysia",
+  howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
+  calculationBenefitsTitle: "VAT Calculation Made Simple",
+  calculationBenefitsDesc: "Excluding VAT: Ideal for sales prices that already include VAT.",
+  benefits: [
+    "Instant Calculations: Quick and straightforward VAT computations.",
+    "Accuracy: Precise invoicing every time.",
+    "Error Reduction: Minimize manual calculation mistakes.",
+    "Time Savings: Spend less time on math and more on your business."
+  ]
+};
+
+export const mauritiusVATContent: VATCalculatorContent = {
+  title: "Simplify VAT Calculations with Our Mauritius VAT Calculator",
+  subtitle: "Navigating VAT calculations has never been easier. Our Mauritius VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
+  whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in Mauritius in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.",
+  howToCalculateTitle: "How to Calculate VAT in Mauritius",
+  howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
+  calculationBenefitsTitle: "VAT Calculation Made Simple",
+  calculationBenefitsDesc: "Excluding VAT: Ideal for sales prices that already include VAT.",
+  benefits: [
+    "Instant Calculations: Quick and straightforward VAT computations.",
+    "Accuracy: Precise invoicing every time.",
+    "Error Reduction: Minimize manual calculation mistakes.",
+    "Time Savings: Spend less time on math and more on your business."
+  ]
+};
+
+export const jordanVATContent: VATCalculatorContent = {
+  title: "Simplify VAT Calculations with Our Jordan VAT Calculator",
+  subtitle: "Navigating VAT calculations has never been easier. Our Jordan VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.",
+  whatIsVAT: "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in Jordan in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.",
+  howToCalculateTitle: "How to Calculate VAT in Jordan",
   howToCalculateDesc: "Whether adding VAT to a sale price or extracting it, our calculator handles both with precision:",
   calculationBenefitsTitle: "VAT Calculation Made Simple",
   calculationBenefitsDesc: "Excluding VAT: Ideal for sales prices that already include VAT.",
@@ -90,6 +170,16 @@ export const getVATCalculatorContent = (countryCode?: string): VATCalculatorCont
       return polandVATContent;
     case 'AE':
       return uaeVATContent;
+    case 'OM':
+      return omanVATContent;
+    case 'BH':
+      return bahrainVATContent;
+    case 'MA':
+      return malaysiaVATContent;
+    case 'MU':
+      return mauritiusVATContent;
+    case 'JD':
+      return jordanVATContent;
     default:
       return defaultVATContent;
   }
