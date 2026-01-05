@@ -913,8 +913,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <Reveal direction='right' className="max-w-[500px] flex flex-col justify-around">
                                 <p className="text-[16px] md:text-[18px] text-[#1c2041] font-normal leading-[28px]">
                                     <T>
-                                        From compliance to automation, Accqrate ensures a seamless
-                                        PEPPOL e-invoicing experience.
+                                        {countryContent.whyAccqrateDescription ||
+                                            "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience."}
                                     </T>
                                 </p>
 
@@ -988,15 +988,15 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     <img
                         src={
                             countryCode.toUpperCase() === "AE"
-                                ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
                                 : countryCode.toUpperCase() === "SA"
-                                    ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                    ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
                                     : countryCode.toUpperCase() === "JD"
-                                        ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                        ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
                                         : countryCode.toUpperCase() === "MU"
-                                            ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                            ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
                                             : countryCode.toUpperCase() === "MA"
-                                                ? AssetPath.home.uaee?.src || AssetPath.home.invoiceList.src
+                                                ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
                                                 : countryCode.toUpperCase() === "OM"
                                                     ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
                                                     : countryCode.toUpperCase() === "BH"
@@ -1037,8 +1037,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                     <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-[14px] mt-[30px]">
                                         <T>
-                                            Peppol Member and certified Access Point Provider and
-                                            Service Metadata Publisher.
+                                            {countryContent.whyAccqrateCertification ||
+                                                "Peppol Member and certified Access Point Provider and Service Metadata Publisher."}
                                         </T>
                                     </p>
                                 </div>

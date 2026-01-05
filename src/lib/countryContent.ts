@@ -31,6 +31,8 @@ export interface CountryContent {
   testimonials?: Testimonial[];
   whyAccqrateTitle?: string;
   whyAccqrateSubtitle?: string;
+  whyAccqrateDescription?: string;
+  whyAccqrateCertification?: string;
   whyAccqrateFeatures?: Array<{
     img: string | StaticImageData;
     title: string;
@@ -64,7 +66,7 @@ const defaultContent: CountryContent = {
   heroTagline: "ZAPTCHA Member . GDPR . ISO 27001",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless ZAPTCHA e-invoicing experience.",
-  whyAccqrateFeatures: [
+  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless Direct Integration e-invoicing experience.",  whyAccqrateCertification: "Direct Integration Member and certified Access Point Provider and Service Metadata Publisher.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
       title: "One platform.",
@@ -196,7 +198,7 @@ const jordanContent: CountryContent = {
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless ISTD e-invoicing experience.",
-  whyAccqrateFeatures: [
+  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless Direct Integration e-invoicing experience.",  whyAccqrateCertification: "Direct Integration Member and certified Access Point Provider and Service Metadata Publisher.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
       title: "One platform.",
@@ -224,7 +226,7 @@ const jordanContent: CountryContent = {
     {
       img: AssetPath.icons.websiteDesign14,
       title: "Built‑in Global compliance:",
-      description: "Connect ERP/POS to tax authorities; from ISTD Phase II to PEPPOL standards.",
+      description: "Connect ERP/POS to tax authorities; from ISTD Phase II to Direct Integration standards.",
       sub: ""
     },
     {
@@ -304,7 +306,7 @@ const jordanContent: CountryContent = {
     complianceDescription: "Accqrate ensures end-to-end compliance with Jordan's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
     complianceItems: [
       "Structured formats fully aligned with Jordanian and EU specifications",
-      "Secure, standardized exchange over PEPPOL",
+      "Secure, standardized exchange over Direct Integration",
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with Mercurius and tax authority systems"
     ],
@@ -314,7 +316,7 @@ const jordanContent: CountryContent = {
       "AI-powered validation to reduce rejections",
       "Real-time error detection and correction suggestions",
       "Zero-cost regulatory upgrades",
-      "Automated generation → validation → PEPPOL submission → archiving"
+      "Automated generation → validation → Direct Integration submission → archiving"
     ],
     buttonText: "Book an Appointment"
   }
@@ -328,7 +330,7 @@ const mauritiusContent: CountryContent = {
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless Mauritius e-invoicing experience.",
-  whyAccqrateFeatures: [
+  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless Direct Integration e-invoicing experience.",  whyAccqrateCertification: "Direct Integration Member and certified Access Point Provider and Service Metadata Publisher.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
       title: "One platform.",
@@ -356,7 +358,7 @@ const mauritiusContent: CountryContent = {
     {
       img: AssetPath.icons.websiteDesign14,
       title: "Built‑in Global compliance:",
-      description: "Connect ERP/POS to tax authorities; from MRA Phase II to PEPPOL standards.",
+      description: "Connect ERP/POS to tax authorities; from MRA Phase II to Direct Integration standards.",
       sub: ""
     },
     {
@@ -436,7 +438,7 @@ const mauritiusContent: CountryContent = {
     complianceDescription: "Accqrate ensures end-to-end compliance with Mauritius's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
     complianceItems: [
       "Structured formats fully aligned with Mauritian and EU specifications",
-      "Secure, standardized exchange over PEPPOL",
+      "Secure, standardized exchange over Direct Integration",
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with Mercurius and tax authority systems"
     ],
@@ -446,7 +448,7 @@ const mauritiusContent: CountryContent = {
       "AI-powered validation to reduce rejections",
       "Real-time error detection and correction suggestions",
       "Zero-cost regulatory upgrades",
-      "Automated generation → validation → PEPPOL submission → archiving"
+      "Automated generation → validation → Direct Integration submission → archiving"
     ],
     buttonText: "Book an Appointment"
   }
@@ -460,6 +462,8 @@ const malaysiaContent: CountryContent = {
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless LHDN e-invoicing experience.",
+  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
+  whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
@@ -593,6 +597,8 @@ const belgiumContent: CountryContent = {
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
+  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
+  whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
@@ -704,6 +710,8 @@ const uaeContent: CountryContent = {
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
+  whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
@@ -823,39 +831,41 @@ const polandContent: CountryContent = {
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience for Poland.",
+  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
+  whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [
     {
-      img: AssetPath.home.feature1,
+      img: AssetPath.icons.websiteDesign1,
       title: "One Platform.",
       description: "Connect Multiple ERP or POS into one unified platform for E-invoicing.",
       sub: " Harmonised Data."
     },
     {
-      img: AssetPath.home.feature2,
+      img: AssetPath.icons.websiteDesign11,
       title: "Enterprise‑grade.",
       description: "Security, scalability and performance proven across 30+ industries.",
       sub: ""
     },
     {
-      img: AssetPath.home.feature3,
+      img: AssetPath.icons.websiteDesign12,
       title: "Deploy your way.",
       description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
       sub: ""
     },
     {
-      img: AssetPath.home.feature4,
+      img: AssetPath.icons.websiteDesign13,
       title: "AI, everywhere.",
       description: "Accelera, our AI copilot , accelerates routine work, insights and decisions.",
       sub: ""
     },
     {
-      img: AssetPath.home.feature5,
+      img: AssetPath.icons.websiteDesign14,
       title: "Fast time‑to‑value.",
       description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
       sub: ""
     },
     {
-      img: AssetPath.home.feature6,
+      img: AssetPath.icons.websiteDesign15,
       title: "Built‑in Global compliance:",
       description: "Connect ERP/POS to tax authorities; from Direct to PEPPOL based Integration.",
       sub: ""

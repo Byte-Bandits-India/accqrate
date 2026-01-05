@@ -453,7 +453,7 @@ const Section1 = () => {
                     icon: AssetPath.icons.websiteDesign1.src,
                     title: "Full Compliance with Belgium's",
                     subTitle: "E-Invoicing Mandate",
-                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Peppol integration, ensuring secure exchange, standardized processing, and continuous alignment with Jordan's evolving regulatory framework.",
+                    description: "Accqrate delivers EN 16931-compliant structured e-invoices with seamless Direct integration, ensuring secure exchange, standardized processing, and continuous alignment with Jordan's evolving regulatory framework.",
                 },
                 {
                     icon: AssetPath.icons.websiteDesign11.src,
