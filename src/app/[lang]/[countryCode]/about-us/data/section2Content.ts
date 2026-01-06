@@ -18,7 +18,7 @@ export const section2Content = {
             title1: "Modernizing Europe's E-Invoicing & Digital Tax Landscape",
             desc1: "We empower businesses with technology that simplifies PEPPOL connectivity, digital reporting, VAT oversight, and multi-entity governance.",
             title2: "Accelerating Digital Adoption",
-            desc2: "Accqrate eliminates the traditional complexities of ERP and e-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability."
+            desc2: "Accqrate eliminates the traditional complexities of ERP and\n E-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability."
         }
     },
     pl: {

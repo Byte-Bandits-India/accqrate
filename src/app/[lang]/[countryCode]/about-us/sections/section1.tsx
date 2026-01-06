@@ -82,20 +82,14 @@ export default function Section1() {
     <section className="w-full bg-[#F6F7FF] py-16 px-6 lg:px-4">
       <div className="max-w-[1110px] mx-auto">
         <FadeUp>
-
+          <h1 className="text-[24px] font-bold leading-[38px] text-[#1c2041] tracking-wide">
+            <T>{highlightMatches(content.heading)}</T>
+          </h1>
           {/* ================= TWO COLUMN LAYOUT ================= */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
             {/* ---------- LEFT: TEXT ---------- */}
             <Reveal direction="left">
-              <h1 className="text-[24px] font-bold leading-[38px] text-[#1c2041] tracking-wide max-w-[460px]">
-                {content.heading.includes('<br/>') ? (
-                  <span dangerouslySetInnerHTML={{ __html: highlightMatches(content.heading, true) as string }} />
-                ) : (
-                  <T>{highlightMatches(content.heading)}</T>
-                )}
-              </h1>
-
               <div className="mt-6 max-w-[600px] space-y-3 text-[16px] leading-[35px]  text-[#1C2041]">
                 <p className="text-[16px]">
                   <T>{content.description.split("\n\n")[0]}</T>

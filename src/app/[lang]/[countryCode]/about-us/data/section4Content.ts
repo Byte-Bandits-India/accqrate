@@ -30,7 +30,7 @@ export const section4Content = {
             {
                 img: AssetPath.home.feature5,
                 title: "Purpose-Built for All Business Sizes",
-                description: "• SMEs seeking a lightweight, standalone e-invoicing solution\n• Large enterprises requiring multi-entity and solution integration, VAT reconciliation, and cross-border compliance"
+                description: "• SMEs seeking a lightweight, standalone\n E-invoicing solution\n• Large enterprises requiring multi-entity and solution integration, VAT reconciliation, and cross-border compliance"
             }
         ]
     },

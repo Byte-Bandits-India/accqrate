@@ -115,7 +115,11 @@ export default function Section2() {
                   <T>{(content.section2 as any).title2}</T>
                 </h3>
                 <p className="text-[16px] leading-[35px]">
-                  <T>{(content.section2 as any).desc2}</T>
+                  {(content.section2 as any).desc2.includes('\n') ? (
+                    <span dangerouslySetInnerHTML={{ __html: (content.section2 as any).desc2.replace(/\n/g, '<br />') }} />
+                  ) : (
+                    <T>{(content.section2 as any).desc2}</T>
+                  )}
                 </p>
               </div>
             </Reveal>

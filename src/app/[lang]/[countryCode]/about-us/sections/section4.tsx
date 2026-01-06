@@ -50,11 +50,11 @@ const Section4: React.FC = () => {
             </span>
           </div>
 
-          <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-tight text-black">
+          <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-[32px] text-black">
             <T>{feature.title}</T>
           </h3>
 
-          <p className="text-[12px] md:text-[14px] text-gray-700 leading-relaxed whitespace-pre-line">
+          <p className="text-[12px] md:text-[14px] text-gray-700 leading-[30px] whitespace-pre-line">
             <T>{feature.description}</T>
           </p>
         </div>
