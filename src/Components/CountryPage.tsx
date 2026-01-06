@@ -23,6 +23,9 @@ import { usePathname, useParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import Reveal from "./Reveal"
 import invoiceList from "@/Assets/images/home/invoiceList.webp";
+import saeinvoic from "@/Assets/images/home/einvoice-design.webp"
+import saZatca from "@/Assets/images/home/zatca-dashboard.webp"
+import vision from "@/Assets/images/home/vision.webp"
 
 // Add this dynamic import for ContactModal
 const ContactModal = dynamic(
@@ -882,7 +885,17 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             </div>
 
             <Image
-                src={AssetPath.home.dashboardHome}
+                src={
+                    countryCode.toUpperCase() === "SA"
+                        ? saZatca.src || saZatca.src
+                        : countryCode.toUpperCase() === "AE"
+                            ? saZatca.src
+                            : countryCode.toUpperCase() === "OM"
+                                ? saZatca.src
+                                : countryCode.toUpperCase() === "BH"
+                                    ? saZatca
+                                    : AssetPath.home.dashboardHome
+                }
                 alt="dashboardHome"
                 width={100}
                 height={100}
@@ -987,17 +1000,17 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     <img
                         src={
                             countryCode.toUpperCase() === "AE"
-                                ? invoiceList.src || invoiceList.src
+                                ? saeinvoic.src || invoiceList.src
                                 : countryCode.toUpperCase() === "SA"
-                                    ? invoiceList.src || invoiceList.src
+                                    ? saeinvoic.src || invoiceList.src
                                     : countryCode.toUpperCase() === "JD"
                                         ? invoiceList.src || invoiceList.src
                                         : countryCode.toUpperCase() === "MU"
                                             ? invoiceList.src || invoiceList.src
                                             : countryCode.toUpperCase() === "MA"
-                                                ? invoiceList.src || invoiceList.src
+                                                ? saeinvoic.src || invoiceList.src
                                                 : countryCode.toUpperCase() === "OM"
-                                                    ? invoiceList.src || invoiceList.src
+                                                    ? saeinvoic.src || invoiceList.src
                                                     : countryCode.toUpperCase() === "BH"
                                                         ? invoiceList.src || invoiceList.src
                                                         : invoiceList.src
@@ -1303,11 +1316,12 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 <div className="hidden lg:flex items-center justify-start pl-6">
                                     <div className="w-full max-w-[370px]">
                                         <Image
-                                            src={AssetPath.home.vida}
+                                            src={vision}
                                             alt="VIDA Compliance"
                                             width={337}
                                             height={420}
                                             className="w-full h-auto object-contain"
+                                            unoptimized
                                         />
                                     </div>
                                 </div>

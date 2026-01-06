@@ -9,6 +9,7 @@ import React from "react";
 import FadeUp from "@/Components/ui/FadeUp";
 import type { JSX } from 'react';
 import Reveal from "@/Components/Reveal";
+import saAboutUsHero from "@/Assets/images/about/aboutus.webp";
 
 /* ---------- Highlight helper (unchanged logic) ---------- */
 function highlightMatches(text: string | undefined, returnHTML: boolean = false) {
@@ -62,7 +63,7 @@ const getHeroImage = (countryCode: string) => {
     case "ae":
       return AssetPath.aboutus.hero;
     case "sa":
-      return AssetPath.aboutus.hero;
+      return saAboutUsHero;
     default:
       return AssetPath.aboutus.hero;
   }
