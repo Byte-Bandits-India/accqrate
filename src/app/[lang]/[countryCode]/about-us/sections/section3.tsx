@@ -55,7 +55,7 @@ export default function Section3() {
             {/* Vertical Line */}
             <div
               aria-hidden="true"
-              className="absolute left-2 md:left-1/2 top-[54px] bottom-0 w-[4px] bg-[#1c2041] md:-translate-x-1/2"
+              className="absolute left-2 md:left-1/2 top-[54px] bottom-0 w-[4px] bg-[#1c2041] lg:mt-[86px] xl:mt-[68px] md:-translate-x-1/2"
             />
 
             <div className="flex flex-col space-y-24 md:space-y-12 mt-8">
@@ -89,7 +89,7 @@ export default function Section3() {
                     {/* CONTENT */}
                     <div
                       className={`flex-1 ml-6 md:ml-0 md:max-w-[460px] ${isLeft
-                        ? "md:order-1 text-right"
+                        ? "md:order-1 md:text-right"
                         : "md:order-3 text-left"
                         }`}
                     >

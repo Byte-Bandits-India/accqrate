@@ -49,10 +49,12 @@ export interface CountryContent {
   complianceSection?: {
     complianceTitle: string;
     complianceDescription: string;
+    compliancePara: string;
     complianceItems: string[];
     automationTitle: string;
     automationDescription: string;
     automationItems: string[];
+    automationPara: string;
     buttonText: string;
   };
 }
@@ -60,13 +62,13 @@ export interface CountryContent {
 // Default content template for most countries
 const defaultContent: CountryContent = {
   backgroundImage: AssetPath.homeBackgrounds.saudi,
-  heroTitle: "Accqrate E-Invoicing: ZAPTCHA-Ready. VAT-Compliant. Built for Enterprises.",
+  heroTitle: "Accqrate E-Invoicing: ZATCA Phase-2 . Approved Solution for Saudi Businesses",
   heroSubtitle: "E-invoicing Solution for Saudi",
-  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, zaptcha-certified platform tailored for Belgian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
-  heroTagline: "ZAPTCHA Member . GDPR . ISO 27001",
+  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, ZATCA phase 2 approved e-invoicing solution built for Saudi businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
+  heroTagline: "ZATCA Phase-2 Approved . GDPR . ISO 27001",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
-  whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless Direct Integration e-invoicing experience.",  whyAccqrateCertification: "Direct Integration Member and certified Access Point Provider and Service Metadata Publisher.",  whyAccqrateFeatures: [
+  whyAccqrateSubtitle: { text: "From compliance to automation, Accqrate ensures a seamless ZATCA Phase-2 e-invoicing integration.", highlights: ["compliance", "seamless"] },
+  whyAccqrateDescription: "100% ZATCA Phase-2 Approved E-invoicing Solution",  whyAccqrateCertification: "ZATCA Phase 2 Approved E-invoicing Solution",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
       title: "One platform.",
@@ -93,8 +95,8 @@ const defaultContent: CountryContent = {
     },
     {
       img: AssetPath.icons.websiteDesign14,
-      title: "Built‑in Global compliance:",
-      description: "Connect ERP/POS to tax authorities; from ZATCA Phase II to PEPPOL standards.",
+      title: "Built‑in Industry Best compliance:",
+      description: "Connect ERP/POS seamlessly to ZATCA’s Fatoora Portal.",
       sub: ""
     },
     {
@@ -129,8 +131,8 @@ const defaultContent: CountryContent = {
   cards: [
     {
       icon: AssetPath.integration.saZATCA,
-      title: "ZATCA Phase 2",
-      description: "Certified AP Provider & SMP",
+      title: "ZATCA Phase 2 Approved",
+      description: "E-invoicing Solution Provider in KSA",
       color: "linear-gradient(to right, #FFFFFF, #D3D1FF)",
       link: "SA/business/crm",
     },
@@ -170,22 +172,25 @@ const defaultContent: CountryContent = {
     }
   ],
   complianceSection: {
-    complianceTitle: "Full Compliance with Belgium's E-Invoicing Mandate",
-    complianceDescription: "Accqrate ensures end-to-end compliance with Belgium's B2B e-invoicing mandate and the FPS Finance requirements. Our platform supports:",
+    complianceTitle: "Full Compliance with Saudi Arabia’s ZATCA Phase 2\n E-Invoicing Mandate",
+    complianceDescription: "Accqrate ensures full compliance with ZATCA Phase 2, enabling Saudi businesses to meet regulatory requirements with precision, security, and operational continuity.  Our platform supports:",
     complianceItems: [
-      "Structured formats fully aligned with Belgian and EU specifications",
-      "Secure, standardized exchange over PEPPOL",
-      "Automated updates for evolving tax and technical regulations",
-      "Seamless integration with Mercurius and tax authority systems"
+      "ZATCA-compliant XML / UBL invoices",
+      "Direct API integration with ZATCA (Fatoora)",
+      "Real-time clearance & reporting",
+      "Automatic regulatory updates",
+      "Seamless ERP & POS integration"
     ],
+    compliancePara: "Accqrate provides Saudi enterprises with a future-ready e-invoicing foundation, ensuring compliance today while remaining aligned with ZATCA’s evolving regulatory roadmap.",
     automationTitle: "Hassle-Free E-Invoicing Automation",
-    automationDescription: "Shift from manual intervention to intelligent automation:",
+    automationDescription: "Move from manual processes to fully automated, ZATCA-ready e-invoicing—built for scale, accuracy, and compliance in Saudi Arabia.",
     automationItems: [
-      "AI-powered validation to reduce rejections",
-      "Real-time error detection and correction suggestions",
-      "Zero-cost regulatory upgrades",
-      "Automated generation → validation → PEPPOL submission → archiving"
+      "AI-driven invoice validation",
+      "Real-time error detection & fixes",
+      "Zero-cost ZATCA regulatory updates",
+      "Automated generation → clearance → reporting → archiving"
     ],
+    automationPara:"Accqrate eliminates operational friction while ensuring continuous compliance with Saudi Arabia’s evolving e-invoicing regulations.",
     buttonText: "Book an Appointment"
   }
 };
@@ -310,6 +315,7 @@ const jordanContent: CountryContent = {
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with Mercurius and tax authority systems"
     ],
+    compliancePara: "",
     automationTitle: "Hassle-Free E-Invoicing Automation",
     automationDescription: "Shift from manual intervention to intelligent automation:",
     automationItems: [
@@ -318,6 +324,7 @@ const jordanContent: CountryContent = {
       "Zero-cost regulatory upgrades",
       "Automated generation → validation → Direct Integration submission → archiving"
     ],
+    automationPara: "",
     buttonText: "Book an Appointment"
   }
 };
@@ -442,6 +449,7 @@ const mauritiusContent: CountryContent = {
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with Mercurius and tax authority systems"
     ],
+    compliancePara: "",
     automationTitle: "Hassle-Free E-Invoicing Automation",
     automationDescription: "Shift from manual intervention to intelligent automation:",
     automationItems: [
@@ -450,6 +458,7 @@ const mauritiusContent: CountryContent = {
       "Zero-cost regulatory upgrades",
       "Automated generation → validation → Direct Integration submission → archiving"
     ],
+    automationPara: "",
     buttonText: "Book an Appointment"
   }
 };
@@ -576,6 +585,7 @@ const malaysiaContent: CountryContent = {
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with Mercurius and tax authority systems"
     ],
+    compliancePara: "",
     automationTitle: "Hassle-Free E-Invoicing Automation",
     automationDescription: "Shift from manual intervention to intelligent automation:",
     automationItems: [
@@ -584,6 +594,7 @@ const malaysiaContent: CountryContent = {
       "Zero-cost regulatory upgrades",
       "Automated generation → validation → PEPPOL submission → archiving"
     ],
+    automationPara: "",
     buttonText: "Book an Appointment"
   }
 };
@@ -690,6 +701,7 @@ const belgiumContent: CountryContent = {
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with Mercurius and tax authority systems"
     ],
+    compliancePara: "",
     automationTitle: "Hassle-Free E-Invoicing Automation",
     automationDescription: "Shift from manual intervention to intelligent automation:",
     automationItems: [
@@ -698,6 +710,7 @@ const belgiumContent: CountryContent = {
       "Zero-cost regulatory upgrades",
       "Automated generation → validation → PEPPOL submission → archiving"
     ],
+    automationPara: "",
     buttonText: "Book an Appointment"
   }
 };
@@ -810,6 +823,7 @@ const uaeContent: CountryContent = {
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with FTA."
     ],
+    compliancePara: "",
     automationTitle: "Hassle-Free E-Invoicing Automation",
     automationDescription: "Shift from manual intervention to intelligent automation:",
     automationItems: [
@@ -818,6 +832,7 @@ const uaeContent: CountryContent = {
       "Zero-cost regulatory upgrades",
       "Automated generation → validation → PEPPOL submission → archiving"
     ],
+    automationPara: "",
     buttonText: "Book an Appointment"
   }
 };
@@ -924,6 +939,7 @@ const polandContent: CountryContent = {
       "Automated updates for evolving tax and technical regulations",
       "Seamless integration with KseF and tax authority systems"
     ],
+    compliancePara: "",
     automationTitle: "Hassle-Free E-Invoicing Automation",
     automationDescription: "Shift from manual intervention to intelligent automation:",
     automationItems: [
@@ -932,6 +948,7 @@ const polandContent: CountryContent = {
       "Zero-cost regulatory upgrades",
       "Automated generation → validation → PEPPOL submission → archiving"
     ],
+    automationPara: "",
     buttonText: "Book an Appointment"
   }
 };

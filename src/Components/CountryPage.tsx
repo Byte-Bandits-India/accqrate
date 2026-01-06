@@ -461,6 +461,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
         switch (countryCode.toUpperCase()) {
             case "AE":
                 return uaeInvoiceImg;
+            case "SA":
+                return AssetPath.invoicing.taxInvoiceMultiple;
             default:
                 return AssetPath.invoicing.invoiceHome;
         }
@@ -1009,89 +1011,105 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 {/* Trusted text */}
                 <div className="rounded-[30px] py-6 max-w-[1280px] mx-auto">
-                    <div className="max-w-[1240px] mx-auto px-4 md:px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
-                        {/* Left Side: Accqrate E-invoicing */}
-                        <Reveal direction='left' className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col xl:h-full">
-                            <div className="flex flex-col flex-1">
-                                <div>
-                                    <div className="flex items-center space-x-4">
-                                        <Image
-                                            src={AssetPath.home.orangeA}
-                                            alt="one"
-                                            width={50}
-                                            height={50}
-                                            className="h-[40px] md:h-[50px] w-auto"
-                                            unoptimized
-                                        />
+                    <div className="max-w-[1240px] mx-auto px-4 md:px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6 items-start">
 
-                                        <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small md:text-[18px] whitespace-nowrap">
-                                            <T>Accqrate E-invoicing</T>
-                                            <span className="text-sm md:text-[16px] text-[#5a6183]">
-                                                <br />
-                                                <T>{countryContent.heroSubtitle}</T>
+                        {/* LEFT SIDE — STICKY WRAPPER */}
+                        <div className="sticky top-24 self-start">
+                            <Reveal
+                                direction="left"
+                                className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col"
+                            >
+                                <div className="flex flex-col">
+                                    <div>
+                                        <div className="flex items-center space-x-4">
+                                            <Image
+                                                src={AssetPath.home.orangeA}
+                                                alt="one"
+                                                width={50}
+                                                height={50}
+                                                className="h-[40px] md:h-[50px] w-auto"
+                                                unoptimized
+                                            />
+
+                                            <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small md:text-[18px] whitespace-nowrap">
+                                                <T>Accqrate E-invoicing</T>
+                                                <span className="text-sm md:text-[16px] text-[#5a6183]">
+                                                    <br />
+                                                    <T>{countryContent.heroSubtitle}</T>
+                                                </span>
                                             </span>
-                                        </span>
+                                        </div>
+
+                                        <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-[14px] mt-[30px]">
+                                            <T>
+                                                {countryContent.whyAccqrateCertification ||
+                                                    "Peppol Member and certified Access Point Provider and Service Metadata Publisher."}
+                                            </T>
+                                        </p>
                                     </div>
 
-                                    <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-[14px] mt-[30px]">
-                                        <T>
-                                            {countryContent.whyAccqrateCertification ||
-                                                "Peppol Member and certified Access Point Provider and Service Metadata Publisher."}
-                                        </T>
-                                    </p>
-                                </div>
-
-                                <div className="w-full mt-auto">
-                                    <div className="h-auto md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
-                                        <Image
-                                            src={getInvoiceHomeImage()}
-                                            alt="Invoice preview"
-                                            width={620}
-                                            height={420}
-                                            className="w-full h-full object-contain md:object-cover"
-                                            unoptimized
-                                        />
+                                    <div className="w-full">
+                                        <div className="h-auto md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
+                                            <Image
+                                                src={getInvoiceHomeImage()}
+                                                alt="Invoice preview"
+                                                width={620}
+                                                height={420}
+                                                className="w-full h-full object-contain md:object-cover"
+                                                unoptimized
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </Reveal>
+                            </Reveal>
+                        </div>
 
-                        {/* Right Side: Compliance + Automation */}
-                        <div className="flex flex-col gap-6 xl:h-full w-full">
+                        {/* RIGHT SIDE */}
+                        <div className="flex flex-col gap-6 w-full">
                             {countryContent.complianceSection && (
                                 <>
                                     {/* Compliance Card */}
-                                    <Reveal direction="right" className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                    <Reveal
+                                        direction="right"
+                                        className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6"
+                                    >
                                         <h2 className="text-[23px] md:text-[24px] text-[#1c2041] font-bold leading-[30px]">
-                                            <T>{countryContent.complianceSection.complianceTitle}</T>
+                                            {countryContent.complianceSection.complianceTitle.includes("\n") ? (
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: countryContent.complianceSection.complianceTitle.replace(
+                                                            /\n/g,
+                                                            "<br />"
+                                                        ),
+                                                    }}
+                                                />
+                                            ) : (
+                                                <T>{countryContent.complianceSection.complianceTitle}</T>
+                                            )}
                                         </h2>
 
-                                        {countryContent.complianceSection && (
-                                            <>
-                                                <h2 className="text-[14px] md:text-[16px] mt-4 text-[#1c2041] leading-[28px] font-normal">
-                                                    <T>
-                                                        {
-                                                            countryContent.complianceSection
-                                                                .complianceDescription
-                                                        }
-                                                    </T>
-                                                </h2>
+                                        <h2 className="text-[14px] md:text-[16px] mt-4 text-[#1c2041] leading-[28px] font-normal">
+                                            <T>{countryContent.complianceSection.complianceDescription}</T>
+                                        </h2>
 
-                                                <ul className="space-y-2  mt-4 text-[14px] text-[#1c2041]  leading-[28px] list-disc pl-5">
-                                                    {countryContent.complianceSection.complianceItems.map(
-                                                        (item, index) => (
-                                                            <li key={index}>
-                                                                <T>{item}</T>
-                                                            </li>
-                                                        )
-                                                    )}
-                                                </ul>
-                                            </>
-                                        )}
+                                        <ul className="space-y-2 mt-4 text-[14px] text-[#1c2041] leading-[28px] list-disc pl-5">
+                                            {countryContent.complianceSection.complianceItems.map((item, index) => (
+                                                <li key={index}>
+                                                    <T>{item}</T>
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        <p className="mt-4 text-[14px] text-[#1c2041] leading-[28px]">
+                                            <T>{countryContent.complianceSection.compliancePara}</T>
+                                        </p>
                                     </Reveal>
 
                                     {/* Automation Card */}
-                                    <Reveal direction="right" className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
+                                    <Reveal
+                                        direction="right"
+                                        className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6"
+                                    >
                                         <h2 className="text-[23px] md:text-[24px] font-bold text-[#1c2041]">
                                             <span className="text-[#194BED] font-bold">
                                                 <T>Hassle-Free</T>
@@ -1100,20 +1118,20 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </h2>
 
                                         <h2 className="text-[14px] md:text-[16px] mt-4 font-normal leading-[28px] text-[#1c2041]">
-                                            <T>
-                                                {countryContent.complianceSection.automationDescription}
-                                            </T>
+                                            <T>{countryContent.complianceSection.automationDescription}</T>
                                         </h2>
 
                                         <ul className="list-disc pl-5 space-y-2 mt-4 text-[14px] leading-[28px]">
-                                            {countryContent.complianceSection.automationItems.map(
-                                                (item, index) => (
-                                                    <li key={index}>
-                                                        <T>{item}</T>
-                                                    </li>
-                                                )
-                                            )}
+                                            {countryContent.complianceSection.automationItems.map((item, index) => (
+                                                <li key={index}>
+                                                    <T>{item}</T>
+                                                </li>
+                                            ))}
                                         </ul>
+
+                                        <p className="mt-4 text-[14px] text-[#1c2041] leading-[28px]">
+                                            <T>{countryContent.complianceSection.automationPara}</T>
+                                        </p>
 
                                         <div className="mt-6">
                                             <CTAButton
@@ -1126,6 +1144,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             )}
                         </div>
                     </div>
+
+
                 </div>
             </div>
 
@@ -1217,8 +1237,8 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 </div>
 
                 <div>
-                    {/* COMPLIANCE SECTION - ViDA (Hidden for UAE) */}
-                    {countryCode !== "AE" && (
+                    {/* COMPLIANCE SECTION - ViDA (Hidden for UAE and SA) */}
+                    {countryCode !== "AE" && countryCode !== "SA" && (
                         <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 pb-6 md:mb-10 rounded-xl md:rounded-2xl bg-white">
                             {/* GRID */}
                             <Reveal direction="left" className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
@@ -1258,6 +1278,73 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </li>
                                         <li>
                                             <T>Multi-entity, multi-VAT number management for MNCs</T>
+                                        </li>
+                                    </ul>
+
+                                    <div className="mt-6">
+                                        <CTAButton
+                                            text={<T>Talk to our Consultant</T>}
+                                            onClick={() => setModalOpen(true)}
+                                        />
+                                    </div>
+                                </FadeUp>
+
+                                {/* Image (Mobile) */}
+                                <div className="lg:hidden flex items-center justify-center p-4 md:p-6">
+                                    <Image
+                                        src={AssetPath.home.vida}
+                                        alt="VIDA Compliance"
+                                        width={520}
+                                        height={420}
+                                        className="w-full h-auto object-contain max-w-full"
+                                    />
+                                </div>
+                            </Reveal>
+                        </div>
+                    )}
+
+                    {countryCode === "SA" && (
+                        <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 pb-6 md:mb-10 rounded-xl md:rounded-2xl bg-white">
+                            {/* GRID */}
+                            <Reveal direction="left" className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
+                                {/* LEFT: Image (Desktop) */}
+                                <div className="hidden lg:flex items-center justify-start pl-6">
+                                    <div className="w-full max-w-[370px]">
+                                        <Image
+                                            src={AssetPath.home.vida}
+                                            alt="VIDA Compliance"
+                                            width={337}
+                                            height={420}
+                                            className="w-full h-auto object-contain"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* RIGHT: Text Content */}
+                                <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8">
+                                    <h2 className="text-[#1c2041]  text-[23px] md:text-[24px] font-bold whitespace-nowrap mb-4 md:mb-6">
+                                        <T>Aligned with Saudi Vision</T>{" "}
+                                        <span className="text-[#194BED]">2030:</span>
+                                    </h2>
+
+                                    <h2 className="text-[14px] md:text-[16px] text-left  leading-[28px] mb-4">
+                                        <T>
+                                            Accqrate enables enterprises to future-proof their invoicing and tax compliance landscape within Saudi Arabia as per Saudi Vision 2030’s mandate for a fully digital, transparent, and efficient economy.
+                                        </T>
+                                    </h2>
+
+                                    <ul className="list-disc space-y-2  text-[14px] text-left pl-4 md:pl-5 leading-[28px]">
+                                        <li>
+                                            <T>Native alignment with ZATCA’s digital tax roadmap</T>
+                                        </li>
+                                        <li>
+                                            <T>Scalable architecture for future regulatory phases</T>
+                                        </li>
+                                        <li>
+                                            <T>Real-time reporting & audit readiness</T>
+                                        </li>
+                                        <li>
+                                            <T>Multi-entity, multi-branch compliance for Saudi groups</T>
                                         </li>
                                     </ul>
 

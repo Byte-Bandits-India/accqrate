@@ -61,22 +61,22 @@ export const section2Content = {
         }
     },
     default: {
-        section1Title: "Accqrate In Belgium",
+        section1Title: "Accqrate In Saudi",
         section1: {
             image: AssetPath.aboutus.saAbout,
-            title1: "Built for Belgium's PEPPOL & FPS Finance Mandate",
-            desc1: "Accqrate brings a Belgium-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.",
-            title2: "European Precision, Global Scalability",
-            desc2: "With Swiss-led engineering and global deployment experience across 30+ sectors, Accqrate delivers an enterprise-grade platform capable of handling Belgium's upcoming B2B rollout and multi-country operations inside and outside the EU.",
-            title3: "Compliance Made Simple",
-            desc3: "Accqrate combines automation, AI-driven validations, and standardized interoperability to make compliance intuitive, predictable, and scalable for companies of all sizes."
+            title1: "A Saudi-Focused Innovation",
+            desc1: "Accqrate delivers purpose-built e-invoicing and ERP solutions designed for businesses operating in Saudi Arabia. With a strong focus on regulatory compliance, operational excellence, and service quality, Accqrate supports the Kingdom’s digital transformation objectives under Saudi Vision 2030.",
+            title2: "Built on Global Engineering Standards",
+            desc2: "Backed by Iteron AG, Switzerland, Accqrate combines European engineering rigor with secure, enterprise-grade architectures—ensuring reliability, scalability, and long-term compliance across regulated environments.",
+            title3: "Simplicity Meets Quality",
+            desc3: "Accqrate is designed with a clear philosophy: simplicity without compromise. The platform delivers intuitive user experiences alongside robust e-invoicing and ERP capabilities, enabling Saudi enterprises to operate efficiently, remain compliant, and scale with confidence."
         },
         section2Title: "Our Mission",
         section2: {
-            title1: "Modernizing Europe's E-Invoicing & Digital Tax Landscape",
-            desc1: "We empower businesses with technology that simplifies PEPPOL connectivity, digital reporting, VAT oversight, and multi-entity governance.",
-            title2: "Accelerating Digital Adoption",
-            desc2: "Accqrate eliminates the traditional complexities of ERP and e-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability."
+            title1: "Revolutionizing Business Ecosystems",
+            desc1: "Aimed at transforming the ERP implementation experience with ready-to-use, quickly implementable solutions.",
+            title2: "Transcending Traditional Boundaries",
+            desc2: "Redefining the ERP and E-invoicing landscape to eliminate long waits and reduce costs."
         }
     }
 };

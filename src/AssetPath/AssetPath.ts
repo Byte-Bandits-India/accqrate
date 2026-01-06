@@ -521,6 +521,9 @@ import uaeabout from "@/Assets/images/about/uae_about.png";
 import defaultmission from "@/Assets/images/about/defaultmission.webp";
 import saAbout from "@/Assets/images/about/accqratein-saidi-arabia.webp"
 import polabout from "@/Assets/images/about/pol_about.png"
+import adoption from "@/Assets/images/about/adoption.95314a9a.webp"
+import innovation from "@/Assets/images/about/innovation-flexibility.e95d2eaf.webp"
+import zatcaApproval from "@/Assets/images/about/zatca-approval.e70d18bd.webp"
 
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
@@ -1129,6 +1132,9 @@ const AssetPath = {
     defaultmission: defaultmission,
     saAbout,
    polabout,
+    adoption,
+    innovation,
+    zatcaApproval,
   },
 
   404: {

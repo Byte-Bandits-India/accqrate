@@ -82,7 +82,7 @@ export default function Section1() {
     <section className="w-full bg-[#F6F7FF] py-16 px-6 lg:px-4">
       <div className="max-w-[1110px] mx-auto">
         <FadeUp>
-          <h1 className="text-[24px] font-bold leading-[38px] text-[#1c2041] tracking-wide">
+          <h1 className="text-[24px] font-bold leading-[38px] text-center pb-6 text-[#1c2041] tracking-wide">
             <T>{highlightMatches(content.heading)}</T>
           </h1>
           {/* ================= TWO COLUMN LAYOUT ================= */}

@@ -16,7 +16,7 @@ export const section1Content = {
     },
     default: {
         badge: "About Accqrate:",
-        heading: "Advancing Digital Compliance & E-Invoicing for Belgium and the EU",
-        description: "Accqrate is a global E-Invoicing platform built to meet the digital tax and reporting modernization sweeping across the EU. From Belgium's PEPPOL-based B2B mandate to ViDA-driven cross-border reporting, Accqrate delivers a scalable, compliant, and future-ready foundation for enterprises operating across Belgium and broader EU markets.\n\nBacked by Iteron AG, Switzerland, Accqrate brings European engineering standards, secure architectures, and a decade-long expertise in digital tax transformations across regulated geographies."
+        heading: "About Accqrate: Powering Digital E-Invoicing & ERP for Saudi Vision 2030",
+        description: "Accqrate is a modern e-invoicing and ERP platform designed to support Saudi Arabia’s digital transformation agenda under Vision 2030. Built for compliance, scalability, and operational efficiency, Accqrate enables Saudi enterprises to meet evolving regulatory, tax, and business requirements with confidence. \n\nBacked by Iteron AG, Switzerland, Accqrate combines enterprise-grade engineering, secure architectures, and deep expertise in regulated digital systems—delivering reliable, future-ready solutions for organizations operating across the Kingdom."
     }
 };
