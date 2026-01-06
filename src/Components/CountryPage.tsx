@@ -636,19 +636,27 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             }
 
             const { text, highlights } = subtitle;
-            const parts = text.split(' ');
+            const lines = text.split('\n');
             return (
                 <span>
-                    {parts.map((word, index) => {
-                        const cleanWord = word.replace(/[.,!?]/g, '');
-                        if (highlights.includes(cleanWord)) {
-                            return (
-                                <span key={index} className="text-[#194BED] font-semibold">
-                                    {word}{' '}
-                                </span>
-                            );
-                        }
-                        return word + ' ';
+                    {lines.map((line, lineIndex) => {
+                        const parts = line.split(' ');
+                        return (
+                            <React.Fragment key={lineIndex}>
+                                {parts.map((word, index) => {
+                                    const cleanWord = word.replace(/[.,!?]/g, '');
+                                    if (highlights.includes(cleanWord)) {
+                                        return (
+                                            <span key={index} className="text-[#194BED] font-semibold">
+                                                {word}{' '}
+                                            </span>
+                                        );
+                                    }
+                                    return word + ' ';
+                                })}
+                                {lineIndex < lines.length - 1 && <br />}
+                            </React.Fragment>
+                        );
                     })}
                 </span>
             );

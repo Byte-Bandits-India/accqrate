@@ -67,7 +67,7 @@ const defaultContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, ZATCA phase 2 approved e-invoicing solution built for Saudi businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "ZATCA Phase-2 Approved . GDPR . ISO 27001",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: { text: "From compliance to automation, Accqrate ensures a seamless ZATCA Phase-2 e-invoicing integration.", highlights: ["compliance", "seamless"] },
+  whyAccqrateSubtitle: { text: "From compliance to automation, Accqrate ensures a seamless ZATCA Phase-2\n e-invoicing integration.", highlights: ["compliance", "seamless"] },
   whyAccqrateDescription: "100% ZATCA Phase-2 Approved E-invoicing Solution",  whyAccqrateCertification: "ZATCA Phase 2 Approved E-invoicing Solution",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
