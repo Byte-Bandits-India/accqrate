@@ -20,7 +20,6 @@ import {
 } from "@/Components/Home-accordion";
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
 import Reveal from "./Reveal"
 import invoiceList from "@/Assets/images/home/invoiceList.webp";

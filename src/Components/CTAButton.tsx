@@ -13,20 +13,11 @@ interface CTAButtonProps {
 
 export default function CTAButton({
     text,
-    href = "#",
+    href,
     widthClass = "w-fit",
     onClick
 }: CTAButtonProps) {
-    return (
-        <Link
-            href={href}
-            onClick={(e) => {
-                if (onClick) {
-                    e.preventDefault();
-                    onClick();
-                }
-            }}
-            className={`
+    const buttonClasses = `
         relative
         inline-flex
         items-center
@@ -42,7 +33,28 @@ export default function CTAButton({
         leading-tight
         transition-all duration-300
         hover:bg-[#d94f22]
-      `}
+        cursor-pointer
+      `;
+
+    if (onClick) {
+        return (
+            <button
+                type="button"
+                onClick={onClick}
+                className={buttonClasses}
+            >
+                <span className="flex items-center gap-2">
+                    {text}
+                </span>
+                <ArrowRight className="absolute right-4 w-4 h-4 -rotate-45" />
+            </button>
+        );
+    }
+
+    return (
+        <Link
+            href={href || "#"}
+            className={buttonClasses}
         >
             <span className="flex items-center gap-2">
                 {text}
