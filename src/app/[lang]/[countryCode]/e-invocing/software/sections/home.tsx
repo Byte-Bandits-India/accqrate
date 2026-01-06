@@ -47,7 +47,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "SA": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Saudi Arabia",
+        badgeText: "ZATCA Approved E-invoicing Software<br> in Saudi Arabia",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -65,7 +65,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "AE": {
         name: "UAE",
         authority: "FTA",
-        badgeText: "PEPPOL Certified E-invoicing Software for UAE",
+        badgeText: "PEPPOL Certified E-invoicing Software<br> for UAE",
         title: "Integrate With PEPPOL Network.",
         description1: "UAE Based <span class='text-[#194bed]'>E-invoicing</span> Solution For UAE Companies.",
         description2: "",
@@ -83,7 +83,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "OM": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Oman",
+        badgeText: "ZATCA Approved E-invoicing Software<br> in Oman",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -101,7 +101,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "BH": {
         name: "Saudi Arabia",
         authority: "ZATCA",
-        badgeText: "ZATCA Approved E-invoicing Software in Bahrain",
+        badgeText: "ZATCA Approved E-invoicing Software<br> in Bahrain",
         title: "Integrate With ZATCA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Saudi Companies.",
@@ -118,7 +118,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "MA": {
         name: "Malaysia",
         authority: "LHDN",
-        badgeText: "LHDN Approved E-invoicing Software in Malaysia",
+        badgeText: "LHDN Approved E-invoicing Software<br> in Malaysia",
         title: "Integrate With LHDN In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Saudi Based E-invoicing Solution For Malaysia Companies.",
@@ -136,7 +136,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "MU": {
         name: "Mauritius",
         authority: "MRA",
-        badgeText: "MRA Approved E-invoicing Software in Mauritius",
+        badgeText: "MRA Approved E-invoicing Software<br> in Mauritius",
         title: "Integrate With MRA In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Mauritius Based E-invoicing Solution For Mauritius Companies.",
@@ -154,7 +154,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "JD": {
         name: "Jordan",
         authority: "ISTD",
-        badgeText: "ISTD Approved E-invoicing Software in Jordan",
+        badgeText: "ISTD Approved E-invoicing Software<br> in Jordan",
         title: "Integrate With ISTD In Less Than 1 Hour.",
         description1: "Enable Your Business With <span class='text-[#194bed]'>E-invoicing</span>",
         description2: "Jordan Based E-invoicing Solution For Jordan Companies.",
@@ -172,7 +172,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "PL": {
         name: "Poland",
         authority: "KSeF",
-        badgeText: "PEPPOL Certified  E-invoicing Software for Poland",
+        badgeText: "PEPPOL Certified E-invoicing Software<br> for Poland",
         title: "Integrate With PEPPOL Network ",
         description1: "European Based <span class='text-[#194bed]'>E-invoicing</span> Solution For European Companies.",
         description2: "",
@@ -192,7 +192,7 @@ const countryConfig: Record<string, CountryConfigItem> = {
     "BE": {
         name: "Belgium",
         authority: "KSeF",
-        badgeText: "PEPPOL Certified  E-invoicing Software for Belgium",
+        badgeText: "PEPPOL Certified E-invoicing Software<br> for Belgium",
         topTitle: "Enable Your Business With E-invoicing.",
         title: "Integrate With PEPPOL Network",
         description1: "European Based <span class='text-[#194bed]'>E-invoicing</span> Solution For European Companies.",
@@ -520,30 +520,22 @@ const Software: React.FC = () => {
                 <div className="bg-[#eff3ff] pt-10 px-6">
                     <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center justify-between">
                         {/* LEFT CONTENT */}
-                        <FadeUp className="flex flex-col justify-center max-w-[450px] w-full">
+                        <FadeUp className="flex flex-col justify-center max-w-[550px] w-full">
                             {/* content animated, background stays in parent */}
                             <div>
-                                <Reveal direction="left" className="flex items-center gap-2">
-                                    <p className="text-[#d63f10] text-[16px] uppercase leading-[28px] m-0 lg:whitespace-nowrap">
-                                        <T>{content.badgeText}</T>
-                                    </p>
-
-                                    <Image
-                                        src={flagImage}
-                                        alt={`${content.name || countryCode}-flag`}
-                                        width={30}
-                                        height={20}
-                                        className="w-[30px] h-auto rounded object-contain"
-                                        unoptimized
-                                    />
+                                <Reveal direction="left">
+                                    <p
+                                        className="text-[#d63f10] text-[16px] uppercase leading-[28px] m-0 text-nowrap"
+                                        dangerouslySetInnerHTML={{ __html: t(content.badgeText ?? '', countryCode) + `<img src="${flagImage.src}" alt="${content.name || countryCode}-flag" class="w-[30px] h-auto rounded object-contain inline ml-2" />` }}
+                                    ></p>
                                 </Reveal>
 
 
 
-                                <p className="text-[23px] lg:text-[24px] font-bold text-[#1c2041] mt-4 leading-[36px] mb-2">
+                                <p className="text-[23px] lg:text-[24px] font-bold text-[#1c2041] mt-4 leading-[39px] mb-2">
                                     <T>Enable Your Business With E-invoicing.</T>
                                 </p>
-                                <h1 className="text-[23px] lg:text-[24px] font-bold text-[#1c2041] leading-[32px]">
+                                <h1 className="text-[23px] lg:text-[30px] font-bold text-[#1c2041] leading-[43px]">
                                     <T>{content.title}</T>
                                 </h1>
 

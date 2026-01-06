@@ -463,7 +463,7 @@ const ContactFormPage = () => {
             </h3>
 
             <p className="text-sm  mb-4">
-              <T>Call our team Sun - Thu from 9am to 5pm</T>
+              <T>Call our team Mon - Fri from 9am to 5pm</T>
             </p>
 
             <div className="flex items-center gap-2 text-[#194bed] font-bold text-[18px] underline md:text-[20px] mb-6">

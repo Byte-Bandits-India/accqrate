@@ -523,8 +523,8 @@ const Section1 = () => {
                     <FadeUp>
                         <div className="relative">
                             <div className="max-w-5xl overflow-hidden pb-6 mx-auto">
-                                <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 md:w-20" />
-                                <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 md:w-20" />
+                                <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 md:w-20 bg-gradient-to-r from-white to-transparent" />
+                                <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 md:w-20 bg-gradient-to-l from-white to-transparent" />
 
                                 <div className="flex flex-col gap-4 md:gap-6">
                                     <div className="flex animate-scrollLeft w-max flex-shrink-0">
@@ -535,9 +535,9 @@ const Section1 = () => {
                                                     alt={logo.name}
                                                     width={135}
                                                     height={48}
-                                                    className="h-10 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                                    className="h-10 md:h-16 w-30 md:w-[236px] grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                                 />
-                                                <p className=" text-xs md:text-sm text-[#737373] font-medium"><T>{logo.name}</T></p>
+                                                <p className=" text-xs text-[#737373] font-medium"><T>{logo.name}</T></p>
                                             </div>
                                         ))}
                                     </div>
@@ -551,9 +551,9 @@ const Section1 = () => {
                                                     width={135}
                                                     height={48}
                                                     unoptimized
-                                                    className="h-10 md:h-16 w-30 md:w-60 grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
+                                                    className="h-10 md:h-16 w-30 md:w-[236px] grayscale opacity-90 transition hover:grayscale-0 hover:opacity-100"
                                                 />
-                                                <p className=" text-xs md:text-sm text-[#737373] font-medium">
+                                                <p className=" text-xs text-[#737373] font-medium">
                                                     <T>{logo.name}</T></p>
                                             </div>
                                         ))}

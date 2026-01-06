@@ -9,6 +9,7 @@ import FadeUp from '@/Components/ui/FadeUp'
 import belgiumInvoiceHero from "@/Assets/images/invoicing/belgium_invoice_hero.webp";
 import zatcaIntegratedDashboard from "@/Assets/images/invoicing/zatca-integrated-dashboard.webp";
 import Reveal from "@/Components/Reveal";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/Components/ui/accordion";
 
 export default function Section4() {
   const params = useParams();
@@ -71,33 +72,29 @@ export default function Section4() {
           {/* ================= TOP GRID ================= */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
-            {/* LEFT – STATIC LIST (NO ACCORDION) */}
-            <div className="order-2 lg:order-1 space-y-5">
-              {data.topLeftItems.map((item, i) => (
-                <Reveal direction="left" key={i} className="flex items-start gap-4">
-                  {/* Tick Icon */}
-                  <Image
-                    src={AssetPath.integration.tick}
-                    width={22}
-                    height={22}
-                    alt="check"
-                    className="mt-1 shrink-0"
-                  />
-
-                  {/* Text */}
-                  <p className="text-[#5A6183] text-[16px] leading-[28px]">
-                    <span className="font-bold text-[#1C2041]">
-                      <T lang={lang} countryCode={countryCode}>
-                        {item.title}
-                      </T>
-                    </span>
-                    {": "}
-                    <T lang={lang} countryCode={countryCode}>
-                      {item.desc}
-                    </T>
-                  </p>
-                </Reveal>
-              ))}
+            {/* LEFT – ACCORDION LIST */}
+            <div className="order-2 lg:order-1">
+              <Accordion type="single" collapsible className="space-y-5">
+                {data.topLeftItems.map((item, i) => (
+                  <AccordionItem key={i} value={`item-${i}`}>
+                    <AccordionTrigger className="text-left">
+                      <div className="flex text-[16px] font-medium no-underline hover:no-underline items-center gap-3">
+                        <Image
+                          src={AssetPath.integration.tick}
+                          width={20}
+                          height={20}
+                          alt="check"
+                          className="flex-shrink-0"
+                        />
+                        <T lang={lang} countryCode={countryCode}>{item.title}</T>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pl-9">
+                      <T lang={lang} countryCode={countryCode}>{item.desc}</T>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
 
             {/* RIGHT – IMAGE */}
