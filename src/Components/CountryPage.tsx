@@ -23,6 +23,7 @@ import { usePathname, useParams } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
 import Reveal from "./Reveal"
+import invoiceList from "@/Assets/images/home/invoiceList.webp";
 
 // Add this dynamic import for ContactModal
 const ContactModal = dynamic(
@@ -611,13 +612,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             ];
 
     const highlightWhySubtitle = React.useCallback(
-        (text: string) => {
-            // Prefer full-sentence translation first
-            const cc = (selectedCountry || "SA") as string;
-            const full = t(text, cc);
-            if (full && full !== text) {
-                // Apply highlighting even on translated text
-                const parts = full.split(/(PEPPOL|compliance)/gi);
+        (subtitle: { text: string; highlights: string[] } | string) => {
+            if (typeof subtitle === 'string') {
+                // Fallback for old format
+                const parts = subtitle.split(/(PEPPOL|compliance)/gi);
                 return (
                     <span>
                         {parts.map((part, index) => {
@@ -635,20 +633,20 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                 );
             }
 
-            // Apply highlighting to original text
-            const parts = text.split(/(PEPPOL|compliance)/gi);
+            const { text, highlights } = subtitle;
+            const parts = text.split(' ');
             return (
                 <span>
-                    {parts.map((part, index) => {
-                        const lowerPart = part.toLowerCase();
-                        if (lowerPart === "peppol" || lowerPart === "compliance") {
+                    {parts.map((word, index) => {
+                        const cleanWord = word.replace(/[.,!?]/g, '');
+                        if (highlights.includes(cleanWord)) {
                             return (
                                 <span key={index} className="text-[#194BED] font-semibold">
-                                    <T>{part}</T>
+                                    {word}{' '}
                                 </span>
                             );
                         }
-                        return <T key={index}>{part}</T>;
+                        return word + ' ';
                     })}
                 </span>
             );
@@ -988,20 +986,20 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     <img
                         src={
                             countryCode.toUpperCase() === "AE"
-                                ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
+                                ? invoiceList.src || invoiceList.src
                                 : countryCode.toUpperCase() === "SA"
-                                    ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
+                                    ? invoiceList.src || invoiceList.src
                                     : countryCode.toUpperCase() === "JD"
-                                        ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
+                                        ? invoiceList.src || invoiceList.src
                                         : countryCode.toUpperCase() === "MU"
-                                            ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
+                                            ? invoiceList.src || invoiceList.src
                                             : countryCode.toUpperCase() === "MA"
-                                                ? AssetPath.home.invoiceList.src || AssetPath.home.invoiceList.src
+                                                ? invoiceList.src || invoiceList.src
                                                 : countryCode.toUpperCase() === "OM"
-                                                    ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
+                                                    ? invoiceList.src || invoiceList.src
                                                     : countryCode.toUpperCase() === "BH"
-                                                        ? AssetPath.home.invoiceList?.src || AssetPath.home.invoiceList.src
-                                                        : AssetPath.home.invoiceList.src
+                                                        ? invoiceList.src || invoiceList.src
+                                                        : invoiceList.src
                         }
                         alt="invoiceList"
                         className="max-w-[1240px] w-full h-auto mx-auto"

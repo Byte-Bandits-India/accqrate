@@ -30,7 +30,7 @@ export interface CountryContent {
   cards: Card[];
   testimonials?: Testimonial[];
   whyAccqrateTitle?: string;
-  whyAccqrateSubtitle?: string;
+  whyAccqrateSubtitle?: { text: string; highlights: string[] };
   whyAccqrateDescription?: string;
   whyAccqrateCertification?: string;
   whyAccqrateFeatures?: Array<{
@@ -65,7 +65,7 @@ const defaultContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, zaptcha-certified platform tailored for Belgian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "ZAPTCHA Member . GDPR . ISO 27001",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless Direct Integration e-invoicing experience.",  whyAccqrateCertification: "Direct Integration Member and certified Access Point Provider and Service Metadata Publisher.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
@@ -197,7 +197,7 @@ const jordanContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, ISTD-certified platform tailored for Jordan businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless Direct Integration e-invoicing experience.",  whyAccqrateCertification: "Direct Integration Member and certified Access Point Provider and Service Metadata Publisher.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
@@ -329,7 +329,7 @@ const mauritiusContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, MRA-certified platform tailored for Mauritian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless Direct Integration e-invoicing experience.",  whyAccqrateCertification: "Direct Integration Member and certified Access Point Provider and Service Metadata Publisher.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
@@ -461,7 +461,7 @@ const malaysiaContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, LHDN-certified platform tailored for Malaysian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
   whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [
@@ -596,7 +596,7 @@ const belgiumContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for Belgian businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
   whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [
@@ -709,7 +709,7 @@ const uaeContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for United Arab Emirates businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
   whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [
@@ -830,7 +830,7 @@ const polandContent: CountryContent = {
   heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for Polish businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
-  whyAccqrateSubtitle: "We specialize in providing reliable and efficient Solutions",
+  whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.",
   whyAccqrateCertification: "Peppol Member and certified Access Point Provider and Service Metadata Publisher.",
   whyAccqrateFeatures: [

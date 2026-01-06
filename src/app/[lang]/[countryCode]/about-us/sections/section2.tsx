@@ -62,7 +62,7 @@ export default function Section2() {
                 <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] mb-2">
                   <T>{(content.section1 as any).title1}</T>
                 </h3>
-                <p className="text-[#5A6183] leading-[25px]">
+                <p className="text-[#5A6183] text-[16px] leading-[35px]">
                   <T>{(content.section1 as any).desc1}</T>
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function Section2() {
                 <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] mb-2">
                   <T>{(content.section1 as any).title2}</T>
                 </h3>
-                <p className="text-[#5A6183] leading-[25px]">
+                <p className="text-[#5A6183] text-[16px] leading-[35px]">
                   <T>{(content.section1 as any).desc2}</T>
                 </p>
               </div>
@@ -80,7 +80,7 @@ export default function Section2() {
                 <h3 className="font-bold text-[16px] md:text-[18px] leading-[28px] mb-2">
                   <T>{(content.section1 as any).title3}</T>
                 </h3>
-                <p className="text-[#5A6183] leading-[25px]">
+                <p className="text-[#5A6183] text-[16px] leading-[35px]">
                   <T>{(content.section1 as any).desc3}</T>
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function Section2() {
                 <h3 className="font-semibold text-[#9894FF] text-[16px] leading-[28px] md:text-[18px] mb-[8px]">
                   <T>{(content.section2 as any).title1}</T>
                 </h3>
-                <p className=" text-[14px] leading-[25px]">
+                <p className=" text-[16px] leading-[35px]">
                   <T>{(content.section2 as any).desc1}</T>
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function Section2() {
                 <h3 className="font-semibold text-[#9894FF] leading-[28px] text-[16px] md:text-[18px] mb-[8px]">
                   <T>{(content.section2 as any).title2}</T>
                 </h3>
-                <p className="text-[14px] leading-[25px]">
+                <p className="text-[16px] leading-[35px]">
                   <T>{(content.section2 as any).desc2}</T>
                 </p>
               </div>

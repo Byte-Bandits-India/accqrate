@@ -11,7 +11,7 @@ import type { JSX } from 'react';
 import Reveal from "@/Components/Reveal";
 
 /* ---------- Highlight helper (unchanged logic) ---------- */
-function highlightMatches(text: string | undefined) {
+function highlightMatches(text: string | undefined, returnHTML: boolean = false) {
   if (!text) return null;
 
   const regex = /(E[-\s]?invoicing)|\bBelgium\b|\bEU\b/gi;
@@ -25,15 +25,23 @@ function highlightMatches(text: string | undefined) {
       parts.push(text.slice(lastIndex, idx));
     }
     const matchedText = text.slice(idx, regex.lastIndex);
-    parts.push(
-      <span key={idx} className="text-[#194BED]">
-        {matchedText}
-      </span>
-    );
+    if (returnHTML) {
+      parts.push(`<span class="text-[#194BED]">${matchedText}</span>`);
+    } else {
+      parts.push(
+        <span key={idx} className="text-[#194BED]">
+          {matchedText}
+        </span>
+      );
+    }
     lastIndex = regex.lastIndex;
   }
 
   if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+
+  if (returnHTML) {
+    return parts.join('');
+  }
 
   return (
     <>
@@ -80,15 +88,19 @@ export default function Section1() {
 
             {/* ---------- LEFT: TEXT ---------- */}
             <Reveal direction="left">
-              <h1 className="text-[24px] font-bold leading-[38px] text-[#1c2041] tracking-wide max-w-[532px]">
-                <T>{highlightMatches(content.heading)}</T>
+              <h1 className="text-[24px] font-bold leading-[38px] text-[#1c2041] tracking-wide max-w-[460px]">
+                {content.heading.includes('<br/>') ? (
+                  <span dangerouslySetInnerHTML={{ __html: highlightMatches(content.heading, true) as string }} />
+                ) : (
+                  <T>{highlightMatches(content.heading)}</T>
+                )}
               </h1>
 
-              <div className="mt-6 max-w-[600px] space-y-3 text-[14px] leading-[28px]  text-[#1C2041]">
-                <p>
+              <div className="mt-6 max-w-[600px] space-y-3 text-[16px] leading-[35px]  text-[#1C2041]">
+                <p className="text-[16px]">
                   <T>{content.description.split("\n\n")[0]}</T>
                 </p>
-                <p>
+                <p className="text-[16px]">
                   <T>{content.description.split("\n\n")[1]}</T>
                 </p>
               </div>

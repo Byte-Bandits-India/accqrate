@@ -10,7 +10,7 @@ export const section4Content = {
             {
                 img: AssetPath.home.feature1,
                 title: "Expansion and Growth Across the EU",
-                description: "Accqrate's entry into Belgium marks a pivotal expansion in our European compliance strategy:"
+                description: "Accqrate's entry into Belgium marks a pivotal expansion in our European compliance strategy."
             },
             {
                 img: AssetPath.home.feature2,
@@ -25,12 +25,12 @@ export const section4Content = {
             {
                 img: AssetPath.home.feature4,
                 title: "Flexible Integration Capabilities",
-                description: "• API push & pull\n• PEPPOL connectivity\n• ERP adapters\n• Flat-file / Excel upload\n• Custom integration executables\n• Designed to support everything from legacy on-prem systems to complex multi-ERP landscapes"
+                description: "• API-Based Integrations\n • FTP/S-FTP Integrations \n • Manual or Excel Uploads"
             },
             {
                 img: AssetPath.home.feature5,
                 title: "Purpose-Built for All Business Sizes",
-                description: "Accqrate supports both:\n• SMEs needing a lightweight, standalone e-invoicing solution\n• Large enterprises requiring multi-entity orchestration, VAT reconciliation, and cross-border compliance"
+                description: "• SMEs seeking a lightweight, standalone e-invoicing solution\n• Large enterprises requiring multi-entity and solution integration, VAT reconciliation, and cross-border compliance"
             }
         ]
     },

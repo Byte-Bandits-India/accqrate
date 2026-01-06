@@ -199,7 +199,7 @@ const Section1 = () => {
     // Per-page overrides
     const pageOverrides: Record<string, Partial<{
         whyAccqrateTitle: string;
-        whyAccqrateSubtitle: string;
+        whyAccqrateSubtitle: { text: string; highlights: string[] };
         headingDescription: string;
         heroDescription: string;
         heroTitle: string;
@@ -209,7 +209,6 @@ const Section1 = () => {
     }>> = {
         sa: {
             whyAccqrateTitle: "Compliant with ZATCA, Tax and Customs Authority",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with ZATCA",
             headingDescription: "Phase 2 requirements",
             heroDescription: "Accqrate seamlessly generates ZATCA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ZATCA Phase 2 for every invoice sent to your customers.",
             heroTitle: "5,000+ Saudi companies across all industries",
@@ -246,7 +245,6 @@ const Section1 = () => {
         },
         be: {
             whyAccqrateTitle: "Compliant with Belgium's Mandatory B2B E-Invoicing Regulation",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with Belgium's FPS Finance 2026 mandate",
             headingDescription: "EN 16931 and Peppol Requirements:",
             heroDescription: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
@@ -283,7 +281,6 @@ const Section1 = () => {
         },
         pl: {
             whyAccqrateTitle: "Compliant with Poland's Mandatory B2B E-Invoicing Regulation",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with Poland's KSeF system",
             headingDescription: "Phase 1 & 2 Requirements",
             heroDescription: "Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
@@ -320,7 +317,6 @@ const Section1 = () => {
         },
         ae: {
             whyAccqrateTitle: 'Compliant with UAE\s Mandatory B2B E-Invoicing Regulation',
-            whyAccqrateSubtitle: 'Generate invoices fully compliant with UAE\'s FTA 5 Corner Model (DCTCE)',
             headingDescription: 'FTA and Peppol Requirements:',
             heroDescription: 'Accqrate generates fully FTA-compliant structured eInvoices aligned to the UAE PINT framework and supports exchange through the DCTCE / 5-corner (PEPPOL) model.',
             heroTitle: '5,000+ Across 30+ Industries',
@@ -369,7 +365,6 @@ const Section1 = () => {
         },
         ma: {
             whyAccqrateTitle: "Compliant with LHDN, Tax and Customs Authority",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with LHDN",
             headingDescription: "Phase 2 requirements",
             heroDescription: "Accqrate seamlessly generates LHDN approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with LHDN Phase 2 for every invoice sent to your customers.",
             heroTitle: "5,000+ Malaysia companies across all industries",
@@ -406,7 +401,6 @@ const Section1 = () => {
         },
         mu: {
             whyAccqrateTitle: "Compliant with MRA, Tax and Customs Authority",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with MRA",
             headingDescription: "Phase 2 requirements",
             heroDescription: "Accqrate seamlessly generates MRA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with MRA Phase 2 for every invoice sent to your customers.",
             heroTitle: "5,000+ Mauritius companies across all industries",
@@ -443,7 +437,6 @@ const Section1 = () => {
         },
         jd: {
             whyAccqrateTitle: "Compliant with ISTD, Tax and Customs Authority",
-            whyAccqrateSubtitle: "Generate invoices fully compliant with ISTD",
             headingDescription: "Phase 2 requirements",
             heroDescription: "Accqrate seamlessly generates ISTD approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ISTD Phase 2 for every invoice sent to your customers.",
             heroTitle: "5,000+ Jordan companies across all industries",
@@ -482,7 +475,7 @@ const Section1 = () => {
 
     const defaultPageContent = {
         whyAccqrateTitle: countryContent?.whyAccqrateTitle || 'Compliant e-Invoicing',
-        whyAccqrateSubtitle: countryContent?.whyAccqrateSubtitle || 'Compliance and automation tailored to your market.',
+        whyAccqrateSubtitle: countryContent?.whyAccqrateSubtitle || { text: 'Compliance and automation tailored to your market.', highlights: [] },
         headingDescription: countryContent?.heroDescription || 'Accqrate delivers compliant e-invoicing, automated mapping and secure transmission to authority networks.',
         heroDescription: countryContent?.heroDescription || 'Compliant e-invoicing for your market.',
         peppolCardText: 'Accqrate supports Peppol e-Invoicing standards',
@@ -693,7 +686,14 @@ const Section1 = () => {
                                                 </h3>
 
                                                 <h3 className='text-[20px] font-medium text-[#1c2041] mt-4 text-left leading-[32px]'>
-                                                    <T>{pageContent.whyAccqrateSubtitle}</T>
+                                                    {pageContent.whyAccqrateSubtitle.text.split(' ').map((word, index) => {
+                                                        const isHighlight = pageContent.whyAccqrateSubtitle.highlights.includes(word);
+                                                        return (
+                                                            <span key={index} className={isHighlight ? 'text-[#194BED]' : ''}>
+                                                                {word}{' '}
+                                                            </span>
+                                                        );
+                                                    })}
                                                 </h3>
 
 

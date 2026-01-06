@@ -42,7 +42,7 @@ const Section5 = () => {
 
                     {/* Right: Description */}
                     <Reveal direction="right" className="flex justify-center lg:justify-start">
-                        <p className="text-fluid-small  leading-[28px] max-w-[750px]">
+                        <p className="text-[16px]  leading-[35px] max-w-[750px]">
                             <T lang={lang} countryCode={countryCode?.toUpperCase()}>
                                 {content.description}
                             </T>

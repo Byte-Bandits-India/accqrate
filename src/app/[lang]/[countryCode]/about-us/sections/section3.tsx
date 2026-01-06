@@ -39,7 +39,7 @@ export default function Section3() {
         <FadeUp>
           {/* HEADER */}
           <Reveal direction="bottom">
-            <h2 className="text-center text-[18px] text-[#1c2041] md:text-[24px] leading-[38px] font-bold mb-2">
+            <h2 className="text-center text-[18px] text-[#1c2041] md:text-[24px] leading-[38px] font-bold">
               <span className="text-[#1A4CED]">Our</span> Journey
             </h2>
 
