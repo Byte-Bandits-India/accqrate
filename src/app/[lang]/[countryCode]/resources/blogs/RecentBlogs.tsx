@@ -126,7 +126,11 @@ export default function RecentBlogPosts() {
 
         <div className="p-5 border-t border-gray-100 flex-1 flex flex-col">
           <FadeUp className="font-semibold text-[18px] text-[#1c2041] line-clamp-2 leading-[28px] mb-3">
-            <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.title}</T>
+            {post.title.includes('\n') ? (
+              <span dangerouslySetInnerHTML={{ __html: post.title.replace(/\n/g, '<br />') }} />
+            ) : (
+              <T lang={lang} countryCode={countryCode.toUpperCase()}>{post.title}</T>
+            )}
           </FadeUp>
 
           <FadeUp className="text-[#5a6183] text-[14px]  line-clamp-3 leading-[25px] tracking-wide flex-1">

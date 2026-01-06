@@ -142,7 +142,7 @@ export default function IntegrationFlow() {
             <>
               {/* Desktop Timeline */}
               <Reveal direction="left" className="hidden lg:block relative">
-                <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#194BED] to-transparent -translate-x-1/2"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#c6d4ff] to-transparent -translate-x-1/2"></div>
 
                 {data.steps.map((step: any, index: number) => (
                   <Row
@@ -156,29 +156,44 @@ export default function IntegrationFlow() {
                         alt=""
                         width={400}
                         height={300}
-                        className="w-full mx-auto"
+                        className="w-full max-h-[350px] max-w-[350px] mx-auto"
                       />
                     </Col>
 
                     <Col xs={0} md={2} className="flex justify-center relative z-10">
-                      <div className="bg-white rounded-full p-3 shadow-lg border border-gray-200">
-                        <Image src={step.icon} width={60} height={50} alt="" />
+                      <div className="bg-white rounded-full p-2 shadow-lg border border-gray-200">
+                        <Image src={step.icon} width={36} height={36} alt="" />
                       </div>
                     </Col>
 
-                    <Col xs={24} md={11}>
-                      <div className="text-[#FF8D67] text-[24px] font-bold mb-2">
+                    <Col
+                      xs={24}
+                      md={11}
+                      className={index % 2 !== 0 ? "text-right md:pr-8" : "text-left pl-8"}
+                    >
+                      <div className="text-[#FF8D67] text-[24px] lg:text-[35px] leading-[35px] font-bold mb-2">
                         <T>
                           {step.number.toString().toLowerCase().includes("step")
                             ? step.number
-                            : `Step ${parseInt(step.number, 10)}`}
+                            : parseInt(step.number, 10).toString().padStart(2, "0")}
                         </T>
                       </div>
 
-                      <h3 className="text-[16px] md:text-[18px] font-bold text-[#1C2041] mb-4 leading-[28px]">
+                      <h3
+                        className={`text-[16px] md:text-[24px] font-bold text-[#1C2041] mb-4 leading-[39px]
+      ${index % 2 !== 0 ? "ml-auto" : ""}
+      max-w-[430px]
+    `}
+                      >
                         <T>{step.title}</T>
                       </h3>
-                      <p className="text-[#5A6183] md:text-[16px] leading-[28px]">
+
+                      <p
+                        className={`text-[#5A6183] md:text-[16px] leading-[35px]
+      ${index % 2 !== 0 ? "ml-auto" : ""}
+      max-w-[430px]
+    `}
+                      >
                         <T>{step.description}</T>
                       </p>
                     </Col>

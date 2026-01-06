@@ -46,7 +46,7 @@ const blogPosts: BlogPost[] = [
   {
     id: 5,
     url: "microsoft365",
-    title: "Microsoft Dynamics 365 E-invoicing and Integration with ZATCA Phase 2",
+    title: "Microsoft Dynamics 365\n E-invoicing and Integration with ZATCA Phase 2",
     image: "/images/blogs/zatcaintegration-with-microsoft365.webp",
     desc: "As one of the top-tier ERP providers in Saudi Arabia, Microsoft Dynamics 365 caters to medium and large enterprises...",
     country: "KSA"

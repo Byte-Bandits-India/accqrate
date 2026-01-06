@@ -524,6 +524,7 @@ import polabout from "@/Assets/images/about/pol_about.png"
 import adoption from "@/Assets/images/about/adoption.95314a9a.webp"
 import innovation from "@/Assets/images/about/innovation-flexibility.e95d2eaf.webp"
 import zatcaApproval from "@/Assets/images/about/zatca-approval.e70d18bd.webp"
+import saudiPerson from "@/Assets/images/about/saudi-person.webp"
 
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
@@ -1135,6 +1136,7 @@ const AssetPath = {
     adoption,
     innovation,
     zatcaApproval,
+    saudiPerson,
   },
 
   404: {

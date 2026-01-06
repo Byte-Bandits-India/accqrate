@@ -567,7 +567,11 @@ const Software: React.FC = () => {
                                     <div className="hidden lg:block bg-white p-4 rounded-2xl max-w-[450px]">
                                         <ul className="space-y-3">
                                             {badges.slice(0, 5).map((badge, index) => (
-                                                <li key={index} className="flex items-start gap-3">
+                                                <li
+                                                    key={index}
+                                                    className="flex items-center gap-3"
+                                                >
+                                                    {/* Icon */}
                                                     <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-[#ccd8ff] rounded-full">
                                                         <Image
                                                             src={badge.img}
@@ -578,7 +582,8 @@ const Software: React.FC = () => {
                                                         />
                                                     </div>
 
-                                                    <span className="text-[#5a6183] text-[16px] mt-2 leading-[28px]">
+                                                    {/* Text */}
+                                                    <span className="text-[#5a6183] text-[16px] leading-[28px]">
                                                         <T>{badge.text}</T>
                                                     </span>
                                                 </li>
@@ -586,6 +591,7 @@ const Software: React.FC = () => {
                                         </ul>
                                     </div>
                                 )}
+
 
                                 {/* FEATURES SECTION - Mobile */}
                                 {badges.length > 0 && (

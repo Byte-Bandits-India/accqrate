@@ -1,4 +1,4 @@
-import CTASection from "../../resources/announcement/sections/CTASection";
+import ZatcaSection from "@/Components/ZatcaSection";
 import Home from "./sections/home"
 import Section1 from "./sections/section1"
 import Section2 from "./sections/section2";
@@ -9,7 +9,7 @@ const software = () => {
             <Home />
             <Section1 />
             <Section2 />
-            <CTASection />
+            <ZatcaSection />
         </section>
     );
 };

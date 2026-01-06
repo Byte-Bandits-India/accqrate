@@ -68,7 +68,7 @@ const defaultContent: CountryContent = {
   heroTagline: "ZATCA Phase-2 Approved . GDPR . ISO 27001",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: { text: "From compliance to automation, Accqrate ensures a seamless ZATCA Phase-2\n e-invoicing integration.", highlights: ["compliance", "seamless"] },
-  whyAccqrateDescription: "100% ZATCA Phase-2 Approved E-invoicing Solution",  whyAccqrateCertification: "ZATCA Phase 2 Approved E-invoicing Solution",  whyAccqrateFeatures: [
+  whyAccqrateDescription: "100% ZATCA Phase-2 Approved E-invoicing Solution",  whyAccqrateCertification: "ZATCA Phase 2 approved e-invoicing solution. Built for Saudi businesses, hosted in Saudi cloud.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
       title: "One platform.",
@@ -172,25 +172,23 @@ const defaultContent: CountryContent = {
     }
   ],
   complianceSection: {
-    complianceTitle: "Full Compliance with Saudi Arabia’s ZATCA Phase 2\n E-Invoicing Mandate",
-    complianceDescription: "Accqrate ensures full compliance with ZATCA Phase 2, enabling Saudi businesses to meet regulatory requirements with precision, security, and operational continuity.  Our platform supports:",
+    complianceTitle: "Full compliance with KSA's E-invoicing Mandate",
+    complianceDescription: "Accqrate ensures 100% compliance with ZATCA Phase 2 E-invoicing, enabling Saudi businesses to meet regulatory requirements. Our platform supports:",
     complianceItems: [
-      "ZATCA-compliant XML / UBL invoices",
-      "Direct API integration with ZATCA (Fatoora)",
-      "Real-time clearance & reporting",
+      "ZATCA complaint PDF A3 with XML Invoices",
+      "Seamless Integration with ZATCA",
+      "Real Time & Batch Wise Clearance",
       "Automatic regulatory updates",
-      "Seamless ERP & POS integration"
     ],
-    compliancePara: "Accqrate provides Saudi enterprises with a future-ready e-invoicing foundation, ensuring compliance today while remaining aligned with ZATCA’s evolving regulatory roadmap.",
+    compliancePara: "",
     automationTitle: "Hassle-Free E-Invoicing Automation",
-    automationDescription: "Move from manual processes to fully automated, ZATCA-ready e-invoicing—built for scale, accuracy, and compliance in Saudi Arabia.",
+    automationDescription: "Move from manual processes to fully automated ZATCA-ready E-invoicing, built for scale, accuracy and compliance in Saudi Arabia.",
     automationItems: [
       "AI-driven invoice validation",
       "Real-time error detection & fixes",
-      "Zero-cost ZATCA regulatory updates",
-      "Automated generation → clearance → reporting → archiving"
+      "Automated generation → clearance → reporting → archiving",
     ],
-    automationPara:"Accqrate eliminates operational friction while ensuring continuous compliance with Saudi Arabia’s evolving e-invoicing regulations.",
+    automationPara:"",
     buttonText: "Book an Appointment"
   }
 };

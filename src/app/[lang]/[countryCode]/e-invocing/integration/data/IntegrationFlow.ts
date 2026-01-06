@@ -8,7 +8,7 @@ sa: {
 
   steps: [
     {
-      number: "Step 1",
+      number: "01",
       title: "Generate invoices and complete in your ERP/POS",
       description:
         "Efficiently generate and finalize invoices directly within your ERP/POS system for streamlined financial management.",
@@ -16,7 +16,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon1.src,
     },
     {
-      number: "Step 2",
+      number: "02",
       title: "Our Connectors in your ERP will take care of the rest",
       description:
         "Our connectors, seamlessly integrated into your ERP, will handle all subsequent processes efficiently.",
@@ -24,7 +24,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon2.src,
     },
     {
-      number: "Step 3",
+      number: "03",
       title:
         "Our E-invoicing solution transforms and transmits the data to ZATCA",
       description:
@@ -33,7 +33,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon3.src,
     },
     {
-      number: "Step 4",
+      number: "04",
       title: "ZATCA approved invoices are given back to your ERP/POS",
       description:
         "ZATCA clearances are processed instantly, ensuring swift compliance and operational efficiency.",
@@ -41,7 +41,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon2.src,
     },
     {
-      number: "Step 5",
+      number: "05",
       title:
         "ERP/POS receives back QR code, XML, and PDF/A3. Data archived for 10 years.",
       description:
@@ -50,7 +50,7 @@ sa: {
       icon: AssetPath.invoicing.integrationFlowIcon3.src,
     },
     {
-      number: "Step 6",
+      number: "06",
       title: "Print the PDF with QR code. Send PDF A3",
       description:
         "Generate and print the invoice PDF with the QR code. Send or dispatch the document as A3 for accurate archiving and accessible presentation.",

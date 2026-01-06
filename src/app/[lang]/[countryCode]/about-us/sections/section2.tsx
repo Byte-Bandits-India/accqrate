@@ -22,7 +22,9 @@ export default function Section2() {
     (content.section1 as any)?.image || AssetPath.aboutus.beabout;
 
   const rightImage =
-    (content.section2 as any)?.image || AssetPath.aboutus.bemission;
+    countryCode === 'sa'
+      ? AssetPath.aboutus.saudiPerson
+      : (content.section2 as any)?.image || AssetPath.aboutus.bemission;
 
   return (
     <section className="w-full overflow-x-hidden  bg-white py-20 ">

@@ -100,7 +100,7 @@ export default function ZatcaSection() {
 
   return (
     <section
-      className="w-full bg-gradient-to-r from-[#242087] to-[#1A0C48] text-white relative py-6 "
+      className="w-full bg-gradient-to-r from-[#242087] to-[#1A0C48] text-white relative "
       data-aos="fade-up"
     >
       <div
@@ -112,13 +112,13 @@ export default function ZatcaSection() {
           md:grid-cols-[auto_auto_auto]
           items-center
           justify-between
-          gap-y-10
+          gap-y-6
           px-6 md:px-8 xl:px-0
         "
       >
         {/* COLUMN 1 — LEFT CONTENT */}
         <div className="z-20 text-left order-2 md:order-1">
-          <h2 className="text-[18px] md:text-[24px] font-bold mb-6 leading-tight">
+          <h2 className="text-[18px] md:text-[24px] font-bold mb-4 leading-tight">
             <T lang={lang} countryCode={countryCode}>{content.title}</T>
           </h2>
 
@@ -154,9 +154,9 @@ export default function ZatcaSection() {
           <Image
             src={typeof AssetPath.resources.tax === 'string' ? AssetPath.resources.tax : AssetPath.resources.tax.src}
             alt="Invoice"
-            width={350}
+            width={300}
             height={300}
-            className="rounded-xl hidden md:block lg:h-[350px] xl:h-[350px]"
+            className="rounded-xl hidden md:block lg:h-[280px]"
           />
 
           {/* Compliance Box - Show based on country */}
@@ -166,7 +166,7 @@ export default function ZatcaSection() {
               alt={content.boxAlt}
               width={boxDimensions.width}
               height={boxDimensions.height}
-              className={`rounded-xl hidden md:block ${isPeppolBox ? "max-w-[320px]" : "max-w-[420px]"}`}
+              className={`rounded-xl hidden md:block ${isPeppolBox ? "max-w-[320px]" : "max-w-[310px]"}`}
             />
           )}
         </div>
@@ -178,7 +178,7 @@ export default function ZatcaSection() {
             alt="Security Lock Illustration"
             width={240}
             height={160}
-            className="lg:h-[100px] lg:w-fit md:h-[150px] xl:h-[160px] md:hidden lg:block"
+            className="lg:h-[100px] lg:w-fit md:h-[130px] xl:h-[130px] md:hidden lg:block"
           />
         </div>
 

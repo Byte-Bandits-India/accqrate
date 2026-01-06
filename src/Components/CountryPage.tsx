@@ -636,27 +636,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             }
 
             const { text, highlights } = subtitle;
-            const lines = text.split('\n');
+            const parts = text.split(' ');
             return (
                 <span>
-                    {lines.map((line, lineIndex) => {
-                        const parts = line.split(' ');
-                        return (
-                            <React.Fragment key={lineIndex}>
-                                {parts.map((word, index) => {
-                                    const cleanWord = word.replace(/[.,!?]/g, '');
-                                    if (highlights.includes(cleanWord)) {
-                                        return (
-                                            <span key={index} className="text-[#194BED] font-semibold">
-                                                {word}{' '}
-                                            </span>
-                                        );
-                                    }
-                                    return word + ' ';
-                                })}
-                                {lineIndex < lines.length - 1 && <br />}
-                            </React.Fragment>
-                        );
+                    {parts.map((word, index) => {
+                        const cleanWord = word.replace(/[.,!?]/g, '');
+                        if (highlights.includes(cleanWord)) {
+                            return (
+                                <span key={index} className="text-[#194BED] font-semibold">
+                                    {word}{' '}
+                                </span>
+                            );
+                        }
+                        return word + ' ';
                     })}
                 </span>
             );
@@ -1019,105 +1011,96 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                 {/* Trusted text */}
                 <div className="rounded-[30px] py-6 max-w-[1280px] mx-auto">
-                    <div className="max-w-[1240px] mx-auto px-4 md:px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6 items-start">
+                    <div className="max-w-[1240px] mx-auto px-4 md:px-6 mt-[32px] grid xl:grid-cols-[440px_1fr] gap-6">
+                        {/* Left Side: Accqrate E-invoicing */}
+                        <Reveal direction='left' className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col">
+                            <div className="flex flex-col flex-1">
+                                <div>
+                                    <div className="flex items-center space-x-4">
+                                        <Image
+                                            src={AssetPath.home.orangeA}
+                                            alt="one"
+                                            width={50}
+                                            height={50}
+                                            className="h-[40px] md:h-[50px] w-auto"
+                                            unoptimized
+                                        />
 
-                        {/* LEFT SIDE — STICKY WRAPPER */}
-                        <div className="sticky top-24 self-start">
-                            <Reveal
-                                direction="left"
-                                className="bg-[#FFFFFF] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col"
-                            >
-                                <div className="flex flex-col">
-                                    <div>
-                                        <div className="flex items-center space-x-4">
-                                            <Image
-                                                src={AssetPath.home.orangeA}
-                                                alt="one"
-                                                width={50}
-                                                height={50}
-                                                className="h-[40px] md:h-[50px] w-auto"
-                                                unoptimized
-                                            />
-
-                                            <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small md:text-[18px] whitespace-nowrap">
-                                                <T>Accqrate E-invoicing</T>
-                                                <span className="text-sm md:text-[16px] text-[#5a6183]">
-                                                    <br />
-                                                    <T>{countryContent.heroSubtitle}</T>
-                                                </span>
+                                        <span className="text-[#1c2041] tracking-heading leading-tight text-fluid-small md:text-[18px] whitespace-nowrap">
+                                            <T>Accqrate E-invoicing</T>
+                                            <span className="text-sm md:text-[16px] text-[#5a6183]">
+                                                <br />
+                                                <T>{countryContent.heroSubtitle}</T>
                                             </span>
-                                        </div>
-
-                                        <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-[14px] mt-[30px]">
-                                            <T>
-                                                {countryContent.whyAccqrateCertification ||
-                                                    "Peppol Member and certified Access Point Provider and Service Metadata Publisher."}
-                                            </T>
-                                        </p>
+                                        </span>
                                     </div>
 
-                                    <div className="w-full">
-                                        <div className="h-auto md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
-                                            <Image
-                                                src={getInvoiceHomeImage()}
-                                                alt="Invoice preview"
-                                                width={620}
-                                                height={420}
-                                                className="w-full h-full object-contain md:object-cover"
-                                                unoptimized
-                                            />
-                                        </div>
+                                    <p className="pb-6 md:pb-[32px] tracking-para leading-[24px] text-[#1c2041] text-[14px] mt-[30px]">
+                                        <T>
+                                            {countryContent.whyAccqrateCertification ||
+                                                "Peppol Member and certified Access Point Provider and Service Metadata Publisher."}
+                                        </T>
+                                    </p>
+                                </div>
+
+                                <div className="w-full">
+                                    <div className="h-auto md:h-[420px] rounded-[20px] flex items-center justify-center overflow-hidden bg-white">
+                                        <Image
+                                            src={getInvoiceHomeImage()}
+                                            alt="Invoice preview"
+                                            width={620}
+                                            height={420}
+                                            className="w-full h-full object-contain md:object-cover"
+                                            unoptimized
+                                        />
                                     </div>
                                 </div>
-                            </Reveal>
-                        </div>
+                            </div>
+                        </Reveal>
 
-                        {/* RIGHT SIDE */}
-                        <div className="flex flex-col gap-6 w-full">
+                        {/* Right Side: Compliance + Automation */}
+                        <div className="flex flex-col gap-6 xl:h-full w-full">
                             {countryContent.complianceSection && (
                                 <>
                                     {/* Compliance Card */}
-                                    <Reveal
-                                        direction="right"
-                                        className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6"
-                                    >
+                                    <Reveal direction="right" className="bg-[#F7F7F7] border border-[#E7EBF0] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[23px] md:text-[24px] text-[#1c2041] font-bold leading-[30px]">
-                                            {countryContent.complianceSection.complianceTitle.includes("\n") ? (
-                                                <span
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: countryContent.complianceSection.complianceTitle.replace(
-                                                            /\n/g,
-                                                            "<br />"
-                                                        ),
-                                                    }}
-                                                />
+                                            {countryContent.complianceSection.complianceTitle.includes('\n') ? (
+                                                <span dangerouslySetInnerHTML={{ __html: countryContent.complianceSection.complianceTitle.replace(/\n/g, '<br />') }} />
                                             ) : (
                                                 <T>{countryContent.complianceSection.complianceTitle}</T>
                                             )}
                                         </h2>
 
-                                        <h2 className="text-[14px] md:text-[16px] mt-4 text-[#1c2041] leading-[28px] font-normal">
-                                            <T>{countryContent.complianceSection.complianceDescription}</T>
-                                        </h2>
+                                        {countryContent.complianceSection && (
+                                            <>
+                                                <h2 className="text-[14px] md:text-[16px] mt-4 text-[#1c2041] leading-[28px] font-normal">
+                                                    <T>
+                                                        {
+                                                            countryContent.complianceSection
+                                                                .complianceDescription
+                                                        }
+                                                    </T>
+                                                </h2>
 
-                                        <ul className="space-y-2 mt-4 text-[14px] text-[#1c2041] leading-[28px] list-disc pl-5">
-                                            {countryContent.complianceSection.complianceItems.map((item, index) => (
-                                                <li key={index}>
-                                                    <T>{item}</T>
-                                                </li>
-                                            ))}
-                                        </ul>
-
-                                        <p className="mt-4 text-[14px] text-[#1c2041] leading-[28px]">
-                                            <T>{countryContent.complianceSection.compliancePara}</T>
-                                        </p>
+                                                <ul className="space-y-2  mt-4 text-[14px] text-[#1c2041]  leading-[28px] list-disc pl-5">
+                                                    {countryContent.complianceSection.complianceItems.map(
+                                                        (item, index) => (
+                                                            <li key={index}>
+                                                                <T>{item}</T>
+                                                            </li>
+                                                        )
+                                                    )}
+                                                </ul>
+                                                <p className="mt-4 text-[14px] text-[#1c2041] leading-[28px]">
+                                                    <T>{countryContent.complianceSection.compliancePara}</T>
+                                                </p>
+                                            </>
+                                        )}
                                     </Reveal>
 
                                     {/* Automation Card */}
-                                    <Reveal
-                                        direction="right"
-                                        className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6"
-                                    >
+                                    <Reveal direction="right" className="bg-[#E8EEFF] border border-[#E8EEFF] font-inter rounded-xl md:rounded-2xl p-6 flex-1">
                                         <h2 className="text-[23px] md:text-[24px] font-bold text-[#1c2041]">
                                             <span className="text-[#194BED] font-bold">
                                                 <T>Hassle-Free</T>
@@ -1126,15 +1109,19 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         </h2>
 
                                         <h2 className="text-[14px] md:text-[16px] mt-4 font-normal leading-[28px] text-[#1c2041]">
-                                            <T>{countryContent.complianceSection.automationDescription}</T>
+                                            <T>
+                                                {countryContent.complianceSection.automationDescription}
+                                            </T>
                                         </h2>
 
                                         <ul className="list-disc pl-5 space-y-2 mt-4 text-[14px] leading-[28px]">
-                                            {countryContent.complianceSection.automationItems.map((item, index) => (
-                                                <li key={index}>
-                                                    <T>{item}</T>
-                                                </li>
-                                            ))}
+                                            {countryContent.complianceSection.automationItems.map(
+                                                (item, index) => (
+                                                    <li key={index}>
+                                                        <T>{item}</T>
+                                                    </li>
+                                                )
+                                            )}
                                         </ul>
 
                                         <p className="mt-4 text-[14px] text-[#1c2041] leading-[28px]">
@@ -1152,8 +1139,6 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             )}
                         </div>
                     </div>
-
-
                 </div>
             </div>
 
