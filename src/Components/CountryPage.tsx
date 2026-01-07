@@ -1365,7 +1365,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                 {/* Image (Mobile) */}
                                 <div className="lg:hidden flex items-center justify-center p-4 md:p-6">
                                     <Image
-                                        src={AssetPath.home.vida}
+                                        src={vision}
                                         alt="VIDA Compliance"
                                         width={520}
                                         height={420}
