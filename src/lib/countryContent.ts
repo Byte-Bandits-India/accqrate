@@ -71,9 +71,9 @@ const defaultContent: CountryContent = {
   whyAccqrateDescription: "From compliance to automation, Accqrate ensures a seamless ZATCA Phase-2 e-invoicing integration.",  whyAccqrateCertification: "ZATCA Phase 2 approved e-invoicing solution. Built for Saudi businesses, hosted in Saudi cloud.",  whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
-      title: "One platform.",
+      title: "One platform. Zero silos.",
       description: "All modules run on a single, integrated data model.",
-      sub: " Zero silos."
+      sub: ""
     },
     {
       img: AssetPath.icons.websiteDesign11,
@@ -611,9 +611,9 @@ const belgiumContent: CountryContent = {
   whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
-      title: "One Platform.",
+      title: "One Platform. Harmonised Data.",
       description: "Connect Multiple ERP or POS into one unified platform for E-invoicing.",
-      sub: " Harmonised Data."
+      sub: " "
     },
     {
       img: AssetPath.icons.websiteDesign11,
@@ -726,33 +726,33 @@ const uaeContent: CountryContent = {
   whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
-      title: "One Platform.",
+      title: "One Platform. Harmonised Data.",
       description: "Connect Multiple ERP or POS into one unified platform for FTA-invoicing.",
-      sub: "Harmonised Data."
+      sub: ""
     },
     {
       img: AssetPath.icons.websiteDesign11,
-      title: "Built‑in FTA ",
+      title: "Built‑in FTA e-invoicing compliance.",
       description: "Connect ERP/POS to FTA from Direct to PEPPOL based Integration..",
-      sub: "e-invoicing compliance:"
+      sub: ""
     },
     {
       img: AssetPath.icons.websiteDesign12,
-      title: "Deploy your",
+      title: "Deploy your way.",
       description: "Cloud (managed, subscription) or On‑Prem (full control over infra & data).",
-      sub: "way."
+      sub: ""
     },
     {
       img: AssetPath.icons.websiteDesign13,
-      title: "AI,",
+      title: "AI, everywhere.",
       description: "Accelera, our AI copilot , accelerates routine work, insights and decisions.",
-      sub: "everywhere."
+      sub: ""
     },
     {
       img: AssetPath.icons.websiteDesign14,
-      title: "Fast",
+      title: "Fast time‑to‑value.",
       description: "Lightning‑fast UI, one‑click installs, and low‑disruption migrations from SAP/Microsoft/Oracle or disjointed tools.",
-      sub: "time‑to‑value."
+      sub: ""
     },
     {
       img: AssetPath.icons.websiteDesign15,
@@ -849,9 +849,9 @@ const polandContent: CountryContent = {
   whyAccqrateFeatures: [
     {
       img: AssetPath.icons.websiteDesign1,
-      title: "One Platform.",
+      title: "One Platform. Harmonised Data.",
       description: "Connect Multiple ERP or POS into one unified platform for E-invoicing.",
-      sub: " Harmonised Data."
+      sub: ""
     },
     {
       img: AssetPath.icons.websiteDesign11,
