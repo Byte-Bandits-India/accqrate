@@ -21,6 +21,7 @@ const ContactFormPage = () => {
   const countryCardContent: Record<string, {
     title: string;
     description: string;
+    callHours: string;
     cards: {
       card1: {
         badge: string;
@@ -49,6 +50,7 @@ const ContactFormPage = () => {
     BE: {
       title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
+      callHours: "Call our team Mon - Fri from 9am to 5pm",
       cards: {
         card1: {
           badge: "E-INVOICING",
@@ -77,6 +79,7 @@ const ContactFormPage = () => {
     PL: {
       title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
+      callHours: "Call our team Mon - Fri from 9am to 5pm",
       cards: {
         card1: {
           badge: "E-INVOICING",
@@ -104,6 +107,7 @@ const ContactFormPage = () => {
     AE: {
       title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
+      callHours: "Call our team Mon - Fri from 9am to 5pm",
       cards: {
         card1: {
           badge: "E-INVOICING",
@@ -132,6 +136,7 @@ const ContactFormPage = () => {
     DEFAULT: {
       title: "Get in touch with us for more information.",
       description: "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
+      callHours: "Call our team Sun - Thu from 9am to 5pm",
       cards: {
         card1: {
           badge: "E-INVOICING",
@@ -463,7 +468,7 @@ const ContactFormPage = () => {
             </h3>
 
             <p className="text-sm  mb-4">
-              <T>Call our team Mon - Fri from 9am to 5pm</T>
+              <T>{cardContent.callHours}</T>
             </p>
 
             <div className="flex items-center gap-2 text-[#194bed] font-bold text-[18px] underline md:text-[20px] mb-6">
