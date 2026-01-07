@@ -1310,9 +1310,31 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                     {countryCode === "SA" && (
                         <div className="max-w-[1200px] mx-auto px-4 md:px-6 lg:px-8 xl:px-0 pb-6 md:mb-10 rounded-xl md:rounded-2xl bg-white">
+
+                            {/* Mobile Image FIRST */}
+                            <div className="lg:hidden flex justify-center py-6">
+                                <Image
+                                    src={vision}
+                                    alt="VIDA Compliance"
+                                    width={520}
+                                    height={420}
+                                    className="
+        w-full
+        max-w-[320px]
+        sm:max-w-[380px]
+        h-auto
+        object-contain
+      "
+                                    priority
+                                />
+                            </div>
+
                             {/* GRID */}
-                            <Reveal direction="left" className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
-                                {/* LEFT: Image (Desktop) */}
+                            <Reveal
+                                direction="left"
+                                className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-4 md:gap-6"
+                            >
+                                {/* LEFT: Image (Desktop only) */}
                                 <div className="hidden lg:flex items-center justify-start pl-14">
                                     <div className="w-full max-w-[370px]">
                                         <Image
@@ -1328,30 +1350,22 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
 
                                 {/* RIGHT: Text Content */}
                                 <FadeUp className="font-inter rounded-xl md:rounded-2xl flex flex-col justify-center p-4 md:p-6 lg:p-8">
-                                    <h2 className="text-[#1c2041]  text-[23px] md:text-[24px] font-bold whitespace-nowrap mb-4 md:mb-6">
+                                    <h2 className="text-[#1c2041] text-[23px] md:text-[24px] font-bold mb-4 md:mb-6">
                                         <T>Aligned with Saudi Vision</T>{" "}
                                         <span className="text-[#194BED]">2030:</span>
                                     </h2>
 
-                                    <h2 className="text-[14px] md:text-[16px] text-left  leading-[28px] mb-4">
+                                    <p className="text-[14px] md:text-[16px] text-left leading-[28px] mb-4">
                                         <T>
                                             Accqrate enables enterprises to future-proof their invoicing and tax compliance landscape within Saudi Arabia as per Saudi Vision 2030’s mandate for a fully digital, transparent, and efficient economy.
                                         </T>
-                                    </h2>
+                                    </p>
 
-                                    <ul className="list-disc space-y-2  text-[14px] text-left pl-4 md:pl-5 leading-[28px]">
-                                        <li>
-                                            <T>Native alignment with ZATCA’s digital tax roadmap</T>
-                                        </li>
-                                        <li>
-                                            <T>Scalable architecture for future regulatory phases</T>
-                                        </li>
-                                        <li>
-                                            <T>Real-time reporting & audit readiness</T>
-                                        </li>
-                                        <li>
-                                            <T>Multi-entity, multi-branch compliance for Saudi groups</T>
-                                        </li>
+                                    <ul className="list-disc space-y-2 text-[14px] text-left pl-4 md:pl-5 leading-[28px]">
+                                        <li><T>Native alignment with ZATCA’s digital tax roadmap</T></li>
+                                        <li><T>Scalable architecture for future regulatory phases</T></li>
+                                        <li><T>Real-time reporting & audit readiness</T></li>
+                                        <li><T>Multi-entity, multi-branch compliance for Saudi groups</T></li>
                                     </ul>
 
                                     <div className="mt-6">
@@ -1361,19 +1375,9 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                         />
                                     </div>
                                 </FadeUp>
-
-                                {/* Image (Mobile) */}
-                                <div className="lg:hidden flex items-center justify-center p-4 md:p-6">
-                                    <Image
-                                        src={vision}
-                                        alt="VIDA Compliance"
-                                        width={520}
-                                        height={420}
-                                        className="w-full h-auto object-contain max-w-full"
-                                    />
-                                </div>
                             </Reveal>
                         </div>
+
                     )}
 
                     {/* DCTCE SECTION ONLY FOR UAE */}
