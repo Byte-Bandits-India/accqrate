@@ -34,6 +34,8 @@ const blogTranslations: TranslationsMap = {
 
 "We specialize in providing reliable and efficient Solutions": { "ar": "نحن متخصصون في تقديم حلول موثوقة وفعّالة" },
 
+"We Specialize in providing reliable and efficient Solutions": { "ar": "نحن متخصصون في تقديم حلول موثوقة وفعّالة" },
+
 "From compliance to automation, Accqrate ensures a seamless PEPPOL e-invoicing experience.": { "ar": "من الامتثال إلى الأتمتة، تضمن أكيوريت تجربة فوترة إلكترونية سلسة عبر PEPPOL." },
 
 "See It in Action": { "ar": "شاهدها على أرض الواقع" },
@@ -6706,6 +6708,11 @@ const blogTranslations: TranslationsMap = {
   ar: "حل مرن: سحابي أو داخلي" 
 },
 
+
+"PEPPOL Certified E-invoicing Software<br> for UAE": { 
+  ar: "برنامج الفوترة الإلكترونية المعتمد من PEPPOL<br> لدولة الإمارات العربية المتحدة" 
+},
+
 "PEPPOL Certified E-invoicing Software for UAE": { 
   ar: "برنامج فوترة إلكترونية معتمد من PEPPOL للإمارات" 
 },
@@ -8051,6 +8058,10 @@ const blogTranslations: TranslationsMap = {
         ar: "• دفع وسحب عبر API\n• موائمات ERP\n• تكاملات POS\n• رفع الملفات المسطحة / إكسل\n• برامج تكامل مخصصة\n• مصمم للأنظمة القديمة والبيئات الهجينة وبيئات ERP متعددة ومعقدة" 
     },
 
+    "• API push & pull \n• ERP adapters & POS integrations\n• Flat-file / Excel upload\n• Custom integration executables\n• Designed for legacy systems, hybrid environments, and complex multi-ERP landscapes": { 
+        ar: "• دفع وسحب عبر API\n• موائمات ERP وتكاملات POS\n• رفع الملفات المسطحة / إكسل\n• برامج تكامل مخصصة\n• مصمم للأنظمة القديمة والبيئات الهجينة وبيئات ERP متعددة ومعقدة" 
+    },
+
     // Feature 4
     "Purpose-Built for All Business Sizes": { 
         ar: "مصمم ليلائم جميع أحجام الأعمال" 
@@ -8771,8 +8782,11 @@ const blogTranslations: TranslationsMap = {
 'Have a question about our solutions and services?': {
     ar: 'هل لديك أي أسئلة حولنا وخدماتنا؟'
   },
-"Compliant with UAE\s Mandatory B2B E-Invoicing Regulation": {
-  ar: "قم بإنشاء فواتير متوافقة بالكامل مع نموذج الزوايا الخمس لهيئة الضرائب الإماراتية (DCTCE)"
+"Compliant with UAE\s Mandatory B2B E-invoicing Regulation": {
+  ar: "متوافق مع لائحة الفوترة الإلكترونية الإلزامية B2B في الإمارات العربية المتحدة"
+},
+"Generate invoices fully compliant with UAE’s": {
+  ar: "إنشاء فواتير متوافقة بالكامل مع متطلبات الإمارات العربية المتحدة"
 },
 "Generate invoices fully compliant with UAE's FTA 5 Corner Model (DCTCE)": {
   ar: "قم بإنشاء فواتير متوافقة بالكامل مع نموذج الزوايا الخمس لهيئة الضرائب الإماراتية (DCTCE)"
@@ -8834,7 +8848,30 @@ const blogTranslations: TranslationsMap = {
     
   "PEPPOL Compliant": {
     "ar": "متوافق مع PEPPOL"
-  }
+  },
+  "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for UAE businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.": {
+  "ar": "مكّن الفوترة الإلكترونية المتكاملة عبر أنظمة تخطيط موارد المؤسسات (ERP) والمحاسبة والفوترة لديك من خلال منصة متوافقة بالكامل ومعتمدة من PEPPOL ومصممة خصيصًا للشركات في دولة الإمارات العربية المتحدة. قم بأتمتة إنشاء الفواتير الإلكترونية والتحقق منها وإرسالها وأرشفتها بثقة تامة."
+},
+"Call us": {
+  "ar": "اتصل بنا"
+},
+"Call our team Mon - Fri from 9am to 5pm": {
+  "ar": "اتصل بفريقنا من الاثنين إلى الجمعة من الساعة 9 صباحًا حتى 5 مساءً"
+},
+"Built‑in FTA e-invoicing compliance.": {
+  "ar": "امتثال مدمج للفوترة الإلكترونية وفق FTA."
+},
+"One Platform. Harmonised Data.": {
+  "ar": "منصة واحدة. بيانات متناسقة."
+},
+  Journey: {
+    ar: 'لدينا حلاً مبتكرًا لرحلتك.'
+  },
+
+
+
+
+
 
 
 

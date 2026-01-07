@@ -40,7 +40,7 @@ export default function Section3() {
           {/* HEADER */}
           <Reveal direction="bottom">
             <h2 className="text-center text-[18px] text-[#1c2041] md:text-[24px] leading-[38px] font-bold">
-              <span className="text-[#1A4CED]">Our</span> Journey
+              <span className="text-[#1A4CED]"><T>Our</T></span> <T>Journey</T>
             </h2>
 
             <p className="text-center text-sm md:text-[16px] text-gray-600 max-w-3xl mx-auto leading-[28px]">

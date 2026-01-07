@@ -1635,242 +1635,242 @@ const translationsRaw = {
 
     // About page heading for Poland
     "Advancing Digital Compliance & E-Invoicing for Poland and the EU": { 
-        pl: "" 
+        pl: "Rozwój cyfrowej zgodności i fakturowania elektronicznego dla Polski i UE" 
     },
 
     // About page description part 1
     "Accqrate is a global E-Invoicing platform built to meet the digital tax and reporting modernization sweeping across the EU.": { 
-        pl: "" 
+        pl: "Accqrate to globalna platforma fakturowania elektronicznego stworzona, aby sprostać modernizacji cyfrowej podatków i sprawozdawczości, która ogarnia całą UE." 
     },
 
     // About page description part 2
     "From Poland's PEPPOL-based B2B mandate to ViDA-driven cross-border reporting, Accqrate delivers a scalable, compliant, and future-ready foundation for enterprises operating across Poland and broader EU markets.\n\nBacked by Iteron AG, Switzerland, Accqrate brings European engineering standards, secure architectures, and a decade-long expertise in digital tax transformations across regulated geographies.": { 
-        pl: "" 
+        pl: "Od polskiego mandatu B2B opartego na PEPPOL po sprawozdawczość transgraniczną opartą na ViDA, Accqrate zapewnia skalowalną, zgodną i przyszłościową podstawę dla przedsiębiorstw działających w Polsce i szerszych rynkach UE.\n\nWspierany przez Iteron AG, Szwajcaria, Accqrate wnosi europejskie standardy inżynieryjne, bezpieczne architektury i dziesięcioletnie doświadczenie w cyfrowych transformacjach podatkowych w regulowanych geografiach." 
     },
 
     // ============ SECTION 2 ============
     
     // Section 1 Title
     "Accqrate In Poland": { 
-        pl: "" 
+        pl: "Accqrate w Polsce" 
     },
 
     // Section 1 - Title 1
     "Built for Poland's PEPPOL & FPS Finance Mandate": { 
-        pl: "" 
+        pl: "Zbudowany dla polskiego mandatu PEPPOL i FPS Finance" 
     },
 
     // Section 1 - Description 1
     "Accqrate brings a Poland-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.": { 
-        pl: "" 
+        pl: "Accqrate oferuje gotowy do Polski silnik fakturowania elektronicznego, który przestrzega standardów PEPPOL BIS, obsługuje przepływy pracy zgodne z Mercurius i pozostaje stale aktualizowany zgodnie z ewoluującymi wymaganiami FPS Finance." 
     },
 
     // Section 1 - Title 2
     "European Precision, Global Scalability": { 
-        pl: "" 
+        pl: "Europejska precyzja, globalna skalowalność" 
     },
 
     // Section 1 - Description 2
     "With Swiss-led engineering and global deployment experience across 30+ sectors, Accqrate delivers an enterprise-grade platform capable of handling Poland's upcoming B2B rollout and multi-country operations inside and outside the EU.": { 
-        pl: "" 
+        pl: "Dzięki szwajcarskiemu przywództwu inżynieryjnemu i globalnemu doświadczeniu w wdrażaniu w ponad 30 sektorach, Accqrate oferuje platformę klasy korporacyjnej zdolną do obsługi nadchodzącego wdrożenia B2B w Polsce i operacji wielopañstwowych wewnątrz i poza UE." 
     },
 
     // Section 1 - Title 3
     "Compliance Made Simple": { 
-        pl: "" 
+        pl: "Zgodność stała się prosta" 
     },
 
     // Section 1 - Description 3
     "Accqrate combines automation, AI-driven validations, and standardized interoperability to make compliance intuitive, predictable, and scalable for companies of all sizes.": { 
-        pl: "" 
+        pl: "Accqrate łączy automatyzację, walidacje oparte na AI i standaryzowaną interoperacyjność, aby uczynić zgodność intuicyjną, przewidywalną i skalowalną dla firm każdej wielkości." 
     },
 
     // Section 2 Title
     "Our Mission": { 
-        pl: "" 
+        pl: "Nasza misja" 
     },
 
     // Section 2 - Title 1
     "Modernizing Europe's E-Invoicing & Digital Tax Landscape": { 
-        pl: "" 
+        pl: "Modernizacja europejskiego krajobrazu fakturowania elektronicznego i podatków cyfrowych" 
     },
 
     // Section 2 - Description 1
     "We empower businesses with technology that simplifies PEPPOL connectivity, digital reporting, VAT oversight, and multi-entity governance.": { 
-        pl: "" 
+        pl: "Wzmocniamy firmy technologią, która upraszcza łączność PEPPOL, sprawozdawczość cyfrową, nadzór VAT i zarządzanie wieloma podmiotami." 
     },
 
     // Section 2 - Title 2
     "Accelerating Digital Adoption": { 
-        pl: "" 
+        pl: "Przyspieszanie adopcji cyfrowej" 
     },
 
     // Section 2 - Description 2
     "Accqrate eliminates the traditional complexities of ERP and e-invoicing rollouts with quick integrations, easy scalability, and enterprise-grade reliability.": { 
-        pl: "" 
+        pl: "Accqrate eliminuje tradycyjne złożoności wdrożeń ERP i fakturowania elektronicznego dzięki szybkim integracjom, łatwej skalowalności i niezawodności klasy korporacyjnej." 
     },
 
     // ============ SECTION 3 ============
     
     // Header
     "Our Journey": { 
-        pl: "" 
+        pl: "Nasza podróż" 
     },
 
     // Subtitle
     "Accqrate's evolution is defined by a relentless focus on compliance excellence, deep integration capabilities, and forward-looking technology leadership.": { 
-        pl: "" 
+        pl: "Ewolucja Accqrate jest definiowana przez nieustanne skupienie na doskonałości zgodności, głębokich możliwościach integracji i dalekowzrocznym przywództwie technologicznym." 
     },
 
     // Timeline Items
     
     // 2016
     "Iteron AG: High-End Technology Consultancy": { 
-        pl: "" 
+        pl: "Iteron AG: Wysokiej klasy konsulting technologiczny" 
     },
     "Iteron AG begins operations in Switzerland, delivering advanced technology consulting across Europe. From enterprise SaaS to blockchain-based solutions, the company lays the groundwork for the modern digital compliance and e-invoicing platforms that would follow.": { 
-        pl: "" 
+        pl: "Iteron AG rozpoczyna działalność w Szwajcarii, dostarczając zaawansowane konsulting technologiczny w całej Europie. Od korporacyjnego SaaS po rozwiązania oparte na blockchain, firma kładzie podwaliny pod nowoczesne platformy cyfrowej zgodności i fakturowania elektronicznego, które miały nastąpić." 
     },
 
     // 2020
     "Accqrate Global Platform Initiated": { 
-        pl: "" 
+        pl: "Inicjacja globalnej platformy Accqrate" 
     },
     "Accqrate emerges as a unified ERP and E-Invoicing platform engineered for high-compliance jurisdictions, multi-country operations, and enterprise-level digital transformation.": { 
-        pl: "" 
+        pl: "Accqrate wyłania się jako zunifikowana platforma ERP i fakturowania elektronicznego zaprojektowana dla jurysdykcji o wysokiej zgodności, operacji wielopañstwowych i transformacji cyfrowej na poziomie korporacyjnym." 
     },
 
     // 2021
     "E-Invoicing Launch Across Regulated Markets": { 
-        pl: "" 
+        pl: "Uruchomienie fakturowania elektronicznego na regulowanych rynkach" 
     },
     "Accqrate's engine is launched in the Kingdom of Poland, establishing direct integration with PEPPOL and marking the platform's entry into regulated tax ecosystems.": { 
-        pl: "" 
+        pl: "Silnik Accqrate zostaje uruchomiony w Królestwie Polski, ustanawiając bezpośrednią integrację z PEPPOL i oznaczając wejście platformy do regulowanych ekosystemów podatkowych." 
     },
 
     // 2022
     "Expansion of API-First Integrations": { 
-        pl: "" 
+        pl: "Rozszerzenie integracji opartych na API" 
     },
     "Accqrate strengthens its integration layer with certified connectors and toolkits for SAP, Oracle, Microsoft Dynamics and major ERP/POS platforms.": { 
-        pl: "" 
+        pl: "Accqrate wzmacnia swoją warstwę integracji certyfikowanymi konektorami i zestawami narzędzi dla SAP, Oracle, Microsoft Dynamics i głównych platform ERP/POS." 
     },
 
     // 2023
     "MNC Deployments Across MENA, ASEAN & EU": { 
-        pl: "" 
+        pl: "Wdrożenia MNC w MENA, ASEAN i UE" 
     },
     "Accqrate supports multi-entity deployments, processing millions of monthly transactions across global enterprises with assured compliance.": { 
-        pl: "" 
+        pl: "Accqrate obsługuje wielopodmiotowe wdrożenia, przetwarzając miliony miesięcznych transakcji w globalnych przedsiębiorstwach z zapewnioną zgodnością." 
     },
 
     // 2024
     "Poland & EU Compliance Acceleration": { 
-        pl: "" 
+        pl: "Przyspieszenie zgodności Polski i UE" 
     },
     "Accqrate launches its Poland PEPPOL engine with Mercurius interoperability and achieves full readiness for ViDA-aligned digital reporting.": { 
-        pl: "" 
+        pl: "Accqrate uruchamia swój silnik Poland PEPPOL z interoperacyjnością Mercurius i osiąga pełną gotowość do sprawozdawczości cyfrowej zgodnej z ViDA." 
     },
 
     // 2025
     "Enterprise-Grade Automation & AI Validation Engine": { 
-        pl: "" 
+        pl: "Automatyzacja klasy korporacyjnej i silnik walidacji AI" 
     },
     "Accqrate introduces AccelerAI, a sophisticated automation layer for real-time compliance checks, anomaly detection, VAT reconciliation, and cross-border reporting.": { 
-        pl: "" 
+        pl: "Accqrate wprowadza AccelerAI, wyrafinowaną warstwę automatyzacji do sprawdzania zgodności w czasie rzeczywistym, wykrywania anomalii, uzgadniania VAT i sprawozdawczości transgranicznej." 
     },
 
     // ============ SECTION 4 ============
     
     // Header
     "Expansion and Growth in EU": { 
-        pl: "" 
+        pl: "Ekspansja i wzrost w UE" 
     },
 
     // Subtitle
     "Accqrate has experienced remarkable growth and innovation, marked by significant achievements:": { 
-        pl: "" 
+        pl: "Accqrate doświadczył niezwykłego wzrostu i innowacji, zaznaczonego przez znaczące osiągnięcia:" 
     },
 
     // Features
     // Feature 1
     "Expansion and Growth Across the EU": { 
-        pl: "" 
+        pl: "Ekspansja i wzrost w całej UE" 
     },
     "Accqrate's entry into Poland marks a pivotal expansion in our European compliance strategy:": { 
-        pl: "" 
+        pl: "Wejście Accqrate do Polski oznacza kluczową ekspansję w naszej europejskiej strategii zgodności:" 
     },
 
     // Feature 2
     "PEPPOL-First Architecture": { 
-        pl: "" 
+        pl: "Architektura PEPPOL-First" 
     },
     "Accqrate is engineered to operate natively on PEPPOL standards, guaranteeing secure, structured, and interoperable invoice exchange.": { 
-        pl: "" 
+        pl: "Accqrate jest zaprojektowany do natywnego działania na standardach PEPPOL, gwarantując bezpieczną, ustrukturyzowaną i interoperacyjną wymianę faktur." 
     },
 
     // Feature 3
     "Rapid Market Adoption": { 
-        pl: "" 
+        pl: "Szybka adopcja rynku" 
     },
     "From single-entity SMEs to multi-country enterprises, Poland organizations increasingly rely on Accqrate for smooth integration with their ERP, POS, or invoicing systems.": { 
-        pl: "" 
+        pl: "Od jednopodmiotowych MŚP po wielopañstwowe przedsiębiorstwa, polskie organizacje coraz częściej polegają na Accqrate dla płynnej integracji z ich systemami ERP, POS lub fakturowania." 
     },
 
     // Feature 4
     "Flexible Integration Capabilities": { 
-        pl: "" 
+        pl: "Elastyczne możliwości integracji" 
     },
     "• API push & pull\n• PEPPOL connectivity\n• ERP adapters\n• Flat-file / Excel upload\n• Custom integration executables\n• Designed to support everything from legacy on-prem systems to complex multi-ERP landscapes": { 
-        pl: "" 
+        pl: "• API push & pull\n• Łączność PEPPOL\n• Adaptery ERP\n• Przesyłanie plików płaskich / Excel\n• Niestandardowe pliki wykonywalne integracji\n• Zaprojektowane do obsługi wszystkiego, od starszych systemów lokalnych po złożone krajobrazy multi-ERP" 
     },
 
     // Feature 5
     "Purpose-Built for All Business Sizes": { 
-        pl: "" 
+        pl: "Zaprojektowane dla wszystkich rozmiarów biznesu" 
     },
     "Accqrate supports both:\n• SMEs needing a lightweight, standalone e-invoicing solution\n• Large enterprises requiring multi-entity orchestration, VAT reconciliation, and cross-border compliance": { 
-        pl: "" 
+        pl: "Accqrate obsługuje zarówno:\n• MŚP potrzebujące lekkiego, samodzielnego rozwiązania do fakturowania elektronicznego\n• Duże przedsiębiorstwa wymagające wielopodmiotowej orkiestracji, uzgadniania VAT i zgodności transgranicznej" 
     },
 
     // ============ SECTION 5 ============
     
     // Header
     "Our Team": { 
-        pl: "" 
+        pl: "Nasz zespół" 
     },
 
     // Description
     "A global team of engineers, tax experts, and solution architects operates across Switzerland, India, MENA, and Europe. Our Poland and EU compliance specialists bring deep knowledge of PEPPOL frameworks, VAT ecosystems, and ERP integrations, ensuring every deployment is accurate, predictable, and aligned with FPS Finance and EU standards.": { 
-        pl: "" 
+        pl: "Globalny zespół inżynierów, ekspertów podatkowych i architektów rozwiązań działa w Szwajcarii, Indiach, MENA i Europie. Nasi specjaliści ds. zgodności w Polsce i UE wnoszą głęboką wiedzę na temat ram PEPPOL, ekosystemów VAT i integracji ERP, zapewniając, że każde wdrożenie jest dokładne, przewidywalne i zgodne ze standardami FPS Finance i UE." 
     },
 
     // ============ CTA SECTION ============
     
     // Title
     "Save time, save money": { 
-        pl: "" 
+        pl: "Oszczędzaj czas, oszczędzaj pieniądze" 
     },
 
     // Description 1
     "Want the latest on Poland's e-invoicing mandate, fresh product updates, and exclusive Accqrate insights?": { 
-        pl: "" 
+        pl: "Chcesz najnowsze informacje na temat polskiego mandatu fakturowania elektronicznego, świeże aktualizacje produktów i ekskluzywne spostrzeżenia Accqrate?" 
     },
 
     // Description 2
     "Subscribe to our newsletter and stay ahead, delivered straight to your inbox.": { 
-        pl: "" 
+        pl: "Zapisz się do naszego newslettera i bądź na bieżąco, dostarczane prosto do Twojej skrzynki odbiorczej." 
     },
       "Simplify VAT Calculations with Our Poland VAT Calculator": {
-    pl: ""
+    pl: "Uprość obliczenia VAT za pomocą naszego kalkulatora VAT dla Polski"
   },
 
   "Navigating VAT calculations has never been easier. Our Poland VAT Calculator removes the hassle, accurately calculating VAT for any sale amount instantly. Forget the formulas; with just a few clicks, determine the final sale price and VAT amount effortlessly.": {
-    pl: ""
+    pl: "Nawigacja po obliczeniach VAT nigdy nie była łatwiejsza. Nasz kalkulator VAT dla Polski usuwa kłopot, dokładnie obliczając VAT dla dowolnej kwoty sprzedaży natychmiast. Zapomnij o formułach; za pomocą zaledwie kilku kliknięć określ ostateczną cenę sprzedaży i kwotę VAT bez wysiłku."
   },
 
   "Value Added Tax (VAT) is an indirect tax levied on most goods and services at each stage of the supply chain, from production to point-of-sale. Implemented in Poland in 2018 at 5%, the rate was adjusted to 15% in July 2020 to address COVID-19 impacts.": {
-    pl: ""
+    pl: "Podatek od wartości dodanej (VAT) to podatek pośredni nakładany na większość towarów i usług na każdym etapie łańcucha dostaw, od produkcji do punktu sprzedaży. Wprowadzony w Polsce w 2018 roku na poziomie 5%, stawka została dostosowana do 15% w lipcu 2020 roku w celu rozwiązania problemów związanych z COVID-19."
   },
 
   "How to Calculate VAT in Poland": {

@@ -638,7 +638,10 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
             }
 
             const { text, highlights } = subtitle;
-            const parts = text.split(' ');
+            // Translate full subtitle text for the selected country (if available)
+            const cc = selectedCountry || countryCode || lang;
+            const translated = t(text, cc) || text;
+            const parts = translated.split(' ');
             return (
                 <span>
                     {parts.map((word, index) => {
@@ -1166,7 +1169,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             <Reveal direction="left" className="font-inter rounded-2xl flex flex-col justify-between h-full md:max-h-[387px] p-4 bg-transparent order-2 lg:order-1">
                                 <div>
                                     <h2 className="text-[#1c2041] text-[23px] md:text-[24px] font-bold">
-                                        <span className="text-[#194BED]">Accelera</span>{" "}
+                                        <span className="text-[#194BED]"><T>Accelera</T></span>{" "}
                                         <T>Your AI Copilot</T>
                                     </h2>
 
@@ -1248,7 +1251,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             {/* GRID */}
                             <Reveal direction="left" className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
                                 {/* LEFT: Image (Desktop) */}
-                                <div className="hidden lg:flex items-center justify-start pl-6">
+                                <div className="hidden lg:flex items-center justify-start pl-10">
                                     <div className="w-full max-w-[370px]">
                                         <Image
                                             src={AssetPath.home.vida}

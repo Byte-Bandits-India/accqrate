@@ -86,13 +86,13 @@ export const countries: Country[] = [
     //     language: "Arabic",
     //     currency: "JOD",
     // },
-    // {
-    //     name: "Poland",
-    //     code: "PL",
-    //     flag: AssetPath.header.language.poland,
-    //     language: "English",
-    //     currency: "PLN",
-    // },
+    {
+        name: "Poland",
+        code: "PL",
+        flag: AssetPath.header.language.poland,
+        language: "English",
+        currency: "PLN",
+    },
 
     {
         name: "UAE",

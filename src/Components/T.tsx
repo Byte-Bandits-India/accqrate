@@ -95,7 +95,7 @@ export default function T({ children, countryCode, lang }: TProps) {
         const pathLang = pathSegments[0] || '';
 
         // Only use path language if it's a valid language code
-        if (pathLang && (pathLang === 'en' || pathLang === 'ar' || pathLang === 'fr')) {
+        if (pathLang && (pathLang === 'en' || pathLang === 'ar' || pathLang === 'fr' || pathLang === 'de' || pathLang === 'nl')) {
             setLanguage(pathLang as any);
         } else if (selectedLanguage?.code) {
             setLanguage(selectedLanguage.code as any);

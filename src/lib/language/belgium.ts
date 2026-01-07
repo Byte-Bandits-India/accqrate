@@ -6610,6 +6610,12 @@ const translations = {
     fr: "Les factures sont archivées conformément aux réglementations belges, Mercurius garantissant la traçabilité et la confirmation de livraison."
   },
 
+  "We Specialize in providing reliable and efficient Solutions": {
+  nl: "Wij zijn gespecialiseerd in het leveren van betrouwbare en efficiënte oplossingen",
+  de: "Wir sind auf die Bereitstellung zuverlässiger und effizienter Lösungen spezialisiert",
+  fr: "Nous sommes spécialisés dans la fourniture de solutions fiables et efficaces"
+},
+
 // ========== PROOF OF CONCEPT BELGIUM SECTION ==========
 
   'Free Proof of Concept for': {
@@ -7285,6 +7291,12 @@ fr: "Intégration Peppol / EN 16931"
 
   'Accqrate In Belgium': { nl: "Accqrate in België", de: "Accqrate in Belgien", fr: "Accqrate en Belgique" },
 
+  "In Belgium": {
+  nl: "In België",
+  de: "In Belgien",
+  fr: "En Belgique"
+},
+
   'Built for Belgium’s PEPPOL & FPS Finance Mandate': { nl: "Gebouwd voor België’s PEPPOL- & FPS Finance-mandaat", de: "Entwickelt für Belgiens PEPPOL- & FPS Finance-Mandat", fr: "Conçu pour le mandat PEPPOL & FPS Finance de la Belgique" },
   'Accqrate brings a Belgium-ready E-Invoicing engine that follows PEPPOL BIS standards, supports workflows aligned with Mercurius, and remains continuously updated with evolving FPS Finance requirements.': {
     nl: "Accqrate levert een voor België gereed e-facturatie-engine die de PEPPOL BIS-standaarden volgt, workflows ondersteunt die zijn afgestemd op Mercurius en continu wordt bijgewerkt met de veranderende vereisten van FPS Finance.",
@@ -7631,12 +7643,17 @@ fr: "Intégration Peppol / EN 16931"
   "Run compliant, AI-powered operations with Accqrate.": { nl: "Voer conforme, door AI aangedreven operaties uit met Accqrate.", de: "Führen Sie konforme, KI-gestützte Abläufe mit Accqrate aus.", fr: "Exécutez des opérations conformes et pilotées par l’IA avec Accqrate." },
 
   //Envoicing Software Section
-  'PEPPOL Certified  E-invoicing Software for Belgium': {
-    en: "PEPPOL Certified E-invoicing Software for Belgium",
+  'PEPPOL Certified E-invoicing Software<br> for Belgium': {
+    en: "PEPPOL Certified E-invoicing Software<br> for Belgium",
     nl: "PEPPOL Gecertificeerde E-facturatiesoftware voor België",
     de: "PEPPOL Zertifizierte E-Rechnungssoftware für Belgien",
     fr: "Logiciel de facturation électronique certifié PEPPOL pour la Belgique",
    },
+   "Accqrate is a global E-Invoicing platform built to meet the digital tax and reporting modernization sweeping across the EU. From Belgium's PEPPOL-based B2B mandate to ViDA-driven cross-border reporting, Accqrate delivers a scalable, compliant, and future-ready foundation for enterprises operating across Belgium and broader EU markets.": {
+  nl: "Accqrate is een wereldwijd e-facturatieplatform dat is gebouwd om te voldoen aan de digitalisering van belastingen en rapportage die zich in de hele EU voltrekt. Van het op PEPPOL gebaseerde B2B-mandaat in België tot ViDA-gedreven grensoverschrijdende rapportage, biedt Accqrate een schaalbare, conforme en toekomstbestendige basis voor ondernemingen die actief zijn in België en de bredere EU-markten.",
+  de: "Accqrate ist eine globale E-Invoicing-Plattform, die entwickelt wurde, um den digitalen Steuer- und Berichtsmodernisierungen in der gesamten EU gerecht zu werden. Vom PEPPOL-basierten B2B-Mandat in Belgien bis hin zur ViDA-getriebenen grenzüberschreitenden Berichterstattung bietet Accqrate eine skalierbare, konforme und zukunftssichere Grundlage für Unternehmen, die in Belgien und auf den breiteren EU-Märkten tätig sind.",
+  fr: "Accqrate est une plateforme mondiale de facturation électronique conçue pour répondre à la modernisation numérique de la fiscalité et du reporting qui s’étend à travers l’UE. Du mandat B2B basé sur PEPPOL en Belgique au reporting transfrontalier piloté par ViDA, Accqrate fournit une base évolutive, conforme et tournée vers l’avenir pour les entreprises opérant en Belgique et sur les marchés européens au sens large."
+},
   
   'Enable Your Business With E-invoicing.': {
     en: "Enable Your Business With E-invoicing.",
@@ -9526,6 +9543,72 @@ fr: "Intégration Peppol / EN 16931"
     nl: "Conform",
     de: "Konform"
   },
+
+  "Expansion and Growth in EU": {
+    nl: "Uitbreiding en groei in de EU",
+    de: "Expansion und Wachstum in der EU",
+    fr: "Expansion et croissance dans l'UE"
+  },
+  "Accqrate has experienced remarkable growth and innovation, marked by significant achievements:": {
+    nl: "Accqrate heeft opmerkelijke groei en innovatie ervaren, gekenmerkt door belangrijke prestaties:",
+    de: "Accqrate hat ein bemerkenswertes Wachstum und Innovation erlebt, gekennzeichnet durch bedeutende Erfolge:",
+    fr: "Accqrate a connu une croissance et une innovation remarquables, marquées par des réalisations significatives :"
+  },
+  "Expansion and Growth Across the EU": {
+    nl: "Uitbreiding en groei in de hele EU",
+    de: "Expansion und Wachstum in der gesamten EU",
+    fr: "Expansion et croissance dans toute l'UE"
+  },
+  "Accqrate's entry into Belgium marks a pivotal expansion in our European compliance strategy.": {
+    nl: "De intrede van Accqrate in België markeert een cruciale uitbreiding in onze Europese compliance-strategie.",
+    de: "Der Eintritt von Accqrate in Belgien markiert eine entscheidende Expansion in unserer europäischen Compliance-Strategie.",
+    fr: "L'entrée d'Accqrate en Belgique marque une expansion pivot dans notre stratégie de conformité européenne."
+  },
+  "PEPPOL-First Architecture": {
+    nl: "PEPPOL-Eerst Architectuur",
+    de: "PEPPOL-First-Architektur",
+    fr: "Architecture PEPPOL-First"
+  },
+  "Accqrate is engineered to operate natively on PEPPOL standards, guaranteeing secure, structured, and interoperable invoice exchange.": {
+    nl: "Accqrate is ontworpen om native te werken op PEPPOL-standaarden, waardoor veilige, gestructureerde en interoperabele factuuruitwisseling wordt gegarandeerd.",
+    de: "Accqrate ist so konzipiert, dass es nativ auf PEPPOL-Standards arbeitet und einen sicheren, strukturierten und interoperablen Rechnungsaustausch gewährleistet.",
+    fr: "Accqrate est conçu pour fonctionner nativement sur les normes PEPPOL, garantissant un échange de factures sécurisé, structuré et interopérable."
+  },
+  "Rapid Market Adoption": {
+    nl: "Snelle marktadoptie",
+    de: "Schnelle Markteinführung",
+    fr: "Adoption rapide du marché"
+  },
+  "From single-entity SMEs to multi-country enterprises, Belgian organizations increasingly rely on Accqrate for smooth integration with their ERP, POS, or invoicing systems.": {
+    nl: "Van eenmanszaken tot multinationale ondernemingen, Belgische organisaties vertrouwen steeds meer op Accqrate voor naadloze integratie met hun ERP, POS of factureringssystemen.",
+    de: "Von Einzelunternehmen bis hin zu multinationalen Unternehmen verlassen sich belgische Organisationen zunehmend auf Accqrate für eine nahtlose Integration mit ihren ERP-, POS- oder Rechnungssystemen.",
+    fr: "Des PME à entité unique aux entreprises multinationales, les organisations belges s'appuient de plus en plus sur Accqrate pour une intégration fluide avec leurs systèmes ERP, POS ou de facturation."
+  },
+  "Flexible Integration Capabilities": {
+    nl: "Flexibele integratiemogelijkheden",
+    de: "Flexible Integrationsfähigkeiten",
+    fr: "Capacités d'intégration flexibles"
+  },
+  "• API-Based Integrations\n • FTP/S-FTP Integrations \n • Manual or Excel Uploads": {
+    nl: "• API-gebaseerde integraties\n • FTP/S-FTP integraties \n • Handmatige of Excel uploads",
+    de: "• API-basierte Integrationen\n • FTP/S-FTP-Integrationen \n • Manuelle oder Excel-Uploads",
+    fr: "• Intégrations basées sur API\n • Intégrations FTP/S-FTP \n • Téléchargements manuels ou Excel"
+  },
+  "• SMEs seeking a lightweight, standalone\n E-invoicing solution\n• Large enterprises requiring multi-entity and solution integration, VAT reconciliation, and cross-border compliance": {
+    nl: "• KMO's die op zoek zijn naar een lichtgewicht, standalone\n E-facturatie oplossing\n• Grote ondernemingen die multi-entiteit en oplossing integratie, BTW-afstemming en grensoverschrijdende compliance vereisen",
+    de: "• KMU, die eine leichte, eigenständige\n E-Rechnungslösung suchen\n• Große Unternehmen, die Multi-Entity- und Lösungsintegration, Mehrwertsteuerabstimmung und grenzüberschreitende Compliance erfordern",
+    fr: "• PME à la recherche d'une solution légère et autonome\n de facturation électronique\n• Grandes entreprises nécessitant une intégration multi-entités et de solutions, réconciliation TVA et conformité transfrontalière"
+  },
+  "One Platform. Harmonised Data.": {
+  nl: "Eén platform. Geharmoniseerde gegevens.",
+  de: "Eine Plattform. Harmonisierte Daten.",
+  fr: "Une seule plateforme. Données harmonisées."
+},
+"Generate invoices fully compliant with Belgium’s FPS Finance 2026 mandate": {
+  nl: "Genereer facturen die volledig voldoen aan het FPS Financiën-mandaat van België voor 2026",
+  de: "Erstellen Sie Rechnungen, die vollständig dem belgischen FPS-Finanzen-Mandat 2026 entsprechen",
+  fr: "Générez des factures entièrement conformes au mandat FPS Finances de la Belgique pour 2026"
+}
 
 
   

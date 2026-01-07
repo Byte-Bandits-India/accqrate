@@ -204,7 +204,7 @@ const Section1 = () => {
     // Per-page overrides
     const pageOverrides: Record<string, Partial<{
         whyAccqrateTitle: string;
-        whyAccqrateSubtitle: { text: string; highlights: string[] };
+        whyAccqrateSubtitle: string;
         headingDescription: string;
         heroDescription: string;
         heroTitle: string;
@@ -215,6 +215,7 @@ const Section1 = () => {
         sa: {
             whyAccqrateTitle: "Compliant with ZATCA, Tax and Customs Authority",
             headingDescription: "Phase 2 requirements",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with ZATCA",
             heroDescription: "Accqrate seamlessly generates ZATCA approved e-invoices, complete with QR Codes and XML embedded in PDF/A3 format, guaranteeing compliance with ZATCA Phase 2 for every invoice sent to your customers.",
             heroTitle: "5,000+ Saudi companies across all industries",
             zatcaCardText: "Accqrate is 100% ZATCA Approved E-invoicing solution in KSA",
@@ -250,6 +251,7 @@ const Section1 = () => {
         },
         be: {
             whyAccqrateTitle: "Compliant with Belgium's Mandatory B2B E-Invoicing Regulation",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with Belgium’s FPS Finance 2026 mandate",
             headingDescription: "EN 16931 and Peppol Requirements:",
             heroDescription: "Accqrate generates EN 16931-compliant structured invoices and exchanges them through the Peppol network. Every invoice to Belgian VAT-registered customers is delivered in the required UBL format for guaranteed compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
@@ -287,6 +289,7 @@ const Section1 = () => {
         pl: {
             whyAccqrateTitle: "Compliant with Poland's Mandatory B2B E-Invoicing Regulation",
             headingDescription: "Phase 1 & 2 Requirements",
+            whyAccqrateSubtitle: "Generate invoices fully compliant with Poland’s KSeF system",
             heroDescription: "Accqrate produces Poland-compliant FA(3) XML invoices and submits them via the KSeF platform, meeting the mandatory B2B requirements effective 2026. All invoices to Polish VAT-registered customers are cleared through KSeF, ensuring complete legal and technical compliance.",
             heroTitle: "5,000+ Across 30+ Industries",
             peppolCardText: "Accqrate is Peppol Certified Solution Provider",
@@ -323,6 +326,7 @@ const Section1 = () => {
         ae: {
             whyAccqrateTitle: 'Compliant with UAE\s Mandatory B2B E-invoicing Regulation',
             headingDescription: 'FTA and Peppol Requirements:',
+            whyAccqrateSubtitle: "Generate invoices fully compliant with UAE’s",
             heroDescription: 'Accqrate generates fully FTA-compliant structured eInvoices aligned to the UAE PINT framework and supports exchange through the DCTCE / 5-corner (PEPPOL) model.',
             heroTitle: '5,000+ Across 30+ Industries',
             peppolCardText: "Accqrate is a Peppol Certified AP Provider and SMP",
@@ -635,7 +639,7 @@ const Section1 = () => {
                                     </Reveal>
                                     <Reveal direction='left' className='px-[16px]'>
                                         <CTAButton
-                                            text='See It in Action'
+                                            text={<T>See It in Action</T>}
                                             href={`/${lang}/${countryCode.toLowerCase()}/contact-us`}
                                             onClick={() => setModalOpen(true)}
                                         />
@@ -691,14 +695,7 @@ const Section1 = () => {
                                                 </h3>
 
                                                 <h3 className='text-[20px] font-medium text-[#1c2041] mt-4 text-left leading-[32px]'>
-                                                    {pageContent.whyAccqrateSubtitle.text.split(' ').map((word, index) => {
-                                                        const isHighlight = pageContent.whyAccqrateSubtitle.highlights.includes(word);
-                                                        return (
-                                                            <span key={index} className={isHighlight ? 'text-[#194BED]' : ''}>
-                                                                {word}{' '}
-                                                            </span>
-                                                        );
-                                                    })}
+                                                    {typeof pageContent.whyAccqrateSubtitle === 'string' ? <T>{pageContent.whyAccqrateSubtitle}</T> : pageContent.whyAccqrateSubtitle.text}
                                                 </h3>
 
 

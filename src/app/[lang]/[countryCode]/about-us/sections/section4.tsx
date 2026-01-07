@@ -6,12 +6,18 @@ import T from "@/Components/T";
 import FadeUp from "@/Components/ui/FadeUp";
 import { useParams } from "next/navigation";
 import { section4Content } from "../data/section4Content";
+import { setLanguage } from "@/lib/translations";
+import { useEffect } from "react";
 
 const Section4: React.FC = () => {
   const params = useParams();
   const countryCode =
     (params?.countryCode as string)?.toLowerCase() || "be";
   const lang = (params?.lang as string) || "en";
+
+  useEffect(() => {
+    setLanguage(lang);
+  }, [lang]);
 
   const content =
     section4Content[countryCode as keyof typeof section4Content] ||

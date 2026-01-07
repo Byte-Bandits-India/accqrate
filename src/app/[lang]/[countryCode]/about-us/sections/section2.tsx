@@ -7,11 +7,17 @@ import { useParams } from "next/navigation";
 import { section2Content } from "../data/section2Content";
 import FadeUp from "@/Components/ui/FadeUp";
 import Reveal from "@/Components/Reveal";
+import { t, setLanguage } from "@/lib/translations";
+import { useEffect } from "react";
 
 export default function Section2() {
   const params = useParams();
   const countryCode = (params?.countryCode as string)?.toLowerCase() || "be";
   const lang = (params?.lang as string) || "en";
+
+  useEffect(() => {
+    setLanguage(lang);
+  }, [lang]);
 
   const content =
     section2Content[countryCode as keyof typeof section2Content] ||
@@ -34,12 +40,16 @@ export default function Section2() {
           {/* ================= SECTION 1 ================= */}
           <Reveal direction="bottom">
             <h2 className="text-[24px] text-center leading-[38px] font-bold mb-12">
-              <span className="text-[#1A4CED]">Accqrate</span>{" "}
-              <span className="text-[#1c2041]">
-                <T lang={lang} countryCode={countryCode.toUpperCase()}>
-                  {content.section1Title.replace("Accqrate", "")}
-                </T>
-              </span>
+              {(() => {
+                const translatedTitle = t(content.section1Title, countryCode.toUpperCase());
+                const parts = translatedTitle.split(' ');
+                return (
+                  <>
+                    <span className="text-[#1A4CED]">{parts[0]}</span>{" "}
+                    <span className="text-[#1c2041]">{parts.slice(1).join(' ')}</span>
+                  </>
+                );
+              })()}
             </h2>
           </Reveal>
 
