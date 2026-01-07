@@ -11,6 +11,11 @@ interface TProps {
     lang?: string; // optional language override (e.g., 'en', 'fr', 'ar')
 }
 
+// Helper function to prevent line breaks at hyphens
+function preventHyphenBreak(text: string) {
+    return text.replace(/-/g, '\u2011'); // Replace with non-breaking hyphen
+}
+
 // Helper function to collect all text from children, stripping HTML tags for lookup
 function collectPlainText(children: ReactNode): string {
     let text = '';
@@ -44,7 +49,7 @@ function translateChildren(children: ReactNode, targetCountry: string): ReactNod
     return Children.map(children, (child) => {
         if (typeof child === "string" || typeof child === "number") {
             const text = child.toString();
-            return t(text, targetCountry);
+            return preventHyphenBreak(t(text, targetCountry));
         } else if (isValidElement(child)) {
             const element = child as ReactElement<{ children?: ReactNode }>;
 
@@ -107,7 +112,7 @@ export default function T({ children, countryCode, lang }: TProps) {
         if (typeof children === "string" || typeof children === "number") {
             const text = children.toString();
             const translated = t(text, targetCountry);
-            return <>{translated}</>;
+            return <>{preventHyphenBreak(translated)}</>;
         }
 
         // Case 2: Get plain text for translation lookup
@@ -118,7 +123,7 @@ export default function T({ children, countryCode, lang }: TProps) {
 
             // If we found a translation
             if (translatedText !== plainText) {
-                return <>{translatedText}</>;
+                return <>{preventHyphenBreak(translatedText)}</>;
             }
         }
 

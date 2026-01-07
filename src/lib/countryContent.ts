@@ -717,7 +717,7 @@ const uaeContent: CountryContent = {
   backgroundImage: AssetPath.homeBackgrounds.uae,
   heroTitle: "PEPPOL-Ready. VAT-Compliant. Built For Enterprise.",
   heroSubtitle: "E-invoicing Solution for UAE",
-  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for United Arab Emirates businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
+  heroDescription: "Enable end-to-end electronic invoicing across your ERP, accounting, and billing systems with a fully compliant, PEPPOL-certified platform tailored for UAE businesses. Automate creation, validation, transmission, and archiving of e-invoices with complete confidence.",
   heroTagline: "Complaint . Seamless . Secure",
   whyAccqrateTitle: "Why Accqrate?",
   whyAccqrateSubtitle: { text: "We Specialize in providing reliable and efficient Solutions", highlights: ["Specialize", "Solutions"] },

@@ -46,7 +46,7 @@ export default function Section2() {
           <div className="grid md:grid-cols-2 gap-10 mb-28 items-center">
 
             {/* Left Image */}
-            <Reveal direction="left" className="w-full flex justify-center">
+            <Reveal direction="left" className="w-full flex justify-center px-4">
               <Image
                 src={leftImage}
                 alt="Country visual"
@@ -134,7 +134,7 @@ export default function Section2() {
               width={320}
               height={320}
               unoptimized
-              className=" object-cover w-full max-w-[320px]"
+              className=" object-cover w-full max-w-[250px] md:max-w-[320px]"
             />
           </Reveal>
 

@@ -793,7 +793,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             </div>
 
                             {/* RIGHT COLUMN */}
-                            <div className="hidden lg:flex flex-col justify-start mb-5 lg:mt-10 gap-3">
+                            <div className="hidden lg:flex flex-col justify-start mb-8 gap-3">
                                 {cards.map((card) => (
                                     <InfoCard key={card.title} {...card} />
                                 ))}
@@ -889,7 +889,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     countryCode.toUpperCase() === "SA"
                         ? saZatca.src || saZatca.src
                         : countryCode.toUpperCase() === "AE"
-                            ? saZatca.src
+                            ? AssetPath.home.dashboardHome
                             : countryCode.toUpperCase() === "OM"
                                 ? saZatca.src
                                 : countryCode.toUpperCase() === "BH"
@@ -949,7 +949,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                                                 className={`
             relative group overflow-hidden
             p-6  rounded-[15px]
-            flex flex-col max-h-[221px] max-w-full lg:max-w-[360px]
+            flex flex-col h-auto max-w-full lg:max-w-[360px]
             bg-white
           `}
                                             >
@@ -1000,7 +1000,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                     <img
                         src={
                             countryCode.toUpperCase() === "AE"
-                                ? saeinvoic.src || invoiceList.src
+                                ? AssetPath.home.invoiceUae.src || AssetPath.home.invoiceUae.src
                                 : countryCode.toUpperCase() === "SA"
                                     ? saeinvoic.src || invoiceList.src
                                     : countryCode.toUpperCase() === "JD"
@@ -1313,7 +1313,7 @@ const CountryPage: React.FC<CountryPageProps> = ({ countryCode }) => {
                             {/* GRID */}
                             <Reveal direction="left" className="grid lg:grid-cols-[500px_1fr] gap-4 md:gap-6">
                                 {/* LEFT: Image (Desktop) */}
-                                <div className="hidden lg:flex items-center justify-start pl-6">
+                                <div className="hidden lg:flex items-center justify-start pl-14">
                                     <div className="w-full max-w-[370px]">
                                         <Image
                                             src={vision}

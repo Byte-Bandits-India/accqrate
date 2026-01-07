@@ -21,6 +21,11 @@ import ma_invoicemultiple from "@/Assets/images/invoicing/mae-tax1.webp"
 import ma_invoicesingle from "@/Assets/images/invoicing/mae-tax2.webp"
 import Reveal from '@/Components/Reveal';
 
+// Helper function to prevent line breaks at hyphens
+export function preventHyphenBreak(text: string) {
+    return text.replace(/-/g, '\u2011'); // Replace with non-breaking hyphen
+}
+
 interface Feature {
     img: string;
     title: string;
@@ -316,7 +321,7 @@ const Section1 = () => {
             ]
         },
         ae: {
-            whyAccqrateTitle: 'Compliant with UAE\s Mandatory B2B E-Invoicing Regulation',
+            whyAccqrateTitle: 'Compliant with UAE\s Mandatory B2B E-invoicing Regulation',
             headingDescription: 'FTA and Peppol Requirements:',
             heroDescription: 'Accqrate generates fully FTA-compliant structured eInvoices aligned to the UAE PINT framework and supports exchange through the DCTCE / 5-corner (PEPPOL) model.',
             heroTitle: '5,000+ Across 30+ Industries',

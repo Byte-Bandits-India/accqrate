@@ -48,7 +48,7 @@ const Section2 = () => {
                   <Reveal direction="left"
                     key={i}
                     className={`bg-white rounded-[16px] border border-[#E6E9F5] px-8 md:w-[300px] mx-auto md:mx-0
-                    ${isCenter ? "py-6 lg:scale-105 h-auto lg:h-[440px] lg:w-[340px]" : "py-6 h-auto lg:h-[400px] lg:w-[360px]"}
+                    ${isCenter ? "py-6 lg:scale-105 h-auto lg:h-[470px] lg:w-[350px]" : "py-6 h-auto lg:h-[430px] lg:w-[360px]"}
                   `}
                   >
                     <div className="w-12 h-12 rounded-[10px] bg-[#EEF2FF] flex items-center justify-center mb-6">

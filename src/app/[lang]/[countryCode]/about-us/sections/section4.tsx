@@ -20,41 +20,55 @@ const Section4: React.FC = () => {
   const features = content.features;
   const featureCount = features.length;
 
-  // Render card component - SIMPLIFIED to avoid index confusion
-  const renderCard = (feature: any, index: number, isReducedHeight = false) => {
+  /* ---------------- CARD RENDER ---------------- */
+  const renderCard = (
+    feature: any,
+    index: number,
+    isFourCards = false
+  ) => {
     return (
       <div key={index}>
         <div
-          className={`relative flex-shrink-0 bg-white 
-            rounded-[16px]
-            shadow-[0_4px_20px_rgba(0,0,0,0.05)]
-            w-full ${isReducedHeight ? 'h-auto md:h-[430px]' : 'h-auto md:h-[430px]'} p-6 md:p-4 lg:p-8 flex flex-col`}
+          className={`relative bg-white rounded-[16px]
+          shadow-[0_4px_20px_rgba(0,0,0,0.05)]
+          w-full h-auto md:h-[460px]
+          p-6 md:p-6 flex flex-col`}
         >
-          {/* Image + Number */}
+          {/* Image */}
           <div className="relative flex justify-between items-start mb-6">
             <Image
               src={feature.img}
               alt={feature.title}
-              width={180}
-              height={180}
-              className="w-[140px] sm:w-[160px] md:w-[150px] object-contain"
+              width={isFourCards ? 100 : 180}
+              height={isFourCards ? 100 : 180}
+              className={`object-contain ${isFourCards
+                ? "w-[100px] sm:w-[110px] md:w-[90px]"
+                : "w-[140px] sm:w-[160px] md:w-[150px]"
+                }`}
             />
 
-            <span
-              className={`absolute ${lang === "ar" ? "left-1" : "right-1"
-                } bottom-0 
-                text-[70px] md:text-[70px]
+            {/* Number (hidden for 4 cards) */}
+            {!isFourCards && (
+              <span
+                className={`absolute ${lang === "ar" ? "left-1" : "right-1"
+                  } bottom-0 text-[70px]
                 font-bold text-[#E6E6E6] select-none leading-none`}
-            >
-              {String(index + 1).padStart(2, "0")}
-            </span>
+              >
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            )}
           </div>
 
-          <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-[32px] text-black">
+          {/* Title */}
+          <h3 className="text-[16px] md:text-[18px] font-bold mb-4 leading-[28px] text-black">
             <T>{feature.title}</T>
           </h3>
 
-          <p className="text-[12px] md:text-[14px] text-gray-700 leading-[30px] whitespace-pre-line">
+          {/* Description */}
+          <p
+            className={`text-[12px] md:text-[14px] text-gray-700 leading-[26px] ${isFourCards ? "whitespace-pre-line" : "whitespace-pre-line"
+              }`}
+          >
             <T>{feature.description}</T>
           </p>
         </div>
@@ -63,9 +77,9 @@ const Section4: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#f0f4ff] w-full mt-[80px] px-6 md:px-8 xl:px-0 py-20">
+    <section className="bg-[#f0f4ff] w-full mt-[80px] px-6 md:px-8 xl:px-0 py-10">
       {/* Heading */}
-      <div className="text-left max-w-[1100px] mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <FadeUp>
           <h2 className="text-[18px] md:text-[24px] font-bold">
             <T lang={lang} countryCode={countryCode?.toUpperCase()}>
@@ -81,121 +95,76 @@ const Section4: React.FC = () => {
         </FadeUp>
       </div>
 
-      {/* ================= DYNAMIC CARD LAYOUT ================= */}
+      {/* ================= CARDS ================= */}
       <div className="max-w-[1100px] mx-auto mt-14">
         <FadeUp>
-          {/* Handle 4 cards - same for all screens */}
+
+          {/* -------- 4 CARDS (SPECIAL) -------- */}
           {featureCount === 4 && (
-            <>
-              {/* For md screens: 2x2 layout */}
-              <div className="md:block lg:hidden">
-                {/* Top Row - 2 cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
-                </div>
-
-                {/* Bottom Row - 2 cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
-                </div>
-              </div>
-
-              {/* For lg+ screens: 2x2 layout (same as original) */}
-              <div className="hidden lg:block">
-                {/* Top Row - 2 cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
-                </div>
-
-                {/* Bottom Row - 2 cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
-                  {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
-                </div>
-              </div>
-            </>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {features.map((feature, index) =>
+                renderCard(feature, index, true)
+              )}
+            </div>
           )}
 
-          {/* Handle 5 cards */}
+          {/* -------- 5 CARDS -------- */}
           {featureCount === 5 && (
             <>
-              {/* For md screens: 2x2 layout with last card on left */}
-              <div className="md:block lg:hidden">
-                <div className="space-y-10">
-                  {/* First row - 2 cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
-                  </div>
-
-                  {/* Second row - 2 cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
-                  </div>
-
-                  {/* Third row - 1 card (on LEFT side) */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {renderCard(features[4], 4)}
-                    <div></div> {/* Empty div for second column */}
-                  </div>
+              <div className="md:block lg:hidden space-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {features.slice(0, 2).map((f, i) => renderCard(f, i))}
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {features.slice(2, 4).map((f, i) => renderCard(f, i + 2))}
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {renderCard(features[4], 4)}
+                  <div />
                 </div>
               </div>
 
-              {/* For lg+ screens: ORIGINAL 3+2 layout */}
               <div className="hidden lg:block">
-                {/* Top Row - 3 cards (reduced height) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {features.slice(0, 3).map((feature, index) => renderCard(feature, index))}
+                  {features.slice(0, 3).map((f, i) => renderCard(f, i))}
                 </div>
-
-                {/* Bottom Row - 2 cards (centered) - ORIGINAL EXACT LAYOUT */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10 max-w-[800px] mx-auto">
-                  {features.slice(3, 5).map((feature, index) => renderCard(feature, index + 3))}
+                  {features.slice(3, 5).map((f, i) => renderCard(f, i + 3))}
                 </div>
               </div>
             </>
           )}
 
-          {/* Handle 6 cards */}
+          {/* -------- 6 CARDS -------- */}
           {featureCount === 6 && (
             <>
-              {/* For md screens: 2x2x2 layout */}
-              <div className="md:block lg:hidden">
-                <div className="space-y-10">
-                  {/* First row - 2 cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(0, 2).map((feature, index) => renderCard(feature, index))}
+              <div className="md:block lg:hidden space-y-10">
+                {[0, 2, 4].map((start) => (
+                  <div key={start} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {features.slice(start, start + 2).map((f, i) =>
+                      renderCard(f, start + i)
+                    )}
                   </div>
-
-                  {/* Second row - 2 cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(2, 4).map((feature, index) => renderCard(feature, index + 2))}
-                  </div>
-
-                  {/* Third row - 2 cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {features.slice(4, 6).map((feature, index) => renderCard(feature, index + 4))}
-                  </div>
-                </div>
+                ))}
               </div>
 
-              {/* For lg+ screens: ORIGINAL 3+3 layout */}
               <div className="hidden lg:block">
-                {/* Top Row - 3 cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {features.slice(0, 3).map((feature, index) => renderCard(feature, index))}
+                  {features.slice(0, 3).map((f, i) => renderCard(f, i))}
                 </div>
-
-                {/* Bottom Row - 3 cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                  {features.slice(3, 6).map((feature, index) => renderCard(feature, index + 3))}
+                  {features.slice(3, 6).map((f, i) => renderCard(f, i + 3))}
                 </div>
               </div>
             </>
           )}
 
-          {/* Handle other counts (1-3, 7+) - ORIGINAL RESPONSIVE GRID */}
+          {/* -------- DEFAULT -------- */}
           {![4, 5, 6].includes(featureCount) && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {features.map((feature, index) => renderCard(feature, index))}
+              {features.map((feature, index) =>
+                renderCard(feature, index)
+              )}
             </div>
           )}
 

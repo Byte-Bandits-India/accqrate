@@ -130,6 +130,7 @@ import acceleraWebp from "@/Assets/images/home/accelera.png";
 import vidaHome from "@/Assets/images/home/VIDA_home.png";
 import dctceHome from "@/Assets/images/home/UAE_Peppol.webp";
 import uaee from "@/Assets/images/home/uae.webp"
+import invoiceUae from "@/Assets/images/home/invoice-uae.webp"
 
 // ==================== LANDINGPAGE IMAGES ====================
 
@@ -525,6 +526,7 @@ import adoption from "@/Assets/images/about/adoption.95314a9a.webp"
 import innovation from "@/Assets/images/about/innovation-flexibility.e95d2eaf.webp"
 import zatcaApproval from "@/Assets/images/about/zatca-approval.e70d18bd.webp"
 import saudiPerson from "@/Assets/images/about/saudi-person.webp"
+import uaeAbout from "@/Assets/images/about/uaeAbout.png"
 
 // ==================== ICONS IMPORTS ====================
 import addCompany from "@/Assets/images/icons/add_company.svg";
@@ -724,7 +726,8 @@ const AssetPath = {
     f3,
     f4,
     f5,
-    uaee
+    uaee,
+    invoiceUae,
   },
 
   // LANDINGPAGE
@@ -1137,6 +1140,7 @@ const AssetPath = {
     innovation,
     zatcaApproval,
     saudiPerson,
+    uaeAbout,
   },
 
   404: {

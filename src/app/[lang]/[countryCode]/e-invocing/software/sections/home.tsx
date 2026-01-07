@@ -669,12 +669,13 @@ const Software: React.FC = () => {
                     </div>
 
                     <div className="
-  flex flex-row
+  flex flex-col md:flex-row
   items-center
   justify-center
   gap-2
   mt-6
-  whitespace-nowrap
+  px-4
+  md:whitespace-nowrap
 ">
                         <div className="flex items-center gap-1 text-[#FEB04C]">
                             <Star className="w-3 h-3 fill-[#FEB04C]" />

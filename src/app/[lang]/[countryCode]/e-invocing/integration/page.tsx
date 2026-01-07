@@ -7,14 +7,14 @@ import Section5 from "./sections/section4"
 import Section6 from "./sections/section6"
 const software = () => {
     return (
-        <section>
+        <section className="overflow-x-hidden">
             <Hero />
             <Section1 />
             <Section2 />
             <Section3 />
             <Section5 />
             <Section4 />
-            <Section6/>
+            <Section6 />
         </section>
     );
 };
