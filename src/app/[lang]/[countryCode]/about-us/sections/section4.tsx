@@ -48,15 +48,13 @@ const Section4: React.FC = () => {
             />
 
             {/* Number (hidden for 4 cards) */}
-            {!isFourCards && (
-              <span
-                className={`absolute ${lang === "ar" ? "left-1" : "right-1"
-                  } bottom-0 text-[70px]
+            <span
+              className={`absolute ${lang === "ar" ? "left-1" : "right-1"
+                } bottom-0 text-[60px]
                 font-bold text-[#E6E6E6] select-none leading-none`}
-              >
-                {String(index + 1).padStart(2, "0")}
-              </span>
-            )}
+            >
+              {String(index + 1).padStart(2, "0")}
+            </span>
           </div>
 
           {/* Title */}
